@@ -137,7 +137,7 @@ std::cout&lt;&lt; dec;
 Half idempotent relations</h2>
 <p>When we have the "half idempotent relation", the generators are \(\alpha, c_i, \beta_{s,t}\) (see <a class="el" href="math.html">The Math</a>). In the program, <code>Idem</code> is the dominant term of \(\alpha\), <code>Chern</code> is a vector containing the dominant terms of \(c_1,...,c_n\) and <code>TwistedChern</code> is a vector containing the dominant terms of \(\beta_{1,1},...,\beta_{1,n-1},\beta_{2,1},...,\beta_{n-1,1}\) in this order. To get the original indexing on the \(\beta\) elements we use <code>std::map&lt;std::pair&lt;int,int&gt;,int&gt; TwistedChern_indexer</code> eg </p><pre class="fragment">std::cout &lt;&lt; TwistedChern_indexer[std::make_pair&lt;int,int&gt;(1,2)];
 </pre><p>prints <code>1</code> since <code>TwistedChern[1]</code> corresponds to \(\beta_{1,2}\).</p>
-<p>The code </p><pre class="fragment">polynomial&lt;rational, halfidempotent&gt; poly({ monomial&lt;rational, halfidempotent&gt;(2, { 1,0,1,0 }), monomial&lt;rational, halfidempotent&gt;(2, {0,1,0,1 }) })
+<p>The code </p><pre class="fragment">polynomial&lt;rational, halfidempotent&gt; poly({ monomial&lt;rational, halfidempotent&gt;(2, { 1,0,1,0 }), monomial&lt;rational, halfidempotent&gt;(2, {0,1,0,1 }) });
 decomposition_half_idempotent&lt;rational&gt; dec(poly);
 std::cout &lt;&lt; dec &lt;&lt; "\n";
 </pre><p>sets <code>poly</code> to be \(x_1y_1+x_2y_2\), computes the decomposition of <code>poly</code> into <code>Idem,Chern,TwistedChern</code>, stores it into <code>dec</code> and prints the decomposition as <code>2*a*c_1 + -2*b_{1,1}</code> reflecting $$x_1y_1+x_2y_2=2\alpha c_1-2\beta_{1,1}$$</p>

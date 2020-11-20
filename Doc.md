@@ -139,7 +139,7 @@ prints ```1``` since ```TwistedChern[1]``` corresponds to \f$\beta_{1,2}\f$.
 
 The code
 
-	polynomial<rational, halfidempotent> poly({ monomial<rational, halfidempotent>(2, { 1,0,1,0 }), monomial<rational, halfidempotent>(2, {0,1,0,1 }) })
+	polynomial<rational, halfidempotent> poly({ monomial<rational, halfidempotent>(2, { 1,0,1,0 }), monomial<rational, halfidempotent>(2, {0,1,0,1 }) });
 	decomposition_half_idempotent<rational> dec(poly);
 	std::cout << dec << "\n";
 
