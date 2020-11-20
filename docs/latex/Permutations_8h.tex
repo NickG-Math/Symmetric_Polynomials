@@ -1,0 +1,56 @@
+\hypertarget{Permutations_8h}{}\doxysection{source/\+Permutations.h File Reference}
+\label{Permutations_8h}\index{source/Permutations.h@{source/Permutations.h}}
+
+
+Contains methods for producing permutations, orbits of monomials under symmetric group action, and writing symmetric polynomials in terms of elementary symmetric ones.  
+
+
+{\ttfamily \#include \char`\"{}Generators.\+h\char`\"{}}\newline
+Include dependency graph for Permutations.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Permutations_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{Permutations_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classSymmetric__Polynomials_1_1permutations__generator}{Symmetric\+\_\+\+Polynomials\+::permutations\+\_\+generator}}
+\begin{DoxyCompactList}\small\item\em Generates all permutations on a number of letters. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classSymmetric__Polynomials_1_1elementary__symmetric}{Symmetric\+\_\+\+Polynomials\+::elementary\+\_\+symmetric$<$ scalar\+\_\+t $>$}}
+\begin{DoxyCompactList}\small\item\em Class of elementary symmetric polynomials; no relations. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1decomposition__elementary__symmetric}{Symmetric\+\_\+\+Polynomials\+::decomposition\+\_\+elementary\+\_\+symmetric$<$ scalar\+\_\+t $>$}}
+\begin{DoxyCompactList}\small\item\em Class for writing a symmetric polynomial as a polynomial on the elementary symmetric polynomials (a \char`\"{}decomposition\char`\"{}) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceSymmetric__Polynomials}{Symmetric\+\_\+\+Polynomials}}
+\begin{DoxyCompactList}\small\item\em The namespace which contains every method and class in the library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespaceSymmetric__Polynomials_ad7118931ae8edf4baa74c12a3324251a}{Symmetric\+\_\+\+Polynomials\+::factorial}} (int n)
+\begin{DoxyCompactList}\small\item\em Returns n! \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a7a6bae3e00fa2f0f0e1ed0dd27fbab09}{Symmetric\+\_\+\+Polynomials\+::all\+\_\+permutations}} (char n)
+\begin{DoxyCompactList}\small\item\em Returns vector of all permutations on n letters. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ }\\std\+::vector$<$ monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_aca3363cff5919c3f416bd56d80f6ca72}{Symmetric\+\_\+\+Polynomials\+::orbit}} (const monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&a, const std\+::vector$<$ std\+::vector$<$ char $>$$>$ \&perms)
+\begin{DoxyCompactList}\small\item\em Computes the orbit of a monomial under a set of permutations. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ }\\monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a356d6c1b12803e4b0e2c4d1a1d89bb23}{Symmetric\+\_\+\+Polynomials\+::max\+\_\+in\+\_\+orbit}} (const monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&a, const std\+::vector$<$ std\+::vector$<$ char $>$$>$ \&perms)
+\begin{DoxyCompactList}\small\item\em Returns the greatest monomial in an orbit of permutations. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ }\\std\+::vector$<$ std\+::vector$<$ monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ $>$ $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_ac9f5d227958f2b51e77cb2fe178ebef6}{Symmetric\+\_\+\+Polynomials\+::all\+\_\+monomial\+\_\+orbits}} (int variables, int degree)
+\begin{DoxyCompactList}\small\item\em Returns a vector of all monomials in given variables and degree organized in orbits under the symmetric group action. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename scalar\+\_\+t $>$ }\\std\+::ostream \& \mbox{\hyperlink{namespaceSymmetric__Polynomials_a58c3ea2d58a1501fc02442da2ae837a4}{Symmetric\+\_\+\+Polynomials\+::operator$<$$<$}} (std\+::ostream \&os, const decomposition\+\_\+elementary\+\_\+symmetric$<$ scalar\+\_\+t $>$ \&a)
+\begin{DoxyCompactList}\small\item\em Prints decomposition into elementary symmetric polynomials. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains methods for producing permutations, orbits of monomials under symmetric group action, and writing symmetric polynomials in terms of elementary symmetric ones. 
+

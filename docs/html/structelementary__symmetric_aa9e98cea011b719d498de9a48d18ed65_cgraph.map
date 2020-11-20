@@ -1,0 +1,8 @@
+<map id="elementary_symmetric::compute_product" name="elementary_symmetric::compute_product">
+<area shape="rect" id="node1" title="Given vector pwr computes e_1^{pwr_1}*...*e_n^{pwr_n}." alt="" coords="5,49,180,90"/>
+<area shape="rect" id="node2" href="$classpolynomial.html#a40be2da6ad189700b0bf65b02c37fcdf" title="Constructs constant polynomial given coefficient and number of variables." alt="" coords="339,56,497,83"/>
+<area shape="rect" id="node3" href="$Permutations_8h.html#af52302784662ec62fd3266daf195a5e7" title="Computes the orbit of a monomial under a set of permutations." alt="" coords="233,5,285,32"/>
+<area shape="rect" id="node5" href="$Polynomials_8h.html#abe6541bafde6451eb4806b124d8ba458" title="Computes a^p for polynomial a and nonnegative integer p." alt="" coords="228,107,291,133"/>
+<area shape="rect" id="node4" href="$Polynomials_8h.html#a1ee0f8c937cbcf51cd4dffa29d7ab4c0" title="Permutes the variables in a monomial according permutation; returns permuted monomial." alt="" coords="379,5,457,32"/>
+<area shape="rect" id="node6" href="$Polynomials_8h.html#a70b3c7ad51b10d0a0d601de9c93ef694" title="Multiplies two polynomials with the ability to disable condensation (not recommended)" alt="" coords="380,107,456,133"/>
+</map>

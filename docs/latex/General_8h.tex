@@ -1,0 +1,70 @@
+\hypertarget{General_8h}{}\doxysection{source/\+General.h File Reference}
+\label{General_8h}\index{source/General.h@{source/General.h}}
+
+
+Contains general operations on vectors (eg hashing, adding), the class of rational numbers, and methods for applying permutations on vectors.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$numeric$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+Include dependency graph for General.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{General_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{General_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1hasher}{Symmetric\+\_\+\+Polynomials\+::hasher$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Hashes all vectors between two vectors min and max into a long integer. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{Symmetric\+\_\+\+Polynomials\+::rational}}
+\begin{DoxyCompactList}\small\item\em Class of rational numbers. Standard implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceSymmetric__Polynomials}{Symmetric\+\_\+\+Polynomials}}
+\begin{DoxyCompactList}\small\item\em The namespace which contains every method and class in the library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Iterator $>$ }\\void \mbox{\hyperlink{namespaceSymmetric__Polynomials_a6ded8a90dda32f1c3c961e1fe37483d8}{Symmetric\+\_\+\+Polynomials\+::apply\+\_\+permutation}} (std\+::vector$<$ int $>$ \&target, Iterator begin, const std\+::vector$<$ char $>$ \&perm)
+\begin{DoxyCompactList}\small\item\em Applies permutation perm on the target from starting point begin. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a5de38947e6bb01cc8fed77e35d009a67}{Symmetric\+\_\+\+Polynomials\+::apply\+\_\+permutation\+\_\+pieces}} (const std\+::vector$<$ int $>$ \&v, int pieces, const std\+::vector$<$ char $>$ \&perm)
+\begin{DoxyCompactList}\small\item\em Breaks vector v into given number of pieces and applies given permutation on each one; then joins the pieces and returns the vector. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_ae133a77a509d22d02013e3131c48e49a}{Symmetric\+\_\+\+Polynomials\+::apply\+\_\+permutation}} (const std\+::vector$<$ int $>$ \&v, const std\+::vector$<$ char $>$ \&perm)
+\begin{DoxyCompactList}\small\item\em Applies permutation perm on the vector v. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename S $>$ }\\bool \mbox{\hyperlink{namespaceSymmetric__Polynomials_a098b1c7b4a41a3bfcbeedc1d6c7b2cd8}{Symmetric\+\_\+\+Polynomials\+::operator$<$=}} (const std\+::vector$<$ T $>$ \&a, const std\+::vector$<$ S $>$ \&b)
+\begin{DoxyCompactList}\small\item\em For two vectors a,b, a$<$=b iff a\mbox{[}i\mbox{]}$<$=b\mbox{[}i\mbox{]} for all i. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename S  = T$>$ }\\S \mbox{\hyperlink{namespaceSymmetric__Polynomials_a2a2edeb8ae1f843ee81da0bc91f0dbff}{Symmetric\+\_\+\+Polynomials\+::sum}} (const std\+::vector$<$ T $>$ \&a, int end)
+\begin{DoxyCompactList}\small\item\em Returns a\mbox{[}0\mbox{]}+...+a\mbox{[}end\mbox{]}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename S  = T$>$ }\\S \mbox{\hyperlink{namespaceSymmetric__Polynomials_abc4a90741eac710cd52a41a3ef03b050}{Symmetric\+\_\+\+Polynomials\+::sum}} (const std\+::vector$<$ T $>$ \&a)
+\begin{DoxyCompactList}\small\item\em Returns the sum of all entries of a. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_aae2bf97b4b6bd6cdc87c00510ea491d8}{Symmetric\+\_\+\+Polynomials\+::operator+}} (const std\+::vector$<$ int $>$ \&a, const std\+::vector$<$ int $>$ \&b)
+\begin{DoxyCompactList}\small\item\em Adds two vectors coordinate wise. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_af56a723a344cb349a84e26b5375cd790}{Symmetric\+\_\+\+Polynomials\+::operator-\/}} (const std\+::vector$<$ int $>$ \&a, const std\+::vector$<$ int $>$ \&b)
+\begin{DoxyCompactList}\small\item\em Subtract a vector from another coordinate wise. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a0a3582fcb66e7aeecbf9d5d795970358}{Symmetric\+\_\+\+Polynomials\+::operator$\ast$}} (int a, const std\+::vector$<$ int $>$ \&b)
+\begin{DoxyCompactList}\small\item\em Multiplies scalar and vector coordinate wise. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a1b5821494b7fd160206add93d4d73a42}{Symmetric\+\_\+\+Polynomials\+::join}} (const std\+::vector$<$ T $>$ \&a, const std\+::vector$<$ T $>$ \&b)
+\begin{DoxyCompactList}\small\item\em Joins two vectors a,b into a new vector with entries a\mbox{[}0\mbox{]},...,a\mbox{[}a.\+size()-\/1\mbox{]},b\mbox{[}0\mbox{]},...,b\mbox{[}b.\+size()-\/1\mbox{]}. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{namespaceSymmetric__Polynomials_ac41ac0cc03bf5ae13fe5e661200ad134}{Symmetric\+\_\+\+Polynomials\+::operator$<$$<$}} (std\+::ostream \&os, const rational \&a)
+\begin{DoxyCompactList}\small\item\em Prints rational number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains general operations on vectors (eg hashing, adding), the class of rational numbers, and methods for applying permutations on vectors. 
+

@@ -1,0 +1,8 @@
+<map id="power" name="power">
+<area shape="rect" id="node1" title="Computes a^p for polynomial a and nonnegative integer p." alt="" coords="485,110,548,137"/>
+<area shape="rect" id="node2" href="$classhalf__idempotent__generators.html#a0a5ddb7ae26da7d1c84d64bc5c62ec20" title="Computes a product of a monomial on our generators Idem, Chern, TwistedChern." alt="" coords="225,37,432,79"/>
+<area shape="rect" id="node5" href="$classelementary__symmetric.html#aa9e98cea011b719d498de9a48d18ed65" title="Given vector pwr computes e_1^{pwr_1}*...*e_n^{pwr_n}." alt="" coords="241,103,416,144"/>
+<area shape="rect" id="node6" href="$classhalf__idempotent__generators.html#ab245d1a522313ead1adf56fbb78fa6c6" title="Computes the dominant term of a product of a monomial on our generators Idem, Chern,..." alt="" coords="220,168,437,209"/>
+<area shape="rect" id="node3" href="$Half__Idempotent_8h.html#a26e3c0f834aa8fb9502fa69bf12f88b1" title="Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,..." alt="" coords="5,5,172,47"/>
+<area shape="rect" id="node4" href="$structdecomposition__half__idempotent.html#ab1fca7ecb75f404cbcffcc4b64948c9c" title="Verifies that the decomposition is correct (i.e. gives the original polynomial in the original variab..." alt="" coords="13,71,164,112"/>
+</map>

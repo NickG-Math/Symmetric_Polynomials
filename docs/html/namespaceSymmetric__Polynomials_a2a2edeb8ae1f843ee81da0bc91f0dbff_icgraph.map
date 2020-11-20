@@ -1,0 +1,7 @@
+<map id="Symmetric_Polynomials::sum" name="Symmetric_Polynomials::sum">
+<area shape="rect" id="node1" title="Returns a[0]+...+a[end]." alt="" coords="253,137,469,164"/>
+<area shape="rect" id="node2" href="$structSymmetric__Polynomials_1_1norelations.html#a058aa91daeaa5f4c577f835fb9769055" title=" " alt="" coords="15,5,195,61"/>
+<area shape="rect" id="node3" href="$structSymmetric__Polynomials_1_1halfidempotent.html#a1e5bc3e34fb997ec2e3b8cb513249407" title=" " alt="" coords="8,85,203,141"/>
+<area shape="rect" id="node4" href="$namespaceSymmetric__Polynomials.html#aae2bf97b4b6bd6cdc87c00510ea491d8" title="Adds two vectors coordinate wise." alt="" coords="15,166,195,207"/>
+<area shape="rect" id="node5" href="$classSymmetric__Polynomials_1_1polynomial.html#aa907a0fb17c89025757bb89237adeaab" title="Adds two polynomials." alt="" coords="5,231,205,302"/>
+</map>

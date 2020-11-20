@@ -1,0 +1,215 @@
+\hypertarget{structrational}{}\doxysection{rational Struct Reference}
+\label{structrational}\index{rational@{rational}}
+
+
+Class of rational numbers. Standard implementation.  
+
+
+
+
+{\ttfamily \#include $<$General.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structrational_aaa4f0b65edaa9c1d6745598ff4830cb3}{rational}} (int n, int d)
+\begin{DoxyCompactList}\small\item\em Construtor ensures the numerator and denominator are coprime. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structrational_aa0a9833cf7d26fd83ab8cc81ed6c04be}{rational}} (int n)
+\item 
+\mbox{\hyperlink{structrational_afa6a05579a53a629ae04ed0c0170722c}{rational}} ()
+\item 
+bool \mbox{\hyperlink{structrational_a372c218f3f8ea149d43858c1a1a55dcd}{operator==}} (const \mbox{\hyperlink{structrational}{rational}} \&a) const
+\item 
+bool \mbox{\hyperlink{structrational_a76fafc0445ee7776644e122b2556d2c6}{operator!=}} (const \mbox{\hyperlink{structrational}{rational}} \&a) const
+\item 
+\mbox{\hyperlink{structrational}{rational}} \mbox{\hyperlink{structrational_ab0c55e7838d4bcee7a5854edf788dd95}{operator+}} (const \mbox{\hyperlink{structrational}{rational}} \&a) const
+\item 
+\mbox{\hyperlink{structrational}{rational}} \& \mbox{\hyperlink{structrational_a47f9bcf8a5db1a9b3e3722b1fc78bc37}{operator+=}} (const \mbox{\hyperlink{structrational}{rational}} \&a)
+\item 
+\mbox{\hyperlink{structrational}{rational}} \mbox{\hyperlink{structrational_ad2cf76bb8040857bdf4a07db4a916042}{operator-\/}} (const \mbox{\hyperlink{structrational}{rational}} \&a) const
+\item 
+\mbox{\hyperlink{structrational}{rational}} \mbox{\hyperlink{structrational_a081e55ef6086ce3e434849d20f0f88a9}{operator-\/}} () const
+\item 
+\mbox{\hyperlink{structrational}{rational}} \mbox{\hyperlink{structrational_a7e1d04378227c625a314eb92e4e7ee1b}{operator$\ast$}} (const \mbox{\hyperlink{structrational}{rational}} \&a) const
+\item 
+\mbox{\hyperlink{structrational}{rational}} \& \mbox{\hyperlink{structrational_ad681394d9b839a82d69cbebe96456d37}{operator$\ast$=}} (const \mbox{\hyperlink{structrational}{rational}} \&a)
+\item 
+\mbox{\hyperlink{structrational}{rational}} \mbox{\hyperlink{structrational_a573b3ec971e42ca0a32c523c9a6e319f}{operator/}} (const \mbox{\hyperlink{structrational}{rational}} \&a) const
+\item 
+\mbox{\hyperlink{structrational_a7648a61e966aaf154986343bb3187501}{operator double}} () const
+\item 
+bool \mbox{\hyperlink{structrational_a6ee25864959913189f79147f33a918ce}{is\+\_\+integer}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structrational_a4d98ff2f23fbb25d1eadbb57004c7827}{numerator}}
+\item 
+int \mbox{\hyperlink{structrational_aac0bd0f7a8758ae7f2c8eb47dc11a859}{denominator}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class of rational numbers. Standard implementation. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structrational_aaa4f0b65edaa9c1d6745598ff4830cb3}\label{structrational_aaa4f0b65edaa9c1d6745598ff4830cb3}} 
+\index{rational@{rational}!rational@{rational}}
+\index{rational@{rational}!rational@{rational}}
+\doxysubsubsection{\texorpdfstring{rational()}{rational()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily rational\+::rational (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor ensures the numerator and denominator are coprime. 
+
+\mbox{\Hypertarget{structrational_aa0a9833cf7d26fd83ab8cc81ed6c04be}\label{structrational_aa0a9833cf7d26fd83ab8cc81ed6c04be}} 
+\index{rational@{rational}!rational@{rational}}
+\index{rational@{rational}!rational@{rational}}
+\doxysubsubsection{\texorpdfstring{rational()}{rational()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily rational\+::rational (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structrational_afa6a05579a53a629ae04ed0c0170722c}\label{structrational_afa6a05579a53a629ae04ed0c0170722c}} 
+\index{rational@{rational}!rational@{rational}}
+\index{rational@{rational}!rational@{rational}}
+\doxysubsubsection{\texorpdfstring{rational()}{rational()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily rational\+::rational (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{structrational_afa6a05579a53a629ae04ed0c0170722c_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structrational_a6ee25864959913189f79147f33a918ce}\label{structrational_a6ee25864959913189f79147f33a918ce}} 
+\index{rational@{rational}!is\_integer@{is\_integer}}
+\index{is\_integer@{is\_integer}!rational@{rational}}
+\doxysubsubsection{\texorpdfstring{is\_integer()}{is\_integer()}}
+{\footnotesize\ttfamily bool rational\+::is\+\_\+integer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{structrational_a6ee25864959913189f79147f33a918ce_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structrational_a7648a61e966aaf154986343bb3187501}\label{structrational_a7648a61e966aaf154986343bb3187501}} 
+\index{rational@{rational}!operator double@{operator double}}
+\index{operator double@{operator double}!rational@{rational}}
+\doxysubsubsection{\texorpdfstring{operator double()}{operator double()}}
+{\footnotesize\ttfamily rational\+::operator double (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{structrational_a76fafc0445ee7776644e122b2556d2c6}\label{structrational_a76fafc0445ee7776644e122b2556d2c6}} 
+\index{rational@{rational}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!rational@{rational}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool rational\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrational}{rational}} \&}]{a }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structrational_a7e1d04378227c625a314eb92e4e7ee1b}\label{structrational_a7e1d04378227c625a314eb92e4e7ee1b}} 
+\index{rational@{rational}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!rational@{rational}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrational}{rational}} rational\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrational}{rational}} \&}]{a }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{structrational_a7e1d04378227c625a314eb92e4e7ee1b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structrational_ad681394d9b839a82d69cbebe96456d37}\label{structrational_ad681394d9b839a82d69cbebe96456d37}} 
+\index{rational@{rational}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!rational@{rational}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrational}{rational}}\& rational\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrational}{rational}} \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structrational_ab0c55e7838d4bcee7a5854edf788dd95}\label{structrational_ab0c55e7838d4bcee7a5854edf788dd95}} 
+\index{rational@{rational}!operator+@{operator+}}
+\index{operator+@{operator+}!rational@{rational}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrational}{rational}} rational\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrational}{rational}} \&}]{a }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{structrational_ab0c55e7838d4bcee7a5854edf788dd95_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structrational_a47f9bcf8a5db1a9b3e3722b1fc78bc37}\label{structrational_a47f9bcf8a5db1a9b3e3722b1fc78bc37}} 
+\index{rational@{rational}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!rational@{rational}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrational}{rational}}\& rational\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrational}{rational}} \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structrational_a081e55ef6086ce3e434849d20f0f88a9}\label{structrational_a081e55ef6086ce3e434849d20f0f88a9}} 
+\index{rational@{rational}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!rational@{rational}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrational}{rational}} rational\+::operator-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{structrational_a081e55ef6086ce3e434849d20f0f88a9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structrational_ad2cf76bb8040857bdf4a07db4a916042}\label{structrational_ad2cf76bb8040857bdf4a07db4a916042}} 
+\index{rational@{rational}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!rational@{rational}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrational}{rational}} rational\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrational}{rational}} \&}]{a }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{structrational_ad2cf76bb8040857bdf4a07db4a916042_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structrational_a573b3ec971e42ca0a32c523c9a6e319f}\label{structrational_a573b3ec971e42ca0a32c523c9a6e319f}} 
+\index{rational@{rational}!operator/@{operator/}}
+\index{operator/@{operator/}!rational@{rational}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrational}{rational}} rational\+::operator/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrational}{rational}} \&}]{a }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{structrational_a573b3ec971e42ca0a32c523c9a6e319f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structrational_a372c218f3f8ea149d43858c1a1a55dcd}\label{structrational_a372c218f3f8ea149d43858c1a1a55dcd}} 
+\index{rational@{rational}!operator==@{operator==}}
+\index{operator==@{operator==}!rational@{rational}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool rational\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrational}{rational}} \&}]{a }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrational_aac0bd0f7a8758ae7f2c8eb47dc11a859}\label{structrational_aac0bd0f7a8758ae7f2c8eb47dc11a859}} 
+\index{rational@{rational}!denominator@{denominator}}
+\index{denominator@{denominator}!rational@{rational}}
+\doxysubsubsection{\texorpdfstring{denominator}{denominator}}
+{\footnotesize\ttfamily int rational\+::denominator}
+
+\mbox{\Hypertarget{structrational_a4d98ff2f23fbb25d1eadbb57004c7827}\label{structrational_a4d98ff2f23fbb25d1eadbb57004c7827}} 
+\index{rational@{rational}!numerator@{numerator}}
+\index{numerator@{numerator}!rational@{rational}}
+\doxysubsubsection{\texorpdfstring{numerator}{numerator}}
+{\footnotesize\ttfamily int rational\+::numerator}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{General_8h}{General.\+h}}\end{DoxyCompactItemize}

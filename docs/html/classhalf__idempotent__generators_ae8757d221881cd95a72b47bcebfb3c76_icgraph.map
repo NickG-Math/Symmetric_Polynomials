@@ -1,0 +1,5 @@
+<map id="half_idempotent_generators::print" name="half_idempotent_generators::print">
+<area shape="rect" id="node1" title="Print a polynomial on the generators Idem, Chern and TwistedChern." alt="" coords="220,27,427,69"/>
+<area shape="rect" id="node2" href="$Half__Idempotent_8h.html#aabb5e057d26dec62f0fbd6a5f851bfac" title="Prints polynomial." alt="" coords="39,5,138,32"/>
+<area shape="rect" id="node3" href="$Half__Idempotent_8h.html#a26e3c0f834aa8fb9502fa69bf12f88b1" title="Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,..." alt="" coords="5,57,172,98"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Symmetric_Polynomials::half_idempotent_generators::compute_product" name="Symmetric_Polynomials::half_idempotent_generators::compute_product">
+<area shape="rect" id="node1" title="Computes a product of a monomial on our generators Idem, Chern, TwistedChern." alt="" coords="233,45,448,101"/>
+<area shape="rect" id="node2" href="$namespaceSymmetric__Polynomials.html#a36c74a891ce92c19aa88f4752fe9d420" title="Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,..." alt="" coords="5,5,185,61"/>
+<area shape="rect" id="node3" href="$structSymmetric__Polynomials_1_1decomposition__half__idempotent.html#a89f4c5f092b93bc2f2079d79fcb966a4" title="Verifies that the decomposition is correct (i.e. expanding the generators in the original variables &#160;..." alt="" coords="5,85,185,141"/>
+</map>

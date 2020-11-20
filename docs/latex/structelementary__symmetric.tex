@@ -1,0 +1,142 @@
+\hypertarget{structelementary__symmetric}{}\doxysection{elementary\+\_\+symmetric$<$ scalar\+\_\+t $>$ Struct Template Reference}
+\label{structelementary__symmetric}\index{elementary\_symmetric$<$ scalar\_t $>$@{elementary\_symmetric$<$ scalar\_t $>$}}
+
+
+Class of elementary symmetric polynomials; no relations.  
+
+
+
+
+{\ttfamily \#include $<$Permutations.\+h$>$}
+
+
+
+Inheritance diagram for elementary\+\_\+symmetric$<$ scalar\+\_\+t $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{structelementary__symmetric__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structelementary__symmetric_a61c3c5fcfc4cdb209deb5f6f904377c4}{elementary\+\_\+symmetric}} (int \mbox{\hyperlink{structelementary__symmetric_aa3ffc910bfba1501ba3b3275e95df851}{n}})
+\begin{DoxyCompactList}\small\item\em Constructs vector of elementary symmetric polynomials in terms of the variables x\+\_\+1,...,x\+\_\+n. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structnorelations}{norelations}} $>$ \mbox{\hyperlink{structelementary__symmetric_aa9e98cea011b719d498de9a48d18ed65}{compute\+\_\+product}} (const std\+::vector$<$ int $>$ \&pwr)
+\begin{DoxyCompactList}\small\item\em Given vector pwr computes e\+\_\+1$^\wedge$\{pwr\+\_\+1\}$\ast$...$\ast$e\+\_\+n$^\wedge$\{pwr\+\_\+n\}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structelementary__symmetric_ac3b3777df63949cb7cb3eac7176d0857}{print\+\_\+power}} (const std\+::vector$<$ int $>$ \&pwr) const
+\begin{DoxyCompactList}\small\item\em Prints e\+\_\+1$^\wedge$\{pwr\+\_\+1\}$\ast$...$\ast$e\+\_\+n$^\wedge$\{pwr\+\_\+n\}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structnorelations}{norelations}} $>$ $>$ \mbox{\hyperlink{structelementary__symmetric_a19a35e4d4116852535601ded4a5d7800}{Chern}}
+\begin{DoxyCompactList}\small\item\em Vector containing all elementary symmetric polynomials e\+\_\+1,...,e\+\_\+n expressed in terms of the variables x\+\_\+1,...,x\+\_\+n. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{structelementary__symmetric_aa3ffc910bfba1501ba3b3275e95df851}{n}}
+\begin{DoxyCompactList}\small\item\em Number of variables. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \mbox{\hyperlink{structelementary__symmetric_af904137340da6cf3ddba3e67d463d989}{permutations}}
+\begin{DoxyCompactList}\small\item\em All permutations in given number of variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename scalar\+\_\+t$>$\newline
+struct elementary\+\_\+symmetric$<$ scalar\+\_\+t $>$}
+
+Class of elementary symmetric polynomials; no relations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structelementary__symmetric_a61c3c5fcfc4cdb209deb5f6f904377c4}\label{structelementary__symmetric_a61c3c5fcfc4cdb209deb5f6f904377c4}} 
+\index{elementary\_symmetric$<$ scalar\_t $>$@{elementary\_symmetric$<$ scalar\_t $>$}!elementary\_symmetric@{elementary\_symmetric}}
+\index{elementary\_symmetric@{elementary\_symmetric}!elementary\_symmetric$<$ scalar\_t $>$@{elementary\_symmetric$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{elementary\_symmetric()}{elementary\_symmetric()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+\mbox{\hyperlink{structelementary__symmetric}{elementary\+\_\+symmetric}}$<$ scalar\+\_\+t $>$\+::\mbox{\hyperlink{structelementary__symmetric}{elementary\+\_\+symmetric}} (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs vector of elementary symmetric polynomials in terms of the variables x\+\_\+1,...,x\+\_\+n. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structelementary__symmetric_aa9e98cea011b719d498de9a48d18ed65}\label{structelementary__symmetric_aa9e98cea011b719d498de9a48d18ed65}} 
+\index{elementary\_symmetric$<$ scalar\_t $>$@{elementary\_symmetric$<$ scalar\_t $>$}!compute\_product@{compute\_product}}
+\index{compute\_product@{compute\_product}!elementary\_symmetric$<$ scalar\_t $>$@{elementary\_symmetric$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{compute\_product()}{compute\_product()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+\mbox{\hyperlink{classpolynomial}{polynomial}}$<$scalar\+\_\+t, \mbox{\hyperlink{structnorelations}{norelations}}$>$ \mbox{\hyperlink{structelementary__symmetric}{elementary\+\_\+symmetric}}$<$ scalar\+\_\+t $>$\+::compute\+\_\+product (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{pwr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Given vector pwr computes e\+\_\+1$^\wedge$\{pwr\+\_\+1\}$\ast$...$\ast$e\+\_\+n$^\wedge$\{pwr\+\_\+n\}. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structelementary__symmetric_aa9e98cea011b719d498de9a48d18ed65_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structelementary__symmetric_ac3b3777df63949cb7cb3eac7176d0857}\label{structelementary__symmetric_ac3b3777df63949cb7cb3eac7176d0857}} 
+\index{elementary\_symmetric$<$ scalar\_t $>$@{elementary\_symmetric$<$ scalar\_t $>$}!print\_power@{print\_power}}
+\index{print\_power@{print\_power}!elementary\_symmetric$<$ scalar\_t $>$@{elementary\_symmetric$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{print\_power()}{print\_power()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+std\+::string \mbox{\hyperlink{structelementary__symmetric}{elementary\+\_\+symmetric}}$<$ scalar\+\_\+t $>$\+::print\+\_\+power (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{pwr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints e\+\_\+1$^\wedge$\{pwr\+\_\+1\}$\ast$...$\ast$e\+\_\+n$^\wedge$\{pwr\+\_\+n\}. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structelementary__symmetric_ac3b3777df63949cb7cb3eac7176d0857_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structelementary__symmetric_a19a35e4d4116852535601ded4a5d7800}\label{structelementary__symmetric_a19a35e4d4116852535601ded4a5d7800}} 
+\index{elementary\_symmetric$<$ scalar\_t $>$@{elementary\_symmetric$<$ scalar\_t $>$}!Chern@{Chern}}
+\index{Chern@{Chern}!elementary\_symmetric$<$ scalar\_t $>$@{elementary\_symmetric$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{Chern}{Chern}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+std\+::vector$<$\mbox{\hyperlink{classmonomial}{monomial}}$<$scalar\+\_\+t, \mbox{\hyperlink{structnorelations}{norelations}}$>$ $>$ \mbox{\hyperlink{structelementary__symmetric}{elementary\+\_\+symmetric}}$<$ scalar\+\_\+t $>$\+::Chern}
+
+
+
+Vector containing all elementary symmetric polynomials e\+\_\+1,...,e\+\_\+n expressed in terms of the variables x\+\_\+1,...,x\+\_\+n. 
+
+\mbox{\Hypertarget{structelementary__symmetric_aa3ffc910bfba1501ba3b3275e95df851}\label{structelementary__symmetric_aa3ffc910bfba1501ba3b3275e95df851}} 
+\index{elementary\_symmetric$<$ scalar\_t $>$@{elementary\_symmetric$<$ scalar\_t $>$}!n@{n}}
+\index{n@{n}!elementary\_symmetric$<$ scalar\_t $>$@{elementary\_symmetric$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+const int \mbox{\hyperlink{structelementary__symmetric}{elementary\+\_\+symmetric}}$<$ scalar\+\_\+t $>$\+::n\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Number of variables. 
+
+\mbox{\Hypertarget{structelementary__symmetric_af904137340da6cf3ddba3e67d463d989}\label{structelementary__symmetric_af904137340da6cf3ddba3e67d463d989}} 
+\index{elementary\_symmetric$<$ scalar\_t $>$@{elementary\_symmetric$<$ scalar\_t $>$}!permutations@{permutations}}
+\index{permutations@{permutations}!elementary\_symmetric$<$ scalar\_t $>$@{elementary\_symmetric$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{permutations}{permutations}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+const std\+::vector$<$std\+::vector$<$char$>$ $>$ \mbox{\hyperlink{structelementary__symmetric}{elementary\+\_\+symmetric}}$<$ scalar\+\_\+t $>$\+::permutations\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+All permutations in given number of variables. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{Permutations_8h}{Permutations.\+h}}\end{DoxyCompactItemize}

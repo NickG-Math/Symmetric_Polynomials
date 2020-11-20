@@ -1,0 +1,281 @@
+\hypertarget{classSymmetric__Polynomials_1_1polynomial}{}\doxysection{Symmetric\+\_\+\+Polynomials\+::polynomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ Class Template Reference}
+\label{classSymmetric__Polynomials_1_1polynomial}\index{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}}
+
+
+Class of polynomials in multiple variables with relations.  
+
+
+
+
+{\ttfamily \#include $<$Polynomials.\+h$>$}
+
+
+
+Inheritance diagram for Symmetric\+\_\+\+Polynomials\+::polynomial$<$ scalar\+\_\+t, rel\+\_\+t $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1polynomial__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial_ac0a6e7d6fdbef8a955f5fd72ee2f2ead}{condense}} ()
+\begin{DoxyCompactList}\small\item\em Incorporates all monomials with same powers vector into a single monomial by adding coefficients, condensing the polynomial. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial_ab0df36baf0c00178007ab065b33f1f33}{highest\+\_\+term}} () const
+\begin{DoxyCompactList}\small\item\em Returns highest term monomial in a polynomial. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial_a71f3c9e5235f925ccc61b25ab784abbe}{polynomial}} (const std\+::vector$<$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$$>$ \&\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial_ab9d8736a84257e51748cefff853c43a4}{monos}}, bool dontcondense=0)
+\begin{DoxyCompactList}\small\item\em Constructs a polynomial given a vector of monomials, applying relations to variables and reordering as needed. Condensation is performed by default but can be disabled at the user\textquotesingle{}s risk. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial_a82cab1d2cec4b6a533836a41e3945ff9}{polynomial}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&mono)
+\begin{DoxyCompactList}\small\item\em Constructs a polynomial from a single monomial. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial_ae65ae6ff604a638732d872b479844ba5}{polynomial}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial_aa907a0fb17c89025757bb89237adeaab}{operator+}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&b) const
+\begin{DoxyCompactList}\small\item\em Adds two polynomials. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial_a1a7f680478bff58807a4f19bacb0486b}{operator-\/}} () const
+\begin{DoxyCompactList}\small\item\em Returns -\/b for polynomial b. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial_a24cd31f0a1ecc50804b772925a744e61}{operator-\/}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&b) const
+\begin{DoxyCompactList}\small\item\em Subtracts polynomial from polynomial. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial_a3fb9218857967bee4dad6de36db12774}{operator==}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&b) const
+\begin{DoxyCompactList}\small\item\em Standard equality of polynomials. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial_a77254223dd126132da67a49bdf6bda4e}{operator!=}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&b) const
+\begin{DoxyCompactList}\small\item\em Standard inequality of polynomials. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial_a282b9660df877b4a5ed1ec57a7714634}{print}} (const std\+::function$<$ std\+::string(int)$>$ \&variable\+\_\+names) const
+\begin{DoxyCompactList}\small\item\em Print polynomial using given variable names. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial_a74ab4a485e9017d4517dc7cf24e9ee9a}{print}} (const std\+::vector$<$ std\+::string $>$ \&variable\+\_\+names) const
+\begin{DoxyCompactList}\small\item\em Print monomial using given variable names. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial_a7582ebc7d8e2fcfd5c01c8b5acc50350}{print}} () const
+\begin{DoxyCompactList}\small\item\em Print polynomial using default variable names x\+\_\+1,...,x\+\_\+n. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial_a29a3177f37777cd66cbf9b50402a10c6}{constant}} (int coeff, int variables)
+\begin{DoxyCompactList}\small\item\em Constructs constant polynomial given coefficient and number of variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial_ab9d8736a84257e51748cefff853c43a4}{monos}}
+\begin{DoxyCompactList}\small\item\em The vector of monomials, ordered in increasing degree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename scalar\+\_\+t, typename rel\+\_\+t$>$\newline
+class Symmetric\+\_\+\+Polynomials\+::polynomial$<$ scalar\+\_\+t, rel\+\_\+t $>$}
+
+Class of polynomials in multiple variables with relations. 
+
+A polynomial is just a vector of monomials, ordered in increasing degree The template scalar\+\_\+t determines the type of the coefficients. The template rel\+\_\+t determines the relations that the variables x\+\_\+i satisfy. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1polynomial_a71f3c9e5235f925ccc61b25ab784abbe}\label{classSymmetric__Polynomials_1_1polynomial_a71f3c9e5235f925ccc61b25ab784abbe}} 
+\index{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}!polynomial@{polynomial}}
+\index{polynomial@{polynomial}!Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{polynomial()}{polynomial()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{Symmetric\+\_\+\+Polynomials\+::polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}} (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$$>$ \&}]{monos,  }\item[{bool}]{dontcondense = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a polynomial given a vector of monomials, applying relations to variables and reordering as needed. Condensation is performed by default but can be disabled at the user\textquotesingle{}s risk. 
+
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1polynomial_a82cab1d2cec4b6a533836a41e3945ff9}\label{classSymmetric__Polynomials_1_1polynomial_a82cab1d2cec4b6a533836a41e3945ff9}} 
+\index{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}!polynomial@{polynomial}}
+\index{polynomial@{polynomial}!Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{polynomial()}{polynomial()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{Symmetric\+\_\+\+Polynomials\+::polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&}]{mono }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a polynomial from a single monomial. 
+
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1polynomial_ae65ae6ff604a638732d872b479844ba5}\label{classSymmetric__Polynomials_1_1polynomial_ae65ae6ff604a638732d872b479844ba5}} 
+\index{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}!polynomial@{polynomial}}
+\index{polynomial@{polynomial}!Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{polynomial()}{polynomial()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{Symmetric\+\_\+\+Polynomials\+::polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default Constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1polynomial_ac0a6e7d6fdbef8a955f5fd72ee2f2ead}\label{classSymmetric__Polynomials_1_1polynomial_ac0a6e7d6fdbef8a955f5fd72ee2f2ead}} 
+\index{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}!condense@{condense}}
+\index{condense@{condense}!Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{condense()}{condense()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+void \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{Symmetric\+\_\+\+Polynomials\+::polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::condense (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Incorporates all monomials with same powers vector into a single monomial by adding coefficients, condensing the polynomial. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1polynomial_ac0a6e7d6fdbef8a955f5fd72ee2f2ead_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1polynomial_a29a3177f37777cd66cbf9b50402a10c6}\label{classSymmetric__Polynomials_1_1polynomial_a29a3177f37777cd66cbf9b50402a10c6}} 
+\index{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}!constant@{constant}}
+\index{constant@{constant}!Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{constant()}{constant()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+static \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$scalar\+\_\+t, rel\+\_\+t$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{Symmetric\+\_\+\+Polynomials\+::polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::constant (\begin{DoxyParamCaption}\item[{int}]{coeff,  }\item[{int}]{variables }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Constructs constant polynomial given coefficient and number of variables. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1polynomial_a29a3177f37777cd66cbf9b50402a10c6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1polynomial_ab0df36baf0c00178007ab065b33f1f33}\label{classSymmetric__Polynomials_1_1polynomial_ab0df36baf0c00178007ab065b33f1f33}} 
+\index{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}!highest\_term@{highest\_term}}
+\index{highest\_term@{highest\_term}!Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{highest\_term()}{highest\_term()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$scalar\+\_\+t, rel\+\_\+t$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{Symmetric\+\_\+\+Polynomials\+::polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::highest\+\_\+term (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns highest term monomial in a polynomial. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1polynomial_ab0df36baf0c00178007ab065b33f1f33_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1polynomial_a77254223dd126132da67a49bdf6bda4e}\label{classSymmetric__Polynomials_1_1polynomial_a77254223dd126132da67a49bdf6bda4e}} 
+\index{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+bool \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{Symmetric\+\_\+\+Polynomials\+::polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Standard inequality of polynomials. 
+
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1polynomial_aa907a0fb17c89025757bb89237adeaab}\label{classSymmetric__Polynomials_1_1polynomial_aa907a0fb17c89025757bb89237adeaab}} 
+\index{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$scalar\+\_\+t, rel\+\_\+t$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{Symmetric\+\_\+\+Polynomials\+::polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds two polynomials. 
+
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1polynomial_a1a7f680478bff58807a4f19bacb0486b}\label{classSymmetric__Polynomials_1_1polynomial_a1a7f680478bff58807a4f19bacb0486b}} 
+\index{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$scalar\+\_\+t, rel\+\_\+t$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{Symmetric\+\_\+\+Polynomials\+::polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::operator-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns -\/b for polynomial b. 
+
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1polynomial_a24cd31f0a1ecc50804b772925a744e61}\label{classSymmetric__Polynomials_1_1polynomial_a24cd31f0a1ecc50804b772925a744e61}} 
+\index{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$scalar\+\_\+t, rel\+\_\+t$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{Symmetric\+\_\+\+Polynomials\+::polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Subtracts polynomial from polynomial. 
+
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1polynomial_a3fb9218857967bee4dad6de36db12774}\label{classSymmetric__Polynomials_1_1polynomial_a3fb9218857967bee4dad6de36db12774}} 
+\index{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+bool \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{Symmetric\+\_\+\+Polynomials\+::polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Standard equality of polynomials. 
+
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1polynomial_a7582ebc7d8e2fcfd5c01c8b5acc50350}\label{classSymmetric__Polynomials_1_1polynomial_a7582ebc7d8e2fcfd5c01c8b5acc50350}} 
+\index{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}!print@{print}}
+\index{print@{print}!Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+std\+::string \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{Symmetric\+\_\+\+Polynomials\+::polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Print polynomial using default variable names x\+\_\+1,...,x\+\_\+n. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1polynomial_a7582ebc7d8e2fcfd5c01c8b5acc50350_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1polynomial_a282b9660df877b4a5ed1ec57a7714634}\label{classSymmetric__Polynomials_1_1polynomial_a282b9660df877b4a5ed1ec57a7714634}} 
+\index{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}!print@{print}}
+\index{print@{print}!Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+std\+::string \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{Symmetric\+\_\+\+Polynomials\+::polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::print (\begin{DoxyParamCaption}\item[{const std\+::function$<$ std\+::string(int)$>$ \&}]{variable\+\_\+names }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Print polynomial using given variable names. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1polynomial_a282b9660df877b4a5ed1ec57a7714634_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1polynomial_a74ab4a485e9017d4517dc7cf24e9ee9a}\label{classSymmetric__Polynomials_1_1polynomial_a74ab4a485e9017d4517dc7cf24e9ee9a}} 
+\index{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}!print@{print}}
+\index{print@{print}!Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+std\+::string \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{Symmetric\+\_\+\+Polynomials\+::polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::print (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{variable\+\_\+names }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Print monomial using given variable names. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1polynomial_ab9d8736a84257e51748cefff853c43a4}\label{classSymmetric__Polynomials_1_1polynomial_ab9d8736a84257e51748cefff853c43a4}} 
+\index{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}!monos@{monos}}
+\index{monos@{monos}!Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{monos}{monos}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+std\+::vector$<$\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$scalar\+\_\+t, rel\+\_\+t$>$ $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{Symmetric\+\_\+\+Polynomials\+::polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::monos}
+
+
+
+The vector of monomials, ordered in increasing degree. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{Polynomials_8h}{Polynomials.\+h}}\end{DoxyCompactItemize}

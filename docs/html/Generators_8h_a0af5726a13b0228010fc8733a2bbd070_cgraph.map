@@ -1,0 +1,8 @@
+<map id="monomial_basis" name="monomial_basis">
+<area shape="rect" id="node1" title="Returns the monomial basis in given number of variables and degree." alt="" coords="5,111,135,138"/>
+<area shape="rect" id="node2" href="$structmonomial__basis__generator.html#a5ff75d04319c05e3ac4736ee1d1b002e" title="Returns the generated monomial." alt="" coords="184,5,383,47"/>
+<area shape="rect" id="node4" href="$classvector__interpolate__generator.html#afcaaf4c5535b93a394ce80eb803f2777" title="False if all vectors have been generated." alt="" coords="196,71,371,112"/>
+<area shape="rect" id="node5" href="$classvector__interpolate__generator.html#a9cad7c0a004d2050d7f5fab7418edb9e" title="Checks if policy is satisfied." alt="" coords="183,136,384,177"/>
+<area shape="rect" id="node6" href="$classvector__interpolate__generator.html#a27f7169a1942cf8a3774270c7595f666" title="Generates new vector." alt="" coords="211,201,356,243"/>
+<area shape="rect" id="node3" href="$classvector__interpolate__generator.html#ae6ad409f99da116ddd6325449a4e66e5" title="Returns the generated vector." alt="" coords="432,5,627,47"/>
+</map>

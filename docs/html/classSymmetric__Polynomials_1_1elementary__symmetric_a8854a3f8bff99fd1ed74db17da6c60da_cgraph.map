@@ -1,0 +1,8 @@
+<map id="Symmetric_Polynomials::elementary_symmetric::compute_product" name="Symmetric_Polynomials::elementary_symmetric::compute_product">
+<area shape="rect" id="node1" title="Given vector pwr computes e_1^{pwr_1}*...*e_n^{pwr_n}." alt="" coords="5,62,188,118"/>
+<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1polynomial.html#a29a3177f37777cd66cbf9b50402a10c6" title="Constructs constant polynomial given coefficient and number of variables." alt="" coords="464,71,644,112"/>
+<area shape="rect" id="node3" href="$namespaceSymmetric__Polynomials.html#aca3363cff5919c3f416bd56d80f6ca72" title="Computes the orbit of a monomial under a set of permutations." alt="" coords="236,8,416,49"/>
+<area shape="rect" id="node5" href="$namespaceSymmetric__Polynomials.html#a1d476a58c571385ffab409a59c683b98" title="Computes a^p for polynomial a and nonnegative integer p." alt="" coords="236,128,416,169"/>
+<area shape="rect" id="node4" href="$namespaceSymmetric__Polynomials.html#abdbc4a51aab1bb201ebfedcd26896cb4" title="Permutes the variables in a monomial according permutation; returns permuted monomial." alt="" coords="464,5,644,47"/>
+<area shape="rect" id="node6" href="$namespaceSymmetric__Polynomials.html#aa3071663e4ec8ac6e28de064de66e492" title="Multiplies two polynomials with the ability to disable condensation (not recommended)" alt="" coords="464,136,644,177"/>
+</map>

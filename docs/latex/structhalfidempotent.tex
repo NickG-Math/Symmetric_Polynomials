@@ -1,0 +1,121 @@
+\hypertarget{structhalfidempotent}{}\doxysection{halfidempotent Struct Reference}
+\label{structhalfidempotent}\index{halfidempotent@{halfidempotent}}
+
+
+Class when we have variables x\+\_\+1,...,x\+\_\+n,y\+\_\+1,...,y\+\_\+n and the relations are\+: y\+\_\+i$^\wedge$2=y\+\_\+i.  
+
+
+
+
+{\ttfamily \#include $<$Relations.\+h$>$}
+
+
+
+Inheritance diagram for halfidempotent\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{structhalfidempotent__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for halfidempotent\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{structhalfidempotent__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{structhalfidempotent_a063e769b077539ff8b955b13d8ce58cc}{compute\+\_\+degree}} (const std\+::vector$<$ int $>$ \&powers)
+\item 
+{\footnotesize template$<$typename monomial\+\_\+ptr $>$ }\\static void \mbox{\hyperlink{structhalfidempotent_aa5af5372412adef9b09c360c9e3bc295}{apply\+\_\+monomial}} (monomial\+\_\+ptr m)
+\item 
+{\footnotesize template$<$typename polynomial\+\_\+ptr $>$ }\\static void \mbox{\hyperlink{structhalfidempotent_a43e540f699ea24867557cee23e3df851}{apply\+\_\+polynomial}} (polynomial\+\_\+ptr)
+\item 
+static std\+::vector$<$ int $>$ \mbox{\hyperlink{structhalfidempotent_a3a8c7d08c390090678654adef9c71b62}{max\+\_\+powers}} (int variables, int degree)
+\item 
+static std\+::vector$<$ int $>$ \mbox{\hyperlink{structhalfidempotent_abc46e148d41b3c3eb65528cf93666d77}{permute}} (const std\+::vector$<$ int $>$ \&v, const std\+::vector$<$ char $>$ \&perm)
+\item 
+static int \mbox{\hyperlink{structhalfidempotent_a2c2d5ec9b9c1b2cacfe0a51896c8acb3}{true\+\_\+variables}} (int n)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const bool \mbox{\hyperlink{structhalfidempotent_a0243430f647039246901cc7efaeedd45}{product\+\_\+of\+\_\+monomials\+\_\+is\+\_\+monomial}} = 1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class when we have variables x\+\_\+1,...,x\+\_\+n,y\+\_\+1,...,y\+\_\+n and the relations are\+: y\+\_\+i$^\wedge$2=y\+\_\+i. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structhalfidempotent_aa5af5372412adef9b09c360c9e3bc295}\label{structhalfidempotent_aa5af5372412adef9b09c360c9e3bc295}} 
+\index{halfidempotent@{halfidempotent}!apply\_monomial@{apply\_monomial}}
+\index{apply\_monomial@{apply\_monomial}!halfidempotent@{halfidempotent}}
+\doxysubsubsection{\texorpdfstring{apply\_monomial()}{apply\_monomial()}}
+{\footnotesize\ttfamily template$<$typename monomial\+\_\+ptr $>$ \\
+static void halfidempotent\+::apply\+\_\+monomial (\begin{DoxyParamCaption}\item[{monomial\+\_\+ptr}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structhalfidempotent_a43e540f699ea24867557cee23e3df851}\label{structhalfidempotent_a43e540f699ea24867557cee23e3df851}} 
+\index{halfidempotent@{halfidempotent}!apply\_polynomial@{apply\_polynomial}}
+\index{apply\_polynomial@{apply\_polynomial}!halfidempotent@{halfidempotent}}
+\doxysubsubsection{\texorpdfstring{apply\_polynomial()}{apply\_polynomial()}}
+{\footnotesize\ttfamily template$<$typename polynomial\+\_\+ptr $>$ \\
+static void halfidempotent\+::apply\+\_\+polynomial (\begin{DoxyParamCaption}\item[{polynomial\+\_\+ptr}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structhalfidempotent_a063e769b077539ff8b955b13d8ce58cc}\label{structhalfidempotent_a063e769b077539ff8b955b13d8ce58cc}} 
+\index{halfidempotent@{halfidempotent}!compute\_degree@{compute\_degree}}
+\index{compute\_degree@{compute\_degree}!halfidempotent@{halfidempotent}}
+\doxysubsubsection{\texorpdfstring{compute\_degree()}{compute\_degree()}}
+{\footnotesize\ttfamily static int halfidempotent\+::compute\+\_\+degree (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{powers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{structhalfidempotent_a063e769b077539ff8b955b13d8ce58cc_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structhalfidempotent_a3a8c7d08c390090678654adef9c71b62}\label{structhalfidempotent_a3a8c7d08c390090678654adef9c71b62}} 
+\index{halfidempotent@{halfidempotent}!max\_powers@{max\_powers}}
+\index{max\_powers@{max\_powers}!halfidempotent@{halfidempotent}}
+\doxysubsubsection{\texorpdfstring{max\_powers()}{max\_powers()}}
+{\footnotesize\ttfamily static std\+::vector$<$int$>$ halfidempotent\+::max\+\_\+powers (\begin{DoxyParamCaption}\item[{int}]{variables,  }\item[{int}]{degree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structhalfidempotent_abc46e148d41b3c3eb65528cf93666d77}\label{structhalfidempotent_abc46e148d41b3c3eb65528cf93666d77}} 
+\index{halfidempotent@{halfidempotent}!permute@{permute}}
+\index{permute@{permute}!halfidempotent@{halfidempotent}}
+\doxysubsubsection{\texorpdfstring{permute()}{permute()}}
+{\footnotesize\ttfamily static std\+::vector$<$int$>$ halfidempotent\+::permute (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{v,  }\item[{const std\+::vector$<$ char $>$ \&}]{perm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structhalfidempotent_abc46e148d41b3c3eb65528cf93666d77_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structhalfidempotent_a2c2d5ec9b9c1b2cacfe0a51896c8acb3}\label{structhalfidempotent_a2c2d5ec9b9c1b2cacfe0a51896c8acb3}} 
+\index{halfidempotent@{halfidempotent}!true\_variables@{true\_variables}}
+\index{true\_variables@{true\_variables}!halfidempotent@{halfidempotent}}
+\doxysubsubsection{\texorpdfstring{true\_variables()}{true\_variables()}}
+{\footnotesize\ttfamily static int halfidempotent\+::true\+\_\+variables (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structhalfidempotent_a0243430f647039246901cc7efaeedd45}\label{structhalfidempotent_a0243430f647039246901cc7efaeedd45}} 
+\index{halfidempotent@{halfidempotent}!product\_of\_monomials\_is\_monomial@{product\_of\_monomials\_is\_monomial}}
+\index{product\_of\_monomials\_is\_monomial@{product\_of\_monomials\_is\_monomial}!halfidempotent@{halfidempotent}}
+\doxysubsubsection{\texorpdfstring{product\_of\_monomials\_is\_monomial}{product\_of\_monomials\_is\_monomial}}
+{\footnotesize\ttfamily const bool halfidempotent\+::product\+\_\+of\+\_\+monomials\+\_\+is\+\_\+monomial = 1\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{Relations_8h}{Relations.\+h}}\end{DoxyCompactItemize}

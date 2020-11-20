@@ -1,0 +1,126 @@
+\hypertarget{structSymmetric__Polynomials_1_1relations__base}{}\doxysection{Symmetric\+\_\+\+Polynomials\+::relations\+\_\+base Struct Reference}
+\label{structSymmetric__Polynomials_1_1relations__base}\index{Symmetric\_Polynomials::relations\_base@{Symmetric\_Polynomials::relations\_base}}
+
+
+Base class for all relations. Inherit from it and specialize static methods to get a functioning relations class.  
+
+
+
+
+{\ttfamily \#include $<$Relations.\+h$>$}
+
+
+
+Inheritance diagram for Symmetric\+\_\+\+Polynomials\+::relations\+\_\+base\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structSymmetric__Polynomials_1_1relations__base__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{structSymmetric__Polynomials_1_1relations__base_a17385c769e1de6ede3f07ec2faac9852}{compute\+\_\+degree}} (const std\+::vector$<$ int $>$ \&)
+\begin{DoxyCompactList}\small\item\em Compute degree based on the powers vector and relations. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename monomial\+\_\+ptr $>$ }\\static void \mbox{\hyperlink{structSymmetric__Polynomials_1_1relations__base_a4a80cf0d9077c61442866994fcd41eae}{apply\+\_\+monomial}} (monomial\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Apply relations on monomial. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename polynomial\+\_\+ptr $>$ }\\static void \mbox{\hyperlink{structSymmetric__Polynomials_1_1relations__base_a528e88e6a33d87093b9781957fa26a86}{apply\+\_\+polynomial}} (polynomial\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Apply relations on polynomial. \end{DoxyCompactList}\item 
+static std\+::vector$<$ int $>$ \mbox{\hyperlink{structSymmetric__Polynomials_1_1relations__base_a3c016dcb115a852373993c46de05f7c7}{max\+\_\+powers}} (int, int)
+\begin{DoxyCompactList}\small\item\em Return max powers vector corresponding to polynomial of given degree and number of variables. \end{DoxyCompactList}\item 
+static std\+::vector$<$ int $>$ \mbox{\hyperlink{structSymmetric__Polynomials_1_1relations__base_a085971253da53536098e2e6f86792dd9}{permute}} (const std\+::vector$<$ int $>$ \&, const std\+::vector$<$ char $>$ \&)
+\begin{DoxyCompactList}\small\item\em Apply permutation on powers vector. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{structSymmetric__Polynomials_1_1relations__base_a8c9ad7e5d2e9680334c05900a0cc5645}{true\+\_\+variables}} (int n)
+\begin{DoxyCompactList}\small\item\em Actual number of variables given length of powers vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const bool \mbox{\hyperlink{structSymmetric__Polynomials_1_1relations__base_ae6ef9fc347e7e5e19da620af0f0ca1f2}{product\+\_\+of\+\_\+monomials\+\_\+is\+\_\+monomial}} =0
+\begin{DoxyCompactList}\small\item\em By default 0, but set to 1 in a specialization if you can guarantee that the product of monomials after relations are applied is a monomial (as opposed to polynomial) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for all relations. Inherit from it and specialize static methods to get a functioning relations class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1relations__base_a4a80cf0d9077c61442866994fcd41eae}\label{structSymmetric__Polynomials_1_1relations__base_a4a80cf0d9077c61442866994fcd41eae}} 
+\index{Symmetric\_Polynomials::relations\_base@{Symmetric\_Polynomials::relations\_base}!apply\_monomial@{apply\_monomial}}
+\index{apply\_monomial@{apply\_monomial}!Symmetric\_Polynomials::relations\_base@{Symmetric\_Polynomials::relations\_base}}
+\doxysubsubsection{\texorpdfstring{apply\_monomial()}{apply\_monomial()}}
+{\footnotesize\ttfamily template$<$typename monomial\+\_\+ptr $>$ \\
+static void Symmetric\+\_\+\+Polynomials\+::relations\+\_\+base\+::apply\+\_\+monomial (\begin{DoxyParamCaption}\item[{monomial\+\_\+ptr}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Apply relations on monomial. 
+
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1relations__base_a528e88e6a33d87093b9781957fa26a86}\label{structSymmetric__Polynomials_1_1relations__base_a528e88e6a33d87093b9781957fa26a86}} 
+\index{Symmetric\_Polynomials::relations\_base@{Symmetric\_Polynomials::relations\_base}!apply\_polynomial@{apply\_polynomial}}
+\index{apply\_polynomial@{apply\_polynomial}!Symmetric\_Polynomials::relations\_base@{Symmetric\_Polynomials::relations\_base}}
+\doxysubsubsection{\texorpdfstring{apply\_polynomial()}{apply\_polynomial()}}
+{\footnotesize\ttfamily template$<$typename polynomial\+\_\+ptr $>$ \\
+static void Symmetric\+\_\+\+Polynomials\+::relations\+\_\+base\+::apply\+\_\+polynomial (\begin{DoxyParamCaption}\item[{polynomial\+\_\+ptr}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Apply relations on polynomial. 
+
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1relations__base_a17385c769e1de6ede3f07ec2faac9852}\label{structSymmetric__Polynomials_1_1relations__base_a17385c769e1de6ede3f07ec2faac9852}} 
+\index{Symmetric\_Polynomials::relations\_base@{Symmetric\_Polynomials::relations\_base}!compute\_degree@{compute\_degree}}
+\index{compute\_degree@{compute\_degree}!Symmetric\_Polynomials::relations\_base@{Symmetric\_Polynomials::relations\_base}}
+\doxysubsubsection{\texorpdfstring{compute\_degree()}{compute\_degree()}}
+{\footnotesize\ttfamily static int Symmetric\+\_\+\+Polynomials\+::relations\+\_\+base\+::compute\+\_\+degree (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Compute degree based on the powers vector and relations. 
+
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1relations__base_a3c016dcb115a852373993c46de05f7c7}\label{structSymmetric__Polynomials_1_1relations__base_a3c016dcb115a852373993c46de05f7c7}} 
+\index{Symmetric\_Polynomials::relations\_base@{Symmetric\_Polynomials::relations\_base}!max\_powers@{max\_powers}}
+\index{max\_powers@{max\_powers}!Symmetric\_Polynomials::relations\_base@{Symmetric\_Polynomials::relations\_base}}
+\doxysubsubsection{\texorpdfstring{max\_powers()}{max\_powers()}}
+{\footnotesize\ttfamily static std\+::vector$<$int$>$ Symmetric\+\_\+\+Polynomials\+::relations\+\_\+base\+::max\+\_\+powers (\begin{DoxyParamCaption}\item[{int}]{,  }\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Return max powers vector corresponding to polynomial of given degree and number of variables. 
+
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1relations__base_a085971253da53536098e2e6f86792dd9}\label{structSymmetric__Polynomials_1_1relations__base_a085971253da53536098e2e6f86792dd9}} 
+\index{Symmetric\_Polynomials::relations\_base@{Symmetric\_Polynomials::relations\_base}!permute@{permute}}
+\index{permute@{permute}!Symmetric\_Polynomials::relations\_base@{Symmetric\_Polynomials::relations\_base}}
+\doxysubsubsection{\texorpdfstring{permute()}{permute()}}
+{\footnotesize\ttfamily static std\+::vector$<$int$>$ Symmetric\+\_\+\+Polynomials\+::relations\+\_\+base\+::permute (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{,  }\item[{const std\+::vector$<$ char $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Apply permutation on powers vector. 
+
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1relations__base_a8c9ad7e5d2e9680334c05900a0cc5645}\label{structSymmetric__Polynomials_1_1relations__base_a8c9ad7e5d2e9680334c05900a0cc5645}} 
+\index{Symmetric\_Polynomials::relations\_base@{Symmetric\_Polynomials::relations\_base}!true\_variables@{true\_variables}}
+\index{true\_variables@{true\_variables}!Symmetric\_Polynomials::relations\_base@{Symmetric\_Polynomials::relations\_base}}
+\doxysubsubsection{\texorpdfstring{true\_variables()}{true\_variables()}}
+{\footnotesize\ttfamily static int Symmetric\+\_\+\+Polynomials\+::relations\+\_\+base\+::true\+\_\+variables (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Actual number of variables given length of powers vector. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1relations__base_ae6ef9fc347e7e5e19da620af0f0ca1f2}\label{structSymmetric__Polynomials_1_1relations__base_ae6ef9fc347e7e5e19da620af0f0ca1f2}} 
+\index{Symmetric\_Polynomials::relations\_base@{Symmetric\_Polynomials::relations\_base}!product\_of\_monomials\_is\_monomial@{product\_of\_monomials\_is\_monomial}}
+\index{product\_of\_monomials\_is\_monomial@{product\_of\_monomials\_is\_monomial}!Symmetric\_Polynomials::relations\_base@{Symmetric\_Polynomials::relations\_base}}
+\doxysubsubsection{\texorpdfstring{product\_of\_monomials\_is\_monomial}{product\_of\_monomials\_is\_monomial}}
+{\footnotesize\ttfamily const bool Symmetric\+\_\+\+Polynomials\+::relations\+\_\+base\+::product\+\_\+of\+\_\+monomials\+\_\+is\+\_\+monomial =0\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+By default 0, but set to 1 in a specialization if you can guarantee that the product of monomials after relations are applied is a monomial (as opposed to polynomial) 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{Relations_8h}{Relations.\+h}}\end{DoxyCompactItemize}

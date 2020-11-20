@@ -1,0 +1,142 @@
+\hypertarget{structdecomposition__half__idempotent}{}\doxysection{decomposition\+\_\+half\+\_\+idempotent$<$ scalar\+\_\+t $>$ Struct Template Reference}
+\label{structdecomposition__half__idempotent}\index{decomposition\_half\_idempotent$<$ scalar\_t $>$@{decomposition\_half\_idempotent$<$ scalar\_t $>$}}
+
+
+Class for writing every element in the fixed points of R as a polynomial on the generators Idem, Chern and Twisted\+Chern (a \char`\"{}decomposition\char`\"{})  
+
+
+
+
+{\ttfamily \#include $<$Half\+\_\+\+Idempotent.\+h$>$}
+
+
+
+Inheritance diagram for decomposition\+\_\+half\+\_\+idempotent$<$ scalar\+\_\+t $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{structdecomposition__half__idempotent__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for decomposition\+\_\+half\+\_\+idempotent$<$ scalar\+\_\+t $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structdecomposition__half__idempotent__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structdecomposition__half__idempotent_a178f6228e97fa48ef922c2f7622d36c6}{decomposition\+\_\+half\+\_\+idempotent}} (int \mbox{\hyperlink{classhalf__idempotent__generators_a18dd4229c330dbba1861667b2ae1f616}{n}})
+\begin{DoxyCompactList}\small\item\em Constructor given number of variables n. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structdecomposition__half__idempotent_a5b3a55d2b58614cd14cfc496348f3688}{decomposition\+\_\+half\+\_\+idempotent}} (const \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structhalfidempotent}{halfidempotent}} $>$ \&a)
+\begin{DoxyCompactList}\small\item\em Initialize and decompose into polynomial on Idem,Chern and Twisted\+Chern. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structdecomposition__half__idempotent_a4a7313252dafad586fd10c78bcc74e2c}{decompose}} (const \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structhalfidempotent}{halfidempotent}} $>$ \&a)
+\begin{DoxyCompactList}\small\item\em Writes a fixed point of of R (polynomial in x\+\_\+1,...,x\+\_\+n,y\+\_\+1,...,y\+\_\+n) as a polynomial on the generators Idem, Chern and Twisted\+Chern. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structdecomposition__half__idempotent_ab1fca7ecb75f404cbcffcc4b64948c9c}{verify}} (const \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structhalfidempotent}{halfidempotent}} $>$ \&a) const
+\begin{DoxyCompactList}\small\item\em Verifies that the decomposition is correct (i.\+e. gives the original polynomial in the original variables). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structrelations__base}{relations\+\_\+base}} $>$ \mbox{\hyperlink{structdecomposition__half__idempotent_ad43271826343a4794d14f8c1e7fb7ef3}{decomposition}}
+\begin{DoxyCompactList}\small\item\em The polynomial on the Idem, Chern and Twisted\+Chern generators. We use \mbox{\hyperlink{structrelations__base}{relations\+\_\+base}} since the relations for these generators are very complicated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename scalar\+\_\+t$>$\newline
+struct decomposition\+\_\+half\+\_\+idempotent$<$ scalar\+\_\+t $>$}
+
+Class for writing every element in the fixed points of R as a polynomial on the generators Idem, Chern and Twisted\+Chern (a \char`\"{}decomposition\char`\"{}) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structdecomposition__half__idempotent_a178f6228e97fa48ef922c2f7622d36c6}\label{structdecomposition__half__idempotent_a178f6228e97fa48ef922c2f7622d36c6}} 
+\index{decomposition\_half\_idempotent$<$ scalar\_t $>$@{decomposition\_half\_idempotent$<$ scalar\_t $>$}!decomposition\_half\_idempotent@{decomposition\_half\_idempotent}}
+\index{decomposition\_half\_idempotent@{decomposition\_half\_idempotent}!decomposition\_half\_idempotent$<$ scalar\_t $>$@{decomposition\_half\_idempotent$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{decomposition\_half\_idempotent()}{decomposition\_half\_idempotent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+\mbox{\hyperlink{structdecomposition__half__idempotent}{decomposition\+\_\+half\+\_\+idempotent}}$<$ scalar\+\_\+t $>$\+::\mbox{\hyperlink{structdecomposition__half__idempotent}{decomposition\+\_\+half\+\_\+idempotent}} (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor given number of variables n. 
+
+\mbox{\Hypertarget{structdecomposition__half__idempotent_a5b3a55d2b58614cd14cfc496348f3688}\label{structdecomposition__half__idempotent_a5b3a55d2b58614cd14cfc496348f3688}} 
+\index{decomposition\_half\_idempotent$<$ scalar\_t $>$@{decomposition\_half\_idempotent$<$ scalar\_t $>$}!decomposition\_half\_idempotent@{decomposition\_half\_idempotent}}
+\index{decomposition\_half\_idempotent@{decomposition\_half\_idempotent}!decomposition\_half\_idempotent$<$ scalar\_t $>$@{decomposition\_half\_idempotent$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{decomposition\_half\_idempotent()}{decomposition\_half\_idempotent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+\mbox{\hyperlink{structdecomposition__half__idempotent}{decomposition\+\_\+half\+\_\+idempotent}}$<$ scalar\+\_\+t $>$\+::\mbox{\hyperlink{structdecomposition__half__idempotent}{decomposition\+\_\+half\+\_\+idempotent}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structhalfidempotent}{halfidempotent}} $>$ \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialize and decompose into polynomial on Idem,Chern and Twisted\+Chern. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structdecomposition__half__idempotent_a5b3a55d2b58614cd14cfc496348f3688_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structdecomposition__half__idempotent_a4a7313252dafad586fd10c78bcc74e2c}\label{structdecomposition__half__idempotent_a4a7313252dafad586fd10c78bcc74e2c}} 
+\index{decomposition\_half\_idempotent$<$ scalar\_t $>$@{decomposition\_half\_idempotent$<$ scalar\_t $>$}!decompose@{decompose}}
+\index{decompose@{decompose}!decomposition\_half\_idempotent$<$ scalar\_t $>$@{decomposition\_half\_idempotent$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{decompose()}{decompose()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+void \mbox{\hyperlink{structdecomposition__half__idempotent}{decomposition\+\_\+half\+\_\+idempotent}}$<$ scalar\+\_\+t $>$\+::decompose (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structhalfidempotent}{halfidempotent}} $>$ \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Writes a fixed point of of R (polynomial in x\+\_\+1,...,x\+\_\+n,y\+\_\+1,...,y\+\_\+n) as a polynomial on the generators Idem, Chern and Twisted\+Chern. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structdecomposition__half__idempotent_a4a7313252dafad586fd10c78bcc74e2c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structdecomposition__half__idempotent_ab1fca7ecb75f404cbcffcc4b64948c9c}\label{structdecomposition__half__idempotent_ab1fca7ecb75f404cbcffcc4b64948c9c}} 
+\index{decomposition\_half\_idempotent$<$ scalar\_t $>$@{decomposition\_half\_idempotent$<$ scalar\_t $>$}!verify@{verify}}
+\index{verify@{verify}!decomposition\_half\_idempotent$<$ scalar\_t $>$@{decomposition\_half\_idempotent$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{verify()}{verify()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+bool \mbox{\hyperlink{structdecomposition__half__idempotent}{decomposition\+\_\+half\+\_\+idempotent}}$<$ scalar\+\_\+t $>$\+::verify (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structhalfidempotent}{halfidempotent}} $>$ \&}]{a }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifies that the decomposition is correct (i.\+e. gives the original polynomial in the original variables). 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structdecomposition__half__idempotent_ab1fca7ecb75f404cbcffcc4b64948c9c_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structdecomposition__half__idempotent_ad43271826343a4794d14f8c1e7fb7ef3}\label{structdecomposition__half__idempotent_ad43271826343a4794d14f8c1e7fb7ef3}} 
+\index{decomposition\_half\_idempotent$<$ scalar\_t $>$@{decomposition\_half\_idempotent$<$ scalar\_t $>$}!decomposition@{decomposition}}
+\index{decomposition@{decomposition}!decomposition\_half\_idempotent$<$ scalar\_t $>$@{decomposition\_half\_idempotent$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{decomposition}{decomposition}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+\mbox{\hyperlink{classpolynomial}{polynomial}}$<$scalar\+\_\+t,\mbox{\hyperlink{structrelations__base}{relations\+\_\+base}}$>$ \mbox{\hyperlink{structdecomposition__half__idempotent}{decomposition\+\_\+half\+\_\+idempotent}}$<$ scalar\+\_\+t $>$\+::decomposition}
+
+
+
+The polynomial on the Idem, Chern and Twisted\+Chern generators. We use \mbox{\hyperlink{structrelations__base}{relations\+\_\+base}} since the relations for these generators are very complicated. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{Half__Idempotent_8h}{Half\+\_\+\+Idempotent.\+h}}\end{DoxyCompactItemize}

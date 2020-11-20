@@ -1,0 +1,5 @@
+<map id="permutations_generator::get_generated" name="permutations_generator::get_generated">
+<area shape="rect" id="node1" title="Returns generated permutation." alt="" coords="388,5,567,47"/>
+<area shape="rect" id="node2" href="$Permutations_8h.html#aa8a14fb34564317205769ecaec05926d" title="Returns vector of all permutations on n letters." alt="" coords="208,13,340,39"/>
+<area shape="rect" id="node3" href="$Permutations_8h.html#ad6b1213ab617a89025c23731dc89eac6" title="Returns a vector of all monomials in given variables and degree organized in orbits under the symmetr..." alt="" coords="5,13,160,39"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="decomposition_half_idempotent::decompose" name="decomposition_half_idempotent::decompose">
+<area shape="rect" id="node1" title="Writes a fixed point of of R (polynomial in x_1,...,x_n,y_1,...,y_n) as a polynomial on the generator..." alt="" coords="261,50,448,91"/>
+<area shape="rect" id="node2" href="$structdecomposition__half__idempotent.html#a5b3a55d2b58614cd14cfc496348f3688" title="Initialize and decompose into polynomial on Idem,Chern and TwistedChern." alt="" coords="5,5,213,61"/>
+<area shape="rect" id="node3" href="$Half__Idempotent_8h.html#a26e3c0f834aa8fb9502fa69bf12f88b1" title="Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,..." alt="" coords="26,86,193,127"/>
+</map>

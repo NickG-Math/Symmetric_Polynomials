@@ -1,0 +1,256 @@
+\hypertarget{classR__Fixed__Points__Generators}{}\doxysection{R\+\_\+\+Fixed\+\_\+\+Points\+\_\+\+Generators$<$ scalar\+\_\+t $>$ Class Template Reference}
+\label{classR__Fixed__Points__Generators}\index{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$@{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$}}
+
+
+The class containing the generators for the fixed points of R=Q\mbox{[}x\+\_\+1,...,x\+\_\+n,y\+\_\+1,...,y\+\_\+n\mbox{]}/(y\+\_\+i$^\wedge$2=y\+\_\+i) under the Sigma\+\_\+n permutation action.  
+
+
+
+
+{\ttfamily \#include $<$Half\+\_\+\+Idempotent.\+h$>$}
+
+
+
+Inheritance diagram for R\+\_\+\+Fixed\+\_\+\+Points\+\_\+\+Generators$<$ scalar\+\_\+t $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classR__Fixed__Points__Generators__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for R\+\_\+\+Fixed\+\_\+\+Points\+\_\+\+Generators$<$ scalar\+\_\+t $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{classR__Fixed__Points__Generators__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classR__Fixed__Points__Generators_a43ff6a7d03c8e650c350b67ebe6c0f7c}{R\+\_\+\+Fixed\+\_\+\+Points\+\_\+\+Generators}} (int \mbox{\hyperlink{classR__Fixed__Points__Generators_a15554025657b15a75cb83a3e55bc59ee}{n}})
+\begin{DoxyCompactList}\small\item\em Constructs the generators, given the number of variables n. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classR__Fixed__Points__Generators_a159af822e99495422e2b468e87c15f31}{print\+\_\+power}} (const std\+::vector$<$ int $>$ \&pwr) const
+\begin{DoxyCompactList}\small\item\em Prints a polynomial on our generators Idem, Chern, Twisted\+Chern. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structhalfidempotent}{halfidempotent}} $>$ \mbox{\hyperlink{classR__Fixed__Points__Generators_a4d8be7b98962a4b1dbf92e123d8f05b1}{compute\+\_\+product}} (const std\+::vector$<$ int $>$ \&pwr) const
+\begin{DoxyCompactList}\small\item\em Computes a product of a monomial on our generators Idem, Chern, Twisted\+Chern. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structhalfidempotent}{halfidempotent}} $>$ \mbox{\hyperlink{classR__Fixed__Points__Generators_a538313e3072a4683591cd5376f6477d8}{compute\+\_\+product\+\_\+max\+\_\+term}} (const std\+::vector$<$ int $>$ \&pwr) const
+\begin{DoxyCompactList}\small\item\em Computes the dominant term of a product of a monomial on our generators Idem, Chern, Twisted\+Chern. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{classR__Fixed__Points__Generators_a15554025657b15a75cb83a3e55bc59ee}{n}}
+\begin{DoxyCompactList}\small\item\em Number of variables. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classR__Fixed__Points__Generators_a97e6b4706e6e0f1d258ee0cdd7d6264a}{number\+\_\+of\+\_\+generators}}
+\begin{DoxyCompactList}\small\item\em Number of generators. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::pair$<$ int, int $>$, int $>$ \mbox{\hyperlink{classR__Fixed__Points__Generators_acbd191eb135320f6fbdf5dc234b130fc}{Twisted\+Chern\+\_\+indexer}}
+\begin{DoxyCompactList}\small\item\em Transforms the usual pair index of a Twisted\+Chern class to the single integer index we use for the vector Twisted\+Chern. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classR__Fixed__Points__Generators_a05e4cbb45b179b3ee32ffb17761f0bfe}{dimensions}}
+\begin{DoxyCompactList}\small\item\em The dimensions of the generators Idem, Chern, Twisted\+Chern in this order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classR__Fixed__Points__Generators_a9057e03729a19b72258e05782ffcf107}{max\+\_\+powers\+\_\+given\+\_\+degree}} (int degree) const
+\begin{DoxyCompactList}\small\item\em Returns the max powers in a product of Idem, Chern and Twisted\+Chern that has the desired degree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structhalfidempotent}{halfidempotent}} $>$ \mbox{\hyperlink{classR__Fixed__Points__Generators_a64c542f6b3d80578b173457940228dd0}{Idem}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structhalfidempotent}{halfidempotent}} $>$ $>$ \mbox{\hyperlink{classR__Fixed__Points__Generators_af95bfd0f6ed1d32b5b576d5dbad522b5}{Chern}}
+\begin{DoxyCompactList}\small\item\em The highest term of the generator that is y\+\_\+1+...+y\+\_\+n. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structhalfidempotent}{halfidempotent}} $>$ $>$ $>$ \mbox{\hyperlink{classR__Fixed__Points__Generators_a7f725b7e6c8a2216d671c2149d4c64ba}{Twisted\+Chern}}
+\begin{DoxyCompactList}\small\item\em Vector consisting of the highest term of the Chern classes (i.\+e. elementary symmetric polynomials on x\+\_\+1,...,x\+\_\+n) \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \mbox{\hyperlink{classR__Fixed__Points__Generators_a574a2f11016fa39f22cf60c19e9e704e}{permutations}}
+\begin{DoxyCompactList}\small\item\em Vector consisting of the highest term of the twisted Chern classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename scalar\+\_\+t$>$\newline
+class R\+\_\+\+Fixed\+\_\+\+Points\+\_\+\+Generators$<$ scalar\+\_\+t $>$}
+
+The class containing the generators for the fixed points of R=Q\mbox{[}x\+\_\+1,...,x\+\_\+n,y\+\_\+1,...,y\+\_\+n\mbox{]}/(y\+\_\+i$^\wedge$2=y\+\_\+i) under the Sigma\+\_\+n permutation action. 
+
+There are three types of generators (the following is the default order)\+: Idem (y\+\_\+1+...+y\+\_\+n), Chern\+\_\+1,...,Chern\+\_\+n (elementary symmetric on x\+\_\+1,...,x\+\_\+n) as well as the Twisted\+Chern\+\_\+\{s,j\} indexed on 1$<$=s$<$=n and 1$<$=j$<$=n-\/s The latter involve both the x\+\_\+i and y\+\_\+i. The order on the Twisted\+Chern is lexicographic on s,j. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classR__Fixed__Points__Generators_a43ff6a7d03c8e650c350b67ebe6c0f7c}\label{classR__Fixed__Points__Generators_a43ff6a7d03c8e650c350b67ebe6c0f7c}} 
+\index{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$@{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$}!R\_Fixed\_Points\_Generators@{R\_Fixed\_Points\_Generators}}
+\index{R\_Fixed\_Points\_Generators@{R\_Fixed\_Points\_Generators}!R\_Fixed\_Points\_Generators$<$ scalar\_t $>$@{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{R\_Fixed\_Points\_Generators()}{R\_Fixed\_Points\_Generators()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+\mbox{\hyperlink{classR__Fixed__Points__Generators}{R\+\_\+\+Fixed\+\_\+\+Points\+\_\+\+Generators}}$<$ scalar\+\_\+t $>$\+::\mbox{\hyperlink{classR__Fixed__Points__Generators}{R\+\_\+\+Fixed\+\_\+\+Points\+\_\+\+Generators}} (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs the generators, given the number of variables n. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classR__Fixed__Points__Generators_a4d8be7b98962a4b1dbf92e123d8f05b1}\label{classR__Fixed__Points__Generators_a4d8be7b98962a4b1dbf92e123d8f05b1}} 
+\index{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$@{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$}!compute\_product@{compute\_product}}
+\index{compute\_product@{compute\_product}!R\_Fixed\_Points\_Generators$<$ scalar\_t $>$@{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{compute\_product()}{compute\_product()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+\mbox{\hyperlink{classpolynomial}{polynomial}}$<$scalar\+\_\+t, \mbox{\hyperlink{structhalfidempotent}{halfidempotent}}$>$ \mbox{\hyperlink{classR__Fixed__Points__Generators}{R\+\_\+\+Fixed\+\_\+\+Points\+\_\+\+Generators}}$<$ scalar\+\_\+t $>$\+::compute\+\_\+product (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{pwr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Computes a product of a monomial on our generators Idem, Chern, Twisted\+Chern. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classR__Fixed__Points__Generators_a4d8be7b98962a4b1dbf92e123d8f05b1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classR__Fixed__Points__Generators_a4d8be7b98962a4b1dbf92e123d8f05b1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classR__Fixed__Points__Generators_a538313e3072a4683591cd5376f6477d8}\label{classR__Fixed__Points__Generators_a538313e3072a4683591cd5376f6477d8}} 
+\index{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$@{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$}!compute\_product\_max\_term@{compute\_product\_max\_term}}
+\index{compute\_product\_max\_term@{compute\_product\_max\_term}!R\_Fixed\_Points\_Generators$<$ scalar\_t $>$@{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{compute\_product\_max\_term()}{compute\_product\_max\_term()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+\mbox{\hyperlink{classmonomial}{monomial}}$<$scalar\+\_\+t, \mbox{\hyperlink{structhalfidempotent}{halfidempotent}}$>$ \mbox{\hyperlink{classR__Fixed__Points__Generators}{R\+\_\+\+Fixed\+\_\+\+Points\+\_\+\+Generators}}$<$ scalar\+\_\+t $>$\+::compute\+\_\+product\+\_\+max\+\_\+term (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{pwr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Computes the dominant term of a product of a monomial on our generators Idem, Chern, Twisted\+Chern. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classR__Fixed__Points__Generators_a538313e3072a4683591cd5376f6477d8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classR__Fixed__Points__Generators_a9057e03729a19b72258e05782ffcf107}\label{classR__Fixed__Points__Generators_a9057e03729a19b72258e05782ffcf107}} 
+\index{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$@{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$}!max\_powers\_given\_degree@{max\_powers\_given\_degree}}
+\index{max\_powers\_given\_degree@{max\_powers\_given\_degree}!R\_Fixed\_Points\_Generators$<$ scalar\_t $>$@{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{max\_powers\_given\_degree()}{max\_powers\_given\_degree()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+std\+::vector$<$int$>$ \mbox{\hyperlink{classR__Fixed__Points__Generators}{R\+\_\+\+Fixed\+\_\+\+Points\+\_\+\+Generators}}$<$ scalar\+\_\+t $>$\+::max\+\_\+powers\+\_\+given\+\_\+degree (\begin{DoxyParamCaption}\item[{int}]{degree }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns the max powers in a product of Idem, Chern and Twisted\+Chern that has the desired degree. 
+
+\mbox{\Hypertarget{classR__Fixed__Points__Generators_a159af822e99495422e2b468e87c15f31}\label{classR__Fixed__Points__Generators_a159af822e99495422e2b468e87c15f31}} 
+\index{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$@{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$}!print\_power@{print\_power}}
+\index{print\_power@{print\_power}!R\_Fixed\_Points\_Generators$<$ scalar\_t $>$@{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{print\_power()}{print\_power()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+std\+::string \mbox{\hyperlink{classR__Fixed__Points__Generators}{R\+\_\+\+Fixed\+\_\+\+Points\+\_\+\+Generators}}$<$ scalar\+\_\+t $>$\+::print\+\_\+power (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{pwr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints a polynomial on our generators Idem, Chern, Twisted\+Chern. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classR__Fixed__Points__Generators_a159af822e99495422e2b468e87c15f31_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classR__Fixed__Points__Generators_af95bfd0f6ed1d32b5b576d5dbad522b5}\label{classR__Fixed__Points__Generators_af95bfd0f6ed1d32b5b576d5dbad522b5}} 
+\index{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$@{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$}!Chern@{Chern}}
+\index{Chern@{Chern}!R\_Fixed\_Points\_Generators$<$ scalar\_t $>$@{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{Chern}{Chern}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+std\+::vector$<$\mbox{\hyperlink{classmonomial}{monomial}}$<$scalar\+\_\+t, \mbox{\hyperlink{structhalfidempotent}{halfidempotent}}$>$ $>$ \mbox{\hyperlink{classR__Fixed__Points__Generators}{R\+\_\+\+Fixed\+\_\+\+Points\+\_\+\+Generators}}$<$ scalar\+\_\+t $>$\+::Chern\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The highest term of the generator that is y\+\_\+1+...+y\+\_\+n. 
+
+\mbox{\Hypertarget{classR__Fixed__Points__Generators_a05e4cbb45b179b3ee32ffb17761f0bfe}\label{classR__Fixed__Points__Generators_a05e4cbb45b179b3ee32ffb17761f0bfe}} 
+\index{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$@{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$}!dimensions@{dimensions}}
+\index{dimensions@{dimensions}!R\_Fixed\_Points\_Generators$<$ scalar\_t $>$@{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{dimensions}{dimensions}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+std\+::vector$<$int$>$ \mbox{\hyperlink{classR__Fixed__Points__Generators}{R\+\_\+\+Fixed\+\_\+\+Points\+\_\+\+Generators}}$<$ scalar\+\_\+t $>$\+::dimensions}
+
+
+
+The dimensions of the generators Idem, Chern, Twisted\+Chern in this order. 
+
+\mbox{\Hypertarget{classR__Fixed__Points__Generators_a64c542f6b3d80578b173457940228dd0}\label{classR__Fixed__Points__Generators_a64c542f6b3d80578b173457940228dd0}} 
+\index{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$@{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$}!Idem@{Idem}}
+\index{Idem@{Idem}!R\_Fixed\_Points\_Generators$<$ scalar\_t $>$@{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{Idem}{Idem}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+\mbox{\hyperlink{classmonomial}{monomial}}$<$scalar\+\_\+t, \mbox{\hyperlink{structhalfidempotent}{halfidempotent}}$>$ \mbox{\hyperlink{classR__Fixed__Points__Generators}{R\+\_\+\+Fixed\+\_\+\+Points\+\_\+\+Generators}}$<$ scalar\+\_\+t $>$\+::Idem\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classR__Fixed__Points__Generators_a15554025657b15a75cb83a3e55bc59ee}\label{classR__Fixed__Points__Generators_a15554025657b15a75cb83a3e55bc59ee}} 
+\index{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$@{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$}!n@{n}}
+\index{n@{n}!R\_Fixed\_Points\_Generators$<$ scalar\_t $>$@{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+const int \mbox{\hyperlink{classR__Fixed__Points__Generators}{R\+\_\+\+Fixed\+\_\+\+Points\+\_\+\+Generators}}$<$ scalar\+\_\+t $>$\+::n}
+
+
+
+Number of variables. 
+
+\mbox{\Hypertarget{classR__Fixed__Points__Generators_a97e6b4706e6e0f1d258ee0cdd7d6264a}\label{classR__Fixed__Points__Generators_a97e6b4706e6e0f1d258ee0cdd7d6264a}} 
+\index{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$@{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$}!number\_of\_generators@{number\_of\_generators}}
+\index{number\_of\_generators@{number\_of\_generators}!R\_Fixed\_Points\_Generators$<$ scalar\_t $>$@{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{number\_of\_generators}{number\_of\_generators}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+int \mbox{\hyperlink{classR__Fixed__Points__Generators}{R\+\_\+\+Fixed\+\_\+\+Points\+\_\+\+Generators}}$<$ scalar\+\_\+t $>$\+::number\+\_\+of\+\_\+generators}
+
+
+
+Number of generators. 
+
+\mbox{\Hypertarget{classR__Fixed__Points__Generators_a574a2f11016fa39f22cf60c19e9e704e}\label{classR__Fixed__Points__Generators_a574a2f11016fa39f22cf60c19e9e704e}} 
+\index{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$@{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$}!permutations@{permutations}}
+\index{permutations@{permutations}!R\_Fixed\_Points\_Generators$<$ scalar\_t $>$@{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{permutations}{permutations}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+const std\+::vector$<$std\+::vector$<$char$>$ $>$ \mbox{\hyperlink{classR__Fixed__Points__Generators}{R\+\_\+\+Fixed\+\_\+\+Points\+\_\+\+Generators}}$<$ scalar\+\_\+t $>$\+::permutations\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Vector consisting of the highest term of the twisted Chern classes. 
+
+All permutations in n variables \mbox{\Hypertarget{classR__Fixed__Points__Generators_a7f725b7e6c8a2216d671c2149d4c64ba}\label{classR__Fixed__Points__Generators_a7f725b7e6c8a2216d671c2149d4c64ba}} 
+\index{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$@{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$}!TwistedChern@{TwistedChern}}
+\index{TwistedChern@{TwistedChern}!R\_Fixed\_Points\_Generators$<$ scalar\_t $>$@{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{TwistedChern}{TwistedChern}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+std\+::vector$<$std\+::vector$<$\mbox{\hyperlink{classmonomial}{monomial}}$<$scalar\+\_\+t, \mbox{\hyperlink{structhalfidempotent}{halfidempotent}}$>$ $>$ $>$ \mbox{\hyperlink{classR__Fixed__Points__Generators}{R\+\_\+\+Fixed\+\_\+\+Points\+\_\+\+Generators}}$<$ scalar\+\_\+t $>$\+::Twisted\+Chern\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Vector consisting of the highest term of the Chern classes (i.\+e. elementary symmetric polynomials on x\+\_\+1,...,x\+\_\+n) 
+
+\mbox{\Hypertarget{classR__Fixed__Points__Generators_acbd191eb135320f6fbdf5dc234b130fc}\label{classR__Fixed__Points__Generators_acbd191eb135320f6fbdf5dc234b130fc}} 
+\index{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$@{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$}!TwistedChern\_indexer@{TwistedChern\_indexer}}
+\index{TwistedChern\_indexer@{TwistedChern\_indexer}!R\_Fixed\_Points\_Generators$<$ scalar\_t $>$@{R\_Fixed\_Points\_Generators$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{TwistedChern\_indexer}{TwistedChern\_indexer}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+std\+::map$<$std\+::pair$<$int, int$>$, int$>$ \mbox{\hyperlink{classR__Fixed__Points__Generators}{R\+\_\+\+Fixed\+\_\+\+Points\+\_\+\+Generators}}$<$ scalar\+\_\+t $>$\+::Twisted\+Chern\+\_\+indexer}
+
+
+
+Transforms the usual pair index of a Twisted\+Chern class to the single integer index we use for the vector Twisted\+Chern. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{Half__Idempotent_8h}{Half\+\_\+\+Idempotent.\+h}}\end{DoxyCompactItemize}

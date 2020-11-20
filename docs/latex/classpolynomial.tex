@@ -1,0 +1,281 @@
+\hypertarget{classpolynomial}{}\doxysection{polynomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ Class Template Reference}
+\label{classpolynomial}\index{polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}}
+
+
+Class of polynomials in multiple variables with relations.  
+
+
+
+
+{\ttfamily \#include $<$Polynomials.\+h$>$}
+
+
+
+Inheritance diagram for polynomial$<$ scalar\+\_\+t, rel\+\_\+t $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpolynomial__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classpolynomial_a1f2690b2973d0f6f3b519c8924d17835}{condense}} ()
+\begin{DoxyCompactList}\small\item\em Incorporates all monomials with same powers vector into a single monomial by adding coefficients, condensing the polynomial. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{classpolynomial_ad5a98bcf7c1f80cafab7577c46307530}{highest\+\_\+term}} () const
+\begin{DoxyCompactList}\small\item\em Returns highest term monomial in a polynomial. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpolynomial_aaabeafddd1d06f40a1dfd4c076adcb18}{polynomial}} (const std\+::vector$<$ \mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$$>$ \&\mbox{\hyperlink{classpolynomial_af3a196a41e90a90bc0b4d0183f84345b}{monos}}, bool dontcondense=0)
+\begin{DoxyCompactList}\small\item\em Constructs a polynomial given a vector of monomials, applying relations to variables and reordering as needed. Condensation is performed by default but can be disabled at the user\textquotesingle{}s risk. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpolynomial_a9143013c50c95be32a9ca70d4203fc30}{polynomial}} (const \mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&mono)
+\begin{DoxyCompactList}\small\item\em Constructs a polynomial from a single monomial. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpolynomial_ab6568a88700311c53636ae33a8ce89bf}{polynomial}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{classpolynomial_a4cebd8600c8ba28d78f71603046c8f59}{operator+}} (const \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&b) const
+\begin{DoxyCompactList}\small\item\em Adds two polynomials. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{classpolynomial_a13f50affd74614645c5d87d22f8cc64d}{operator-\/}} () const
+\begin{DoxyCompactList}\small\item\em Returns -\/b for polynomial b. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{classpolynomial_a616a112363302eda7e57be97295648f8}{operator-\/}} (const \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&b) const
+\begin{DoxyCompactList}\small\item\em Subtracts polynomial from polynomial. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpolynomial_a655d5849028fe2d25f714e12062005bc}{operator==}} (const \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&b) const
+\begin{DoxyCompactList}\small\item\em Standard equality of polynomials. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpolynomial_a3a86f7047e08fcc290c663cc33419253}{operator!=}} (const \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&b) const
+\begin{DoxyCompactList}\small\item\em Standard inequality of polynomials. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classpolynomial_a36e1cb4002f39fa8f66aee64050900cd}{print}} (const std\+::function$<$ std\+::string(int)$>$ \&variable\+\_\+names) const
+\begin{DoxyCompactList}\small\item\em Print polynomial using given variable names. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classpolynomial_a704d84fdfbeda7a0b6d9beace884648b}{print}} (const std\+::vector$<$ std\+::string $>$ \&variable\+\_\+names) const
+\begin{DoxyCompactList}\small\item\em Print monomial using given variable names. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classpolynomial_ade97e49590fa34956b0686120955ec69}{print}} () const
+\begin{DoxyCompactList}\small\item\em Print polynomial using default variable names x\+\_\+1,...,x\+\_\+n. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{classpolynomial_a40be2da6ad189700b0bf65b02c37fcdf}{constant}} (int coeff, int variables)
+\begin{DoxyCompactList}\small\item\em Constructs constant polynomial given coefficient and number of variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ $>$ \mbox{\hyperlink{classpolynomial_af3a196a41e90a90bc0b4d0183f84345b}{monos}}
+\begin{DoxyCompactList}\small\item\em The vector of monomials, ordered in increasing degree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename scalar\+\_\+t, typename rel\+\_\+t$>$\newline
+class polynomial$<$ scalar\+\_\+t, rel\+\_\+t $>$}
+
+Class of polynomials in multiple variables with relations. 
+
+A polynomial is just a vector of monomials, ordered in increasing degree The template scalar\+\_\+t determines the type of the coefficients. The template rel\+\_\+t determines the relations that the variables x\+\_\+i satisfy. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpolynomial_aaabeafddd1d06f40a1dfd4c076adcb18}\label{classpolynomial_aaabeafddd1d06f40a1dfd4c076adcb18}} 
+\index{polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}!polynomial@{polynomial}}
+\index{polynomial@{polynomial}!polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{polynomial()}{polynomial()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+\mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::\mbox{\hyperlink{classpolynomial}{polynomial}} (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$$>$ \&}]{monos,  }\item[{bool}]{dontcondense = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a polynomial given a vector of monomials, applying relations to variables and reordering as needed. Condensation is performed by default but can be disabled at the user\textquotesingle{}s risk. 
+
+\mbox{\Hypertarget{classpolynomial_a9143013c50c95be32a9ca70d4203fc30}\label{classpolynomial_a9143013c50c95be32a9ca70d4203fc30}} 
+\index{polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}!polynomial@{polynomial}}
+\index{polynomial@{polynomial}!polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{polynomial()}{polynomial()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+\mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::\mbox{\hyperlink{classpolynomial}{polynomial}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&}]{mono }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a polynomial from a single monomial. 
+
+\mbox{\Hypertarget{classpolynomial_ab6568a88700311c53636ae33a8ce89bf}\label{classpolynomial_ab6568a88700311c53636ae33a8ce89bf}} 
+\index{polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}!polynomial@{polynomial}}
+\index{polynomial@{polynomial}!polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{polynomial()}{polynomial()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+\mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::\mbox{\hyperlink{classpolynomial}{polynomial}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default Constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpolynomial_a1f2690b2973d0f6f3b519c8924d17835}\label{classpolynomial_a1f2690b2973d0f6f3b519c8924d17835}} 
+\index{polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}!condense@{condense}}
+\index{condense@{condense}!polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{condense()}{condense()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+void \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::condense (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Incorporates all monomials with same powers vector into a single monomial by adding coefficients, condensing the polynomial. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpolynomial_a1f2690b2973d0f6f3b519c8924d17835_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpolynomial_a40be2da6ad189700b0bf65b02c37fcdf}\label{classpolynomial_a40be2da6ad189700b0bf65b02c37fcdf}} 
+\index{polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}!constant@{constant}}
+\index{constant@{constant}!polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{constant()}{constant()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+static \mbox{\hyperlink{classpolynomial}{polynomial}}$<$scalar\+\_\+t, rel\+\_\+t$>$ \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::constant (\begin{DoxyParamCaption}\item[{int}]{coeff,  }\item[{int}]{variables }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Constructs constant polynomial given coefficient and number of variables. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpolynomial_a40be2da6ad189700b0bf65b02c37fcdf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpolynomial_ad5a98bcf7c1f80cafab7577c46307530}\label{classpolynomial_ad5a98bcf7c1f80cafab7577c46307530}} 
+\index{polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}!highest\_term@{highest\_term}}
+\index{highest\_term@{highest\_term}!polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{highest\_term()}{highest\_term()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+\mbox{\hyperlink{classmonomial}{monomial}}$<$scalar\+\_\+t, rel\+\_\+t$>$ \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::highest\+\_\+term (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns highest term monomial in a polynomial. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpolynomial_ad5a98bcf7c1f80cafab7577c46307530_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpolynomial_a3a86f7047e08fcc290c663cc33419253}\label{classpolynomial_a3a86f7047e08fcc290c663cc33419253}} 
+\index{polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+bool \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Standard inequality of polynomials. 
+
+\mbox{\Hypertarget{classpolynomial_a4cebd8600c8ba28d78f71603046c8f59}\label{classpolynomial_a4cebd8600c8ba28d78f71603046c8f59}} 
+\index{polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+\mbox{\hyperlink{classpolynomial}{polynomial}}$<$scalar\+\_\+t, rel\+\_\+t$>$ \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds two polynomials. 
+
+\mbox{\Hypertarget{classpolynomial_a13f50affd74614645c5d87d22f8cc64d}\label{classpolynomial_a13f50affd74614645c5d87d22f8cc64d}} 
+\index{polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+\mbox{\hyperlink{classpolynomial}{polynomial}}$<$scalar\+\_\+t, rel\+\_\+t$>$ \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::operator-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns -\/b for polynomial b. 
+
+\mbox{\Hypertarget{classpolynomial_a616a112363302eda7e57be97295648f8}\label{classpolynomial_a616a112363302eda7e57be97295648f8}} 
+\index{polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+\mbox{\hyperlink{classpolynomial}{polynomial}}$<$scalar\+\_\+t, rel\+\_\+t$>$ \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Subtracts polynomial from polynomial. 
+
+\mbox{\Hypertarget{classpolynomial_a655d5849028fe2d25f714e12062005bc}\label{classpolynomial_a655d5849028fe2d25f714e12062005bc}} 
+\index{polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+bool \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Standard equality of polynomials. 
+
+\mbox{\Hypertarget{classpolynomial_ade97e49590fa34956b0686120955ec69}\label{classpolynomial_ade97e49590fa34956b0686120955ec69}} 
+\index{polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}!print@{print}}
+\index{print@{print}!polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+std\+::string \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Print polynomial using default variable names x\+\_\+1,...,x\+\_\+n. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classpolynomial_ade97e49590fa34956b0686120955ec69_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpolynomial_a36e1cb4002f39fa8f66aee64050900cd}\label{classpolynomial_a36e1cb4002f39fa8f66aee64050900cd}} 
+\index{polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}!print@{print}}
+\index{print@{print}!polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+std\+::string \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::print (\begin{DoxyParamCaption}\item[{const std\+::function$<$ std\+::string(int)$>$ \&}]{variable\+\_\+names }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Print polynomial using given variable names. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpolynomial_a36e1cb4002f39fa8f66aee64050900cd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpolynomial_a704d84fdfbeda7a0b6d9beace884648b}\label{classpolynomial_a704d84fdfbeda7a0b6d9beace884648b}} 
+\index{polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}!print@{print}}
+\index{print@{print}!polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+std\+::string \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::print (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{variable\+\_\+names }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Print monomial using given variable names. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpolynomial_af3a196a41e90a90bc0b4d0183f84345b}\label{classpolynomial_af3a196a41e90a90bc0b4d0183f84345b}} 
+\index{polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}!monos@{monos}}
+\index{monos@{monos}!polynomial$<$ scalar\_t, rel\_t $>$@{polynomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{monos}{monos}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+std\+::vector$<$\mbox{\hyperlink{classmonomial}{monomial}}$<$scalar\+\_\+t, rel\+\_\+t$>$ $>$ \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::monos}
+
+
+
+The vector of monomials, ordered in increasing degree. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{Polynomials_8h}{Polynomials.\+h}}\end{DoxyCompactItemize}

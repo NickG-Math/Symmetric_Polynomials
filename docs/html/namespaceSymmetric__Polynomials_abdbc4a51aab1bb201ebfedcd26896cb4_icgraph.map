@@ -1,0 +1,11 @@
+<map id="Symmetric_Polynomials::permute" name="Symmetric_Polynomials::permute">
+<area shape="rect" id="node1" title="Permutes the variables in a monomial according permutation; returns permuted monomial." alt="" coords="727,87,907,128"/>
+<area shape="rect" id="node2" href="$namespaceSymmetric__Polynomials.html#a356d6c1b12803e4b0e2c4d1a1d89bb23" title="Returns the greatest monomial in an orbit of permutations." alt="" coords="499,53,679,95"/>
+<area shape="rect" id="node3" href="$namespaceSymmetric__Polynomials.html#aca3363cff5919c3f416bd56d80f6ca72" title="Computes the orbit of a monomial under a set of permutations." alt="" coords="499,119,679,160"/>
+<area shape="rect" id="node4" href="$namespaceSymmetric__Polynomials.html#ac9f5d227958f2b51e77cb2fe178ebef6" title="Returns a vector of all monomials in given variables and degree organized in orbits under the symmetr..." alt="" coords="252,5,432,47"/>
+<area shape="rect" id="node5" href="$classSymmetric__Polynomials_1_1half__idempotent__generators.html#ae0893a2ba27fd4204989cda7573b95f6" title="Computes a product of a monomial on our generators Idem, Chern, TwistedChern." alt="" coords="235,71,449,127"/>
+<area shape="rect" id="node8" href="$classSymmetric__Polynomials_1_1elementary__symmetric.html#a8854a3f8bff99fd1ed74db17da6c60da" title="Given vector pwr computes e_1^{pwr_1}*...*e_n^{pwr_n}." alt="" coords="251,151,433,207"/>
+<area shape="rect" id="node9" href="$classSymmetric__Polynomials_1_1half__idempotent__generators.html#a7fbe427130843c6775fe0107825176c3" title="Computes the dominant term of a product of a monomial on our generators Idem, Chern,..." alt="" coords="233,231,451,287"/>
+<area shape="rect" id="node6" href="$namespaceSymmetric__Polynomials.html#a36c74a891ce92c19aa88f4752fe9d420" title="Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,..." alt="" coords="5,31,185,87"/>
+<area shape="rect" id="node7" href="$structSymmetric__Polynomials_1_1decomposition__half__idempotent.html#a89f4c5f092b93bc2f2079d79fcb966a4" title="Verifies that the decomposition is correct (i.e. expanding the generators in the original variables &#160;..." alt="" coords="5,111,185,167"/>
+</map>

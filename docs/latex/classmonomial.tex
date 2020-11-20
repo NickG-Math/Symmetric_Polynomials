@@ -1,0 +1,251 @@
+\hypertarget{classmonomial}{}\doxysection{monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ Class Template Reference}
+\label{classmonomial}\index{monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}}
+
+
+Class of monomials in multiple variables with relations.  
+
+
+
+
+{\ttfamily \#include $<$Polynomials.\+h$>$}
+
+
+
+Inheritance diagram for monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{classmonomial__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmonomial_a4f641493aad542770631382019b854fc}{monomial}} (const scalar\+\_\+t \&\mbox{\hyperlink{classmonomial_a4f4fe83d18b241eb1a80327a630319b5}{coeff}}, const std\+::vector$<$ int $>$ \&\mbox{\hyperlink{classmonomial_a177e58474cfbf60a76785692e459d358}{powers}})
+\begin{DoxyCompactList}\small\item\em Constructs monomial given coefficient and powers. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmonomial_a9771fd84356fda38fe00318f5d904141}{monomial}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename s\+\_\+scalar\+\_\+t , typename s\+\_\+rel\+\_\+t $>$ }\\std\+::conditional\+\_\+t$<$ s\+\_\+rel\+\_\+t\+::product\+\_\+of\+\_\+monomials\+\_\+is\+\_\+monomial, \mbox{\hyperlink{classmonomial}{monomial}}$<$ s\+\_\+scalar\+\_\+t, s\+\_\+rel\+\_\+t $>$, \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ s\+\_\+scalar\+\_\+t, s\+\_\+rel\+\_\+t $>$ $>$ \mbox{\hyperlink{classmonomial_ac0ae829a3713712a14b3216f48c0812d}{operator$\ast$}} (const \mbox{\hyperlink{classmonomial}{monomial}}$<$ s\+\_\+scalar\+\_\+t, s\+\_\+rel\+\_\+t $>$ \&b) const
+\begin{DoxyCompactList}\small\item\em Returns product of monomials; depending on the relations, this could be a polynomial after applying them, so the return type is conditional on that. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{classmonomial_a57bc0fbd102ae4cfd088c22ad89744ef}{operator-\/}} () const
+\begin{DoxyCompactList}\small\item\em Returns -\/b for monomial b. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{classmonomial_a9b91fbbc7395af3c11439c298bb53286}{operator/}} (const \mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&b) const
+\begin{DoxyCompactList}\small\item\em Division of monomials. No checks are made to ensure that the resulting powers are nonnegative. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmonomial_a70dd1ce8d97780e30a2afe26cb9cfe16}{operator==}} (const \mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&b) const
+\begin{DoxyCompactList}\small\item\em Standard equality of monomials. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmonomial_a7743f0f99c26e2b1773d5d5ab0e863ca}{operator$<$}} (const \mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&b) const
+\begin{DoxyCompactList}\small\item\em a$<$b iff degree(a)$<$degree(b) or they have the same degree and for the powers vectors, powers(a)$<$powers(b) \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classmonomial_a4247976f11d6d7c69fc14a43e515a808}{print}} (const std\+::function$<$ std\+::string(int)$>$ \&variable\+\_\+names) const
+\begin{DoxyCompactList}\small\item\em Print monomial using given variable names. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classmonomial_a0db05568fc905c956e754c0054759d21}{print}} (const std\+::vector$<$ std\+::string $>$ \&variable\+\_\+names) const
+\begin{DoxyCompactList}\small\item\em Print monomial using given variable names. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classmonomial_ae82932932efcf38b70d12fb7d8017c6d}{print}} () const
+\begin{DoxyCompactList}\small\item\em Print monomial using default variable names x\+\_\+1,...,x\+\_\+n. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{classmonomial_acc6bfd22fca7d59b3e48887c63c897a6}{constant}} (int \mbox{\hyperlink{classmonomial_a4f4fe83d18b241eb1a80327a630319b5}{coeff}}, int variables)
+\begin{DoxyCompactList}\small\item\em Constructs constant monomial with given coefficient and number of variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+scalar\+\_\+t \mbox{\hyperlink{classmonomial_a4f4fe83d18b241eb1a80327a630319b5}{coeff}}
+\begin{DoxyCompactList}\small\item\em Coefficient of monomial. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classmonomial_a177e58474cfbf60a76785692e459d358}{powers}}
+\begin{DoxyCompactList}\small\item\em Powers vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename s\+\_\+scalar\+\_\+t , typename s\+\_\+rel\+\_\+t $>$ }\\class \mbox{\hyperlink{classmonomial_a50572ba6723590add924451395290b96}{polynomial}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename scalar\+\_\+t, typename rel\+\_\+t$>$\newline
+class monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$}
+
+Class of monomials in multiple variables with relations. 
+
+A monomial $a=cx_1^{p_1}x_2^{p_2}....x_n^{p_n}$ is defined by its coefficient $c$ and powers vector $[p_1,...,p_n]$. The template scalar\+\_\+t determines the type of the coefficient $c$. The template rel\+\_\+t determines the relations that the variables $x_i$ satisfy. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmonomial_a4f641493aad542770631382019b854fc}\label{classmonomial_a4f641493aad542770631382019b854fc}} 
+\index{monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}!monomial@{monomial}}
+\index{monomial@{monomial}!monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{monomial()}{monomial()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+\mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::\mbox{\hyperlink{classmonomial}{monomial}} (\begin{DoxyParamCaption}\item[{const scalar\+\_\+t \&}]{coeff,  }\item[{const std\+::vector$<$ int $>$ \&}]{powers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs monomial given coefficient and powers. 
+
+\mbox{\Hypertarget{classmonomial_a9771fd84356fda38fe00318f5d904141}\label{classmonomial_a9771fd84356fda38fe00318f5d904141}} 
+\index{monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}!monomial@{monomial}}
+\index{monomial@{monomial}!monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{monomial()}{monomial()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+\mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::\mbox{\hyperlink{classmonomial}{monomial}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmonomial_acc6bfd22fca7d59b3e48887c63c897a6}\label{classmonomial_acc6bfd22fca7d59b3e48887c63c897a6}} 
+\index{monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}!constant@{constant}}
+\index{constant@{constant}!monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{constant()}{constant()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+static \mbox{\hyperlink{classmonomial}{monomial}}$<$scalar\+\_\+t, rel\+\_\+t$>$ \mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::constant (\begin{DoxyParamCaption}\item[{int}]{coeff,  }\item[{int}]{variables }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Constructs constant monomial with given coefficient and number of variables. 
+
+\mbox{\Hypertarget{classmonomial_ac0ae829a3713712a14b3216f48c0812d}\label{classmonomial_ac0ae829a3713712a14b3216f48c0812d}} 
+\index{monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+template$<$typename s\+\_\+scalar\+\_\+t , typename s\+\_\+rel\+\_\+t $>$ \\
+std\+::conditional\+\_\+t$<$s\+\_\+rel\+\_\+t\+::product\+\_\+of\+\_\+monomials\+\_\+is\+\_\+monomial, \mbox{\hyperlink{classmonomial}{monomial}}$<$s\+\_\+scalar\+\_\+t, s\+\_\+rel\+\_\+t$>$, \mbox{\hyperlink{classpolynomial}{polynomial}}$<$s\+\_\+scalar\+\_\+t, s\+\_\+rel\+\_\+t$>$ $>$ \mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmonomial}{monomial}}$<$ s\+\_\+scalar\+\_\+t, s\+\_\+rel\+\_\+t $>$ \&}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns product of monomials; depending on the relations, this could be a polynomial after applying them, so the return type is conditional on that. 
+
+\mbox{\Hypertarget{classmonomial_a57bc0fbd102ae4cfd088c22ad89744ef}\label{classmonomial_a57bc0fbd102ae4cfd088c22ad89744ef}} 
+\index{monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+\mbox{\hyperlink{classmonomial}{monomial}}$<$scalar\+\_\+t, rel\+\_\+t$>$ \mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::operator-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns -\/b for monomial b. 
+
+\mbox{\Hypertarget{classmonomial_a9b91fbbc7395af3c11439c298bb53286}\label{classmonomial_a9b91fbbc7395af3c11439c298bb53286}} 
+\index{monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}!operator/@{operator/}}
+\index{operator/@{operator/}!monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+\mbox{\hyperlink{classmonomial}{monomial}}$<$scalar\+\_\+t, rel\+\_\+t$>$ \mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::operator/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Division of monomials. No checks are made to ensure that the resulting powers are nonnegative. 
+
+\mbox{\Hypertarget{classmonomial_a7743f0f99c26e2b1773d5d5ab0e863ca}\label{classmonomial_a7743f0f99c26e2b1773d5d5ab0e863ca}} 
+\index{monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+bool \mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+a$<$b iff degree(a)$<$degree(b) or they have the same degree and for the powers vectors, powers(a)$<$powers(b) 
+
+\mbox{\Hypertarget{classmonomial_a70dd1ce8d97780e30a2afe26cb9cfe16}\label{classmonomial_a70dd1ce8d97780e30a2afe26cb9cfe16}} 
+\index{monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+bool \mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Standard equality of monomials. 
+
+\mbox{\Hypertarget{classmonomial_ae82932932efcf38b70d12fb7d8017c6d}\label{classmonomial_ae82932932efcf38b70d12fb7d8017c6d}} 
+\index{monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}!print@{print}}
+\index{print@{print}!monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+std\+::string \mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Print monomial using default variable names x\+\_\+1,...,x\+\_\+n. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classmonomial_ae82932932efcf38b70d12fb7d8017c6d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmonomial_a4247976f11d6d7c69fc14a43e515a808}\label{classmonomial_a4247976f11d6d7c69fc14a43e515a808}} 
+\index{monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}!print@{print}}
+\index{print@{print}!monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+std\+::string \mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::print (\begin{DoxyParamCaption}\item[{const std\+::function$<$ std\+::string(int)$>$ \&}]{variable\+\_\+names }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Print monomial using given variable names. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{classmonomial_a4247976f11d6d7c69fc14a43e515a808_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmonomial_a0db05568fc905c956e754c0054759d21}\label{classmonomial_a0db05568fc905c956e754c0054759d21}} 
+\index{monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}!print@{print}}
+\index{print@{print}!monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+std\+::string \mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::print (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{variable\+\_\+names }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Print monomial using given variable names. 
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classmonomial_a50572ba6723590add924451395290b96}\label{classmonomial_a50572ba6723590add924451395290b96}} 
+\index{monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}!polynomial@{polynomial}}
+\index{polynomial@{polynomial}!monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{polynomial}{polynomial}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+template$<$typename s\+\_\+scalar\+\_\+t , typename s\+\_\+rel\+\_\+t $>$ \\
+friend class \mbox{\hyperlink{classpolynomial}{polynomial}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmonomial_a4f4fe83d18b241eb1a80327a630319b5}\label{classmonomial_a4f4fe83d18b241eb1a80327a630319b5}} 
+\index{monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}!coeff@{coeff}}
+\index{coeff@{coeff}!monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{coeff}{coeff}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+scalar\+\_\+t \mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::coeff}
+
+
+
+Coefficient of monomial. 
+
+\mbox{\Hypertarget{classmonomial_a177e58474cfbf60a76785692e459d358}\label{classmonomial_a177e58474cfbf60a76785692e459d358}} 
+\index{monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}!powers@{powers}}
+\index{powers@{powers}!monomial$<$ scalar\_t, rel\_t $>$@{monomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{powers}{powers}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+std\+::vector$<$int$>$ \mbox{\hyperlink{classmonomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::powers}
+
+
+
+Powers vector. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{Polynomials_8h}{Polynomials.\+h}}\end{DoxyCompactItemize}

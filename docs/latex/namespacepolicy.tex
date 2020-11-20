@@ -1,0 +1,37 @@
+\hypertarget{namespacepolicy}{}\doxysection{policy Namespace Reference}
+\label{namespacepolicy}\index{policy@{policy}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\static char \mbox{\hyperlink{namespacepolicy_a53e20af9ccfed9e119f5a8eb8ea519fa}{always\+\_\+true}} (const T \&)
+\begin{DoxyCompactList}\small\item\em The always true policy. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static std\+::function$<$ char(const std\+::vector$<$ int $>$ \&)$>$ \mbox{\hyperlink{namespacepolicy_aa127ba651ebe6741e45db711c8bc2ff0}{custom}} (const T \&comparator)
+\begin{DoxyCompactList}\small\item\em The policy made by a given comparactor function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The policy our monomials should satisfy. Policy is a char and takes values 0,1,-\/1. 1 if satisfied, -\/1 if not satisfied and we can guarantee that all larger vectors also won\textquotesingle{}t satisfy it, and 0 otherwise. The -\/1 value speeds up computations comparad to 0 but is optional. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepolicy_a53e20af9ccfed9e119f5a8eb8ea519fa}\label{namespacepolicy_a53e20af9ccfed9e119f5a8eb8ea519fa}} 
+\index{policy@{policy}!always\_true@{always\_true}}
+\index{always\_true@{always\_true}!policy@{policy}}
+\doxysubsubsection{\texorpdfstring{always\_true()}{always\_true()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static char policy\+::always\+\_\+true (\begin{DoxyParamCaption}\item[{const T \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The always true policy. 
+
+\mbox{\Hypertarget{namespacepolicy_aa127ba651ebe6741e45db711c8bc2ff0}\label{namespacepolicy_aa127ba651ebe6741e45db711c8bc2ff0}} 
+\index{policy@{policy}!custom@{custom}}
+\index{custom@{custom}!policy@{policy}}
+\doxysubsubsection{\texorpdfstring{custom()}{custom()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static std\+::function$<$char(const std\+::vector$<$int$>$\&)$>$ policy\+::custom (\begin{DoxyParamCaption}\item[{const T \&}]{comparator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The policy made by a given comparactor function. 
+

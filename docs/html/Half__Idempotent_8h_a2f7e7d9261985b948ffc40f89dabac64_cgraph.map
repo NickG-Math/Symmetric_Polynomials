@@ -1,0 +1,6 @@
+<map id="write_in_Idem_Chern_TwistedChern_basis" name="write_in_Idem_Chern_TwistedChern_basis">
+<area shape="rect" id="node1" title="Writes an element of the fixed points of R as polynomial on Idem, Chern and TwistedChern." alt="" coords="5,39,164,80"/>
+<area shape="rect" id="node2" href="$structdecomposition__R__Fixed__Points.html#a383f640aded96b86f69f1b0ad5199b49" title="Writes a fixed point of of R (polynomial in x_1,...,x_n,y_1,...,y_n) as a polynomial on the generator..." alt="" coords="212,5,387,47"/>
+<area shape="rect" id="node3" href="$structdecomposition__R__Fixed__Points.html#a9adba601d84a478cd7cf11754070b352" title="Print a polynomial on the generators." alt="" coords="212,71,387,112"/>
+<area shape="rect" id="node4" href="$classR__Fixed__Points__Generators.html#a159af822e99495422e2b468e87c15f31" title="Prints a polynomial on our generators Idem, Chern, TwistedChern." alt="" coords="435,71,633,112"/>
+</map>

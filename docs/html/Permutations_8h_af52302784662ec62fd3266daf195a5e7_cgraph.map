@@ -1,0 +1,4 @@
+<map id="orbit" name="orbit">
+<area shape="rect" id="node1" title="Computes the orbit of a monomial under a set of permutations." alt="" coords="5,5,57,32"/>
+<area shape="rect" id="node2" href="$Polynomials_8h.html#a1ee0f8c937cbcf51cd4dffa29d7ab4c0" title="Permutes the variables in a monomial according permutation; returns permuted monomial." alt="" coords="105,5,183,32"/>
+</map>

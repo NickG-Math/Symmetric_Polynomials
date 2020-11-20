@@ -1,0 +1,5 @@
+<map id="power" name="power">
+<area shape="rect" id="node1" title="Computes a^p for polynomial a and nonnegative integer p." alt="" coords="5,31,68,57"/>
+<area shape="rect" id="node2" href="$classpolynomial.html#a40be2da6ad189700b0bf65b02c37fcdf" title="Constructs constant polynomial given coefficient and number of variables." alt="" coords="116,5,275,32"/>
+<area shape="rect" id="node3" href="$Polynomials_8h.html#a70b3c7ad51b10d0a0d601de9c93ef694" title="Multiplies two polynomials with the ability to disable condensation (not recommended)" alt="" coords="157,56,233,83"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Symmetric_Polynomials::norelations" name="Symmetric_Polynomials::norelations">
+<area shape="rect" id="node1" title="Class when no relations are needed." alt="" coords="5,95,185,136"/>
+<area shape="rect" id="node2" href="$structSymmetric__Polynomials_1_1relations__base.html" title="Base class for all relations. Inherit from it and specialize static methods to get a functioning rela..." alt="" coords="5,5,185,47"/>
+</map>

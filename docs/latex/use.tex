@@ -1,0 +1,62 @@
+\hypertarget{use_demo}{}\doxysection{Quick Demonstration}\label{use_demo}
+For a quick demonstration you may compile the \mbox{\hyperlink{Demo_8cpp}{Demo.\+cpp}}. Eg (on Linux) \begin{DoxyVerb}clang++ source/Demo.cpp -std=c++17 -O3 -march=native -o Executable.out      
+\end{DoxyVerb}
+
+
+You can then run the file Executable.\+out. You can similarly do this over Windows using M\+S\+VC, producing a .exe file . Make sure to use the {\ttfamily -\/std=c++17} flag (or set the language options in an I\+DE to support C++17).\hypertarget{use_exa}{}\doxysection{Code examples}\label{use_exa}
+\hypertarget{use_namesp}{}\doxysubsection{Namespaces}\label{use_namesp}
+Everything in this library is under the namespace {\ttfamily \mbox{\hyperlink{namespaceSymmetric__Polynomials}{Symmetric\+\_\+\+Polynomials}}}. For all the following code examples to work, start with \begin{DoxyVerb}using namespace Symmetric_Polynomials;
+\end{DoxyVerb}
+\hypertarget{use_mono}{}\doxysubsection{Monomials, polynomials and relations}\label{use_mono}
+A monomial is specified by its coefficient ({\ttfamily coeff}), powers vector (an {\ttfamily std\+::vector$<$int$>$ powers}) as well as template parameters for the type of coefficient ({\ttfamily scalar\+\_\+t}) and relations ({\ttfamily rel\+\_\+t}) used\+: For example, \begin{DoxyVerb}monomial<int,norelations>(3,{0,1,4});
+\end{DoxyVerb}
+
+
+specifies the monomial $3x_2x_3^4$.
+
+Any type with operations {\ttfamily +,$\ast$,-\/,==} and a constructor taking a single {\ttfamily int} type can be used as {\ttfamily scalar\+\_\+t}. In particular, we can use {\ttfamily rational} which represents rational numbers\+: \begin{DoxyVerb}monomial<rational,norelations> (rational(2,3),{0,1,4});
+\end{DoxyVerb}
+
+
+specifies the monomial $\frac23x_2x_3^4$.
+
+As for {\ttfamily rel\+\_\+t}, this specifies both the degrees and relations the variables must satisfy. {\ttfamily norelations} means all variables $x_i$ have degree 1 and that there are no relations. On the other hand, {\ttfamily halfidempotent} means half the variables $x_i$ have degree 1, the other half $y_i$ have degree 0 and $y_i^2=y_i$ are the relations. For example\+: \begin{DoxyVerb}monomial<double,halfidempotent> (1.3,{3,1,4,1,0,1});
+\end{DoxyVerb}
+
+
+specifies the monomial $1.3x_1^3x_2x_3^4y_1y_3$
+
+A polynomial is made out of a vector of monomials eg \begin{DoxyVerb}polynomial<int, halfidempotent>({monomial<int,halfidempotent>(2,{1,2,0,1}), monomial<int,halfidempotent>(3,{3,0,1,1})});
+\end{DoxyVerb}
+
+
+specifies the polynomial $2x_1x_2^2y_2+3x_1^3y_1y_2$.\hypertarget{use_perm}{}\doxysubsection{Permutations}\label{use_perm}
+A permutation is an {\ttfamily std\+::vector$<$char$>$} and is applied on a monomial according to {\ttfamily rel\+\_\+t}\+: Eg for {\ttfamily norelations} we have a $\Sigma_n$ action on $n$ many variables $x_1,...,x_n$, while for {\ttfamily halfidempotent} we have a $\Sigma_n$ action on $2n$ many variables $x_1,...,x_n$ and $y_1,...,y_n$ that are permuted separately.\hypertarget{use_sym}{}\doxysubsection{Symmetric polynomials}\label{use_sym}
+When we have no relations, we can use \begin{DoxyVerb}polynomial<rational, norelations> poly({ monomial<rational, norelations>(2, { 1,2 }), monomial<rational, norelations>(2, {2,1 }) }));
+decomposition_elementary_symmetric<rational> dec(poly);
+std::cout<< dec;
+\end{DoxyVerb}
+
+
+which sets {\ttfamily poly} to be $2x_1x_2^2+2x_1^2x_2$, computes the decomposition of {\ttfamily poly} into elementary symmetric polynomials {\ttfamily e\mbox{[}i\mbox{]}} (corresponding to $\sigma_i$), stores it into {\ttfamily dec} and prints the decomposition as\+: {\ttfamily 2e\+\_\+1$\ast$e\+\_\+2}. This all means that \$\$2x\+\_\+1x\+\_\+2$^\wedge$2+2x\+\_\+1$^\wedge$2x\+\_\+2=2\textbackslash{}sigma\+\_\+1\textbackslash{}sigma\+\_\+2\$\$
+
+The class {\ttfamily decomposition\+\_\+elementary\+\_\+symmetric$<$rational$>$} stores and computes the expression of a polynomial on variables $x_i$ as a polynomial on the $\sigma_i$.\hypertarget{use_halfidem}{}\doxysubsection{Half idempotent relations}\label{use_halfidem}
+When we have the \char`\"{}half idempotent relation\char`\"{}, the generators are $\alpha, c_i, \beta_{s,t}$ (see \mbox{\hyperlink{math}{The Math}}). In the program, {\ttfamily Idem} is the dominant term of $\alpha$, {\ttfamily Chern} is a vector containing the dominant terms of $c_1,...,c_n$ and {\ttfamily Twisted\+Chern} is a vector containing the dominant terms of $\beta_{1,1},...,\beta_{1,n-1},\beta_{2,1},...,\beta_{n-1,1}$ in this order. To get the original indexing on the $\beta$ elements we use {\ttfamily std\+::map$<$std\+::pair$<$int,int$>$,int$>$ Twisted\+Chern\+\_\+indexer} eg \begin{DoxyVerb}std::cout << TwistedChern_indexer[std::make_pair<int,int>(1,2)];
+\end{DoxyVerb}
+
+
+prints {\ttfamily 1} since {\ttfamily Twisted\+Chern\mbox{[}1\mbox{]}} corresponds to $\beta_{1,2}$.
+
+The code \begin{DoxyVerb}polynomial<rational, halfidempotent> poly({ monomial<rational, halfidempotent>(2, { 1,0,1,0 }), monomial<rational, halfidempotent>(2, {0,1,0,1 }) })
+decomposition_half_idempotent<rational> dec(poly);
+std::cout << dec << "\n";
+\end{DoxyVerb}
+
+
+sets {\ttfamily poly} to be $x_1y_1+x_2y_2$, computes the decomposition of {\ttfamily poly} into {\ttfamily Idem,Chern,Twisted\+Chern}, stores it into {\ttfamily dec} and prints the decomposition as {\ttfamily 2$\ast$a$\ast$c\+\_\+1 + -\/2$\ast$b\+\_\+\{1,1\}} reflecting \$\$x\+\_\+1y\+\_\+1+x\+\_\+2y\+\_\+2=2\textbackslash{}alpha c\+\_\+1-\/2\textbackslash{}beta\+\_\+\{1,1\}\$\$
+
+The class {\ttfamily decomposition\+\_\+half\+\_\+idempotent$<$rational$>$} stores and computes the expression of a polynomial on variables $x_i,y_i$ as a polynomial on the $\alpha,c_i,\beta_{s,j}$.
+
+To print the relations amongst $\alpha,c_i,\beta_{s,j}$ simply use\+: print\+\_\+half\+\_\+idempotent\+\_\+relations$<$rational$>$(3);
+
+The $3$ here corresponds to the number of variables\+: $x_1,x_2,x_3,y_1,y_2,y_3$ and can be replaced by any positive integer. 

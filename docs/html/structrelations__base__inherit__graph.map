@@ -1,0 +1,5 @@
+<map id="relations_base" name="relations_base">
+<area shape="rect" id="node1" title="Base class for all relations. Inherit from it and specialize static methods to get a functioning rela..." alt="" coords="73,5,190,32"/>
+<area shape="rect" id="node2" href="$structhalfidempotent.html" title="Class when we have variables x_1,...,x_n,y_1,...,y_n and the relations are: y_i^2=y_i." alt="" coords="5,80,127,107"/>
+<area shape="rect" id="node3" href="$structnorelations.html" title="Class when no relations are needed." alt="" coords="151,80,245,107"/>
+</map>

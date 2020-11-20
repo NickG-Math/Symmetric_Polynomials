@@ -1,0 +1,7 @@
+<map id="Symmetric_Polynomials::all_permutations" name="Symmetric_Polynomials::all_permutations">
+<area shape="rect" id="node1" title="Returns vector of all permutations on n letters." alt="" coords="5,119,185,160"/>
+<area shape="rect" id="node2" href="$namespaceSymmetric__Polynomials.html#ad7118931ae8edf4baa74c12a3324251a" title="Returns n!" alt="" coords="237,5,417,47"/>
+<area shape="rect" id="node3" href="$classSymmetric__Polynomials_1_1permutations__generator.html#a11c9388582283b1acb94bf5b00e736cd" title="Returns generated permutation." alt="" coords="233,71,420,127"/>
+<area shape="rect" id="node4" href="$classSymmetric__Polynomials_1_1permutations__generator.html#a7103dc21fcbff4b4922762cf759f4890" title="Returns 0 if there are no more permutations to be generated." alt="" coords="233,151,420,207"/>
+<area shape="rect" id="node5" href="$classSymmetric__Polynomials_1_1permutations__generator.html#aa0b00748a047f8aa867d1c945f91a49c" title="Generates new permutation." alt="" coords="233,231,420,287"/>
+</map>

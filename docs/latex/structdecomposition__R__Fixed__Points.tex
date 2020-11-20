@@ -1,0 +1,169 @@
+\hypertarget{structdecomposition__R__Fixed__Points}{}\doxysection{decomposition\+\_\+\+R\+\_\+\+Fixed\+\_\+\+Points$<$ scalar\+\_\+t $>$ Struct Template Reference}
+\label{structdecomposition__R__Fixed__Points}\index{decomposition\_R\_Fixed\_Points$<$ scalar\_t $>$@{decomposition\_R\_Fixed\_Points$<$ scalar\_t $>$}}
+
+
+Class for writing every element in the fixed points of R as a polynomial on the generators Idem, Chern and Twisted\+Chern (a \char`\"{}decomposition\char`\"{})  
+
+
+
+
+{\ttfamily \#include $<$Half\+\_\+\+Idempotent.\+h$>$}
+
+
+
+Inheritance diagram for decomposition\+\_\+\+R\+\_\+\+Fixed\+\_\+\+Points$<$ scalar\+\_\+t $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{structdecomposition__R__Fixed__Points__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for decomposition\+\_\+\+R\+\_\+\+Fixed\+\_\+\+Points$<$ scalar\+\_\+t $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{structdecomposition__R__Fixed__Points__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structdecomposition__R__Fixed__Points_ace69d21de553dc27efb7a2da97f9de1f}{decomposition\+\_\+\+R\+\_\+\+Fixed\+\_\+\+Points}} (int \mbox{\hyperlink{classR__Fixed__Points__Generators_a15554025657b15a75cb83a3e55bc59ee}{n}})
+\begin{DoxyCompactList}\small\item\em Constructor given number of variables n. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structdecomposition__R__Fixed__Points_a383f640aded96b86f69f1b0ad5199b49}{decompose}} (const \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structhalfidempotent}{halfidempotent}} $>$ \&a)
+\begin{DoxyCompactList}\small\item\em Writes a fixed point of of R (polynomial in x\+\_\+1,...,x\+\_\+n,y\+\_\+1,...,y\+\_\+n) as a polynomial on the generators Idem, Chern and Twisted\+Chern. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structdecomposition__R__Fixed__Points_a9adba601d84a478cd7cf11754070b352}{print}} ()
+\begin{DoxyCompactList}\small\item\em Print a polynomial on the generators. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structdecomposition__R__Fixed__Points_a3a585b6102e3e752970ac616b052fdd9}{verify}} (const \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structhalfidempotent}{halfidempotent}} $>$ \&a) const
+\begin{DoxyCompactList}\small\item\em Verifies that the decomposition is correct (i.\+e. gives the original polynomial in the original variables). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ scalar\+\_\+t $>$ \mbox{\hyperlink{structdecomposition__R__Fixed__Points_a93d6c3d26b03e887a7fb78d8655a3566}{coeffs}}
+\begin{DoxyCompactList}\small\item\em The coefficients of each monomial in a decomposition. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \mbox{\hyperlink{structdecomposition__R__Fixed__Points_a3e4f22e2949b4995494939f7fad9e6d1}{powers}}
+\begin{DoxyCompactList}\small\item\em The powers in each monomial in a decomposition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename scalar\+\_\+t$>$\newline
+struct decomposition\+\_\+\+R\+\_\+\+Fixed\+\_\+\+Points$<$ scalar\+\_\+t $>$}
+
+Class for writing every element in the fixed points of R as a polynomial on the generators Idem, Chern and Twisted\+Chern (a \char`\"{}decomposition\char`\"{}) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structdecomposition__R__Fixed__Points_ace69d21de553dc27efb7a2da97f9de1f}\label{structdecomposition__R__Fixed__Points_ace69d21de553dc27efb7a2da97f9de1f}} 
+\index{decomposition\_R\_Fixed\_Points$<$ scalar\_t $>$@{decomposition\_R\_Fixed\_Points$<$ scalar\_t $>$}!decomposition\_R\_Fixed\_Points@{decomposition\_R\_Fixed\_Points}}
+\index{decomposition\_R\_Fixed\_Points@{decomposition\_R\_Fixed\_Points}!decomposition\_R\_Fixed\_Points$<$ scalar\_t $>$@{decomposition\_R\_Fixed\_Points$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{decomposition\_R\_Fixed\_Points()}{decomposition\_R\_Fixed\_Points()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+\mbox{\hyperlink{structdecomposition__R__Fixed__Points}{decomposition\+\_\+\+R\+\_\+\+Fixed\+\_\+\+Points}}$<$ scalar\+\_\+t $>$\+::\mbox{\hyperlink{structdecomposition__R__Fixed__Points}{decomposition\+\_\+\+R\+\_\+\+Fixed\+\_\+\+Points}} (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor given number of variables n. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structdecomposition__R__Fixed__Points_a383f640aded96b86f69f1b0ad5199b49}\label{structdecomposition__R__Fixed__Points_a383f640aded96b86f69f1b0ad5199b49}} 
+\index{decomposition\_R\_Fixed\_Points$<$ scalar\_t $>$@{decomposition\_R\_Fixed\_Points$<$ scalar\_t $>$}!decompose@{decompose}}
+\index{decompose@{decompose}!decomposition\_R\_Fixed\_Points$<$ scalar\_t $>$@{decomposition\_R\_Fixed\_Points$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{decompose()}{decompose()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+void \mbox{\hyperlink{structdecomposition__R__Fixed__Points}{decomposition\+\_\+\+R\+\_\+\+Fixed\+\_\+\+Points}}$<$ scalar\+\_\+t $>$\+::decompose (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structhalfidempotent}{halfidempotent}} $>$ \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Writes a fixed point of of R (polynomial in x\+\_\+1,...,x\+\_\+n,y\+\_\+1,...,y\+\_\+n) as a polynomial on the generators Idem, Chern and Twisted\+Chern. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structdecomposition__R__Fixed__Points_a383f640aded96b86f69f1b0ad5199b49_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structdecomposition__R__Fixed__Points_a9adba601d84a478cd7cf11754070b352}\label{structdecomposition__R__Fixed__Points_a9adba601d84a478cd7cf11754070b352}} 
+\index{decomposition\_R\_Fixed\_Points$<$ scalar\_t $>$@{decomposition\_R\_Fixed\_Points$<$ scalar\_t $>$}!print@{print}}
+\index{print@{print}!decomposition\_R\_Fixed\_Points$<$ scalar\_t $>$@{decomposition\_R\_Fixed\_Points$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+std\+::string \mbox{\hyperlink{structdecomposition__R__Fixed__Points}{decomposition\+\_\+\+R\+\_\+\+Fixed\+\_\+\+Points}}$<$ scalar\+\_\+t $>$\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Print a polynomial on the generators. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structdecomposition__R__Fixed__Points_a9adba601d84a478cd7cf11754070b352_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structdecomposition__R__Fixed__Points_a9adba601d84a478cd7cf11754070b352_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structdecomposition__R__Fixed__Points_a3a585b6102e3e752970ac616b052fdd9}\label{structdecomposition__R__Fixed__Points_a3a585b6102e3e752970ac616b052fdd9}} 
+\index{decomposition\_R\_Fixed\_Points$<$ scalar\_t $>$@{decomposition\_R\_Fixed\_Points$<$ scalar\_t $>$}!verify@{verify}}
+\index{verify@{verify}!decomposition\_R\_Fixed\_Points$<$ scalar\_t $>$@{decomposition\_R\_Fixed\_Points$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{verify()}{verify()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+bool \mbox{\hyperlink{structdecomposition__R__Fixed__Points}{decomposition\+\_\+\+R\+\_\+\+Fixed\+\_\+\+Points}}$<$ scalar\+\_\+t $>$\+::verify (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpolynomial}{polynomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structhalfidempotent}{halfidempotent}} $>$ \&}]{a }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifies that the decomposition is correct (i.\+e. gives the original polynomial in the original variables). 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structdecomposition__R__Fixed__Points_a3a585b6102e3e752970ac616b052fdd9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structdecomposition__R__Fixed__Points_a3a585b6102e3e752970ac616b052fdd9_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structdecomposition__R__Fixed__Points_a93d6c3d26b03e887a7fb78d8655a3566}\label{structdecomposition__R__Fixed__Points_a93d6c3d26b03e887a7fb78d8655a3566}} 
+\index{decomposition\_R\_Fixed\_Points$<$ scalar\_t $>$@{decomposition\_R\_Fixed\_Points$<$ scalar\_t $>$}!coeffs@{coeffs}}
+\index{coeffs@{coeffs}!decomposition\_R\_Fixed\_Points$<$ scalar\_t $>$@{decomposition\_R\_Fixed\_Points$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{coeffs}{coeffs}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+std\+::vector$<$scalar\+\_\+t$>$ \mbox{\hyperlink{structdecomposition__R__Fixed__Points}{decomposition\+\_\+\+R\+\_\+\+Fixed\+\_\+\+Points}}$<$ scalar\+\_\+t $>$\+::coeffs}
+
+
+
+The coefficients of each monomial in a decomposition. 
+
+\mbox{\Hypertarget{structdecomposition__R__Fixed__Points_a3e4f22e2949b4995494939f7fad9e6d1}\label{structdecomposition__R__Fixed__Points_a3e4f22e2949b4995494939f7fad9e6d1}} 
+\index{decomposition\_R\_Fixed\_Points$<$ scalar\_t $>$@{decomposition\_R\_Fixed\_Points$<$ scalar\_t $>$}!powers@{powers}}
+\index{powers@{powers}!decomposition\_R\_Fixed\_Points$<$ scalar\_t $>$@{decomposition\_R\_Fixed\_Points$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{powers}{powers}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+std\+::vector$<$std\+::vector$<$int$>$ $>$ \mbox{\hyperlink{structdecomposition__R__Fixed__Points}{decomposition\+\_\+\+R\+\_\+\+Fixed\+\_\+\+Points}}$<$ scalar\+\_\+t $>$\+::powers}
+
+
+
+The powers in each monomial in a decomposition. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{Half__Idempotent_8h}{Half\+\_\+\+Idempotent.\+h}}\end{DoxyCompactItemize}

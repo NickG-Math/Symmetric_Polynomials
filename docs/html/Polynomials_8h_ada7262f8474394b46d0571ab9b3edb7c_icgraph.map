@@ -1,0 +1,4 @@
+<map id="general_compute_degree" name="general_compute_degree">
+<area shape="rect" id="node1" title=" " alt="" coords="267,13,453,39"/>
+<area shape="rect" id="node2" href="$classdegree__comparator__relations.html#aa3aaa43565015493ce9e970acc3c9f4b" title="Returns 1 if the degree agrees with the desired degree and has no relations, &#45;1 if it&#39;s higher than t..." alt="" coords="5,5,219,47"/>
+</map>

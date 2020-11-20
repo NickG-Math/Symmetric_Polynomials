@@ -1,0 +1,61 @@
+\hypertarget{classdegree__comparator__relations}{}\doxysection{degree\+\_\+comparator\+\_\+relations Class Reference}
+\label{classdegree__comparator__relations}\index{degree\_comparator\_relations@{degree\_comparator\_relations}}
+
+
+The comparator that checks if the degree of a given powers vector is equal to a desired degree, and further disqualifies a powers vector if it contains a relation.  
+
+
+
+
+{\ttfamily \#include $<$Generators.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdegree__comparator__relations_a0a946a7e1441009807b49ef50340d3d9}{degree\+\_\+comparator\+\_\+relations}} (int desired\+\_\+degree, const std\+::vector$<$ std\+::vector$<$ char $>$$>$ \&relations, const std\+::vector$<$ int $>$ \&dimensions)
+\begin{DoxyCompactList}\small\item\em Constructor given the desired degree, unacceptable combinations and dimensions. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classdegree__comparator__relations_aa3aaa43565015493ce9e970acc3c9f4b}{acceptable}} (const std\+::vector$<$ int $>$ \&a)
+\begin{DoxyCompactList}\small\item\em Returns 1 if the degree agrees with the desired degree and has no relations, -\/1 if it\textquotesingle{}s higher than the desired degree and 0 otherwise. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The comparator that checks if the degree of a given powers vector is equal to a desired degree, and further disqualifies a powers vector if it contains a relation. 
+
+Eg a relation can be $a_1^2a_2=\cdots$. In that case, a power vector \mbox{[}2,1,0,...,\mbox{]} is disqualified, and so are all \mbox{[}v\+\_\+1,v\+\_\+2,v\+\_\+3,...\mbox{]} with v\+\_\+1$>$=2 and v\+\_\+2$>$=1 since these also contain the relation The relations are allowed to be very complicated (think equivariant Chern classes) hence why they are not encoded in a rel\+\_\+t 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdegree__comparator__relations_a0a946a7e1441009807b49ef50340d3d9}\label{classdegree__comparator__relations_a0a946a7e1441009807b49ef50340d3d9}} 
+\index{degree\_comparator\_relations@{degree\_comparator\_relations}!degree\_comparator\_relations@{degree\_comparator\_relations}}
+\index{degree\_comparator\_relations@{degree\_comparator\_relations}!degree\_comparator\_relations@{degree\_comparator\_relations}}
+\doxysubsubsection{\texorpdfstring{degree\_comparator\_relations()}{degree\_comparator\_relations()}}
+{\footnotesize\ttfamily degree\+\_\+comparator\+\_\+relations\+::degree\+\_\+comparator\+\_\+relations (\begin{DoxyParamCaption}\item[{int}]{desired\+\_\+degree,  }\item[{const std\+::vector$<$ std\+::vector$<$ char $>$$>$ \&}]{relations,  }\item[{const std\+::vector$<$ int $>$ \&}]{dimensions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor given the desired degree, unacceptable combinations and dimensions. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdegree__comparator__relations_aa3aaa43565015493ce9e970acc3c9f4b}\label{classdegree__comparator__relations_aa3aaa43565015493ce9e970acc3c9f4b}} 
+\index{degree\_comparator\_relations@{degree\_comparator\_relations}!acceptable@{acceptable}}
+\index{acceptable@{acceptable}!degree\_comparator\_relations@{degree\_comparator\_relations}}
+\doxysubsubsection{\texorpdfstring{acceptable()}{acceptable()}}
+{\footnotesize\ttfamily char degree\+\_\+comparator\+\_\+relations\+::acceptable (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns 1 if the degree agrees with the desired degree and has no relations, -\/1 if it\textquotesingle{}s higher than the desired degree and 0 otherwise. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdegree__comparator__relations_aa3aaa43565015493ce9e970acc3c9f4b_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{Generators_8h}{Generators.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,56 @@
+\hypertarget{Generators_8h}{}\doxysection{source/\+Generators.h File Reference}
+\label{Generators_8h}\index{source/Generators.h@{source/Generators.h}}
+
+
+Contains generators of all monomials with desired degree and satisfying a desired policy.  
+
+
+{\ttfamily \#include \char`\"{}Relations.\+h\char`\"{}}\newline
+Include dependency graph for Generators.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Generators_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{Generators_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classSymmetric__Polynomials_1_1vector__interpolate__generator}{Symmetric\+\_\+\+Polynomials\+::vector\+\_\+interpolate\+\_\+generator}}
+\begin{DoxyCompactList}\small\item\em Generates all vectors between a given min and max vector, and satisfying a given policy. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1degree__comparator}{Symmetric\+\_\+\+Polynomials\+::degree\+\_\+comparator$<$ rel\+\_\+t $>$}}
+\begin{DoxyCompactList}\small\item\em The comparator that checks if the degree of a given powers vector is equal to a desired degree. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classSymmetric__Polynomials_1_1degree__comparator__relations}{Symmetric\+\_\+\+Polynomials\+::degree\+\_\+comparator\+\_\+relations}}
+\begin{DoxyCompactList}\small\item\em The comparator that checks if the degree of a given powers vector is equal to a desired degree, and further disqualifies a powers vector if it contains a relation. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1monomial__basis__generator}{Symmetric\+\_\+\+Polynomials\+::monomial\+\_\+basis\+\_\+generator$<$ scalar\+\_\+t, rel\+\_\+t $>$}}
+\begin{DoxyCompactList}\small\item\em Generates a basis of monomials in given number of variables and degree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceSymmetric__Polynomials}{Symmetric\+\_\+\+Polynomials}}
+\begin{DoxyCompactList}\small\item\em The namespace which contains every method and class in the library. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespaceSymmetric__Polynomials_1_1policy}{Symmetric\+\_\+\+Polynomials\+::policy}}
+\begin{DoxyCompactList}\small\item\em The policy our monomials should satisfy. Policy is a char and takes values 0,1,-\/1. 1 if satisfied, -\/1 if not satisfied and we can guarantee that all larger vectors also won\textquotesingle{}t satisfy it, and 0 otherwise. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\static char \mbox{\hyperlink{namespaceSymmetric__Polynomials_1_1policy_ac9a171c5b949f5d236b4502d73f6d2f9}{Symmetric\+\_\+\+Polynomials\+::policy\+::always\+\_\+true}} (const T \&)
+\begin{DoxyCompactList}\small\item\em The always true policy. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static std\+::function$<$ char(const std\+::vector$<$ int $>$ \&)$>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_1_1policy_afb2f9af59ccf8f54e49b3d90c2c19fed}{Symmetric\+\_\+\+Polynomials\+::policy\+::custom}} (const T \&comparator)
+\begin{DoxyCompactList}\small\item\em The policy made by a given comparactor function. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_aa594e9902e2709cb0ba760b14577b7ee}{Symmetric\+\_\+\+Polynomials\+::vector\+\_\+interpolate}} (const std\+::vector$<$ int $>$ \&min, const std\+::vector$<$ int $>$ \&max, const std\+::function$<$ char(const std\+::vector$<$ int $>$ \&)$>$ \&policy=policy\+::always\+\_\+true$<$ std\+::vector$<$ int $>$$>$)
+\begin{DoxyCompactList}\small\item\em Returns all vectors between min, max and satisfying a given policy. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ }\\std\+::vector$<$ monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a591a8f1544a9eb3c4c8113d4e55df622}{Symmetric\+\_\+\+Polynomials\+::monomial\+\_\+basis}} (int variables, int degree)
+\begin{DoxyCompactList}\small\item\em Returns the monomial basis in given number of variables and degree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains generators of all monomials with desired degree and satisfying a desired policy. 
+

@@ -1,0 +1,4 @@
+<map id="monomial::print" name="monomial::print">
+<area shape="rect" id="node1" title="Print monomial using default variable names x_1,...,x_n." alt="" coords="232,13,359,39"/>
+<area shape="rect" id="node2" href="$classmonomial.html#a0db05568fc905c956e754c0054759d21" title="Print monomial using given variable names." alt="" coords="5,5,184,47"/>
+</map>

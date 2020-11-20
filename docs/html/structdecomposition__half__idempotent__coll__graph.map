@@ -1,0 +1,8 @@
+<map id="decomposition_half_idempotent&lt; scalar_t &gt;" name="decomposition_half_idempotent&lt; scalar_t &gt;">
+<area shape="rect" id="node1" title="Class for writing every element in the fixed points of R as a polynomial on the generators Idem,..." alt="" coords="117,332,303,373"/>
+<area shape="rect" id="node2" href="$classhalf__idempotent__generators.html" title="The class containing the generators for the fixed points of $$R=Q[x_1,...,x_n,y_1,..." alt="" coords="5,228,212,269"/>
+<area shape="rect" id="node3" href="$classmonomial.html" title=" " alt="" coords="29,109,188,151"/>
+<area shape="rect" id="node4" href="$classmonomial.html" title="Class of monomials in multiple variables with relations." alt="" coords="29,5,188,47"/>
+<area shape="rect" id="node5" href="$classpolynomial.html" title=" " alt="" coords="237,228,389,269"/>
+<area shape="rect" id="node6" href="$classpolynomial.html" title="Class of polynomials in multiple variables with relations." alt="" coords="238,109,387,151"/>
+</map>

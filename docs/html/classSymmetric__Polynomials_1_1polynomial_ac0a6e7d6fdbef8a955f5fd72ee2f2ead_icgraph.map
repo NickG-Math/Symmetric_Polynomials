@@ -1,0 +1,7 @@
+<map id="Symmetric_Polynomials::polynomial::condense" name="Symmetric_Polynomials::polynomial::condense">
+<area shape="rect" id="node1" title="Incorporates all monomials with same powers vector into a single monomial by adding coefficients,..." alt="" coords="496,97,676,138"/>
+<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1half__idempotent__generators.html#ae0893a2ba27fd4204989cda7573b95f6" title="Computes a product of a monomial on our generators Idem, Chern, TwistedChern." alt="" coords="233,45,448,101"/>
+<area shape="rect" id="node5" href="$classSymmetric__Polynomials_1_1polynomial.html#a71f3c9e5235f925ccc61b25ab784abbe" title="Constructs a polynomial given a vector of monomials, applying relations to variables and reordering a..." alt="" coords="241,126,441,197"/>
+<area shape="rect" id="node3" href="$namespaceSymmetric__Polynomials.html#a36c74a891ce92c19aa88f4752fe9d420" title="Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,..." alt="" coords="5,5,185,61"/>
+<area shape="rect" id="node4" href="$structSymmetric__Polynomials_1_1decomposition__half__idempotent.html#a89f4c5f092b93bc2f2079d79fcb966a4" title="Verifies that the decomposition is correct (i.e. expanding the generators in the original variables &#160;..." alt="" coords="5,85,185,141"/>
+</map>

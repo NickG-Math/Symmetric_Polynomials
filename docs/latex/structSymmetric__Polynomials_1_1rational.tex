@@ -1,0 +1,223 @@
+\hypertarget{structSymmetric__Polynomials_1_1rational}{}\doxysection{Symmetric\+\_\+\+Polynomials\+::rational Struct Reference}
+\label{structSymmetric__Polynomials_1_1rational}\index{Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}}
+
+
+Class of rational numbers. Standard implementation.  
+
+
+
+
+{\ttfamily \#include $<$General.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structSymmetric__Polynomials_1_1rational_aed34dca0625e71d1e8fbde5fe8ab5b9f}{rational}} (int n, int d)
+\begin{DoxyCompactList}\small\item\em Constructs rational n/d in lowest terms. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structSymmetric__Polynomials_1_1rational_a5933bd801e4f81b0d3805712fe4c7e32}{rational}} (int n)
+\begin{DoxyCompactList}\small\item\em Converts integer to rational. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structSymmetric__Polynomials_1_1rational_a7252e716e708728ac0a56cdf17ea75d4}{rational}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor initializes the 0 rational. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational_a0439caa95796e0b00de8a861dbe6a617}{operator==}} (const \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} \&a) const
+\item 
+bool \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational_ab10d9af5fdcfe33abf631485b56f3a27}{operator!=}} (const \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} \&a) const
+\item 
+\mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational_af573bad5fa30f96baa247dd779f65025}{operator+}} (const \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} \&a) const
+\item 
+\mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} \& \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational_a99700c81e5cf15425ec108faa2bf3ef7}{operator+=}} (const \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} \&a)
+\item 
+\mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational_a4710695379b94b59756f12946f0f4a86}{operator-\/}} (const \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} \&a) const
+\item 
+\mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational_a36039fd98f2e498219227a0dd72f15d5}{operator-\/}} () const
+\item 
+\mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational_adde5e9ef814b60f249dab75ae9390133}{operator$\ast$}} (const \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} \&a) const
+\item 
+\mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} \& \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational_a8ee174e97bc905e52ae94b1b487e94ee}{operator$\ast$=}} (const \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} \&a)
+\item 
+\mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational_a5a6ede6c6f15e55ee41ae7c24bdb7dfa}{operator/}} (const \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} \&a) const
+\item 
+\mbox{\hyperlink{structSymmetric__Polynomials_1_1rational_aab5634c69a7722aa565e4b79e6e8c46d}{operator double}} () const
+\item 
+bool \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational_aed998b71dcbfb0c895920b1e08473078}{is\+\_\+integer}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational_a45793ea8888f9c7e74b4ac4666816d8a}{numerator}}
+\item 
+int \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational_a11b95a33bf1976f81edccee5048d4ada}{denominator}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class of rational numbers. Standard implementation. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1rational_aed34dca0625e71d1e8fbde5fe8ab5b9f}\label{structSymmetric__Polynomials_1_1rational_aed34dca0625e71d1e8fbde5fe8ab5b9f}} 
+\index{Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}!rational@{rational}}
+\index{rational@{rational}!Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}}
+\doxysubsubsection{\texorpdfstring{rational()}{rational()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Symmetric\+\_\+\+Polynomials\+::rational\+::rational (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs rational n/d in lowest terms. 
+
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1rational_a5933bd801e4f81b0d3805712fe4c7e32}\label{structSymmetric__Polynomials_1_1rational_a5933bd801e4f81b0d3805712fe4c7e32}} 
+\index{Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}!rational@{rational}}
+\index{rational@{rational}!Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}}
+\doxysubsubsection{\texorpdfstring{rational()}{rational()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Symmetric\+\_\+\+Polynomials\+::rational\+::rational (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Converts integer to rational. 
+
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1rational_a7252e716e708728ac0a56cdf17ea75d4}\label{structSymmetric__Polynomials_1_1rational_a7252e716e708728ac0a56cdf17ea75d4}} 
+\index{Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}!rational@{rational}}
+\index{rational@{rational}!Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}}
+\doxysubsubsection{\texorpdfstring{rational()}{rational()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Symmetric\+\_\+\+Polynomials\+::rational\+::rational (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor initializes the 0 rational. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structSymmetric__Polynomials_1_1rational_a7252e716e708728ac0a56cdf17ea75d4_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1rational_aed998b71dcbfb0c895920b1e08473078}\label{structSymmetric__Polynomials_1_1rational_aed998b71dcbfb0c895920b1e08473078}} 
+\index{Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}!is\_integer@{is\_integer}}
+\index{is\_integer@{is\_integer}!Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}}
+\doxysubsubsection{\texorpdfstring{is\_integer()}{is\_integer()}}
+{\footnotesize\ttfamily bool Symmetric\+\_\+\+Polynomials\+::rational\+::is\+\_\+integer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structSymmetric__Polynomials_1_1rational_aed998b71dcbfb0c895920b1e08473078_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1rational_aab5634c69a7722aa565e4b79e6e8c46d}\label{structSymmetric__Polynomials_1_1rational_aab5634c69a7722aa565e4b79e6e8c46d}} 
+\index{Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}!operator double@{operator double}}
+\index{operator double@{operator double}!Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}}
+\doxysubsubsection{\texorpdfstring{operator double()}{operator double()}}
+{\footnotesize\ttfamily Symmetric\+\_\+\+Polynomials\+::rational\+::operator double (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1rational_ab10d9af5fdcfe33abf631485b56f3a27}\label{structSymmetric__Polynomials_1_1rational_ab10d9af5fdcfe33abf631485b56f3a27}} 
+\index{Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Symmetric\+\_\+\+Polynomials\+::rational\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} \&}]{a }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1rational_adde5e9ef814b60f249dab75ae9390133}\label{structSymmetric__Polynomials_1_1rational_adde5e9ef814b60f249dab75ae9390133}} 
+\index{Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} Symmetric\+\_\+\+Polynomials\+::rational\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} \&}]{a }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structSymmetric__Polynomials_1_1rational_adde5e9ef814b60f249dab75ae9390133_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1rational_a8ee174e97bc905e52ae94b1b487e94ee}\label{structSymmetric__Polynomials_1_1rational_a8ee174e97bc905e52ae94b1b487e94ee}} 
+\index{Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}}\& Symmetric\+\_\+\+Polynomials\+::rational\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1rational_af573bad5fa30f96baa247dd779f65025}\label{structSymmetric__Polynomials_1_1rational_af573bad5fa30f96baa247dd779f65025}} 
+\index{Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}!operator+@{operator+}}
+\index{operator+@{operator+}!Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} Symmetric\+\_\+\+Polynomials\+::rational\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} \&}]{a }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structSymmetric__Polynomials_1_1rational_af573bad5fa30f96baa247dd779f65025_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1rational_a99700c81e5cf15425ec108faa2bf3ef7}\label{structSymmetric__Polynomials_1_1rational_a99700c81e5cf15425ec108faa2bf3ef7}} 
+\index{Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}}\& Symmetric\+\_\+\+Polynomials\+::rational\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1rational_a36039fd98f2e498219227a0dd72f15d5}\label{structSymmetric__Polynomials_1_1rational_a36039fd98f2e498219227a0dd72f15d5}} 
+\index{Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} Symmetric\+\_\+\+Polynomials\+::rational\+::operator-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structSymmetric__Polynomials_1_1rational_a36039fd98f2e498219227a0dd72f15d5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1rational_a4710695379b94b59756f12946f0f4a86}\label{structSymmetric__Polynomials_1_1rational_a4710695379b94b59756f12946f0f4a86}} 
+\index{Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} Symmetric\+\_\+\+Polynomials\+::rational\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} \&}]{a }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structSymmetric__Polynomials_1_1rational_a4710695379b94b59756f12946f0f4a86_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1rational_a5a6ede6c6f15e55ee41ae7c24bdb7dfa}\label{structSymmetric__Polynomials_1_1rational_a5a6ede6c6f15e55ee41ae7c24bdb7dfa}} 
+\index{Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}!operator/@{operator/}}
+\index{operator/@{operator/}!Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} Symmetric\+\_\+\+Polynomials\+::rational\+::operator/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} \&}]{a }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structSymmetric__Polynomials_1_1rational_a5a6ede6c6f15e55ee41ae7c24bdb7dfa_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1rational_a0439caa95796e0b00de8a861dbe6a617}\label{structSymmetric__Polynomials_1_1rational_a0439caa95796e0b00de8a861dbe6a617}} 
+\index{Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}!operator==@{operator==}}
+\index{operator==@{operator==}!Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Symmetric\+\_\+\+Polynomials\+::rational\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} \&}]{a }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1rational_a11b95a33bf1976f81edccee5048d4ada}\label{structSymmetric__Polynomials_1_1rational_a11b95a33bf1976f81edccee5048d4ada}} 
+\index{Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}!denominator@{denominator}}
+\index{denominator@{denominator}!Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}}
+\doxysubsubsection{\texorpdfstring{denominator}{denominator}}
+{\footnotesize\ttfamily int Symmetric\+\_\+\+Polynomials\+::rational\+::denominator}
+
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1rational_a45793ea8888f9c7e74b4ac4666816d8a}\label{structSymmetric__Polynomials_1_1rational_a45793ea8888f9c7e74b4ac4666816d8a}} 
+\index{Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}!numerator@{numerator}}
+\index{numerator@{numerator}!Symmetric\_Polynomials::rational@{Symmetric\_Polynomials::rational}}
+\doxysubsubsection{\texorpdfstring{numerator}{numerator}}
+{\footnotesize\ttfamily int Symmetric\+\_\+\+Polynomials\+::rational\+::numerator}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{General_8h}{General.\+h}}\end{DoxyCompactItemize}
