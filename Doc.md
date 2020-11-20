@@ -1,7 +1,8 @@
 \mainpage General Information
 \tableofcontents
  \section intro Introduction
-This is a C++ header only library devoted to computations of symmetric polynomials on multiple variables with relations. You can find the GitHub repository <a href="https://github.com/NickG-Math/Mackey">here</a>.
+This is a C++ header only library devoted to computations of symmetric polynomials on multiple variables with relations. You can find the GitHub repository 
+<a href="https://github.com/NickG-Math/Symmetric_Polynomials">here</a>.
 
 
 \section req Requirements
@@ -9,7 +10,7 @@ This is a C++ header only library devoted to computations of symmetric polynomia
  
 \section install Installation
 
-* To install simply clone/download the <a href="https://github.com/NickG-Math/Mackey">repository</a> and include it in your path. 
+* To install simply clone/download the <a href="https://github.com/NickG-Math/Symmetric_Polynomials">repository</a> and include it in your path. 
 
 * See the page \ref use for a tutorial on using the library. For a brief explanation on the math behind it, see \ref math.
 
