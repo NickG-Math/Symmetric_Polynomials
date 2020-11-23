@@ -3,6 +3,26 @@
 ///@file
 ///@brief A demonstration file that can be compiled
 
+///Writes the twisted Pontryagin classes pb_{s,j} in terms of the Chern classes under the forgetfull map BU(n)->BSO(n) 
+template<typename scalar_t>
+void write_pontryagin_C2_in_terms_of_Chern_classes(int n)
+{
+	using namespace Symmetric_Polynomials;
+	decomposition_half_idempotent<scalar_t> decomposeChern(n);
+	for (int s = 1; s <= n; s++)
+		for (int i = 1; i <= n - s; i++) {
+			auto twistedPontryagin = decomposeChern.TwistedChern[s-1][i-1];
+			for (auto& mono : twistedPontryagin.monos) {
+				for (int j = 0; j < n; j++) {//replace the x_i by x_i^2
+					mono.exponent[j] *= 2;
+				}
+				mono.degree *= 2;
+			}
+			std::cout << "pb_{" << s << "," << i << "}= ";
+			decomposeChern.decompose(twistedPontryagin);
+			std::cout << decomposeChern << "\n";
+		}
+}
 
 int main() {
 	using namespace Symmetric_Polynomials;
@@ -13,7 +33,7 @@ int main() {
 	std::cout << "But the three types of classes satisfy relations. Enter the number n>=1 of variables x_1,...,x_n,y_1,...,y_n and all relations for the given n will be printed" << "\n";
 	std::cout << "Make sure n<=7 or you will have to wait a while" << "\n";
 	int n;
-	std::cin>>n;
+	std::cin >> n;
 	if (n <= 0)
 		std::cout << "Invalid n";
 	else {
@@ -21,16 +41,18 @@ int main() {
 		print_half_idempotent_relations<rational>(n);
 	}
 
-	//other fun things
-	//monomial<rational, norelations> m(rational(2, 3), { 0,1,4 });
-	//std::cout << m << "\n";
-	//auto u = m.print();
-	//auto v = m.print({ "x","y", "z" });
-	//polynomial<int, halfidempotent> p({ monomial<int,halfidempotent>(2,{1,2,0,1}), monomial<int,halfidempotent>(3,{3,0,1,1}) });
-	//decomposition_elementary_symmetric<int> dec(polynomial<int, norelations>({ monomial<int, norelations>(2, { 1,2 }), monomial<int, norelations>(2, {2,1 }) }));
-	//std::cout << dec << "\n";
-	//decomposition_half_idempotent<rational> dec2(polynomial<rational, halfidempotent>({ monomial<rational, halfidempotent>(2, { 1,0,1,0 }), monomial<rational, halfidempotent>(2, {0,1,0,1 }) }));
-	//std::cout << dec2 << "\n";
+	//	other fun things
+		//write_pontryagin_C2_in_terms_of_Chern_classes<rational>(3);
+		//all_monomial_orbits<rational, norelations>(5, 5);
+		//monomial<rational, norelations> m(rational(2, 3), { 0,1,4 });
+		//std::cout << m << "\n";
+		//auto u = m.print();
+		//auto v = m.print({ "x","y", "z" });
+		//polynomial p(std::vector({ monomial<int,halfidempotent>(2,{1,2,0,1}), monomial<int,halfidempotent>(3,{3,0,1,1}) }));
+		//decomposition_elementary_symmetric dec(polynomial(std::vector({ monomial<int, norelations>(2, { 1,2 }), monomial<int, norelations>(2, {2,1 }) })));
+		//std::cout << dec << "\n";
+		//decomposition_half_idempotent<rational> dec2(polynomial(std::vector({ monomial<rational, halfidempotent>(2, { 1,0,1,0 }), monomial<rational, halfidempotent>(2, {0,1,0,1 }) })));
+		//std::cout << dec2 << "\n";
 
 
 	return 0;
