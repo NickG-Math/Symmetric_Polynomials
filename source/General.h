@@ -121,15 +121,15 @@ std::vector<T> join(const std::vector<T>& a, const std::vector<T>& b) {
 
 ///Class of rational numbers. Standard implementation
 struct rational {
-	int numerator, denominator;
+	long numerator, denominator;
 	///Constructs rational n/d in lowest terms
-	rational(int n, int d) {
+	rational(long n, long d) {
 		auto g = std::gcd(n, d);
 		numerator = n / g;
 		denominator = d / g;
 	}
 	///Converts integer to rational
-	rational(int n) : rational(n, 1) {}
+	rational(long n) : rational(n, 1) {}
 	///Default constructor initializes the 0 rational.
 	rational() : rational(0) {};
 	bool operator ==(const rational& a) const {
