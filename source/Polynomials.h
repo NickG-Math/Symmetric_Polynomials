@@ -5,10 +5,10 @@
 ///@brief Contains the classes of monomials and polynomials in multiple variables with relations. 
 
 namespace Symmetric_Polynomials{
-int general_compute_degree(const std::vector<int>& powers, const std::vector<int>& dimensions) {
+int general_compute_degree(const std::vector<int>& exponent, const std::vector<int>& dimensions) {
 	int degree = 0;
-	for (int i = 0; i < powers.size(); i++) {
-		degree += powers[i] * dimensions[i];
+	for (int i = 0; i < exponent.size(); i++) {
+		degree += exponent[i] * dimensions[i];
 	}
 	return degree;
 }
@@ -19,29 +19,25 @@ class polynomial;
 ///////////////////////////////////////////////////////////////////////////////////
 ///Class of monomials in multiple variables with relations.
 //
-///A monomial \f$a=cx_1^{p_1}x_2^{p_2}....x_n^{p_n}\f$ is defined by its coefficient \f$c\f$ and powers vector \f$[p_1,...,p_n]\f$.
+///A monomial \f$a=cx_1^{p_1}x_2^{p_2}....x_n^{p_n}\f$ is defined by its coefficient \f$c\f$ and exponent vector \f$[p_1,...,p_n]\f$.
 ///The template scalar_t determines the type of the coefficient \f$c\f$.
 ///The template rel_t determines the relations that the variables \f$x_i\f$ satisfy.
 ///////////////////////////////////////////////////////////////////////////////////////
 template<typename scalar_t, typename rel_t>
 class monomial {
-private:
 	void getdegree() {
 		if (coeff != 0)
-			degree = rel_t::compute_degree(powers);
+			degree = rel_t::compute_degree(exponent);
 		else
 			degree = 0;
 	}
-	int degree; ///<Degree of monomial
-
 public:
-
 	scalar_t coeff; ///<Coefficient of monomial
-	std::vector<int> powers; ///<Powers vector
-
-	///Constructs monomial given coefficient and powers
-	monomial(const scalar_t& coeff, const std::vector<int>& powers) :
-		coeff(coeff), powers(powers) {
+	std::vector<int> exponent; ///<exponent vector
+	int degree; ///<Degree of monomial
+	///Constructs monomial given coefficient and exponent
+	monomial(const scalar_t& coeff, const std::vector<int>& exponent) :
+		coeff(coeff), exponent(exponent) {
 		rel_t::apply_monomial(this);
 		getdegree();
 	};
@@ -55,10 +51,9 @@ public:
 		return monomial<scalar_t, rel_t>(coeff, std::vector<int>(variables)); //monomial 1
 	}
 
-	///Returns product of monomials; depending on the relations, this could be a polynomial after applying them, so the return type is conditional on that
-	template<typename s_scalar_t, typename s_rel_t>
-	inline std::conditional_t<s_rel_t::product_of_monomials_is_monomial, monomial<s_scalar_t, s_rel_t>, polynomial<s_scalar_t, s_rel_t>> operator *(const monomial<s_scalar_t, s_rel_t>& b) const {
-		return monomial<s_scalar_t, s_rel_t>(this->coeff * b.coeff, this->powers + b.powers);
+	///Returns product of monomials
+	monomial<scalar_t, rel_t> operator *(const monomial<scalar_t, rel_t>& b) const {
+		return monomial<scalar_t, rel_t>(this->coeff * b.coeff, this->exponent + b.exponent);
 	}
 
 	///Returns -b for monomial b
@@ -68,31 +63,30 @@ public:
 		return b;
 	}
 
-	///Division of monomials. No checks are made to ensure that the resulting powers are nonnegative
+	///Division of monomials. No checks are made to ensure that the resulting exponent are nonnegative
 	monomial<scalar_t, rel_t> operator /(const monomial<scalar_t, rel_t>& b) const {
-		return monomial<scalar_t, rel_t>(this->coeff / b.coeff, this->powers - b.powers);
+		return monomial<scalar_t, rel_t>(this->coeff / b.coeff, this->exponent - b.exponent);
 	}
 
 	///Standard equality of monomials
 	bool operator==(const monomial<scalar_t, rel_t>& b) const {
-		return (this->coeff == b.coeff && this->powers == b.powers);
+		return (this->coeff == b.coeff && this->exponent == b.exponent);
 	}
 
-	///a<b iff degree(a)<degree(b) or they have the same degree and for the powers vectors, powers(a)<powers(b)
+	///a<b iff degree(a)<degree(b) or they have the same degree and for the exponent vectors, exponent(a)<exponent(b)
 	bool operator<(const monomial<scalar_t, rel_t>& b) const {
-		return (this->degree < b.degree) || (this->degree == b.degree && this->powers < b.powers);
+		return (this->degree < b.degree) || (this->degree == b.degree && this->exponent < b.exponent);
 	}
 
 	///Print monomial using given variable names
 	std::string print(const std::function<std::string(int)>& variable_names) const {
-		bool started = 0;
 		std::stringstream ss;
 		if (coeff != 1)
 			ss << coeff << "*";
-		for (int i = 0; i < powers.size(); i++) {
-			if (powers[i]>1)
-				ss << variable_names(i) << "^" << powers[i] << "*";
-			else if (powers[i]==1)
+		for (int i = 0; i < exponent.size(); i++) {
+			if (exponent[i]>1)
+				ss << variable_names(i) << "^" << exponent[i] << "*";
+			else if (exponent[i]==1)
 				ss << variable_names(i) << "*";
 		}
 		auto str = ss.str();
@@ -121,7 +115,7 @@ public:
 ///Product of scalar and monomial
 template<typename scalar_t, typename rel_t>
 inline monomial<scalar_t, rel_t> operator *(const scalar_t& a, const monomial<scalar_t, rel_t>& b) {
-	return monomial<scalar_t, rel_t>(a * b.coeff, b.powers);
+	return monomial<scalar_t, rel_t>(a * b.coeff, b.exponent);
 }
 
 ///Comparator for monomials based on <
@@ -143,7 +137,7 @@ std::ostream& operator<<(std::ostream& os, const monomial<scalar_t, rel_t>& a) {
 ///Permutes the variables in a monomial according permutation; returns permuted monomial
 template<typename scalar_t, typename rel_t>
 monomial<scalar_t, rel_t> permute(const monomial<scalar_t, rel_t>& a, const std::vector<char>& perm) {
-	return monomial<scalar_t, rel_t>(a.coeff, rel_t::permute(a.powers, perm));
+	return monomial<scalar_t, rel_t>(a.coeff, rel_t::permute(a.exponent, perm));
 }
 
 /////////////////////////////////////////////////////////////////////////////
@@ -164,13 +158,13 @@ public:
 	///The vector of monomials, ordered in increasing degree
 	std::vector<monomial<scalar_t, rel_t>> monos; 
 
-	///Incorporates all monomials with same powers vector into a single monomial by adding coefficients, condensing the polynomial
+	///Incorporates all monomials with same exponent vector into a single monomial by adding coefficients, condensing the polynomial
 	void condense() {
 		int i = 0;
 		while (i < monos.size()) {
 			if (monos[i].coeff == 0) //erase 0 monomial and dont change i
 				monos.erase(monos.begin() + i);
-			else if (i != monos.size() - 1 && monos[i].degree == monos[i + 1].degree && monos[i].powers == monos[i + 1].powers) {
+			else if (i != monos.size() - 1 && monos[i].degree == monos[i + 1].degree && monos[i].exponent == monos[i + 1].exponent) {
 				if (monos[i].coeff + monos[i + 1].coeff == 0) { //they cancel out so erase both and dont change i
 					monos.erase(monos.begin() + i, monos.begin() + i + 2);
 				}
@@ -190,13 +184,18 @@ public:
 		return monos.back();
 	}
 
-	///Constructs a polynomial given a vector of monomials, applying relations to variables and reordering as needed. Condensation is performed by default but can be disabled at the user's risk
-	polynomial(const std::vector<monomial<scalar_t, rel_t>>& monos, bool dontcondense = 0) : monos(monos) {
+
+	///Constructs a polynomial given an iterator of monomials, applying relations to variables and reordering as needed. Condensation is performed by default but can be disabled at the user's risk
+	template<typename iterator>
+	polynomial(iterator begin, iterator end, bool dontcondense = 0) : monos(begin, end) {
 		rel_t::apply_polynomial(this);
 		reorder();
 		if (!dontcondense)
 			condense();
 	}
+
+	///Constructs a polynomial given a vector of monomials, applying relations to variables and reordering as needed. Condensation is performed by default but can be disabled at the user's risk
+	polynomial(const std::vector<monomial<scalar_t, rel_t>>& monos, bool dontcondense = 0) : polynomial(monos.begin(),monos.end()) {}
 
 	///Constructs a polynomial from a single monomial
 	polynomial(const monomial<scalar_t, rel_t>& mono) : polynomial<scalar_t, rel_t>(std::vector<monomial<scalar_t, rel_t>>({ mono })) {}
@@ -297,7 +296,7 @@ polynomial<scalar_t, rel_t> multiply(const polynomial<scalar_t, rel_t>& a, const
 template<typename scalar_t, typename rel_t>
 polynomial<scalar_t, rel_t> operator*(const scalar_t& a, const polynomial<scalar_t, rel_t>& b) {
 	if (a == 0) //0 polynomial
-		return polynomial<scalar_t, rel_t>::constant(0, b.monos[0].powers.size());
+		return polynomial<scalar_t, rel_t>::constant(0, b.monos[0].exponent.size());
 	if (a == 1)
 		return b;
 	auto ab = b;
@@ -327,7 +326,7 @@ inline polynomial<scalar_t, rel_t> operator*(const polynomial<scalar_t, rel_t>& 
 template<typename scalar_t, typename rel_t>
 polynomial<scalar_t, rel_t> power(const polynomial<scalar_t, rel_t>& a, int p, bool dontcondense = 0) {
 	if (p == 0)
-		return polynomial<scalar_t, rel_t>::constant(1, a.monos[0].powers.size()); //polynomial 1
+		return polynomial<scalar_t, rel_t>::constant(1, a.monos[0].exponent.size()); //polynomial 1
 	auto pwr = a;
 	for (int i = 2; i <= p;i++)
 		pwr = multiply(pwr, a, dontcondense);
