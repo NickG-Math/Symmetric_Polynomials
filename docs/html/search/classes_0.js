@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['decomposition_5felementary_5fsymmetric_107',['decomposition_elementary_symmetric',['../structSymmetric__Polynomials_1_1decomposition__elementary__symmetric.html',1,'Symmetric_Polynomials']]],
-  ['decomposition_5fhalf_5fidempotent_108',['decomposition_half_idempotent',['../structSymmetric__Polynomials_1_1decomposition__half__idempotent.html',1,'Symmetric_Polynomials']]],
-  ['degree_5fcomparator_109',['degree_comparator',['../structSymmetric__Polynomials_1_1degree__comparator.html',1,'Symmetric_Polynomials']]],
-  ['degree_5fcomparator_5frelations_110',['degree_comparator_relations',['../classSymmetric__Polynomials_1_1degree__comparator__relations.html',1,'Symmetric_Polynomials']]]
+  ['combinations_5fgenerator_114',['combinations_generator',['../classSymmetric__Polynomials_1_1combinations__generator.html',1,'Symmetric_Polynomials']]],
+  ['const_5fiterator_115',['const_iterator',['../classSymmetric__Polynomials_1_1permutations__generator_1_1const__iterator.html',1,'Symmetric_Polynomials::permutations_generator::const_iterator'],['../classSymmetric__Polynomials_1_1vector__interpolate__generator_1_1const__iterator.html',1,'Symmetric_Polynomials::vector_interpolate_generator::const_iterator'],['../classSymmetric__Polynomials_1_1combinations__generator_1_1const__iterator.html',1,'Symmetric_Polynomials::combinations_generator::const_iterator']]]
 ];

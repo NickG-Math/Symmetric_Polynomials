@@ -2,48 +2,33 @@
 \label{classSymmetric__Polynomials_1_1vector__interpolate__generator}\index{Symmetric\_Polynomials::vector\_interpolate\_generator@{Symmetric\_Polynomials::vector\_interpolate\_generator}}
 
 
-Generates all vectors between a given min and max vector, and satisfying a given policy.  
+Generates all vectors interpolating between a given min and max vector (with the same length), and satisfying a given policy.  
 
 
 
 
 {\ttfamily \#include $<$Generators.\+h$>$}
 
-
-
-Inheritance diagram for Symmetric\+\_\+\+Polynomials\+::vector\+\_\+interpolate\+\_\+generator\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=235pt]{classSymmetric__Polynomials_1_1vector__interpolate__generator__inherit__graph}
-\end{center}
-\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classSymmetric__Polynomials_1_1vector__interpolate__generator_1_1const__iterator}{const\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em Constant iterator that is used in a ranged for loop to generate the interpolating vectors. Non constant version is illegal. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classSymmetric__Polynomials_1_1vector__interpolate__generator_abb646b4eebb836f4900ecd55e83718dc}{vector\+\_\+interpolate\+\_\+generator}} (const std\+::vector$<$ int $>$ \&min, const std\+::vector$<$ int $>$ \&max, const std\+::function$<$ char(const std\+::vector$<$ int $>$ \&)$>$ \&policy=\mbox{\hyperlink{namespaceSymmetric__Polynomials_1_1policy_ac9a171c5b949f5d236b4502d73f6d2f9}{policy\+::always\+\_\+true}}$<$ std\+::vector$<$ int $>$$>$)
 \begin{DoxyCompactList}\small\item\em Constructor using min, max and policy. \end{DoxyCompactList}\item 
-std\+::vector$<$ int $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1vector__interpolate__generator_a9e649a895cfd34636b3a64dc16ea510d}{get\+\_\+generated}} () const
-\begin{DoxyCompactList}\small\item\em Returns the generated vector. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classSymmetric__Polynomials_1_1vector__interpolate__generator_a7b0621b44a9b198297030072be712e1f}{keep\+\_\+going}} ()
-\begin{DoxyCompactList}\small\item\em False if all vectors have been generated. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classSymmetric__Polynomials_1_1vector__interpolate__generator_ae9ae4d9919dd789870112dde1d48b01e}{initialize}} ()
-\begin{DoxyCompactList}\small\item\em Initialize generator. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classSymmetric__Polynomials_1_1vector__interpolate__generator_a7d58ee4c9e85a055f81d63203c9e2c5a}{policy\+\_\+satisfied}} ()
-\begin{DoxyCompactList}\small\item\em Checks if policy is satisfied. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classSymmetric__Polynomials_1_1vector__interpolate__generator_ac57e2cd293efe2e222a2c8c9bfec2109}{update}} ()
-\begin{DoxyCompactList}\small\item\em Generates new vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes}
-\begin{DoxyCompactItemize}
-\item 
-long \mbox{\hyperlink{classSymmetric__Polynomials_1_1vector__interpolate__generator_aefd3ae38c85f6baef04e4346d40166d4}{total}}
-\begin{DoxyCompactList}\small\item\em The total number of vectors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+long \mbox{\hyperlink{classSymmetric__Polynomials_1_1vector__interpolate__generator_a1d15d2426618c2237bbecdf408b358ab}{size}} ()
+\begin{DoxyCompactList}\small\item\em Returns upper bound on the amount of generated elements. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1vector__interpolate__generator_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classSymmetric__Polynomials_1_1vector__interpolate__generator_a645f96808ee04e458f08ba13fabd0ab7}{begin}} () const
+\begin{DoxyCompactList}\small\item\em Initial generator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1vector__interpolate__generator_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classSymmetric__Polynomials_1_1vector__interpolate__generator_a06a29e0befd57895dfb39d436581feee}{end}} () const
+\begin{DoxyCompactList}\small\item\em Terminal generator. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Generates all vectors between a given min and max vector, and satisfying a given policy. 
-
-Don\textquotesingle{}t use with empty vectors with this! 
+Generates all vectors interpolating between a given min and max vector (with the same length), and satisfying a given policy. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classSymmetric__Polynomials_1_1vector__interpolate__generator_abb646b4eebb836f4900ecd55e83718dc}\label{classSymmetric__Polynomials_1_1vector__interpolate__generator_abb646b4eebb836f4900ecd55e83718dc}} 
@@ -56,114 +41,53 @@ Don\textquotesingle{}t use with empty vectors with this!
 
 Constructor using min, max and policy. 
 
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1vector__interpolate__generator_a645f96808ee04e458f08ba13fabd0ab7}\label{classSymmetric__Polynomials_1_1vector__interpolate__generator_a645f96808ee04e458f08ba13fabd0ab7}} 
+\index{Symmetric\_Polynomials::vector\_interpolate\_generator@{Symmetric\_Polynomials::vector\_interpolate\_generator}!begin@{begin}}
+\index{begin@{begin}!Symmetric\_Polynomials::vector\_interpolate\_generator@{Symmetric\_Polynomials::vector\_interpolate\_generator}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSymmetric__Polynomials_1_1vector__interpolate__generator_1_1const__iterator}{const\+\_\+iterator}} Symmetric\+\_\+\+Polynomials\+::vector\+\_\+interpolate\+\_\+generator\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initial generator. 
+
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1vector__interpolate__generator_a06a29e0befd57895dfb39d436581feee}\label{classSymmetric__Polynomials_1_1vector__interpolate__generator_a06a29e0befd57895dfb39d436581feee}} 
+\index{Symmetric\_Polynomials::vector\_interpolate\_generator@{Symmetric\_Polynomials::vector\_interpolate\_generator}!end@{end}}
+\index{end@{end}!Symmetric\_Polynomials::vector\_interpolate\_generator@{Symmetric\_Polynomials::vector\_interpolate\_generator}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSymmetric__Polynomials_1_1vector__interpolate__generator_1_1const__iterator}{const\+\_\+iterator}} Symmetric\+\_\+\+Polynomials\+::vector\+\_\+interpolate\+\_\+generator\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Terminal generator. 
+
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1vector__interpolate__generator_abb646b4eebb836f4900ecd55e83718dc_cgraph}
+\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1vector__interpolate__generator_a06a29e0befd57895dfb39d436581feee_cgraph}
 \end{center}
 \end{figure}
-
-
-\doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1vector__interpolate__generator_a9e649a895cfd34636b3a64dc16ea510d}\label{classSymmetric__Polynomials_1_1vector__interpolate__generator_a9e649a895cfd34636b3a64dc16ea510d}} 
-\index{Symmetric\_Polynomials::vector\_interpolate\_generator@{Symmetric\_Polynomials::vector\_interpolate\_generator}!get\_generated@{get\_generated}}
-\index{get\_generated@{get\_generated}!Symmetric\_Polynomials::vector\_interpolate\_generator@{Symmetric\_Polynomials::vector\_interpolate\_generator}}
-\doxysubsubsection{\texorpdfstring{get\_generated()}{get\_generated()}}
-{\footnotesize\ttfamily std\+::vector$<$int$>$ Symmetric\+\_\+\+Polynomials\+::vector\+\_\+interpolate\+\_\+generator\+::get\+\_\+generated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1vector__interpolate__generator_a1d15d2426618c2237bbecdf408b358ab}\label{classSymmetric__Polynomials_1_1vector__interpolate__generator_a1d15d2426618c2237bbecdf408b358ab}} 
+\index{Symmetric\_Polynomials::vector\_interpolate\_generator@{Symmetric\_Polynomials::vector\_interpolate\_generator}!size@{size}}
+\index{size@{size}!Symmetric\_Polynomials::vector\_interpolate\_generator@{Symmetric\_Polynomials::vector\_interpolate\_generator}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily long Symmetric\+\_\+\+Polynomials\+::vector\+\_\+interpolate\+\_\+generator\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Returns the generated vector. 
+Returns upper bound on the amount of generated elements. 
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1vector__interpolate__generator_a9e649a895cfd34636b3a64dc16ea510d_icgraph}
+\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1vector__interpolate__generator_a1d15d2426618c2237bbecdf408b358ab_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1vector__interpolate__generator_ae9ae4d9919dd789870112dde1d48b01e}\label{classSymmetric__Polynomials_1_1vector__interpolate__generator_ae9ae4d9919dd789870112dde1d48b01e}} 
-\index{Symmetric\_Polynomials::vector\_interpolate\_generator@{Symmetric\_Polynomials::vector\_interpolate\_generator}!initialize@{initialize}}
-\index{initialize@{initialize}!Symmetric\_Polynomials::vector\_interpolate\_generator@{Symmetric\_Polynomials::vector\_interpolate\_generator}}
-\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
-{\footnotesize\ttfamily void Symmetric\+\_\+\+Polynomials\+::vector\+\_\+interpolate\+\_\+generator\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Initialize generator. 
-
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1vector__interpolate__generator_ae9ae4d9919dd789870112dde1d48b01e_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1vector__interpolate__generator_a7b0621b44a9b198297030072be712e1f}\label{classSymmetric__Polynomials_1_1vector__interpolate__generator_a7b0621b44a9b198297030072be712e1f}} 
-\index{Symmetric\_Polynomials::vector\_interpolate\_generator@{Symmetric\_Polynomials::vector\_interpolate\_generator}!keep\_going@{keep\_going}}
-\index{keep\_going@{keep\_going}!Symmetric\_Polynomials::vector\_interpolate\_generator@{Symmetric\_Polynomials::vector\_interpolate\_generator}}
-\doxysubsubsection{\texorpdfstring{keep\_going()}{keep\_going()}}
-{\footnotesize\ttfamily bool Symmetric\+\_\+\+Polynomials\+::vector\+\_\+interpolate\+\_\+generator\+::keep\+\_\+going (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-False if all vectors have been generated. 
-
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1vector__interpolate__generator_a7b0621b44a9b198297030072be712e1f_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1vector__interpolate__generator_a7d58ee4c9e85a055f81d63203c9e2c5a}\label{classSymmetric__Polynomials_1_1vector__interpolate__generator_a7d58ee4c9e85a055f81d63203c9e2c5a}} 
-\index{Symmetric\_Polynomials::vector\_interpolate\_generator@{Symmetric\_Polynomials::vector\_interpolate\_generator}!policy\_satisfied@{policy\_satisfied}}
-\index{policy\_satisfied@{policy\_satisfied}!Symmetric\_Polynomials::vector\_interpolate\_generator@{Symmetric\_Polynomials::vector\_interpolate\_generator}}
-\doxysubsubsection{\texorpdfstring{policy\_satisfied()}{policy\_satisfied()}}
-{\footnotesize\ttfamily bool Symmetric\+\_\+\+Polynomials\+::vector\+\_\+interpolate\+\_\+generator\+::policy\+\_\+satisfied (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Checks if policy is satisfied. 
-
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1vector__interpolate__generator_a7d58ee4c9e85a055f81d63203c9e2c5a_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1vector__interpolate__generator_ac57e2cd293efe2e222a2c8c9bfec2109}\label{classSymmetric__Polynomials_1_1vector__interpolate__generator_ac57e2cd293efe2e222a2c8c9bfec2109}} 
-\index{Symmetric\_Polynomials::vector\_interpolate\_generator@{Symmetric\_Polynomials::vector\_interpolate\_generator}!update@{update}}
-\index{update@{update}!Symmetric\_Polynomials::vector\_interpolate\_generator@{Symmetric\_Polynomials::vector\_interpolate\_generator}}
-\doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily void Symmetric\+\_\+\+Polynomials\+::vector\+\_\+interpolate\+\_\+generator\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Generates new vector. 
-
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1vector__interpolate__generator_ac57e2cd293efe2e222a2c8c9bfec2109_icgraph}
-\end{center}
-\end{figure}
-
-
-\doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1vector__interpolate__generator_aefd3ae38c85f6baef04e4346d40166d4}\label{classSymmetric__Polynomials_1_1vector__interpolate__generator_aefd3ae38c85f6baef04e4346d40166d4}} 
-\index{Symmetric\_Polynomials::vector\_interpolate\_generator@{Symmetric\_Polynomials::vector\_interpolate\_generator}!total@{total}}
-\index{total@{total}!Symmetric\_Polynomials::vector\_interpolate\_generator@{Symmetric\_Polynomials::vector\_interpolate\_generator}}
-\doxysubsubsection{\texorpdfstring{total}{total}}
-{\footnotesize\ttfamily long Symmetric\+\_\+\+Polynomials\+::vector\+\_\+interpolate\+\_\+generator\+::total}
-
-
-
-The total number of vectors. 
-
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

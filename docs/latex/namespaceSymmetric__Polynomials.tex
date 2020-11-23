@@ -13,16 +13,20 @@ The namespace which contains every method and class in the library.
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
+class \mbox{\hyperlink{classSymmetric__Polynomials_1_1combinations__generator}{combinations\+\_\+generator}}
+\begin{DoxyCompactList}\small\item\em Generates all combinations on a number of letters making a number of choices. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1decomposition__elementary__symmetric}{decomposition\+\_\+elementary\+\_\+symmetric}}
 \begin{DoxyCompactList}\small\item\em Class for writing a symmetric polynomial as a polynomial on the elementary symmetric polynomials (a \char`\"{}decomposition\char`\"{}) \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1decomposition__half__idempotent}{decomposition\+\_\+half\+\_\+idempotent}}
 \begin{DoxyCompactList}\small\item\em Class for writing every element in the fixed points of \$\$R=\textbackslash{}mathbb Q\mbox{[}x\+\_\+1,...,x\+\_\+n,y\+\_\+1,...,y\+\_\+n\mbox{]}/(y\+\_\+i$^\wedge$2=y\+\_\+i)\$\$ as a polynomial on the generators Idem, Chern and Twisted\+Chern (a \char`\"{}decomposition\char`\"{}) \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1degree__comparator}{degree\+\_\+comparator}}
-\begin{DoxyCompactList}\small\item\em The comparator that checks if the degree of a given powers vector is equal to a desired degree. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The comparator that checks if the degree of a given exponent vector is equal to a desired degree. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classSymmetric__Polynomials_1_1degree__comparator__relations}{degree\+\_\+comparator\+\_\+relations}}
-\begin{DoxyCompactList}\small\item\em The comparator that checks if the degree of a given powers vector is equal to a desired degree, and further disqualifies a powers vector if it contains a relation. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The comparator that checks if the degree of a given exponent vector is equal to a desired degree, and further disqualifies a exponent vector if it contains a relation. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classSymmetric__Polynomials_1_1elementary__symmetric}{elementary\+\_\+symmetric}}
 \begin{DoxyCompactList}\small\item\em Class of elementary symmetric polynomials; no relations. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classSymmetric__Polynomials_1_1generating__const__iterator}{generating\+\_\+const\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em Prototype for an iterator that generates elements such as interpolating vectors, permutations, combinations and so on. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators}{half\+\_\+idempotent\+\_\+generators}}
 \begin{DoxyCompactList}\small\item\em The class containing the generators for the fixed points of \$\$R=\textbackslash{}mathbb Q\mbox{[}x\+\_\+1,...,x\+\_\+n,y\+\_\+1,...,y\+\_\+n\mbox{]}/(y\+\_\+i$^\wedge$2=y\+\_\+i)\$\$ under the $\Sigma_n$ permutation action. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1halfidempotent}{halfidempotent}}
@@ -31,8 +35,6 @@ struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1hasher}{hasher}}
 \begin{DoxyCompactList}\small\item\em Hashes all vectors between two vectors min and max into a long integer. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}
 \begin{DoxyCompactList}\small\item\em Class of monomials in multiple variables with relations. \end{DoxyCompactList}\item 
-struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1monomial__basis__generator}{monomial\+\_\+basis\+\_\+generator}}
-\begin{DoxyCompactList}\small\item\em Generates a basis of monomials in given number of variables and degree. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1monomial__compare}{monomial\+\_\+compare}}
 \begin{DoxyCompactList}\small\item\em Comparator for monomials based on $<$. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1norelations}{norelations}}
@@ -46,7 +48,7 @@ struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}}
 struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1relations__base}{relations\+\_\+base}}
 \begin{DoxyCompactList}\small\item\em Base class for all relations. Inherit from it and specialize static methods to get a functioning relations class. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classSymmetric__Polynomials_1_1vector__interpolate__generator}{vector\+\_\+interpolate\+\_\+generator}}
-\begin{DoxyCompactList}\small\item\em Generates all vectors between a given min and max vector, and satisfying a given policy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Generates all vectors interpolating between a given min and max vector (with the same length), and satisfying a given policy. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -73,26 +75,33 @@ std\+::vector$<$ int $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a0a358
 std\+::ostream \& \mbox{\hyperlink{namespaceSymmetric__Polynomials_ac41ac0cc03bf5ae13fe5e661200ad134}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{rational}} \&a)
 \begin{DoxyCompactList}\small\item\em Prints rational number. \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_aa594e9902e2709cb0ba760b14577b7ee}{vector\+\_\+interpolate}} (const std\+::vector$<$ int $>$ \&min, const std\+::vector$<$ int $>$ \&max, const std\+::function$<$ char(const std\+::vector$<$ int $>$ \&)$>$ \&policy=\mbox{\hyperlink{namespaceSymmetric__Polynomials_1_1policy_ac9a171c5b949f5d236b4502d73f6d2f9}{policy\+::always\+\_\+true}}$<$ std\+::vector$<$ int $>$$>$)
-\begin{DoxyCompactList}\small\item\em Returns all vectors between min, max and satisfying a given policy. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Returns all vectors interpolating between min, max and satisfying a given policy. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ }\\std\+::vector$<$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a591a8f1544a9eb3c4c8113d4e55df622}{monomial\+\_\+basis}} (int variables, int degree)
 \begin{DoxyCompactList}\small\item\em Returns the monomial basis in given number of variables and degree. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename scalar\+\_\+t $>$ }\\std\+::ostream \& \mbox{\hyperlink{namespaceSymmetric__Polynomials_a883bc8a69d911cdc3692dff4297d17e2}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{structSymmetric__Polynomials_1_1decomposition__half__idempotent}{decomposition\+\_\+half\+\_\+idempotent}}$<$ scalar\+\_\+t $>$ \&dec)
 \begin{DoxyCompactList}\small\item\em Prints polynomial. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename scalar\+\_\+t $>$ }\\void \mbox{\hyperlink{namespaceSymmetric__Polynomials_a36c74a891ce92c19aa88f4752fe9d420}{print\+\_\+half\+\_\+idempotent\+\_\+relations}} (int n)
+{\footnotesize template$<$typename scalar\+\_\+t $>$ }\\void \mbox{\hyperlink{namespaceSymmetric__Polynomials_abc624e6ecd4b5ce3c02f150183362963}{print\+\_\+half\+\_\+idempotent\+\_\+relations}} (int n, bool verify=0)
 \begin{DoxyCompactList}\small\item\em Prints all relations in the description of the fixed points of R=Q\mbox{[}x\+\_\+1,...,x\+\_\+n,y\+\_\+1,...,y\+\_\+n\mbox{]}/(y\+\_\+i$^\wedge$2=y\+\_\+i) using Idem, Chern and Twisted\+Chern. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{namespaceSymmetric__Polynomials_ad7118931ae8edf4baa74c12a3324251a}{factorial}} (int n)
-\begin{DoxyCompactList}\small\item\em Returns n! \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{namespaceSymmetric__Polynomials_a586f61dc2535175eb8cccd421f5c35af}{binomial}} (int top, int bot)
+\begin{DoxyCompactList}\small\item\em Returns \$\textbackslash{}binom\{n,m\}\$. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{namespaceSymmetric__Polynomials_a7fbdda5f0c66692f5c4bd4a0f7a319de}{factorial}} (int n)
+\begin{DoxyCompactList}\small\item\em Returns \$n!\$. \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a7a6bae3e00fa2f0f0e1ed0dd27fbab09}{all\+\_\+permutations}} (char n)
 \begin{DoxyCompactList}\small\item\em Returns vector of all permutations on n letters. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ }\\std\+::vector$<$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_aca3363cff5919c3f416bd56d80f6ca72}{orbit}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&a, const std\+::vector$<$ std\+::vector$<$ char $>$$>$ \&perms)
+std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_ac6658e3fb7f963aa3b2c065682850540}{all\+\_\+permutations}} (char n, char m)
+\begin{DoxyCompactList}\small\item\em Returns vector of all combinations on n letters choosing m many ~\newline
+ \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t , typename perm\+\_\+t $>$ }\\std\+::vector$<$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a675d14e03452c17f67177947b5dfa927}{orbit}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&a, const perm\+\_\+t \&perms)
 \begin{DoxyCompactList}\small\item\em Computes the orbit of a monomial under a set of permutations. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ }\\\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a356d6c1b12803e4b0e2c4d1a1d89bb23}{max\+\_\+in\+\_\+orbit}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&a, const std\+::vector$<$ std\+::vector$<$ char $>$$>$ \&perms)
+{\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t , typename perm\+\_\+t $>$ }\\std\+::vector$<$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a9352cb1a7f217f13c7038d2f182db347}{orbit}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&a, const perm\+\_\+t \&perms, int number\+\_\+of\+\_\+orbits)
+\begin{DoxyCompactList}\small\item\em Computes the orbit of a monomial under a set of permutations. The number\+\_\+of\+\_\+orbits is provided as an argument to limit memory usage. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t , typename perm\+\_\+t $>$ }\\\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a472a68b7c1d92e6a99b6a563222d170e}{max\+\_\+in\+\_\+orbit}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&a, const perm\+\_\+t \&perms)
 \begin{DoxyCompactList}\small\item\em Returns the greatest monomial in an orbit of permutations. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ }\\std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ $>$ $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_ac9f5d227958f2b51e77cb2fe178ebef6}{all\+\_\+monomial\+\_\+orbits}} (int variables, int degree)
 \begin{DoxyCompactList}\small\item\em Returns a vector of all monomials in given variables and degree organized in orbits under the symmetric group action. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename scalar\+\_\+t $>$ }\\std\+::ostream \& \mbox{\hyperlink{namespaceSymmetric__Polynomials_a58c3ea2d58a1501fc02442da2ae837a4}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{structSymmetric__Polynomials_1_1decomposition__elementary__symmetric}{decomposition\+\_\+elementary\+\_\+symmetric}}$<$ scalar\+\_\+t $>$ \&a)
 \begin{DoxyCompactList}\small\item\em Prints decomposition into elementary symmetric polynomials. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{namespaceSymmetric__Polynomials_aaeb18971bd95fc1f7751c3b1420741e5}{general\+\_\+compute\+\_\+degree}} (const std\+::vector$<$ int $>$ \&powers, const std\+::vector$<$ int $>$ \&dimensions)
+int \mbox{\hyperlink{namespaceSymmetric__Polynomials_aab354108e2e7ef8e3cada8a4b1716409}{general\+\_\+compute\+\_\+degree}} (const std\+::vector$<$ int $>$ \&exponent, const std\+::vector$<$ int $>$ \&dimensions)
 \item 
 {\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ }\\\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a486dcdfce4585685ded1f60ab638f113}{operator$\ast$}} (const scalar\+\_\+t \&a, const \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&b)
 \begin{DoxyCompactList}\small\item\em Product of scalar and monomial. \end{DoxyCompactList}\item 
@@ -141,7 +150,7 @@ Here is the call graph for this function\+:\nopagebreak
 \mbox{\Hypertarget{namespaceSymmetric__Polynomials_a7a6bae3e00fa2f0f0e1ed0dd27fbab09}\label{namespaceSymmetric__Polynomials_a7a6bae3e00fa2f0f0e1ed0dd27fbab09}} 
 \index{Symmetric\_Polynomials@{Symmetric\_Polynomials}!all\_permutations@{all\_permutations}}
 \index{all\_permutations@{all\_permutations}!Symmetric\_Polynomials@{Symmetric\_Polynomials}}
-\doxysubsubsection{\texorpdfstring{all\_permutations()}{all\_permutations()}}
+\doxysubsubsection{\texorpdfstring{all\_permutations()}{all\_permutations()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$char$>$ $>$ Symmetric\+\_\+\+Polynomials\+::all\+\_\+permutations (\begin{DoxyParamCaption}\item[{char}]{n }\end{DoxyParamCaption})}
 
 
@@ -155,11 +164,22 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{namespaceSymmetric__Polynomials_a7a6bae3e00fa2f0f0e1ed0dd27fbab09_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+\mbox{\Hypertarget{namespaceSymmetric__Polynomials_ac6658e3fb7f963aa3b2c065682850540}\label{namespaceSymmetric__Polynomials_ac6658e3fb7f963aa3b2c065682850540}} 
+\index{Symmetric\_Polynomials@{Symmetric\_Polynomials}!all\_permutations@{all\_permutations}}
+\index{all\_permutations@{all\_permutations}!Symmetric\_Polynomials@{Symmetric\_Polynomials}}
+\doxysubsubsection{\texorpdfstring{all\_permutations()}{all\_permutations()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$char$>$ $>$ Symmetric\+\_\+\+Polynomials\+::all\+\_\+permutations (\begin{DoxyParamCaption}\item[{char}]{n,  }\item[{char}]{m }\end{DoxyParamCaption})}
+
+
+
+Returns vector of all combinations on n letters choosing m many ~\newline
+ 
+
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespaceSymmetric__Polynomials_a7a6bae3e00fa2f0f0e1ed0dd27fbab09_icgraph}
+\includegraphics[width=350pt]{namespaceSymmetric__Polynomials_ac6658e3fb7f963aa3b2c065682850540_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{namespaceSymmetric__Polynomials_ae133a77a509d22d02013e3131c48e49a}\label{namespaceSymmetric__Polynomials_ae133a77a509d22d02013e3131c48e49a}} 
@@ -190,7 +210,8 @@ void Symmetric\+\_\+\+Polynomials\+::apply\+\_\+permutation (\begin{DoxyParamCap
 
 Applies permutation perm on the target from starting point begin. 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -214,41 +235,59 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{namespaceSymmetric__Polynomials_a5de38947e6bb01cc8fed77e35d009a67_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{namespaceSymmetric__Polynomials_a5de38947e6bb01cc8fed77e35d009a67_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{namespaceSymmetric__Polynomials_ad7118931ae8edf4baa74c12a3324251a}\label{namespaceSymmetric__Polynomials_ad7118931ae8edf4baa74c12a3324251a}} 
+\mbox{\Hypertarget{namespaceSymmetric__Polynomials_a586f61dc2535175eb8cccd421f5c35af}\label{namespaceSymmetric__Polynomials_a586f61dc2535175eb8cccd421f5c35af}} 
+\index{Symmetric\_Polynomials@{Symmetric\_Polynomials}!binomial@{binomial}}
+\index{binomial@{binomial}!Symmetric\_Polynomials@{Symmetric\_Polynomials}}
+\doxysubsubsection{\texorpdfstring{binomial()}{binomial()}}
+{\footnotesize\ttfamily long Symmetric\+\_\+\+Polynomials\+::binomial (\begin{DoxyParamCaption}\item[{int}]{top,  }\item[{int}]{bot }\end{DoxyParamCaption})}
+
+
+
+Returns \$\textbackslash{}binom\{n,m\}\$. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceSymmetric__Polynomials_a586f61dc2535175eb8cccd421f5c35af_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceSymmetric__Polynomials_a7fbdda5f0c66692f5c4bd4a0f7a319de}\label{namespaceSymmetric__Polynomials_a7fbdda5f0c66692f5c4bd4a0f7a319de}} 
 \index{Symmetric\_Polynomials@{Symmetric\_Polynomials}!factorial@{factorial}}
 \index{factorial@{factorial}!Symmetric\_Polynomials@{Symmetric\_Polynomials}}
 \doxysubsubsection{\texorpdfstring{factorial()}{factorial()}}
-{\footnotesize\ttfamily int Symmetric\+\_\+\+Polynomials\+::factorial (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily long Symmetric\+\_\+\+Polynomials\+::factorial (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
 
 
 
-Returns n! 
+Returns \$n!\$. 
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespaceSymmetric__Polynomials_ad7118931ae8edf4baa74c12a3324251a_icgraph}
+\includegraphics[width=350pt]{namespaceSymmetric__Polynomials_a7fbdda5f0c66692f5c4bd4a0f7a319de_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{namespaceSymmetric__Polynomials_aaeb18971bd95fc1f7751c3b1420741e5}\label{namespaceSymmetric__Polynomials_aaeb18971bd95fc1f7751c3b1420741e5}} 
+\mbox{\Hypertarget{namespaceSymmetric__Polynomials_aab354108e2e7ef8e3cada8a4b1716409}\label{namespaceSymmetric__Polynomials_aab354108e2e7ef8e3cada8a4b1716409}} 
 \index{Symmetric\_Polynomials@{Symmetric\_Polynomials}!general\_compute\_degree@{general\_compute\_degree}}
 \index{general\_compute\_degree@{general\_compute\_degree}!Symmetric\_Polynomials@{Symmetric\_Polynomials}}
 \doxysubsubsection{\texorpdfstring{general\_compute\_degree()}{general\_compute\_degree()}}
-{\footnotesize\ttfamily int Symmetric\+\_\+\+Polynomials\+::general\+\_\+compute\+\_\+degree (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{powers,  }\item[{const std\+::vector$<$ int $>$ \&}]{dimensions }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int Symmetric\+\_\+\+Polynomials\+::general\+\_\+compute\+\_\+degree (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{exponent,  }\item[{const std\+::vector$<$ int $>$ \&}]{dimensions }\end{DoxyParamCaption})}
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespaceSymmetric__Polynomials_aaeb18971bd95fc1f7751c3b1420741e5_icgraph}
+\includegraphics[width=350pt]{namespaceSymmetric__Polynomials_aab354108e2e7ef8e3cada8a4b1716409_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{namespaceSymmetric__Polynomials_a1b5821494b7fd160206add93d4d73a42}\label{namespaceSymmetric__Polynomials_a1b5821494b7fd160206add93d4d73a42}} 
@@ -269,12 +308,12 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{namespaceSymmetric__Polynomials_a1b5821494b7fd160206add93d4d73a42_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{namespaceSymmetric__Polynomials_a356d6c1b12803e4b0e2c4d1a1d89bb23}\label{namespaceSymmetric__Polynomials_a356d6c1b12803e4b0e2c4d1a1d89bb23}} 
+\mbox{\Hypertarget{namespaceSymmetric__Polynomials_a472a68b7c1d92e6a99b6a563222d170e}\label{namespaceSymmetric__Polynomials_a472a68b7c1d92e6a99b6a563222d170e}} 
 \index{Symmetric\_Polynomials@{Symmetric\_Polynomials}!max\_in\_orbit@{max\_in\_orbit}}
 \index{max\_in\_orbit@{max\_in\_orbit}!Symmetric\_Polynomials@{Symmetric\_Polynomials}}
 \doxysubsubsection{\texorpdfstring{max\_in\_orbit()}{max\_in\_orbit()}}
-{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$scalar\+\_\+t, rel\+\_\+t$>$ Symmetric\+\_\+\+Polynomials\+::max\+\_\+in\+\_\+orbit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&}]{a,  }\item[{const std\+::vector$<$ std\+::vector$<$ char $>$$>$ \&}]{perms }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t , typename perm\+\_\+t $>$ \\
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$scalar\+\_\+t, rel\+\_\+t$>$ Symmetric\+\_\+\+Polynomials\+::max\+\_\+in\+\_\+orbit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&}]{a,  }\item[{const perm\+\_\+t \&}]{perms }\end{DoxyParamCaption})}
 
 
 
@@ -284,7 +323,7 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespaceSymmetric__Polynomials_a356d6c1b12803e4b0e2c4d1a1d89bb23_cgraph}
+\includegraphics[width=350pt]{namespaceSymmetric__Polynomials_a472a68b7c1d92e6a99b6a563222d170e_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{namespaceSymmetric__Polynomials_a591a8f1544a9eb3c4c8113d4e55df622}\label{namespaceSymmetric__Polynomials_a591a8f1544a9eb3c4c8113d4e55df622}} 
@@ -532,29 +571,40 @@ bool Symmetric\+\_\+\+Polynomials\+::operator$<$= (\begin{DoxyParamCaption}\item
 
 For two vectors a,b, a$<$=b iff a\mbox{[}i\mbox{]}$<$=b\mbox{[}i\mbox{]} for all i. 
 
-\mbox{\Hypertarget{namespaceSymmetric__Polynomials_aca3363cff5919c3f416bd56d80f6ca72}\label{namespaceSymmetric__Polynomials_aca3363cff5919c3f416bd56d80f6ca72}} 
+\mbox{\Hypertarget{namespaceSymmetric__Polynomials_a675d14e03452c17f67177947b5dfa927}\label{namespaceSymmetric__Polynomials_a675d14e03452c17f67177947b5dfa927}} 
 \index{Symmetric\_Polynomials@{Symmetric\_Polynomials}!orbit@{orbit}}
 \index{orbit@{orbit}!Symmetric\_Polynomials@{Symmetric\_Polynomials}}
-\doxysubsubsection{\texorpdfstring{orbit()}{orbit()}}
-{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
-std\+::vector$<$\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$scalar\+\_\+t, rel\+\_\+t$>$ $>$ Symmetric\+\_\+\+Polynomials\+::orbit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&}]{a,  }\item[{const std\+::vector$<$ std\+::vector$<$ char $>$$>$ \&}]{perms }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{orbit()}{orbit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t , typename perm\+\_\+t $>$ \\
+std\+::vector$<$\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$scalar\+\_\+t, rel\+\_\+t$>$ $>$ Symmetric\+\_\+\+Polynomials\+::orbit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&}]{a,  }\item[{const perm\+\_\+t \&}]{perms }\end{DoxyParamCaption})}
 
 
 
 Computes the orbit of a monomial under a set of permutations. 
 
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{namespaceSymmetric__Polynomials_aca3363cff5919c3f416bd56d80f6ca72_cgraph}
-\end{center}
-\end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespaceSymmetric__Polynomials_aca3363cff5919c3f416bd56d80f6ca72_icgraph}
+\includegraphics[width=350pt]{namespaceSymmetric__Polynomials_a675d14e03452c17f67177947b5dfa927_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceSymmetric__Polynomials_a9352cb1a7f217f13c7038d2f182db347}\label{namespaceSymmetric__Polynomials_a9352cb1a7f217f13c7038d2f182db347}} 
+\index{Symmetric\_Polynomials@{Symmetric\_Polynomials}!orbit@{orbit}}
+\index{orbit@{orbit}!Symmetric\_Polynomials@{Symmetric\_Polynomials}}
+\doxysubsubsection{\texorpdfstring{orbit()}{orbit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t , typename perm\+\_\+t $>$ \\
+std\+::vector$<$\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$scalar\+\_\+t, rel\+\_\+t$>$ $>$ Symmetric\+\_\+\+Polynomials\+::orbit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&}]{a,  }\item[{const perm\+\_\+t \&}]{perms,  }\item[{int}]{number\+\_\+of\+\_\+orbits }\end{DoxyParamCaption})}
+
+
+
+Computes the orbit of a monomial under a set of permutations. The number\+\_\+of\+\_\+orbits is provided as an argument to limit memory usage. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceSymmetric__Polynomials_a9352cb1a7f217f13c7038d2f182db347_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{namespaceSymmetric__Polynomials_abdbc4a51aab1bb201ebfedcd26896cb4}\label{namespaceSymmetric__Polynomials_abdbc4a51aab1bb201ebfedcd26896cb4}} 
@@ -600,12 +650,12 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{namespaceSymmetric__Polynomials_a1d476a58c571385ffab409a59c683b98_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{namespaceSymmetric__Polynomials_a36c74a891ce92c19aa88f4752fe9d420}\label{namespaceSymmetric__Polynomials_a36c74a891ce92c19aa88f4752fe9d420}} 
+\mbox{\Hypertarget{namespaceSymmetric__Polynomials_abc624e6ecd4b5ce3c02f150183362963}\label{namespaceSymmetric__Polynomials_abc624e6ecd4b5ce3c02f150183362963}} 
 \index{Symmetric\_Polynomials@{Symmetric\_Polynomials}!print\_half\_idempotent\_relations@{print\_half\_idempotent\_relations}}
 \index{print\_half\_idempotent\_relations@{print\_half\_idempotent\_relations}!Symmetric\_Polynomials@{Symmetric\_Polynomials}}
 \doxysubsubsection{\texorpdfstring{print\_half\_idempotent\_relations()}{print\_half\_idempotent\_relations()}}
 {\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
-void Symmetric\+\_\+\+Polynomials\+::print\+\_\+half\+\_\+idempotent\+\_\+relations (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+void Symmetric\+\_\+\+Polynomials\+::print\+\_\+half\+\_\+idempotent\+\_\+relations (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{bool}]{verify = {\ttfamily 0} }\end{DoxyParamCaption})}
 
 
 
@@ -615,7 +665,7 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespaceSymmetric__Polynomials_a36c74a891ce92c19aa88f4752fe9d420_cgraph}
+\includegraphics[width=350pt]{namespaceSymmetric__Polynomials_abc624e6ecd4b5ce3c02f150183362963_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{namespaceSymmetric__Polynomials_abc4a90741eac710cd52a41a3ef03b050}\label{namespaceSymmetric__Polynomials_abc4a90741eac710cd52a41a3ef03b050}} 
@@ -640,7 +690,8 @@ S Symmetric\+\_\+\+Polynomials\+::sum (\begin{DoxyParamCaption}\item[{const std\
 
 Returns a\mbox{[}0\mbox{]}+...+a\mbox{[}end\mbox{]}. 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -655,7 +706,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Returns all vectors between min, max and satisfying a given policy. 
+Returns all vectors interpolating between min, max and satisfying a given policy. 
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]

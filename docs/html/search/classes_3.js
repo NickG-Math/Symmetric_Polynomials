@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['monomial_115',['monomial',['../classSymmetric__Polynomials_1_1monomial.html',1,'Symmetric_Polynomials']]],
-  ['monomial_3c_20scalar_5ft_2c_20symmetric_5fpolynomials_3a_3ahalfidempotent_20_3e_116',['monomial&lt; scalar_t, Symmetric_Polynomials::halfidempotent &gt;',['../classSymmetric__Polynomials_1_1monomial.html',1,'Symmetric_Polynomials']]],
-  ['monomial_5fbasis_5fgenerator_117',['monomial_basis_generator',['../structSymmetric__Polynomials_1_1monomial__basis__generator.html',1,'Symmetric_Polynomials']]],
-  ['monomial_5fcompare_118',['monomial_compare',['../structSymmetric__Polynomials_1_1monomial__compare.html',1,'Symmetric_Polynomials']]]
+  ['generating_5fconst_5fiterator_121',['generating_const_iterator',['../classSymmetric__Polynomials_1_1generating__const__iterator.html',1,'Symmetric_Polynomials']]],
+  ['generating_5fconst_5fiterator_3c_20combinations_5fgenerator_3a_3aconst_5fiterator_2c_20std_3a_3avector_3c_20char_20_3e_20_3e_122',['generating_const_iterator&lt; combinations_generator::const_iterator, std::vector&lt; char &gt; &gt;',['../classSymmetric__Polynomials_1_1generating__const__iterator.html',1,'Symmetric_Polynomials']]],
+  ['generating_5fconst_5fiterator_3c_20permutations_5fgenerator_3a_3aconst_5fiterator_2c_20std_3a_3avector_3c_20char_20_3e_20_3e_123',['generating_const_iterator&lt; permutations_generator::const_iterator, std::vector&lt; char &gt; &gt;',['../classSymmetric__Polynomials_1_1generating__const__iterator.html',1,'Symmetric_Polynomials']]],
+  ['generating_5fconst_5fiterator_3c_20vector_5finterpolate_5fgenerator_3a_3aconst_5fiterator_2c_20std_3a_3avector_3c_20int_20_3e_20_3e_124',['generating_const_iterator&lt; vector_interpolate_generator::const_iterator, std::vector&lt; int &gt; &gt;',['../classSymmetric__Polynomials_1_1generating__const__iterator.html',1,'Symmetric_Polynomials']]]
 ];

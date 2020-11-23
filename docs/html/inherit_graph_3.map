@@ -1,4 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classSymmetric__Polynomials_1_1half__idempotent__generators.html" title="The class containing the generators for the fixed points of $$R=\mathbb Q[x_1,...,..." alt="" coords="5,5,220,61"/>
-<area shape="rect" id="node2" href="$structSymmetric__Polynomials_1_1decomposition__half__idempotent.html" title="Class for writing every element in the fixed points of $$R=\mathbb Q[x_1,...,x_n,y_1,..." alt="" coords="268,5,453,61"/>
+<area shape="rect" id="node1" href="$classSymmetric__Polynomials_1_1elementary__symmetric.html" title="Class of elementary symmetric polynomials; no relations." alt="" coords="5,5,188,61"/>
+<area shape="rect" id="node2" href="$structSymmetric__Polynomials_1_1decomposition__elementary__symmetric.html" title="Class for writing a symmetric polynomial as a polynomial on the elementary symmetric polynomials (a &quot;..." alt="" coords="236,5,444,61"/>
 </map>

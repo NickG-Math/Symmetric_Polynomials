@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['permutations_218',['permutations',['../classSymmetric__Polynomials_1_1half__idempotent__generators.html#ab3b3b4bbe87f85e2d755b40c1153993d',1,'Symmetric_Polynomials::half_idempotent_generators']]],
-  ['powers_219',['powers',['../classSymmetric__Polynomials_1_1monomial.html#ac9998d5182ed08a3a383e5f36d5a4775',1,'Symmetric_Polynomials::monomial']]],
-  ['product_5fof_5fmonomials_5fis_5fmonomial_220',['product_of_monomials_is_monomial',['../structSymmetric__Polynomials_1_1relations__base.html#ae6ef9fc347e7e5e19da620af0f0ca1f2',1,'Symmetric_Polynomials::relations_base::product_of_monomials_is_monomial()'],['../structSymmetric__Polynomials_1_1norelations.html#a8e99e0af9f0b212787717f3104554607',1,'Symmetric_Polynomials::norelations::product_of_monomials_is_monomial()'],['../structSymmetric__Polynomials_1_1halfidempotent.html#a756f62913b9fead41d14e3277ac82310',1,'Symmetric_Polynomials::halfidempotent::product_of_monomials_is_monomial()']]]
+  ['n_231',['n',['../classSymmetric__Polynomials_1_1half__idempotent__generators.html#ac9004a6d7f1c3043b5b1a40afd070996',1,'Symmetric_Polynomials::half_idempotent_generators::n()'],['../classSymmetric__Polynomials_1_1elementary__symmetric.html#a0a03a2914be2c0174827ef6efdd05fda',1,'Symmetric_Polynomials::elementary_symmetric::n()']]],
+  ['number_5fof_5fgenerators_232',['number_of_generators',['../classSymmetric__Polynomials_1_1half__idempotent__generators.html#af6951b07a7d12990b4f5d27319724dec',1,'Symmetric_Polynomials::half_idempotent_generators']]],
+  ['numerator_233',['numerator',['../structSymmetric__Polynomials_1_1rational.html#a8efbdbeca368efbca56f2dcfe41139f2',1,'Symmetric_Polynomials::rational']]]
 ];

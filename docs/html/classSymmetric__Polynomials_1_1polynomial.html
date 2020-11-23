@@ -109,20 +109,25 @@ Inheritance diagram for Symmetric_Polynomials::polynomial&lt; scalar_t, rel_t &g
 <div class="dyncontent">
 <div class="center"><img src="classSymmetric__Polynomials_1_1polynomial__inherit__graph.png" border="0" usemap="#Symmetric__Polynomials_1_1polynomial_3_01scalar__t_00_01rel__t_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="Symmetric__Polynomials_1_1polynomial_3_01scalar__t_00_01rel__t_01_4_inherit__map" id="Symmetric__Polynomials_1_1polynomial_3_01scalar__t_00_01rel__t_01_4_inherit__map">
-<area shape="rect" title="Class of polynomials in multiple variables with relations." alt="" coords="5,61,185,117"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1polynomial.html" title=" " alt="" coords="417,5,617,76"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1polynomial.html" title=" " alt="" coords="417,100,617,171"/>
+<area shape="rect" title="Class of polynomials in multiple variables with relations." alt="" coords="5,107,185,163"/>
+<area shape="rect" href="classSymmetric__Polynomials_1_1polynomial.html" title=" " alt="" coords="443,5,643,76"/>
+<area shape="rect" href="classSymmetric__Polynomials_1_1polynomial.html" title=" " alt="" coords="443,100,643,171"/>
+<area shape="rect" href="classSymmetric__Polynomials_1_1polynomial.html" title=" " alt="" coords="443,195,643,265"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac0a6e7d6fdbef8a955f5fd72ee2f2ead"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html#ac0a6e7d6fdbef8a955f5fd72ee2f2ead">condense</a> ()</td></tr>
-<tr class="memdesc:ac0a6e7d6fdbef8a955f5fd72ee2f2ead"><td class="mdescLeft">&#160;</td><td class="mdescRight">Incorporates all monomials with same powers vector into a single monomial by adding coefficients, condensing the polynomial.  <a href="classSymmetric__Polynomials_1_1polynomial.html#ac0a6e7d6fdbef8a955f5fd72ee2f2ead">More...</a><br /></td></tr>
+<tr class="memdesc:ac0a6e7d6fdbef8a955f5fd72ee2f2ead"><td class="mdescLeft">&#160;</td><td class="mdescRight">Incorporates all monomials with same exponent vector into a single monomial by adding coefficients, condensing the polynomial.  <a href="classSymmetric__Polynomials_1_1polynomial.html#ac0a6e7d6fdbef8a955f5fd72ee2f2ead">More...</a><br /></td></tr>
 <tr class="separator:ac0a6e7d6fdbef8a955f5fd72ee2f2ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0df36baf0c00178007ab065b33f1f33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html#ab0df36baf0c00178007ab065b33f1f33">highest_term</a> () const</td></tr>
 <tr class="memdesc:ab0df36baf0c00178007ab065b33f1f33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns highest term monomial in a polynomial.  <a href="classSymmetric__Polynomials_1_1polynomial.html#ab0df36baf0c00178007ab065b33f1f33">More...</a><br /></td></tr>
 <tr class="separator:ab0df36baf0c00178007ab065b33f1f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92fbb313a8e72489e2930ac01d4dda4b"><td class="memTemplParams" colspan="2">template&lt;typename iterator &gt; </td></tr>
+<tr class="memitem:a92fbb313a8e72489e2930ac01d4dda4b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html#a92fbb313a8e72489e2930ac01d4dda4b">polynomial</a> (iterator begin, iterator end, bool dontcondense=0)</td></tr>
+<tr class="memdesc:a92fbb313a8e72489e2930ac01d4dda4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a polynomial given an iterator of monomials, applying relations to variables and reordering as needed. Condensation is performed by default but can be disabled at the user's risk.  <a href="classSymmetric__Polynomials_1_1polynomial.html#a92fbb313a8e72489e2930ac01d4dda4b">More...</a><br /></td></tr>
+<tr class="separator:a92fbb313a8e72489e2930ac01d4dda4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71f3c9e5235f925ccc61b25ab784abbe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html#a71f3c9e5235f925ccc61b25ab784abbe">polynomial</a> (const std::vector&lt; <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt;&gt; &amp;<a class="el" href="classSymmetric__Polynomials_1_1polynomial.html#ab9d8736a84257e51748cefff853c43a4">monos</a>, bool dontcondense=0)</td></tr>
 <tr class="memdesc:a71f3c9e5235f925ccc61b25ab784abbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a polynomial given a vector of monomials, applying relations to variables and reordering as needed. Condensation is performed by default but can be disabled at the user's risk.  <a href="classSymmetric__Polynomials_1_1polynomial.html#a71f3c9e5235f925ccc61b25ab784abbe">More...</a><br /></td></tr>
 <tr class="separator:a71f3c9e5235f925ccc61b25ab784abbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,8 +181,56 @@ class Symmetric_Polynomials::polynomial&lt; scalar_t, rel_t &gt;</h3>
 <p>Class of polynomials in multiple variables with relations. </p>
 <p>A polynomial is just a vector of monomials, ordered in increasing degree The template scalar_t determines the type of the coefficients. The template rel_t determines the relations that the variables x_i satisfy. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a92fbb313a8e72489e2930ac01d4dda4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92fbb313a8e72489e2930ac01d4dda4b">&#9670;&nbsp;</a></span>polynomial() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename scalar_t , typename rel_t &gt; </div>
+<div class="memtemplate">
+template&lt;typename iterator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">Symmetric_Polynomials::polynomial</a>&lt; scalar_t, rel_t &gt;::<a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a> </td>
+          <td>(</td>
+          <td class="paramtype">iterator&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">iterator&#160;</td>
+          <td class="paramname"><em>end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>dontcondense</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a polynomial given an iterator of monomials, applying relations to variables and reordering as needed. Condensation is performed by default but can be disabled at the user's risk. </p>
+
+</div>
+</div>
 <a id="a71f3c9e5235f925ccc61b25ab784abbe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71f3c9e5235f925ccc61b25ab784abbe">&#9670;&nbsp;</a></span>polynomial() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a71f3c9e5235f925ccc61b25ab784abbe">&#9670;&nbsp;</a></span>polynomial() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -217,7 +270,7 @@ template&lt;typename scalar_t , typename rel_t &gt; </div>
 </div>
 </div>
 <a id="a82cab1d2cec4b6a533836a41e3945ff9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82cab1d2cec4b6a533836a41e3945ff9">&#9670;&nbsp;</a></span>polynomial() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a82cab1d2cec4b6a533836a41e3945ff9">&#9670;&nbsp;</a></span>polynomial() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -247,7 +300,7 @@ template&lt;typename scalar_t , typename rel_t &gt; </div>
 </div>
 </div>
 <a id="ae65ae6ff604a638732d872b479844ba5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae65ae6ff604a638732d872b479844ba5">&#9670;&nbsp;</a></span>polynomial() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae65ae6ff604a638732d872b479844ba5">&#9670;&nbsp;</a></span>polynomial() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -301,17 +354,14 @@ template&lt;typename scalar_t , typename rel_t &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Incorporates all monomials with same powers vector into a single monomial by adding coefficients, condensing the polynomial. </p>
+<p>Incorporates all monomials with same exponent vector into a single monomial by adding coefficients, condensing the polynomial. </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSymmetric__Polynomials_1_1polynomial_ac0a6e7d6fdbef8a955f5fd72ee2f2ead_icgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1polynomial_ac0a6e7d6fdbef8a955f5fd72ee2f2ead_icgraph" alt=""/></div>
 <map name="classSymmetric__Polynomials_1_1polynomial_ac0a6e7d6fdbef8a955f5fd72ee2f2ead_icgraph" id="classSymmetric__Polynomials_1_1polynomial_ac0a6e7d6fdbef8a955f5fd72ee2f2ead_icgraph">
-<area shape="rect" title="Incorporates all monomials with same powers vector into a single monomial by adding coefficients,..." alt="" coords="496,97,676,138"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1half__idempotent__generators.html#ae0893a2ba27fd4204989cda7573b95f6" title="Computes a product of a monomial on our generators Idem, Chern, TwistedChern." alt="" coords="233,45,448,101"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1polynomial.html#a71f3c9e5235f925ccc61b25ab784abbe" title="Constructs a polynomial given a vector of monomials, applying relations to variables and reordering a..." alt="" coords="241,126,441,197"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a36c74a891ce92c19aa88f4752fe9d420" title="Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,..." alt="" coords="5,5,185,61"/>
-<area shape="rect" href="structSymmetric__Polynomials_1_1decomposition__half__idempotent.html#a89f4c5f092b93bc2f2079d79fcb966a4" title="Verifies that the decomposition is correct (i.e. expanding the generators in the original variables &#160;..." alt="" coords="5,85,185,141"/>
+<area shape="rect" title="Incorporates all monomials with same exponent vector into a single monomial by adding coefficients,..." alt="" coords="253,20,433,61"/>
+<area shape="rect" href="classSymmetric__Polynomials_1_1polynomial.html#a92fbb313a8e72489e2930ac01d4dda4b" title="Constructs a polynomial given an iterator of monomials, applying relations to variables and reorderin..." alt="" coords="5,5,205,76"/>
 </map>
 </div>
 
@@ -359,14 +409,13 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSymmetric__Polynomials_1_1polynomial_a29a3177f37777cd66cbf9b50402a10c6_icgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1polynomial_a29a3177f37777cd66cbf9b50402a10c6_icgraph" alt=""/></div>
 <map name="classSymmetric__Polynomials_1_1polynomial_a29a3177f37777cd66cbf9b50402a10c6_icgraph" id="classSymmetric__Polynomials_1_1polynomial_a29a3177f37777cd66cbf9b50402a10c6_icgraph">
-<area shape="rect" title="Constructs constant polynomial given coefficient and number of variables." alt="" coords="727,61,907,102"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1elementary__symmetric.html#a8854a3f8bff99fd1ed74db17da6c60da" title="Given vector pwr computes e_1^{pwr_1}*...*e_n^{pwr_n}." alt="" coords="251,5,433,61"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a81926a9c4e5dbb2083c79d181f6145a4" title="Multiplies scalar and polynomial." alt="" coords="499,61,679,102"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a1d476a58c571385ffab409a59c683b98" title="Computes a^p for polynomial a and nonnegative integer p." alt="" coords="499,126,679,167"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1half__idempotent__generators.html#ae0893a2ba27fd4204989cda7573b95f6" title="Computes a product of a monomial on our generators Idem, Chern, TwistedChern." alt="" coords="235,107,449,163"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1half__idempotent__generators.html#a7fbe427130843c6775fe0107825176c3" title="Computes the dominant term of a product of a monomial on our generators Idem, Chern,..." alt="" coords="233,187,451,243"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a36c74a891ce92c19aa88f4752fe9d420" title="Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,..." alt="" coords="5,67,185,123"/>
-<area shape="rect" href="structSymmetric__Polynomials_1_1decomposition__half__idempotent.html#a89f4c5f092b93bc2f2079d79fcb966a4" title="Verifies that the decomposition is correct (i.e. expanding the generators in the original variables &#160;..." alt="" coords="5,147,185,203"/>
+<area shape="rect" title="Constructs constant polynomial given coefficient and number of variables." alt="" coords="952,49,1132,90"/>
+<area shape="rect" href="classSymmetric__Polynomials_1_1elementary__symmetric.html#aecec7e35ac4152f7181d111b4709d2ea" title="Given vector exponent computes e_1^{exponent_1}*...*e_n^{exponent_n}." alt="" coords="477,5,660,61"/>
+<area shape="rect" href="namespaceSymmetric__Polynomials.html#a81926a9c4e5dbb2083c79d181f6145a4" title="Multiplies scalar and polynomial." alt="" coords="724,49,904,90"/>
+<area shape="rect" href="namespaceSymmetric__Polynomials.html#a1d476a58c571385ffab409a59c683b98" title="Computes a^p for polynomial a and nonnegative integer p." alt="" coords="724,114,904,155"/>
+<area shape="rect" href="classSymmetric__Polynomials_1_1half__idempotent__generators.html#a422441d04494efde1ff1cb7cbc86c85c" title="Computes a product of a monomial on our generators Idem, Chern, TwistedChern." alt="" coords="461,107,676,163"/>
+<area shape="rect" href="namespaceSymmetric__Polynomials.html#abc624e6ecd4b5ce3c02f150183362963" title="Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,..." alt="" coords="5,107,185,163"/>
+<area shape="rect" href="structSymmetric__Polynomials_1_1decomposition__half__idempotent.html#a89f4c5f092b93bc2f2079d79fcb966a4" title="Verifies that the decomposition is correct (i.e. expanding the generators in the original variables &#160;..." alt="" coords="233,139,413,195"/>
 </map>
 </div>
 
@@ -398,15 +447,6 @@ template&lt;typename scalar_t , typename rel_t &gt; </div>
 </div><div class="memdoc">
 
 <p>Returns highest term monomial in a polynomial. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSymmetric__Polynomials_1_1polynomial_ab0df36baf0c00178007ab065b33f1f33_icgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1polynomial_ab0df36baf0c00178007ab065b33f1f33_icgraph" alt=""/></div>
-<map name="classSymmetric__Polynomials_1_1polynomial_ab0df36baf0c00178007ab065b33f1f33_icgraph" id="classSymmetric__Polynomials_1_1polynomial_ab0df36baf0c00178007ab065b33f1f33_icgraph">
-<area shape="rect" title="Returns highest term monomial in a polynomial." alt="" coords="271,13,468,54"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1half__idempotent__generators.html#a7fbe427130843c6775fe0107825176c3" title="Computes the dominant term of a product of a monomial on our generators Idem, Chern,..." alt="" coords="5,5,223,61"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -629,10 +669,12 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSymmetric__Polynomials_1_1polynomial_a282b9660df877b4a5ed1ec57a7714634_icgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1polynomial_a282b9660df877b4a5ed1ec57a7714634_icgraph" alt=""/></div>
 <map name="classSymmetric__Polynomials_1_1polynomial_a282b9660df877b4a5ed1ec57a7714634_icgraph" id="classSymmetric__Polynomials_1_1polynomial_a282b9660df877b4a5ed1ec57a7714634_icgraph">
-<area shape="rect" title="Print polynomial using given variable names." alt="" coords="496,43,676,84"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1half__idempotent__generators.html#a1bcf78e321dbff9f8699ec7ef3017ae5" title="Print a polynomial on the generators Idem, Chern and TwistedChern." alt="" coords="233,35,448,91"/>
+<area shape="rect" title="Print polynomial using given variable names." alt="" coords="496,115,676,156"/>
+<area shape="rect" href="classSymmetric__Polynomials_1_1half__idempotent__generators.html#a1bcf78e321dbff9f8699ec7ef3017ae5" title="Print a polynomial on the generators Idem, Chern and TwistedChern." alt="" coords="233,67,448,123"/>
+<area shape="rect" href="structSymmetric__Polynomials_1_1decomposition__elementary__symmetric.html#a64708d98e4dcf8644562aa5cd115d650" title="Print a polynomial on elementary symmetric polynomials." alt="" coords="237,147,445,203"/>
 <area shape="rect" href="namespaceSymmetric__Polynomials.html#a883bc8a69d911cdc3692dff4297d17e2" title="Prints polynomial." alt="" coords="5,5,185,47"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a36c74a891ce92c19aa88f4752fe9d420" title="Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,..." alt="" coords="5,71,185,127"/>
+<area shape="rect" href="namespaceSymmetric__Polynomials.html#abc624e6ecd4b5ce3c02f150183362963" title="Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,..." alt="" coords="5,71,185,127"/>
+<area shape="rect" href="namespaceSymmetric__Polynomials.html#a58c3ea2d58a1501fc02442da2ae837a4" title="Prints decomposition into elementary symmetric polynomials." alt="" coords="5,155,185,196"/>
 </map>
 </div>
 

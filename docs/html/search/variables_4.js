@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['max_5fminus_5fmin_5fplus_5f1_212',['max_minus_min_plus_1',['../structSymmetric__Polynomials_1_1hasher.html#a01a5f86bf62c585b576cd42b37bf9618',1,'Symmetric_Polynomials::hasher']]],
-  ['min_213',['min',['../structSymmetric__Polynomials_1_1hasher.html#aedac19651557eaa7acbd2a8bec663612',1,'Symmetric_Polynomials::hasher']]],
-  ['monos_214',['monos',['../classSymmetric__Polynomials_1_1polynomial.html#ab9d8736a84257e51748cefff853c43a4',1,'Symmetric_Polynomials::polynomial']]]
+  ['idem_227',['Idem',['../classSymmetric__Polynomials_1_1half__idempotent__generators.html#ae204ab87d6aa6e5460aa7e660f8973f6',1,'Symmetric_Polynomials::half_idempotent_generators']]]
 ];

@@ -25,6 +25,12 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \item 
 class \mbox{\hyperlink{classSymmetric__Polynomials_1_1permutations__generator}{Symmetric\+\_\+\+Polynomials\+::permutations\+\_\+generator}}
 \begin{DoxyCompactList}\small\item\em Generates all permutations on a number of letters. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classSymmetric__Polynomials_1_1permutations__generator_1_1const__iterator}{Symmetric\+\_\+\+Polynomials\+::permutations\+\_\+generator\+::const\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em Constant iterator that is used in a ranged for loop to generate the permutations. Non constant version is illegal. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classSymmetric__Polynomials_1_1combinations__generator}{Symmetric\+\_\+\+Polynomials\+::combinations\+\_\+generator}}
+\begin{DoxyCompactList}\small\item\em Generates all combinations on a number of letters making a number of choices. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classSymmetric__Polynomials_1_1combinations__generator_1_1const__iterator}{Symmetric\+\_\+\+Polynomials\+::combinations\+\_\+generator\+::const\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em Constant iterator that is used in a ranged for loop to generate the combinations. Non constant version is illegal. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classSymmetric__Polynomials_1_1elementary__symmetric}{Symmetric\+\_\+\+Polynomials\+::elementary\+\_\+symmetric$<$ scalar\+\_\+t $>$}}
 \begin{DoxyCompactList}\small\item\em Class of elementary symmetric polynomials; no relations. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1decomposition__elementary__symmetric}{Symmetric\+\_\+\+Polynomials\+::decomposition\+\_\+elementary\+\_\+symmetric$<$ scalar\+\_\+t $>$}}
@@ -37,13 +43,20 @@ struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1decomposition__elementar
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{namespaceSymmetric__Polynomials_ad7118931ae8edf4baa74c12a3324251a}{Symmetric\+\_\+\+Polynomials\+::factorial}} (int n)
-\begin{DoxyCompactList}\small\item\em Returns n! \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{namespaceSymmetric__Polynomials_a586f61dc2535175eb8cccd421f5c35af}{Symmetric\+\_\+\+Polynomials\+::binomial}} (int top, int bot)
+\begin{DoxyCompactList}\small\item\em Returns \$\textbackslash{}binom\{n,m\}\$. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{namespaceSymmetric__Polynomials_a7fbdda5f0c66692f5c4bd4a0f7a319de}{Symmetric\+\_\+\+Polynomials\+::factorial}} (int n)
+\begin{DoxyCompactList}\small\item\em Returns \$n!\$. \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a7a6bae3e00fa2f0f0e1ed0dd27fbab09}{Symmetric\+\_\+\+Polynomials\+::all\+\_\+permutations}} (char n)
 \begin{DoxyCompactList}\small\item\em Returns vector of all permutations on n letters. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ }\\std\+::vector$<$ monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_aca3363cff5919c3f416bd56d80f6ca72}{Symmetric\+\_\+\+Polynomials\+::orbit}} (const monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&a, const std\+::vector$<$ std\+::vector$<$ char $>$$>$ \&perms)
+std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_ac6658e3fb7f963aa3b2c065682850540}{Symmetric\+\_\+\+Polynomials\+::all\+\_\+permutations}} (char n, char m)
+\begin{DoxyCompactList}\small\item\em Returns vector of all combinations on n letters choosing m many ~\newline
+ \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t , typename perm\+\_\+t $>$ }\\std\+::vector$<$ monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a675d14e03452c17f67177947b5dfa927}{Symmetric\+\_\+\+Polynomials\+::orbit}} (const monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&a, const perm\+\_\+t \&perms)
 \begin{DoxyCompactList}\small\item\em Computes the orbit of a monomial under a set of permutations. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ }\\monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a356d6c1b12803e4b0e2c4d1a1d89bb23}{Symmetric\+\_\+\+Polynomials\+::max\+\_\+in\+\_\+orbit}} (const monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&a, const std\+::vector$<$ std\+::vector$<$ char $>$$>$ \&perms)
+{\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t , typename perm\+\_\+t $>$ }\\std\+::vector$<$ monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a9352cb1a7f217f13c7038d2f182db347}{Symmetric\+\_\+\+Polynomials\+::orbit}} (const monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&a, const perm\+\_\+t \&perms, int number\+\_\+of\+\_\+orbits)
+\begin{DoxyCompactList}\small\item\em Computes the orbit of a monomial under a set of permutations. The number\+\_\+of\+\_\+orbits is provided as an argument to limit memory usage. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t , typename perm\+\_\+t $>$ }\\monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a472a68b7c1d92e6a99b6a563222d170e}{Symmetric\+\_\+\+Polynomials\+::max\+\_\+in\+\_\+orbit}} (const monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&a, const perm\+\_\+t \&perms)
 \begin{DoxyCompactList}\small\item\em Returns the greatest monomial in an orbit of permutations. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ }\\std\+::vector$<$ std\+::vector$<$ monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ $>$ $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_ac9f5d227958f2b51e77cb2fe178ebef6}{Symmetric\+\_\+\+Polynomials\+::all\+\_\+monomial\+\_\+orbits}} (int variables, int degree)
 \begin{DoxyCompactList}\small\item\em Returns a vector of all monomials in given variables and degree organized in orbits under the symmetric group action. \end{DoxyCompactList}\item 

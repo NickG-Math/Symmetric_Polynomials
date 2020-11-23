@@ -1,12 +1,12 @@
 \mainpage General Information
 \tableofcontents
  \section intro Introduction
-This is a C++ header only library devoted to computations of symmetric polynomials on multiple variables with relations. You can find the GitHub repository 
+This is a C++ header only library devoted to computations of symmetric polynomials on variables having relations. You can find the GitHub repository 
 <a href="https://github.com/NickG-Math/Symmetric_Polynomials">here</a>.
 
 
 \section req Requirements
- * A C++17 compiler, such as the LLVM based Clang or Visual C++ (MSVC).
+ * A C++17 compiler, such as Clang (LLVM) or GCC or Visual C++. 
  
 \section install Installation
 
@@ -14,7 +14,7 @@ This is a C++ header only library devoted to computations of symmetric polynomia
 
 * See the page \ref use for a tutorial on using the library. For a brief explanation on the math behind it, see \ref math.
 
-* As for compiler support, the latest version of the code is always tested with the latest stable versions of Clang (Linux) and MSVC (Windows). Remember to use the option ```-std=c++17```. 
+* As for compiler support, the latest version of the code is always tested with the latest stable versions of Clang, GCC (Linux) and MSVC (Windows). Remember to use the option ```-std=c++17```. 
 
 \section doc Documentation
 
@@ -67,11 +67,11 @@ More generally, the library can be extended to support more general situations, 
 \tableofcontents
 \section demo Quick Demonstration
 
-For a quick demonstration you may compile the Demo.cpp. Eg (on Linux)
+For a quick demonstration you may use the binaries Demo.exe or Demo.out in the repository. These are compiled from Demo.cpp using MSVC and Clang respectively. For example, compile Demo.cpp yourself use: (on Linux)
 
-    clang++ source/Demo.cpp -std=c++17 -O3 -march=native -o Executable.out		
+    clang++ source/Demo.cpp -std=c++17 -O3 -march=native -o Demo.out	
 
-You can then run the file Executable.out. You can similarly do this over Windows using MSVC, producing a .exe file . Make sure to use the ```-std=c++17``` flag (or set the language options in an IDE to support C++17).
+You can similarly do this over Windows using MSVC, producing a .exe file . Make sure to use the ```-std=c++17``` flag (or set the language options in an IDE to support C++17).
 
 \section exa Code examples
 
@@ -104,7 +104,7 @@ specifies the monomial \f$1.3x_1^3x_2x_3^4y_1y_3\f$
 
 A polynomial is made out of a vector of monomials eg
 
-    polynomial<int, halfidempotent>({monomial<int,halfidempotent>(2,{1,2,0,1}), monomial<int,halfidempotent>(3,{3,0,1,1})});
+    polynomial p(std::vector({ monomial<int,halfidempotent>(2,{1,2,0,1}), monomial<int,halfidempotent>(3,{3,0,1,1}) }));
     
 specifies the polynomial \f$2x_1x_2^2y_2+3x_1^3y_1y_2\f$.
 
@@ -117,8 +117,8 @@ A permutation is an ```std::vector<char>``` and is applied on a monomial accordi
 
 When we have no relations, we can use
 
-	polynomial<rational, norelations> poly({ monomial<rational, norelations>(2, { 1,2 }), monomial<rational, norelations>(2, {2,1 }) }));
-	decomposition_elementary_symmetric<rational> dec(poly);
+	polynomial poly(std::vector({ monomial<rational, norelations>(2, { 1,2 }), monomial<rational, norelations>(2, {2,1 }) })));
+	decomposition_elementary_symmetric dec(poly);
 	std::cout<< dec;
 
 which sets ```poly``` to be \f$2x_1x_2^2+2x_1^2x_2\f$, computes the decomposition of ```poly``` into elementary symmetric polynomials ```e[i]``` (corresponding to \f$\sigma_i\f$), stores it into ```dec``` and prints the decomposition as: ```2e_1*e_2```. This all means that
@@ -129,8 +129,7 @@ The class ```decomposition_elementary_symmetric<rational>``` stores and computes
 
 \subsection halfidem Half idempotent relations
 
-When we have the "half idempotent relation", the generators are \f$\alpha, c_i, \beta_{s,t}\f$ (see \ref math). In the program, ```Idem``` is the dominant term of \f$\alpha\f$, ```Chern``` is a vector containing the dominant terms of \f$c_1,...,c_n\f$ and ```TwistedChern``` is a 
-vector containing the dominant terms of \f$\beta_{1,1},...,\beta_{1,n-1},\beta_{2,1},...,\beta_{n-1,1}\f$ in this order. To get the original indexing on the \f$\beta\f$ elements
+When we have the "half idempotent relation", the generators are \f$\alpha, c_i, \beta_{s,t}\f$ (see \ref math) or ```Idem```, ```Chern[i]``` and ```TwistedChern[s][t]``` respectively as they are used in the program. We order them as \f$\alpha,c_1,...,c_n, \beta_{1,1},...,\beta_{1,n-1},\beta_{2,1},...,\beta_{n-1,1}\f$ in this order. To get the original indexing on the \f$\beta\f$ elements
 we use ```std::map<std::pair<int,int>,int> TwistedChern_indexer``` eg
 
 	std::cout << TwistedChern_indexer[std::make_pair<int,int>(1,2)];
@@ -139,8 +138,8 @@ prints ```1``` since ```TwistedChern[1]``` corresponds to \f$\beta_{1,2}\f$.
 
 The code
 
-	polynomial<rational, halfidempotent> poly({ monomial<rational, halfidempotent>(2, { 1,0,1,0 }), monomial<rational, halfidempotent>(2, {0,1,0,1 }) });
-	decomposition_half_idempotent<rational> dec(poly);
+	polynomial poly(std::vector({ monomial<rational, halfidempotent>(2, { 1,0,1,0 }), monomial<rational, halfidempotent>(2, {0,1,0,1 }) }));
+	decomposition_half_idempotent dec(poly);
 	std::cout << dec << "\n";
 
 sets ```poly``` to be \f$x_1y_1+x_2y_2\f$, computes the decomposition of ```poly``` into ```Idem,Chern,TwistedChern```, stores it into ```dec``` and prints the decomposition as ```2*a*c_1 + -2*b_{1,1}```
@@ -152,5 +151,12 @@ The class ```decomposition_half_idempotent<rational>``` stores and computes the 
 To print the relations amongst \f$\alpha,c_i,\beta_{s,j}\f$ simply use:
 	print_half_idempotent_relations<rational>(3);
 	
-The \f$3\f$ here corresponds to the number of variables: \f$x_1,x_2,x_3,y_1,y_2,y_3\f$ and can be replaced by any positive integer.
+The \f$3\f$ here corresponds to the number of variables: \f$x_1,x_2,x_3,y_1,y_2,y_3\f$ and can be replaced by any positive integer, although for \f$n>10\f$ the computation may take a bit long (program not currently multithreaded, but that can trivially be remedied with a ```#pragma omp parallel for```.
 
+
+Finally, Demo.cpp contains another function, ```write_pontryagin_C2_in_terms_of_Chern_classes```. This prints the expressions of the twisted Pontryagin classes given by
+$$p\beta_{s,t}=\sum_{1\le i_1< \cdots< i_s\le n\\
+1\le j_1< \cdots< j_t\le n\\
+i_u\neq j_v}x^2_{i_1}....x^2_{i_s}y_{j_1}\cdots y_{j_t}$$
+in terms of the Chern classes \f$\alpha,c_i,\beta_{s,t}\f$. For example, try running
+	write_pontryagin_C2_in_terms_of_Chern_classes(5);

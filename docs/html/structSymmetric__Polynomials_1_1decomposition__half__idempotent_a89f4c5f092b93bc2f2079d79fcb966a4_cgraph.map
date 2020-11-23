@@ -1,10 +1,7 @@
 <map id="Symmetric_Polynomials::decomposition_half_idempotent::verify" name="Symmetric_Polynomials::decomposition_half_idempotent::verify">
-<area shape="rect" id="node1" title="Verifies that the decomposition is correct (i.e. expanding the generators in the original variables &#160;..." alt="" coords="5,93,185,149"/>
-<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1half__idempotent__generators.html#ae0893a2ba27fd4204989cda7573b95f6" title="Computes a product of a monomial on our generators Idem, Chern, TwistedChern." alt="" coords="233,93,448,149"/>
-<area shape="rect" id="node3" href="$classSymmetric__Polynomials_1_1polynomial.html#ac0a6e7d6fdbef8a955f5fd72ee2f2ead" title="Incorporates all monomials with same powers vector into a single monomial by adding coefficients,..." alt="" coords="496,5,676,47"/>
-<area shape="rect" id="node4" href="$namespaceSymmetric__Polynomials.html#aa3071663e4ec8ac6e28de064de66e492" title="Multiplies two polynomials with the ability to disable condensation (not recommended)" alt="" coords="724,132,904,173"/>
-<area shape="rect" id="node5" href="$namespaceSymmetric__Polynomials.html#aca3363cff5919c3f416bd56d80f6ca72" title="Computes the orbit of a monomial under a set of permutations." alt="" coords="496,71,676,112"/>
-<area shape="rect" id="node7" href="$namespaceSymmetric__Polynomials.html#a1d476a58c571385ffab409a59c683b98" title="Computes a^p for polynomial a and nonnegative integer p." alt="" coords="496,188,676,229"/>
-<area shape="rect" id="node6" href="$namespaceSymmetric__Polynomials.html#abdbc4a51aab1bb201ebfedcd26896cb4" title="Permutes the variables in a monomial according permutation; returns permuted monomial." alt="" coords="724,67,904,108"/>
-<area shape="rect" id="node8" href="$classSymmetric__Polynomials_1_1polynomial.html#a29a3177f37777cd66cbf9b50402a10c6" title="Constructs constant polynomial given coefficient and number of variables." alt="" coords="724,197,904,239"/>
+<area shape="rect" id="node1" title="Verifies that the decomposition is correct (i.e. expanding the generators in the original variables &#160;..." alt="" coords="5,27,185,83"/>
+<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1half__idempotent__generators.html#a422441d04494efde1ff1cb7cbc86c85c" title="Computes a product of a monomial on our generators Idem, Chern, TwistedChern." alt="" coords="233,27,448,83"/>
+<area shape="rect" id="node3" href="$namespaceSymmetric__Polynomials.html#aa3071663e4ec8ac6e28de064de66e492" title="Multiplies two polynomials with the ability to disable condensation (not recommended)" alt="" coords="724,5,904,47"/>
+<area shape="rect" id="node4" href="$namespaceSymmetric__Polynomials.html#a1d476a58c571385ffab409a59c683b98" title="Computes a^p for polynomial a and nonnegative integer p." alt="" coords="496,64,676,105"/>
+<area shape="rect" id="node5" href="$classSymmetric__Polynomials_1_1polynomial.html#a29a3177f37777cd66cbf9b50402a10c6" title="Constructs constant polynomial given coefficient and number of variables." alt="" coords="724,71,904,112"/>
 </map>

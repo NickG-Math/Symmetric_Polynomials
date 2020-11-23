@@ -1,5 +1,6 @@
 var classSymmetric__Polynomials_1_1polynomial =
 [
+    [ "polynomial", "classSymmetric__Polynomials_1_1polynomial.html#a92fbb313a8e72489e2930ac01d4dda4b", null ],
     [ "polynomial", "classSymmetric__Polynomials_1_1polynomial.html#a71f3c9e5235f925ccc61b25ab784abbe", null ],
     [ "polynomial", "classSymmetric__Polynomials_1_1polynomial.html#a82cab1d2cec4b6a533836a41e3945ff9", null ],
     [ "polynomial", "classSymmetric__Polynomials_1_1polynomial.html#ae65ae6ff604a638732d872b479844ba5", null ],

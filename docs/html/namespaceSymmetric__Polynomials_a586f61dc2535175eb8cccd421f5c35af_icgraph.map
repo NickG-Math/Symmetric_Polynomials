@@ -1,0 +1,5 @@
+<map id="Symmetric_Polynomials::binomial" name="Symmetric_Polynomials::binomial">
+<area shape="rect" id="node1" title="Returns $\binom{n,m}$." alt="" coords="276,39,456,80"/>
+<area shape="rect" id="node2" href="$namespaceSymmetric__Polynomials.html#ac6658e3fb7f963aa3b2c065682850540" title="Returns vector of all combinations on n letters choosing m many" alt="" coords="27,5,207,47"/>
+<area shape="rect" id="node3" href="$classSymmetric__Polynomials_1_1combinations__generator.html#afb69a5128f842f12f4df35f6a170da95" title="Total number of combinations." alt="" coords="5,71,228,112"/>
+</map>

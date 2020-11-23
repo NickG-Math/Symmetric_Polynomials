@@ -1,0 +1,150 @@
+\hypertarget{classSymmetric__Polynomials_1_1generating__const__iterator}{}\doxysection{Symmetric\+\_\+\+Polynomials\+::generating\+\_\+const\+\_\+iterator$<$ specialization, gen\+\_\+t $>$ Class Template Reference}
+\label{classSymmetric__Polynomials_1_1generating__const__iterator}\index{Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$@{Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$}}
+
+
+Prototype for an iterator that generates elements such as interpolating vectors, permutations, combinations and so on.  
+
+
+
+
+{\ttfamily \#include $<$Generators.\+h$>$}
+
+
+
+Inheritance diagram for Symmetric\+\_\+\+Polynomials\+::generating\+\_\+const\+\_\+iterator$<$ specialization, gen\+\_\+t $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1generating__const__iterator__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const gen\+\_\+t \& \mbox{\hyperlink{classSymmetric__Polynomials_1_1generating__const__iterator_a371b5ab3d956458b554a3875a7aad4ad}{operator$\ast$}} () const
+\begin{DoxyCompactList}\small\item\em Returns the generated element. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSymmetric__Polynomials_1_1generating__const__iterator_a2141fddd52a05ed754a1854ed58da764}{operator!=}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1generating__const__iterator}{generating\+\_\+const\+\_\+iterator}} \&other) const
+\begin{DoxyCompactList}\small\item\em Equality of iterators. \end{DoxyCompactList}\item 
+specialization \& \mbox{\hyperlink{classSymmetric__Polynomials_1_1generating__const__iterator_afb018a3af12e2ed4c51377ae8f9c0410}{operator++}} ()
+\begin{DoxyCompactList}\small\item\em Generates next element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static specialization \mbox{\hyperlink{classSymmetric__Polynomials_1_1generating__const__iterator_a2cd4b23de0dd5556bce98a1cf1811410}{terminal}} ()
+\begin{DoxyCompactList}\small\item\em Terminal iterator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1generating__const__iterator_ad3af1c975a6b32772e3b1d725faadd11}{generating\+\_\+const\+\_\+iterator}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classSymmetric__Polynomials_1_1generating__const__iterator_a5ba3a460007ea35a2405d27a27942b72}{completed}}
+\begin{DoxyCompactList}\small\item\em 1 if the iterator is end() i.\+e. if all elements have been generated \end{DoxyCompactList}\item 
+gen\+\_\+t \mbox{\hyperlink{classSymmetric__Polynomials_1_1generating__const__iterator_a441729010aae150227f5b747676828b5}{generated}}
+\begin{DoxyCompactList}\small\item\em The currently generated element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename specialization, typename gen\+\_\+t$>$\newline
+class Symmetric\+\_\+\+Polynomials\+::generating\+\_\+const\+\_\+iterator$<$ specialization, gen\+\_\+t $>$}
+
+Prototype for an iterator that generates elements such as interpolating vectors, permutations, combinations and so on. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1generating__const__iterator_ad3af1c975a6b32772e3b1d725faadd11}\label{classSymmetric__Polynomials_1_1generating__const__iterator_ad3af1c975a6b32772e3b1d725faadd11}} 
+\index{Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$@{Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$}!generating\_const\_iterator@{generating\_const\_iterator}}
+\index{generating\_const\_iterator@{generating\_const\_iterator}!Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$@{Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$}}
+\doxysubsubsection{\texorpdfstring{generating\_const\_iterator()}{generating\_const\_iterator()}}
+{\footnotesize\ttfamily template$<$typename specialization , typename gen\+\_\+t $>$ \\
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1generating__const__iterator}{Symmetric\+\_\+\+Polynomials\+::generating\+\_\+const\+\_\+iterator}}$<$ specialization, gen\+\_\+t $>$\+::\mbox{\hyperlink{classSymmetric__Polynomials_1_1generating__const__iterator}{generating\+\_\+const\+\_\+iterator}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Default constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1generating__const__iterator_a2141fddd52a05ed754a1854ed58da764}\label{classSymmetric__Polynomials_1_1generating__const__iterator_a2141fddd52a05ed754a1854ed58da764}} 
+\index{Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$@{Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$@{Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$typename specialization , typename gen\+\_\+t $>$ \\
+bool \mbox{\hyperlink{classSymmetric__Polynomials_1_1generating__const__iterator}{Symmetric\+\_\+\+Polynomials\+::generating\+\_\+const\+\_\+iterator}}$<$ specialization, gen\+\_\+t $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1generating__const__iterator}{generating\+\_\+const\+\_\+iterator}}$<$ specialization, gen\+\_\+t $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Equality of iterators. 
+
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1generating__const__iterator_a371b5ab3d956458b554a3875a7aad4ad}\label{classSymmetric__Polynomials_1_1generating__const__iterator_a371b5ab3d956458b554a3875a7aad4ad}} 
+\index{Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$@{Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$@{Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$typename specialization , typename gen\+\_\+t $>$ \\
+const gen\+\_\+t\& \mbox{\hyperlink{classSymmetric__Polynomials_1_1generating__const__iterator}{Symmetric\+\_\+\+Polynomials\+::generating\+\_\+const\+\_\+iterator}}$<$ specialization, gen\+\_\+t $>$\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the generated element. 
+
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1generating__const__iterator_afb018a3af12e2ed4c51377ae8f9c0410}\label{classSymmetric__Polynomials_1_1generating__const__iterator_afb018a3af12e2ed4c51377ae8f9c0410}} 
+\index{Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$@{Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$}!operator++@{operator++}}
+\index{operator++@{operator++}!Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$@{Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}}
+{\footnotesize\ttfamily template$<$typename specialization , typename gen\+\_\+t $>$ \\
+specialization\& \mbox{\hyperlink{classSymmetric__Polynomials_1_1generating__const__iterator}{Symmetric\+\_\+\+Polynomials\+::generating\+\_\+const\+\_\+iterator}}$<$ specialization, gen\+\_\+t $>$\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Generates next element. 
+
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1generating__const__iterator_a2cd4b23de0dd5556bce98a1cf1811410}\label{classSymmetric__Polynomials_1_1generating__const__iterator_a2cd4b23de0dd5556bce98a1cf1811410}} 
+\index{Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$@{Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$}!terminal@{terminal}}
+\index{terminal@{terminal}!Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$@{Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$}}
+\doxysubsubsection{\texorpdfstring{terminal()}{terminal()}}
+{\footnotesize\ttfamily template$<$typename specialization , typename gen\+\_\+t $>$ \\
+static specialization \mbox{\hyperlink{classSymmetric__Polynomials_1_1generating__const__iterator}{Symmetric\+\_\+\+Polynomials\+::generating\+\_\+const\+\_\+iterator}}$<$ specialization, gen\+\_\+t $>$\+::terminal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Terminal iterator. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1generating__const__iterator_a2cd4b23de0dd5556bce98a1cf1811410_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1generating__const__iterator_a5ba3a460007ea35a2405d27a27942b72}\label{classSymmetric__Polynomials_1_1generating__const__iterator_a5ba3a460007ea35a2405d27a27942b72}} 
+\index{Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$@{Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$}!completed@{completed}}
+\index{completed@{completed}!Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$@{Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$}}
+\doxysubsubsection{\texorpdfstring{completed}{completed}}
+{\footnotesize\ttfamily template$<$typename specialization , typename gen\+\_\+t $>$ \\
+bool \mbox{\hyperlink{classSymmetric__Polynomials_1_1generating__const__iterator}{Symmetric\+\_\+\+Polynomials\+::generating\+\_\+const\+\_\+iterator}}$<$ specialization, gen\+\_\+t $>$\+::completed\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+1 if the iterator is end() i.\+e. if all elements have been generated 
+
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1generating__const__iterator_a441729010aae150227f5b747676828b5}\label{classSymmetric__Polynomials_1_1generating__const__iterator_a441729010aae150227f5b747676828b5}} 
+\index{Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$@{Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$}!generated@{generated}}
+\index{generated@{generated}!Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$@{Symmetric\_Polynomials::generating\_const\_iterator$<$ specialization, gen\_t $>$}}
+\doxysubsubsection{\texorpdfstring{generated}{generated}}
+{\footnotesize\ttfamily template$<$typename specialization , typename gen\+\_\+t $>$ \\
+gen\+\_\+t \mbox{\hyperlink{classSymmetric__Polynomials_1_1generating__const__iterator}{Symmetric\+\_\+\+Polynomials\+::generating\+\_\+const\+\_\+iterator}}$<$ specialization, gen\+\_\+t $>$\+::generated\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The currently generated element. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{Generators_8h}{Generators.\+h}}\end{DoxyCompactItemize}

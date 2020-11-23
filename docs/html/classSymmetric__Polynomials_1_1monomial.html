@@ -105,39 +105,29 @@ $(document).ready(function(){initNavTree('classSymmetric__Polynomials_1_1monomia
  <a href="classSymmetric__Polynomials_1_1monomial.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Polynomials_8h_source.html">Polynomials.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for Symmetric_Polynomials::monomial&lt; scalar_t, rel_t &gt;:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSymmetric__Polynomials_1_1monomial__inherit__graph.png" border="0" usemap="#Symmetric__Polynomials_1_1monomial_3_01scalar__t_00_01rel__t_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="Symmetric__Polynomials_1_1monomial_3_01scalar__t_00_01rel__t_01_4_inherit__map" id="Symmetric__Polynomials_1_1monomial_3_01scalar__t_00_01rel__t_01_4_inherit__map">
-<area shape="rect" title="Class of monomials in multiple variables with relations." alt="" coords="5,13,185,69"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1monomial.html" title=" " alt="" coords="443,5,627,76"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a800e9ac45049a5857e428ae8a050df76"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1monomial.html#a800e9ac45049a5857e428ae8a050df76">monomial</a> (const scalar_t &amp;<a class="el" href="classSymmetric__Polynomials_1_1monomial.html#a7b3e017859dd27e2f723da11b4d34e71">coeff</a>, const std::vector&lt; int &gt; &amp;<a class="el" href="classSymmetric__Polynomials_1_1monomial.html#ac9998d5182ed08a3a383e5f36d5a4775">powers</a>)</td></tr>
-<tr class="memdesc:a800e9ac45049a5857e428ae8a050df76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs monomial given coefficient and powers.  <a href="classSymmetric__Polynomials_1_1monomial.html#a800e9ac45049a5857e428ae8a050df76">More...</a><br /></td></tr>
-<tr class="separator:a800e9ac45049a5857e428ae8a050df76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a300e87f20ae2f9df106479850e54a661"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1monomial.html#a300e87f20ae2f9df106479850e54a661">monomial</a> (const scalar_t &amp;<a class="el" href="classSymmetric__Polynomials_1_1monomial.html#a7b3e017859dd27e2f723da11b4d34e71">coeff</a>, const std::vector&lt; int &gt; &amp;<a class="el" href="classSymmetric__Polynomials_1_1monomial.html#afb36784e7dbebf26ed3c5fb35344667e">exponent</a>)</td></tr>
+<tr class="memdesc:a300e87f20ae2f9df106479850e54a661"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs monomial given coefficient and exponent.  <a href="classSymmetric__Polynomials_1_1monomial.html#a300e87f20ae2f9df106479850e54a661">More...</a><br /></td></tr>
+<tr class="separator:a300e87f20ae2f9df106479850e54a661"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a165c8552ffb328f820f0c22622eac596"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1monomial.html#a165c8552ffb328f820f0c22622eac596">monomial</a> ()</td></tr>
 <tr class="memdesc:a165c8552ffb328f820f0c22622eac596"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="classSymmetric__Polynomials_1_1monomial.html#a165c8552ffb328f820f0c22622eac596">More...</a><br /></td></tr>
 <tr class="separator:a165c8552ffb328f820f0c22622eac596"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d4df21876345217aa3116a2562a4fee"><td class="memTemplParams" colspan="2">template&lt;typename s_scalar_t , typename s_rel_t &gt; </td></tr>
-<tr class="memitem:a8d4df21876345217aa3116a2562a4fee"><td class="memTemplItemLeft" align="right" valign="top">std::conditional_t&lt; s_rel_t::product_of_monomials_is_monomial, <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; s_scalar_t, s_rel_t &gt;, <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; s_scalar_t, s_rel_t &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1monomial.html#a8d4df21876345217aa3116a2562a4fee">operator*</a> (const <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; s_scalar_t, s_rel_t &gt; &amp;b) const</td></tr>
-<tr class="memdesc:a8d4df21876345217aa3116a2562a4fee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns product of monomials; depending on the relations, this could be a polynomial after applying them, so the return type is conditional on that.  <a href="classSymmetric__Polynomials_1_1monomial.html#a8d4df21876345217aa3116a2562a4fee">More...</a><br /></td></tr>
-<tr class="separator:a8d4df21876345217aa3116a2562a4fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad41e84e20b00e1ec71b783653bb3eb09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1monomial.html#ad41e84e20b00e1ec71b783653bb3eb09">operator*</a> (const <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &amp;b) const</td></tr>
+<tr class="memdesc:ad41e84e20b00e1ec71b783653bb3eb09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns product of monomials.  <a href="classSymmetric__Polynomials_1_1monomial.html#ad41e84e20b00e1ec71b783653bb3eb09">More...</a><br /></td></tr>
+<tr class="separator:ad41e84e20b00e1ec71b783653bb3eb09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d4fe494ece77317e77dfe60443ce1e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1monomial.html#a9d4fe494ece77317e77dfe60443ce1e3">operator-</a> () const</td></tr>
 <tr class="memdesc:a9d4fe494ece77317e77dfe60443ce1e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns -b for monomial b.  <a href="classSymmetric__Polynomials_1_1monomial.html#a9d4fe494ece77317e77dfe60443ce1e3">More...</a><br /></td></tr>
 <tr class="separator:a9d4fe494ece77317e77dfe60443ce1e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb5483da3aacbfd7b779564529383d1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1monomial.html#adb5483da3aacbfd7b779564529383d1e">operator/</a> (const <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &amp;b) const</td></tr>
-<tr class="memdesc:adb5483da3aacbfd7b779564529383d1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Division of monomials. No checks are made to ensure that the resulting powers are nonnegative.  <a href="classSymmetric__Polynomials_1_1monomial.html#adb5483da3aacbfd7b779564529383d1e">More...</a><br /></td></tr>
+<tr class="memdesc:adb5483da3aacbfd7b779564529383d1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Division of monomials. No checks are made to ensure that the resulting exponent are nonnegative.  <a href="classSymmetric__Polynomials_1_1monomial.html#adb5483da3aacbfd7b779564529383d1e">More...</a><br /></td></tr>
 <tr class="separator:adb5483da3aacbfd7b779564529383d1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c244720314c07743c261901743ed280"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1monomial.html#a5c244720314c07743c261901743ed280">operator==</a> (const <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &amp;b) const</td></tr>
 <tr class="memdesc:a5c244720314c07743c261901743ed280"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard equality of monomials.  <a href="classSymmetric__Polynomials_1_1monomial.html#a5c244720314c07743c261901743ed280">More...</a><br /></td></tr>
 <tr class="separator:a5c244720314c07743c261901743ed280"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afeabda5ef34409bcc52ff474edd6ac78"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1monomial.html#afeabda5ef34409bcc52ff474edd6ac78">operator&lt;</a> (const <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &amp;b) const</td></tr>
-<tr class="memdesc:afeabda5ef34409bcc52ff474edd6ac78"><td class="mdescLeft">&#160;</td><td class="mdescRight">a&lt;b iff degree(a)&lt;degree(b) or they have the same degree and for the powers vectors, powers(a)&lt;powers(b)  <a href="classSymmetric__Polynomials_1_1monomial.html#afeabda5ef34409bcc52ff474edd6ac78">More...</a><br /></td></tr>
+<tr class="memdesc:afeabda5ef34409bcc52ff474edd6ac78"><td class="mdescLeft">&#160;</td><td class="mdescRight">a&lt;b iff degree(a)&lt;degree(b) or they have the same degree and for the exponent vectors, exponent(a)&lt;exponent(b)  <a href="classSymmetric__Polynomials_1_1monomial.html#afeabda5ef34409bcc52ff474edd6ac78">More...</a><br /></td></tr>
 <tr class="separator:afeabda5ef34409bcc52ff474edd6ac78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5eced96b3e7c61174ef864032be3c935"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1monomial.html#a5eced96b3e7c61174ef864032be3c935">print</a> (const std::function&lt; std::string(int)&gt; &amp;variable_names) const</td></tr>
 <tr class="memdesc:a5eced96b3e7c61174ef864032be3c935"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print monomial using given variable names.  <a href="classSymmetric__Polynomials_1_1monomial.html#a5eced96b3e7c61174ef864032be3c935">More...</a><br /></td></tr>
@@ -160,9 +150,11 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a7b3e017859dd27e2f723da11b4d34e71"><td class="memItemLeft" align="right" valign="top">scalar_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1monomial.html#a7b3e017859dd27e2f723da11b4d34e71">coeff</a></td></tr>
 <tr class="memdesc:a7b3e017859dd27e2f723da11b4d34e71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coefficient of monomial.  <a href="classSymmetric__Polynomials_1_1monomial.html#a7b3e017859dd27e2f723da11b4d34e71">More...</a><br /></td></tr>
 <tr class="separator:a7b3e017859dd27e2f723da11b4d34e71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9998d5182ed08a3a383e5f36d5a4775"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1monomial.html#ac9998d5182ed08a3a383e5f36d5a4775">powers</a></td></tr>
-<tr class="memdesc:ac9998d5182ed08a3a383e5f36d5a4775"><td class="mdescLeft">&#160;</td><td class="mdescRight">Powers vector.  <a href="classSymmetric__Polynomials_1_1monomial.html#ac9998d5182ed08a3a383e5f36d5a4775">More...</a><br /></td></tr>
-<tr class="separator:ac9998d5182ed08a3a383e5f36d5a4775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb36784e7dbebf26ed3c5fb35344667e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1monomial.html#afb36784e7dbebf26ed3c5fb35344667e">exponent</a></td></tr>
+<tr class="memdesc:afb36784e7dbebf26ed3c5fb35344667e"><td class="mdescLeft">&#160;</td><td class="mdescRight">exponent vector  <a href="classSymmetric__Polynomials_1_1monomial.html#afb36784e7dbebf26ed3c5fb35344667e">More...</a><br /></td></tr>
+<tr class="separator:afb36784e7dbebf26ed3c5fb35344667e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1959c9c5181d77d05a72a3292eed92a1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1monomial.html#a1959c9c5181d77d05a72a3292eed92a1">degree</a></td></tr>
+<tr class="separator:a1959c9c5181d77d05a72a3292eed92a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -175,10 +167,10 @@ Friends</h2></td></tr>
 class Symmetric_Polynomials::monomial&lt; scalar_t, rel_t &gt;</h3>
 
 <p>Class of monomials in multiple variables with relations. </p>
-<p>A monomial \(a=cx_1^{p_1}x_2^{p_2}....x_n^{p_n}\) is defined by its coefficient \(c\) and powers vector \([p_1,...,p_n]\). The template scalar_t determines the type of the coefficient \(c\). The template rel_t determines the relations that the variables \(x_i\) satisfy. </p>
+<p>A monomial \(a=cx_1^{p_1}x_2^{p_2}....x_n^{p_n}\) is defined by its coefficient \(c\) and exponent vector \([p_1,...,p_n]\). The template scalar_t determines the type of the coefficient \(c\). The template rel_t determines the relations that the variables \(x_i\) satisfy. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a800e9ac45049a5857e428ae8a050df76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a800e9ac45049a5857e428ae8a050df76">&#9670;&nbsp;</a></span>monomial() <span class="overload">[1/2]</span></h2>
+<a id="a300e87f20ae2f9df106479850e54a661"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a300e87f20ae2f9df106479850e54a661">&#9670;&nbsp;</a></span>monomial() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -198,7 +190,7 @@ template&lt;typename scalar_t , typename rel_t &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::vector&lt; int &gt; &amp;&#160;</td>
-          <td class="paramname"><em>powers</em>&#160;</td>
+          <td class="paramname"><em>exponent</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -213,7 +205,7 @@ template&lt;typename scalar_t , typename rel_t &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs monomial given coefficient and powers. </p>
+<p>Constructs monomial given coefficient and exponent. </p>
 
 </div>
 </div>
@@ -287,23 +279,21 @@ template&lt;typename scalar_t , typename rel_t &gt; </div>
 
 </div>
 </div>
-<a id="a8d4df21876345217aa3116a2562a4fee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d4df21876345217aa3116a2562a4fee">&#9670;&nbsp;</a></span>operator*()</h2>
+<a id="ad41e84e20b00e1ec71b783653bb3eb09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad41e84e20b00e1ec71b783653bb3eb09">&#9670;&nbsp;</a></span>operator*()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename scalar_t , typename rel_t &gt; </div>
-<div class="memtemplate">
-template&lt;typename s_scalar_t , typename s_rel_t &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::conditional_t&lt;s_rel_t::product_of_monomials_is_monomial, <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt;s_scalar_t, s_rel_t&gt;, <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt;s_scalar_t, s_rel_t&gt; &gt; <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">Symmetric_Polynomials::monomial</a>&lt; scalar_t, rel_t &gt;::operator* </td>
+          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt;scalar_t, rel_t&gt; <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">Symmetric_Polynomials::monomial</a>&lt; scalar_t, rel_t &gt;::operator* </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; s_scalar_t, s_rel_t &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &amp;&#160;</td>
           <td class="paramname"><em>b</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -315,7 +305,7 @@ template&lt;typename s_scalar_t , typename s_rel_t &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns product of monomials; depending on the relations, this could be a polynomial after applying them, so the return type is conditional on that. </p>
+<p>Returns product of monomials. </p>
 
 </div>
 </div>
@@ -374,7 +364,7 @@ template&lt;typename scalar_t , typename rel_t &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Division of monomials. No checks are made to ensure that the resulting powers are nonnegative. </p>
+<p>Division of monomials. No checks are made to ensure that the resulting exponent are nonnegative. </p>
 
 </div>
 </div>
@@ -404,7 +394,7 @@ template&lt;typename scalar_t , typename rel_t &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>a&lt;b iff degree(a)&lt;degree(b) or they have the same degree and for the powers vectors, powers(a)&lt;powers(b) </p>
+<p>a&lt;b iff degree(a)&lt;degree(b) or they have the same degree and for the exponent vectors, exponent(a)&lt;exponent(b) </p>
 
 </div>
 </div>
@@ -469,8 +459,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSymmetric__Polynomials_1_1monomial_a2a6b039044b8851145c23fbb18d66d9b_icgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1monomial_a2a6b039044b8851145c23fbb18d66d9b_icgraph" alt=""/></div>
 <map name="classSymmetric__Polynomials_1_1monomial_a2a6b039044b8851145c23fbb18d66d9b_icgraph" id="classSymmetric__Polynomials_1_1monomial_a2a6b039044b8851145c23fbb18d66d9b_icgraph">
-<area shape="rect" title="Print monomial using default variable names x_1,...,x_n." alt="" coords="237,20,417,61"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1monomial.html#a40b6fce3abbd9ff03d0746c016b62236" title="Print monomial using given variable names." alt="" coords="5,5,189,76"/>
+<area shape="rect" title="Print monomial using default variable names x_1,...,x_n." alt="" coords="233,5,413,47"/>
+<area shape="rect" href="classSymmetric__Polynomials_1_1monomial.html#a40b6fce3abbd9ff03d0746c016b62236" title="Print monomial using given variable names." alt="" coords="5,5,185,47"/>
 </map>
 </div>
 
@@ -508,9 +498,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSymmetric__Polynomials_1_1monomial_a5eced96b3e7c61174ef864032be3c935_icgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1monomial_a5eced96b3e7c61174ef864032be3c935_icgraph" alt=""/></div>
 <map name="classSymmetric__Polynomials_1_1monomial_a5eced96b3e7c61174ef864032be3c935_icgraph" id="classSymmetric__Polynomials_1_1monomial_a5eced96b3e7c61174ef864032be3c935_icgraph">
-<area shape="rect" title="Print monomial using given variable names." alt="" coords="233,27,413,69"/>
-<area shape="rect" href="Demo_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="68,5,123,32"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a731806de07a7498e372e3a3233a974af" title="Prints monomial." alt="" coords="5,57,185,98"/>
+<area shape="rect" title="Print monomial using given variable names." alt="" coords="233,5,413,47"/>
+<area shape="rect" href="namespaceSymmetric__Polynomials.html#a731806de07a7498e372e3a3233a974af" title="Prints monomial." alt="" coords="5,5,185,47"/>
 </map>
 </div>
 
@@ -543,6 +532,15 @@ template&lt;typename scalar_t , typename rel_t &gt; </div>
 </div><div class="memdoc">
 
 <p>Print monomial using given variable names. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSymmetric__Polynomials_1_1monomial_a40b6fce3abbd9ff03d0746c016b62236_cgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1monomial_a40b6fce3abbd9ff03d0746c016b62236_cgraph" alt=""/></div>
+<map name="classSymmetric__Polynomials_1_1monomial_a40b6fce3abbd9ff03d0746c016b62236_cgraph" id="classSymmetric__Polynomials_1_1monomial_a40b6fce3abbd9ff03d0746c016b62236_cgraph">
+<area shape="rect" title="Print monomial using given variable names." alt="" coords="5,5,185,47"/>
+<area shape="rect" href="classSymmetric__Polynomials_1_1monomial.html#a2a6b039044b8851145c23fbb18d66d9b" title="Print monomial using default variable names x_1,...,x_n." alt="" coords="233,5,413,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -592,8 +590,8 @@ template&lt;typename scalar_t , typename rel_t &gt; </div>
 
 </div>
 </div>
-<a id="ac9998d5182ed08a3a383e5f36d5a4775"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9998d5182ed08a3a383e5f36d5a4775">&#9670;&nbsp;</a></span>powers</h2>
+<a id="a1959c9c5181d77d05a72a3292eed92a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1959c9c5181d77d05a72a3292eed92a1">&#9670;&nbsp;</a></span>degree</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -601,12 +599,29 @@ template&lt;typename scalar_t , typename rel_t &gt; </div>
 template&lt;typename scalar_t , typename rel_t &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;int&gt; <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">Symmetric_Polynomials::monomial</a>&lt; scalar_t, rel_t &gt;::powers</td>
+          <td class="memname">int <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">Symmetric_Polynomials::monomial</a>&lt; scalar_t, rel_t &gt;::degree</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Degree of monomial </p>
+
+</div>
+</div>
+<a id="afb36784e7dbebf26ed3c5fb35344667e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb36784e7dbebf26ed3c5fb35344667e">&#9670;&nbsp;</a></span>exponent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename scalar_t , typename rel_t &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">Symmetric_Polynomials::monomial</a>&lt; scalar_t, rel_t &gt;::exponent</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Powers vector. </p>
+<p>exponent vector </p>
 
 </div>
 </div>

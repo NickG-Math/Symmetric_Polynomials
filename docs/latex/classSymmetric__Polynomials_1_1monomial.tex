@@ -9,32 +9,23 @@ Class of monomials in multiple variables with relations.
 
 {\ttfamily \#include $<$Polynomials.\+h$>$}
 
-
-
-Inheritance diagram for Symmetric\+\_\+\+Polynomials\+::monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1monomial__inherit__graph}
-\end{center}
-\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_a800e9ac45049a5857e428ae8a050df76}{monomial}} (const scalar\+\_\+t \&\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_a7b3e017859dd27e2f723da11b4d34e71}{coeff}}, const std\+::vector$<$ int $>$ \&\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_ac9998d5182ed08a3a383e5f36d5a4775}{powers}})
-\begin{DoxyCompactList}\small\item\em Constructs monomial given coefficient and powers. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_a300e87f20ae2f9df106479850e54a661}{monomial}} (const scalar\+\_\+t \&\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_a7b3e017859dd27e2f723da11b4d34e71}{coeff}}, const std\+::vector$<$ int $>$ \&\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_afb36784e7dbebf26ed3c5fb35344667e}{exponent}})
+\begin{DoxyCompactList}\small\item\em Constructs monomial given coefficient and exponent. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_a165c8552ffb328f820f0c22622eac596}{monomial}} ()
 \begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename s\+\_\+scalar\+\_\+t , typename s\+\_\+rel\+\_\+t $>$ }\\std\+::conditional\+\_\+t$<$ s\+\_\+rel\+\_\+t\+::product\+\_\+of\+\_\+monomials\+\_\+is\+\_\+monomial, \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ s\+\_\+scalar\+\_\+t, s\+\_\+rel\+\_\+t $>$, \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$ s\+\_\+scalar\+\_\+t, s\+\_\+rel\+\_\+t $>$ $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_a8d4df21876345217aa3116a2562a4fee}{operator$\ast$}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ s\+\_\+scalar\+\_\+t, s\+\_\+rel\+\_\+t $>$ \&b) const
-\begin{DoxyCompactList}\small\item\em Returns product of monomials; depending on the relations, this could be a polynomial after applying them, so the return type is conditional on that. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_ad41e84e20b00e1ec71b783653bb3eb09}{operator$\ast$}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&b) const
+\begin{DoxyCompactList}\small\item\em Returns product of monomials. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_a9d4fe494ece77317e77dfe60443ce1e3}{operator-\/}} () const
 \begin{DoxyCompactList}\small\item\em Returns -\/b for monomial b. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_adb5483da3aacbfd7b779564529383d1e}{operator/}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&b) const
-\begin{DoxyCompactList}\small\item\em Division of monomials. No checks are made to ensure that the resulting powers are nonnegative. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Division of monomials. No checks are made to ensure that the resulting exponent are nonnegative. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_a5c244720314c07743c261901743ed280}{operator==}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&b) const
 \begin{DoxyCompactList}\small\item\em Standard equality of monomials. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_afeabda5ef34409bcc52ff474edd6ac78}{operator$<$}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&b) const
-\begin{DoxyCompactList}\small\item\em a$<$b iff degree(a)$<$degree(b) or they have the same degree and for the powers vectors, powers(a)$<$powers(b) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em a$<$b iff degree(a)$<$degree(b) or they have the same degree and for the exponent vectors, exponent(a)$<$exponent(b) \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_a5eced96b3e7c61174ef864032be3c935}{print}} (const std\+::function$<$ std\+::string(int)$>$ \&variable\+\_\+names) const
 \begin{DoxyCompactList}\small\item\em Print monomial using given variable names. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_a40b6fce3abbd9ff03d0746c016b62236}{print}} (const std\+::vector$<$ std\+::string $>$ \&variable\+\_\+names) const
@@ -51,8 +42,10 @@ static \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ s
 \item 
 scalar\+\_\+t \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_a7b3e017859dd27e2f723da11b4d34e71}{coeff}}
 \begin{DoxyCompactList}\small\item\em Coefficient of monomial. \end{DoxyCompactList}\item 
-std\+::vector$<$ int $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_ac9998d5182ed08a3a383e5f36d5a4775}{powers}}
-\begin{DoxyCompactList}\small\item\em Powers vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_afb36784e7dbebf26ed3c5fb35344667e}{exponent}}
+\begin{DoxyCompactList}\small\item\em exponent vector \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_a1959c9c5181d77d05a72a3292eed92a1}{degree}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
@@ -66,19 +59,19 @@ class Symmetric\+\_\+\+Polynomials\+::monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$}
 
 Class of monomials in multiple variables with relations. 
 
-A monomial $a=cx_1^{p_1}x_2^{p_2}....x_n^{p_n}$ is defined by its coefficient $c$ and powers vector $[p_1,...,p_n]$. The template scalar\+\_\+t determines the type of the coefficient $c$. The template rel\+\_\+t determines the relations that the variables $x_i$ satisfy. 
+A monomial $a=cx_1^{p_1}x_2^{p_2}....x_n^{p_n}$ is defined by its coefficient $c$ and exponent vector $[p_1,...,p_n]$. The template scalar\+\_\+t determines the type of the coefficient $c$. The template rel\+\_\+t determines the relations that the variables $x_i$ satisfy. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1monomial_a800e9ac45049a5857e428ae8a050df76}\label{classSymmetric__Polynomials_1_1monomial_a800e9ac45049a5857e428ae8a050df76}} 
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1monomial_a300e87f20ae2f9df106479850e54a661}\label{classSymmetric__Polynomials_1_1monomial_a300e87f20ae2f9df106479850e54a661}} 
 \index{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$}!monomial@{monomial}}
 \index{monomial@{monomial}!Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$}}
 \doxysubsubsection{\texorpdfstring{monomial()}{monomial()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{Symmetric\+\_\+\+Polynomials\+::monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}} (\begin{DoxyParamCaption}\item[{const scalar\+\_\+t \&}]{coeff,  }\item[{const std\+::vector$<$ int $>$ \&}]{powers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{Symmetric\+\_\+\+Polynomials\+::monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}} (\begin{DoxyParamCaption}\item[{const scalar\+\_\+t \&}]{coeff,  }\item[{const std\+::vector$<$ int $>$ \&}]{exponent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Constructs monomial given coefficient and powers. 
+Constructs monomial given coefficient and exponent. 
 
 \mbox{\Hypertarget{classSymmetric__Polynomials_1_1monomial_a165c8552ffb328f820f0c22622eac596}\label{classSymmetric__Polynomials_1_1monomial_a165c8552ffb328f820f0c22622eac596}} 
 \index{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$}!monomial@{monomial}}
@@ -105,17 +98,16 @@ static \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$sc
 
 Constructs constant monomial with given coefficient and number of variables. 
 
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1monomial_a8d4df21876345217aa3116a2562a4fee}\label{classSymmetric__Polynomials_1_1monomial_a8d4df21876345217aa3116a2562a4fee}} 
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1monomial_ad41e84e20b00e1ec71b783653bb3eb09}\label{classSymmetric__Polynomials_1_1monomial_ad41e84e20b00e1ec71b783653bb3eb09}} 
 \index{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$}!operator$\ast$@{operator$\ast$}}
 \index{operator$\ast$@{operator$\ast$}!Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$}}
 \doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
 {\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
-template$<$typename s\+\_\+scalar\+\_\+t , typename s\+\_\+rel\+\_\+t $>$ \\
-std\+::conditional\+\_\+t$<$s\+\_\+rel\+\_\+t\+::product\+\_\+of\+\_\+monomials\+\_\+is\+\_\+monomial, \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$s\+\_\+scalar\+\_\+t, s\+\_\+rel\+\_\+t$>$, \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$s\+\_\+scalar\+\_\+t, s\+\_\+rel\+\_\+t$>$ $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{Symmetric\+\_\+\+Polynomials\+::monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ s\+\_\+scalar\+\_\+t, s\+\_\+rel\+\_\+t $>$ \&}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$scalar\+\_\+t, rel\+\_\+t$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{Symmetric\+\_\+\+Polynomials\+::monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Returns product of monomials; depending on the relations, this could be a polynomial after applying them, so the return type is conditional on that. 
+Returns product of monomials. 
 
 \mbox{\Hypertarget{classSymmetric__Polynomials_1_1monomial_a9d4fe494ece77317e77dfe60443ce1e3}\label{classSymmetric__Polynomials_1_1monomial_a9d4fe494ece77317e77dfe60443ce1e3}} 
 \index{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$}!operator-\/@{operator-\/}}
@@ -137,7 +129,7 @@ Returns -\/b for monomial b.
 
 
 
-Division of monomials. No checks are made to ensure that the resulting powers are nonnegative. 
+Division of monomials. No checks are made to ensure that the resulting exponent are nonnegative. 
 
 \mbox{\Hypertarget{classSymmetric__Polynomials_1_1monomial_afeabda5ef34409bcc52ff474edd6ac78}\label{classSymmetric__Polynomials_1_1monomial_afeabda5ef34409bcc52ff474edd6ac78}} 
 \index{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$}!operator$<$@{operator$<$}}
@@ -148,7 +140,7 @@ bool \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{Symmetric\+\_\+\+
 
 
 
-a$<$b iff degree(a)$<$degree(b) or they have the same degree and for the powers vectors, powers(a)$<$powers(b) 
+a$<$b iff degree(a)$<$degree(b) or they have the same degree and for the exponent vectors, exponent(a)$<$exponent(b) 
 
 \mbox{\Hypertarget{classSymmetric__Polynomials_1_1monomial_a5c244720314c07743c261901743ed280}\label{classSymmetric__Polynomials_1_1monomial_a5c244720314c07743c261901743ed280}} 
 \index{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$}!operator==@{operator==}}
@@ -208,6 +200,13 @@ std\+::string \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{Symmetri
 
 Print monomial using given variable names. 
 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1monomial_a40b6fce3abbd9ff03d0746c016b62236_cgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Friends And Related Function Documentation}
@@ -233,16 +232,23 @@ scalar\+\_\+t \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{Symmetri
 
 Coefficient of monomial. 
 
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1monomial_ac9998d5182ed08a3a383e5f36d5a4775}\label{classSymmetric__Polynomials_1_1monomial_ac9998d5182ed08a3a383e5f36d5a4775}} 
-\index{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$}!powers@{powers}}
-\index{powers@{powers}!Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$}}
-\doxysubsubsection{\texorpdfstring{powers}{powers}}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1monomial_a1959c9c5181d77d05a72a3292eed92a1}\label{classSymmetric__Polynomials_1_1monomial_a1959c9c5181d77d05a72a3292eed92a1}} 
+\index{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$}!degree@{degree}}
+\index{degree@{degree}!Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{degree}{degree}}
 {\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
-std\+::vector$<$int$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{Symmetric\+\_\+\+Polynomials\+::monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::powers}
+int \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{Symmetric\+\_\+\+Polynomials\+::monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::degree}
+
+Degree of monomial \mbox{\Hypertarget{classSymmetric__Polynomials_1_1monomial_afb36784e7dbebf26ed3c5fb35344667e}\label{classSymmetric__Polynomials_1_1monomial_afb36784e7dbebf26ed3c5fb35344667e}} 
+\index{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$}!exponent@{exponent}}
+\index{exponent@{exponent}!Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$}}
+\doxysubsubsection{\texorpdfstring{exponent}{exponent}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
+std\+::vector$<$int$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{Symmetric\+\_\+\+Polynomials\+::monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::exponent}
 
 
 
-Powers vector. 
+exponent vector 
 
 
 

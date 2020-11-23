@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structSymmetric__Polynomials_1_1monomial__compare.html" title="Comparator for monomials based on &lt;." alt="" coords="5,5,220,61"/>
+<area shape="rect" id="node1" href="$classSymmetric__Polynomials_1_1generating__const__iterator.html" title=" " alt="" coords="5,5,264,76"/>
+<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1vector__interpolate__generator_1_1const__iterator.html" title="Constant iterator that is used in a ranged for loop to generate the interpolating vectors...." alt="" coords="312,13,503,69"/>
 </map>

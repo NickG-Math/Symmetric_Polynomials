@@ -1,0 +1,5 @@
+<map id="Symmetric_Polynomials::factorial" name="Symmetric_Polynomials::factorial">
+<area shape="rect" id="node1" title="Returns $n!$." alt="" coords="275,39,455,80"/>
+<area shape="rect" id="node2" href="$namespaceSymmetric__Polynomials.html#a7a6bae3e00fa2f0f0e1ed0dd27fbab09" title="Returns vector of all permutations on n letters." alt="" coords="26,5,206,47"/>
+<area shape="rect" id="node3" href="$classSymmetric__Polynomials_1_1permutations__generator.html#a9f653c06e526eda8e6521e9923f2e537" title="Returns the total nuumber of permutations i.e. the factorial." alt="" coords="5,71,227,112"/>
+</map>

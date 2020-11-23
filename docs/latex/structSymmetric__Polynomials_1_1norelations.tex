@@ -30,23 +30,23 @@ Collaboration diagram for Symmetric\+\_\+\+Polynomials\+::norelations\+:\nopageb
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static int \mbox{\hyperlink{structSymmetric__Polynomials_1_1norelations_a058aa91daeaa5f4c577f835fb9769055}{compute\+\_\+degree}} (const std\+::vector$<$ int $>$ \&powers)
-\item 
+static int \mbox{\hyperlink{structSymmetric__Polynomials_1_1norelations_aa5dcbdf1203990f7768c3ff22b6322e3}{compute\+\_\+degree}} (const std\+::vector$<$ int $>$ \&exponent)
+\begin{DoxyCompactList}\small\item\em The degree of a monomial with given exponent. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename monomial\+\_\+ptr $>$ }\\static void \mbox{\hyperlink{structSymmetric__Polynomials_1_1norelations_a66b940e5258e8cb06aa2ea8b04165d13}{apply\+\_\+monomial}} (monomial\+\_\+ptr)
-\item 
+\begin{DoxyCompactList}\small\item\em Apply relations on monomial (i.\+e. do nothing) \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename polynomial\+\_\+ptr $>$ }\\static void \mbox{\hyperlink{structSymmetric__Polynomials_1_1norelations_ad3d5a448bf6b0dee7354c9340ceeada4}{apply\+\_\+polynomial}} (polynomial\+\_\+ptr)
-\item 
-static std\+::vector$<$ int $>$ \mbox{\hyperlink{structSymmetric__Polynomials_1_1norelations_ab0891486f451633fb30d3266f082f4f5}{max\+\_\+powers}} (int variables, int degree)
-\item 
+\begin{DoxyCompactList}\small\item\em Apply relations on polynomial (i.\+e. do nothing) \end{DoxyCompactList}\item 
+static std\+::vector$<$ int $>$ \mbox{\hyperlink{structSymmetric__Polynomials_1_1norelations_ac0c0f7e8a92577d27e92cb5eed6ba6be}{max\+\_\+exponent}} (int variables, int degree)
+\begin{DoxyCompactList}\small\item\em Return max exponent vector corresponding to polynomial of given degree and number of variables. \end{DoxyCompactList}\item 
 static std\+::vector$<$ int $>$ \mbox{\hyperlink{structSymmetric__Polynomials_1_1norelations_a1ac29fbeb03235b47c212a9df7a06b47}{permute}} (const std\+::vector$<$ int $>$ \&v, const std\+::vector$<$ char $>$ \&perm)
-\item 
+\begin{DoxyCompactList}\small\item\em Apply permutation on exponent vector. \end{DoxyCompactList}\item 
 static int \mbox{\hyperlink{structSymmetric__Polynomials_1_1norelations_a66a23cbcf43fd5caf75b82ab696a8cbe}{true\+\_\+variables}} (int n)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Actual number of variables given length of exponent vector (i.\+e. x\+\_\+1,...,x\+\_\+n and n is that number) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 static const bool \mbox{\hyperlink{structSymmetric__Polynomials_1_1norelations_a8e99e0af9f0b212787717f3104554607}{product\+\_\+of\+\_\+monomials\+\_\+is\+\_\+monomial}} = 1
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Product of monomials with no relations is a monomial. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -60,6 +60,10 @@ Class when no relations are needed.
 {\footnotesize\ttfamily template$<$typename monomial\+\_\+ptr $>$ \\
 static void Symmetric\+\_\+\+Polynomials\+::norelations\+::apply\+\_\+monomial (\begin{DoxyParamCaption}\item[{monomial\+\_\+ptr}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
+
+
+Apply relations on monomial (i.\+e. do nothing) 
+
 \mbox{\Hypertarget{structSymmetric__Polynomials_1_1norelations_ad3d5a448bf6b0dee7354c9340ceeada4}\label{structSymmetric__Polynomials_1_1norelations_ad3d5a448bf6b0dee7354c9340ceeada4}} 
 \index{Symmetric\_Polynomials::norelations@{Symmetric\_Polynomials::norelations}!apply\_polynomial@{apply\_polynomial}}
 \index{apply\_polynomial@{apply\_polynomial}!Symmetric\_Polynomials::norelations@{Symmetric\_Polynomials::norelations}}
@@ -67,24 +71,37 @@ static void Symmetric\+\_\+\+Polynomials\+::norelations\+::apply\+\_\+monomial (
 {\footnotesize\ttfamily template$<$typename polynomial\+\_\+ptr $>$ \\
 static void Symmetric\+\_\+\+Polynomials\+::norelations\+::apply\+\_\+polynomial (\begin{DoxyParamCaption}\item[{polynomial\+\_\+ptr}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
-\mbox{\Hypertarget{structSymmetric__Polynomials_1_1norelations_a058aa91daeaa5f4c577f835fb9769055}\label{structSymmetric__Polynomials_1_1norelations_a058aa91daeaa5f4c577f835fb9769055}} 
+
+
+Apply relations on polynomial (i.\+e. do nothing) 
+
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1norelations_aa5dcbdf1203990f7768c3ff22b6322e3}\label{structSymmetric__Polynomials_1_1norelations_aa5dcbdf1203990f7768c3ff22b6322e3}} 
 \index{Symmetric\_Polynomials::norelations@{Symmetric\_Polynomials::norelations}!compute\_degree@{compute\_degree}}
 \index{compute\_degree@{compute\_degree}!Symmetric\_Polynomials::norelations@{Symmetric\_Polynomials::norelations}}
 \doxysubsubsection{\texorpdfstring{compute\_degree()}{compute\_degree()}}
-{\footnotesize\ttfamily static int Symmetric\+\_\+\+Polynomials\+::norelations\+::compute\+\_\+degree (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{powers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily static int Symmetric\+\_\+\+Polynomials\+::norelations\+::compute\+\_\+degree (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{exponent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+The degree of a monomial with given exponent. 
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{structSymmetric__Polynomials_1_1norelations_a058aa91daeaa5f4c577f835fb9769055_cgraph}
+\includegraphics[width=350pt]{structSymmetric__Polynomials_1_1norelations_aa5dcbdf1203990f7768c3ff22b6322e3_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{structSymmetric__Polynomials_1_1norelations_ab0891486f451633fb30d3266f082f4f5}\label{structSymmetric__Polynomials_1_1norelations_ab0891486f451633fb30d3266f082f4f5}} 
-\index{Symmetric\_Polynomials::norelations@{Symmetric\_Polynomials::norelations}!max\_powers@{max\_powers}}
-\index{max\_powers@{max\_powers}!Symmetric\_Polynomials::norelations@{Symmetric\_Polynomials::norelations}}
-\doxysubsubsection{\texorpdfstring{max\_powers()}{max\_powers()}}
-{\footnotesize\ttfamily static std\+::vector$<$int$>$ Symmetric\+\_\+\+Polynomials\+::norelations\+::max\+\_\+powers (\begin{DoxyParamCaption}\item[{int}]{variables,  }\item[{int}]{degree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1norelations_ac0c0f7e8a92577d27e92cb5eed6ba6be}\label{structSymmetric__Polynomials_1_1norelations_ac0c0f7e8a92577d27e92cb5eed6ba6be}} 
+\index{Symmetric\_Polynomials::norelations@{Symmetric\_Polynomials::norelations}!max\_exponent@{max\_exponent}}
+\index{max\_exponent@{max\_exponent}!Symmetric\_Polynomials::norelations@{Symmetric\_Polynomials::norelations}}
+\doxysubsubsection{\texorpdfstring{max\_exponent()}{max\_exponent()}}
+{\footnotesize\ttfamily static std\+::vector$<$int$>$ Symmetric\+\_\+\+Polynomials\+::norelations\+::max\+\_\+exponent (\begin{DoxyParamCaption}\item[{int}]{variables,  }\item[{int}]{degree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return max exponent vector corresponding to polynomial of given degree and number of variables. 
 
 \mbox{\Hypertarget{structSymmetric__Polynomials_1_1norelations_a1ac29fbeb03235b47c212a9df7a06b47}\label{structSymmetric__Polynomials_1_1norelations_a1ac29fbeb03235b47c212a9df7a06b47}} 
 \index{Symmetric\_Polynomials::norelations@{Symmetric\_Polynomials::norelations}!permute@{permute}}
@@ -92,7 +109,12 @@ Here is the call graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{permute()}{permute()}}
 {\footnotesize\ttfamily static std\+::vector$<$int$>$ Symmetric\+\_\+\+Polynomials\+::norelations\+::permute (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{v,  }\item[{const std\+::vector$<$ char $>$ \&}]{perm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Apply permutation on exponent vector. 
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -107,12 +129,20 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
+Actual number of variables given length of exponent vector (i.\+e. x\+\_\+1,...,x\+\_\+n and n is that number) 
+
+
+
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{structSymmetric__Polynomials_1_1norelations_a8e99e0af9f0b212787717f3104554607}\label{structSymmetric__Polynomials_1_1norelations_a8e99e0af9f0b212787717f3104554607}} 
 \index{Symmetric\_Polynomials::norelations@{Symmetric\_Polynomials::norelations}!product\_of\_monomials\_is\_monomial@{product\_of\_monomials\_is\_monomial}}
 \index{product\_of\_monomials\_is\_monomial@{product\_of\_monomials\_is\_monomial}!Symmetric\_Polynomials::norelations@{Symmetric\_Polynomials::norelations}}
 \doxysubsubsection{\texorpdfstring{product\_of\_monomials\_is\_monomial}{product\_of\_monomials\_is\_monomial}}
 {\footnotesize\ttfamily const bool Symmetric\+\_\+\+Polynomials\+::norelations\+::product\+\_\+of\+\_\+monomials\+\_\+is\+\_\+monomial = 1\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Product of monomials with no relations is a monomial. 
 
 
 

@@ -22,17 +22,17 @@ Inheritance diagram for Symmetric\+\_\+\+Polynomials\+::relations\+\_\+base\+:\n
 \begin{DoxyCompactItemize}
 \item 
 static int \mbox{\hyperlink{structSymmetric__Polynomials_1_1relations__base_a17385c769e1de6ede3f07ec2faac9852}{compute\+\_\+degree}} (const std\+::vector$<$ int $>$ \&)
-\begin{DoxyCompactList}\small\item\em Compute degree based on the powers vector and relations. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Compute degree based on the exponent vector and relations. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename monomial\+\_\+ptr $>$ }\\static void \mbox{\hyperlink{structSymmetric__Polynomials_1_1relations__base_a4a80cf0d9077c61442866994fcd41eae}{apply\+\_\+monomial}} (monomial\+\_\+ptr)
 \begin{DoxyCompactList}\small\item\em Apply relations on monomial. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename polynomial\+\_\+ptr $>$ }\\static void \mbox{\hyperlink{structSymmetric__Polynomials_1_1relations__base_a528e88e6a33d87093b9781957fa26a86}{apply\+\_\+polynomial}} (polynomial\+\_\+ptr)
 \begin{DoxyCompactList}\small\item\em Apply relations on polynomial. \end{DoxyCompactList}\item 
-static std\+::vector$<$ int $>$ \mbox{\hyperlink{structSymmetric__Polynomials_1_1relations__base_a3c016dcb115a852373993c46de05f7c7}{max\+\_\+powers}} (int, int)
-\begin{DoxyCompactList}\small\item\em Return max powers vector corresponding to polynomial of given degree and number of variables. \end{DoxyCompactList}\item 
+static std\+::vector$<$ int $>$ \mbox{\hyperlink{structSymmetric__Polynomials_1_1relations__base_ad38f8c620a3ab3570ccc9df35703d883}{max\+\_\+exponent}} (int, int)
+\begin{DoxyCompactList}\small\item\em Return max exponent vector corresponding to polynomial of given degree and number of variables. \end{DoxyCompactList}\item 
 static std\+::vector$<$ int $>$ \mbox{\hyperlink{structSymmetric__Polynomials_1_1relations__base_a085971253da53536098e2e6f86792dd9}{permute}} (const std\+::vector$<$ int $>$ \&, const std\+::vector$<$ char $>$ \&)
-\begin{DoxyCompactList}\small\item\em Apply permutation on powers vector. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Apply permutation on exponent vector. \end{DoxyCompactList}\item 
 static int \mbox{\hyperlink{structSymmetric__Polynomials_1_1relations__base_a8c9ad7e5d2e9680334c05900a0cc5645}{true\+\_\+variables}} (int n)
-\begin{DoxyCompactList}\small\item\em Actual number of variables given length of powers vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Actual number of variables given length of exponent vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -74,17 +74,17 @@ Apply relations on polynomial.
 
 
 
-Compute degree based on the powers vector and relations. 
+Compute degree based on the exponent vector and relations. 
 
-\mbox{\Hypertarget{structSymmetric__Polynomials_1_1relations__base_a3c016dcb115a852373993c46de05f7c7}\label{structSymmetric__Polynomials_1_1relations__base_a3c016dcb115a852373993c46de05f7c7}} 
-\index{Symmetric\_Polynomials::relations\_base@{Symmetric\_Polynomials::relations\_base}!max\_powers@{max\_powers}}
-\index{max\_powers@{max\_powers}!Symmetric\_Polynomials::relations\_base@{Symmetric\_Polynomials::relations\_base}}
-\doxysubsubsection{\texorpdfstring{max\_powers()}{max\_powers()}}
-{\footnotesize\ttfamily static std\+::vector$<$int$>$ Symmetric\+\_\+\+Polynomials\+::relations\+\_\+base\+::max\+\_\+powers (\begin{DoxyParamCaption}\item[{int}]{,  }\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1relations__base_ad38f8c620a3ab3570ccc9df35703d883}\label{structSymmetric__Polynomials_1_1relations__base_ad38f8c620a3ab3570ccc9df35703d883}} 
+\index{Symmetric\_Polynomials::relations\_base@{Symmetric\_Polynomials::relations\_base}!max\_exponent@{max\_exponent}}
+\index{max\_exponent@{max\_exponent}!Symmetric\_Polynomials::relations\_base@{Symmetric\_Polynomials::relations\_base}}
+\doxysubsubsection{\texorpdfstring{max\_exponent()}{max\_exponent()}}
+{\footnotesize\ttfamily static std\+::vector$<$int$>$ Symmetric\+\_\+\+Polynomials\+::relations\+\_\+base\+::max\+\_\+exponent (\begin{DoxyParamCaption}\item[{int}]{,  }\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Return max powers vector corresponding to polynomial of given degree and number of variables. 
+Return max exponent vector corresponding to polynomial of given degree and number of variables. 
 
 \mbox{\Hypertarget{structSymmetric__Polynomials_1_1relations__base_a085971253da53536098e2e6f86792dd9}\label{structSymmetric__Polynomials_1_1relations__base_a085971253da53536098e2e6f86792dd9}} 
 \index{Symmetric\_Polynomials::relations\_base@{Symmetric\_Polynomials::relations\_base}!permute@{permute}}
@@ -94,7 +94,7 @@ Return max powers vector corresponding to polynomial of given degree and number 
 
 
 
-Apply permutation on powers vector. 
+Apply permutation on exponent vector. 
 
 \mbox{\Hypertarget{structSymmetric__Polynomials_1_1relations__base_a8c9ad7e5d2e9680334c05900a0cc5645}\label{structSymmetric__Polynomials_1_1relations__base_a8c9ad7e5d2e9680334c05900a0cc5645}} 
 \index{Symmetric\_Polynomials::relations\_base@{Symmetric\_Polynomials::relations\_base}!true\_variables@{true\_variables}}
@@ -104,7 +104,7 @@ Apply permutation on powers vector.
 
 
 
-Actual number of variables given length of powers vector. 
+Actual number of variables given length of exponent vector. 
 
 
 

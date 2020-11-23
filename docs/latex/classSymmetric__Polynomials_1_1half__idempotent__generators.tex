@@ -31,11 +31,9 @@ Collaboration diagram for Symmetric\+\_\+\+Polynomials\+::half\+\_\+idempotent\+
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators_acb044c778adedf5bd9d4e6081bb50183}{half\+\_\+idempotent\+\_\+generators}} (int \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators_ac9004a6d7f1c3043b5b1a40afd070996}{n}})
-\begin{DoxyCompactList}\small\item\em Constructs the generators, given the number of variables n. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1halfidempotent}{halfidempotent}} $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators_ae0893a2ba27fd4204989cda7573b95f6}{compute\+\_\+product}} (const std\+::vector$<$ int $>$ \&pwr) const
+\begin{DoxyCompactList}\small\item\em Constructs the generators and the relation set. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1halfidempotent}{halfidempotent}} $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators_a422441d04494efde1ff1cb7cbc86c85c}{compute\+\_\+product}} (const std\+::vector$<$ int $>$ \&exponent) const
 \begin{DoxyCompactList}\small\item\em Computes a product of a monomial on our generators Idem, Chern, Twisted\+Chern. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1halfidempotent}{halfidempotent}} $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators_a7fbe427130843c6775fe0107825176c3}{compute\+\_\+product\+\_\+max\+\_\+term}} (const std\+::vector$<$ int $>$ \&pwr) const
-\begin{DoxyCompactList}\small\item\em Computes the dominant term of a product of a monomial on our generators Idem, Chern, Twisted\+Chern. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators_a1bcf78e321dbff9f8699ec7ef3017ae5}{print}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1relations__base}{relations\+\_\+base}} $>$ \&m) const
 \begin{DoxyCompactList}\small\item\em Print a polynomial on the generators Idem, Chern and Twisted\+Chern. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
@@ -47,24 +45,16 @@ int \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators
 \begin{DoxyCompactList}\small\item\em Number of generators. \end{DoxyCompactList}\item 
 std\+::map$<$ std\+::pair$<$ int, int $>$, int $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators_ab430bebbf2b4de9bd24cbb93e72b75e4}{Twisted\+Chern\+\_\+indexer}}
 \begin{DoxyCompactList}\small\item\em Transforms the usual pair index of a Twisted\+Chern class to the single integer index we use for the vector Twisted\+Chern. \end{DoxyCompactList}\item 
-std\+::vector$<$ int $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators_a538ec6b2d79eec8fa8c994e2c9dfb9e0}{dimensions}}
-\begin{DoxyCompactList}\small\item\em The dimensions of the generators Idem, Chern, Twisted\+Chern in this order. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Protected Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-std\+::vector$<$ int $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators_aa77c74cb00f01ef9b638aff84751911e}{max\+\_\+powers\+\_\+given\+\_\+degree}} (int degree) const
-\begin{DoxyCompactList}\small\item\em Vector consisting of the highest term of the twisted Chern classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Protected Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1halfidempotent}{halfidempotent}} $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators_a4ef8af21a9b504c9c01458afef87dd1a}{Idem}}
-\item 
-std\+::vector$<$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1halfidempotent}{halfidempotent}} $>$ $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators_a0e9924d02e184b35c433dc4899058e14}{Chern}}
-\begin{DoxyCompactList}\small\item\em The highest term of y\+\_\+1+...+y\+\_\+n. \end{DoxyCompactList}\item 
-std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1halfidempotent}{halfidempotent}} $>$ $>$ $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators_a1e0dce188f86d0c89d2cdef7e0850b75}{Twisted\+Chern}}
-\begin{DoxyCompactList}\small\item\em Vector consisting of the highest term of the Chern classes. \end{DoxyCompactList}\item 
-const std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators_ab3b3b4bbe87f85e2d755b40c1153993d}{permutations}}
-\begin{DoxyCompactList}\small\item\em All permutations in n variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators_aec399d82b1f9c19804bde1316e6f9632}{variable\+\_\+names}}
+\begin{DoxyCompactList}\small\item\em The names of the generators Idem, Chern and Twisted\+Chern. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators_ad66e7664e032764cf2fe6dbb6b90dd80}{relations}}
+\begin{DoxyCompactList}\small\item\em The left hand side of the relations Idem, Chern and Twisted\+Chern satisfy i.\+e. Idem$^\wedge$\{n+1\}, Idem$^\wedge$s\+Twisted\+Chern\+\_\+\{s,i\} and Twisted\+Chern\+\_\+\{s,i\}Twisted\+Chern\+\_\+\{t,j\} for s$<$=t$<$=s+i. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1halfidempotent}{halfidempotent}} $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators_ae204ab87d6aa6e5460aa7e660f8973f6}{Idem}}
+\begin{DoxyCompactList}\small\item\em a=y\+\_\+1+...+y\+\_\+n \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1halfidempotent}{halfidempotent}} $>$ $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators_a3d6fa89d78ad14df11b3074dc40a4740}{Chern}}
+\begin{DoxyCompactList}\small\item\em Vector consisting of the Chern classes c\+\_\+i. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1halfidempotent}{halfidempotent}} $>$ $>$ $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators_a3b018fc948f096127cb848b029f71f41}{Twisted\+Chern}}
+\begin{DoxyCompactList}\small\item\em Vector consisting of the twisted Chern classes b\+\_\+\{s,j\}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -85,17 +75,17 @@ There are three types of generators (the following is the default order)\+: Idem
 
 
 
-Constructs the generators, given the number of variables n. 
+Constructs the generators and the relation set. 
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1half__idempotent__generators_ae0893a2ba27fd4204989cda7573b95f6}\label{classSymmetric__Polynomials_1_1half__idempotent__generators_ae0893a2ba27fd4204989cda7573b95f6}} 
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1half__idempotent__generators_a422441d04494efde1ff1cb7cbc86c85c}\label{classSymmetric__Polynomials_1_1half__idempotent__generators_a422441d04494efde1ff1cb7cbc86c85c}} 
 \index{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$@{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$}!compute\_product@{compute\_product}}
 \index{compute\_product@{compute\_product}!Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$@{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$}}
 \doxysubsubsection{\texorpdfstring{compute\_product()}{compute\_product()}}
 {\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1halfidempotent}{halfidempotent}}$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators}{Symmetric\+\_\+\+Polynomials\+::half\+\_\+idempotent\+\_\+generators}}$<$ scalar\+\_\+t $>$\+::compute\+\_\+product (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{pwr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1halfidempotent}{halfidempotent}}$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators}{Symmetric\+\_\+\+Polynomials\+::half\+\_\+idempotent\+\_\+generators}}$<$ scalar\+\_\+t $>$\+::compute\+\_\+product (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{exponent }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -105,46 +95,17 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1half__idempotent__generators_ae0893a2ba27fd4204989cda7573b95f6_cgraph}
+\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1half__idempotent__generators_a422441d04494efde1ff1cb7cbc86c85c_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1half__idempotent__generators_ae0893a2ba27fd4204989cda7573b95f6_icgraph}
+\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1half__idempotent__generators_a422441d04494efde1ff1cb7cbc86c85c_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1half__idempotent__generators_a7fbe427130843c6775fe0107825176c3}\label{classSymmetric__Polynomials_1_1half__idempotent__generators_a7fbe427130843c6775fe0107825176c3}} 
-\index{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$@{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$}!compute\_product\_max\_term@{compute\_product\_max\_term}}
-\index{compute\_product\_max\_term@{compute\_product\_max\_term}!Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$@{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$}}
-\doxysubsubsection{\texorpdfstring{compute\_product\_max\_term()}{compute\_product\_max\_term()}}
-{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1halfidempotent}{halfidempotent}}$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators}{Symmetric\+\_\+\+Polynomials\+::half\+\_\+idempotent\+\_\+generators}}$<$ scalar\+\_\+t $>$\+::compute\+\_\+product\+\_\+max\+\_\+term (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{pwr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Computes the dominant term of a product of a monomial on our generators Idem, Chern, Twisted\+Chern. 
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1half__idempotent__generators_a7fbe427130843c6775fe0107825176c3_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1half__idempotent__generators_aa77c74cb00f01ef9b638aff84751911e}\label{classSymmetric__Polynomials_1_1half__idempotent__generators_aa77c74cb00f01ef9b638aff84751911e}} 
-\index{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$@{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$}!max\_powers\_given\_degree@{max\_powers\_given\_degree}}
-\index{max\_powers\_given\_degree@{max\_powers\_given\_degree}!Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$@{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$}}
-\doxysubsubsection{\texorpdfstring{max\_powers\_given\_degree()}{max\_powers\_given\_degree()}}
-{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
-std\+::vector$<$int$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators}{Symmetric\+\_\+\+Polynomials\+::half\+\_\+idempotent\+\_\+generators}}$<$ scalar\+\_\+t $>$\+::max\+\_\+powers\+\_\+given\+\_\+degree (\begin{DoxyParamCaption}\item[{int}]{degree }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
-
-
-
-Vector consisting of the highest term of the twisted Chern classes. 
-
-Returns the max powers in a product of Idem, Chern and Twisted\+Chern that has the desired degree \mbox{\Hypertarget{classSymmetric__Polynomials_1_1half__idempotent__generators_a1bcf78e321dbff9f8699ec7ef3017ae5}\label{classSymmetric__Polynomials_1_1half__idempotent__generators_a1bcf78e321dbff9f8699ec7ef3017ae5}} 
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1half__idempotent__generators_a1bcf78e321dbff9f8699ec7ef3017ae5}\label{classSymmetric__Polynomials_1_1half__idempotent__generators_a1bcf78e321dbff9f8699ec7ef3017ae5}} 
 \index{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$@{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$}!print@{print}}
 \index{print@{print}!Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$@{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$}}
 \doxysubsubsection{\texorpdfstring{print()}{print()}}
@@ -172,34 +133,27 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1half__idempotent__generators_a0e9924d02e184b35c433dc4899058e14}\label{classSymmetric__Polynomials_1_1half__idempotent__generators_a0e9924d02e184b35c433dc4899058e14}} 
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1half__idempotent__generators_a3d6fa89d78ad14df11b3074dc40a4740}\label{classSymmetric__Polynomials_1_1half__idempotent__generators_a3d6fa89d78ad14df11b3074dc40a4740}} 
 \index{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$@{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$}!Chern@{Chern}}
 \index{Chern@{Chern}!Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$@{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$}}
 \doxysubsubsection{\texorpdfstring{Chern}{Chern}}
 {\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
-std\+::vector$<$\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1halfidempotent}{halfidempotent}}$>$ $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators}{Symmetric\+\_\+\+Polynomials\+::half\+\_\+idempotent\+\_\+generators}}$<$ scalar\+\_\+t $>$\+::Chern\hspace{0.3cm}{\ttfamily [protected]}}
+std\+::vector$<$\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1halfidempotent}{halfidempotent}}$>$ $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators}{Symmetric\+\_\+\+Polynomials\+::half\+\_\+idempotent\+\_\+generators}}$<$ scalar\+\_\+t $>$\+::Chern}
 
 
 
-The highest term of y\+\_\+1+...+y\+\_\+n. 
+Vector consisting of the Chern classes c\+\_\+i. 
 
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1half__idempotent__generators_a538ec6b2d79eec8fa8c994e2c9dfb9e0}\label{classSymmetric__Polynomials_1_1half__idempotent__generators_a538ec6b2d79eec8fa8c994e2c9dfb9e0}} 
-\index{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$@{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$}!dimensions@{dimensions}}
-\index{dimensions@{dimensions}!Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$@{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$}}
-\doxysubsubsection{\texorpdfstring{dimensions}{dimensions}}
-{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
-std\+::vector$<$int$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators}{Symmetric\+\_\+\+Polynomials\+::half\+\_\+idempotent\+\_\+generators}}$<$ scalar\+\_\+t $>$\+::dimensions}
-
-
-
-The dimensions of the generators Idem, Chern, Twisted\+Chern in this order. 
-
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1half__idempotent__generators_a4ef8af21a9b504c9c01458afef87dd1a}\label{classSymmetric__Polynomials_1_1half__idempotent__generators_a4ef8af21a9b504c9c01458afef87dd1a}} 
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1half__idempotent__generators_ae204ab87d6aa6e5460aa7e660f8973f6}\label{classSymmetric__Polynomials_1_1half__idempotent__generators_ae204ab87d6aa6e5460aa7e660f8973f6}} 
 \index{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$@{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$}!Idem@{Idem}}
 \index{Idem@{Idem}!Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$@{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$}}
 \doxysubsubsection{\texorpdfstring{Idem}{Idem}}
 {\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1halfidempotent}{halfidempotent}}$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators}{Symmetric\+\_\+\+Polynomials\+::half\+\_\+idempotent\+\_\+generators}}$<$ scalar\+\_\+t $>$\+::Idem\hspace{0.3cm}{\ttfamily [protected]}}
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1halfidempotent}{halfidempotent}}$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators}{Symmetric\+\_\+\+Polynomials\+::half\+\_\+idempotent\+\_\+generators}}$<$ scalar\+\_\+t $>$\+::Idem}
+
+
+
+a=y\+\_\+1+...+y\+\_\+n 
 
 \mbox{\Hypertarget{classSymmetric__Polynomials_1_1half__idempotent__generators_ac9004a6d7f1c3043b5b1a40afd070996}\label{classSymmetric__Polynomials_1_1half__idempotent__generators_ac9004a6d7f1c3043b5b1a40afd070996}} 
 \index{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$@{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$}!n@{n}}
@@ -223,27 +177,27 @@ int \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators
 
 Number of generators. 
 
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1half__idempotent__generators_ab3b3b4bbe87f85e2d755b40c1153993d}\label{classSymmetric__Polynomials_1_1half__idempotent__generators_ab3b3b4bbe87f85e2d755b40c1153993d}} 
-\index{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$@{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$}!permutations@{permutations}}
-\index{permutations@{permutations}!Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$@{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$}}
-\doxysubsubsection{\texorpdfstring{permutations}{permutations}}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1half__idempotent__generators_ad66e7664e032764cf2fe6dbb6b90dd80}\label{classSymmetric__Polynomials_1_1half__idempotent__generators_ad66e7664e032764cf2fe6dbb6b90dd80}} 
+\index{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$@{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$}!relations@{relations}}
+\index{relations@{relations}!Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$@{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{relations}{relations}}
 {\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
-const std\+::vector$<$std\+::vector$<$char$>$ $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators}{Symmetric\+\_\+\+Polynomials\+::half\+\_\+idempotent\+\_\+generators}}$<$ scalar\+\_\+t $>$\+::permutations\hspace{0.3cm}{\ttfamily [protected]}}
+std\+::vector$<$std\+::vector$<$int$>$ $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators}{Symmetric\+\_\+\+Polynomials\+::half\+\_\+idempotent\+\_\+generators}}$<$ scalar\+\_\+t $>$\+::relations}
 
 
 
-All permutations in n variables. 
+The left hand side of the relations Idem, Chern and Twisted\+Chern satisfy i.\+e. Idem$^\wedge$\{n+1\}, Idem$^\wedge$s\+Twisted\+Chern\+\_\+\{s,i\} and Twisted\+Chern\+\_\+\{s,i\}Twisted\+Chern\+\_\+\{t,j\} for s$<$=t$<$=s+i. 
 
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1half__idempotent__generators_a1e0dce188f86d0c89d2cdef7e0850b75}\label{classSymmetric__Polynomials_1_1half__idempotent__generators_a1e0dce188f86d0c89d2cdef7e0850b75}} 
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1half__idempotent__generators_a3b018fc948f096127cb848b029f71f41}\label{classSymmetric__Polynomials_1_1half__idempotent__generators_a3b018fc948f096127cb848b029f71f41}} 
 \index{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$@{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$}!TwistedChern@{TwistedChern}}
 \index{TwistedChern@{TwistedChern}!Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$@{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$}}
 \doxysubsubsection{\texorpdfstring{TwistedChern}{TwistedChern}}
 {\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
-std\+::vector$<$std\+::vector$<$\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1halfidempotent}{halfidempotent}}$>$ $>$ $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators}{Symmetric\+\_\+\+Polynomials\+::half\+\_\+idempotent\+\_\+generators}}$<$ scalar\+\_\+t $>$\+::Twisted\+Chern\hspace{0.3cm}{\ttfamily [protected]}}
+std\+::vector$<$std\+::vector$<$\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1halfidempotent}{halfidempotent}}$>$ $>$ $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators}{Symmetric\+\_\+\+Polynomials\+::half\+\_\+idempotent\+\_\+generators}}$<$ scalar\+\_\+t $>$\+::Twisted\+Chern}
 
 
 
-Vector consisting of the highest term of the Chern classes. 
+Vector consisting of the twisted Chern classes b\+\_\+\{s,j\}. 
 
 \mbox{\Hypertarget{classSymmetric__Polynomials_1_1half__idempotent__generators_ab430bebbf2b4de9bd24cbb93e72b75e4}\label{classSymmetric__Polynomials_1_1half__idempotent__generators_ab430bebbf2b4de9bd24cbb93e72b75e4}} 
 \index{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$@{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$}!TwistedChern\_indexer@{TwistedChern\_indexer}}
@@ -255,6 +209,17 @@ std\+::map$<$std\+::pair$<$int, int$>$, int$>$ \mbox{\hyperlink{classSymmetric__
 
 
 Transforms the usual pair index of a Twisted\+Chern class to the single integer index we use for the vector Twisted\+Chern. 
+
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1half__idempotent__generators_aec399d82b1f9c19804bde1316e6f9632}\label{classSymmetric__Polynomials_1_1half__idempotent__generators_aec399d82b1f9c19804bde1316e6f9632}} 
+\index{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$@{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$}!variable\_names@{variable\_names}}
+\index{variable\_names@{variable\_names}!Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$@{Symmetric\_Polynomials::half\_idempotent\_generators$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{variable\_names}{variable\_names}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+std\+::vector$<$std\+::string$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1half__idempotent__generators}{Symmetric\+\_\+\+Polynomials\+::half\+\_\+idempotent\+\_\+generators}}$<$ scalar\+\_\+t $>$\+::variable\+\_\+names}
+
+
+
+The names of the generators Idem, Chern and Twisted\+Chern. 
 
 
 

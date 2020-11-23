@@ -9,19 +9,22 @@ Generates all permutations on a number of letters.
 
 {\ttfamily \#include $<$Permutations.\+h$>$}
 
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classSymmetric__Polynomials_1_1permutations__generator_1_1const__iterator}{const\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em Constant iterator that is used in a ranged for loop to generate the permutations. Non constant version is illegal. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+long \mbox{\hyperlink{classSymmetric__Polynomials_1_1permutations__generator_a9f653c06e526eda8e6521e9923f2e537}{size}} () const
+\begin{DoxyCompactList}\small\item\em Returns the total nuumber of permutations i.\+e. the factorial. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classSymmetric__Polynomials_1_1permutations__generator_ab053821b3ca274b6ef292aae9a395dc5}{permutations\+\_\+generator}} (char n)
-\begin{DoxyCompactList}\small\item\em Constructs and initializes generator. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classSymmetric__Polynomials_1_1permutations__generator_a7103dc21fcbff4b4922762cf759f4890}{keep\+\_\+going}} ()
-\begin{DoxyCompactList}\small\item\em Returns 0 if there are no more permutations to be generated. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classSymmetric__Polynomials_1_1permutations__generator_a2ac733d91a2854f0396db2d790a44615}{initialize}} ()
-\begin{DoxyCompactList}\small\item\em Initializes generator. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classSymmetric__Polynomials_1_1permutations__generator_aa0b00748a047f8aa867d1c945f91a49c}{update}} ()
-\begin{DoxyCompactList}\small\item\em Generates new permutation. \end{DoxyCompactList}\item 
-std\+::vector$<$ char $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1permutations__generator_a11c9388582283b1acb94bf5b00e736cd}{get\+\_\+generated}} () const
-\begin{DoxyCompactList}\small\item\em Returns generated permutation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Constructor using number of letters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1permutations__generator_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classSymmetric__Polynomials_1_1permutations__generator_aee144e18adf464dec5cec83c433cacc8}{begin}} () const
+\begin{DoxyCompactList}\small\item\em Initial generator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1permutations__generator_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classSymmetric__Polynomials_1_1permutations__generator_a24de5bb28c618605f0ba801ef5626a49}{end}} () const
+\begin{DoxyCompactList}\small\item\em Terminal generator. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -36,84 +39,60 @@ Generates all permutations on a number of letters.
 
 
 
-Constructs and initializes generator. 
+Constructor using number of letters. 
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1permutations__generator_ab053821b3ca274b6ef292aae9a395dc5_cgraph}
+\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1permutations__generator_ab053821b3ca274b6ef292aae9a395dc5_icgraph}
 \end{center}
 \end{figure}
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1permutations__generator_a11c9388582283b1acb94bf5b00e736cd}\label{classSymmetric__Polynomials_1_1permutations__generator_a11c9388582283b1acb94bf5b00e736cd}} 
-\index{Symmetric\_Polynomials::permutations\_generator@{Symmetric\_Polynomials::permutations\_generator}!get\_generated@{get\_generated}}
-\index{get\_generated@{get\_generated}!Symmetric\_Polynomials::permutations\_generator@{Symmetric\_Polynomials::permutations\_generator}}
-\doxysubsubsection{\texorpdfstring{get\_generated()}{get\_generated()}}
-{\footnotesize\ttfamily std\+::vector$<$char$>$ Symmetric\+\_\+\+Polynomials\+::permutations\+\_\+generator\+::get\+\_\+generated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1permutations__generator_aee144e18adf464dec5cec83c433cacc8}\label{classSymmetric__Polynomials_1_1permutations__generator_aee144e18adf464dec5cec83c433cacc8}} 
+\index{Symmetric\_Polynomials::permutations\_generator@{Symmetric\_Polynomials::permutations\_generator}!begin@{begin}}
+\index{begin@{begin}!Symmetric\_Polynomials::permutations\_generator@{Symmetric\_Polynomials::permutations\_generator}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSymmetric__Polynomials_1_1permutations__generator_1_1const__iterator}{const\+\_\+iterator}} Symmetric\+\_\+\+Polynomials\+::permutations\+\_\+generator\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Returns generated permutation. 
+Initial generator. 
 
-Here is the caller graph for this function\+:\nopagebreak
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1permutations__generator_a24de5bb28c618605f0ba801ef5626a49}\label{classSymmetric__Polynomials_1_1permutations__generator_a24de5bb28c618605f0ba801ef5626a49}} 
+\index{Symmetric\_Polynomials::permutations\_generator@{Symmetric\_Polynomials::permutations\_generator}!end@{end}}
+\index{end@{end}!Symmetric\_Polynomials::permutations\_generator@{Symmetric\_Polynomials::permutations\_generator}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSymmetric__Polynomials_1_1permutations__generator_1_1const__iterator}{const\+\_\+iterator}} Symmetric\+\_\+\+Polynomials\+::permutations\+\_\+generator\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Terminal generator. 
+
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1permutations__generator_a11c9388582283b1acb94bf5b00e736cd_icgraph}
+\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1permutations__generator_a24de5bb28c618605f0ba801ef5626a49_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1permutations__generator_a2ac733d91a2854f0396db2d790a44615}\label{classSymmetric__Polynomials_1_1permutations__generator_a2ac733d91a2854f0396db2d790a44615}} 
-\index{Symmetric\_Polynomials::permutations\_generator@{Symmetric\_Polynomials::permutations\_generator}!initialize@{initialize}}
-\index{initialize@{initialize}!Symmetric\_Polynomials::permutations\_generator@{Symmetric\_Polynomials::permutations\_generator}}
-\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
-{\footnotesize\ttfamily void Symmetric\+\_\+\+Polynomials\+::permutations\+\_\+generator\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1permutations__generator_a9f653c06e526eda8e6521e9923f2e537}\label{classSymmetric__Polynomials_1_1permutations__generator_a9f653c06e526eda8e6521e9923f2e537}} 
+\index{Symmetric\_Polynomials::permutations\_generator@{Symmetric\_Polynomials::permutations\_generator}!size@{size}}
+\index{size@{size}!Symmetric\_Polynomials::permutations\_generator@{Symmetric\_Polynomials::permutations\_generator}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily long Symmetric\+\_\+\+Polynomials\+::permutations\+\_\+generator\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Initializes generator. 
+Returns the total nuumber of permutations i.\+e. the factorial. 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1permutations__generator_a2ac733d91a2854f0396db2d790a44615_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1permutations__generator_a7103dc21fcbff4b4922762cf759f4890}\label{classSymmetric__Polynomials_1_1permutations__generator_a7103dc21fcbff4b4922762cf759f4890}} 
-\index{Symmetric\_Polynomials::permutations\_generator@{Symmetric\_Polynomials::permutations\_generator}!keep\_going@{keep\_going}}
-\index{keep\_going@{keep\_going}!Symmetric\_Polynomials::permutations\_generator@{Symmetric\_Polynomials::permutations\_generator}}
-\doxysubsubsection{\texorpdfstring{keep\_going()}{keep\_going()}}
-{\footnotesize\ttfamily bool Symmetric\+\_\+\+Polynomials\+::permutations\+\_\+generator\+::keep\+\_\+going (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Returns 0 if there are no more permutations to be generated. 
-
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1permutations__generator_a7103dc21fcbff4b4922762cf759f4890_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1permutations__generator_aa0b00748a047f8aa867d1c945f91a49c}\label{classSymmetric__Polynomials_1_1permutations__generator_aa0b00748a047f8aa867d1c945f91a49c}} 
-\index{Symmetric\_Polynomials::permutations\_generator@{Symmetric\_Polynomials::permutations\_generator}!update@{update}}
-\index{update@{update}!Symmetric\_Polynomials::permutations\_generator@{Symmetric\_Polynomials::permutations\_generator}}
-\doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily void Symmetric\+\_\+\+Polynomials\+::permutations\+\_\+generator\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Generates new permutation. 
-
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1permutations__generator_aa0b00748a047f8aa867d1c945f91a49c_icgraph}
+\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1permutations__generator_a9f653c06e526eda8e6521e9923f2e537_cgraph}
 \end{center}
 \end{figure}
 

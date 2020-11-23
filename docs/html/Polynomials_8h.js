@@ -4,7 +4,7 @@ var Polynomials_8h =
     [ "monomial", "classSymmetric__Polynomials_1_1monomial.html", "classSymmetric__Polynomials_1_1monomial" ],
     [ "monomial_compare", "structSymmetric__Polynomials_1_1monomial__compare.html", "structSymmetric__Polynomials_1_1monomial__compare" ],
     [ "polynomial", "classSymmetric__Polynomials_1_1polynomial.html", "classSymmetric__Polynomials_1_1polynomial" ],
-    [ "general_compute_degree", "Polynomials_8h.html#aaeb18971bd95fc1f7751c3b1420741e5", null ],
+    [ "general_compute_degree", "Polynomials_8h.html#aab354108e2e7ef8e3cada8a4b1716409", null ],
     [ "multiply", "Polynomials_8h.html#aa3071663e4ec8ac6e28de064de66e492", null ],
     [ "operator*", "Polynomials_8h.html#a4660c20842e3b1127be52c75a456c656", null ],
     [ "operator*", "Polynomials_8h.html#a990b557830c3f886acfec2df4bbf0c2e", null ],

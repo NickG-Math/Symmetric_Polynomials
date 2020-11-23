@@ -91,58 +91,42 @@ $(document).ready(function(){initNavTree('classSymmetric__Polynomials_1_1vector_
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classSymmetric__Polynomials_1_1vector__interpolate__generator-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Symmetric_Polynomials::vector_interpolate_generator Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Generates all vectors between a given min and max vector, and satisfying a given policy.  
+<p>Generates all vectors interpolating between a given min and max vector (with the same length), and satisfying a given policy.  
  <a href="classSymmetric__Polynomials_1_1vector__interpolate__generator.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Generators_8h_source.html">Generators.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for Symmetric_Polynomials::vector_interpolate_generator:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSymmetric__Polynomials_1_1vector__interpolate__generator__inherit__graph.png" border="0" usemap="#Symmetric__Polynomials_1_1vector__interpolate__generator_inherit__map" alt="Inheritance graph"/></div>
-<map name="Symmetric__Polynomials_1_1vector__interpolate__generator_inherit__map" id="Symmetric__Polynomials_1_1vector__interpolate__generator_inherit__map">
-<area shape="rect" title="Generates all vectors between a given min and max vector, and satisfying a given policy." alt="" coords="19,5,199,61"/>
-<area shape="rect" href="structSymmetric__Polynomials_1_1monomial__basis__generator.html" title="Generates a basis of monomials in given number of variables and degree." alt="" coords="5,109,212,165"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1vector__interpolate__generator_1_1const__iterator.html">const_iterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant iterator that is used in a ranged for loop to generate the interpolating vectors. Non constant version is illegal.  <a href="classSymmetric__Polynomials_1_1vector__interpolate__generator_1_1const__iterator.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:abb646b4eebb836f4900ecd55e83718dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1vector__interpolate__generator.html#abb646b4eebb836f4900ecd55e83718dc">vector_interpolate_generator</a> (const std::vector&lt; int &gt; &amp;min, const std::vector&lt; int &gt; &amp;max, const std::function&lt; char(const std::vector&lt; int &gt; &amp;)&gt; &amp;policy=<a class="el" href="namespaceSymmetric__Polynomials_1_1policy.html#ac9a171c5b949f5d236b4502d73f6d2f9">policy::always_true</a>&lt; std::vector&lt; int &gt;&gt;)</td></tr>
 <tr class="memdesc:abb646b4eebb836f4900ecd55e83718dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor using min, max and policy.  <a href="classSymmetric__Polynomials_1_1vector__interpolate__generator.html#abb646b4eebb836f4900ecd55e83718dc">More...</a><br /></td></tr>
 <tr class="separator:abb646b4eebb836f4900ecd55e83718dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e649a895cfd34636b3a64dc16ea510d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1vector__interpolate__generator.html#a9e649a895cfd34636b3a64dc16ea510d">get_generated</a> () const</td></tr>
-<tr class="memdesc:a9e649a895cfd34636b3a64dc16ea510d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the generated vector.  <a href="classSymmetric__Polynomials_1_1vector__interpolate__generator.html#a9e649a895cfd34636b3a64dc16ea510d">More...</a><br /></td></tr>
-<tr class="separator:a9e649a895cfd34636b3a64dc16ea510d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b0621b44a9b198297030072be712e1f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1vector__interpolate__generator.html#a7b0621b44a9b198297030072be712e1f">keep_going</a> ()</td></tr>
-<tr class="memdesc:a7b0621b44a9b198297030072be712e1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">False if all vectors have been generated.  <a href="classSymmetric__Polynomials_1_1vector__interpolate__generator.html#a7b0621b44a9b198297030072be712e1f">More...</a><br /></td></tr>
-<tr class="separator:a7b0621b44a9b198297030072be712e1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9ae4d9919dd789870112dde1d48b01e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1vector__interpolate__generator.html#ae9ae4d9919dd789870112dde1d48b01e">initialize</a> ()</td></tr>
-<tr class="memdesc:ae9ae4d9919dd789870112dde1d48b01e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize generator.  <a href="classSymmetric__Polynomials_1_1vector__interpolate__generator.html#ae9ae4d9919dd789870112dde1d48b01e">More...</a><br /></td></tr>
-<tr class="separator:ae9ae4d9919dd789870112dde1d48b01e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d58ee4c9e85a055f81d63203c9e2c5a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1vector__interpolate__generator.html#a7d58ee4c9e85a055f81d63203c9e2c5a">policy_satisfied</a> ()</td></tr>
-<tr class="memdesc:a7d58ee4c9e85a055f81d63203c9e2c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if policy is satisfied.  <a href="classSymmetric__Polynomials_1_1vector__interpolate__generator.html#a7d58ee4c9e85a055f81d63203c9e2c5a">More...</a><br /></td></tr>
-<tr class="separator:a7d58ee4c9e85a055f81d63203c9e2c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac57e2cd293efe2e222a2c8c9bfec2109"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1vector__interpolate__generator.html#ac57e2cd293efe2e222a2c8c9bfec2109">update</a> ()</td></tr>
-<tr class="memdesc:ac57e2cd293efe2e222a2c8c9bfec2109"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates new vector.  <a href="classSymmetric__Polynomials_1_1vector__interpolate__generator.html#ac57e2cd293efe2e222a2c8c9bfec2109">More...</a><br /></td></tr>
-<tr class="separator:ac57e2cd293efe2e222a2c8c9bfec2109"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:aefd3ae38c85f6baef04e4346d40166d4"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1vector__interpolate__generator.html#aefd3ae38c85f6baef04e4346d40166d4">total</a></td></tr>
-<tr class="memdesc:aefd3ae38c85f6baef04e4346d40166d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The total number of vectors.  <a href="classSymmetric__Polynomials_1_1vector__interpolate__generator.html#aefd3ae38c85f6baef04e4346d40166d4">More...</a><br /></td></tr>
-<tr class="separator:aefd3ae38c85f6baef04e4346d40166d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d15d2426618c2237bbecdf408b358ab"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1vector__interpolate__generator.html#a1d15d2426618c2237bbecdf408b358ab">size</a> ()</td></tr>
+<tr class="memdesc:a1d15d2426618c2237bbecdf408b358ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns upper bound on the amount of generated elements.  <a href="classSymmetric__Polynomials_1_1vector__interpolate__generator.html#a1d15d2426618c2237bbecdf408b358ab">More...</a><br /></td></tr>
+<tr class="separator:a1d15d2426618c2237bbecdf408b358ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a645f96808ee04e458f08ba13fabd0ab7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1vector__interpolate__generator_1_1const__iterator.html">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1vector__interpolate__generator.html#a645f96808ee04e458f08ba13fabd0ab7">begin</a> () const</td></tr>
+<tr class="memdesc:a645f96808ee04e458f08ba13fabd0ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initial generator.  <a href="classSymmetric__Polynomials_1_1vector__interpolate__generator.html#a645f96808ee04e458f08ba13fabd0ab7">More...</a><br /></td></tr>
+<tr class="separator:a645f96808ee04e458f08ba13fabd0ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06a29e0befd57895dfb39d436581feee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1vector__interpolate__generator_1_1const__iterator.html">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1vector__interpolate__generator.html#a06a29e0befd57895dfb39d436581feee">end</a> () const</td></tr>
+<tr class="memdesc:a06a29e0befd57895dfb39d436581feee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminal generator.  <a href="classSymmetric__Polynomials_1_1vector__interpolate__generator.html#a06a29e0befd57895dfb39d436581feee">More...</a><br /></td></tr>
+<tr class="separator:a06a29e0befd57895dfb39d436581feee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Generates all vectors between a given min and max vector, and satisfying a given policy. </p>
-<p>Don't use with empty vectors with this! </p>
+<div class="textblock"><p>Generates all vectors interpolating between a given min and max vector (with the same length), and satisfying a given policy. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="abb646b4eebb836f4900ecd55e83718dc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abb646b4eebb836f4900ecd55e83718dc">&#9670;&nbsp;</a></span>vector_interpolate_generator()</h2>
@@ -185,21 +169,12 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructor using min, max and policy. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSymmetric__Polynomials_1_1vector__interpolate__generator_abb646b4eebb836f4900ecd55e83718dc_cgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1vector__interpolate__generator_abb646b4eebb836f4900ecd55e83718dc_cgraph" alt=""/></div>
-<map name="classSymmetric__Polynomials_1_1vector__interpolate__generator_abb646b4eebb836f4900ecd55e83718dc_cgraph" id="classSymmetric__Polynomials_1_1vector__interpolate__generator_abb646b4eebb836f4900ecd55e83718dc_cgraph">
-<area shape="rect" title="Constructor using min, max and policy." alt="" coords="5,5,224,76"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1vector__interpolate__generator.html#ae9ae4d9919dd789870112dde1d48b01e" title="Initialize generator." alt="" coords="272,13,452,69"/>
-</map>
-</div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a9e649a895cfd34636b3a64dc16ea510d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e649a895cfd34636b3a64dc16ea510d">&#9670;&nbsp;</a></span>get_generated()</h2>
+<a id="a645f96808ee04e458f08ba13fabd0ab7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a645f96808ee04e458f08ba13fabd0ab7">&#9670;&nbsp;</a></span>begin()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -208,7 +183,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;int&gt; Symmetric_Polynomials::vector_interpolate_generator::get_generated </td>
+          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1vector__interpolate__generator_1_1const__iterator.html">const_iterator</a> Symmetric_Polynomials::vector_interpolate_generator::begin </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -221,23 +196,12 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the generated vector. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSymmetric__Polynomials_1_1vector__interpolate__generator_a9e649a895cfd34636b3a64dc16ea510d_icgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1vector__interpolate__generator_a9e649a895cfd34636b3a64dc16ea510d_icgraph" alt=""/></div>
-<map name="classSymmetric__Polynomials_1_1vector__interpolate__generator_a9e649a895cfd34636b3a64dc16ea510d_icgraph" id="classSymmetric__Polynomials_1_1vector__interpolate__generator_a9e649a895cfd34636b3a64dc16ea510d_icgraph">
-<area shape="rect" title="Returns the generated vector." alt="" coords="488,43,683,99"/>
-<area shape="rect" href="structSymmetric__Polynomials_1_1monomial__basis__generator.html#aa736ef8397a038f89e465d3bc2bc7d1d" title="Returns the generated monomial." alt="" coords="233,5,440,61"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#aa594e9902e2709cb0ba760b14577b7ee" title="Returns all vectors between min, max and satisfying a given policy." alt="" coords="247,86,427,127"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a591a8f1544a9eb3c4c8113d4e55df622" title="Returns the monomial basis in given number of variables and degree." alt="" coords="5,13,185,54"/>
-</map>
-</div>
+<p>Initial generator. </p>
 
 </div>
 </div>
-<a id="ae9ae4d9919dd789870112dde1d48b01e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9ae4d9919dd789870112dde1d48b01e">&#9670;&nbsp;</a></span>initialize()</h2>
+<a id="a06a29e0befd57895dfb39d436581feee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06a29e0befd57895dfb39d436581feee">&#9670;&nbsp;</a></span>end()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -246,7 +210,43 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Symmetric_Polynomials::vector_interpolate_generator::initialize </td>
+          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1vector__interpolate__generator_1_1const__iterator.html">const_iterator</a> Symmetric_Polynomials::vector_interpolate_generator::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Terminal generator. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSymmetric__Polynomials_1_1vector__interpolate__generator_a06a29e0befd57895dfb39d436581feee_cgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1vector__interpolate__generator_a06a29e0befd57895dfb39d436581feee_cgraph" alt=""/></div>
+<map name="classSymmetric__Polynomials_1_1vector__interpolate__generator_a06a29e0befd57895dfb39d436581feee_cgraph" id="classSymmetric__Polynomials_1_1vector__interpolate__generator_a06a29e0befd57895dfb39d436581feee_cgraph">
+<area shape="rect" title="Terminal generator." alt="" coords="5,20,185,76"/>
+<area shape="rect" href="classSymmetric__Polynomials_1_1generating__const__iterator.html#a2cd4b23de0dd5556bce98a1cf1811410" title="Terminal iterator." alt="" coords="233,5,460,91"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1d15d2426618c2237bbecdf408b358ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d15d2426618c2237bbecdf408b358ab">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long Symmetric_Polynomials::vector_interpolate_generator::size </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -259,144 +259,17 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Initialize generator. </p>
+<p>Returns upper bound on the amount of generated elements. </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classSymmetric__Polynomials_1_1vector__interpolate__generator_ae9ae4d9919dd789870112dde1d48b01e_icgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1vector__interpolate__generator_ae9ae4d9919dd789870112dde1d48b01e_icgraph" alt=""/></div>
-<map name="classSymmetric__Polynomials_1_1vector__interpolate__generator_ae9ae4d9919dd789870112dde1d48b01e_icgraph" id="classSymmetric__Polynomials_1_1vector__interpolate__generator_ae9ae4d9919dd789870112dde1d48b01e_icgraph">
-<area shape="rect" title="Initialize generator." alt="" coords="272,13,452,69"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1vector__interpolate__generator.html#abb646b4eebb836f4900ecd55e83718dc" title="Constructor using min, max and policy." alt="" coords="5,5,224,76"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a7b0621b44a9b198297030072be712e1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b0621b44a9b198297030072be712e1f">&#9670;&nbsp;</a></span>keep_going()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Symmetric_Polynomials::vector_interpolate_generator::keep_going </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>False if all vectors have been generated. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSymmetric__Polynomials_1_1vector__interpolate__generator_a7b0621b44a9b198297030072be712e1f_icgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1vector__interpolate__generator_a7b0621b44a9b198297030072be712e1f_icgraph" alt=""/></div>
-<map name="classSymmetric__Polynomials_1_1vector__interpolate__generator_a7b0621b44a9b198297030072be712e1f_icgraph" id="classSymmetric__Polynomials_1_1vector__interpolate__generator_a7b0621b44a9b198297030072be712e1f_icgraph">
-<area shape="rect" title="False if all vectors have been generated." alt="" coords="233,31,413,87"/>
+<div class="center"><img src="classSymmetric__Polynomials_1_1vector__interpolate__generator_a1d15d2426618c2237bbecdf408b358ab_icgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1vector__interpolate__generator_a1d15d2426618c2237bbecdf408b358ab_icgraph" alt=""/></div>
+<map name="classSymmetric__Polynomials_1_1vector__interpolate__generator_a1d15d2426618c2237bbecdf408b358ab_icgraph" id="classSymmetric__Polynomials_1_1vector__interpolate__generator_a1d15d2426618c2237bbecdf408b358ab_icgraph">
+<area shape="rect" title="Returns upper bound on the amount of generated elements." alt="" coords="233,31,413,87"/>
 <area shape="rect" href="namespaceSymmetric__Polynomials.html#a591a8f1544a9eb3c4c8113d4e55df622" title="Returns the monomial basis in given number of variables and degree." alt="" coords="5,5,185,47"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#aa594e9902e2709cb0ba760b14577b7ee" title="Returns all vectors between min, max and satisfying a given policy." alt="" coords="5,71,185,112"/>
+<area shape="rect" href="namespaceSymmetric__Polynomials.html#aa594e9902e2709cb0ba760b14577b7ee" title="Returns all vectors interpolating between min, max and satisfying a given policy." alt="" coords="5,71,185,112"/>
 </map>
 </div>
-
-</div>
-</div>
-<a id="a7d58ee4c9e85a055f81d63203c9e2c5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d58ee4c9e85a055f81d63203c9e2c5a">&#9670;&nbsp;</a></span>policy_satisfied()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Symmetric_Polynomials::vector_interpolate_generator::policy_satisfied </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Checks if policy is satisfied. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSymmetric__Polynomials_1_1vector__interpolate__generator_a7d58ee4c9e85a055f81d63203c9e2c5a_icgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1vector__interpolate__generator_a7d58ee4c9e85a055f81d63203c9e2c5a_icgraph" alt=""/></div>
-<map name="classSymmetric__Polynomials_1_1vector__interpolate__generator_a7d58ee4c9e85a055f81d63203c9e2c5a_icgraph" id="classSymmetric__Polynomials_1_1vector__interpolate__generator_a7d58ee4c9e85a055f81d63203c9e2c5a_icgraph">
-<area shape="rect" title="Checks if policy is satisfied." alt="" coords="233,31,435,87"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a591a8f1544a9eb3c4c8113d4e55df622" title="Returns the monomial basis in given number of variables and degree." alt="" coords="5,5,185,47"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#aa594e9902e2709cb0ba760b14577b7ee" title="Returns all vectors between min, max and satisfying a given policy." alt="" coords="5,71,185,112"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="ac57e2cd293efe2e222a2c8c9bfec2109"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac57e2cd293efe2e222a2c8c9bfec2109">&#9670;&nbsp;</a></span>update()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Symmetric_Polynomials::vector_interpolate_generator::update </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Generates new vector. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSymmetric__Polynomials_1_1vector__interpolate__generator_ac57e2cd293efe2e222a2c8c9bfec2109_icgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1vector__interpolate__generator_ac57e2cd293efe2e222a2c8c9bfec2109_icgraph" alt=""/></div>
-<map name="classSymmetric__Polynomials_1_1vector__interpolate__generator_ac57e2cd293efe2e222a2c8c9bfec2109_icgraph" id="classSymmetric__Polynomials_1_1vector__interpolate__generator_ac57e2cd293efe2e222a2c8c9bfec2109_icgraph">
-<area shape="rect" title="Generates new vector." alt="" coords="233,31,413,87"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a591a8f1544a9eb3c4c8113d4e55df622" title="Returns the monomial basis in given number of variables and degree." alt="" coords="5,5,185,47"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#aa594e9902e2709cb0ba760b14577b7ee" title="Returns all vectors between min, max and satisfying a given policy." alt="" coords="5,71,185,112"/>
-</map>
-</div>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="aefd3ae38c85f6baef04e4346d40166d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefd3ae38c85f6baef04e4346d40166d4">&#9670;&nbsp;</a></span>total</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">long Symmetric_Polynomials::vector_interpolate_generator::total</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The total number of vectors. </p>
 
 </div>
 </div>

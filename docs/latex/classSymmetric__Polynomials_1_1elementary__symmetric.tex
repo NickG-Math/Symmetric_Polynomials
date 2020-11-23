@@ -21,18 +21,20 @@ Inheritance diagram for Symmetric\+\_\+\+Polynomials\+::elementary\+\_\+symmetri
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1norelations}{norelations}} $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1elementary__symmetric_a8854a3f8bff99fd1ed74db17da6c60da}{compute\+\_\+product}} (const std\+::vector$<$ int $>$ \&pwr)
-\begin{DoxyCompactList}\small\item\em Given vector pwr computes e\+\_\+1$^\wedge$\{pwr\+\_\+1\}$\ast$...$\ast$e\+\_\+n$^\wedge$\{pwr\+\_\+n\}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1norelations}{norelations}} $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1elementary__symmetric_aecec7e35ac4152f7181d111b4709d2ea}{compute\+\_\+product}} (const std\+::vector$<$ int $>$ \&exponent)
+\begin{DoxyCompactList}\small\item\em Given vector exponent computes e\+\_\+1$^\wedge$\{exponent\+\_\+1\}$\ast$...$\ast$e\+\_\+n$^\wedge$\{exponent\+\_\+n\}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1elementary__symmetric_a333ee90b9510e9205fa6f0b8dd1ff7ce}{elementary\+\_\+symmetric}} (int n)
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1elementary__symmetric_a333ee90b9510e9205fa6f0b8dd1ff7ce}{elementary\+\_\+symmetric}} (int \mbox{\hyperlink{classSymmetric__Polynomials_1_1elementary__symmetric_a0a03a2914be2c0174827ef6efdd05fda}{n}})
 \begin{DoxyCompactList}\small\item\em Constructs vector of elementary symmetric polynomials in terms of the variables x\+\_\+1,...,x\+\_\+n. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-std\+::vector$<$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1norelations}{norelations}} $>$ $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1elementary__symmetric_aac645808fd6bbfd0f94911e301bce584}{elementary\+\_\+symmetric\+\_\+polynomials}}
-\begin{DoxyCompactList}\small\item\em Vector containing the dominant term of the elementary symmetric polynomials e\+\_\+1,...,e\+\_\+n (i.\+e. x\+\_\+1...x\+\_\+k) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSymmetric__Polynomials_1_1elementary__symmetric_a0a03a2914be2c0174827ef6efdd05fda}{n}}
+\begin{DoxyCompactList}\small\item\em Number of Variables. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1norelations}{norelations}} $>$ $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1elementary__symmetric_a7529ee1fe72369b999a8554c65f53ec3}{elementary\+\_\+symmetric\+\_\+polynomials}}
+\begin{DoxyCompactList}\small\item\em Vector containing the elementary symmetric polynomials e\+\_\+1,...,e\+\_\+n. \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1elementary__symmetric_aadec52a818415164e65ce9b4767b57af}{elementary\+\_\+symmetric\+\_\+names}}
 \begin{DoxyCompactList}\small\item\em Vector containing the names \char`\"{}e\+\_\+i\char`\"{} of the elementary symmetric polynomials e\+\_\+1,...,e\+\_\+n. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -58,22 +60,22 @@ Constructs vector of elementary symmetric polynomials in terms of the variables 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1elementary__symmetric_a8854a3f8bff99fd1ed74db17da6c60da}\label{classSymmetric__Polynomials_1_1elementary__symmetric_a8854a3f8bff99fd1ed74db17da6c60da}} 
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1elementary__symmetric_aecec7e35ac4152f7181d111b4709d2ea}\label{classSymmetric__Polynomials_1_1elementary__symmetric_aecec7e35ac4152f7181d111b4709d2ea}} 
 \index{Symmetric\_Polynomials::elementary\_symmetric$<$ scalar\_t $>$@{Symmetric\_Polynomials::elementary\_symmetric$<$ scalar\_t $>$}!compute\_product@{compute\_product}}
 \index{compute\_product@{compute\_product}!Symmetric\_Polynomials::elementary\_symmetric$<$ scalar\_t $>$@{Symmetric\_Polynomials::elementary\_symmetric$<$ scalar\_t $>$}}
 \doxysubsubsection{\texorpdfstring{compute\_product()}{compute\_product()}}
 {\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1norelations}{norelations}}$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1elementary__symmetric}{Symmetric\+\_\+\+Polynomials\+::elementary\+\_\+symmetric}}$<$ scalar\+\_\+t $>$\+::compute\+\_\+product (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{pwr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1norelations}{norelations}}$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1elementary__symmetric}{Symmetric\+\_\+\+Polynomials\+::elementary\+\_\+symmetric}}$<$ scalar\+\_\+t $>$\+::compute\+\_\+product (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{exponent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Given vector pwr computes e\+\_\+1$^\wedge$\{pwr\+\_\+1\}$\ast$...$\ast$e\+\_\+n$^\wedge$\{pwr\+\_\+n\}. 
+Given vector exponent computes e\+\_\+1$^\wedge$\{exponent\+\_\+1\}$\ast$...$\ast$e\+\_\+n$^\wedge$\{exponent\+\_\+n\}. 
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1elementary__symmetric_a8854a3f8bff99fd1ed74db17da6c60da_cgraph}
+\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1elementary__symmetric_aecec7e35ac4152f7181d111b4709d2ea_cgraph}
 \end{center}
 \end{figure}
 
@@ -90,16 +92,27 @@ std\+::vector$<$std\+::string$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_
 
 Vector containing the names \char`\"{}e\+\_\+i\char`\"{} of the elementary symmetric polynomials e\+\_\+1,...,e\+\_\+n. 
 
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1elementary__symmetric_aac645808fd6bbfd0f94911e301bce584}\label{classSymmetric__Polynomials_1_1elementary__symmetric_aac645808fd6bbfd0f94911e301bce584}} 
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1elementary__symmetric_a7529ee1fe72369b999a8554c65f53ec3}\label{classSymmetric__Polynomials_1_1elementary__symmetric_a7529ee1fe72369b999a8554c65f53ec3}} 
 \index{Symmetric\_Polynomials::elementary\_symmetric$<$ scalar\_t $>$@{Symmetric\_Polynomials::elementary\_symmetric$<$ scalar\_t $>$}!elementary\_symmetric\_polynomials@{elementary\_symmetric\_polynomials}}
 \index{elementary\_symmetric\_polynomials@{elementary\_symmetric\_polynomials}!Symmetric\_Polynomials::elementary\_symmetric$<$ scalar\_t $>$@{Symmetric\_Polynomials::elementary\_symmetric$<$ scalar\_t $>$}}
 \doxysubsubsection{\texorpdfstring{elementary\_symmetric\_polynomials}{elementary\_symmetric\_polynomials}}
 {\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
-std\+::vector$<$\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1norelations}{norelations}}$>$ $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1elementary__symmetric}{Symmetric\+\_\+\+Polynomials\+::elementary\+\_\+symmetric}}$<$ scalar\+\_\+t $>$\+::elementary\+\_\+symmetric\+\_\+polynomials\hspace{0.3cm}{\ttfamily [protected]}}
+std\+::vector$<$\mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{polynomial}}$<$scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1norelations}{norelations}}$>$ $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1elementary__symmetric}{Symmetric\+\_\+\+Polynomials\+::elementary\+\_\+symmetric}}$<$ scalar\+\_\+t $>$\+::elementary\+\_\+symmetric\+\_\+polynomials\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
-Vector containing the dominant term of the elementary symmetric polynomials e\+\_\+1,...,e\+\_\+n (i.\+e. x\+\_\+1...x\+\_\+k) 
+Vector containing the elementary symmetric polynomials e\+\_\+1,...,e\+\_\+n. 
+
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1elementary__symmetric_a0a03a2914be2c0174827ef6efdd05fda}\label{classSymmetric__Polynomials_1_1elementary__symmetric_a0a03a2914be2c0174827ef6efdd05fda}} 
+\index{Symmetric\_Polynomials::elementary\_symmetric$<$ scalar\_t $>$@{Symmetric\_Polynomials::elementary\_symmetric$<$ scalar\_t $>$}!n@{n}}
+\index{n@{n}!Symmetric\_Polynomials::elementary\_symmetric$<$ scalar\_t $>$@{Symmetric\_Polynomials::elementary\_symmetric$<$ scalar\_t $>$}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
+int \mbox{\hyperlink{classSymmetric__Polynomials_1_1elementary__symmetric}{Symmetric\+\_\+\+Polynomials\+::elementary\+\_\+symmetric}}$<$ scalar\+\_\+t $>$\+::n\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Number of Variables. 
 
 
 

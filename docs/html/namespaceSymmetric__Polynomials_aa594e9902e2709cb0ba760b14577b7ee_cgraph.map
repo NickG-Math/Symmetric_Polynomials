@@ -1,7 +1,4 @@
 <map id="Symmetric_Polynomials::vector_interpolate" name="Symmetric_Polynomials::vector_interpolate">
-<area shape="rect" id="node1" title="Returns all vectors between min, max and satisfying a given policy." alt="" coords="5,133,185,174"/>
-<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1vector__interpolate__generator.html#a9e649a895cfd34636b3a64dc16ea510d" title="Returns the generated vector." alt="" coords="237,5,431,61"/>
-<area shape="rect" id="node3" href="$classSymmetric__Polynomials_1_1vector__interpolate__generator.html#a7b0621b44a9b198297030072be712e1f" title="False if all vectors have been generated." alt="" coords="244,85,424,141"/>
-<area shape="rect" id="node4" href="$classSymmetric__Polynomials_1_1vector__interpolate__generator.html#a7d58ee4c9e85a055f81d63203c9e2c5a" title="Checks if policy is satisfied." alt="" coords="233,165,435,221"/>
-<area shape="rect" id="node5" href="$classSymmetric__Polynomials_1_1vector__interpolate__generator.html#ac57e2cd293efe2e222a2c8c9bfec2109" title="Generates new vector." alt="" coords="244,245,424,301"/>
+<area shape="rect" id="node1" title="Returns all vectors interpolating between min, max and satisfying a given policy." alt="" coords="5,13,185,54"/>
+<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1vector__interpolate__generator.html#a1d15d2426618c2237bbecdf408b358ab" title="Returns upper bound on the amount of generated elements." alt="" coords="233,5,413,61"/>
 </map>
