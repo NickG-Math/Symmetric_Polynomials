@@ -126,10 +126,11 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="Generators_8h__dep__incl.png" border="0" usemap="#source_2Generators_8hdep" alt=""/></div>
 <map name="source_2Generators_8hdep" id="source_2Generators_8hdep">
-<area shape="rect" title="Contains generators of all monomials with desired degree and satisfying a desired policy." alt="" coords="24,5,177,32"/>
-<area shape="rect" href="Permutations_8h.html" title="Contains methods for producing permutations, orbits of monomials under symmetric group action,..." alt="" coords="17,80,185,107"/>
-<area shape="rect" href="Half__Idempotent_8h.html" title="If $$R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$$, the goal is to produce algebra generators fo..." alt="" coords="5,155,196,181"/>
-<area shape="rect" href="Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="33,229,168,256"/>
+<area shape="rect" title="Contains generators of all monomials with desired degree and satisfying a desired policy." alt="" coords="149,5,303,32"/>
+<area shape="rect" href="Permutations_8h.html" title="Contains methods for producing permutations, orbits of monomials under symmetric group action,..." alt="" coords="142,80,310,107"/>
+<area shape="rect" href="alt__Half__Idempotent_8h.html" title="If $$R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$$, the goal is to produce algebra generators fo..." alt="" coords="5,155,220,181"/>
+<area shape="rect" href="Half__Idempotent_8h.html" title="If $$R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$$, the goal is to produce algebra generators fo..." alt="" coords="244,155,435,181"/>
+<area shape="rect" href="Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="272,229,407,256"/>
 </map>
 </div>
 </div>
@@ -168,13 +169,13 @@ Functions</h2></td></tr>
 <tr class="memitem:ac9a171c5b949f5d236b4502d73f6d2f9"><td class="memTemplItemLeft" align="right" valign="top">static char&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials_1_1policy.html#ac9a171c5b949f5d236b4502d73f6d2f9">Symmetric_Polynomials::policy::always_true</a> (const T &amp;)</td></tr>
 <tr class="memdesc:ac9a171c5b949f5d236b4502d73f6d2f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The always true policy.  <a href="namespaceSymmetric__Polynomials_1_1policy.html#ac9a171c5b949f5d236b4502d73f6d2f9">More...</a><br /></td></tr>
 <tr class="separator:ac9a171c5b949f5d236b4502d73f6d2f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb2f9af59ccf8f54e49b3d90c2c19fed"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:afb2f9af59ccf8f54e49b3d90c2c19fed"><td class="memTemplItemLeft" align="right" valign="top">static std::function&lt; char(const std::vector&lt; int &gt; &amp;)&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials_1_1policy.html#afb2f9af59ccf8f54e49b3d90c2c19fed">Symmetric_Polynomials::policy::custom</a> (const T &amp;comparator)</td></tr>
-<tr class="memdesc:afb2f9af59ccf8f54e49b3d90c2c19fed"><td class="mdescLeft">&#160;</td><td class="mdescRight">The policy made by a given comparactor function.  <a href="namespaceSymmetric__Polynomials_1_1policy.html#afb2f9af59ccf8f54e49b3d90c2c19fed">More...</a><br /></td></tr>
-<tr class="separator:afb2f9af59ccf8f54e49b3d90c2c19fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa594e9902e2709cb0ba760b14577b7ee"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#aa594e9902e2709cb0ba760b14577b7ee">Symmetric_Polynomials::vector_interpolate</a> (const std::vector&lt; int &gt; &amp;min, const std::vector&lt; int &gt; &amp;max, const std::function&lt; char(const std::vector&lt; int &gt; &amp;)&gt; &amp;policy=policy::always_true&lt; std::vector&lt; int &gt;&gt;)</td></tr>
-<tr class="memdesc:aa594e9902e2709cb0ba760b14577b7ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all vectors interpolating between min, max and satisfying a given policy.  <a href="namespaceSymmetric__Polynomials.html#aa594e9902e2709cb0ba760b14577b7ee">More...</a><br /></td></tr>
-<tr class="separator:aa594e9902e2709cb0ba760b14577b7ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40a0271299de2343a3c29a2d0cee4477"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a40a0271299de2343a3c29a2d0cee4477"><td class="memTemplItemLeft" align="right" valign="top">static std::function&lt; char(const std::vector&lt; char &gt; &amp;)&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials_1_1policy.html#a40a0271299de2343a3c29a2d0cee4477">Symmetric_Polynomials::policy::custom</a> (const T &amp;comparator)</td></tr>
+<tr class="memdesc:a40a0271299de2343a3c29a2d0cee4477"><td class="mdescLeft">&#160;</td><td class="mdescRight">The policy made by a given comparactor function.  <a href="namespaceSymmetric__Polynomials_1_1policy.html#a40a0271299de2343a3c29a2d0cee4477">More...</a><br /></td></tr>
+<tr class="separator:a40a0271299de2343a3c29a2d0cee4477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaec53907a3a9bc0c57745f1775c6fcb9"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; char &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#aaec53907a3a9bc0c57745f1775c6fcb9">Symmetric_Polynomials::vector_interpolate</a> (const std::vector&lt; char &gt; &amp;min, const std::vector&lt; char &gt; &amp;max, const std::function&lt; char(const std::vector&lt; char &gt; &amp;)&gt; &amp;policy=policy::always_true&lt; std::vector&lt; char &gt;&gt;)</td></tr>
+<tr class="memdesc:aaec53907a3a9bc0c57745f1775c6fcb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all vectors interpolating between min, max and satisfying a given policy.  <a href="namespaceSymmetric__Polynomials.html#aaec53907a3a9bc0c57745f1775c6fcb9">More...</a><br /></td></tr>
+<tr class="separator:aaec53907a3a9bc0c57745f1775c6fcb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a591a8f1544a9eb3c4c8113d4e55df622"><td class="memTemplParams" colspan="2">template&lt;typename scalar_t , typename rel_t &gt; </td></tr>
 <tr class="memitem:a591a8f1544a9eb3c4c8113d4e55df622"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; monomial&lt; scalar_t, rel_t &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a591a8f1544a9eb3c4c8113d4e55df622">Symmetric_Polynomials::monomial_basis</a> (int variables, int degree)</td></tr>
 <tr class="memdesc:a591a8f1544a9eb3c4c8113d4e55df622"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the monomial basis in given number of variables and degree.  <a href="namespaceSymmetric__Polynomials.html#a591a8f1544a9eb3c4c8113d4e55df622">More...</a><br /></td></tr>

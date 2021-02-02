@@ -12,7 +12,7 @@ Class of monomials in multiple variables with relations.
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_a300e87f20ae2f9df106479850e54a661}{monomial}} (const scalar\+\_\+t \&\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_a7b3e017859dd27e2f723da11b4d34e71}{coeff}}, const std\+::vector$<$ int $>$ \&\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_afb36784e7dbebf26ed3c5fb35344667e}{exponent}})
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_aae144155f31f745bd0306ee18740e199}{monomial}} (const scalar\+\_\+t \&\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_a7b3e017859dd27e2f723da11b4d34e71}{coeff}}, const std\+::vector$<$ char $>$ \&\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_a0241765a36303b299368ecc0e428e1cb}{exponent}})
 \begin{DoxyCompactList}\small\item\em Constructs monomial given coefficient and exponent. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_a165c8552ffb328f820f0c22622eac596}{monomial}} ()
 \begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
@@ -42,7 +42,7 @@ static \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ s
 \item 
 scalar\+\_\+t \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_a7b3e017859dd27e2f723da11b4d34e71}{coeff}}
 \begin{DoxyCompactList}\small\item\em Coefficient of monomial. \end{DoxyCompactList}\item 
-std\+::vector$<$ int $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_afb36784e7dbebf26ed3c5fb35344667e}{exponent}}
+std\+::vector$<$ char $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_a0241765a36303b299368ecc0e428e1cb}{exponent}}
 \begin{DoxyCompactList}\small\item\em exponent vector \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial_a1959c9c5181d77d05a72a3292eed92a1}{degree}}
 \end{DoxyCompactItemize}
@@ -62,12 +62,12 @@ Class of monomials in multiple variables with relations.
 A monomial $a=cx_1^{p_1}x_2^{p_2}....x_n^{p_n}$ is defined by its coefficient $c$ and exponent vector $[p_1,...,p_n]$. The template scalar\+\_\+t determines the type of the coefficient $c$. The template rel\+\_\+t determines the relations that the variables $x_i$ satisfy. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1monomial_a300e87f20ae2f9df106479850e54a661}\label{classSymmetric__Polynomials_1_1monomial_a300e87f20ae2f9df106479850e54a661}} 
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1monomial_aae144155f31f745bd0306ee18740e199}\label{classSymmetric__Polynomials_1_1monomial_aae144155f31f745bd0306ee18740e199}} 
 \index{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$}!monomial@{monomial}}
 \index{monomial@{monomial}!Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$}}
 \doxysubsubsection{\texorpdfstring{monomial()}{monomial()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{Symmetric\+\_\+\+Polynomials\+::monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}} (\begin{DoxyParamCaption}\item[{const scalar\+\_\+t \&}]{coeff,  }\item[{const std\+::vector$<$ int $>$ \&}]{exponent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{Symmetric\+\_\+\+Polynomials\+::monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::\mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}} (\begin{DoxyParamCaption}\item[{const scalar\+\_\+t \&}]{coeff,  }\item[{const std\+::vector$<$ char $>$ \&}]{exponent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -239,12 +239,12 @@ Coefficient of monomial.
 {\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
 int \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{Symmetric\+\_\+\+Polynomials\+::monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::degree}
 
-Degree of monomial \mbox{\Hypertarget{classSymmetric__Polynomials_1_1monomial_afb36784e7dbebf26ed3c5fb35344667e}\label{classSymmetric__Polynomials_1_1monomial_afb36784e7dbebf26ed3c5fb35344667e}} 
+Degree of monomial \mbox{\Hypertarget{classSymmetric__Polynomials_1_1monomial_a0241765a36303b299368ecc0e428e1cb}\label{classSymmetric__Polynomials_1_1monomial_a0241765a36303b299368ecc0e428e1cb}} 
 \index{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$}!exponent@{exponent}}
 \index{exponent@{exponent}!Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$@{Symmetric\_Polynomials::monomial$<$ scalar\_t, rel\_t $>$}}
 \doxysubsubsection{\texorpdfstring{exponent}{exponent}}
 {\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ \\
-std\+::vector$<$int$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{Symmetric\+\_\+\+Polynomials\+::monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::exponent}
+std\+::vector$<$char$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{Symmetric\+\_\+\+Polynomials\+::monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$\+::exponent}
 
 
 

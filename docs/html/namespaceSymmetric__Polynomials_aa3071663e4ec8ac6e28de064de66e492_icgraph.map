@@ -1,9 +1,9 @@
 <map id="Symmetric_Polynomials::multiply" name="Symmetric_Polynomials::multiply">
 <area shape="rect" id="node1" title="Multiplies two polynomials with the ability to disable condensation (not recommended)" alt="" coords="952,49,1132,90"/>
-<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1half__idempotent__generators.html#a422441d04494efde1ff1cb7cbc86c85c" title="Computes a product of a monomial on our generators Idem, Chern, TwistedChern." alt="" coords="461,5,676,61"/>
+<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1half__idempotent__generators.html#a249b2ebc59f817e258e30904de4f7b89" title="Computes a product of a monomial on our generators Idem, Chern, TwistedChern." alt="" coords="461,5,676,61"/>
 <area shape="rect" id="node5" href="$namespaceSymmetric__Polynomials.html#a542c4daa5b2d96247a72ad6ce2c422b8" title=" " alt="" coords="724,49,904,90"/>
 <area shape="rect" id="node6" href="$namespaceSymmetric__Polynomials.html#a1d476a58c571385ffab409a59c683b98" title="Computes a^p for polynomial a and nonnegative integer p." alt="" coords="724,114,904,155"/>
 <area shape="rect" id="node3" href="$namespaceSymmetric__Polynomials.html#abc624e6ecd4b5ce3c02f150183362963" title="Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,..." alt="" coords="5,7,185,63"/>
-<area shape="rect" id="node4" href="$structSymmetric__Polynomials_1_1decomposition__half__idempotent.html#a89f4c5f092b93bc2f2079d79fcb966a4" title="Verifies that the decomposition is correct (i.e. expanding the generators in the original variables &#160;..." alt="" coords="233,39,413,95"/>
-<area shape="rect" id="node7" href="$classSymmetric__Polynomials_1_1elementary__symmetric.html#aecec7e35ac4152f7181d111b4709d2ea" title="Given vector exponent computes e_1^{exponent_1}*...*e_n^{exponent_n}." alt="" coords="477,107,660,163"/>
+<area shape="rect" id="node4" href="$structSymmetric__Polynomials_1_1decomposition__half__idempotent.html#ac706fb88d949c91c7945ad29df72b084" title="Verifies that the decomposition is correct (i.e. expanding the generators in the original variables &#160;..." alt="" coords="233,39,413,95"/>
+<area shape="rect" id="node7" href="$classSymmetric__Polynomials_1_1elementary__symmetric.html#ac01a1ee9fb360c2112e918b295cbe9b8" title="Given vector exponent computes e_1^{exponent_1}*...*e_n^{exponent_n}." alt="" coords="477,107,660,163"/>
 </map>

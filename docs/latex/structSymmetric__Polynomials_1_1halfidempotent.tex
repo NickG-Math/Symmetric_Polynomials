@@ -30,15 +30,15 @@ Collaboration diagram for Symmetric\+\_\+\+Polynomials\+::halfidempotent\+:\nopa
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static int \mbox{\hyperlink{structSymmetric__Polynomials_1_1halfidempotent_ae55be22940111bfafead49c19e924070}{compute\+\_\+degree}} (const std\+::vector$<$ int $>$ \&exponent)
+static int \mbox{\hyperlink{structSymmetric__Polynomials_1_1halfidempotent_a397a14eeed9d8a7c9673daa79ea6309e}{compute\+\_\+degree}} (const std\+::vector$<$ char $>$ \&exponent)
 \begin{DoxyCompactList}\small\item\em The degree of a monomial with given exponent. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename monomial\+\_\+ptr $>$ }\\static void \mbox{\hyperlink{structSymmetric__Polynomials_1_1halfidempotent_ac3a43f3e7c7edb017675f656818d5547}{apply\+\_\+monomial}} (monomial\+\_\+ptr m)
 \begin{DoxyCompactList}\small\item\em Apply relations on monomial. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename polynomial\+\_\+ptr $>$ }\\static void \mbox{\hyperlink{structSymmetric__Polynomials_1_1halfidempotent_ad0760623a794f197e9ea47e89b42ad0a}{apply\+\_\+polynomial}} (polynomial\+\_\+ptr)
 \begin{DoxyCompactList}\small\item\em Apply relations on polynomial. \end{DoxyCompactList}\item 
-static std\+::vector$<$ int $>$ \mbox{\hyperlink{structSymmetric__Polynomials_1_1halfidempotent_a090b9d0f3c03a025955037618fc0b1bf}{max\+\_\+exponent}} (int variables, int degree)
+static std\+::vector$<$ char $>$ \mbox{\hyperlink{structSymmetric__Polynomials_1_1halfidempotent_a73522d87c1b92d296e98baa2778893fc}{max\+\_\+exponent}} (int variables, int degree)
 \begin{DoxyCompactList}\small\item\em Return max exponent vector corresponding to polynomial of given degree and number of variables. \end{DoxyCompactList}\item 
-static std\+::vector$<$ int $>$ \mbox{\hyperlink{structSymmetric__Polynomials_1_1halfidempotent_ab20342a5bc21def2e51a1b3fcf3c40fc}{permute}} (const std\+::vector$<$ int $>$ \&v, const std\+::vector$<$ char $>$ \&perm)
+static std\+::vector$<$ char $>$ \mbox{\hyperlink{structSymmetric__Polynomials_1_1halfidempotent_acfd8e716d051482f0790925ef0ad4f94}{permute}} (const std\+::vector$<$ char $>$ \&v, const std\+::vector$<$ char $>$ \&perm)
 \begin{DoxyCompactList}\small\item\em Apply permutation on exponent vector, separately on the variables x\+\_\+i and the variables y\+\_\+i. \end{DoxyCompactList}\item 
 static int \mbox{\hyperlink{structSymmetric__Polynomials_1_1halfidempotent_a2293fb9440f6159fdf7f62b92b852b7e}{true\+\_\+variables}} (int n)
 \begin{DoxyCompactList}\small\item\em Actual number of variables given length of exponent vector (i.\+e. x\+\_\+1,...,x\+\_\+n,y\+\_\+1,...,y\+\_\+n and n is that number) \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -75,50 +75,48 @@ static void Symmetric\+\_\+\+Polynomials\+::halfidempotent\+::apply\+\_\+polynom
 
 Apply relations on polynomial. 
 
-\mbox{\Hypertarget{structSymmetric__Polynomials_1_1halfidempotent_ae55be22940111bfafead49c19e924070}\label{structSymmetric__Polynomials_1_1halfidempotent_ae55be22940111bfafead49c19e924070}} 
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1halfidempotent_a397a14eeed9d8a7c9673daa79ea6309e}\label{structSymmetric__Polynomials_1_1halfidempotent_a397a14eeed9d8a7c9673daa79ea6309e}} 
 \index{Symmetric\_Polynomials::halfidempotent@{Symmetric\_Polynomials::halfidempotent}!compute\_degree@{compute\_degree}}
 \index{compute\_degree@{compute\_degree}!Symmetric\_Polynomials::halfidempotent@{Symmetric\_Polynomials::halfidempotent}}
 \doxysubsubsection{\texorpdfstring{compute\_degree()}{compute\_degree()}}
-{\footnotesize\ttfamily static int Symmetric\+\_\+\+Polynomials\+::halfidempotent\+::compute\+\_\+degree (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{exponent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily static int Symmetric\+\_\+\+Polynomials\+::halfidempotent\+::compute\+\_\+degree (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ char $>$ \&}]{exponent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
 
 
 The degree of a monomial with given exponent. 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{structSymmetric__Polynomials_1_1halfidempotent_ae55be22940111bfafead49c19e924070_cgraph}
+\includegraphics[width=350pt]{structSymmetric__Polynomials_1_1halfidempotent_a397a14eeed9d8a7c9673daa79ea6309e_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{structSymmetric__Polynomials_1_1halfidempotent_a090b9d0f3c03a025955037618fc0b1bf}\label{structSymmetric__Polynomials_1_1halfidempotent_a090b9d0f3c03a025955037618fc0b1bf}} 
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1halfidempotent_a73522d87c1b92d296e98baa2778893fc}\label{structSymmetric__Polynomials_1_1halfidempotent_a73522d87c1b92d296e98baa2778893fc}} 
 \index{Symmetric\_Polynomials::halfidempotent@{Symmetric\_Polynomials::halfidempotent}!max\_exponent@{max\_exponent}}
 \index{max\_exponent@{max\_exponent}!Symmetric\_Polynomials::halfidempotent@{Symmetric\_Polynomials::halfidempotent}}
 \doxysubsubsection{\texorpdfstring{max\_exponent()}{max\_exponent()}}
-{\footnotesize\ttfamily static std\+::vector$<$int$>$ Symmetric\+\_\+\+Polynomials\+::halfidempotent\+::max\+\_\+exponent (\begin{DoxyParamCaption}\item[{int}]{variables,  }\item[{int}]{degree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily static std\+::vector$<$char$>$ Symmetric\+\_\+\+Polynomials\+::halfidempotent\+::max\+\_\+exponent (\begin{DoxyParamCaption}\item[{int}]{variables,  }\item[{int}]{degree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
 
 
 Return max exponent vector corresponding to polynomial of given degree and number of variables. 
 
-\mbox{\Hypertarget{structSymmetric__Polynomials_1_1halfidempotent_ab20342a5bc21def2e51a1b3fcf3c40fc}\label{structSymmetric__Polynomials_1_1halfidempotent_ab20342a5bc21def2e51a1b3fcf3c40fc}} 
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1halfidempotent_acfd8e716d051482f0790925ef0ad4f94}\label{structSymmetric__Polynomials_1_1halfidempotent_acfd8e716d051482f0790925ef0ad4f94}} 
 \index{Symmetric\_Polynomials::halfidempotent@{Symmetric\_Polynomials::halfidempotent}!permute@{permute}}
 \index{permute@{permute}!Symmetric\_Polynomials::halfidempotent@{Symmetric\_Polynomials::halfidempotent}}
 \doxysubsubsection{\texorpdfstring{permute()}{permute()}}
-{\footnotesize\ttfamily static std\+::vector$<$int$>$ Symmetric\+\_\+\+Polynomials\+::halfidempotent\+::permute (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{v,  }\item[{const std\+::vector$<$ char $>$ \&}]{perm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily static std\+::vector$<$char$>$ Symmetric\+\_\+\+Polynomials\+::halfidempotent\+::permute (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ char $>$ \&}]{v,  }\item[{const std\+::vector$<$ char $>$ \&}]{perm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
 
 
 Apply permutation on exponent vector, separately on the variables x\+\_\+i and the variables y\+\_\+i. 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{structSymmetric__Polynomials_1_1halfidempotent_ab20342a5bc21def2e51a1b3fcf3c40fc_cgraph}
+\includegraphics[width=350pt]{structSymmetric__Polynomials_1_1halfidempotent_acfd8e716d051482f0790925ef0ad4f94_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{structSymmetric__Polynomials_1_1halfidempotent_a2293fb9440f6159fdf7f62b92b852b7e}\label{structSymmetric__Polynomials_1_1halfidempotent_a2293fb9440f6159fdf7f62b92b852b7e}} 

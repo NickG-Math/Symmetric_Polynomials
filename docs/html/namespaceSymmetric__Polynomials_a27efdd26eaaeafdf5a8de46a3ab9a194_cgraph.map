@@ -1,0 +1,5 @@
+<map id="Symmetric_Polynomials::apply_permutation" name="Symmetric_Polynomials::apply_permutation">
+<area shape="rect" id="node1" title="Applies permutation perm on the vector v." alt="" coords="5,5,185,47"/>
+<area shape="rect" id="node2" href="$namespaceSymmetric__Polynomials.html#a37ac61439f89641faa57cb3604faf114" title="Breaks vector v into given number of pieces and applies given permutation on each one; then joins the..." alt="" coords="233,5,436,47"/>
+<area shape="rect" id="node3" href="$namespaceSymmetric__Polynomials.html#a19968cb25bf5b9b023bcca196145dec3" title="Applies permutation perm on the target from starting point begin." alt="" coords="484,5,664,47"/>
+</map>

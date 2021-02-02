@@ -1,0 +1,7 @@
+<map id="Symmetric_Polynomials::decomposition_half_idempotent::verify" name="Symmetric_Polynomials::decomposition_half_idempotent::verify">
+<area shape="rect" id="node1" title="Verifies that the decomposition is correct (i.e. expanding the generators in the original variables &#160;..." alt="" coords="5,43,185,99"/>
+<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1half__idempotent__generators.html#a249b2ebc59f817e258e30904de4f7b89" title="Computes a product of a monomial on our generators Idem, Chern, TwistedChern." alt="" coords="233,43,448,99"/>
+<area shape="rect" id="node3" href="$classSymmetric__Polynomials_1_1polynomial.html#a29a3177f37777cd66cbf9b50402a10c6" title="Constructs constant polynomial given coefficient and number of variables." alt="" coords="724,5,904,47"/>
+<area shape="rect" id="node4" href="$namespaceSymmetric__Polynomials.html#aa3071663e4ec8ac6e28de064de66e492" title="Multiplies two polynomials with the ability to disable condensation (not recommended)" alt="" coords="724,84,904,125"/>
+<area shape="rect" id="node5" href="$namespaceSymmetric__Polynomials.html#a1d476a58c571385ffab409a59c683b98" title="Computes a^p for polynomial a and nonnegative integer p." alt="" coords="496,51,676,92"/>
+</map>

@@ -13,7 +13,7 @@ var hierarchy =
       [ "Symmetric_Polynomials::combinations_generator::const_iterator", "classSymmetric__Polynomials_1_1combinations__generator_1_1const__iterator.html", null ]
     ] ],
     [ "Symmetric_Polynomials::generating_const_iterator< permutations_generator::const_iterator, std::vector< char > >", "classSymmetric__Polynomials_1_1generating__const__iterator.html", null ],
-    [ "Symmetric_Polynomials::generating_const_iterator< vector_interpolate_generator::const_iterator, std::vector< int > >", "classSymmetric__Polynomials_1_1generating__const__iterator.html", [
+    [ "Symmetric_Polynomials::generating_const_iterator< vector_interpolate_generator::const_iterator, std::vector< char > >", "classSymmetric__Polynomials_1_1generating__const__iterator.html", [
       [ "Symmetric_Polynomials::vector_interpolate_generator::const_iterator", "classSymmetric__Polynomials_1_1vector__interpolate__generator_1_1const__iterator.html", null ]
     ] ],
     [ "Symmetric_Polynomials::half_idempotent_generators< scalar_t >", "classSymmetric__Polynomials_1_1half__idempotent__generators.html", [

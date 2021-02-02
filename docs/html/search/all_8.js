@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['idem_52',['Idem',['../classSymmetric__Polynomials_1_1half__idempotent__generators.html#ae204ab87d6aa6e5460aa7e660f8973f6',1,'Symmetric_Polynomials::half_idempotent_generators']]],
-  ['is_5finteger_53',['is_integer',['../structSymmetric__Polynomials_1_1rational.html#aed998b71dcbfb0c895920b1e08473078',1,'Symmetric_Polynomials::rational']]]
+  ['idem_53',['Idem',['../classSymmetric__Polynomials_1_1half__idempotent__generators.html#a7f762f9434ae606433fad6e4cf5391d2',1,'Symmetric_Polynomials::half_idempotent_generators::Idem()'],['../classSymmetric__Polynomials_1_1half__idempotent__generators.html#ae204ab87d6aa6e5460aa7e660f8973f6',1,'Symmetric_Polynomials::half_idempotent_generators::Idem()']]],
+  ['is_5finteger_54',['is_integer',['../structSymmetric__Polynomials_1_1rational.html#aed998b71dcbfb0c895920b1e08473078',1,'Symmetric_Polynomials::rational']]]
 ];
