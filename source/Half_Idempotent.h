@@ -27,12 +27,12 @@ namespace Symmetric_Polynomials {
 		std::map<std::pair<int, int>, int> TwistedChern_indexer; ///<Transforms the usual pair index of a TwistedChern class to the single integer index we use for the vector TwistedChern
 
 		///Computes a product of a monomial on our generators Idem, Chern, TwistedChern
-		polynomial<scalar_t, halfidempotent> compute_product(const std::vector<int>& exponent) const {
+		polynomial<scalar_t, halfidempotent> compute_product(const std::vector<char>& exponent) {
 			polynomial<scalar_t, halfidempotent> product = power(Idem, exponent[0]);
 			int counter = 1;
-			for (int i = 0; i < Chern.size(); i++) {
+			for (const auto& c : Chern) {
 				if (exponent[counter] != 0)
-					product = multiply<scalar_t, halfidempotent>(product, power(Chern[i], exponent[counter]));
+					product = multiply<scalar_t, halfidempotent>(product, power(c, exponent[counter]));
 				counter++;
 			}
 			for (const auto& s : TwistedChern)
@@ -50,7 +50,7 @@ namespace Symmetric_Polynomials {
 		}
 
 		std::vector<std::string> variable_names; ///<The names of the generators Idem, Chern and TwistedChern
-		std::vector<std::vector<int>> relations; ///<The left hand side of the relations Idem, Chern and TwistedChern satisfy i.e. Idem^{n+1}, Idem^sTwistedChern_{s,i} and TwistedChern_{s,i}TwistedChern_{t,j} for s<=t<=s+i
+		std::vector<std::vector<char>> relations; ///<The left hand side of the relations Idem, Chern and TwistedChern satisfy i.e. Idem^{n+1}, Idem^sTwistedChern_{s,i} and TwistedChern_{s,i}TwistedChern_{t,j} for s<=t<=s+i
 
 		polynomial<scalar_t, halfidempotent> Idem; ///<a=y_1+...+y_n
 		std::vector<polynomial<scalar_t, halfidempotent>> Chern; ///<Vector consisting of the Chern classes c_i
@@ -60,7 +60,7 @@ namespace Symmetric_Polynomials {
 		polynomial<scalar_t, halfidempotent> get_Idem() {
 			std::vector< monomial<scalar_t, halfidempotent>> Idem_v;
 			Idem_v.reserve(n);
-			std::vector<int> mono(2 * n);
+			std::vector<char> mono(2 * n);
 			for (int i = 2 * n - 1; i >= n; i--) {
 				mono[i] = 1;
 				Idem_v.push_back(monomial<scalar_t, halfidempotent>(1, mono));
@@ -72,7 +72,7 @@ namespace Symmetric_Polynomials {
 		polynomial<scalar_t, halfidempotent> get_Chern(int i) {
 			std::vector< monomial<scalar_t, halfidempotent>> Chern_v;
 			Chern_v.reserve(binomial(n, i));
-			std::vector<int> mono(2 * n);
+			std::vector<char> mono(2 * n);
 			auto c = combinations_generator(n, i);
 			for (const auto& comb : c) {
 				for (const auto& j : comb)
@@ -88,7 +88,7 @@ namespace Symmetric_Polynomials {
 		polynomial<scalar_t, halfidempotent> get_TwistedChern(int s, int i) {
 			std::vector< monomial<scalar_t, halfidempotent>> TChern_v;
 			TChern_v.reserve(binomial(n, s) * binomial(n - s, i));
-			std::vector<int> mono(2 * n);
+			std::vector<char> mono(2 * n);
 			auto c_x = combinations_generator(n, s);
 			auto c_y = combinations_generator(n - s, i);
 			for (const auto& comb_x : c_x) {
@@ -131,7 +131,7 @@ namespace Symmetric_Polynomials {
 				cs.reserve(n - s);
 				for (int i = 1; i <= n - s; i++) {
 					cs.push_back(get_TwistedChern(s, i));
-					variable_names.push_back("b_{" + std::to_string(s) + "," + std::to_string(i) + "}");
+					variable_names.push_back("c_{" + std::to_string(s) + "," + std::to_string(i) + "}");
 					TwistedChern_indexer[std::make_pair(s, i)] = index;
 					index++;
 				}
@@ -140,10 +140,10 @@ namespace Symmetric_Polynomials {
 		}
 
 		void set_relations() {
-			std::vector<int> comb(number_of_generators);
+			std::vector<char> comb(number_of_generators);
 			comb[0] = n + 1;
 			relations.push_back(comb); //Idem^{n+1} is a relation
-			for (int s = 1; s <= n; s++) {
+			for (int s = 1; s < n; s++) {
 				for (int i = 1; i <= n - s; i++) {
 					std::fill(comb.begin(), comb.end(), 0);
 					comb[0] = s;
@@ -151,8 +151,8 @@ namespace Symmetric_Polynomials {
 					relations.push_back(comb);
 				}
 			}
-			for (int s = 1; s <= n; s++)
-				for (int t = s; t <= n; t++)
+			for (int s = 1; s < n; s++)
+				for (int t = s; t < n; t++)
 					for (int i = std::max(t - s,1); i <= n - s; i++)
 						for (int j = 1; j <= n - t; j++) {
 							if (s==t && j<i)
@@ -185,7 +185,7 @@ namespace Symmetric_Polynomials {
 		}
 
 		///Verifies that the decomposition is correct (i.e. expanding the generators in the original variables \f$x_i,y_i\f$ gives the original polynomial).
-		bool verify(const polynomial<scalar_t, halfidempotent>& a) const {
+		bool verify(const polynomial<scalar_t, halfidempotent>& a) {
 			auto result = decomposition.monos[0].coeff * this->compute_product(decomposition.monos[0].exponent);
 			for (int i = 1; i < decomposition.monos.size(); i++)
 				result = result + decomposition.monos[i].coeff * this->compute_product(decomposition.monos[i].exponent);
@@ -195,10 +195,10 @@ namespace Symmetric_Polynomials {
 	private:
 
 
-		void find_exponent(const monomial<scalar_t, halfidempotent>& term, std::vector<int>& exponent) {
+		void find_exponent(const monomial<scalar_t, halfidempotent>& term, std::vector<char>& exponent) {
 			if (term.exponent[this->n] > 0) {//clear the consecutive Idem's at the start
 				int consecutive_u_at_start = 0;
-				std::vector<int> us_at_start(2 * this->n);
+				std::vector<char> us_at_start(2 * this->n);
 				for (int i = this->n; i < term.exponent.size(); i++) {
 					if (term.exponent[i] > 0) {
 						us_at_start[i] = 1;
@@ -240,7 +240,7 @@ namespace Symmetric_Polynomials {
 		}
 
 		void decompose_recursive(const polynomial<scalar_t, halfidempotent>& a) {
-			std::vector<int> pwr_here(this->number_of_generators);
+			std::vector<char> pwr_here(this->number_of_generators);
 			auto max = a.highest_term();
 			find_exponent(max, pwr_here);
 			auto product = this->compute_product(pwr_here);
@@ -264,7 +264,9 @@ namespace Symmetric_Polynomials {
 	template<typename scalar_t>
 	void print_half_idempotent_relations(int n, bool verify=0) {
 		decomposition_half_idempotent<scalar_t> dec(n);
-		for (const auto& rel : dec.relations) {
+//#pragma omp parallel for num_threads(12)
+		for (int index = 0; index < dec.relations.size(); index++) {
+			auto rel = dec.relations[index];
 			auto polynomial_relation = dec.compute_product(rel);
 			dec.decompose(polynomial_relation);
 			std::cout << dec.print(monomial<scalar_t, relations_base>(1, rel)) << " = " << dec << "\n"; 
