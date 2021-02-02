@@ -61,7 +61,7 @@ namespace Symmetric_Polynomials {
 
 		///The policy made by a given comparactor function
 		template<typename T>
-		static std::function<char(const std::vector<int>&)> custom(const T& comparator) {
+		static std::function<char(const std::vector<char>&)> custom(const T& comparator) {
 			return std::bind(&T::acceptable, comparator, std::placeholders::_1); //bind the function acceptable to this comparator instance. The placeholder is for the one vector argument
 		}
 	};
@@ -74,7 +74,7 @@ namespace Symmetric_Polynomials {
 	class vector_interpolate_generator {
 	public:
 		///Constructor using min, max and policy
-		vector_interpolate_generator(const std::vector<int>& min, const std::vector<int>& max, const std::function<char(const std::vector<int>&)>& policy = policy::always_true<std::vector<int>>)
+		vector_interpolate_generator(const std::vector<char>& min, const std::vector<char>& max, const std::function<char(const std::vector<char>&)>& policy = policy::always_true<std::vector<char>>)
 			: min(min), max(max), policy(policy) {}
 		///Returns upper bound on the amount of generated elements
 		long size() {
@@ -88,7 +88,7 @@ namespace Symmetric_Polynomials {
 		}
 			   
 		///Constant iterator that is used in a ranged for loop to generate the interpolating vectors. Non constant version is illegal
-		class const_iterator : public generating_const_iterator<vector_interpolate_generator::const_iterator, std::vector<int>> {
+		class const_iterator : public generating_const_iterator<vector_interpolate_generator::const_iterator, std::vector<char>> {
 			void get_first_satisfying_policy() {
 				policy_status = (*policy)(generated);
 				while (policy_status != 1 && !completed) //update until its satisfied
@@ -114,11 +114,11 @@ namespace Symmetric_Polynomials {
 			const_iterator() {};
 			char policy_status;
 			int length;
-			const int* min_ptr;
-			const int* max_ptr;
-			const std::function<char(const std::vector<int>&)>* policy;
+			const char* min_ptr;
+			const char* max_ptr;
+			const std::function<char(const std::vector<char>&)>* policy;
 			friend class vector_interpolate_generator;
-			friend class generating_const_iterator<vector_interpolate_generator::const_iterator, std::vector<int>>;
+			friend class generating_const_iterator<vector_interpolate_generator::const_iterator, std::vector<char>>;
 
 		};
 		///Initial generator
@@ -135,18 +135,18 @@ namespace Symmetric_Polynomials {
 		}
 		///Terminal generator.
 		const_iterator end() const {
-			return generating_const_iterator<vector_interpolate_generator::const_iterator, std::vector<int>>::terminal();
+			return generating_const_iterator<vector_interpolate_generator::const_iterator, std::vector<char>>::terminal();
 		}
 	private:
-		const std::vector<int> min, max;
-		const std::function<char(const std::vector<int>&)> policy;
+		const std::vector<char> min, max;
+		const std::function<char(const std::vector<char>&)> policy;
 	};
 
 
 
 	///Returns all vectors interpolating between min, max and satisfying a given policy
-	std::vector<std::vector<int>> vector_interpolate(const std::vector<int>& min, const std::vector<int>& max, const std::function<char(const std::vector<int>&)>& policy = policy::always_true<std::vector<int>>) {
-		std::vector<std::vector<int>> vectors;
+	std::vector<std::vector<char>> vector_interpolate(const std::vector<char>& min, const std::vector<char>& max, const std::function<char(const std::vector<char>&)>& policy = policy::always_true<std::vector<char>>) {
+		std::vector<std::vector<char>> vectors;
 		vector_interpolate_generator gen(min, max, policy);
 		vectors.reserve(gen.size());
 		for (const auto& i : gen)
@@ -158,7 +158,7 @@ namespace Symmetric_Polynomials {
 	template<typename rel_t>
 	struct degree_comparator {
 		///Returns 1 if the degree agrees with the desired degree, -1 if it's higher than the desired degree and 0 otherwise.
-		char acceptable(const std::vector<int>& a) {
+		char acceptable(const std::vector<char>& a) {
 			auto d = rel_t::compute_degree(a);
 			if (d > desired_degree)
 				return -1;
@@ -182,10 +182,10 @@ namespace Symmetric_Polynomials {
 	/////////////////////////////////////////////////////////////////////////////
 	class degree_comparator_relations {
 		const int desired_degree;
-		const std::vector<int> dimensions;
+		const std::vector<char> dimensions;
 		const std::vector<std::vector<char>> relations;
 
-		bool has_relation(const std::vector<int>& a) {
+		bool has_relation(const std::vector<char>& a) {
 			for (const auto& rel : relations)
 				if (rel <= a)
 					return 1;
@@ -194,12 +194,12 @@ namespace Symmetric_Polynomials {
 
 	public:
 		///Constructor given the desired degree, unacceptable combinations and dimensions
-		degree_comparator_relations(int desired_degree, const std::vector<std::vector<char>>& relations, const std::vector<int>& dimensions)
+		degree_comparator_relations(int desired_degree, const std::vector<std::vector<char>>& relations, const std::vector<char>& dimensions)
 			: desired_degree(desired_degree), dimensions(dimensions) ,relations(relations) {}
 
 
 		///Returns 1 if the degree agrees with the desired degree and has no relations, -1 if it's higher than the desired degree and 0 otherwise.
-		char acceptable(const std::vector<int>& a) {
+		char acceptable(const std::vector<char>& a) {
 			auto d = general_compute_degree(a, dimensions);
 			if (d > desired_degree)
 				return -1;
@@ -214,7 +214,7 @@ namespace Symmetric_Polynomials {
 	template<typename scalar_t, typename rel_t>
 	std::vector<monomial<scalar_t, rel_t>> monomial_basis(int variables, int degree) {
 		std::vector<monomial<scalar_t, rel_t>> monos;
-		vector_interpolate_generator gen(std::vector<int>(variables, 0), rel_t::max_exponent(variables, degree), policy::custom<degree_comparator<rel_t>>(degree_comparator<rel_t>(degree)));
+		vector_interpolate_generator gen(std::vector<char>(variables, 0), rel_t::max_exponent(variables, degree), policy::custom<degree_comparator<rel_t>>(degree_comparator<rel_t>(degree)));
 		monos.reserve(gen.size());
 		for (const auto& i : gen)
 			monos.push_back(monomial<scalar_t, rel_t>(1, i));

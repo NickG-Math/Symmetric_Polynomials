@@ -35,15 +35,15 @@ struct hasher {
 
 ///Applies permutation perm on the target from starting point begin
 template<typename Iterator>
-void apply_permutation(std::vector<int>& target, Iterator begin, const std::vector<char>& perm) {
+void apply_permutation(std::vector<char>& target, Iterator begin, const std::vector<char>& perm) {
 	for (const auto i : perm)
 		target.push_back(*(begin + i));
 }
 
 
 ///Breaks vector v into given number of pieces and applies given permutation on each one; then joins the pieces and returns the vector
-std::vector<int> apply_permutation_pieces(const std::vector<int>& v, int pieces, const std::vector<char>& perm) {
-	std::vector<int> target;
+std::vector<char> apply_permutation_pieces(const std::vector<char>& v, int pieces, const std::vector<char>& perm) {
+	std::vector<char> target;
 	target.reserve(v.size());
 	for (int i = 0; i < pieces; i++)
 		apply_permutation(target, v.begin() + i * perm.size(), perm);
@@ -51,19 +51,19 @@ std::vector<int> apply_permutation_pieces(const std::vector<int>& v, int pieces,
 }
 
 ///Applies permutation perm on the vector v
-std::vector<int> apply_permutation(const std::vector<int>& v, const std::vector<char>& perm) {
+std::vector<char> apply_permutation(const std::vector<char>& v, const std::vector<char>& perm) {
 	return apply_permutation_pieces(v, 1, perm);
 }
 
 
-///For two vectors a,b,  a<=b iff a[i]<=b[i] for all i
-template<typename T, typename S>
-bool operator <=(const std::vector<T>& a, const std::vector<S>& b) {
-	for (int i = 0; i < a.size(); i++)
-		if (a[i] > b[i])
-			return 0;
-	return 1;
-}
+/////For two vectors a,b,  a<=b iff a[i]<=b[i] for all i
+//template<typename T, typename S>
+//bool operator <=(const std::vector<T>& a, const std::vector<S>& b) {
+//	for (int i = 0; i < a.size(); i++)
+//		if (a[i] > b[i])
+//			return 0;
+//	return 1;
+//}
 
 ///Returns a[0]+...+a[end]
 template<typename T, typename S = T>
@@ -82,8 +82,8 @@ S sum(const std::vector<T>& a) {
 
 
 ///Adds two vectors coordinate wise
-std::vector<int> operator +(const std::vector<int>& a, const std::vector<int>& b) {
-	std::vector<int> sum;
+std::vector<char> operator +(const std::vector<char>& a, const std::vector<char>& b) {
+	std::vector<char> sum;
 	sum.reserve(a.size());
 	for (int i = 0; i < a.size(); i++)
 		sum.push_back(a[i] + b[i]);
@@ -91,8 +91,8 @@ std::vector<int> operator +(const std::vector<int>& a, const std::vector<int>& b
 }
 
 ///Subtract a vector from another coordinate wise
-std::vector<int> operator -(const std::vector<int>& a, const std::vector<int>& b) {
-	std::vector<int> diff;
+std::vector<char> operator -(const std::vector<char>& a, const std::vector<char>& b) {
+	std::vector<char> diff;
 	diff.reserve(a.size());
 	for (int i = 0; i < a.size(); i++)
 		diff.push_back(a[i] - b[i]);
@@ -100,8 +100,8 @@ std::vector<int> operator -(const std::vector<int>& a, const std::vector<int>& b
 }
  
 ///Multiplies scalar and vector coordinate wise
-std::vector<int> operator *(int a, const std::vector<int>& b) {
-	std::vector<int> prod;
+std::vector<char> operator *(int a, const std::vector<char>& b) {
+	std::vector<char> prod;
 	prod.reserve(b.size());
 	for (const auto& i : b)
 		prod.push_back(a * i);

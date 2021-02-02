@@ -5,7 +5,7 @@
 ///@brief Contains the classes of monomials and polynomials in multiple variables with relations. 
 
 namespace Symmetric_Polynomials{
-int general_compute_degree(const std::vector<int>& exponent, const std::vector<int>& dimensions) {
+int general_compute_degree(const std::vector<char>& exponent, const std::vector<char>& dimensions) {
 	int degree = 0;
 	for (int i = 0; i < exponent.size(); i++) {
 		degree += exponent[i] * dimensions[i];
@@ -33,10 +33,10 @@ class monomial {
 	}
 public:
 	scalar_t coeff; ///<Coefficient of monomial
-	std::vector<int> exponent; ///<exponent vector
+	std::vector<char> exponent; ///<exponent vector
 	int degree; ///<Degree of monomial
 	///Constructs monomial given coefficient and exponent
-	monomial(const scalar_t& coeff, const std::vector<int>& exponent) :
+	monomial(const scalar_t& coeff, const std::vector<char>& exponent) :
 		coeff(coeff), exponent(exponent) {
 		rel_t::apply_monomial(this);
 		getdegree();
@@ -48,7 +48,7 @@ public:
 
 	///Constructs constant monomial with given coefficient and number of variables
 	static monomial<scalar_t, rel_t> constant(int coeff, int variables) {
-		return monomial<scalar_t, rel_t>(coeff, std::vector<int>(variables)); //monomial 1
+		return monomial<scalar_t, rel_t>(coeff, std::vector<char>(variables)); //monomial 1
 	}
 
 	///Returns product of monomials
@@ -85,7 +85,7 @@ public:
 			ss << coeff << "*";
 		for (int i = 0; i < exponent.size(); i++) {
 			if (exponent[i]>1)
-				ss << variable_names(i) << "^" << exponent[i] << "*";
+				ss << variable_names(i) << "^" << (int)exponent[i] << "*";
 			else if (exponent[i]==1)
 				ss << variable_names(i) << "*";
 		}

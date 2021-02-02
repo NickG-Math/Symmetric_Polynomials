@@ -184,7 +184,7 @@ namespace Symmetric_Polynomials {
 		already_done.reserve(monos.size());
 		orbits.reserve(monos.size());
 		auto perms = permutations_generator(rel_t::true_variables(variables));
-		hasher<std::vector<int>> h(std::vector<int>(variables, 0), rel_t::max_exponent(variables, degree));
+		hasher<std::vector<char>> h(std::vector<char>(variables, 0), rel_t::max_exponent(variables, degree));
 		for (const auto& i : monos) {
 			auto hashed = h.hashvector(i.exponent);
 			auto it = std::find(already_done.begin(), already_done.end(), hashed);
@@ -203,7 +203,7 @@ namespace Symmetric_Polynomials {
 	class elementary_symmetric {
 	public:
 		///Given vector exponent computes e_1^{exponent_1}*...*e_n^{exponent_n}
-		polynomial<scalar_t, norelations> compute_product(const std::vector<int>& exponent) {
+		polynomial<scalar_t, norelations> compute_product(const std::vector<char>& exponent) {
 			polynomial<scalar_t, norelations> product = polynomial<scalar_t, norelations>::constant(1, elementary_symmetric_polynomials.size());
 			for (int i = 0; i < exponent.size(); i++)
 				if (exponent[i] != 0)
@@ -230,7 +230,7 @@ namespace Symmetric_Polynomials {
 		polynomial<scalar_t, norelations> get_elementary_symmetric(int i) {
 			std::vector< monomial<scalar_t, norelations>> v;
 			v.reserve(binomial(n, i));
-			std::vector<int> mono(n);
+			std::vector<char> mono(n);
 			auto c = combinations_generator(n, i);
 			for (const auto& comb : c) {
 				for (const auto j : comb)
@@ -273,7 +273,7 @@ namespace Symmetric_Polynomials {
 		}
 
 	private:
-		void find_exponent(const monomial<scalar_t, norelations>& term, std::vector<int>& exponent) {
+		void find_exponent(const monomial<scalar_t, norelations>& term, std::vector<char>& exponent) {
 			for (int i = 0; i < term.exponent.size(); i++) {
 				if (i == term.exponent.size() - 1)
 					exponent.push_back(term.exponent[i]);
@@ -282,7 +282,7 @@ namespace Symmetric_Polynomials {
 			}
 		}
 		void decompose_recursive(const polynomial<scalar_t, norelations>& a) {
-			std::vector<int> pwr_here;
+			std::vector<char> pwr_here;
 			pwr_here.reserve(a.monos[0].exponent.size());
 			auto max = a.highest_term();
 			find_exponent(max, pwr_here);
