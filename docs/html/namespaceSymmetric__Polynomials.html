@@ -33,7 +33,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Symmetric Polynomials
-   &#160;<span id="projectnumber">V0.1</span>
+   &#160;<span id="projectnumber">V1</span>
    </div>
    <div id="projectbrief">A C++ library for symmetric polynomials with relations</div>
   </td>
@@ -167,14 +167,6 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aecd3e8bc4e15f252d376c59adb59bc15"><td class="memTemplParams" colspan="2">template&lt;typename scalar_t &gt; </td></tr>
-<tr class="memitem:aecd3e8bc4e15f252d376c59adb59bc15"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#aecd3e8bc4e15f252d376c59adb59bc15">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="structSymmetric__Polynomials_1_1decomposition__half__idempotent.html">decomposition_half_idempotent</a>&lt; scalar_t &gt; &amp;dec)</td></tr>
-<tr class="memdesc:aecd3e8bc4e15f252d376c59adb59bc15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints polynomial.  <a href="namespaceSymmetric__Polynomials.html#aecd3e8bc4e15f252d376c59adb59bc15">More...</a><br /></td></tr>
-<tr class="separator:aecd3e8bc4e15f252d376c59adb59bc15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc624e6ecd4b5ce3c02f150183362963"><td class="memTemplParams" colspan="2">template&lt;typename scalar_t &gt; </td></tr>
-<tr class="memitem:abc624e6ecd4b5ce3c02f150183362963"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#abc624e6ecd4b5ce3c02f150183362963">print_half_idempotent_relations</a> (int n, bool verify=0)</td></tr>
-<tr class="memdesc:abc624e6ecd4b5ce3c02f150183362963"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i) using Idem, Chern and TwistedChern.  <a href="namespaceSymmetric__Polynomials.html#abc624e6ecd4b5ce3c02f150183362963">More...</a><br /></td></tr>
-<tr class="separator:abc624e6ecd4b5ce3c02f150183362963"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19968cb25bf5b9b023bcca196145dec3"><td class="memTemplParams" colspan="2">template&lt;typename Iterator &gt; </td></tr>
 <tr class="memitem:a19968cb25bf5b9b023bcca196145dec3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a19968cb25bf5b9b023bcca196145dec3">apply_permutation</a> (std::vector&lt; char &gt; &amp;target, Iterator begin, const std::vector&lt; char &gt; &amp;perm)</td></tr>
 <tr class="memdesc:a19968cb25bf5b9b023bcca196145dec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies permutation perm on the target from starting point begin.  <a href="namespaceSymmetric__Polynomials.html#a19968cb25bf5b9b023bcca196145dec3">More...</a><br /></td></tr>
@@ -216,6 +208,14 @@ Functions</h2></td></tr>
 <tr class="memitem:a591a8f1544a9eb3c4c8113d4e55df622"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a591a8f1544a9eb3c4c8113d4e55df622">monomial_basis</a> (int variables, int degree)</td></tr>
 <tr class="memdesc:a591a8f1544a9eb3c4c8113d4e55df622"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the monomial basis in given number of variables and degree.  <a href="namespaceSymmetric__Polynomials.html#a591a8f1544a9eb3c4c8113d4e55df622">More...</a><br /></td></tr>
 <tr class="separator:a591a8f1544a9eb3c4c8113d4e55df622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a883bc8a69d911cdc3692dff4297d17e2"><td class="memTemplParams" colspan="2">template&lt;typename scalar_t &gt; </td></tr>
+<tr class="memitem:a883bc8a69d911cdc3692dff4297d17e2"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a883bc8a69d911cdc3692dff4297d17e2">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="structSymmetric__Polynomials_1_1decomposition__half__idempotent.html">decomposition_half_idempotent</a>&lt; scalar_t &gt; &amp;dec)</td></tr>
+<tr class="memdesc:a883bc8a69d911cdc3692dff4297d17e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints polynomial.  <a href="namespaceSymmetric__Polynomials.html#a883bc8a69d911cdc3692dff4297d17e2">More...</a><br /></td></tr>
+<tr class="separator:a883bc8a69d911cdc3692dff4297d17e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc624e6ecd4b5ce3c02f150183362963"><td class="memTemplParams" colspan="2">template&lt;typename scalar_t &gt; </td></tr>
+<tr class="memitem:abc624e6ecd4b5ce3c02f150183362963"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#abc624e6ecd4b5ce3c02f150183362963">print_half_idempotent_relations</a> (int n, bool verify=0)</td></tr>
+<tr class="memdesc:abc624e6ecd4b5ce3c02f150183362963"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i) using Idem, Chern and TwistedChern.  <a href="namespaceSymmetric__Polynomials.html#abc624e6ecd4b5ce3c02f150183362963">More...</a><br /></td></tr>
+<tr class="separator:abc624e6ecd4b5ce3c02f150183362963"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a586f61dc2535175eb8cccd421f5c35af"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a586f61dc2535175eb8cccd421f5c35af">binomial</a> (int top, int bot)</td></tr>
 <tr class="memdesc:a586f61dc2535175eb8cccd421f5c35af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns $\binom{n,m}$.  <a href="namespaceSymmetric__Polynomials.html#a586f61dc2535175eb8cccd421f5c35af">More...</a><br /></td></tr>
 <tr class="separator:a586f61dc2535175eb8cccd421f5c35af"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1201,8 +1201,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="aecd3e8bc4e15f252d376c59adb59bc15"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecd3e8bc4e15f252d376c59adb59bc15">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/5]</span></h2>
+<a id="a883bc8a69d911cdc3692dff4297d17e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a883bc8a69d911cdc3692dff4297d17e2">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1210,7 +1210,7 @@ Here is the call graph for this function:</div>
 template&lt;typename scalar_t &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::ostream &amp; Symmetric_Polynomials::operator&lt;&lt; </td>
+          <td class="memname">std::ostream&amp; Symmetric_Polynomials::operator&lt;&lt; </td>
           <td>(</td>
           <td class="paramtype">std::ostream &amp;&#160;</td>
           <td class="paramname"><em>os</em>, </td>
@@ -1233,8 +1233,8 @@ template&lt;typename scalar_t &gt; </div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_aecd3e8bc4e15f252d376c59adb59bc15_cgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_aecd3e8bc4e15f252d376c59adb59bc15_cgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_aecd3e8bc4e15f252d376c59adb59bc15_cgraph" id="namespaceSymmetric__Polynomials_aecd3e8bc4e15f252d376c59adb59bc15_cgraph">
+<div class="center"><img src="namespaceSymmetric__Polynomials_a883bc8a69d911cdc3692dff4297d17e2_cgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_a883bc8a69d911cdc3692dff4297d17e2_cgraph" alt=""/></div>
+<map name="namespaceSymmetric__Polynomials_a883bc8a69d911cdc3692dff4297d17e2_cgraph" id="namespaceSymmetric__Polynomials_a883bc8a69d911cdc3692dff4297d17e2_cgraph">
 <area shape="rect" title="Prints polynomial." alt="" coords="5,13,185,54"/>
 <area shape="rect" href="classSymmetric__Polynomials_1_1half__idempotent__generators.html#a1bcf78e321dbff9f8699ec7ef3017ae5" title="Print a polynomial on the generators Idem, Chern and TwistedChern." alt="" coords="233,5,448,61"/>
 <area shape="rect" href="classSymmetric__Polynomials_1_1polynomial.html#a282b9660df877b4a5ed1ec57a7714634" title="Print polynomial using given variable names." alt="" coords="496,13,676,54"/>
@@ -1579,15 +1579,15 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceSymmetric__Polynomials_abc624e6ecd4b5ce3c02f150183362963_cgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_abc624e6ecd4b5ce3c02f150183362963_cgraph" alt=""/></div>
 <map name="namespaceSymmetric__Polynomials_abc624e6ecd4b5ce3c02f150183362963_cgraph" id="namespaceSymmetric__Polynomials_abc624e6ecd4b5ce3c02f150183362963_cgraph">
-<area shape="rect" title="Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,..." alt="" coords="5,75,185,131"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1half__idempotent__generators.html#a249b2ebc59f817e258e30904de4f7b89" title="Computes a product of a monomial on our generators Idem, Chern, TwistedChern." alt="" coords="496,43,711,99"/>
-<area shape="rect" href="structSymmetric__Polynomials_1_1decomposition__half__idempotent.html#a97c75c9f4b13ae7b8fa0a1817a6631bd" title="Computes the decomposition (polynomial on the generators Idem, Chern and TwistedChern)" alt="" coords="247,35,434,91"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1half__idempotent__generators.html#a1bcf78e321dbff9f8699ec7ef3017ae5" title="Print a polynomial on the generators Idem, Chern and TwistedChern." alt="" coords="233,195,448,251"/>
-<area shape="rect" href="structSymmetric__Polynomials_1_1decomposition__half__idempotent.html#ac706fb88d949c91c7945ad29df72b084" title="Verifies that the decomposition is correct (i.e. expanding the generators in the original variables &#160;..." alt="" coords="251,115,431,171"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1polynomial.html#a29a3177f37777cd66cbf9b50402a10c6" title="Constructs constant polynomial given coefficient and number of variables." alt="" coords="987,5,1167,47"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#aa3071663e4ec8ac6e28de064de66e492" title="Multiplies two polynomials with the ability to disable condensation (not recommended)" alt="" coords="987,84,1167,125"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a1d476a58c571385ffab409a59c683b98" title="Computes a^p for polynomial a and nonnegative integer p." alt="" coords="759,51,939,92"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1polynomial.html#a282b9660df877b4a5ed1ec57a7714634" title="Print polynomial using given variable names." alt="" coords="513,203,693,244"/>
+<area shape="rect" title="Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,..." alt="" coords="5,73,185,129"/>
+<area shape="rect" href="classSymmetric__Polynomials_1_1half__idempotent__generators.html#a249b2ebc59f817e258e30904de4f7b89" title="Computes a product of a monomial on our generators Idem, Chern, TwistedChern." alt="" coords="496,41,711,97"/>
+<area shape="rect" href="structSymmetric__Polynomials_1_1decomposition__half__idempotent.html#a97c75c9f4b13ae7b8fa0a1817a6631bd" title="Computes the decomposition (polynomial on the generators Idem, Chern and TwistedChern)" alt="" coords="247,33,434,89"/>
+<area shape="rect" href="classSymmetric__Polynomials_1_1half__idempotent__generators.html#a1bcf78e321dbff9f8699ec7ef3017ae5" title="Print a polynomial on the generators Idem, Chern and TwistedChern." alt="" coords="233,193,448,249"/>
+<area shape="rect" href="structSymmetric__Polynomials_1_1decomposition__half__idempotent.html#ac706fb88d949c91c7945ad29df72b084" title="Verifies that the decomposition is correct (i.e. expanding the generators in the original variables &#160;..." alt="" coords="251,113,431,169"/>
+<area shape="rect" href="namespaceSymmetric__Polynomials.html#aa3071663e4ec8ac6e28de064de66e492" title="Multiplies two polynomials with the ability to disable condensation (not recommended)" alt="" coords="987,19,1167,60"/>
+<area shape="rect" href="namespaceSymmetric__Polynomials.html#a1d476a58c571385ffab409a59c683b98" title="Computes a^p for polynomial a and nonnegative integer p." alt="" coords="759,77,939,119"/>
+<area shape="rect" href="classSymmetric__Polynomials_1_1polynomial.html#a29a3177f37777cd66cbf9b50402a10c6" title="Constructs constant polynomial given coefficient and number of variables." alt="" coords="987,84,1167,125"/>
+<area shape="rect" href="classSymmetric__Polynomials_1_1polynomial.html#a282b9660df877b4a5ed1ec57a7714634" title="Print polynomial using given variable names." alt="" coords="513,200,693,241"/>
 </map>
 </div>
 

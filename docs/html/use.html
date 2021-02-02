@@ -33,7 +33,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Symmetric Polynomials
-   &#160;<span id="projectnumber">V0.1</span>
+   &#160;<span id="projectnumber">V1</span>
    </div>
    <div id="projectbrief">A C++ library for symmetric polynomials with relations</div>
   </td>
@@ -106,7 +106,7 @@ $(document).ready(function(){initNavTree('use.html',''); initResizable(); });
 </div>
 <div class="textblock"><h1><a class="anchor" id="demo"></a>
 Quick Demonstration</h1>
-<p>For a quick demonstration you may use the binaries Demo.exe or Demo.out in the repository. These are compiled from <a class="el" href="Demo_8cpp.html" title="A demonstration file that can be compiled.">Demo.cpp</a> using MSVC and Clang respectively. For example, compile <a class="el" href="Demo_8cpp.html" title="A demonstration file that can be compiled.">Demo.cpp</a> yourself use: (on Linux) </p><pre class="fragment">clang++ source/Demo.cpp -std=c++17 -O3 -march=native -o Demo.out    
+<p>For a quick demonstration you may use the binaries Demo.exe or Demo.out found <a href="https://github.com/NickG-Math/Symmetric_Polynomials/releases">here</a>. These are compiled from <a class="el" href="Demo_8cpp.html" title="A demonstration file that can be compiled.">Demo.cpp</a> using MSVC and Clang respectively. For example, compile <a class="el" href="Demo_8cpp.html" title="A demonstration file that can be compiled.">Demo.cpp</a> yourself use: (on Linux) </p><pre class="fragment">clang++ source/Demo.cpp -std=c++17 -O3 -march=native -o Demo.out    
 </pre><p>You can similarly do this over Windows using MSVC, producing a .exe file . Make sure to use the <code>-std=c++17</code> flag (or set the language options in an IDE to support C++17).</p>
 <h1><a class="anchor" id="exa"></a>
 Code examples</h1>
@@ -135,16 +135,16 @@ std::cout&lt;&lt; dec;
 <p>The class <code>decomposition_elementary_symmetric&lt;rational&gt;</code> stores and computes the expression of a polynomial on variables \(x_i\) as a polynomial on the \(\sigma_i\).</p>
 <h2><a class="anchor" id="halfidem"></a>
 Half idempotent relations</h2>
-<p>When we have the "half idempotent relation", the generators are \(\alpha, c_i, \beta_{s,t}\) (see <a class="el" href="math.html">The Math</a>) or <code>Idem</code>, <code>Chern[i]</code> and <code>TwistedChern[s][t]</code> respectively as they are used in the program. We order them as \(\alpha,c_1,...,c_n, \beta_{1,1},...,\beta_{1,n-1},\beta_{2,1},...,\beta_{n-1,1}\) in this order. To get the original indexing on the \(\beta\) elements we use <code>std::map&lt;std::pair&lt;int,int&gt;,int&gt; TwistedChern_indexer</code> eg </p><pre class="fragment">std::cout &lt;&lt; TwistedChern_indexer[std::make_pair&lt;int,int&gt;(1,2)];
-</pre><p>prints <code>1</code> since <code>TwistedChern[1]</code> corresponds to \(\beta_{1,2}\).</p>
+<p>When we have the "half idempotent relation", the generators are \(\alpha, c_i, \gamma_{s,t}\) (see <a class="el" href="math.html">The Math</a>) or <code>Idem</code>, <code>Chern[i]</code> and <code>TwistedChern[s][t]</code> respectively as they are used in the program. We order them as \(\alpha,c_1,...,c_n, \gamma_{1,1},...,\gamma_{1,n-1},\gamma_{2,1},...,\gamma_{n-1,1}\) in this order. To get the original indexing on the \(\gamma\) elements we use <code>std::map&lt;std::pair&lt;int,int&gt;,int&gt; TwistedChern_indexer</code> eg </p><pre class="fragment">std::cout &lt;&lt; TwistedChern_indexer[std::make_pair&lt;int,int&gt;(1,2)];
+</pre><p>prints <code>1</code> since <code>TwistedChern[1]</code> corresponds to \(\gamma_{1,2}\).</p>
 <p>The code </p><pre class="fragment">polynomial poly(std::vector({ monomial&lt;rational, halfidempotent&gt;(2, { 1,0,1,0 }), monomial&lt;rational, halfidempotent&gt;(2, {0,1,0,1 }) }));
 decomposition_half_idempotent dec(poly);
 std::cout &lt;&lt; dec &lt;&lt; "\n";
-</pre><p>sets <code>poly</code> to be \(x_1y_1+x_2y_2\), computes the decomposition of <code>poly</code> into <code>Idem,Chern,TwistedChern</code>, stores it into <code>dec</code> and prints the decomposition as <code>2*a*c_1 + -2*b_{1,1}</code> reflecting $$x_1y_1+x_2y_2=2\alpha c_1-2\beta_{1,1}$$</p>
-<p>The class <code>decomposition_half_idempotent&lt;rational&gt;</code> stores and computes the expression of a polynomial on variables \(x_i,y_i\) as a polynomial on the \(\alpha,c_i,\beta_{s,j}\).</p>
-<p>To print the relations amongst \(\alpha,c_i,\beta_{s,j}\) simply use: print_half_idempotent_relations&lt;rational&gt;(3);</p>
+</pre><p>sets <code>poly</code> to be \(x_1y_1+x_2y_2\), computes the decomposition of <code>poly</code> into <code>Idem,Chern,TwistedChern</code>, stores it into <code>dec</code> and prints the decomposition as <code>2*a*c_1 + -2*b_{1,1}</code> reflecting $$x_1y_1+x_2y_2=2\alpha c_1-2\gamma_{1,1}$$</p>
+<p>The class <code>decomposition_half_idempotent&lt;rational&gt;</code> stores and computes the expression of a polynomial on variables \(x_i,y_i\) as a polynomial on the \(\alpha,c_i,\gamma_{s,j}\).</p>
+<p>To print the relations amongst \(\alpha,c_i,\gamma_{s,j}\) simply use: print_half_idempotent_relations&lt;rational&gt;(3);</p>
 <p>The \(3\) here corresponds to the number of variables: \(x_1,x_2,x_3,y_1,y_2,y_3\) and can be replaced by any positive integer, although for \(n&gt;10\) the computation may take a bit long (program not currently multithreaded, but that can trivially be remedied with a <code>#pragma omp parallel for</code>.</p>
-<p>Finally, <a class="el" href="Demo_8cpp.html" title="A demonstration file that can be compiled.">Demo.cpp</a> contains another function, <code>write_pontryagin_C2_in_terms_of_Chern_classes</code>. This prints the expressions of the twisted Pontryagin classes given by $$p\beta_{s,t}=\sum_{1\le i_1&lt; \cdots&lt; i_s\le n\ 1\le j_1&lt; \cdots&lt; j_t\le n\ i_u\neq j_v}x^2_{i_1}....x^2_{i_s}y_{j_1}\cdots y_{j_t}$$ in terms of the Chern classes \(\alpha,c_i,\beta_{s,t}\). For example, try running write_pontryagin_C2_in_terms_of_Chern_classes(5); </p>
+<p>Finally, <a class="el" href="Demo_8cpp.html" title="A demonstration file that can be compiled.">Demo.cpp</a> contains another function, <code>write_pontryagin_C2_in_terms_of_Chern_classes</code>. This prints the expressions of the twisted Pontryagin/symplectic classes given by $$\pi_{s,t}=\kappa_{s,t}=\sum_{1\le i_1&lt; \cdots&lt; i_s\le n\ 1\le j_1&lt; \cdots&lt; j_t\le n\ i_u\neq j_v}x^2_{i_1}....x^2_{i_s}y_{j_1}\cdots y_{j_t}$$ in terms of the Chern classes \(\alpha,c_i,\gamma_{s,t}\). For example, try running write_pontryagin_C2_in_terms_of_Chern_classes(5); </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

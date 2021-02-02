@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['half_5fidempotent_2eh_146',['Half_Idempotent.h',['../Half__Idempotent_8h.html',1,'']]]
+  ['permutations_2eh_145',['Permutations.h',['../Permutations_8h.html',1,'']]],
+  ['polynomials_2eh_146',['Polynomials.h',['../Polynomials_8h.html',1,'']]]
 ];

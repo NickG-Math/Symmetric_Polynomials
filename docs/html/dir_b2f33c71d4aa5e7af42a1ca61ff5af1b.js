@@ -1,6 +1,5 @@
 var dir_b2f33c71d4aa5e7af42a1ca61ff5af1b =
 [
-    [ "alt_Half_Idempotent.h", "alt__Half__Idempotent_8h.html", "alt__Half__Idempotent_8h" ],
     [ "Demo.cpp", "Demo_8cpp.html", "Demo_8cpp" ],
     [ "General.h", "General_8h.html", "General_8h" ],
     [ "Generators.h", "Generators_8h.html", "Generators_8h" ],

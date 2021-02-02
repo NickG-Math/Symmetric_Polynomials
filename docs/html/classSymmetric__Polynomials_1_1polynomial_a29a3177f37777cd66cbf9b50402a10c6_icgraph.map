@@ -1,9 +1,9 @@
 <map id="Symmetric_Polynomials::polynomial::constant" name="Symmetric_Polynomials::polynomial::constant">
-<area shape="rect" id="node1" title="Constructs constant polynomial given coefficient and number of variables." alt="" coords="952,75,1132,117"/>
-<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1half__idempotent__generators.html#a249b2ebc59f817e258e30904de4f7b89" title="Computes a product of a monomial on our generators Idem, Chern, TwistedChern." alt="" coords="461,5,676,61"/>
-<area shape="rect" id="node5" href="$classSymmetric__Polynomials_1_1elementary__symmetric.html#ac01a1ee9fb360c2112e918b295cbe9b8" title="Given vector exponent computes e_1^{exponent_1}*...*e_n^{exponent_n}." alt="" coords="477,107,660,163"/>
-<area shape="rect" id="node6" href="$namespaceSymmetric__Polynomials.html#a81926a9c4e5dbb2083c79d181f6145a4" title="Multiplies scalar and polynomial." alt="" coords="724,107,904,149"/>
-<area shape="rect" id="node7" href="$namespaceSymmetric__Polynomials.html#a1d476a58c571385ffab409a59c683b98" title="Computes a^p for polynomial a and nonnegative integer p." alt="" coords="724,42,904,83"/>
-<area shape="rect" id="node3" href="$namespaceSymmetric__Polynomials.html#abc624e6ecd4b5ce3c02f150183362963" title="Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,..." alt="" coords="5,5,185,61"/>
-<area shape="rect" id="node4" href="$structSymmetric__Polynomials_1_1decomposition__half__idempotent.html#ac706fb88d949c91c7945ad29df72b084" title="Verifies that the decomposition is correct (i.e. expanding the generators in the original variables &#160;..." alt="" coords="233,37,413,93"/>
+<area shape="rect" id="node1" title="Constructs constant polynomial given coefficient and number of variables." alt="" coords="952,49,1132,90"/>
+<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1elementary__symmetric.html#ac01a1ee9fb360c2112e918b295cbe9b8" title="Given vector exponent computes e_1^{exponent_1}*...*e_n^{exponent_n}." alt="" coords="477,5,660,61"/>
+<area shape="rect" id="node3" href="$namespaceSymmetric__Polynomials.html#a81926a9c4e5dbb2083c79d181f6145a4" title="Multiplies scalar and polynomial." alt="" coords="724,49,904,90"/>
+<area shape="rect" id="node4" href="$namespaceSymmetric__Polynomials.html#a1d476a58c571385ffab409a59c683b98" title="Computes a^p for polynomial a and nonnegative integer p." alt="" coords="724,114,904,155"/>
+<area shape="rect" id="node5" href="$classSymmetric__Polynomials_1_1half__idempotent__generators.html#a249b2ebc59f817e258e30904de4f7b89" title="Computes a product of a monomial on our generators Idem, Chern, TwistedChern." alt="" coords="461,107,676,163"/>
+<area shape="rect" id="node6" href="$namespaceSymmetric__Polynomials.html#abc624e6ecd4b5ce3c02f150183362963" title="Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,..." alt="" coords="5,107,185,163"/>
+<area shape="rect" id="node7" href="$structSymmetric__Polynomials_1_1decomposition__half__idempotent.html#ac706fb88d949c91c7945ad29df72b084" title="Verifies that the decomposition is correct (i.e. expanding the generators in the original variables &#160;..." alt="" coords="233,139,413,195"/>
 </map>

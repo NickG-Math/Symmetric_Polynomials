@@ -1,8 +1,7 @@
 <map id="source/Relations.h" name="source/Relations.h">
-<area shape="rect" id="node1" title="Contains two classes of relations on polynomial variables: no relations, and when half the variables ..." alt="" coords="155,5,297,32"/>
-<area shape="rect" id="node2" href="$Generators_8h.html" title="Contains generators of all monomials with desired degree and satisfying a desired policy." alt="" coords="149,80,303,107"/>
-<area shape="rect" id="node3" href="$Permutations_8h.html" title="Contains methods for producing permutations, orbits of monomials under symmetric group action,..." alt="" coords="142,155,310,181"/>
-<area shape="rect" id="node4" href="$alt__Half__Idempotent_8h.html" title="If $$R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$$, the goal is to produce algebra generators fo..." alt="" coords="5,229,220,256"/>
-<area shape="rect" id="node5" href="$Half__Idempotent_8h.html" title="If $$R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$$, the goal is to produce algebra generators fo..." alt="" coords="244,229,435,256"/>
-<area shape="rect" id="node6" href="$Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="272,304,407,331"/>
+<area shape="rect" id="node1" title="Contains two classes of relations on polynomial variables: no relations, and when half the variables ..." alt="" coords="29,5,172,32"/>
+<area shape="rect" id="node2" href="$Generators_8h.html" title="Contains generators of all monomials with desired degree and satisfying a desired policy." alt="" coords="24,80,177,107"/>
+<area shape="rect" id="node3" href="$Permutations_8h.html" title="Contains methods for producing permutations, orbits of monomials under symmetric group action,..." alt="" coords="17,155,185,181"/>
+<area shape="rect" id="node4" href="$Half__Idempotent_8h.html" title="If $$R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$$, the goal is to produce algebra generators fo..." alt="" coords="5,229,196,256"/>
+<area shape="rect" id="node5" href="$Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="33,304,168,331"/>
 </map>

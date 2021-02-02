@@ -52,10 +52,6 @@ class \mbox{\hyperlink{classSymmetric__Polynomials_1_1vector__interpolate__gener
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename scalar\+\_\+t $>$ }\\std\+::ostream \& \mbox{\hyperlink{namespaceSymmetric__Polynomials_aecd3e8bc4e15f252d376c59adb59bc15}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{structSymmetric__Polynomials_1_1decomposition__half__idempotent}{decomposition\+\_\+half\+\_\+idempotent}}$<$ scalar\+\_\+t $>$ \&dec)
-\begin{DoxyCompactList}\small\item\em Prints polynomial. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename scalar\+\_\+t $>$ }\\void \mbox{\hyperlink{namespaceSymmetric__Polynomials_abc624e6ecd4b5ce3c02f150183362963}{print\+\_\+half\+\_\+idempotent\+\_\+relations}} (int n, bool verify=0)
-\begin{DoxyCompactList}\small\item\em Prints all relations in the description of the fixed points of R=Q\mbox{[}x\+\_\+1,...,x\+\_\+n,y\+\_\+1,...,y\+\_\+n\mbox{]}/(y\+\_\+i$^\wedge$2=y\+\_\+i) using Idem, Chern and Twisted\+Chern. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Iterator $>$ }\\void \mbox{\hyperlink{namespaceSymmetric__Polynomials_a19968cb25bf5b9b023bcca196145dec3}{apply\+\_\+permutation}} (std\+::vector$<$ char $>$ \&target, Iterator begin, const std\+::vector$<$ char $>$ \&perm)
 \begin{DoxyCompactList}\small\item\em Applies permutation perm on the target from starting point begin. \end{DoxyCompactList}\item 
 std\+::vector$<$ char $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a37ac61439f89641faa57cb3604faf114}{apply\+\_\+permutation\+\_\+pieces}} (const std\+::vector$<$ char $>$ \&v, int pieces, const std\+::vector$<$ char $>$ \&perm)
@@ -80,6 +76,10 @@ std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \mbox{\hyperlink{namespaceSymmetr
 \begin{DoxyCompactList}\small\item\em Returns all vectors interpolating between min, max and satisfying a given policy. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ }\\std\+::vector$<$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{monomial}}$<$ scalar\+\_\+t, rel\+\_\+t $>$ $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a591a8f1544a9eb3c4c8113d4e55df622}{monomial\+\_\+basis}} (int variables, int degree)
 \begin{DoxyCompactList}\small\item\em Returns the monomial basis in given number of variables and degree. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename scalar\+\_\+t $>$ }\\std\+::ostream \& \mbox{\hyperlink{namespaceSymmetric__Polynomials_a883bc8a69d911cdc3692dff4297d17e2}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{structSymmetric__Polynomials_1_1decomposition__half__idempotent}{decomposition\+\_\+half\+\_\+idempotent}}$<$ scalar\+\_\+t $>$ \&dec)
+\begin{DoxyCompactList}\small\item\em Prints polynomial. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename scalar\+\_\+t $>$ }\\void \mbox{\hyperlink{namespaceSymmetric__Polynomials_abc624e6ecd4b5ce3c02f150183362963}{print\+\_\+half\+\_\+idempotent\+\_\+relations}} (int n, bool verify=0)
+\begin{DoxyCompactList}\small\item\em Prints all relations in the description of the fixed points of R=Q\mbox{[}x\+\_\+1,...,x\+\_\+n,y\+\_\+1,...,y\+\_\+n\mbox{]}/(y\+\_\+i$^\wedge$2=y\+\_\+i) using Idem, Chern and Twisted\+Chern. \end{DoxyCompactList}\item 
 long \mbox{\hyperlink{namespaceSymmetric__Polynomials_a586f61dc2535175eb8cccd421f5c35af}{binomial}} (int top, int bot)
 \begin{DoxyCompactList}\small\item\em Returns \$\textbackslash{}binom\{n,m\}\$. \end{DoxyCompactList}\item 
 long \mbox{\hyperlink{namespaceSymmetric__Polynomials_a7fbdda5f0c66692f5c4bd4a0f7a319de}{factorial}} (int n)
@@ -492,12 +492,12 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{namespaceSymmetric__Polynomials_a58c3ea2d58a1501fc02442da2ae837a4_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{namespaceSymmetric__Polynomials_aecd3e8bc4e15f252d376c59adb59bc15}\label{namespaceSymmetric__Polynomials_aecd3e8bc4e15f252d376c59adb59bc15}} 
+\mbox{\Hypertarget{namespaceSymmetric__Polynomials_a883bc8a69d911cdc3692dff4297d17e2}\label{namespaceSymmetric__Polynomials_a883bc8a69d911cdc3692dff4297d17e2}} 
 \index{Symmetric\_Polynomials@{Symmetric\_Polynomials}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!Symmetric\_Polynomials@{Symmetric\_Polynomials}}
 \doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
 {\footnotesize\ttfamily template$<$typename scalar\+\_\+t $>$ \\
-std\+::ostream \& Symmetric\+\_\+\+Polynomials\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{structSymmetric__Polynomials_1_1decomposition__half__idempotent}{decomposition\+\_\+half\+\_\+idempotent}}$<$ scalar\+\_\+t $>$ \&}]{dec }\end{DoxyParamCaption})}
+std\+::ostream\& Symmetric\+\_\+\+Polynomials\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{structSymmetric__Polynomials_1_1decomposition__half__idempotent}{decomposition\+\_\+half\+\_\+idempotent}}$<$ scalar\+\_\+t $>$ \&}]{dec }\end{DoxyParamCaption})}
 
 
 
@@ -507,7 +507,7 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespaceSymmetric__Polynomials_aecd3e8bc4e15f252d376c59adb59bc15_cgraph}
+\includegraphics[width=350pt]{namespaceSymmetric__Polynomials_a883bc8a69d911cdc3692dff4297d17e2_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{namespaceSymmetric__Polynomials_a731806de07a7498e372e3a3233a974af}\label{namespaceSymmetric__Polynomials_a731806de07a7498e372e3a3233a974af}} 
