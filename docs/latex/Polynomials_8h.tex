@@ -2,12 +2,13 @@
 \label{Polynomials_8h}\index{source/Polynomials.h@{source/Polynomials.h}}
 
 
-Contains the classes of monomials and polynomials in multiple variables with relations. ~\newline
+Contains the class of polynomials in multiple variables. ~\newline
   
 
 
-{\ttfamily \#include \char`\"{}General.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include \char`\"{}General.\+h\char`\"{}}\newline
 Include dependency graph for Polynomials.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -19,20 +20,18 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=223pt]{Polynomials_8h__dep__incl}
+\includegraphics[width=350pt]{Polynomials_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{Symmetric\+\_\+\+Polynomials\+::polynomial$<$ scalar\+\_\+t, rel\+\_\+t $>$}}
-\begin{DoxyCompactList}\small\item\em Class of polynomials in multiple variables with relations. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{classSymmetric__Polynomials_1_1monomial}{Symmetric\+\_\+\+Polynomials\+::monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$}}
-\begin{DoxyCompactList}\small\item\em Class of monomials in multiple variables with relations. \end{DoxyCompactList}\item 
-struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1monomial__compare}{Symmetric\+\_\+\+Polynomials\+::monomial\+\_\+compare$<$ scalar\+\_\+t, rel\+\_\+t $>$}}
-\begin{DoxyCompactList}\small\item\em Comparator for monomials based on $<$. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{Symmetric\+\_\+\+Polynomials\+::polynomial$<$ scalar\+\_\+t, rel\+\_\+t $>$}}
-\begin{DoxyCompactList}\small\item\em Class of polynomials in multiple variables with relations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial$<$ scalar\+\_\+t, exponent\+\_\+t, name\+\_\+override, dimension\+\_\+override $>$}}
+\begin{DoxyCompactList}\small\item\em Class of Polynomials in multiple variables. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial$<$ scalar\+\_\+t, exponent\+\_\+t, name\+\_\+override, dimension\+\_\+override $>$\+::const\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em Constant iterator going through the monomials of the polynomial in increasing order. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Standard\+\_\+\+Variables$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em The standard variables $x_i$ in a polynomial, with $|x_i|=1$ and no relations. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -41,31 +40,11 @@ class \mbox{\hyperlink{classSymmetric__Polynomials_1_1polynomial}{Symmetric\+\_\
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{namespaceSymmetric__Polynomials_a25e05f07a7f62ca6d3304274aaac2e2e}{Symmetric\+\_\+\+Polynomials\+::general\+\_\+compute\+\_\+degree}} (const std\+::vector$<$ char $>$ \&exponent, const std\+::vector$<$ char $>$ \&dimensions)
-\item 
-{\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ }\\monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a486dcdfce4585685ded1f60ab638f113}{Symmetric\+\_\+\+Polynomials\+::operator$\ast$}} (const scalar\+\_\+t \&a, const monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&b)
-\begin{DoxyCompactList}\small\item\em Product of scalar and monomial. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ }\\std\+::ostream \& \mbox{\hyperlink{namespaceSymmetric__Polynomials_a731806de07a7498e372e3a3233a974af}{Symmetric\+\_\+\+Polynomials\+::operator$<$$<$}} (std\+::ostream \&os, const monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&a)
-\begin{DoxyCompactList}\small\item\em Prints monomial. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ }\\monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_abdbc4a51aab1bb201ebfedcd26896cb4}{Symmetric\+\_\+\+Polynomials\+::permute}} (const monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&a, const std\+::vector$<$ char $>$ \&perm)
-\begin{DoxyCompactList}\small\item\em Permutes the variables in a monomial according permutation; returns permuted monomial. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ }\\polynomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_aa3071663e4ec8ac6e28de064de66e492}{Symmetric\+\_\+\+Polynomials\+::multiply}} (const polynomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&a, const polynomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&b, bool dontcondense=0)
-\begin{DoxyCompactList}\small\item\em Multiplies two polynomials with the ability to disable condensation (not recommended) \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ }\\polynomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a81926a9c4e5dbb2083c79d181f6145a4}{Symmetric\+\_\+\+Polynomials\+::operator$\ast$}} (const scalar\+\_\+t \&a, const polynomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&b)
-\begin{DoxyCompactList}\small\item\em Multiplies scalar and polynomial. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ }\\polynomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a542c4daa5b2d96247a72ad6ce2c422b8}{Symmetric\+\_\+\+Polynomials\+::operator$\ast$}} (const polynomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&a, const polynomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&b)
-\item 
-{\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ }\\polynomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a4660c20842e3b1127be52c75a456c656}{Symmetric\+\_\+\+Polynomials\+::operator$\ast$}} (const monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&a, const polynomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&b)
-\begin{DoxyCompactList}\small\item\em Returns the product of monomial and polynomial. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ }\\polynomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a990b557830c3f886acfec2df4bbf0c2e}{Symmetric\+\_\+\+Polynomials\+::operator$\ast$}} (const polynomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&a, const monomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&b)
-\begin{DoxyCompactList}\small\item\em Returns the product of polynomial and monomial. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ }\\polynomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a1d476a58c571385ffab409a59c683b98}{Symmetric\+\_\+\+Polynomials\+::power}} (const polynomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&a, int p, bool dontcondense=0)
-\begin{DoxyCompactList}\small\item\em Computes a$^\wedge$p for polynomial a and nonnegative integer p. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename scalar\+\_\+t , typename rel\+\_\+t $>$ }\\std\+::ostream \& \mbox{\hyperlink{namespaceSymmetric__Polynomials_ab73ff5cb5642b3ea602cf4e0370db0a7}{Symmetric\+\_\+\+Polynomials\+::operator$<$$<$}} (std\+::ostream \&os, const polynomial$<$ scalar\+\_\+t, rel\+\_\+t $>$ \&a)
+{\footnotesize template$<$typename scalar\+\_\+t , typename exponent\+\_\+t , bool t, bool w$>$ }\\std\+::ostream \& \mbox{\hyperlink{namespaceSymmetric__Polynomials_aee540cffbf130eed9641b895453e81c3}{Symmetric\+\_\+\+Polynomials\+::operator$<$$<$}} (std\+::ostream \&os, const Polynomial$<$ scalar\+\_\+t, exponent\+\_\+t, t, w $>$ \&a)
 \begin{DoxyCompactList}\small\item\em Prints polynomial. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Contains the classes of monomials and polynomials in multiple variables with relations. ~\newline
+Contains the class of polynomials in multiple variables. ~\newline
  
 

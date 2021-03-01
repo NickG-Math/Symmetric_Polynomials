@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['combinations_5fgenerator_237',['combinations_generator',['../classSymmetric__Polynomials_1_1combinations__generator_1_1const__iterator.html#a1ae621d7c476e578ba9a377d8c85de00',1,'Symmetric_Polynomials::combinations_generator::const_iterator']]]
+  ['combination_5fgenerator_143',['Combination_Generator',['../classSymmetric__Polynomials_1_1Combination__Generator_1_1const__iterator.html#aa455699f1e296180d137dd0d904ff34f',1,'Symmetric_Polynomials::Combination_Generator::const_iterator']]]
 ];

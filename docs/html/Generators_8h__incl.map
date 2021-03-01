@@ -1,14 +1,12 @@
 <map id="source/Generators.h" name="source/Generators.h">
-<area shape="rect" id="node1" title="Contains generators of all monomials with desired degree and satisfying a desired policy." alt="" coords="285,5,438,32"/>
-<area shape="rect" id="node2" href="$Relations_8h.html" title="Contains two classes of relations on polynomial variables: no relations, and when half the variables ..." alt="" coords="314,80,409,107"/>
-<area shape="rect" id="node3" href="$Polynomials_8h.html" title="Contains the classes of monomials and polynomials in multiple variables with relations." alt="" coords="304,155,419,181"/>
-<area shape="rect" id="node4" href="$General_8h.html" title="Contains general operations on vectors (eg hashing, adding), the class of rational numbers,..." alt="" coords="264,229,349,256"/>
-<area shape="rect" id="node12" title=" " alt="" coords="374,229,461,256"/>
-<area shape="rect" id="node5" title=" " alt="" coords="5,304,85,331"/>
-<area shape="rect" id="node6" title=" " alt="" coords="110,304,173,331"/>
-<area shape="rect" id="node7" title=" " alt="" coords="197,304,253,331"/>
-<area shape="rect" id="node8" title=" " alt="" coords="277,304,336,331"/>
-<area shape="rect" id="node9" title=" " alt="" coords="360,304,435,331"/>
-<area shape="rect" id="node10" title=" " alt="" coords="459,304,533,331"/>
-<area shape="rect" id="node11" title=" " alt="" coords="557,304,643,331"/>
+<area shape="rect" id="node1" title="Contains classes for generating permutations, combinations and factory for such classes." alt="" coords="174,5,327,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="153,80,239,107"/>
+<area shape="rect" id="node3" href="$General_8h.html" title="Contains general operations on vectors (eg hashing, adding), the class of rational numbers,..." alt="" coords="264,80,349,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,155,85,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="110,155,173,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="197,155,253,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="277,155,336,181"/>
+<area shape="rect" id="node8" title=" " alt="" coords="360,155,435,181"/>
+<area shape="rect" id="node9" title=" " alt="" coords="459,155,533,181"/>
+<area shape="rect" id="node10" title=" " alt="" coords="557,155,643,181"/>
 </map>

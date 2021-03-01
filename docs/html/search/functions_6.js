@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['general_5fcompute_5fdegree_172',['general_compute_degree',['../namespaceSymmetric__Polynomials.html#a25e05f07a7f62ca6d3304274aaac2e2e',1,'Symmetric_Polynomials']]],
-  ['generating_5fconst_5fiterator_173',['generating_const_iterator',['../classSymmetric__Polynomials_1_1generating__const__iterator.html#ad3af1c975a6b32772e3b1d725faadd11',1,'Symmetric_Polynomials::generating_const_iterator']]]
+  ['general_5fcompute_5fdegree_103',['general_compute_degree',['../namespaceSymmetric__Polynomials.html#a17c6bea90d7e164a084903de6086603d',1,'Symmetric_Polynomials']]],
+  ['get_5fnumber_5fof_5fvariables_104',['get_number_of_variables',['../classSymmetric__Polynomials_1_1Polynomial.html#a8349707eec45b1b8776d70f18deb5426',1,'Symmetric_Polynomials::Polynomial']]]
 ];

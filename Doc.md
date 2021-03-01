@@ -59,15 +59,11 @@ $$	\alpha(\alpha-1)\cdots (\alpha-n)=0$$
 
 This library implements an algorithm that can write every element in \f$R^{\Sigma_n}\f$ as a polynomial on the generators \f$\alpha,c_i,\gamma_{s,t}\f$ and further produce every relation explicitly. The class \f$\alpha\f$ is referred to as "idempotent class" (since it's made out of idempotents), the classes \f$c_i\f$ are referred to as "Chern classes" and the classes \f$\gamma_{s,t}\f$ are the "twisted Chern classes".
 
-\section symrr Symmetric polynomials with other relations
-
-More generally, the library can be extended to support more general situations, where the variables are partitioned into sets with different relations, and the various sets are permuted separately. In each case of course, a new algorithm must be implemented. The library can also be used to discover the algorithm in question, by brute force computing all relations if the generating set is known.
-
 \page use How to Use
 \tableofcontents
 \section demo Quick Demonstration
 
-For a quick demonstration you may use the binaries Demo.exe or Demo.out found <a href="https://github.com/NickG-Math/Symmetric_Polynomials/releases">here</a>. These are compiled from Demo.cpp using MSVC and Clang respectively. For example, compile Demo.cpp yourself use: (on Linux)
+For a quick demonstration you may use the binaries Demo.exe or Demo.out found <a href="https://github.com/NickG-Math/Symmetric_Polynomials/releases">here</a>. These are compiled from Demo.cpp using MSVC and Clang respectively. You can also compile these binaries yourself. For example, on Linux use:
 
     clang++ source/Demo.cpp -std=c++17 -O3 -march=native -o Demo.out	
 
@@ -81,77 +77,103 @@ Everything in this library is under the namespace ```Symmetric_Polynomials```. F
 
 	using namespace Symmetric_Polynomials;
 
-\subsection mono Monomials, polynomials and relations
+\subsection mono Polynomials
 
-A monomial is specified by its coefficient (```coeff```), powers vector (an ```std::vector<int> powers```) as well as template parameters for the type of coefficient (```scalar_t```) and relations (```rel_t```) used:  For example,
+A polynomial in multiple variables is specified by two template parameters:
+- ```scalar_t```: the type of coefficients eg ```int``` or ```Rational```
+- ```exponent_t```: the type of variables used eg ```Standard_Variables<unsigned char>``` or ```Half_Idempotent_Variables<unsigned char>```. These specify the relations/degrees/names of the variables in the polynomial. For example, ```Standard_Variables<unsigned char>``` specifies variables \f$x_1,...,x_n\f$ with degrees \f$|x_i|=1\f$ and no relations. On the other hand, ```Half_Idempotent_Variables<unsigned char>``` specifies variables \f$x_1,...,x_n,y_1,...,y_n\f$ with degrees \f$|x_i|=1, |y_i|=0\f$ and relations \f$y_i^2=y_i\f$. The ```unsigned char``` is the type for the exponent vectors (see below).
 
-    monomial<int,norelations>(3,{0,1,4});
+To initialize a polynomial, provide the desired number of variables \f$n\f$. For example, if \f$n=3\f$:
+
+
+	polynomial<int,Standard_Variables<unsigned char>> p(3);
+
+
+Next, insert monomials \f$cx_1^{a_1}\cdots x_n^{a_n}\f$ by providing the exponent vector \f$[a_1,...,a_n]\f$ and the coefficient \f$c\f$. Eg:
+
+
+	p.insert({0,1,4},7);
+
+
+inserts the monomial \f$7x_2x_3^4\f$ in ```p```. Note that the exponent vector is of type ```Standard_Variables<unsigned char>``` so \f$a_i\le 2^8-1\f$. To allow for bigger \f$a_i\f$'s, at the cost of more memory, use ```unsigned long``` in the place of ```unsigned char```.
+
+You can also use other coefficients, such as ```Rational```, or other types of variables, such as ```Half_Idempotent_Variables```. For example,
+
+
+	polynomial<Rational,Half_Idempotent_Variables<unsigned char>> p(4);
+
+	p.insert({1,2,0,1},Rational(2,3));
+
+	p.insert({1,1,1,1},Rational(1,7));
+
     
-specifies the monomial \f$3x_2x_3^4\f$.
+specifies the polynomial \f$\frac17 x_1x_2y_1y_2+\frac23x_1x_2^2y_2\f$.
 
-Any type with operations ```+,*,-,==``` and a constructor taking a single ```int``` type can be used as ```scalar_t```. In particular, we can use ```rational``` which represents rational numbers:
+Polynomials can be added, subtracted and multiplied by binary operators ```+,-,*```. One can also raise a polynomial to a nonnegative integer power using the binary operator ```^```. They can also be printed to an output stream eg by using ```std::cout << p;```
 
-    monomial<rational,norelations> (rational(2,3),{0,1,4});
+\subsection sym Symmetric Basis
 
-specifies the monomial \f$\frac23x_2x_3^4\f$.
+The class ```Symmetric_Basis``` allows us to transform polynomials on \f$x_i\f$ variables (using ```Standard_Variables```) into polynomials on the elementary symmetric polynomials ```e[i]```  (corresponding to \f$\sigma_i\f$). For example:
 
-As for ```rel_t```, this specifies both the degrees and relations the variables must satisfy. ```norelations``` means all variables \f$x_i\f$ have degree 1 and that there are no relations. On the other hand, ```halfidempotent``` means half the variables \f$x_i\f$ have degree 1, the 
-other half \f$y_i\f$ have degree 0 and \f$y_i^2=y_i\f$ are the relations. For example:
+	Symmetric_Basis<int, Standard_Variables<unsigned char>> SB;
+	
+	polynomial<int,Standard_Variables<unsigned char>> poly(2);
+	
+	poly.insert({1,2},2);
+	
+	poly.insert({2,1},2);
+	
+	polynomial<int, Elementary_Symmetric_Variables<unsigned char>>  new_poly= SB(poly);
+	
+	polynomial<int, Standard_Variables<unsigned char>>  new_new_poly= SB(new_poly);
+	
+	std::cout << poly << "\n";
+	
+	std::cout<< new_poly << "\n";
+	
+	std::cout << new_new_poly << "\n";
 
-    monomial<double,halfidempotent> (1.3,{3,1,4,1,0,1});
 
-specifies the monomial \f$1.3x_1^3x_2x_3^4y_1y_3\f$
-
-A polynomial is made out of a vector of monomials eg
-
-    polynomial p(std::vector({ monomial<int,halfidempotent>(2,{1,2,0,1}), monomial<int,halfidempotent>(3,{3,0,1,1}) }));
-    
-specifies the polynomial \f$2x_1x_2^2y_2+3x_1^3y_1y_2\f$.
-
-\subsection perm Permutations
-
-A permutation is an ```std::vector<char>``` and is applied on a monomial according to ```rel_t```: Eg for ```norelations``` we have a \f$\Sigma_n\f$ action on
-\f$n\f$ many variables \f$x_1,...,x_n\f$, while for ```halfidempotent``` we have a \f$\Sigma_n\f$ action on \f$2n\f$ many variables \f$x_1,...,x_n\f$ and \f$y_1,...,y_n\f$ that are permuted separately.
-
-\subsection sym Symmetric Polynomials and no relations
-
-When we have no relations, we can use
-
-	polynomial poly(std::vector({ monomial<rational, norelations>(2, { 1,2 }), monomial<rational, norelations>(2, {2,1 }) })));
-	decomposition_elementary_symmetric dec(poly);
-	std::cout<< dec;
-
-which sets ```poly``` to be \f$2x_1x_2^2+2x_1^2x_2\f$, computes the decomposition of ```poly``` into elementary symmetric polynomials ```e[i]``` (corresponding to \f$\sigma_i\f$), stores it into ```dec``` and prints the decomposition as: ```2e_1*e_2```. This all means that
+does the following: First it sets ```poly``` to \f$2x_1x_2^2+2x_1^2x_2\f$, transforms into ```new_poly``` which is \f$2e_1e_2\f$ and then transforms ```new_poly``` into ```new_new_poly``` which is \f$2x_1x_2^2+2x_1^2x_2\f$ (i.e. the original polynomial) and finally prints the three polynomials. This all means that
 $$2x_1x_2^2+2x_1^2x_2=2\sigma_1\sigma_2$$
-
-
-The class ```decomposition_elementary_symmetric<rational>``` stores and computes the expression of a polynomial on variables \f$x_i\f$ as a polynomial on the \f$\sigma_i\f$.
 
 \subsection halfidem Half idempotent relations
 
-When we have the "half idempotent relation", the generators are \f$\alpha, c_i, \gamma_{s,t}\f$ (see \ref math) or ```Idem```, ```Chern[i]``` and ```TwistedChern[s][t]``` respectively as they are used in the program. We order them as \f$\alpha,c_1,...,c_n, \gamma_{1,1},...,\gamma_{1,n-1},\gamma_{2,1},...,\gamma_{n-1,1}\f$ in this order. To get the original indexing on the \f$\gamma\f$ elements
-we use ```std::map<std::pair<int,int>,int> TwistedChern_indexer``` eg
+When we have the "half idempotent relation" i.e. variables \f$x_i,y_i\f$ with \f$y_i^2=y_i\f$ (as specified by ```Half_Idempotent_Variables```), the generators are \f$\alpha, c_i, \gamma_{s,t}\f$ (see \ref math) or ```Idem```, ```Chern[i]``` and ```TwistedChern[s][t]``` respectively as they are used in the program. We order them as \f$\alpha,c_1,...,c_n, \gamma_{1,1},...,\gamma_{1,n-1},\gamma_{2,1},...,\gamma_{n-1,1}\f$. 
 
-	std::cout << TwistedChern_indexer[std::make_pair<int,int>(1,2)];
-	
-prints ```1``` since ```TwistedChern[1]``` corresponds to \f$\gamma_{1,2}\f$.
+The class ```Half_Idempotent_Basis``` allows us to transform polynomials on \f$x_i\f$ variables (using ```Standard_Variables```) into polynomials on the elementary symmetric
 
 The code
 
-	polynomial poly(std::vector({ monomial<rational, halfidempotent>(2, { 1,0,1,0 }), monomial<rational, halfidempotent>(2, {0,1,0,1 }) }));
-	decomposition_half_idempotent dec(poly);
-	std::cout << dec << "\n";
+	Half_Idempotent_Basis<Rational,Half_Idempotent_Variables<unsigned char>> HB;
 
-sets ```poly``` to be \f$x_1y_1+x_2y_2\f$, computes the decomposition of ```poly``` into ```Idem,Chern,TwistedChern```, stores it into ```dec``` and prints the decomposition as ```2*a*c_1 + -2*b_{1,1}```
-reflecting
+	polynomial<Rational,Half_Idempotent_Variables<unsigned char>> poly(4);
+	
+	poly.insert({ 1,0,1,0 }, 2);
+	
+	poly.insert({ 0,1,0,1 }, 2);
+	
+	auto new_poly= HB(poly);
+	
+	auto new_new_poly= HB(new_poly);
+	
+	std::cout << poly << "\n";
+	
+	std::cout << new_poly << "\n";
+	
+	std::cout << new_new_poly << "\n";
+
+sets ```poly``` to be \f$x_1y_1+x_2y_2\f$, transforms it into ```new_poly``` which is \f$2\alpha c_1 + -2\gamma_{1,1}\f$ and then transforms it to ```new_new_poly``` in the original variables, which is equal to ```poly```, before printing their names. Thus:
+
 $$x_1y_1+x_2y_2=2\alpha c_1-2\gamma_{1,1}$$
 
-The class ```decomposition_half_idempotent<rational>``` stores and computes the expression of a polynomial on variables \f$x_i,y_i\f$ as a polynomial on the \f$\alpha,c_i,\gamma_{s,j}\f$.
-
 To print the relations amongst \f$\alpha,c_i,\gamma_{s,j}\f$ simply use:
-	print_half_idempotent_relations<rational>(3);
+
+	print_half_idempotent_relations<Rational, Half_Idempotent_Variables<unsigned char>>(3);
 	
-The \f$3\f$ here corresponds to the number of variables: \f$x_1,x_2,x_3,y_1,y_2,y_3\f$ and can be replaced by any positive integer, although for \f$n>10\f$ the computation may take a bit long (program not currently multithreaded, but that can trivially be remedied with a ```#pragma omp parallel for```.
+The \f$3\f$ here corresponds to the number of variables: \f$x_1,x_2,x_3,y_1,y_2,y_3\f$ and can be replaced by any positive integer.
+
+There is also a multithreaded version that you can compile yourself, by removing the comment from the #pragma omp in the definition of ```print_half_idempotent_relations```.
 
 
 Finally, Demo.cpp contains another function, ```write_pontryagin_C2_in_terms_of_Chern_classes```. This prints the expressions of the twisted Pontryagin/symplectic classes given by

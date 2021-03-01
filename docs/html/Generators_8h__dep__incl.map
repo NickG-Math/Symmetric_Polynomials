@@ -1,6 +1,5 @@
 <map id="source/Generators.h" name="source/Generators.h">
-<area shape="rect" id="node1" title="Contains generators of all monomials with desired degree and satisfying a desired policy." alt="" coords="24,5,177,32"/>
-<area shape="rect" id="node2" href="$Permutations_8h.html" title="Contains methods for producing permutations, orbits of monomials under symmetric group action,..." alt="" coords="17,80,185,107"/>
-<area shape="rect" id="node3" href="$Half__Idempotent_8h.html" title="If $$R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$$, the goal is to produce algebra generators fo..." alt="" coords="5,155,196,181"/>
-<area shape="rect" id="node4" href="$Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="33,229,168,256"/>
+<area shape="rect" id="node1" title="Contains classes for generating permutations, combinations and factory for such classes." alt="" coords="24,5,177,32"/>
+<area shape="rect" id="node2" href="$Half__Idempotent_8h.html" title="Contains the methods and classes for solving the following problem: If $$R=\mathbb Q[x_1,..." alt="" coords="5,80,196,107"/>
+<area shape="rect" id="node3" href="$Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="33,155,168,181"/>
 </map>

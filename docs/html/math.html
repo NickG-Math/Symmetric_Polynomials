@@ -98,7 +98,6 @@ $(document).ready(function(){initNavTree('math.html',''); initResizable(); });
 <ul><ul><li class="level2"><a href="#sym">Symmetric polynomials</a></li>
 </ul>
 <li class="level1"><a href="#symr">Symmetric polynomials with &#39;half idempotent&#39; relations</a></li>
-<li class="level1"><a href="#symrr">Symmetric polynomials with other relations</a></li>
 </ul>
 </div>
 <div class="textblock"><h1><a class="anchor" id="sym"></a>
@@ -110,10 +109,7 @@ Symmetric polynomials with 'half idempotent' relations</h1>
 <p>The relations \(\sim\) are:</p>
 <p>$$\alpha^{n+1}=\alpha^n+\cdots$$ $$\alpha^s\gamma_{s,i}=c_s\alpha^{i+s}+\cdots$$ $$\gamma_{s,i}\gamma_{t,j}=c_t\gamma_{s,\min(i+j,n)}+\cdots$$ where \(s\le t\le s+i\) for the last relation.</p>
 <p>The first relation can be explicitly computed as: $$ \alpha(\alpha-1)\cdots (\alpha-n)=0$$</p>
-<p>This library implements an algorithm that can write every element in \(R^{\Sigma_n}\) as a polynomial on the generators \(\alpha,c_i,\gamma_{s,t}\) and further produce every relation explicitly. The class \(\alpha\) is referred to as "idempotent class" (since it's made out of idempotents), the classes \(c_i\) are referred to as "Chern classes" and the classes \(\gamma_{s,t}\) are the "twisted Chern classes".</p>
-<h1><a class="anchor" id="symrr"></a>
-Symmetric polynomials with other relations</h1>
-<p>More generally, the library can be extended to support more general situations, where the variables are partitioned into sets with different relations, and the various sets are permuted separately. In each case of course, a new algorithm must be implemented. The library can also be used to discover the algorithm in question, by brute force computing all relations if the generating set is known. </p>
+<p>This library implements an algorithm that can write every element in \(R^{\Sigma_n}\) as a polynomial on the generators \(\alpha,c_i,\gamma_{s,t}\) and further produce every relation explicitly. The class \(\alpha\) is referred to as "idempotent class" (since it's made out of idempotents), the classes \(c_i\) are referred to as "Chern classes" and the classes \(\gamma_{s,t}\) are the "twisted Chern classes". </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

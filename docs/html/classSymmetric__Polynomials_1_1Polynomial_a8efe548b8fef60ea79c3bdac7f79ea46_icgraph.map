@@ -1,0 +1,5 @@
+<map id="Symmetric_Polynomials::Polynomial::highest_term" name="Symmetric_Polynomials::Polynomial::highest_term">
+<area shape="rect" id="node1" title="Returns highest term monomial in a polynomial." alt="" coords="269,43,467,84"/>
+<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1Symmetric__Basis.html#a348f7fc55913fcccfcc2605e5800ab08" title="Transform a symmetric polynomial on the original variables x_i into one on the elementary symmetric p..." alt="" coords="5,5,221,47"/>
+<area shape="rect" id="node3" href="$classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#a9897125c664f79acb7e2ceac299347fc" title="Transform a symmetric polynomial on the &#160;into a polynomial on ." alt="" coords="23,71,204,127"/>
+</map>

@@ -128,13 +128,12 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="General_8h__dep__incl.png" border="0" usemap="#source_2General_8hdep" alt=""/></div>
 <map name="source_2General_8hdep" id="source_2General_8hdep">
-<area shape="rect" title="Contains general operations on vectors (eg hashing, adding), the class of rational numbers,..." alt="" coords="35,5,167,32"/>
-<area shape="rect" href="Polynomials_8h.html" title="Contains the classes of monomials and polynomials in multiple variables with relations." alt="" coords="20,80,181,107"/>
-<area shape="rect" href="Relations_8h.html" title="Contains two classes of relations on polynomial variables: no relations, and when half the variables ..." alt="" coords="29,155,172,181"/>
-<area shape="rect" href="Generators_8h.html" title="Contains generators of all monomials with desired degree and satisfying a desired policy." alt="" coords="24,229,177,256"/>
-<area shape="rect" href="Permutations_8h.html" title="Contains methods for producing permutations, orbits of monomials under symmetric group action,..." alt="" coords="17,304,185,331"/>
-<area shape="rect" href="Half__Idempotent_8h.html" title="If $$R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$$, the goal is to produce algebra generators fo..." alt="" coords="5,379,196,405"/>
-<area shape="rect" href="Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="33,453,168,480"/>
+<area shape="rect" title="Contains general operations on vectors (eg hashing, adding), the class of rational numbers,..." alt="" coords="125,5,257,32"/>
+<area shape="rect" href="Polynomials_8h.html" title="Contains the class of polynomials in multiple variables." alt="" coords="201,80,363,107"/>
+<area shape="rect" href="Generators_8h.html" title="Contains classes for generating permutations, combinations and factory for such classes." alt="" coords="24,80,177,107"/>
+<area shape="rect" href="Half__Idempotent_8h.html" title="Contains the methods and classes for solving the following problem: If $$R=\mathbb Q[x_1,..." alt="" coords="5,155,196,181"/>
+<area shape="rect" href="Symmetric__Basis_8h.html" title="Contains methods for writing symmetric polynomials (with no relations) in terms of the elementary sym..." alt="" coords="221,155,415,181"/>
+<area shape="rect" href="Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="33,229,168,256"/>
 </map>
 </div>
 </div>
@@ -142,11 +141,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1hasher.html">Symmetric_Polynomials::hasher&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hashes all vectors between two vectors min and max into a long integer.  <a href="structSymmetric__Polynomials_1_1hasher.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1rational.html">Symmetric_Polynomials::rational</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class of rational numbers. Standard implementation.  <a href="structSymmetric__Polynomials_1_1rational.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Rational.html">Symmetric_Polynomials::Rational</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class of rational numbers.  <a href="structSymmetric__Polynomials_1_1Rational.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -157,40 +153,17 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a19968cb25bf5b9b023bcca196145dec3"><td class="memTemplParams" colspan="2">template&lt;typename Iterator &gt; </td></tr>
-<tr class="memitem:a19968cb25bf5b9b023bcca196145dec3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a19968cb25bf5b9b023bcca196145dec3">Symmetric_Polynomials::apply_permutation</a> (std::vector&lt; char &gt; &amp;target, Iterator begin, const std::vector&lt; char &gt; &amp;perm)</td></tr>
-<tr class="memdesc:a19968cb25bf5b9b023bcca196145dec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies permutation perm on the target from starting point begin.  <a href="namespaceSymmetric__Polynomials.html#a19968cb25bf5b9b023bcca196145dec3">More...</a><br /></td></tr>
-<tr class="separator:a19968cb25bf5b9b023bcca196145dec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37ac61439f89641faa57cb3604faf114"><td class="memItemLeft" align="right" valign="top">std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a37ac61439f89641faa57cb3604faf114">Symmetric_Polynomials::apply_permutation_pieces</a> (const std::vector&lt; char &gt; &amp;v, int pieces, const std::vector&lt; char &gt; &amp;perm)</td></tr>
-<tr class="memdesc:a37ac61439f89641faa57cb3604faf114"><td class="mdescLeft">&#160;</td><td class="mdescRight">Breaks vector v into given number of pieces and applies given permutation on each one; then joins the pieces and returns the vector.  <a href="namespaceSymmetric__Polynomials.html#a37ac61439f89641faa57cb3604faf114">More...</a><br /></td></tr>
-<tr class="separator:a37ac61439f89641faa57cb3604faf114"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27efdd26eaaeafdf5a8de46a3ab9a194"><td class="memItemLeft" align="right" valign="top">std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a27efdd26eaaeafdf5a8de46a3ab9a194">Symmetric_Polynomials::apply_permutation</a> (const std::vector&lt; char &gt; &amp;v, const std::vector&lt; char &gt; &amp;perm)</td></tr>
-<tr class="memdesc:a27efdd26eaaeafdf5a8de46a3ab9a194"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies permutation perm on the vector v.  <a href="namespaceSymmetric__Polynomials.html#a27efdd26eaaeafdf5a8de46a3ab9a194">More...</a><br /></td></tr>
-<tr class="separator:a27efdd26eaaeafdf5a8de46a3ab9a194"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a2edeb8ae1f843ee81da0bc91f0dbff"><td class="memTemplParams" colspan="2">template&lt;typename T , typename S  = T&gt; </td></tr>
-<tr class="memitem:a2a2edeb8ae1f843ee81da0bc91f0dbff"><td class="memTemplItemLeft" align="right" valign="top">S&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a2a2edeb8ae1f843ee81da0bc91f0dbff">Symmetric_Polynomials::sum</a> (const std::vector&lt; T &gt; &amp;a, int end)</td></tr>
-<tr class="memdesc:a2a2edeb8ae1f843ee81da0bc91f0dbff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a[0]+...+a[end].  <a href="namespaceSymmetric__Polynomials.html#a2a2edeb8ae1f843ee81da0bc91f0dbff">More...</a><br /></td></tr>
-<tr class="separator:a2a2edeb8ae1f843ee81da0bc91f0dbff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17c6bea90d7e164a084903de6086603d"><td class="memTemplParams" colspan="2">template&lt;typename T , typename S &gt; </td></tr>
+<tr class="memitem:a17c6bea90d7e164a084903de6086603d"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a17c6bea90d7e164a084903de6086603d">Symmetric_Polynomials::general_compute_degree</a> (const T &amp;exponent, const S &amp;dimensions)</td></tr>
+<tr class="memdesc:a17c6bea90d7e164a084903de6086603d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Degree computation given exponent and dimensions (grading)  <a href="namespaceSymmetric__Polynomials.html#a17c6bea90d7e164a084903de6086603d">More...</a><br /></td></tr>
+<tr class="separator:a17c6bea90d7e164a084903de6086603d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc4a90741eac710cd52a41a3ef03b050"><td class="memTemplParams" colspan="2">template&lt;typename T , typename S  = T&gt; </td></tr>
 <tr class="memitem:abc4a90741eac710cd52a41a3ef03b050"><td class="memTemplItemLeft" align="right" valign="top">S&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#abc4a90741eac710cd52a41a3ef03b050">Symmetric_Polynomials::sum</a> (const std::vector&lt; T &gt; &amp;a)</td></tr>
 <tr class="memdesc:abc4a90741eac710cd52a41a3ef03b050"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the sum of all entries of a.  <a href="namespaceSymmetric__Polynomials.html#abc4a90741eac710cd52a41a3ef03b050">More...</a><br /></td></tr>
 <tr class="separator:abc4a90741eac710cd52a41a3ef03b050"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb21a2b6c91aca228a3f2aca9617b629"><td class="memItemLeft" align="right" valign="top">std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#acb21a2b6c91aca228a3f2aca9617b629">Symmetric_Polynomials::operator+</a> (const std::vector&lt; char &gt; &amp;a, const std::vector&lt; char &gt; &amp;b)</td></tr>
-<tr class="memdesc:acb21a2b6c91aca228a3f2aca9617b629"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds two vectors coordinate wise.  <a href="namespaceSymmetric__Polynomials.html#acb21a2b6c91aca228a3f2aca9617b629">More...</a><br /></td></tr>
-<tr class="separator:acb21a2b6c91aca228a3f2aca9617b629"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c12691419fbed641e806ad4d6acbcd1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a8c12691419fbed641e806ad4d6acbcd1">Symmetric_Polynomials::operator-</a> (const std::vector&lt; char &gt; &amp;a, const std::vector&lt; char &gt; &amp;b)</td></tr>
-<tr class="memdesc:a8c12691419fbed641e806ad4d6acbcd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtract a vector from another coordinate wise.  <a href="namespaceSymmetric__Polynomials.html#a8c12691419fbed641e806ad4d6acbcd1">More...</a><br /></td></tr>
-<tr class="separator:a8c12691419fbed641e806ad4d6acbcd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8de87fe94948ca6193fa761c5a2cc6f6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a8de87fe94948ca6193fa761c5a2cc6f6">Symmetric_Polynomials::operator*</a> (int a, const std::vector&lt; char &gt; &amp;b)</td></tr>
-<tr class="memdesc:a8de87fe94948ca6193fa761c5a2cc6f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies scalar and vector coordinate wise.  <a href="namespaceSymmetric__Polynomials.html#a8de87fe94948ca6193fa761c5a2cc6f6">More...</a><br /></td></tr>
-<tr class="separator:a8de87fe94948ca6193fa761c5a2cc6f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b5821494b7fd160206add93d4d73a42"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a1b5821494b7fd160206add93d4d73a42"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a1b5821494b7fd160206add93d4d73a42">Symmetric_Polynomials::join</a> (const std::vector&lt; T &gt; &amp;a, const std::vector&lt; T &gt; &amp;b)</td></tr>
-<tr class="memdesc:a1b5821494b7fd160206add93d4d73a42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joins two vectors a,b into a new vector with entries a[0],...,a[a.size()-1],b[0],...,b[b.size()-1].  <a href="namespaceSymmetric__Polynomials.html#a1b5821494b7fd160206add93d4d73a42">More...</a><br /></td></tr>
-<tr class="separator:a1b5821494b7fd160206add93d4d73a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac41ac0cc03bf5ae13fe5e661200ad134"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#ac41ac0cc03bf5ae13fe5e661200ad134">Symmetric_Polynomials::operator&lt;&lt;</a> (std::ostream &amp;os, const rational &amp;a)</td></tr>
-<tr class="memdesc:ac41ac0cc03bf5ae13fe5e661200ad134"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints rational number.  <a href="namespaceSymmetric__Polynomials.html#ac41ac0cc03bf5ae13fe5e661200ad134">More...</a><br /></td></tr>
-<tr class="separator:ac41ac0cc03bf5ae13fe5e661200ad134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e73be5bd3843fd88ac01b17239aff96"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a1e73be5bd3843fd88ac01b17239aff96">Symmetric_Polynomials::operator&lt;&lt;</a> (std::ostream &amp;os, const Rational &amp;a)</td></tr>
+<tr class="memdesc:a1e73be5bd3843fd88ac01b17239aff96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints rational number.  <a href="namespaceSymmetric__Polynomials.html#a1e73be5bd3843fd88ac01b17239aff96">More...</a><br /></td></tr>
+<tr class="separator:a1e73be5bd3843fd88ac01b17239aff96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains general operations on vectors (eg hashing, adding), the class of rational numbers, and methods for applying permutations on vectors. </p>

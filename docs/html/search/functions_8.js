@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['is_5finteger_178',['is_integer',['../structSymmetric__Polynomials_1_1rational.html#aed998b71dcbfb0c895920b1e08473078',1,'Symmetric_Polynomials::rational']]]
+  ['insert_108',['insert',['../classSymmetric__Polynomials_1_1Polynomial.html#a01ef9f68433da31e0a1d396535a37b24',1,'Symmetric_Polynomials::Polynomial']]],
+  ['is_5finteger_109',['is_integer',['../structSymmetric__Polynomials_1_1Rational.html#a3ff4876af58de45e9a8b2b0f42c9f769',1,'Symmetric_Polynomials::Rational']]]
 ];

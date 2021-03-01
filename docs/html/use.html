@@ -97,8 +97,7 @@ $(document).ready(function(){initNavTree('use.html',''); initResizable(); });
 <div class="toc"><h3>Table of Contents</h3>
 <ul><li class="level1"><a href="#demo">Quick Demonstration</a></li>
 <li class="level1"><a href="#exa">Code examples</a><ul><li class="level2"><a href="#namesp">Namespaces</a></li>
-<li class="level2"><a href="#mono">Monomials, polynomials and relations</a></li>
-<li class="level2"><a href="#perm">Permutations</a></li>
+<li class="level2"><a href="#mono">Polynomials</a></li>
 <li class="level2"><a href="#halfidem">Half idempotent relations</a></li>
 </ul>
 </li>
@@ -106,7 +105,7 @@ $(document).ready(function(){initNavTree('use.html',''); initResizable(); });
 </div>
 <div class="textblock"><h1><a class="anchor" id="demo"></a>
 Quick Demonstration</h1>
-<p>For a quick demonstration you may use the binaries Demo.exe or Demo.out found <a href="https://github.com/NickG-Math/Symmetric_Polynomials/releases">here</a>. These are compiled from <a class="el" href="Demo_8cpp.html" title="A demonstration file that can be compiled.">Demo.cpp</a> using MSVC and Clang respectively. For example, compile <a class="el" href="Demo_8cpp.html" title="A demonstration file that can be compiled.">Demo.cpp</a> yourself use: (on Linux) </p><pre class="fragment">clang++ source/Demo.cpp -std=c++17 -O3 -march=native -o Demo.out    
+<p>For a quick demonstration you may use the binaries Demo.exe or Demo.out found <a href="https://github.com/NickG-Math/Symmetric_Polynomials/releases">here</a>. These are compiled from <a class="el" href="Demo_8cpp.html" title="A demonstration file that can be compiled.">Demo.cpp</a> using MSVC and Clang respectively. You can also compile these binaries yourself. For example, on Linux use: </p><pre class="fragment">clang++ source/Demo.cpp -std=c++17 -O3 -march=native -o Demo.out    
 </pre><p>You can similarly do this over Windows using MSVC, producing a .exe file . Make sure to use the <code>-std=c++17</code> flag (or set the language options in an IDE to support C++17).</p>
 <h1><a class="anchor" id="exa"></a>
 Code examples</h1>
@@ -114,36 +113,70 @@ Code examples</h1>
 Namespaces</h2>
 <p>Everything in this library is under the namespace <code><a class="el" href="namespaceSymmetric__Polynomials.html" title="The namespace which contains every method and class in the library.">Symmetric_Polynomials</a></code>. For all the following code examples to work, start with </p><pre class="fragment">using namespace Symmetric_Polynomials;
 </pre><h2><a class="anchor" id="mono"></a>
-Monomials, polynomials and relations</h2>
-<p>A monomial is specified by its coefficient (<code>coeff</code>), powers vector (an <code>std::vector&lt;int&gt; powers</code>) as well as template parameters for the type of coefficient (<code>scalar_t</code>) and relations (<code>rel_t</code>) used: For example, </p><pre class="fragment">monomial&lt;int,norelations&gt;(3,{0,1,4});
-</pre><p>specifies the monomial \(3x_2x_3^4\).</p>
-<p>Any type with operations <code>+,*,-,==</code> and a constructor taking a single <code>int</code> type can be used as <code>scalar_t</code>. In particular, we can use <code>rational</code> which represents rational numbers: </p><pre class="fragment">monomial&lt;rational,norelations&gt; (rational(2,3),{0,1,4});
-</pre><p>specifies the monomial \(\frac23x_2x_3^4\).</p>
-<p>As for <code>rel_t</code>, this specifies both the degrees and relations the variables must satisfy. <code>norelations</code> means all variables \(x_i\) have degree 1 and that there are no relations. On the other hand, <code>halfidempotent</code> means half the variables \(x_i\) have degree 1, the other half \(y_i\) have degree 0 and \(y_i^2=y_i\) are the relations. For example: </p><pre class="fragment">monomial&lt;double,halfidempotent&gt; (1.3,{3,1,4,1,0,1});
-</pre><p>specifies the monomial \(1.3x_1^3x_2x_3^4y_1y_3\)</p>
-<p>A polynomial is made out of a vector of monomials eg </p><pre class="fragment">polynomial p(std::vector({ monomial&lt;int,halfidempotent&gt;(2,{1,2,0,1}), monomial&lt;int,halfidempotent&gt;(3,{3,0,1,1}) }));
-</pre><p>specifies the polynomial \(2x_1x_2^2y_2+3x_1^3y_1y_2\).</p>
-<h2><a class="anchor" id="perm"></a>
-Permutations</h2>
-<p>A permutation is an <code>std::vector&lt;char&gt;</code> and is applied on a monomial according to <code>rel_t</code>: Eg for <code>norelations</code> we have a \(\Sigma_n\) action on \(n\) many variables \(x_1,...,x_n\), while for <code>halfidempotent</code> we have a \(\Sigma_n\) action on \(2n\) many variables \(x_1,...,x_n\) and \(y_1,...,y_n\) that are permuted separately.</p>
+Polynomials</h2>
+<p>A polynomial in multiple variables is specified by two template parameters:</p><ul>
+<li><code>scalar_t</code>: the type of coefficients eg <code>int</code> or <code>Rational</code></li>
+<li><code>exponent_t</code>: the type of variables used eg <code>Standard_Variables&lt;unsigned char&gt;</code> or <code>Half_Idempotent_Variables&lt;unsigned char&gt;</code>. These specify the relations/degrees/names of the variables in the polynomial. For example, <code>Standard_Variables&lt;unsigned char&gt;</code> specifies variables \(x_1,...,x_n\) with degrees \(|x_i|=1\) and no relations. On the other hand, <code>Half_Idempotent_Variables&lt;unsigned char&gt;</code> specifies variables \(x_1,...,x_n,y_1,...,y_n\) with degrees \(|x_i|=1, |y_i|=0\) and relations \(y_i^2=y_i\). The <code>unsigned char</code> is the type for the exponent vectors (see below).</li>
+</ul>
+<p>To initialize a polynomial, provide the desired number of variables \(n\). For example, if \(n=3\):</p>
+<pre class="fragment">polynomial&lt;int,Standard_Variables&lt;unsigned char&gt;&gt; p(3);
+</pre><p>Next, insert monomials \(cx_1^{a_1}\cdots x_n^{a_n}\) by providing the exponent vector \([a_1,...,a_n]\) and the coefficient \(c\). Eg:</p>
+<pre class="fragment">p.insert({0,1,4},7);
+</pre><p>inserts the monomial \(7x_2x_3^4\) in <code>p</code>. Note that the exponent vector is of type <code>Standard_Variables&lt;unsigned char&gt;</code> so \(a_i\le 2^8-1\). To allow for bigger \(a_i\)'s, at the cost of more memory, use <code>unsigned long</code> in the place of <code>unsigned char</code>.</p>
+<p>You can also use other coefficients, such as <code>Rational</code>, or other types of variables, such as <code>Half_Idempotent_Variables</code>. For example,</p>
+<pre class="fragment">polynomial&lt;Rational,Half_Idempotent_Variables&lt;unsigned char&gt;&gt; p(4);
+
+p.insert({1,2,0,1},Rational(2,3));
+
+p.insert({1,1,1,1},Rational(1,7));
+</pre><p>specifies the polynomial \(\frac17 x_1x_2y_1y_2+\frac23x_1x_2^2y_2\).</p>
+<p>Polynomials can be added, subtracted and multiplied by binary operators <code>+,-,*</code>. One can also raise a polynomial to a nonnegative integer power using the binary operator <code>^</code>. They can also be printed to an output stream eg by using <code>std::cout &lt;&lt; p;</code></p>
 <h2><a class="anchor" id="sym"></a>
 Symmetric polynomials</h2>
-<p>When we have no relations, we can use </p><pre class="fragment">polynomial poly(std::vector({ monomial&lt;rational, norelations&gt;(2, { 1,2 }), monomial&lt;rational, norelations&gt;(2, {2,1 }) })));
-decomposition_elementary_symmetric dec(poly);
-std::cout&lt;&lt; dec;
-</pre><p>which sets <code>poly</code> to be \(2x_1x_2^2+2x_1^2x_2\), computes the decomposition of <code>poly</code> into elementary symmetric polynomials <code>e[i]</code> (corresponding to \(\sigma_i\)), stores it into <code>dec</code> and prints the decomposition as: <code>2e_1*e_2</code>. This all means that $$2x_1x_2^2+2x_1^2x_2=2\sigma_1\sigma_2$$</p>
-<p>The class <code>decomposition_elementary_symmetric&lt;rational&gt;</code> stores and computes the expression of a polynomial on variables \(x_i\) as a polynomial on the \(\sigma_i\).</p>
+<p>The class <code>Symmetric_Basis</code> allows us to transform polynomials on \(x_i\) variables (using <code>Standard_Variables</code>) into polynomials on the elementary symmetric polynomials <code>e[i]</code> (corresponding to \(\sigma_i\)). For example: </p><pre class="fragment">Symmetric_Basis&lt;int, Standard_Variables&lt;unsigned char&gt;&gt; SB;
+
+polynomial&lt;int,Standard_Variables&lt;unsigned char&gt;&gt; poly(2);
+
+poly.insert({1,2},2);
+
+poly.insert({2,1},2);
+
+polynomial&lt;int, Elementary_Symmetric_Variables&lt;unsigned char&gt;&gt;  new_poly= SB(poly);
+
+polynomial&lt;int, Standard_Variables&lt;unsigned char&gt;&gt;  new_new_poly= SB(new_poly);
+
+std::cout &lt;&lt; poly &lt;&lt; "\n";
+
+std::cout&lt;&lt; new_poly &lt;&lt; "\n";
+
+std::cout &lt;&lt; new_new_poly &lt;&lt; "\n";
+</pre><p>does the following: First it sets <code>poly</code> to \(2x_1x_2^2+2x_1^2x_2\), transforms into <code>new_poly</code> which is \(2e_1e_2\) and then transforms <code>new_poly</code> into <code>new_new_poly</code> which is \(2x_1x_2^2+2x_1^2x_2\) (i.e. the original polynomial) and finally prints the three polynomials. This all means that $$2x_1x_2^2+2x_1^2x_2=2\sigma_1\sigma_2$$</p>
 <h2><a class="anchor" id="halfidem"></a>
 Half idempotent relations</h2>
-<p>When we have the "half idempotent relation", the generators are \(\alpha, c_i, \gamma_{s,t}\) (see <a class="el" href="math.html">The Math</a>) or <code>Idem</code>, <code>Chern[i]</code> and <code>TwistedChern[s][t]</code> respectively as they are used in the program. We order them as \(\alpha,c_1,...,c_n, \gamma_{1,1},...,\gamma_{1,n-1},\gamma_{2,1},...,\gamma_{n-1,1}\) in this order. To get the original indexing on the \(\gamma\) elements we use <code>std::map&lt;std::pair&lt;int,int&gt;,int&gt; TwistedChern_indexer</code> eg </p><pre class="fragment">std::cout &lt;&lt; TwistedChern_indexer[std::make_pair&lt;int,int&gt;(1,2)];
-</pre><p>prints <code>1</code> since <code>TwistedChern[1]</code> corresponds to \(\gamma_{1,2}\).</p>
-<p>The code </p><pre class="fragment">polynomial poly(std::vector({ monomial&lt;rational, halfidempotent&gt;(2, { 1,0,1,0 }), monomial&lt;rational, halfidempotent&gt;(2, {0,1,0,1 }) }));
-decomposition_half_idempotent dec(poly);
-std::cout &lt;&lt; dec &lt;&lt; "\n";
-</pre><p>sets <code>poly</code> to be \(x_1y_1+x_2y_2\), computes the decomposition of <code>poly</code> into <code>Idem,Chern,TwistedChern</code>, stores it into <code>dec</code> and prints the decomposition as <code>2*a*c_1 + -2*b_{1,1}</code> reflecting $$x_1y_1+x_2y_2=2\alpha c_1-2\gamma_{1,1}$$</p>
-<p>The class <code>decomposition_half_idempotent&lt;rational&gt;</code> stores and computes the expression of a polynomial on variables \(x_i,y_i\) as a polynomial on the \(\alpha,c_i,\gamma_{s,j}\).</p>
-<p>To print the relations amongst \(\alpha,c_i,\gamma_{s,j}\) simply use: print_half_idempotent_relations&lt;rational&gt;(3);</p>
-<p>The \(3\) here corresponds to the number of variables: \(x_1,x_2,x_3,y_1,y_2,y_3\) and can be replaced by any positive integer, although for \(n&gt;10\) the computation may take a bit long (program not currently multithreaded, but that can trivially be remedied with a <code>#pragma omp parallel for</code>.</p>
+<p>When we have the "half idempotent relation" i.e. variables \(x_i,y_i\) with \(y_i^2=y_i\) (as specified by <code>Half_Idempotent_Variables</code>), the generators are \(\alpha, c_i, \gamma_{s,t}\) (see <a class="el" href="math.html">The Math</a>) or <code>Idem</code>, <code>Chern[i]</code> and <code>TwistedChern[s][t]</code> respectively as they are used in the program. We order them as \(\alpha,c_1,...,c_n, \gamma_{1,1},...,\gamma_{1,n-1},\gamma_{2,1},...,\gamma_{n-1,1}\).</p>
+<p>The class <code>Half_Idempotent_Basis</code> allows us to transform polynomials on \(x_i\) variables (using <code>Standard_Variables</code>) into polynomials on the elementary symmetric</p>
+<p>The code </p><pre class="fragment">Half_Idempotent_Basis&lt;Rational,Half_Idempotent_Variables&lt;unsigned char&gt;&gt; HB;
+
+polynomial&lt;Rational,Half_Idempotent_Variables&lt;unsigned char&gt;&gt; poly(4);
+
+poly.insert({ 1,0,1,0 }, 2);
+
+poly.insert({ 0,1,0,1 }, 2);
+
+auto new_poly= HB(poly);
+
+auto new_new_poly= HB(new_poly);
+
+std::cout &lt;&lt; poly &lt;&lt; "\n";
+
+std::cout &lt;&lt; new_poly &lt;&lt; "\n";
+
+std::cout &lt;&lt; new_new_poly &lt;&lt; "\n";
+</pre><p>sets <code>poly</code> to be \(x_1y_1+x_2y_2\), transforms it into <code>new_poly</code> which is \(2\alpha c_1 + -2\gamma_{1,1}\) and then transforms it to <code>new_new_poly</code> in the original variables, which is equal to <code>poly</code>, before printing their names. Thus:</p>
+<p>$$x_1y_1+x_2y_2=2\alpha c_1-2\gamma_{1,1}$$</p>
+<p>To print the relations amongst \(\alpha,c_i,\gamma_{s,j}\) simply use: </p><pre class="fragment">print_half_idempotent_relations&lt;Rational, Half_Idempotent_Variables&lt;unsigned char&gt;&gt;(3);
+</pre><p>The \(3\) here corresponds to the number of variables: \(x_1,x_2,x_3,y_1,y_2,y_3\) and can be replaced by any positive integer.</p>
+<p>There is also a multithreaded version that you can compile yourself, by removing the comment from the #pragma omp in the definition of <code>print_half_idempotent_relations</code>.</p>
 <p>Finally, <a class="el" href="Demo_8cpp.html" title="A demonstration file that can be compiled.">Demo.cpp</a> contains another function, <code>write_pontryagin_C2_in_terms_of_Chern_classes</code>. This prints the expressions of the twisted Pontryagin/symplectic classes given by $$\pi_{s,t}=\kappa_{s,t}=\sum_{1\le i_1&lt; \cdots&lt; i_s\le n\ 1\le j_1&lt; \cdots&lt; j_t\le n\ i_u\neq j_v}x^2_{i_1}....x^2_{i_s}y_{j_1}\cdots y_{j_t}$$ in terms of the Chern classes \(\alpha,c_i,\gamma_{s,t}\). For example, try running write_pontryagin_C2_in_terms_of_Chern_classes(5); </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

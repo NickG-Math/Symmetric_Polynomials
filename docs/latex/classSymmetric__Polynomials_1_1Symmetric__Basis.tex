@@ -1,0 +1,84 @@
+\hypertarget{classSymmetric__Polynomials_1_1Symmetric__Basis}{}\doxysection{Symmetric\+\_\+\+Polynomials\+::Symmetric\+\_\+\+Basis$<$ scalar\+\_\+t, exponent\+\_\+t $>$ Class Template Reference}
+\label{classSymmetric__Polynomials_1_1Symmetric__Basis}\index{Symmetric\_Polynomials::Symmetric\_Basis$<$ scalar\_t, exponent\_t $>$@{Symmetric\_Polynomials::Symmetric\_Basis$<$ scalar\_t, exponent\_t $>$}}
+
+
+Class for symmetric polynomials with no relations, allowing transformation from $x_i$ variables to $e_i$ variables and vice-\/versa.  
+
+
+
+
+{\ttfamily \#include $<$Symmetric\+\_\+\+Basis.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ scalar\+\_\+t, exponent\+\_\+t $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Symmetric__Basis_ad833028c3ae2dab79e41bc4cbc47c8a6}{operator()}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables}{elementary\+\_\+symmetric\+\_\+t}} $>$ \&poly\+\_\+on\+\_\+ei) const
+\begin{DoxyCompactList}\small\item\em Transform a polynomial on the elementary symmetric polynomials e\+\_\+i into a symmetric polynomial on the original variables x\+\_\+i. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables}{elementary\+\_\+symmetric\+\_\+t}} $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Symmetric__Basis_a348f7fc55913fcccfcc2605e5800ab08}{operator()}} (\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ scalar\+\_\+t, exponent\+\_\+t $>$ a) const
+\begin{DoxyCompactList}\small\item\em Transform a symmetric polynomial on the original variables x\+\_\+i into one on the elementary symmetric polynomials e\+\_\+i. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1Symmetric__Basis_a90a52edd06bcbc2ab632d328e4adbd70}{Symmetric\+\_\+\+Basis}} (int n)
+\begin{DoxyCompactList}\small\item\em Constructor given number of variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename scalar\+\_\+t, typename exponent\+\_\+t$>$\newline
+class Symmetric\+\_\+\+Polynomials\+::\+Symmetric\+\_\+\+Basis$<$ scalar\+\_\+t, exponent\+\_\+t $>$}
+
+Class for symmetric polynomials with no relations, allowing transformation from $x_i$ variables to $e_i$ variables and vice-\/versa. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Symmetric__Basis_a90a52edd06bcbc2ab632d328e4adbd70}\label{classSymmetric__Polynomials_1_1Symmetric__Basis_a90a52edd06bcbc2ab632d328e4adbd70}} 
+\index{Symmetric\_Polynomials::Symmetric\_Basis$<$ scalar\_t, exponent\_t $>$@{Symmetric\_Polynomials::Symmetric\_Basis$<$ scalar\_t, exponent\_t $>$}!Symmetric\_Basis@{Symmetric\_Basis}}
+\index{Symmetric\_Basis@{Symmetric\_Basis}!Symmetric\_Polynomials::Symmetric\_Basis$<$ scalar\_t, exponent\_t $>$@{Symmetric\_Polynomials::Symmetric\_Basis$<$ scalar\_t, exponent\_t $>$}}
+\doxysubsubsection{\texorpdfstring{Symmetric\_Basis()}{Symmetric\_Basis()}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename exponent\+\_\+t $>$ \\
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1Symmetric__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Symmetric\+\_\+\+Basis}}$<$ scalar\+\_\+t, exponent\+\_\+t $>$\+::\mbox{\hyperlink{classSymmetric__Polynomials_1_1Symmetric__Basis}{Symmetric\+\_\+\+Basis}} (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor given number of variables. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Symmetric__Basis_ad833028c3ae2dab79e41bc4cbc47c8a6}\label{classSymmetric__Polynomials_1_1Symmetric__Basis_ad833028c3ae2dab79e41bc4cbc47c8a6}} 
+\index{Symmetric\_Polynomials::Symmetric\_Basis$<$ scalar\_t, exponent\_t $>$@{Symmetric\_Polynomials::Symmetric\_Basis$<$ scalar\_t, exponent\_t $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!Symmetric\_Polynomials::Symmetric\_Basis$<$ scalar\_t, exponent\_t $>$@{Symmetric\_Polynomials::Symmetric\_Basis$<$ scalar\_t, exponent\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename exponent\+\_\+t $>$ \\
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$scalar\+\_\+t, exponent\+\_\+t$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Symmetric__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Symmetric\+\_\+\+Basis}}$<$ scalar\+\_\+t, exponent\+\_\+t $>$\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables}{elementary\+\_\+symmetric\+\_\+t}} $>$ \&}]{poly\+\_\+on\+\_\+ei }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transform a polynomial on the elementary symmetric polynomials e\+\_\+i into a symmetric polynomial on the original variables x\+\_\+i. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1Symmetric__Basis_ad833028c3ae2dab79e41bc4cbc47c8a6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Symmetric__Basis_a348f7fc55913fcccfcc2605e5800ab08}\label{classSymmetric__Polynomials_1_1Symmetric__Basis_a348f7fc55913fcccfcc2605e5800ab08}} 
+\index{Symmetric\_Polynomials::Symmetric\_Basis$<$ scalar\_t, exponent\_t $>$@{Symmetric\_Polynomials::Symmetric\_Basis$<$ scalar\_t, exponent\_t $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!Symmetric\_Polynomials::Symmetric\_Basis$<$ scalar\_t, exponent\_t $>$@{Symmetric\_Polynomials::Symmetric\_Basis$<$ scalar\_t, exponent\_t $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename exponent\+\_\+t $>$ \\
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$scalar\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables}{elementary\+\_\+symmetric\+\_\+t}}$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Symmetric__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Symmetric\+\_\+\+Basis}}$<$ scalar\+\_\+t, exponent\+\_\+t $>$\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ scalar\+\_\+t, exponent\+\_\+t $>$}]{a }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transform a symmetric polynomial on the original variables x\+\_\+i into one on the elementary symmetric polynomials e\+\_\+i. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1Symmetric__Basis_a348f7fc55913fcccfcc2605e5800ab08_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{Symmetric__Basis_8h}{Symmetric\+\_\+\+Basis.\+h}}\end{DoxyCompactItemize}

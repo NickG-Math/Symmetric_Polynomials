@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['half_5fidempotent_5fgenerators_174',['half_idempotent_generators',['../classSymmetric__Polynomials_1_1half__idempotent__generators.html#acb044c778adedf5bd9d4e6081bb50183',1,'Symmetric_Polynomials::half_idempotent_generators']]],
-  ['hasher_175',['hasher',['../structSymmetric__Polynomials_1_1hasher.html#a715df9122ad82416cf8518def01e1ec8',1,'Symmetric_Polynomials::hasher']]],
-  ['hashvector_176',['hashvector',['../structSymmetric__Polynomials_1_1hasher.html#a1e1a3b7aa979c2581049169d3bcc54f5',1,'Symmetric_Polynomials::hasher']]],
-  ['highest_5fterm_177',['highest_term',['../classSymmetric__Polynomials_1_1polynomial.html#ab0df36baf0c00178007ab065b33f1f33',1,'Symmetric_Polynomials::polynomial']]]
+  ['half_5fidempotent_5fbasis_105',['Half_Idempotent_Basis',['../classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#abb031c4c69c2a0b5a5bc14d52a130af9',1,'Symmetric_Polynomials::Half_Idempotent_Basis']]],
+  ['half_5fidempotent_5fvariables_106',['Half_Idempotent_Variables',['../structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html#aeb99639434cc4f036fa5847aff1fc16e',1,'Symmetric_Polynomials::Half_Idempotent_Variables']]],
+  ['highest_5fterm_107',['highest_term',['../classSymmetric__Polynomials_1_1Polynomial.html#a8efe548b8fef60ea79c3bdac7f79ea46',1,'Symmetric_Polynomials::Polynomial']]]
 ];

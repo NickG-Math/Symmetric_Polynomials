@@ -1,0 +1,110 @@
+\hypertarget{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{}\doxysection{Symmetric\+\_\+\+Polynomials\+::Half\+\_\+\+Idempotent\+\_\+\+Variables$<$ T, N $>$ Struct Template Reference}
+\label{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}\index{Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, N $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, N $>$}}
+
+
+Class for variables $x_1,...,x_n,y_1,...,y_n$ where $y_i^2=y_i$.  
+
+
+
+
+{\ttfamily \#include $<$Half\+\_\+\+Idempotent.\+h$>$}
+
+
+
+Inheritance diagram for Symmetric\+\_\+\+Polynomials\+::Half\+\_\+\+Idempotent\+\_\+\+Variables$<$ T, N $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{structSymmetric__Polynomials_1_1Half__Idempotent__Variables__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Symmetric\+\_\+\+Polynomials\+::Half\+\_\+\+Idempotent\+\_\+\+Variables$<$ T, N $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{structSymmetric__Polynomials_1_1Half__Idempotent__Variables__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_aeb99639434cc4f036fa5847aff1fc16e}{Half\+\_\+\+Idempotent\+\_\+\+Variables}} (int)
+\begin{DoxyCompactList}\small\item\em Constructor using size (does nothing as size is known in compile time for N!=-\/1) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_a18c592fd8cd885f970613e1dd7fa6b1a}{degree}} () const
+\begin{DoxyCompactList}\small\item\em The degree of a monomial on the $x_i,y_i$ with $|x_i|=1$ and $|y_i|=0$. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}}$<$ T, N $>$ \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_ad4f9bf2a64afe60afe736c74de18dc56}{operator+}} (const \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}}$<$ T, N $>$ \&other) const
+\begin{DoxyCompactList}\small\item\em Multiplies monomials by adding their exponents, taking into account that $y_i^2=y_i$. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}}$<$ T, N $>$ \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_a05c1037d0e379e5d6e81851f8dcd5cac}{operator-\/}} (const \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}}$<$ T, N $>$ \&other) const
+\begin{DoxyCompactList}\small\item\em Divides monomials a/b with b$\vert$a by subtracting their exponents, taking into account that $y_i^2=y_i$. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, int N = -\/1$>$\newline
+struct Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Variables$<$ T, N $>$}
+
+Class for variables $x_1,...,x_n,y_1,...,y_n$ where $y_i^2=y_i$. 
+
+Parameter N is the number of variables in compile-\/time; set to -\/1 if unknown (default). Otherwise n=N. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_aeb99639434cc4f036fa5847aff1fc16e}\label{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_aeb99639434cc4f036fa5847aff1fc16e}} 
+\index{Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, N $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, N $>$}!Half\_Idempotent\_Variables@{Half\_Idempotent\_Variables}}
+\index{Half\_Idempotent\_Variables@{Half\_Idempotent\_Variables}!Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, N $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, N $>$}}
+\doxysubsubsection{\texorpdfstring{Half\_Idempotent\_Variables()}{Half\_Idempotent\_Variables()}}
+{\footnotesize\ttfamily template$<$typename T , int N = -\/1$>$ \\
+\mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Variables}}$<$ T, N $>$\+::\mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}} (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor using size (does nothing as size is known in compile time for N!=-\/1) 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_a18c592fd8cd885f970613e1dd7fa6b1a}\label{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_a18c592fd8cd885f970613e1dd7fa6b1a}} 
+\index{Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, N $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, N $>$}!degree@{degree}}
+\index{degree@{degree}!Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, N $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, N $>$}}
+\doxysubsubsection{\texorpdfstring{degree()}{degree()}}
+{\footnotesize\ttfamily template$<$typename T , int N = -\/1$>$ \\
+int \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Variables}}$<$ T, N $>$\+::degree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The degree of a monomial on the $x_i,y_i$ with $|x_i|=1$ and $|y_i|=0$. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_a18c592fd8cd885f970613e1dd7fa6b1a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_ad4f9bf2a64afe60afe736c74de18dc56}\label{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_ad4f9bf2a64afe60afe736c74de18dc56}} 
+\index{Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, N $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, N $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, N $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, N $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$typename T , int N = -\/1$>$ \\
+\mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}}$<$T,N$>$ \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Variables}}$<$ T, N $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}}$<$ T, N $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Multiplies monomials by adding their exponents, taking into account that $y_i^2=y_i$. 
+
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_a05c1037d0e379e5d6e81851f8dcd5cac}\label{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_a05c1037d0e379e5d6e81851f8dcd5cac}} 
+\index{Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, N $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, N $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, N $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, N $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily template$<$typename T , int N = -\/1$>$ \\
+\mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}}$<$T,N$>$ \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Variables}}$<$ T, N $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}}$<$ T, N $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Divides monomials a/b with b$\vert$a by subtracting their exponents, taking into account that $y_i^2=y_i$. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{Half__Idempotent_8h}{Half\+\_\+\+Idempotent.\+h}}\end{DoxyCompactItemize}

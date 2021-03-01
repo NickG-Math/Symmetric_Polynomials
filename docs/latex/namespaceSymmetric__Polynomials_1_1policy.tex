@@ -5,45 +5,7 @@
 The policy our monomials should satisfy. Policy is a char and takes values 0,1,-\/1. 1 if satisfied, -\/1 if not satisfied and we can guarantee that all larger vectors also won\textquotesingle{}t satisfy it, and 0 otherwise.  
 
 
-\doxysubsection*{Functions}
-\begin{DoxyCompactItemize}
-\item 
-{\footnotesize template$<$typename T $>$ }\\static char \mbox{\hyperlink{namespaceSymmetric__Polynomials_1_1policy_ac9a171c5b949f5d236b4502d73f6d2f9}{always\+\_\+true}} (const T \&)
-\begin{DoxyCompactList}\small\item\em The always true policy. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T $>$ }\\static std\+::function$<$ char(const std\+::vector$<$ char $>$ \&)$>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_1_1policy_a40a0271299de2343a3c29a2d0cee4477}{custom}} (const T \&comparator)
-\begin{DoxyCompactList}\small\item\em The policy made by a given comparactor function. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 The policy our monomials should satisfy. Policy is a char and takes values 0,1,-\/1. 1 if satisfied, -\/1 if not satisfied and we can guarantee that all larger vectors also won\textquotesingle{}t satisfy it, and 0 otherwise. 
-
-\doxysubsection{Function Documentation}
-\mbox{\Hypertarget{namespaceSymmetric__Polynomials_1_1policy_ac9a171c5b949f5d236b4502d73f6d2f9}\label{namespaceSymmetric__Polynomials_1_1policy_ac9a171c5b949f5d236b4502d73f6d2f9}} 
-\index{Symmetric\_Polynomials::policy@{Symmetric\_Polynomials::policy}!always\_true@{always\_true}}
-\index{always\_true@{always\_true}!Symmetric\_Polynomials::policy@{Symmetric\_Polynomials::policy}}
-\doxysubsubsection{\texorpdfstring{always\_true()}{always\_true()}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-static char Symmetric\+\_\+\+Polynomials\+::policy\+::always\+\_\+true (\begin{DoxyParamCaption}\item[{const T \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-The always true policy. 
-
-\mbox{\Hypertarget{namespaceSymmetric__Polynomials_1_1policy_a40a0271299de2343a3c29a2d0cee4477}\label{namespaceSymmetric__Polynomials_1_1policy_a40a0271299de2343a3c29a2d0cee4477}} 
-\index{Symmetric\_Polynomials::policy@{Symmetric\_Polynomials::policy}!custom@{custom}}
-\index{custom@{custom}!Symmetric\_Polynomials::policy@{Symmetric\_Polynomials::policy}}
-\doxysubsubsection{\texorpdfstring{custom()}{custom()}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-static std\+::function$<$char(const std\+::vector$<$char$>$\&)$>$ Symmetric\+\_\+\+Polynomials\+::policy\+::custom (\begin{DoxyParamCaption}\item[{const T \&}]{comparator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-The policy made by a given comparactor function. 
-
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{namespaceSymmetric__Polynomials_1_1policy_a40a0271299de2343a3c29a2d0cee4477_icgraph}
-\end{center}
-\end{figure}

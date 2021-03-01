@@ -1,0 +1,4 @@
+<map id="Symmetric_Polynomials::Polynomial::clear" name="Symmetric_Polynomials::Polynomial::clear">
+<area shape="rect" id="node1" title="Clears all data of polynomial apart from number of variables." alt="" coords="264,13,444,54"/>
+<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1Polynomial.html#ae5dab57140f06523a59405fbe4c54b46" title="Multiplies polynomial on the LHS with scalar coefficient on the RHS (in place)" alt="" coords="5,5,216,61"/>
+</map>

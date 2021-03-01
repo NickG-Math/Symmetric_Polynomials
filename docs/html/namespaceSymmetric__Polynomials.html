@@ -91,7 +91,6 @@ $(document).ready(function(){initNavTree('namespaceSymmetric__Polynomials.html',
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -102,286 +101,94 @@ $(document).ready(function(){initNavTree('namespaceSymmetric__Polynomials.html',
 <p>The namespace which contains every method and class in the library.  
 <a href="namespaceSymmetric__Polynomials.html#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespaceSymmetric__Polynomials_1_1policy"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials_1_1policy.html">policy</a></td></tr>
-<tr class="memdesc:namespaceSymmetric__Polynomials_1_1policy"><td class="mdescLeft">&#160;</td><td class="mdescRight">The policy our monomials should satisfy. Policy is a char and takes values 0,1,-1. 1 if satisfied, -1 if not satisfied and we can guarantee that all larger vectors also won't satisfy it, and 0 otherwise. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1combinations__generator.html">combinations_generator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates all combinations on a number of letters making a number of choices.  <a href="classSymmetric__Polynomials_1_1combinations__generator.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Combination__Generator.html">Combination_Generator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates all combinations on a number of letters making a number of choices.  <a href="classSymmetric__Polynomials_1_1Combination__Generator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1decomposition__elementary__symmetric.html">decomposition_elementary_symmetric</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for writing a symmetric polynomial as a polynomial on the elementary symmetric polynomials (a "decomposition")  <a href="structSymmetric__Polynomials_1_1decomposition__elementary__symmetric.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables.html">Elementary_Symmetric_Variables</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variables \(e_1,...,e_n\) denoting the elementary symmetric polynomials \(e_i=\sigma_i\), of degrees \(|e_i|=i\).  <a href="structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1decomposition__half__idempotent.html">decomposition_half_idempotent</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for writing every element in the fixed points of $$R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$$ as a polynomial on the generators Idem, Chern and TwistedChern (a "decomposition")  <a href="structSymmetric__Polynomials_1_1decomposition__half__idempotent.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html">Factory_Generator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prototype for an iterator that generates elements such as interpolating vectors, permutations, combinations and so on.  <a href="classSymmetric__Polynomials_1_1Factory__Generator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1degree__comparator.html">degree_comparator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The comparator that checks if the degree of a given exponent vector is equal to a desired degree.  <a href="structSymmetric__Polynomials_1_1degree__comparator.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html">Half_Idempotent_Basis</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for half-idempotent symmetric polynomials, allowing transformation from \(x_i,y_i\) variables to \(\alpha,c_i,\gamma_{s,i}\) variables and vice-versa.  <a href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1degree__comparator__relations.html">degree_comparator_relations</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The comparator that checks if the degree of a given exponent vector is equal to a desired degree, and further disqualifies a exponent vector if it contains a relation.  <a href="classSymmetric__Polynomials_1_1degree__comparator__relations.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Half_Idempotent_Variables</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for variables \(x_1,...,x_n,y_1,...,y_n\) where \(y_i^2=y_i\).  <a href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1elementary__symmetric.html">elementary_symmetric</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class of elementary symmetric polynomials; no relations.  <a href="classSymmetric__Polynomials_1_1elementary__symmetric.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables_3_01T_00-1_01_4.html">Half_Idempotent_Variables&lt; T,-1 &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class specifying variables \(x_1,...,x_n,y_1,...,y_n\) where \(y_i^2=y_i\).  <a href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables_3_01T_00-1_01_4.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1generating__const__iterator.html">generating_const_iterator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prototype for an iterator that generates elements such as interpolating vectors, permutations, combinations and so on.  <a href="classSymmetric__Polynomials_1_1generating__const__iterator.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Permutation__Generator.html">Permutation_Generator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates all permutations on a number of letters.  <a href="classSymmetric__Polynomials_1_1Permutation__Generator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1half__idempotent__generators.html">half_idempotent_generators</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class containing the generators for the fixed points of $$R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$$ under the \(\Sigma_n\) permutation action.  <a href="classSymmetric__Polynomials_1_1half__idempotent__generators.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class of Polynomials in multiple variables.  <a href="classSymmetric__Polynomials_1_1Polynomial.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1halfidempotent.html">halfidempotent</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class when we have variables \(x_1,...,x_n,y_1,...,y_n\) and the relations are: \(y_i^2=y_i\).  <a href="structSymmetric__Polynomials_1_1halfidempotent.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Rational.html">Rational</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class of rational numbers.  <a href="structSymmetric__Polynomials_1_1Rational.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1hasher.html">hasher</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hashes all vectors between two vectors min and max into a long integer.  <a href="structSymmetric__Polynomials_1_1hasher.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Standard__Variables.html">Standard_Variables</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The standard variables \(x_i\) in a polynomial, with \(|x_i|=1\) and no relations.  <a href="structSymmetric__Polynomials_1_1Standard__Variables.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class of monomials in multiple variables with relations.  <a href="classSymmetric__Polynomials_1_1monomial.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1monomial__compare.html">monomial_compare</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparator for monomials based on &lt;.  <a href="structSymmetric__Polynomials_1_1monomial__compare.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1norelations.html">norelations</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class when no relations are needed.  <a href="structSymmetric__Polynomials_1_1norelations.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1permutations__generator.html">permutations_generator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates all permutations on a number of letters.  <a href="classSymmetric__Polynomials_1_1permutations__generator.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class of polynomials in multiple variables with relations.  <a href="classSymmetric__Polynomials_1_1polynomial.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1rational.html">rational</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class of rational numbers. Standard implementation.  <a href="structSymmetric__Polynomials_1_1rational.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1relations__base.html">relations_base</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for all relations. Inherit from it and specialize static methods to get a functioning relations class.  <a href="structSymmetric__Polynomials_1_1relations__base.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1vector__interpolate__generator.html">vector_interpolate_generator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates all vectors interpolating between a given min and max vector (with the same length), and satisfying a given policy.  <a href="classSymmetric__Polynomials_1_1vector__interpolate__generator.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Symmetric__Basis.html">Symmetric_Basis</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for symmetric polynomials with no relations, allowing transformation from \(x_i\) variables to \(e_i\) variables and vice-versa.  <a href="classSymmetric__Polynomials_1_1Symmetric__Basis.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a19968cb25bf5b9b023bcca196145dec3"><td class="memTemplParams" colspan="2">template&lt;typename Iterator &gt; </td></tr>
-<tr class="memitem:a19968cb25bf5b9b023bcca196145dec3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a19968cb25bf5b9b023bcca196145dec3">apply_permutation</a> (std::vector&lt; char &gt; &amp;target, Iterator begin, const std::vector&lt; char &gt; &amp;perm)</td></tr>
-<tr class="memdesc:a19968cb25bf5b9b023bcca196145dec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies permutation perm on the target from starting point begin.  <a href="namespaceSymmetric__Polynomials.html#a19968cb25bf5b9b023bcca196145dec3">More...</a><br /></td></tr>
-<tr class="separator:a19968cb25bf5b9b023bcca196145dec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37ac61439f89641faa57cb3604faf114"><td class="memItemLeft" align="right" valign="top">std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a37ac61439f89641faa57cb3604faf114">apply_permutation_pieces</a> (const std::vector&lt; char &gt; &amp;v, int pieces, const std::vector&lt; char &gt; &amp;perm)</td></tr>
-<tr class="memdesc:a37ac61439f89641faa57cb3604faf114"><td class="mdescLeft">&#160;</td><td class="mdescRight">Breaks vector v into given number of pieces and applies given permutation on each one; then joins the pieces and returns the vector.  <a href="namespaceSymmetric__Polynomials.html#a37ac61439f89641faa57cb3604faf114">More...</a><br /></td></tr>
-<tr class="separator:a37ac61439f89641faa57cb3604faf114"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27efdd26eaaeafdf5a8de46a3ab9a194"><td class="memItemLeft" align="right" valign="top">std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a27efdd26eaaeafdf5a8de46a3ab9a194">apply_permutation</a> (const std::vector&lt; char &gt; &amp;v, const std::vector&lt; char &gt; &amp;perm)</td></tr>
-<tr class="memdesc:a27efdd26eaaeafdf5a8de46a3ab9a194"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies permutation perm on the vector v.  <a href="namespaceSymmetric__Polynomials.html#a27efdd26eaaeafdf5a8de46a3ab9a194">More...</a><br /></td></tr>
-<tr class="separator:a27efdd26eaaeafdf5a8de46a3ab9a194"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a2edeb8ae1f843ee81da0bc91f0dbff"><td class="memTemplParams" colspan="2">template&lt;typename T , typename S  = T&gt; </td></tr>
-<tr class="memitem:a2a2edeb8ae1f843ee81da0bc91f0dbff"><td class="memTemplItemLeft" align="right" valign="top">S&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a2a2edeb8ae1f843ee81da0bc91f0dbff">sum</a> (const std::vector&lt; T &gt; &amp;a, int end)</td></tr>
-<tr class="memdesc:a2a2edeb8ae1f843ee81da0bc91f0dbff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a[0]+...+a[end].  <a href="namespaceSymmetric__Polynomials.html#a2a2edeb8ae1f843ee81da0bc91f0dbff">More...</a><br /></td></tr>
-<tr class="separator:a2a2edeb8ae1f843ee81da0bc91f0dbff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17c6bea90d7e164a084903de6086603d"><td class="memTemplParams" colspan="2">template&lt;typename T , typename S &gt; </td></tr>
+<tr class="memitem:a17c6bea90d7e164a084903de6086603d"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a17c6bea90d7e164a084903de6086603d">general_compute_degree</a> (const T &amp;exponent, const S &amp;dimensions)</td></tr>
+<tr class="memdesc:a17c6bea90d7e164a084903de6086603d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Degree computation given exponent and dimensions (grading)  <a href="namespaceSymmetric__Polynomials.html#a17c6bea90d7e164a084903de6086603d">More...</a><br /></td></tr>
+<tr class="separator:a17c6bea90d7e164a084903de6086603d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc4a90741eac710cd52a41a3ef03b050"><td class="memTemplParams" colspan="2">template&lt;typename T , typename S  = T&gt; </td></tr>
 <tr class="memitem:abc4a90741eac710cd52a41a3ef03b050"><td class="memTemplItemLeft" align="right" valign="top">S&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#abc4a90741eac710cd52a41a3ef03b050">sum</a> (const std::vector&lt; T &gt; &amp;a)</td></tr>
 <tr class="memdesc:abc4a90741eac710cd52a41a3ef03b050"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the sum of all entries of a.  <a href="namespaceSymmetric__Polynomials.html#abc4a90741eac710cd52a41a3ef03b050">More...</a><br /></td></tr>
 <tr class="separator:abc4a90741eac710cd52a41a3ef03b050"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb21a2b6c91aca228a3f2aca9617b629"><td class="memItemLeft" align="right" valign="top">std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#acb21a2b6c91aca228a3f2aca9617b629">operator+</a> (const std::vector&lt; char &gt; &amp;a, const std::vector&lt; char &gt; &amp;b)</td></tr>
-<tr class="memdesc:acb21a2b6c91aca228a3f2aca9617b629"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds two vectors coordinate wise.  <a href="namespaceSymmetric__Polynomials.html#acb21a2b6c91aca228a3f2aca9617b629">More...</a><br /></td></tr>
-<tr class="separator:acb21a2b6c91aca228a3f2aca9617b629"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c12691419fbed641e806ad4d6acbcd1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a8c12691419fbed641e806ad4d6acbcd1">operator-</a> (const std::vector&lt; char &gt; &amp;a, const std::vector&lt; char &gt; &amp;b)</td></tr>
-<tr class="memdesc:a8c12691419fbed641e806ad4d6acbcd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtract a vector from another coordinate wise.  <a href="namespaceSymmetric__Polynomials.html#a8c12691419fbed641e806ad4d6acbcd1">More...</a><br /></td></tr>
-<tr class="separator:a8c12691419fbed641e806ad4d6acbcd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8de87fe94948ca6193fa761c5a2cc6f6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a8de87fe94948ca6193fa761c5a2cc6f6">operator*</a> (int a, const std::vector&lt; char &gt; &amp;b)</td></tr>
-<tr class="memdesc:a8de87fe94948ca6193fa761c5a2cc6f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies scalar and vector coordinate wise.  <a href="namespaceSymmetric__Polynomials.html#a8de87fe94948ca6193fa761c5a2cc6f6">More...</a><br /></td></tr>
-<tr class="separator:a8de87fe94948ca6193fa761c5a2cc6f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b5821494b7fd160206add93d4d73a42"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a1b5821494b7fd160206add93d4d73a42"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a1b5821494b7fd160206add93d4d73a42">join</a> (const std::vector&lt; T &gt; &amp;a, const std::vector&lt; T &gt; &amp;b)</td></tr>
-<tr class="memdesc:a1b5821494b7fd160206add93d4d73a42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joins two vectors a,b into a new vector with entries a[0],...,a[a.size()-1],b[0],...,b[b.size()-1].  <a href="namespaceSymmetric__Polynomials.html#a1b5821494b7fd160206add93d4d73a42">More...</a><br /></td></tr>
-<tr class="separator:a1b5821494b7fd160206add93d4d73a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac41ac0cc03bf5ae13fe5e661200ad134"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#ac41ac0cc03bf5ae13fe5e661200ad134">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="structSymmetric__Polynomials_1_1rational.html">rational</a> &amp;a)</td></tr>
-<tr class="memdesc:ac41ac0cc03bf5ae13fe5e661200ad134"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints rational number.  <a href="namespaceSymmetric__Polynomials.html#ac41ac0cc03bf5ae13fe5e661200ad134">More...</a><br /></td></tr>
-<tr class="separator:ac41ac0cc03bf5ae13fe5e661200ad134"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaec53907a3a9bc0c57745f1775c6fcb9"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; char &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#aaec53907a3a9bc0c57745f1775c6fcb9">vector_interpolate</a> (const std::vector&lt; char &gt; &amp;min, const std::vector&lt; char &gt; &amp;max, const std::function&lt; char(const std::vector&lt; char &gt; &amp;)&gt; &amp;policy=<a class="el" href="namespaceSymmetric__Polynomials_1_1policy.html#ac9a171c5b949f5d236b4502d73f6d2f9">policy::always_true</a>&lt; std::vector&lt; char &gt;&gt;)</td></tr>
-<tr class="memdesc:aaec53907a3a9bc0c57745f1775c6fcb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all vectors interpolating between min, max and satisfying a given policy.  <a href="namespaceSymmetric__Polynomials.html#aaec53907a3a9bc0c57745f1775c6fcb9">More...</a><br /></td></tr>
-<tr class="separator:aaec53907a3a9bc0c57745f1775c6fcb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a591a8f1544a9eb3c4c8113d4e55df622"><td class="memTemplParams" colspan="2">template&lt;typename scalar_t , typename rel_t &gt; </td></tr>
-<tr class="memitem:a591a8f1544a9eb3c4c8113d4e55df622"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a591a8f1544a9eb3c4c8113d4e55df622">monomial_basis</a> (int variables, int degree)</td></tr>
-<tr class="memdesc:a591a8f1544a9eb3c4c8113d4e55df622"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the monomial basis in given number of variables and degree.  <a href="namespaceSymmetric__Polynomials.html#a591a8f1544a9eb3c4c8113d4e55df622">More...</a><br /></td></tr>
-<tr class="separator:a591a8f1544a9eb3c4c8113d4e55df622"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a883bc8a69d911cdc3692dff4297d17e2"><td class="memTemplParams" colspan="2">template&lt;typename scalar_t &gt; </td></tr>
-<tr class="memitem:a883bc8a69d911cdc3692dff4297d17e2"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a883bc8a69d911cdc3692dff4297d17e2">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="structSymmetric__Polynomials_1_1decomposition__half__idempotent.html">decomposition_half_idempotent</a>&lt; scalar_t &gt; &amp;dec)</td></tr>
-<tr class="memdesc:a883bc8a69d911cdc3692dff4297d17e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints polynomial.  <a href="namespaceSymmetric__Polynomials.html#a883bc8a69d911cdc3692dff4297d17e2">More...</a><br /></td></tr>
-<tr class="separator:a883bc8a69d911cdc3692dff4297d17e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc624e6ecd4b5ce3c02f150183362963"><td class="memTemplParams" colspan="2">template&lt;typename scalar_t &gt; </td></tr>
-<tr class="memitem:abc624e6ecd4b5ce3c02f150183362963"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#abc624e6ecd4b5ce3c02f150183362963">print_half_idempotent_relations</a> (int n, bool verify=0)</td></tr>
-<tr class="memdesc:abc624e6ecd4b5ce3c02f150183362963"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i) using Idem, Chern and TwistedChern.  <a href="namespaceSymmetric__Polynomials.html#abc624e6ecd4b5ce3c02f150183362963">More...</a><br /></td></tr>
-<tr class="separator:abc624e6ecd4b5ce3c02f150183362963"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a586f61dc2535175eb8cccd421f5c35af"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a586f61dc2535175eb8cccd421f5c35af">binomial</a> (int top, int bot)</td></tr>
-<tr class="memdesc:a586f61dc2535175eb8cccd421f5c35af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns $\binom{n,m}$.  <a href="namespaceSymmetric__Polynomials.html#a586f61dc2535175eb8cccd421f5c35af">More...</a><br /></td></tr>
-<tr class="separator:a586f61dc2535175eb8cccd421f5c35af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fbdda5f0c66692f5c4bd4a0f7a319de"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a7fbdda5f0c66692f5c4bd4a0f7a319de">factorial</a> (int n)</td></tr>
-<tr class="memdesc:a7fbdda5f0c66692f5c4bd4a0f7a319de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns $n!$.  <a href="namespaceSymmetric__Polynomials.html#a7fbdda5f0c66692f5c4bd4a0f7a319de">More...</a><br /></td></tr>
-<tr class="separator:a7fbdda5f0c66692f5c4bd4a0f7a319de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a6bae3e00fa2f0f0e1ed0dd27fbab09"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; char &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a7a6bae3e00fa2f0f0e1ed0dd27fbab09">all_permutations</a> (char n)</td></tr>
-<tr class="memdesc:a7a6bae3e00fa2f0f0e1ed0dd27fbab09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns vector of all permutations on n letters.  <a href="namespaceSymmetric__Polynomials.html#a7a6bae3e00fa2f0f0e1ed0dd27fbab09">More...</a><br /></td></tr>
-<tr class="separator:a7a6bae3e00fa2f0f0e1ed0dd27fbab09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6658e3fb7f963aa3b2c065682850540"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; char &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#ac6658e3fb7f963aa3b2c065682850540">all_permutations</a> (char n, char m)</td></tr>
-<tr class="memdesc:ac6658e3fb7f963aa3b2c065682850540"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns vector of all combinations on n letters choosing m many <br  />
-  <a href="namespaceSymmetric__Polynomials.html#ac6658e3fb7f963aa3b2c065682850540">More...</a><br /></td></tr>
-<tr class="separator:ac6658e3fb7f963aa3b2c065682850540"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a675d14e03452c17f67177947b5dfa927"><td class="memTemplParams" colspan="2">template&lt;typename scalar_t , typename rel_t , typename perm_t &gt; </td></tr>
-<tr class="memitem:a675d14e03452c17f67177947b5dfa927"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a675d14e03452c17f67177947b5dfa927">orbit</a> (const <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &amp;a, const perm_t &amp;perms)</td></tr>
-<tr class="memdesc:a675d14e03452c17f67177947b5dfa927"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the orbit of a monomial under a set of permutations.  <a href="namespaceSymmetric__Polynomials.html#a675d14e03452c17f67177947b5dfa927">More...</a><br /></td></tr>
-<tr class="separator:a675d14e03452c17f67177947b5dfa927"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9352cb1a7f217f13c7038d2f182db347"><td class="memTemplParams" colspan="2">template&lt;typename scalar_t , typename rel_t , typename perm_t &gt; </td></tr>
-<tr class="memitem:a9352cb1a7f217f13c7038d2f182db347"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a9352cb1a7f217f13c7038d2f182db347">orbit</a> (const <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &amp;a, const perm_t &amp;perms, int number_of_orbits)</td></tr>
-<tr class="memdesc:a9352cb1a7f217f13c7038d2f182db347"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the orbit of a monomial under a set of permutations. The number_of_orbits is provided as an argument to limit memory usage.  <a href="namespaceSymmetric__Polynomials.html#a9352cb1a7f217f13c7038d2f182db347">More...</a><br /></td></tr>
-<tr class="separator:a9352cb1a7f217f13c7038d2f182db347"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a472a68b7c1d92e6a99b6a563222d170e"><td class="memTemplParams" colspan="2">template&lt;typename scalar_t , typename rel_t , typename perm_t &gt; </td></tr>
-<tr class="memitem:a472a68b7c1d92e6a99b6a563222d170e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a472a68b7c1d92e6a99b6a563222d170e">max_in_orbit</a> (const <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &amp;a, const perm_t &amp;perms)</td></tr>
-<tr class="memdesc:a472a68b7c1d92e6a99b6a563222d170e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the greatest monomial in an orbit of permutations.  <a href="namespaceSymmetric__Polynomials.html#a472a68b7c1d92e6a99b6a563222d170e">More...</a><br /></td></tr>
-<tr class="separator:a472a68b7c1d92e6a99b6a563222d170e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9f5d227958f2b51e77cb2fe178ebef6"><td class="memTemplParams" colspan="2">template&lt;typename scalar_t , typename rel_t &gt; </td></tr>
-<tr class="memitem:ac9f5d227958f2b51e77cb2fe178ebef6"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#ac9f5d227958f2b51e77cb2fe178ebef6">all_monomial_orbits</a> (int variables, int degree)</td></tr>
-<tr class="memdesc:ac9f5d227958f2b51e77cb2fe178ebef6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector of all monomials in given variables and degree organized in orbits under the symmetric group action.  <a href="namespaceSymmetric__Polynomials.html#ac9f5d227958f2b51e77cb2fe178ebef6">More...</a><br /></td></tr>
-<tr class="separator:ac9f5d227958f2b51e77cb2fe178ebef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58c3ea2d58a1501fc02442da2ae837a4"><td class="memTemplParams" colspan="2">template&lt;typename scalar_t &gt; </td></tr>
-<tr class="memitem:a58c3ea2d58a1501fc02442da2ae837a4"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a58c3ea2d58a1501fc02442da2ae837a4">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="structSymmetric__Polynomials_1_1decomposition__elementary__symmetric.html">decomposition_elementary_symmetric</a>&lt; scalar_t &gt; &amp;a)</td></tr>
-<tr class="memdesc:a58c3ea2d58a1501fc02442da2ae837a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints decomposition into elementary symmetric polynomials.  <a href="namespaceSymmetric__Polynomials.html#a58c3ea2d58a1501fc02442da2ae837a4">More...</a><br /></td></tr>
-<tr class="separator:a58c3ea2d58a1501fc02442da2ae837a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25e05f07a7f62ca6d3304274aaac2e2e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a25e05f07a7f62ca6d3304274aaac2e2e">general_compute_degree</a> (const std::vector&lt; char &gt; &amp;exponent, const std::vector&lt; char &gt; &amp;dimensions)</td></tr>
-<tr class="separator:a25e05f07a7f62ca6d3304274aaac2e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a486dcdfce4585685ded1f60ab638f113"><td class="memTemplParams" colspan="2">template&lt;typename scalar_t , typename rel_t &gt; </td></tr>
-<tr class="memitem:a486dcdfce4585685ded1f60ab638f113"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a486dcdfce4585685ded1f60ab638f113">operator*</a> (const scalar_t &amp;a, const <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &amp;b)</td></tr>
-<tr class="memdesc:a486dcdfce4585685ded1f60ab638f113"><td class="mdescLeft">&#160;</td><td class="mdescRight">Product of scalar and monomial.  <a href="namespaceSymmetric__Polynomials.html#a486dcdfce4585685ded1f60ab638f113">More...</a><br /></td></tr>
-<tr class="separator:a486dcdfce4585685ded1f60ab638f113"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a731806de07a7498e372e3a3233a974af"><td class="memTemplParams" colspan="2">template&lt;typename scalar_t , typename rel_t &gt; </td></tr>
-<tr class="memitem:a731806de07a7498e372e3a3233a974af"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a731806de07a7498e372e3a3233a974af">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &amp;a)</td></tr>
-<tr class="memdesc:a731806de07a7498e372e3a3233a974af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints monomial.  <a href="namespaceSymmetric__Polynomials.html#a731806de07a7498e372e3a3233a974af">More...</a><br /></td></tr>
-<tr class="separator:a731806de07a7498e372e3a3233a974af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdbc4a51aab1bb201ebfedcd26896cb4"><td class="memTemplParams" colspan="2">template&lt;typename scalar_t , typename rel_t &gt; </td></tr>
-<tr class="memitem:abdbc4a51aab1bb201ebfedcd26896cb4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#abdbc4a51aab1bb201ebfedcd26896cb4">permute</a> (const <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &amp;a, const std::vector&lt; char &gt; &amp;perm)</td></tr>
-<tr class="memdesc:abdbc4a51aab1bb201ebfedcd26896cb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permutes the variables in a monomial according permutation; returns permuted monomial.  <a href="namespaceSymmetric__Polynomials.html#abdbc4a51aab1bb201ebfedcd26896cb4">More...</a><br /></td></tr>
-<tr class="separator:abdbc4a51aab1bb201ebfedcd26896cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3071663e4ec8ac6e28de064de66e492"><td class="memTemplParams" colspan="2">template&lt;typename scalar_t , typename rel_t &gt; </td></tr>
-<tr class="memitem:aa3071663e4ec8ac6e28de064de66e492"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#aa3071663e4ec8ac6e28de064de66e492">multiply</a> (const <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt; &amp;a, const <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt; &amp;b, bool dontcondense=0)</td></tr>
-<tr class="memdesc:aa3071663e4ec8ac6e28de064de66e492"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies two polynomials with the ability to disable condensation (not recommended)  <a href="namespaceSymmetric__Polynomials.html#aa3071663e4ec8ac6e28de064de66e492">More...</a><br /></td></tr>
-<tr class="separator:aa3071663e4ec8ac6e28de064de66e492"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81926a9c4e5dbb2083c79d181f6145a4"><td class="memTemplParams" colspan="2">template&lt;typename scalar_t , typename rel_t &gt; </td></tr>
-<tr class="memitem:a81926a9c4e5dbb2083c79d181f6145a4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a81926a9c4e5dbb2083c79d181f6145a4">operator*</a> (const scalar_t &amp;a, const <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt; &amp;b)</td></tr>
-<tr class="memdesc:a81926a9c4e5dbb2083c79d181f6145a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies scalar and polynomial.  <a href="namespaceSymmetric__Polynomials.html#a81926a9c4e5dbb2083c79d181f6145a4">More...</a><br /></td></tr>
-<tr class="separator:a81926a9c4e5dbb2083c79d181f6145a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a542c4daa5b2d96247a72ad6ce2c422b8"><td class="memTemplParams" colspan="2">template&lt;typename scalar_t , typename rel_t &gt; </td></tr>
-<tr class="memitem:a542c4daa5b2d96247a72ad6ce2c422b8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a542c4daa5b2d96247a72ad6ce2c422b8">operator*</a> (const <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt; &amp;a, const <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt; &amp;b)</td></tr>
-<tr class="separator:a542c4daa5b2d96247a72ad6ce2c422b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4660c20842e3b1127be52c75a456c656"><td class="memTemplParams" colspan="2">template&lt;typename scalar_t , typename rel_t &gt; </td></tr>
-<tr class="memitem:a4660c20842e3b1127be52c75a456c656"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a4660c20842e3b1127be52c75a456c656">operator*</a> (const <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &amp;a, const <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt; &amp;b)</td></tr>
-<tr class="memdesc:a4660c20842e3b1127be52c75a456c656"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the product of monomial and polynomial.  <a href="namespaceSymmetric__Polynomials.html#a4660c20842e3b1127be52c75a456c656">More...</a><br /></td></tr>
-<tr class="separator:a4660c20842e3b1127be52c75a456c656"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a990b557830c3f886acfec2df4bbf0c2e"><td class="memTemplParams" colspan="2">template&lt;typename scalar_t , typename rel_t &gt; </td></tr>
-<tr class="memitem:a990b557830c3f886acfec2df4bbf0c2e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a990b557830c3f886acfec2df4bbf0c2e">operator*</a> (const <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt; &amp;a, const <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &amp;b)</td></tr>
-<tr class="memdesc:a990b557830c3f886acfec2df4bbf0c2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the product of polynomial and monomial.  <a href="namespaceSymmetric__Polynomials.html#a990b557830c3f886acfec2df4bbf0c2e">More...</a><br /></td></tr>
-<tr class="separator:a990b557830c3f886acfec2df4bbf0c2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d476a58c571385ffab409a59c683b98"><td class="memTemplParams" colspan="2">template&lt;typename scalar_t , typename rel_t &gt; </td></tr>
-<tr class="memitem:a1d476a58c571385ffab409a59c683b98"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a1d476a58c571385ffab409a59c683b98">power</a> (const <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt; &amp;a, int p, bool dontcondense=0)</td></tr>
-<tr class="memdesc:a1d476a58c571385ffab409a59c683b98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a^p for polynomial a and nonnegative integer p.  <a href="namespaceSymmetric__Polynomials.html#a1d476a58c571385ffab409a59c683b98">More...</a><br /></td></tr>
-<tr class="separator:a1d476a58c571385ffab409a59c683b98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab73ff5cb5642b3ea602cf4e0370db0a7"><td class="memTemplParams" colspan="2">template&lt;typename scalar_t , typename rel_t &gt; </td></tr>
-<tr class="memitem:ab73ff5cb5642b3ea602cf4e0370db0a7"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#ab73ff5cb5642b3ea602cf4e0370db0a7">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt; &amp;a)</td></tr>
-<tr class="memdesc:ab73ff5cb5642b3ea602cf4e0370db0a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints polynomial.  <a href="namespaceSymmetric__Polynomials.html#ab73ff5cb5642b3ea602cf4e0370db0a7">More...</a><br /></td></tr>
-<tr class="separator:ab73ff5cb5642b3ea602cf4e0370db0a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e73be5bd3843fd88ac01b17239aff96"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a1e73be5bd3843fd88ac01b17239aff96">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="structSymmetric__Polynomials_1_1Rational.html">Rational</a> &amp;a)</td></tr>
+<tr class="memdesc:a1e73be5bd3843fd88ac01b17239aff96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints rational number.  <a href="namespaceSymmetric__Polynomials.html#a1e73be5bd3843fd88ac01b17239aff96">More...</a><br /></td></tr>
+<tr class="separator:a1e73be5bd3843fd88ac01b17239aff96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fbacd7a31bb040f9609e6bdc5cbc541"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a9fbacd7a31bb040f9609e6bdc5cbc541"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a9fbacd7a31bb040f9609e6bdc5cbc541">all_permutations</a> (T n)</td></tr>
+<tr class="memdesc:a9fbacd7a31bb040f9609e6bdc5cbc541"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns vector of all permutations on n letters.  <a href="namespaceSymmetric__Polynomials.html#a9fbacd7a31bb040f9609e6bdc5cbc541">More...</a><br /></td></tr>
+<tr class="separator:a9fbacd7a31bb040f9609e6bdc5cbc541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff3ebeea4f1bcee426cd01c41917f3aa"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aff3ebeea4f1bcee426cd01c41917f3aa"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#aff3ebeea4f1bcee426cd01c41917f3aa">all_combinations</a> (T n, T m)</td></tr>
+<tr class="memdesc:aff3ebeea4f1bcee426cd01c41917f3aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns vector of all combinations on n letters choosing m many <br  />
+  <a href="namespaceSymmetric__Polynomials.html#aff3ebeea4f1bcee426cd01c41917f3aa">More...</a><br /></td></tr>
+<tr class="separator:aff3ebeea4f1bcee426cd01c41917f3aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a843da471ac0687f5ffa34c497a2929a9"><td class="memTemplParams" colspan="2">template&lt;typename scalar_t , typename exponent_t &gt; </td></tr>
+<tr class="memitem:a843da471ac0687f5ffa34c497a2929a9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a843da471ac0687f5ffa34c497a2929a9">print_half_idempotent_relations</a> (int n, bool print=0, bool verify=0)</td></tr>
+<tr class="memdesc:a843da471ac0687f5ffa34c497a2929a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i) using Idem, Chern and TwistedChern.  <a href="namespaceSymmetric__Polynomials.html#a843da471ac0687f5ffa34c497a2929a9">More...</a><br /></td></tr>
+<tr class="separator:a843da471ac0687f5ffa34c497a2929a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee540cffbf130eed9641b895453e81c3"><td class="memTemplParams" colspan="2">template&lt;typename scalar_t , typename exponent_t , bool t, bool w&gt; </td></tr>
+<tr class="memitem:aee540cffbf130eed9641b895453e81c3"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#aee540cffbf130eed9641b895453e81c3">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt; scalar_t, exponent_t, t, w &gt; &amp;a)</td></tr>
+<tr class="memdesc:aee540cffbf130eed9641b895453e81c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints polynomial.  <a href="namespaceSymmetric__Polynomials.html#aee540cffbf130eed9641b895453e81c3">More...</a><br /></td></tr>
+<tr class="separator:aee540cffbf130eed9641b895453e81c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The namespace which contains every method and class in the library. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="ac9f5d227958f2b51e77cb2fe178ebef6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9f5d227958f2b51e77cb2fe178ebef6">&#9670;&nbsp;</a></span>all_monomial_orbits()</h2>
+<a id="aff3ebeea4f1bcee426cd01c41917f3aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff3ebeea4f1bcee426cd01c41917f3aa">&#9670;&nbsp;</a></span>all_combinations()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;std::vector&lt;<a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt;scalar_t, rel_t&gt; &gt; &gt; Symmetric_Polynomials::all_monomial_orbits </td>
+          <td class="memname">std::vector&lt;std::vector&lt;T&gt; &gt; Symmetric_Polynomials::all_combinations </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>variables</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>degree</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns a vector of all monomials in given variables and degree organized in orbits under the symmetric group action. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_ac9f5d227958f2b51e77cb2fe178ebef6_cgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_ac9f5d227958f2b51e77cb2fe178ebef6_cgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_ac9f5d227958f2b51e77cb2fe178ebef6_cgraph" id="namespaceSymmetric__Polynomials_ac9f5d227958f2b51e77cb2fe178ebef6_cgraph">
-<area shape="rect" title="Returns a vector of all monomials in given variables and degree organized in orbits under the symmetr..." alt="" coords="5,71,185,112"/>
-<area shape="rect" href="structSymmetric__Polynomials_1_1hasher.html#a1e1a3b7aa979c2581049169d3bcc54f5" title=" " alt="" coords="237,5,417,47"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a675d14e03452c17f67177947b5dfa927" title="Computes the orbit of a monomial under a set of permutations." alt="" coords="237,71,417,112"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1permutations__generator.html#ab053821b3ca274b6ef292aae9a395dc5" title="Constructor using number of letters." alt="" coords="233,137,420,193"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a7a6bae3e00fa2f0f0e1ed0dd27fbab09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a6bae3e00fa2f0f0e1ed0dd27fbab09">&#9670;&nbsp;</a></span>all_permutations() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;std::vector&lt;char&gt; &gt; Symmetric_Polynomials::all_permutations </td>
-          <td>(</td>
-          <td class="paramtype">char&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns vector of all permutations on n letters. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_a7a6bae3e00fa2f0f0e1ed0dd27fbab09_cgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_a7a6bae3e00fa2f0f0e1ed0dd27fbab09_cgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_a7a6bae3e00fa2f0f0e1ed0dd27fbab09_cgraph" id="namespaceSymmetric__Polynomials_a7a6bae3e00fa2f0f0e1ed0dd27fbab09_cgraph">
-<area shape="rect" title="Returns vector of all permutations on n letters." alt="" coords="5,5,185,47"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a7fbdda5f0c66692f5c4bd4a0f7a319de" title="Returns $n!$." alt="" coords="233,5,413,47"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="ac6658e3fb7f963aa3b2c065682850540"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6658e3fb7f963aa3b2c065682850540">&#9670;&nbsp;</a></span>all_permutations() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;std::vector&lt;char&gt; &gt; Symmetric_Polynomials::all_permutations </td>
-          <td>(</td>
-          <td class="paramtype">char&#160;</td>
+          <td class="paramtype">T&#160;</td>
           <td class="paramname"><em>n</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char&#160;</td>
+          <td class="paramtype">T&#160;</td>
           <td class="paramname"><em>m</em>&#160;</td>
         </tr>
         <tr>
@@ -397,246 +204,64 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_ac6658e3fb7f963aa3b2c065682850540_cgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_ac6658e3fb7f963aa3b2c065682850540_cgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_ac6658e3fb7f963aa3b2c065682850540_cgraph" id="namespaceSymmetric__Polynomials_ac6658e3fb7f963aa3b2c065682850540_cgraph">
+<div class="center"><img src="namespaceSymmetric__Polynomials_aff3ebeea4f1bcee426cd01c41917f3aa_cgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_aff3ebeea4f1bcee426cd01c41917f3aa_cgraph" alt=""/></div>
+<map name="namespaceSymmetric__Polynomials_aff3ebeea4f1bcee426cd01c41917f3aa_cgraph" id="namespaceSymmetric__Polynomials_aff3ebeea4f1bcee426cd01c41917f3aa_cgraph">
 <area shape="rect" title="Returns vector of all combinations on n letters choosing m many" alt="" coords="5,5,185,47"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a586f61dc2535175eb8cccd421f5c35af" title="Returns $\binom{n,m}$." alt="" coords="233,5,413,47"/>
+<area shape="rect" href="classSymmetric__Polynomials_1_1Combination__Generator.html#af14acc36fdac78df6290e5df7f9cee4e" title="Total number of combinations." alt="" coords="233,5,452,47"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a27efdd26eaaeafdf5a8de46a3ab9a194"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27efdd26eaaeafdf5a8de46a3ab9a194">&#9670;&nbsp;</a></span>apply_permutation() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;char&gt; Symmetric_Polynomials::apply_permutation </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; char &gt; &amp;&#160;</td>
-          <td class="paramname"><em>v</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; char &gt; &amp;&#160;</td>
-          <td class="paramname"><em>perm</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Applies permutation perm on the vector v. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_a27efdd26eaaeafdf5a8de46a3ab9a194_cgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_a27efdd26eaaeafdf5a8de46a3ab9a194_cgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_a27efdd26eaaeafdf5a8de46a3ab9a194_cgraph" id="namespaceSymmetric__Polynomials_a27efdd26eaaeafdf5a8de46a3ab9a194_cgraph">
-<area shape="rect" title="Applies permutation perm on the vector v." alt="" coords="5,5,185,47"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a37ac61439f89641faa57cb3604faf114" title="Breaks vector v into given number of pieces and applies given permutation on each one; then joins the..." alt="" coords="233,5,436,47"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a19968cb25bf5b9b023bcca196145dec3" title="Applies permutation perm on the target from starting point begin." alt="" coords="484,5,664,47"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a19968cb25bf5b9b023bcca196145dec3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19968cb25bf5b9b023bcca196145dec3">&#9670;&nbsp;</a></span>apply_permutation() <span class="overload">[2/2]</span></h2>
+<a id="a9fbacd7a31bb040f9609e6bdc5cbc541"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fbacd7a31bb040f9609e6bdc5cbc541">&#9670;&nbsp;</a></span>all_permutations()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Iterator &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void Symmetric_Polynomials::apply_permutation </td>
+          <td class="memname">std::vector&lt;std::vector&lt;T&gt; &gt; Symmetric_Polynomials::all_permutations </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; char &gt; &amp;&#160;</td>
-          <td class="paramname"><em>target</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Iterator&#160;</td>
-          <td class="paramname"><em>begin</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; char &gt; &amp;&#160;</td>
-          <td class="paramname"><em>perm</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Applies permutation perm on the target from starting point begin. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_a19968cb25bf5b9b023bcca196145dec3_icgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_a19968cb25bf5b9b023bcca196145dec3_icgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_a19968cb25bf5b9b023bcca196145dec3_icgraph" id="namespaceSymmetric__Polynomials_a19968cb25bf5b9b023bcca196145dec3_icgraph">
-<area shape="rect" title="Applies permutation perm on the target from starting point begin." alt="" coords="496,71,676,112"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a37ac61439f89641faa57cb3604faf114" title="Breaks vector v into given number of pieces and applies given permutation on each one; then joins the..." alt="" coords="245,37,448,79"/>
-<area shape="rect" href="structSymmetric__Polynomials_1_1norelations.html#afd3cc7d4cca107c95207b4e5f15f2360" title="Apply permutation on exponent vector." alt="" coords="257,103,437,144"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a27efdd26eaaeafdf5a8de46a3ab9a194" title="Applies permutation perm on the vector v." alt="" coords="11,5,191,47"/>
-<area shape="rect" href="structSymmetric__Polynomials_1_1halfidempotent.html#acfd8e716d051482f0790925ef0ad4f94" title="Apply permutation on exponent vector, separately on the variables x_i and the variables y_i." alt="" coords="5,71,197,112"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a37ac61439f89641faa57cb3604faf114"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37ac61439f89641faa57cb3604faf114">&#9670;&nbsp;</a></span>apply_permutation_pieces()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;char&gt; Symmetric_Polynomials::apply_permutation_pieces </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; char &gt; &amp;&#160;</td>
-          <td class="paramname"><em>v</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>pieces</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; char &gt; &amp;&#160;</td>
-          <td class="paramname"><em>perm</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Breaks vector v into given number of pieces and applies given permutation on each one; then joins the pieces and returns the vector. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_a37ac61439f89641faa57cb3604faf114_cgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_a37ac61439f89641faa57cb3604faf114_cgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_a37ac61439f89641faa57cb3604faf114_cgraph" id="namespaceSymmetric__Polynomials_a37ac61439f89641faa57cb3604faf114_cgraph">
-<area shape="rect" title="Breaks vector v into given number of pieces and applies given permutation on each one; then joins the..." alt="" coords="5,5,208,47"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a19968cb25bf5b9b023bcca196145dec3" title="Applies permutation perm on the target from starting point begin." alt="" coords="256,5,436,47"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_a37ac61439f89641faa57cb3604faf114_icgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_a37ac61439f89641faa57cb3604faf114_icgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_a37ac61439f89641faa57cb3604faf114_icgraph" id="namespaceSymmetric__Polynomials_a37ac61439f89641faa57cb3604faf114_icgraph">
-<area shape="rect" title="Breaks vector v into given number of pieces and applies given permutation on each one; then joins the..." alt="" coords="245,39,448,80"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a27efdd26eaaeafdf5a8de46a3ab9a194" title="Applies permutation perm on the vector v." alt="" coords="11,5,191,47"/>
-<area shape="rect" href="structSymmetric__Polynomials_1_1halfidempotent.html#acfd8e716d051482f0790925ef0ad4f94" title="Apply permutation on exponent vector, separately on the variables x_i and the variables y_i." alt="" coords="5,71,197,112"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a586f61dc2535175eb8cccd421f5c35af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a586f61dc2535175eb8cccd421f5c35af">&#9670;&nbsp;</a></span>binomial()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">long Symmetric_Polynomials::binomial </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>top</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>bot</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns $\binom{n,m}$. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_a586f61dc2535175eb8cccd421f5c35af_icgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_a586f61dc2535175eb8cccd421f5c35af_icgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_a586f61dc2535175eb8cccd421f5c35af_icgraph" id="namespaceSymmetric__Polynomials_a586f61dc2535175eb8cccd421f5c35af_icgraph">
-<area shape="rect" title="Returns $\binom{n,m}$." alt="" coords="276,39,456,80"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#ac6658e3fb7f963aa3b2c065682850540" title="Returns vector of all combinations on n letters choosing m many" alt="" coords="27,5,207,47"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1combinations__generator.html#afb69a5128f842f12f4df35f6a170da95" title="Total number of combinations." alt="" coords="5,71,228,112"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a7fbdda5f0c66692f5c4bd4a0f7a319de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7fbdda5f0c66692f5c4bd4a0f7a319de">&#9670;&nbsp;</a></span>factorial()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">long Symmetric_Polynomials::factorial </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">T&#160;</td>
           <td class="paramname"><em>n</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns $n!$. </p>
+<p>Returns vector of all permutations on n letters. </p>
 <div class="dynheader">
-Here is the caller graph for this function:</div>
+Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_a7fbdda5f0c66692f5c4bd4a0f7a319de_icgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_a7fbdda5f0c66692f5c4bd4a0f7a319de_icgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_a7fbdda5f0c66692f5c4bd4a0f7a319de_icgraph" id="namespaceSymmetric__Polynomials_a7fbdda5f0c66692f5c4bd4a0f7a319de_icgraph">
-<area shape="rect" title="Returns $n!$." alt="" coords="275,39,455,80"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a7a6bae3e00fa2f0f0e1ed0dd27fbab09" title="Returns vector of all permutations on n letters." alt="" coords="26,5,206,47"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1permutations__generator.html#a9f653c06e526eda8e6521e9923f2e537" title="Returns the total nuumber of permutations i.e. the factorial." alt="" coords="5,71,227,112"/>
+<div class="center"><img src="namespaceSymmetric__Polynomials_a9fbacd7a31bb040f9609e6bdc5cbc541_cgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_a9fbacd7a31bb040f9609e6bdc5cbc541_cgraph" alt=""/></div>
+<map name="namespaceSymmetric__Polynomials_a9fbacd7a31bb040f9609e6bdc5cbc541_cgraph" id="namespaceSymmetric__Polynomials_a9fbacd7a31bb040f9609e6bdc5cbc541_cgraph">
+<area shape="rect" title="Returns vector of all permutations on n letters." alt="" coords="5,5,185,47"/>
+<area shape="rect" href="classSymmetric__Polynomials_1_1Permutation__Generator.html#a8df2387743ab3b37f2e45a11047e2b32" title="Returns the total number of permutations i.e. the factorial." alt="" coords="233,5,449,47"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a25e05f07a7f62ca6d3304274aaac2e2e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25e05f07a7f62ca6d3304274aaac2e2e">&#9670;&nbsp;</a></span>general_compute_degree()</h2>
+<a id="a17c6bea90d7e164a084903de6086603d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17c6bea90d7e164a084903de6086603d">&#9670;&nbsp;</a></span>general_compute_degree()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename S &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">int Symmetric_Polynomials::general_compute_degree </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; char &gt; &amp;&#160;</td>
+          <td class="paramtype">const T &amp;&#160;</td>
           <td class="paramname"><em>exponent</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; char &gt; &amp;&#160;</td>
+          <td class="paramtype">const S &amp;&#160;</td>
           <td class="paramname"><em>dimensions</em>&#160;</td>
         </tr>
         <tr>
@@ -646,526 +271,27 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Degree computation given exponent and dimensions (grading) </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_a25e05f07a7f62ca6d3304274aaac2e2e_icgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_a25e05f07a7f62ca6d3304274aaac2e2e_icgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_a25e05f07a7f62ca6d3304274aaac2e2e_icgraph" id="namespaceSymmetric__Polynomials_a25e05f07a7f62ca6d3304274aaac2e2e_icgraph">
-<area shape="rect" title=" " alt="" coords="275,13,469,54"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1degree__comparator__relations.html#a989cb3ea1000886ef6375984ad37203b" title="Returns 1 if the degree agrees with the desired degree and has no relations, &#45;1 if it&#39;s higher than t..." alt="" coords="5,5,227,61"/>
+<div class="center"><img src="namespaceSymmetric__Polynomials_a17c6bea90d7e164a084903de6086603d_icgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_a17c6bea90d7e164a084903de6086603d_icgraph" alt=""/></div>
+<map name="namespaceSymmetric__Polynomials_a17c6bea90d7e164a084903de6086603d_icgraph" id="namespaceSymmetric__Polynomials_a17c6bea90d7e164a084903de6086603d_icgraph">
+<area shape="rect" title="Degree computation given exponent and dimensions (grading)" alt="" coords="233,13,428,54"/>
+<area shape="rect" href="classSymmetric__Polynomials_1_1Polynomial.html#a01ef9f68433da31e0a1d396535a37b24" title="Inserts monomial given exponent and coefficient." alt="" coords="5,5,185,61"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a1b5821494b7fd160206add93d4d73a42"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b5821494b7fd160206add93d4d73a42">&#9670;&nbsp;</a></span>join()</h2>
+<a id="aee540cffbf130eed9641b895453e81c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee540cffbf130eed9641b895453e81c3">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;T&gt; Symmetric_Polynomials::join </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Joins two vectors a,b into a new vector with entries a[0],...,a[a.size()-1],b[0],...,b[b.size()-1]. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_a1b5821494b7fd160206add93d4d73a42_icgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_a1b5821494b7fd160206add93d4d73a42_icgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_a1b5821494b7fd160206add93d4d73a42_icgraph" id="namespaceSymmetric__Polynomials_a1b5821494b7fd160206add93d4d73a42_icgraph">
-<area shape="rect" title="Joins two vectors a,b into a new vector with entries a[0],...,a[a.size()&#45;1],b[0],...." alt="" coords="253,20,433,61"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1polynomial.html#aa907a0fb17c89025757bb89237adeaab" title="Adds two polynomials." alt="" coords="5,5,205,76"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a472a68b7c1d92e6a99b6a563222d170e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a472a68b7c1d92e6a99b6a563222d170e">&#9670;&nbsp;</a></span>max_in_orbit()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t , typename perm_t &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt;scalar_t, rel_t&gt; Symmetric_Polynomials::max_in_orbit </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const perm_t &amp;&#160;</td>
-          <td class="paramname"><em>perms</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the greatest monomial in an orbit of permutations. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_a472a68b7c1d92e6a99b6a563222d170e_cgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_a472a68b7c1d92e6a99b6a563222d170e_cgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_a472a68b7c1d92e6a99b6a563222d170e_cgraph" id="namespaceSymmetric__Polynomials_a472a68b7c1d92e6a99b6a563222d170e_cgraph">
-<area shape="rect" title="Returns the greatest monomial in an orbit of permutations." alt="" coords="5,5,185,47"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#abdbc4a51aab1bb201ebfedcd26896cb4" title="Permutes the variables in a monomial according permutation; returns permuted monomial." alt="" coords="233,5,413,47"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a591a8f1544a9eb3c4c8113d4e55df622"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a591a8f1544a9eb3c4c8113d4e55df622">&#9670;&nbsp;</a></span>monomial_basis()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt;scalar_t, rel_t&gt; &gt; Symmetric_Polynomials::monomial_basis </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>variables</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>degree</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the monomial basis in given number of variables and degree. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_a591a8f1544a9eb3c4c8113d4e55df622_cgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_a591a8f1544a9eb3c4c8113d4e55df622_cgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_a591a8f1544a9eb3c4c8113d4e55df622_cgraph" id="namespaceSymmetric__Polynomials_a591a8f1544a9eb3c4c8113d4e55df622_cgraph">
-<area shape="rect" title="Returns the monomial basis in given number of variables and degree." alt="" coords="5,43,185,84"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials_1_1policy.html#a40a0271299de2343a3c29a2d0cee4477" title="The policy made by a given comparactor function." alt="" coords="233,5,413,47"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1vector__interpolate__generator.html#a1d15d2426618c2237bbecdf408b358ab" title="Returns upper bound on the amount of generated elements." alt="" coords="233,71,413,127"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="aa3071663e4ec8ac6e28de064de66e492"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3071663e4ec8ac6e28de064de66e492">&#9670;&nbsp;</a></span>multiply()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt;scalar_t, rel_t&gt; Symmetric_Polynomials::multiply </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>dontcondense</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Multiplies two polynomials with the ability to disable condensation (not recommended) </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_aa3071663e4ec8ac6e28de064de66e492_icgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_aa3071663e4ec8ac6e28de064de66e492_icgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_aa3071663e4ec8ac6e28de064de66e492_icgraph" id="namespaceSymmetric__Polynomials_aa3071663e4ec8ac6e28de064de66e492_icgraph">
-<area shape="rect" title="Multiplies two polynomials with the ability to disable condensation (not recommended)" alt="" coords="952,49,1132,90"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1half__idempotent__generators.html#a249b2ebc59f817e258e30904de4f7b89" title="Computes a product of a monomial on our generators Idem, Chern, TwistedChern." alt="" coords="461,5,676,61"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a542c4daa5b2d96247a72ad6ce2c422b8" title=" " alt="" coords="724,49,904,90"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a1d476a58c571385ffab409a59c683b98" title="Computes a^p for polynomial a and nonnegative integer p." alt="" coords="724,114,904,155"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#abc624e6ecd4b5ce3c02f150183362963" title="Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,..." alt="" coords="5,7,185,63"/>
-<area shape="rect" href="structSymmetric__Polynomials_1_1decomposition__half__idempotent.html#ac706fb88d949c91c7945ad29df72b084" title="Verifies that the decomposition is correct (i.e. expanding the generators in the original variables &#160;..." alt="" coords="233,39,413,95"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1elementary__symmetric.html#ac01a1ee9fb360c2112e918b295cbe9b8" title="Given vector exponent computes e_1^{exponent_1}*...*e_n^{exponent_n}." alt="" coords="477,107,660,163"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a4660c20842e3b1127be52c75a456c656"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4660c20842e3b1127be52c75a456c656">&#9670;&nbsp;</a></span>operator*() <span class="overload">[1/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt;scalar_t, rel_t&gt; Symmetric_Polynomials::operator* </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the product of monomial and polynomial. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_a4660c20842e3b1127be52c75a456c656_cgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_a4660c20842e3b1127be52c75a456c656_cgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_a4660c20842e3b1127be52c75a456c656_cgraph" id="namespaceSymmetric__Polynomials_a4660c20842e3b1127be52c75a456c656_cgraph">
-<area shape="rect" title="Returns the product of monomial and polynomial." alt="" coords="5,5,185,47"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#aa3071663e4ec8ac6e28de064de66e492" title="Multiplies two polynomials with the ability to disable condensation (not recommended)" alt="" coords="233,5,413,47"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a990b557830c3f886acfec2df4bbf0c2e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a990b557830c3f886acfec2df4bbf0c2e">&#9670;&nbsp;</a></span>operator*() <span class="overload">[2/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt;scalar_t, rel_t&gt; Symmetric_Polynomials::operator* </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the product of polynomial and monomial. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_a990b557830c3f886acfec2df4bbf0c2e_cgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_a990b557830c3f886acfec2df4bbf0c2e_cgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_a990b557830c3f886acfec2df4bbf0c2e_cgraph" id="namespaceSymmetric__Polynomials_a990b557830c3f886acfec2df4bbf0c2e_cgraph">
-<area shape="rect" title="Returns the product of polynomial and monomial." alt="" coords="5,5,185,47"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#aa3071663e4ec8ac6e28de064de66e492" title="Multiplies two polynomials with the ability to disable condensation (not recommended)" alt="" coords="233,5,413,47"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a542c4daa5b2d96247a72ad6ce2c422b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a542c4daa5b2d96247a72ad6ce2c422b8">&#9670;&nbsp;</a></span>operator*() <span class="overload">[3/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt;scalar_t, rel_t&gt; Symmetric_Polynomials::operator* </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_a542c4daa5b2d96247a72ad6ce2c422b8_cgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_a542c4daa5b2d96247a72ad6ce2c422b8_cgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_a542c4daa5b2d96247a72ad6ce2c422b8_cgraph" id="namespaceSymmetric__Polynomials_a542c4daa5b2d96247a72ad6ce2c422b8_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,185,47"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#aa3071663e4ec8ac6e28de064de66e492" title="Multiplies two polynomials with the ability to disable condensation (not recommended)" alt="" coords="233,5,413,47"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a486dcdfce4585685ded1f60ab638f113"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a486dcdfce4585685ded1f60ab638f113">&#9670;&nbsp;</a></span>operator*() <span class="overload">[4/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt;scalar_t, rel_t&gt; Symmetric_Polynomials::operator* </td>
-          <td>(</td>
-          <td class="paramtype">const scalar_t &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Product of scalar and monomial. </p>
-
-</div>
-</div>
-<a id="a81926a9c4e5dbb2083c79d181f6145a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81926a9c4e5dbb2083c79d181f6145a4">&#9670;&nbsp;</a></span>operator*() <span class="overload">[5/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt;scalar_t, rel_t&gt; Symmetric_Polynomials::operator* </td>
-          <td>(</td>
-          <td class="paramtype">const scalar_t &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Multiplies scalar and polynomial. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_a81926a9c4e5dbb2083c79d181f6145a4_cgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_a81926a9c4e5dbb2083c79d181f6145a4_cgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_a81926a9c4e5dbb2083c79d181f6145a4_cgraph" id="namespaceSymmetric__Polynomials_a81926a9c4e5dbb2083c79d181f6145a4_cgraph">
-<area shape="rect" title="Multiplies scalar and polynomial." alt="" coords="5,5,185,47"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1polynomial.html#a29a3177f37777cd66cbf9b50402a10c6" title="Constructs constant polynomial given coefficient and number of variables." alt="" coords="233,5,413,47"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a8de87fe94948ca6193fa761c5a2cc6f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8de87fe94948ca6193fa761c5a2cc6f6">&#9670;&nbsp;</a></span>operator*() <span class="overload">[6/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;char&gt; Symmetric_Polynomials::operator* </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; char &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Multiplies scalar and vector coordinate wise. </p>
-
-</div>
-</div>
-<a id="acb21a2b6c91aca228a3f2aca9617b629"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb21a2b6c91aca228a3f2aca9617b629">&#9670;&nbsp;</a></span>operator+()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;char&gt; Symmetric_Polynomials::operator+ </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; char &gt; &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; char &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Adds two vectors coordinate wise. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_acb21a2b6c91aca228a3f2aca9617b629_cgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_acb21a2b6c91aca228a3f2aca9617b629_cgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_acb21a2b6c91aca228a3f2aca9617b629_cgraph" id="namespaceSymmetric__Polynomials_acb21a2b6c91aca228a3f2aca9617b629_cgraph">
-<area shape="rect" title="Adds two vectors coordinate wise." alt="" coords="5,5,185,47"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a2a2edeb8ae1f843ee81da0bc91f0dbff" title="Returns a[0]+...+a[end]." alt="" coords="233,13,449,39"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a8c12691419fbed641e806ad4d6acbcd1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c12691419fbed641e806ad4d6acbcd1">&#9670;&nbsp;</a></span>operator-()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;char&gt; Symmetric_Polynomials::operator- </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; char &gt; &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; char &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Subtract a vector from another coordinate wise. </p>
-
-</div>
-</div>
-<a id="a58c3ea2d58a1501fc02442da2ae837a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58c3ea2d58a1501fc02442da2ae837a4">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename scalar_t &gt; </div>
+template&lt;typename scalar_t , typename exponent_t , bool t, bool w&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">std::ostream&amp; Symmetric_Polynomials::operator&lt;&lt; </td>
@@ -1176,132 +302,7 @@ template&lt;typename scalar_t &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="structSymmetric__Polynomials_1_1decomposition__elementary__symmetric.html">decomposition_elementary_symmetric</a>&lt; scalar_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>a</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Prints decomposition into elementary symmetric polynomials. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_a58c3ea2d58a1501fc02442da2ae837a4_cgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_a58c3ea2d58a1501fc02442da2ae837a4_cgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_a58c3ea2d58a1501fc02442da2ae837a4_cgraph" id="namespaceSymmetric__Polynomials_a58c3ea2d58a1501fc02442da2ae837a4_cgraph">
-<area shape="rect" title="Prints decomposition into elementary symmetric polynomials." alt="" coords="5,13,185,54"/>
-<area shape="rect" href="structSymmetric__Polynomials_1_1decomposition__elementary__symmetric.html#a64708d98e4dcf8644562aa5cd115d650" title="Print a polynomial on elementary symmetric polynomials." alt="" coords="233,5,441,61"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1polynomial.html#a282b9660df877b4a5ed1ec57a7714634" title="Print polynomial using given variable names." alt="" coords="489,13,669,54"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a883bc8a69d911cdc3692dff4297d17e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a883bc8a69d911cdc3692dff4297d17e2">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename scalar_t &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream&amp; Symmetric_Polynomials::operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>os</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structSymmetric__Polynomials_1_1decomposition__half__idempotent.html">decomposition_half_idempotent</a>&lt; scalar_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>dec</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Prints polynomial. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_a883bc8a69d911cdc3692dff4297d17e2_cgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_a883bc8a69d911cdc3692dff4297d17e2_cgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_a883bc8a69d911cdc3692dff4297d17e2_cgraph" id="namespaceSymmetric__Polynomials_a883bc8a69d911cdc3692dff4297d17e2_cgraph">
-<area shape="rect" title="Prints polynomial." alt="" coords="5,13,185,54"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1half__idempotent__generators.html#a1bcf78e321dbff9f8699ec7ef3017ae5" title="Print a polynomial on the generators Idem, Chern and TwistedChern." alt="" coords="233,5,448,61"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1polynomial.html#a282b9660df877b4a5ed1ec57a7714634" title="Print polynomial using given variable names." alt="" coords="496,13,676,54"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a731806de07a7498e372e3a3233a974af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a731806de07a7498e372e3a3233a974af">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[3/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream&amp; Symmetric_Polynomials::operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>os</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>a</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Prints monomial. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_a731806de07a7498e372e3a3233a974af_cgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_a731806de07a7498e372e3a3233a974af_cgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_a731806de07a7498e372e3a3233a974af_cgraph" id="namespaceSymmetric__Polynomials_a731806de07a7498e372e3a3233a974af_cgraph">
-<area shape="rect" title="Prints monomial." alt="" coords="5,5,185,47"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1monomial.html#a5eced96b3e7c61174ef864032be3c935" title="Print monomial using given variable names." alt="" coords="233,5,413,47"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="ab73ff5cb5642b3ea602cf4e0370db0a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab73ff5cb5642b3ea602cf4e0370db0a7">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[4/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream&amp; Symmetric_Polynomials::operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>os</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt; scalar_t, exponent_t, t, w &gt; &amp;&#160;</td>
           <td class="paramname"><em>a</em>&#160;</td>
         </tr>
         <tr>
@@ -1313,11 +314,20 @@ template&lt;typename scalar_t , typename rel_t &gt; </div>
 </div><div class="memdoc">
 
 <p>Prints polynomial. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespaceSymmetric__Polynomials_aee540cffbf130eed9641b895453e81c3_cgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_aee540cffbf130eed9641b895453e81c3_cgraph" alt=""/></div>
+<map name="namespaceSymmetric__Polynomials_aee540cffbf130eed9641b895453e81c3_cgraph" id="namespaceSymmetric__Polynomials_aee540cffbf130eed9641b895453e81c3_cgraph">
+<area shape="rect" title="Prints polynomial." alt="" coords="5,5,185,47"/>
+<area shape="rect" href="classSymmetric__Polynomials_1_1Polynomial.html#a0a1fec7e73dd74f61628636a92578bf6" title="Print polynomial." alt="" coords="233,5,413,47"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="ac41ac0cc03bf5ae13fe5e661200ad134"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac41ac0cc03bf5ae13fe5e661200ad134">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[5/5]</span></h2>
+<a id="a1e73be5bd3843fd88ac01b17239aff96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e73be5bd3843fd88ac01b17239aff96">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1331,7 +341,7 @@ template&lt;typename scalar_t , typename rel_t &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="structSymmetric__Polynomials_1_1rational.html">rational</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structSymmetric__Polynomials_1_1Rational.html">Rational</a> &amp;&#160;</td>
           <td class="paramname"><em>a</em>&#160;</td>
         </tr>
         <tr>
@@ -1346,218 +356,34 @@ template&lt;typename scalar_t , typename rel_t &gt; </div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_ac41ac0cc03bf5ae13fe5e661200ad134_cgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_ac41ac0cc03bf5ae13fe5e661200ad134_cgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_ac41ac0cc03bf5ae13fe5e661200ad134_cgraph" id="namespaceSymmetric__Polynomials_ac41ac0cc03bf5ae13fe5e661200ad134_cgraph">
+<div class="center"><img src="namespaceSymmetric__Polynomials_a1e73be5bd3843fd88ac01b17239aff96_cgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_a1e73be5bd3843fd88ac01b17239aff96_cgraph" alt=""/></div>
+<map name="namespaceSymmetric__Polynomials_a1e73be5bd3843fd88ac01b17239aff96_cgraph" id="namespaceSymmetric__Polynomials_a1e73be5bd3843fd88ac01b17239aff96_cgraph">
 <area shape="rect" title="Prints rational number." alt="" coords="5,5,185,47"/>
-<area shape="rect" href="structSymmetric__Polynomials_1_1rational.html#aed998b71dcbfb0c895920b1e08473078" title=" " alt="" coords="233,5,413,47"/>
+<area shape="rect" href="structSymmetric__Polynomials_1_1Rational.html#a3ff4876af58de45e9a8b2b0f42c9f769" title=" " alt="" coords="233,5,413,47"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a675d14e03452c17f67177947b5dfa927"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a675d14e03452c17f67177947b5dfa927">&#9670;&nbsp;</a></span>orbit() <span class="overload">[1/2]</span></h2>
+<a id="a843da471ac0687f5ffa34c497a2929a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a843da471ac0687f5ffa34c497a2929a9">&#9670;&nbsp;</a></span>print_half_idempotent_relations()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t , typename perm_t &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt;scalar_t, rel_t&gt; &gt; Symmetric_Polynomials::orbit </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const perm_t &amp;&#160;</td>
-          <td class="paramname"><em>perms</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Computes the orbit of a monomial under a set of permutations. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_a675d14e03452c17f67177947b5dfa927_icgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_a675d14e03452c17f67177947b5dfa927_icgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_a675d14e03452c17f67177947b5dfa927_icgraph" id="namespaceSymmetric__Polynomials_a675d14e03452c17f67177947b5dfa927_icgraph">
-<area shape="rect" title="Computes the orbit of a monomial under a set of permutations." alt="" coords="233,5,413,47"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#ac9f5d227958f2b51e77cb2fe178ebef6" title="Returns a vector of all monomials in given variables and degree organized in orbits under the symmetr..." alt="" coords="5,5,185,47"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a9352cb1a7f217f13c7038d2f182db347"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9352cb1a7f217f13c7038d2f182db347">&#9670;&nbsp;</a></span>orbit() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t , typename perm_t &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt;scalar_t, rel_t&gt; &gt; Symmetric_Polynomials::orbit </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const perm_t &amp;&#160;</td>
-          <td class="paramname"><em>perms</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>number_of_orbits</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Computes the orbit of a monomial under a set of permutations. The number_of_orbits is provided as an argument to limit memory usage. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_a9352cb1a7f217f13c7038d2f182db347_cgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_a9352cb1a7f217f13c7038d2f182db347_cgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_a9352cb1a7f217f13c7038d2f182db347_cgraph" id="namespaceSymmetric__Polynomials_a9352cb1a7f217f13c7038d2f182db347_cgraph">
-<area shape="rect" title="Computes the orbit of a monomial under a set of permutations. The number_of_orbits is provided as an ..." alt="" coords="5,5,185,47"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#abdbc4a51aab1bb201ebfedcd26896cb4" title="Permutes the variables in a monomial according permutation; returns permuted monomial." alt="" coords="233,5,413,47"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="abdbc4a51aab1bb201ebfedcd26896cb4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abdbc4a51aab1bb201ebfedcd26896cb4">&#9670;&nbsp;</a></span>permute()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt;scalar_t, rel_t&gt; Symmetric_Polynomials::permute </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; char &gt; &amp;&#160;</td>
-          <td class="paramname"><em>perm</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Permutes the variables in a monomial according permutation; returns permuted monomial. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_abdbc4a51aab1bb201ebfedcd26896cb4_icgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_abdbc4a51aab1bb201ebfedcd26896cb4_icgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_abdbc4a51aab1bb201ebfedcd26896cb4_icgraph" id="namespaceSymmetric__Polynomials_abdbc4a51aab1bb201ebfedcd26896cb4_icgraph">
-<area shape="rect" title="Permutes the variables in a monomial according permutation; returns permuted monomial." alt="" coords="233,39,413,80"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a472a68b7c1d92e6a99b6a563222d170e" title="Returns the greatest monomial in an orbit of permutations." alt="" coords="5,5,185,47"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a9352cb1a7f217f13c7038d2f182db347" title="Computes the orbit of a monomial under a set of permutations. The number_of_orbits is provided as an ..." alt="" coords="5,71,185,112"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a1d476a58c571385ffab409a59c683b98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d476a58c571385ffab409a59c683b98">&#9670;&nbsp;</a></span>power()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt;scalar_t, rel_t&gt; Symmetric_Polynomials::power </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>p</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>dontcondense</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Computes a^p for polynomial a and nonnegative integer p. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_a1d476a58c571385ffab409a59c683b98_cgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_a1d476a58c571385ffab409a59c683b98_cgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_a1d476a58c571385ffab409a59c683b98_cgraph" id="namespaceSymmetric__Polynomials_a1d476a58c571385ffab409a59c683b98_cgraph">
-<area shape="rect" title="Computes a^p for polynomial a and nonnegative integer p." alt="" coords="5,39,185,80"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1polynomial.html#a29a3177f37777cd66cbf9b50402a10c6" title="Constructs constant polynomial given coefficient and number of variables." alt="" coords="233,5,413,47"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#aa3071663e4ec8ac6e28de064de66e492" title="Multiplies two polynomials with the ability to disable condensation (not recommended)" alt="" coords="233,71,413,112"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_a1d476a58c571385ffab409a59c683b98_icgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_a1d476a58c571385ffab409a59c683b98_icgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_a1d476a58c571385ffab409a59c683b98_icgraph" id="namespaceSymmetric__Polynomials_a1d476a58c571385ffab409a59c683b98_icgraph">
-<area shape="rect" title="Computes a^p for polynomial a and nonnegative integer p." alt="" coords="724,53,904,94"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1half__idempotent__generators.html#a249b2ebc59f817e258e30904de4f7b89" title="Computes a product of a monomial on our generators Idem, Chern, TwistedChern." alt="" coords="461,5,676,61"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1elementary__symmetric.html#ac01a1ee9fb360c2112e918b295cbe9b8" title="Given vector exponent computes e_1^{exponent_1}*...*e_n^{exponent_n}." alt="" coords="477,85,660,141"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#abc624e6ecd4b5ce3c02f150183362963" title="Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,..." alt="" coords="5,7,185,63"/>
-<area shape="rect" href="structSymmetric__Polynomials_1_1decomposition__half__idempotent.html#ac706fb88d949c91c7945ad29df72b084" title="Verifies that the decomposition is correct (i.e. expanding the generators in the original variables &#160;..." alt="" coords="233,39,413,95"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="abc624e6ecd4b5ce3c02f150183362963"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc624e6ecd4b5ce3c02f150183362963">&#9670;&nbsp;</a></span>print_half_idempotent_relations()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename scalar_t &gt; </div>
+template&lt;typename scalar_t , typename exponent_t &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void Symmetric_Polynomials::print_half_idempotent_relations </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>print</em> = <code>0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1574,27 +400,11 @@ template&lt;typename scalar_t &gt; </div>
 </div><div class="memdoc">
 
 <p>Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i) using Idem, Chern and TwistedChern. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_abc624e6ecd4b5ce3c02f150183362963_cgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_abc624e6ecd4b5ce3c02f150183362963_cgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_abc624e6ecd4b5ce3c02f150183362963_cgraph" id="namespaceSymmetric__Polynomials_abc624e6ecd4b5ce3c02f150183362963_cgraph">
-<area shape="rect" title="Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,..." alt="" coords="5,73,185,129"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1half__idempotent__generators.html#a249b2ebc59f817e258e30904de4f7b89" title="Computes a product of a monomial on our generators Idem, Chern, TwistedChern." alt="" coords="496,41,711,97"/>
-<area shape="rect" href="structSymmetric__Polynomials_1_1decomposition__half__idempotent.html#a97c75c9f4b13ae7b8fa0a1817a6631bd" title="Computes the decomposition (polynomial on the generators Idem, Chern and TwistedChern)" alt="" coords="247,33,434,89"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1half__idempotent__generators.html#a1bcf78e321dbff9f8699ec7ef3017ae5" title="Print a polynomial on the generators Idem, Chern and TwistedChern." alt="" coords="233,193,448,249"/>
-<area shape="rect" href="structSymmetric__Polynomials_1_1decomposition__half__idempotent.html#ac706fb88d949c91c7945ad29df72b084" title="Verifies that the decomposition is correct (i.e. expanding the generators in the original variables &#160;..." alt="" coords="251,113,431,169"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#aa3071663e4ec8ac6e28de064de66e492" title="Multiplies two polynomials with the ability to disable condensation (not recommended)" alt="" coords="987,19,1167,60"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a1d476a58c571385ffab409a59c683b98" title="Computes a^p for polynomial a and nonnegative integer p." alt="" coords="759,77,939,119"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1polynomial.html#a29a3177f37777cd66cbf9b50402a10c6" title="Constructs constant polynomial given coefficient and number of variables." alt="" coords="987,84,1167,125"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1polynomial.html#a282b9660df877b4a5ed1ec57a7714634" title="Print polynomial using given variable names." alt="" coords="513,200,693,241"/>
-</map>
-</div>
 
 </div>
 </div>
 <a id="abc4a90741eac710cd52a41a3ef03b050"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc4a90741eac710cd52a41a3ef03b050">&#9670;&nbsp;</a></span>sum() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abc4a90741eac710cd52a41a3ef03b050">&#9670;&nbsp;</a></span>sum()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1612,93 +422,14 @@ template&lt;typename T , typename S  = T&gt; </div>
 </div><div class="memdoc">
 
 <p>Returns the sum of all entries of a. </p>
-
-</div>
-</div>
-<a id="a2a2edeb8ae1f843ee81da0bc91f0dbff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a2edeb8ae1f843ee81da0bc91f0dbff">&#9670;&nbsp;</a></span>sum() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , typename S  = T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">S Symmetric_Polynomials::sum </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>end</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns a[0]+...+a[end]. </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_a2a2edeb8ae1f843ee81da0bc91f0dbff_icgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_a2a2edeb8ae1f843ee81da0bc91f0dbff_icgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_a2a2edeb8ae1f843ee81da0bc91f0dbff_icgraph" id="namespaceSymmetric__Polynomials_a2a2edeb8ae1f843ee81da0bc91f0dbff_icgraph">
-<area shape="rect" title="Returns a[0]+...+a[end]." alt="" coords="253,137,469,164"/>
-<area shape="rect" href="structSymmetric__Polynomials_1_1norelations.html#a5b827c9a529b4e868f586b0f9fd27331" title="The degree of a monomial with given exponent." alt="" coords="15,5,195,61"/>
-<area shape="rect" href="structSymmetric__Polynomials_1_1halfidempotent.html#a397a14eeed9d8a7c9673daa79ea6309e" title="The degree of a monomial with given exponent." alt="" coords="8,85,203,141"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#acb21a2b6c91aca228a3f2aca9617b629" title="Adds two vectors coordinate wise." alt="" coords="15,166,195,207"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1polynomial.html#aa907a0fb17c89025757bb89237adeaab" title="Adds two polynomials." alt="" coords="5,231,205,302"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="aaec53907a3a9bc0c57745f1775c6fcb9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaec53907a3a9bc0c57745f1775c6fcb9">&#9670;&nbsp;</a></span>vector_interpolate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;std::vector&lt;char&gt; &gt; Symmetric_Polynomials::vector_interpolate </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; char &gt; &amp;&#160;</td>
-          <td class="paramname"><em>min</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; char &gt; &amp;&#160;</td>
-          <td class="paramname"><em>max</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::function&lt; char(const std::vector&lt; char &gt; &amp;)&gt; &amp;&#160;</td>
-          <td class="paramname"><em>policy</em> = <code><a class="el" href="namespaceSymmetric__Polynomials_1_1policy.html#ac9a171c5b949f5d236b4502d73f6d2f9">policy::always_true</a>&lt;std::vector&lt;char&gt;&gt;</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns all vectors interpolating between min, max and satisfying a given policy. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_aaec53907a3a9bc0c57745f1775c6fcb9_cgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_aaec53907a3a9bc0c57745f1775c6fcb9_cgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_aaec53907a3a9bc0c57745f1775c6fcb9_cgraph" id="namespaceSymmetric__Polynomials_aaec53907a3a9bc0c57745f1775c6fcb9_cgraph">
-<area shape="rect" title="Returns all vectors interpolating between min, max and satisfying a given policy." alt="" coords="5,13,185,54"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1vector__interpolate__generator.html#a1d15d2426618c2237bbecdf408b358ab" title="Returns upper bound on the amount of generated elements." alt="" coords="233,5,413,61"/>
+<div class="center"><img src="namespaceSymmetric__Polynomials_abc4a90741eac710cd52a41a3ef03b050_icgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_abc4a90741eac710cd52a41a3ef03b050_icgraph" alt=""/></div>
+<map name="namespaceSymmetric__Polynomials_abc4a90741eac710cd52a41a3ef03b050_icgraph" id="namespaceSymmetric__Polynomials_abc4a90741eac710cd52a41a3ef03b050_icgraph">
+<area shape="rect" title="Returns the sum of all entries of a." alt="" coords="257,60,473,87"/>
+<area shape="rect" href="structSymmetric__Polynomials_1_1Standard__Variables.html#a7576d10076cc3405f704a33c0f625f53" title="Degree of exponent." alt="" coords="17,5,197,61"/>
+<area shape="rect" href="classSymmetric__Polynomials_1_1Polynomial.html#a42774d81f179250a22857d139b400692" title="Adds polynomials." alt="" coords="5,85,209,141"/>
 </map>
 </div>
 

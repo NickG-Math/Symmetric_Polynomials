@@ -32,16 +32,14 @@ var NAVTREE =
       [ "Documentation", "index.html#doc", null ]
     ] ],
     [ "The Math", "math.html", [
-      [ "Symmetric polynomials with 'half idempotent' relations", "math.html#symr", null ],
-      [ "Symmetric polynomials with other relations", "math.html#symrr", null ]
+      [ "Symmetric polynomials with 'half idempotent' relations", "math.html#symr", null ]
     ] ],
     [ "How to Use", "use.html", [
       [ "Quick Demonstration", "use.html#demo", null ],
       [ "Code examples", "use.html#exa", [
         [ "Symmetric polynomials", "math.html#sym", null ],
         [ "Namespaces", "use.html#namesp", null ],
-        [ "Monomials, polynomials and relations", "use.html#mono", null ],
-        [ "Permutations", "use.html#perm", null ],
+        [ "Polynomials", "use.html#mono", null ],
         [ "Half idempotent relations", "use.html#halfidem", null ]
       ] ]
     ] ],

@@ -1,8 +1,6 @@
 <map id="source/Polynomials.h" name="source/Polynomials.h">
-<area shape="rect" id="node1" title="Contains the classes of monomials and polynomials in multiple variables with relations." alt="" coords="20,5,181,32"/>
-<area shape="rect" id="node2" href="$Relations_8h.html" title="Contains two classes of relations on polynomial variables: no relations, and when half the variables ..." alt="" coords="29,80,172,107"/>
-<area shape="rect" id="node3" href="$Generators_8h.html" title="Contains generators of all monomials with desired degree and satisfying a desired policy." alt="" coords="24,155,177,181"/>
-<area shape="rect" id="node4" href="$Permutations_8h.html" title="Contains methods for producing permutations, orbits of monomials under symmetric group action,..." alt="" coords="17,229,185,256"/>
-<area shape="rect" id="node5" href="$Half__Idempotent_8h.html" title="If $$R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$$, the goal is to produce algebra generators fo..." alt="" coords="5,304,196,331"/>
-<area shape="rect" id="node6" href="$Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="33,379,168,405"/>
+<area shape="rect" id="node1" title="Contains the class of polynomials in multiple variables." alt="" coords="128,5,289,32"/>
+<area shape="rect" id="node2" href="$Half__Idempotent_8h.html" title="Contains the methods and classes for solving the following problem: If $$R=\mathbb Q[x_1,..." alt="" coords="5,80,196,107"/>
+<area shape="rect" id="node4" href="$Symmetric__Basis_8h.html" title="Contains methods for writing symmetric polynomials (with no relations) in terms of the elementary sym..." alt="" coords="221,80,415,107"/>
+<area shape="rect" id="node3" href="$Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="33,155,168,181"/>
 </map>

@@ -23,16 +23,14 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=223pt]{General_8h__dep__incl}
+\includegraphics[width=350pt]{General_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1hasher}{Symmetric\+\_\+\+Polynomials\+::hasher$<$ T $>$}}
-\begin{DoxyCompactList}\small\item\em Hashes all vectors between two vectors min and max into a long integer. \end{DoxyCompactList}\item 
-struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{Symmetric\+\_\+\+Polynomials\+::rational}}
-\begin{DoxyCompactList}\small\item\em Class of rational numbers. Standard implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1Rational}{Symmetric\+\_\+\+Polynomials\+::\+Rational}}
+\begin{DoxyCompactList}\small\item\em Class of rational numbers. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -41,25 +39,11 @@ struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1rational}{Symmetric\+\_\
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename Iterator $>$ }\\void \mbox{\hyperlink{namespaceSymmetric__Polynomials_a19968cb25bf5b9b023bcca196145dec3}{Symmetric\+\_\+\+Polynomials\+::apply\+\_\+permutation}} (std\+::vector$<$ char $>$ \&target, Iterator begin, const std\+::vector$<$ char $>$ \&perm)
-\begin{DoxyCompactList}\small\item\em Applies permutation perm on the target from starting point begin. \end{DoxyCompactList}\item 
-std\+::vector$<$ char $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a37ac61439f89641faa57cb3604faf114}{Symmetric\+\_\+\+Polynomials\+::apply\+\_\+permutation\+\_\+pieces}} (const std\+::vector$<$ char $>$ \&v, int pieces, const std\+::vector$<$ char $>$ \&perm)
-\begin{DoxyCompactList}\small\item\em Breaks vector v into given number of pieces and applies given permutation on each one; then joins the pieces and returns the vector. \end{DoxyCompactList}\item 
-std\+::vector$<$ char $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a27efdd26eaaeafdf5a8de46a3ab9a194}{Symmetric\+\_\+\+Polynomials\+::apply\+\_\+permutation}} (const std\+::vector$<$ char $>$ \&v, const std\+::vector$<$ char $>$ \&perm)
-\begin{DoxyCompactList}\small\item\em Applies permutation perm on the vector v. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T , typename S  = T$>$ }\\S \mbox{\hyperlink{namespaceSymmetric__Polynomials_a2a2edeb8ae1f843ee81da0bc91f0dbff}{Symmetric\+\_\+\+Polynomials\+::sum}} (const std\+::vector$<$ T $>$ \&a, int end)
-\begin{DoxyCompactList}\small\item\em Returns a\mbox{[}0\mbox{]}+...+a\mbox{[}end\mbox{]}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename S $>$ }\\int \mbox{\hyperlink{namespaceSymmetric__Polynomials_a17c6bea90d7e164a084903de6086603d}{Symmetric\+\_\+\+Polynomials\+::general\+\_\+compute\+\_\+degree}} (const T \&exponent, const S \&dimensions)
+\begin{DoxyCompactList}\small\item\em Degree computation given exponent and dimensions (grading) \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T , typename S  = T$>$ }\\S \mbox{\hyperlink{namespaceSymmetric__Polynomials_abc4a90741eac710cd52a41a3ef03b050}{Symmetric\+\_\+\+Polynomials\+::sum}} (const std\+::vector$<$ T $>$ \&a)
 \begin{DoxyCompactList}\small\item\em Returns the sum of all entries of a. \end{DoxyCompactList}\item 
-std\+::vector$<$ char $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_acb21a2b6c91aca228a3f2aca9617b629}{Symmetric\+\_\+\+Polynomials\+::operator+}} (const std\+::vector$<$ char $>$ \&a, const std\+::vector$<$ char $>$ \&b)
-\begin{DoxyCompactList}\small\item\em Adds two vectors coordinate wise. \end{DoxyCompactList}\item 
-std\+::vector$<$ char $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a8c12691419fbed641e806ad4d6acbcd1}{Symmetric\+\_\+\+Polynomials\+::operator-\/}} (const std\+::vector$<$ char $>$ \&a, const std\+::vector$<$ char $>$ \&b)
-\begin{DoxyCompactList}\small\item\em Subtract a vector from another coordinate wise. \end{DoxyCompactList}\item 
-std\+::vector$<$ char $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a8de87fe94948ca6193fa761c5a2cc6f6}{Symmetric\+\_\+\+Polynomials\+::operator$\ast$}} (int a, const std\+::vector$<$ char $>$ \&b)
-\begin{DoxyCompactList}\small\item\em Multiplies scalar and vector coordinate wise. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a1b5821494b7fd160206add93d4d73a42}{Symmetric\+\_\+\+Polynomials\+::join}} (const std\+::vector$<$ T $>$ \&a, const std\+::vector$<$ T $>$ \&b)
-\begin{DoxyCompactList}\small\item\em Joins two vectors a,b into a new vector with entries a\mbox{[}0\mbox{]},...,a\mbox{[}a.\+size()-\/1\mbox{]},b\mbox{[}0\mbox{]},...,b\mbox{[}b.\+size()-\/1\mbox{]}. \end{DoxyCompactList}\item 
-std\+::ostream \& \mbox{\hyperlink{namespaceSymmetric__Polynomials_ac41ac0cc03bf5ae13fe5e661200ad134}{Symmetric\+\_\+\+Polynomials\+::operator$<$$<$}} (std\+::ostream \&os, const rational \&a)
+std\+::ostream \& \mbox{\hyperlink{namespaceSymmetric__Polynomials_a1e73be5bd3843fd88ac01b17239aff96}{Symmetric\+\_\+\+Polynomials\+::operator$<$$<$}} (std\+::ostream \&os, const Rational \&a)
 \begin{DoxyCompactList}\small\item\em Prints rational number. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 

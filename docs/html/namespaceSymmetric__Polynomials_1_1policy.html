@@ -90,8 +90,6 @@ $(document).ready(function(){initNavTree('namespaceSymmetric__Polynomials_1_1pol
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Symmetric_Polynomials::policy Namespace Reference</div>  </div>
 </div><!--header-->
@@ -99,91 +97,9 @@ $(document).ready(function(){initNavTree('namespaceSymmetric__Polynomials_1_1pol
 
 <p>The policy our monomials should satisfy. Policy is a char and takes values 0,1,-1. 1 if satisfied, -1 if not satisfied and we can guarantee that all larger vectors also won't satisfy it, and 0 otherwise.  
 <a href="namespaceSymmetric__Polynomials_1_1policy.html#details">More...</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ac9a171c5b949f5d236b4502d73f6d2f9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ac9a171c5b949f5d236b4502d73f6d2f9"><td class="memTemplItemLeft" align="right" valign="top">static char&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials_1_1policy.html#ac9a171c5b949f5d236b4502d73f6d2f9">always_true</a> (const T &amp;)</td></tr>
-<tr class="memdesc:ac9a171c5b949f5d236b4502d73f6d2f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The always true policy.  <a href="namespaceSymmetric__Polynomials_1_1policy.html#ac9a171c5b949f5d236b4502d73f6d2f9">More...</a><br /></td></tr>
-<tr class="separator:ac9a171c5b949f5d236b4502d73f6d2f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40a0271299de2343a3c29a2d0cee4477"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a40a0271299de2343a3c29a2d0cee4477"><td class="memTemplItemLeft" align="right" valign="top">static std::function&lt; char(const std::vector&lt; char &gt; &amp;)&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials_1_1policy.html#a40a0271299de2343a3c29a2d0cee4477">custom</a> (const T &amp;comparator)</td></tr>
-<tr class="memdesc:a40a0271299de2343a3c29a2d0cee4477"><td class="mdescLeft">&#160;</td><td class="mdescRight">The policy made by a given comparactor function.  <a href="namespaceSymmetric__Polynomials_1_1policy.html#a40a0271299de2343a3c29a2d0cee4477">More...</a><br /></td></tr>
-<tr class="separator:a40a0271299de2343a3c29a2d0cee4477"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The policy our monomials should satisfy. Policy is a char and takes values 0,1,-1. 1 if satisfied, -1 if not satisfied and we can guarantee that all larger vectors also won't satisfy it, and 0 otherwise. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="ac9a171c5b949f5d236b4502d73f6d2f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9a171c5b949f5d236b4502d73f6d2f9">&#9670;&nbsp;</a></span>always_true()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static char Symmetric_Polynomials::policy::always_true </td>
-          <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The always true policy. </p>
-
-</div>
-</div>
-<a id="a40a0271299de2343a3c29a2d0cee4477"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40a0271299de2343a3c29a2d0cee4477">&#9670;&nbsp;</a></span>custom()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static std::function&lt;char(const std::vector&lt;char&gt;&amp;)&gt; Symmetric_Polynomials::policy::custom </td>
-          <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>comparator</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The policy made by a given comparactor function. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespaceSymmetric__Polynomials_1_1policy_a40a0271299de2343a3c29a2d0cee4477_icgraph.png" border="0" usemap="#namespaceSymmetric__Polynomials_1_1policy_a40a0271299de2343a3c29a2d0cee4477_icgraph" alt=""/></div>
-<map name="namespaceSymmetric__Polynomials_1_1policy_a40a0271299de2343a3c29a2d0cee4477_icgraph" id="namespaceSymmetric__Polynomials_1_1policy_a40a0271299de2343a3c29a2d0cee4477_icgraph">
-<area shape="rect" title="The policy made by a given comparactor function." alt="" coords="233,5,413,47"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a591a8f1544a9eb3c4c8113d4e55df622" title="Returns the monomial basis in given number of variables and degree." alt="" coords="5,5,185,47"/>
-</map>
-</div>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

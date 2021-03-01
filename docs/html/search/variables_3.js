@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['generated_224',['generated',['../classSymmetric__Polynomials_1_1generating__const__iterator.html#a441729010aae150227f5b747676828b5',1,'Symmetric_Polynomials::generating_const_iterator']]]
+  ['idem_139',['Idem',['../classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#ad57200d57b096b0e27821a95e2824108',1,'Symmetric_Polynomials::Half_Idempotent_Basis']]]
 ];

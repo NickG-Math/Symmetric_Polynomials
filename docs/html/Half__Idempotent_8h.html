@@ -99,30 +99,29 @@ $(document).ready(function(){initNavTree('Half__Idempotent_8h.html',''); initRes
 </div><!--header-->
 <div class="contents">
 
-<p>If $$R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$$, the goal is to produce algebra generators for the fixed points of R under the \(\Sigma_n\) action (permuting the \(x_i,y_i\) separately), give an algorithm for writing a fixed point in terms of the generators and an algorithm for producing the relations of those generators.  
+<p>Contains the methods and classes for solving the following problem: If $$R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$$ produce minimal algebra generators for the fixed points of \(R\) under the \(\Sigma_n\) action (permuting the \(x_i,y_i\) separately), give an algorithm for writing a fixed point in terms of the generators and an algorithm for producing the relations of those generators. <br  />
+  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="Permutations_8h_source.html">Permutations.h</a>&quot;</code><br />
-<code>#include &lt;map&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="Polynomials_8h_source.html">Polynomials.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Generators_8h_source.html">Generators.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Half_Idempotent.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="Half__Idempotent_8h__incl.png" border="0" usemap="#source_2Half__Idempotent_8h" alt=""/></div>
 <map name="source_2Half__Idempotent_8h" id="source_2Half__Idempotent_8h">
-<area shape="rect" title="If $$R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$$, the goal is to produce algebra generators fo..." alt="" coords="321,5,511,32"/>
-<area shape="rect" href="Permutations_8h.html" title="Contains methods for producing permutations, orbits of monomials under symmetric group action,..." alt="" coords="301,80,422,107"/>
-<area shape="rect" title=" " alt="" coords="447,80,497,107"/>
-<area shape="rect" href="Generators_8h.html" title="Contains generators of all monomials with desired degree and satisfying a desired policy." alt="" coords="308,155,415,181"/>
-<area shape="rect" href="Relations_8h.html" title="Contains two classes of relations on polynomial variables: no relations, and when half the variables ..." alt="" coords="314,229,409,256"/>
-<area shape="rect" href="Polynomials_8h.html" title="Contains the classes of monomials and polynomials in multiple variables with relations." alt="" coords="304,304,419,331"/>
-<area shape="rect" href="General_8h.html" title="Contains general operations on vectors (eg hashing, adding), the class of rational numbers,..." alt="" coords="264,379,349,405"/>
-<area shape="rect" title=" " alt="" coords="374,379,461,405"/>
-<area shape="rect" title=" " alt="" coords="5,453,85,480"/>
-<area shape="rect" title=" " alt="" coords="110,453,173,480"/>
-<area shape="rect" title=" " alt="" coords="197,453,253,480"/>
-<area shape="rect" title=" " alt="" coords="277,453,336,480"/>
-<area shape="rect" title=" " alt="" coords="360,453,435,480"/>
-<area shape="rect" title=" " alt="" coords="459,453,533,480"/>
-<area shape="rect" title=" " alt="" coords="557,453,643,480"/>
+<area shape="rect" title="Contains the methods and classes for solving the following problem: If $$R=\mathbb Q[x_1,..." alt="" coords="278,5,469,32"/>
+<area shape="rect" href="Polynomials_8h.html" title="Contains the class of polynomials in multiple variables." alt="" coords="384,80,499,107"/>
+<area shape="rect" href="Generators_8h.html" title="Contains classes for generating permutations, combinations and factory for such classes." alt="" coords="253,80,360,107"/>
+<area shape="rect" title=" " alt="" coords="374,155,461,181"/>
+<area shape="rect" title=" " alt="" coords="485,155,536,181"/>
+<area shape="rect" href="General_8h.html" title="Contains general operations on vectors (eg hashing, adding), the class of rational numbers,..." alt="" coords="264,155,349,181"/>
+<area shape="rect" title=" " alt="" coords="5,229,85,256"/>
+<area shape="rect" title=" " alt="" coords="110,229,173,256"/>
+<area shape="rect" title=" " alt="" coords="197,229,253,256"/>
+<area shape="rect" title=" " alt="" coords="277,229,336,256"/>
+<area shape="rect" title=" " alt="" coords="360,229,435,256"/>
+<area shape="rect" title=" " alt="" coords="459,229,533,256"/>
+<area shape="rect" title=" " alt="" coords="557,229,643,256"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -130,7 +129,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="Half__Idempotent_8h__dep__incl.png" border="0" usemap="#source_2Half__Idempotent_8hdep" alt=""/></div>
 <map name="source_2Half__Idempotent_8hdep" id="source_2Half__Idempotent_8hdep">
-<area shape="rect" title="If $$R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$$, the goal is to produce algebra generators fo..." alt="" coords="5,5,196,32"/>
+<area shape="rect" title="Contains the methods and classes for solving the following problem: If $$R=\mathbb Q[x_1,..." alt="" coords="5,5,196,32"/>
 <area shape="rect" href="Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="33,80,168,107"/>
 </map>
 </div>
@@ -139,11 +138,14 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1half__idempotent__generators.html">Symmetric_Polynomials::half_idempotent_generators&lt; scalar_t &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class containing the generators for the fixed points of $$R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$$ under the \(\Sigma_n\) permutation action.  <a href="classSymmetric__Polynomials_1_1half__idempotent__generators.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Symmetric_Polynomials::Half_Idempotent_Variables&lt; T, N &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for variables \(x_1,...,x_n,y_1,...,y_n\) where \(y_i^2=y_i\).  <a href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1decomposition__half__idempotent.html">Symmetric_Polynomials::decomposition_half_idempotent&lt; scalar_t &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for writing every element in the fixed points of $$R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$$ as a polynomial on the generators Idem, Chern and TwistedChern (a "decomposition")  <a href="structSymmetric__Polynomials_1_1decomposition__half__idempotent.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables_3_01T_00-1_01_4.html">Symmetric_Polynomials::Half_Idempotent_Variables&lt; T,-1 &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class specifying variables \(x_1,...,x_n,y_1,...,y_n\) where \(y_i^2=y_i\).  <a href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables_3_01T_00-1_01_4.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html">Symmetric_Polynomials::Half_Idempotent_Basis&lt; scalar_t, exponent_t &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for half-idempotent symmetric polynomials, allowing transformation from \(x_i,y_i\) variables to \(\alpha,c_i,\gamma_{s,i}\) variables and vice-versa.  <a href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -154,17 +156,14 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a883bc8a69d911cdc3692dff4297d17e2"><td class="memTemplParams" colspan="2">template&lt;typename scalar_t &gt; </td></tr>
-<tr class="memitem:a883bc8a69d911cdc3692dff4297d17e2"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a883bc8a69d911cdc3692dff4297d17e2">Symmetric_Polynomials::operator&lt;&lt;</a> (std::ostream &amp;os, const decomposition_half_idempotent&lt; scalar_t &gt; &amp;dec)</td></tr>
-<tr class="memdesc:a883bc8a69d911cdc3692dff4297d17e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints polynomial.  <a href="namespaceSymmetric__Polynomials.html#a883bc8a69d911cdc3692dff4297d17e2">More...</a><br /></td></tr>
-<tr class="separator:a883bc8a69d911cdc3692dff4297d17e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc624e6ecd4b5ce3c02f150183362963"><td class="memTemplParams" colspan="2">template&lt;typename scalar_t &gt; </td></tr>
-<tr class="memitem:abc624e6ecd4b5ce3c02f150183362963"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#abc624e6ecd4b5ce3c02f150183362963">Symmetric_Polynomials::print_half_idempotent_relations</a> (int n, bool verify=0)</td></tr>
-<tr class="memdesc:abc624e6ecd4b5ce3c02f150183362963"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i) using Idem, Chern and TwistedChern.  <a href="namespaceSymmetric__Polynomials.html#abc624e6ecd4b5ce3c02f150183362963">More...</a><br /></td></tr>
-<tr class="separator:abc624e6ecd4b5ce3c02f150183362963"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a843da471ac0687f5ffa34c497a2929a9"><td class="memTemplParams" colspan="2">template&lt;typename scalar_t , typename exponent_t &gt; </td></tr>
+<tr class="memitem:a843da471ac0687f5ffa34c497a2929a9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a843da471ac0687f5ffa34c497a2929a9">Symmetric_Polynomials::print_half_idempotent_relations</a> (int n, bool print=0, bool verify=0)</td></tr>
+<tr class="memdesc:a843da471ac0687f5ffa34c497a2929a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i) using Idem, Chern and TwistedChern.  <a href="namespaceSymmetric__Polynomials.html#a843da471ac0687f5ffa34c497a2929a9">More...</a><br /></td></tr>
+<tr class="separator:a843da471ac0687f5ffa34c497a2929a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>If $$R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$$, the goal is to produce algebra generators for the fixed points of R under the \(\Sigma_n\) action (permuting the \(x_i,y_i\) separately), give an algorithm for writing a fixed point in terms of the generators and an algorithm for producing the relations of those generators. </p>
+<div class="textblock"><p>Contains the methods and classes for solving the following problem: If $$R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$$ produce minimal algebra generators for the fixed points of \(R\) under the \(\Sigma_n\) action (permuting the \(x_i,y_i\) separately), give an algorithm for writing a fixed point in terms of the generators and an algorithm for producing the relations of those generators. <br  />
+ </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
