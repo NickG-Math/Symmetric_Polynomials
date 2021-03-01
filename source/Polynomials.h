@@ -1,342 +1,311 @@
 #pragma once
-#include "General.h"
 #include <functional>
+#include <map>
+#include "General.h"
+
 ///@file
-///@brief Contains the classes of monomials and polynomials in multiple variables with relations. 
+///@brief Contains the class of polynomials in multiple variables. 
 
-namespace Symmetric_Polynomials{
-int general_compute_degree(const std::vector<char>& exponent, const std::vector<char>& dimensions) {
-	int degree = 0;
-	for (int i = 0; i < exponent.size(); i++) {
-		degree += exponent[i] * dimensions[i];
-	}
-	return degree;
-}
+namespace Symmetric_Polynomials {
 
-template<typename scalar_t, typename rel_t>
-class polynomial;
+	///Class of Polynomials in multiple variables
+	//
+	///scalar_t is the coefficient type of the polynomial eg int or Rational
+	///
+	///exponent_t is the type of exponents used in the polynomial. Eg standard<T> or half_idempotent<T>. exponent_t should have a "int degree()" function and a "static std::string name(int)" function.
+	///
+	///name_override should be turned to 1 when the names of the variables are provided and the "name" function of exponent_t will not be used. By default 0.
+	///
+	///dimension_override should be turned to 1 when the dimensions of the variables are provided and the "degree" function of exponent_t will not be used. By default 0.
+	template<typename scalar_t, typename exponent_t, bool name_override = 0, bool dimension_override = 0>
+	class Polynomial {
+		std::map<std::pair<int, exponent_t>, scalar_t> data;
+		std::vector<std::string> variable_names; //if exponent_t does not have the appropriate method
+		std::vector<int> dimensions; //if exponent_t does not have the appropriate method
+		int number_of_variables;
+	public:
+		///Default constructor
+		Polynomial() {}
 
-///////////////////////////////////////////////////////////////////////////////////
-///Class of monomials in multiple variables with relations.
-//
-///A monomial \f$a=cx_1^{p_1}x_2^{p_2}....x_n^{p_n}\f$ is defined by its coefficient \f$c\f$ and exponent vector \f$[p_1,...,p_n]\f$.
-///The template scalar_t determines the type of the coefficient \f$c\f$.
-///The template rel_t determines the relations that the variables \f$x_i\f$ satisfy.
-///////////////////////////////////////////////////////////////////////////////////////
-template<typename scalar_t, typename rel_t>
-class monomial {
-	void getdegree() {
-		if (coeff != 0)
-			degree = rel_t::compute_degree(exponent);
-		else
-			degree = 0;
-	}
-public:
-	scalar_t coeff; ///<Coefficient of monomial
-	std::vector<char> exponent; ///<exponent vector
-	int degree; ///<Degree of monomial
-	///Constructs monomial given coefficient and exponent
-	monomial(const scalar_t& coeff, const std::vector<char>& exponent) :
-		coeff(coeff), exponent(exponent) {
-		rel_t::apply_monomial(this);
-		getdegree();
+		///Constructor usuing number of variables
+		Polynomial(int number_of_variables) : number_of_variables(number_of_variables) {}
+
+		///Constructor using variable names and dimensions (name_override=1 and dimension_override=1)
+		Polynomial(const std::vector<std::string>& names, const std::vector<int>& dims) : Polynomial(names.size()) { set_variable_names(names); set_dimensions(dims); }
+
+		///Constructor using variable names (name_override=1)
+		Polynomial(const std::vector<std::string>& names) : Polynomial(names.size()) { set_variable_names(names); }
+
+		///Constructor using variable dimensions (dimension_override=1)
+		Polynomial(const std::vector<int>& dims) : Polynomial(dims.size()) { set_dimensions(dims); }
+
+		///Constructs monomial given exponent and scalar coefficient
+		Polynomial(const exponent_t& exponent, const scalar_t& scalar) : Polynomial(exponent.size()){insert(exponent, scalar);}
+
+		///Constructs monomial given exponent and scalar coefficient and using variable names and dimensions (name_override=1 and dimension_override=1)
+		Polynomial(const exponent_t& exponent, const scalar_t& scalar, const std::vector<std::string>& names, const std::vector<int>& dims) : Polynomial(names, dims){insert(exponent, scalar);}
+
+		///Constructs monomial given exponent and scalar coefficient and using variable names (name_override=1)
+		Polynomial(const exponent_t& exponent, const scalar_t& scalar, const std::vector<std::string>& names) : Polynomial(names){insert(exponent, scalar);}
+
+		///Constructs monomial given exponent and scalar coefficient and using using variable dimensions (dimension_override=1)
+		Polynomial(const exponent_t& exponent, const scalar_t& scalar, const std::vector<int>& dims) : Polynomial(dims) {insert(exponent, scalar);}
+
+		///Returns the numbers of variables of the polynomial
+		int get_number_of_variables() const{return number_of_variables;}
+
+		///Returns degree of polynomial
+		int degree() const {
+			auto last = std::prev(data.end());
+			return last->first.first;
+		}
+
+		///Clears all data of polynomial apart from number of variables
+		void clear() {data.clear();}
+
+		///Inserts monomial given exponent and coefficient
+		void insert(const exponent_t& exponent, scalar_t scalar) {
+			if constexpr (dimension_override)
+				data[std::pair<int, exponent_t>(general_compute_degree(exponent, dimensions), exponent)] = scalar;
+			else
+				data[std::pair<int, exponent_t>(exponent.degree(), exponent)] = scalar;
+		}
+
+
+		///Constant iterator going through the monomials of the polynomial in increasing order
+		class const_iterator {
+		public:
+			///Returns the coefficient of the monomial
+			const scalar_t& coeff() const {
+				return it->second;
+			}
+			///Returns the exponent of the monomial
+			const exponent_t& exponent() const {
+				return (it->first).second;
+			}
+			///Returns the degree of the monomial
+			int degree() const {
+				return (it->first).first;
+			}
+			///Increases iterator
+			const_iterator& operator ++() {
+				++it;
+				return *this;
+			}
+			///Equality of iterators
+			bool operator ==(const_iterator second) const {
+				return (it == second.it);
+			}
+			///Inequality of iterators
+			bool operator !=(const_iterator second) const {
+				return (it != second.it);
+			}
+		private:
+			const_iterator(typename std::map<std::pair<int, exponent_t>, scalar_t>::const_iterator it) : it(it) {}
+			typename std::map<std::pair<int, exponent_t>, scalar_t>::const_iterator it;
+			template<typename, typename, bool, bool>
+			friend class Polynomial;
+		};
+
+		///Starting iterator
+		const_iterator begin() const {
+			return const_iterator(data.begin());
+		}
+		///Ending iterator
+		const_iterator end() const {
+			return const_iterator(data.end());
+		}
+
+		///Returns highest term monomial in a polynomial
+		const_iterator highest_term() const {
+			return std::prev(data.end());
+		}
+
+		///Constructs constant polynomial given coefficient and number of variables
+		static Polynomial<scalar_t, exponent_t> constant(int coeff, int variables) {
+			Polynomial<scalar_t, exponent_t> c(variables);
+			exponent_t v = exponent_t(variables);
+			c.data[std::pair<int, exponent_t>(0, v)] = coeff;
+			return c;
+		}
+
+		///Adds polynomial on the RHS to polynomial on the LHS (in place)
+		Polynomial<scalar_t, exponent_t>& operator+=(const Polynomial<scalar_t, exponent_t>& b) {
+			for (const auto& pair : b.data) {
+				data[pair.first] += pair.second;
+				if (data[pair.first] == 0)
+					data.erase(pair.first);
+			}
+			return *this;
+		}
+
+		///Subtracts polynomial on the RHS from polynomial on the LHS (in place)
+		Polynomial<scalar_t, exponent_t>& operator-=(const Polynomial<scalar_t, exponent_t>& b) {
+			for (const auto& pair : b.data) {
+				data[pair.first] -= pair.second;
+				if (data[pair.first] == 0)
+					data.erase(pair.first);
+			}
+			return *this;
+		}
+
+		///Adds polynomials
+		Polynomial<scalar_t, exponent_t> operator+(const Polynomial<scalar_t, exponent_t>& b) const {
+			Polynomial<scalar_t, exponent_t> sum = *this;
+			sum += b;
+			return sum;
+		}
+
+		///Subtracts polynomials
+		Polynomial<scalar_t, exponent_t> operator-(const Polynomial<scalar_t, exponent_t>& b) const {
+			Polynomial<scalar_t, exponent_t> diff = *this;
+			diff -= b;
+			return diff;
+		}
+
+		///Multiplies polynomials
+		Polynomial<scalar_t, exponent_t> operator* (const Polynomial<scalar_t, exponent_t>& b) const {
+			Polynomial<scalar_t, exponent_t> product(number_of_variables);
+			for (const auto& paira : data) {
+				for (const auto& pairb : b.data) {
+					auto vsum = std::pair(paira.first.first + pairb.first.first, paira.first.second + pairb.first.second);
+					product.data[vsum] += paira.second * pairb.second;
+					if (product.data[vsum] == 0)
+						product.data.erase(vsum);
+				}
+			}
+			return product;
+		}
+
+		///Multiplies polynomial on the LHS with polynomial on the RHS (not in place)
+		Polynomial<scalar_t, exponent_t>& operator*= (const Polynomial<scalar_t, exponent_t>& b) {
+			*this = operator*(b);
+			return *this;
+		}
+
+		///Multiplies polynomial on the LHS with scalar coefficient on the RHS (in place)
+		Polynomial<scalar_t, exponent_t>& operator*= (const scalar_t& coeff) {
+			if (coeff == 0)
+				clear();
+			else if (coeff!=1){
+				for (const auto& paira : data)
+					data[paira.first] *= coeff;
+			}
+			return *this;
+		}
+
+		///Raises polynomial to given power
+		Polynomial<scalar_t, exponent_t> operator^(int p) const {
+			if (p == 0)
+				return constant(1, number_of_variables);
+			if (p == 1)
+				return *this;
+			auto prod = *this;
+			for (int k = 1; k < p; k++)
+				prod *= *this;
+			return prod;
+		}
+
+		///Equality of polynomials
+		bool operator==(const Polynomial<scalar_t, exponent_t>& b) const {
+			return (data == b.data);
+		}
+
+		///Inequality of polynomials
+		bool operator!=(const Polynomial<scalar_t, exponent_t>& b) const {
+			return !(*this == b);
+		}
+
+		///Print polynomial
+		std::string print() const {
+			if constexpr (name_override)
+				return print([=](int i) {return variable_names[i];});
+			else
+				return print(exponent_t::name);
+		}
+
+	private:
+
+		void set_variable_names(const std::vector<std::string>& names) {
+			if constexpr (!name_override)
+				static_assert("The template parameter name_override must be set to 1 to allow custom names");
+			variable_names = names;
+		}
+
+		void set_dimensions(const std::vector<int>& dims) {
+			if constexpr (!dimension_override)
+				static_assert("The template parameter dimension_override must be set to 1 to allow custom dimensions");
+			dimensions = dims;
+		}
+
+
+		///Print monomial using given variable names
+		void print(const scalar_t& coeff, const exponent_t& exponent, std::stringstream& ss, const std::function<std::string(int)>& variable_names) const {
+			bool havestar = 0;
+			if (coeff != 1) {
+				ss << coeff;
+				havestar = 1;
+			}
+			bool completelyzero = 1;
+			for (decltype(exponent.size()) i = 0; i < exponent.size(); i++) {
+				if (exponent[i] != 0) {
+					completelyzero = 0;
+					if (havestar)
+						ss << "*";
+					havestar = 1;
+					if (exponent[i] > 1) {
+						ss << variable_names(i) << "^" << (int)exponent[i];
+					}
+					else if (exponent[i] == 1)
+						ss << variable_names(i);
+				}
+			}
+			if (completelyzero && coeff == 1)
+				ss << "1";
+		}
+
+
+		///Print polynomial using given variable names
+		std::string print(const std::function<std::string(int)>& variable_name_fun) const {
+			std::stringstream ss;
+			auto it = data.begin();
+			print(it->second, it->first.second, ss, variable_name_fun);
+			for (it++; it != data.end(); it++) {
+				ss << " + ";
+				print(it->second, it->first.second, ss, variable_name_fun);
+			}
+			return ss.str();
+		}
+	
 	};
 
-	///Default constructor
-	monomial() {};
-
-
-	///Constructs constant monomial with given coefficient and number of variables
-	static monomial<scalar_t, rel_t> constant(int coeff, int variables) {
-		return monomial<scalar_t, rel_t>(coeff, std::vector<char>(variables)); //monomial 1
+	///Prints polynomial
+	template<typename scalar_t, typename exponent_t, bool t, bool w>
+	std::ostream& operator<<(std::ostream& os, const Polynomial<scalar_t, exponent_t, t, w>& a) {
+		os << a.print();
+		return os;
 	}
 
-	///Returns product of monomials
-	monomial<scalar_t, rel_t> operator *(const monomial<scalar_t, rel_t>& b) const {
-		return monomial<scalar_t, rel_t>(this->coeff * b.coeff, this->exponent + b.exponent);
-	}
-
-	///Returns -b for monomial b
-	monomial<scalar_t, rel_t> operator -() const {
-		auto b = *this;
-		b.coeff = -b.coeff;
-		return b;
-	}
-
-	///Division of monomials. No checks are made to ensure that the resulting exponent are nonnegative
-	monomial<scalar_t, rel_t> operator /(const monomial<scalar_t, rel_t>& b) const {
-		return monomial<scalar_t, rel_t>(this->coeff / b.coeff, this->exponent - b.exponent);
-	}
-
-	///Standard equality of monomials
-	bool operator==(const monomial<scalar_t, rel_t>& b) const {
-		return (this->coeff == b.coeff && this->exponent == b.exponent);
-	}
-
-	///a<b iff degree(a)<degree(b) or they have the same degree and for the exponent vectors, exponent(a)<exponent(b)
-	bool operator<(const monomial<scalar_t, rel_t>& b) const {
-		return (this->degree < b.degree) || (this->degree == b.degree && this->exponent < b.exponent);
-	}
-
-	///Print monomial using given variable names
-	std::string print(const std::function<std::string(int)>& variable_names) const {
-		std::stringstream ss;
-		if (coeff != 1)
-			ss << coeff << "*";
-		for (int i = 0; i < exponent.size(); i++) {
-			if (exponent[i]>1)
-				ss << variable_names(i) << "^" << (int)exponent[i] << "*";
-			else if (exponent[i]==1)
-				ss << variable_names(i) << "*";
+	///The standard variables \f$x_i\f$ in a polynomial, with \f$|x_i|=1\f$ and no relations.
+	template<typename T>
+	struct Standard_Variables : public std::vector<T> {
+		using std::vector<T>::vector;
+		///Degree of exponent
+		int degree() const {
+			return sum(*this);
 		}
-		auto str = ss.str();
-		if (str.back() == '*')
-			str.pop_back();
-		return str;
-	}
-
-	///Print monomial using given variable names
-	std::string print(const std::vector<std::string>& variable_names) const {
-		std::function<std::string(int)> f = [=](int i) {return variable_names[i];};
-		return print(f);
-	}
-
-	///Print monomial using default variable names x_1,...,x_n
-	std::string print() const {
-		std::function<std::string(int)> f = [](int i) {return "x_" + std::to_string(i + 1);};
-		return print(f);
-	}
-
-	template<typename s_scalar_t, typename s_rel_t>
-	friend class polynomial;
-
-};
-
-///Product of scalar and monomial
-template<typename scalar_t, typename rel_t>
-inline monomial<scalar_t, rel_t> operator *(const scalar_t& a, const monomial<scalar_t, rel_t>& b) {
-	return monomial<scalar_t, rel_t>(a * b.coeff, b.exponent);
-}
-
-///Comparator for monomials based on <
-template<typename scalar_t, typename rel_t>
-struct monomial_compare
-{
-	inline bool operator() (const monomial<scalar_t, rel_t>& a, const monomial<scalar_t, rel_t>& b) {
-		return (a < b);
-	}
-};
-
-///Prints monomial
-template<typename scalar_t, typename rel_t>
-std::ostream& operator<<(std::ostream& os, const monomial<scalar_t, rel_t>& a) {
-	os << a.print();
-	return os;
-}
-
-///Permutes the variables in a monomial according permutation; returns permuted monomial
-template<typename scalar_t, typename rel_t>
-monomial<scalar_t, rel_t> permute(const monomial<scalar_t, rel_t>& a, const std::vector<char>& perm) {
-	return monomial<scalar_t, rel_t>(a.coeff, rel_t::permute(a.exponent, perm));
-}
-
-/////////////////////////////////////////////////////////////////////////////
-///Class of polynomials in multiple variables with relations.
-//
-/// A polynomial is just a vector of monomials, ordered in increasing degree
-//
-///The template scalar_t determines the type of the coefficients.
-///The template rel_t determines the relations that the variables x_i satisfy.
-//////////////////////////////////////////////////////////////////////////////////////
-template<typename scalar_t, typename rel_t>
-class polynomial {
-	void reorder() {
-		std::sort(monos.begin(), monos.end(), monomial_compare<scalar_t, rel_t>());
-	}
-
-public:
-	///The vector of monomials, ordered in increasing degree
-	std::vector<monomial<scalar_t, rel_t>> monos; 
-
-	///Incorporates all monomials with same exponent vector into a single monomial by adding coefficients, condensing the polynomial
-	void condense() {
-		int i = 0;
-		while (i < monos.size()) {
-			if (monos[i].coeff == 0) //erase 0 monomial and dont change i
-				monos.erase(monos.begin() + i);
-			else if (i != monos.size() - 1 && monos[i].degree == monos[i + 1].degree && monos[i].exponent == monos[i + 1].exponent) {
-				if (monos[i].coeff + monos[i + 1].coeff == 0) { //they cancel out so erase both and dont change i
-					monos.erase(monos.begin() + i, monos.begin() + i + 2);
-				}
-				else {
-					monos[i].coeff += monos[i + 1].coeff; //incorporate to the first and erase the second and dont change i
-					monos.erase(monos.begin() + i + 1);
-				}
-			}
-			else { //nothing erased, change i
-				i++;
-			}
+		///Name of variable
+		static std::string name(int i) {
+			return "x_" + std::to_string(i + 1);
 		}
-	}
-
-	///Returns highest term monomial in a polynomial
-	monomial<scalar_t, rel_t> highest_term() const {
-		return monos.back();
-	}
-
-
-	///Constructs a polynomial given an iterator of monomials, applying relations to variables and reordering as needed. Condensation is performed by default but can be disabled at the user's risk
-	template<typename iterator>
-	polynomial(iterator begin, iterator end, bool dontcondense = 0) : monos(begin, end) {
-		rel_t::apply_polynomial(this);
-		reorder();
-		if (!dontcondense)
-			condense();
-	}
-
-	///Constructs a polynomial given a vector of monomials, applying relations to variables and reordering as needed. Condensation is performed by default but can be disabled at the user's risk
-	polynomial(const std::vector<monomial<scalar_t, rel_t>>& monos, bool dontcondense = 0) : polynomial(monos.begin(),monos.end()) {}
-
-	///Constructs a polynomial from a single monomial
-	polynomial(const monomial<scalar_t, rel_t>& mono) : polynomial<scalar_t, rel_t>(std::vector<monomial<scalar_t, rel_t>>({ mono })) {}
-
-	///Constructs constant polynomial given coefficient and number of variables
-	static polynomial<scalar_t, rel_t> constant(int coeff, int variables) {
-		return polynomial<scalar_t, rel_t>(monomial<scalar_t, rel_t>::constant(coeff, variables)); //polynomial 1
-	}
+		///Addition of exponents
+		Standard_Variables<T> operator+ (const Standard_Variables<T>& other) const {
+			Standard_Variables<T> v(*this);
+			for (int i = 0; i < this->size(); i++)
+				v[i] += other[i];
+			return v;
+		}
+	};
 
 
-	///Default Constructor
-	polynomial() {}
-
-
-	///Adds two polynomials
-	polynomial<scalar_t, rel_t> operator+(const polynomial<scalar_t, rel_t>& b) const {
-		auto sum = join(monos, b.monos);
-		return polynomial<scalar_t, rel_t>(sum);
-	}
-
-	///Returns -b for polynomial b
-	polynomial<scalar_t, rel_t> operator-() const {
-		auto b = *this;
-		for (auto& i : b.monos)
-			i.coeff = -i.coeff;
-		return b;
-	}
-
-	///Subtracts polynomial from polynomial
-	polynomial<scalar_t, rel_t> operator-(const polynomial<scalar_t, rel_t>& b) const {
-		return *this + (-b);
-	}
-
-	///Standard equality of polynomials
-	bool operator==(const polynomial<scalar_t, rel_t>& b) const {
-		return (monos == b.monos);
-	}
-
-	///Standard inequality of polynomials
-	bool operator!=(const polynomial<scalar_t, rel_t>& b) const {
-		return !(*this == b);
-	}
-
-
-	///Print polynomial using given variable names
-	std::string print(const std::function<std::string(int)>& variable_names) const {
-		std::stringstream ss;
-		for (int i = 0; i < monos.size(); i++)
-			if (i != 0)
-				ss << " + " << monos[i].print(variable_names);
-			else
-				ss << monos[i].print(variable_names);
-		return ss.str();
-	}
-
-	///Print monomial using given variable names
-	std::string print(const std::vector<std::string>& variable_names) const {
-		std::function<std::string(int)> f = [=](int i) {return variable_names[i];};
-		return print(f);
-	}
-
-	///Print polynomial using default variable names x_1,...,x_n
-	std::string print() const {
-		std::stringstream ss;
-		for (int i = 0; i < monos.size(); i++)
-			if (i != 0)
-				ss << " + " << monos[i].print();
-			else
-				ss << monos[i].print();
-		return ss.str();
-	}
-};
-
-///Multiplies two polynomials with the ability to disable condensation (not recommended)
-template<typename scalar_t, typename rel_t>
-polynomial<scalar_t, rel_t> multiply(const polynomial<scalar_t, rel_t>& a, const polynomial<scalar_t, rel_t>& b, bool dontcondense = 0) {
-	if (a.monos.empty()) //0 polynomial
-		return a;
-	if (b.monos.empty()) //0 polynomial
-		return b;
-	std::vector<monomial<scalar_t, rel_t>> prodmonos;
-	prodmonos.reserve(a.monos.size() * b.monos.size());
-	for (const auto& i : a.monos)
-		for (const auto& j : b.monos)
-			if (i.coeff != 0 && j.coeff != 0) {
-				if constexpr (rel_t::product_of_monomials_is_monomial)
-					prodmonos.push_back(i * j);
-				else {
-					polynomial<scalar_t, rel_t> ij = i * j;
-					for (const auto& k : ij.monos)
-						prodmonos.push_back(k);
-				}
-			}
-	return polynomial<scalar_t, rel_t>(prodmonos, dontcondense);
-}
-
-///Multiplies scalar and polynomial
-template<typename scalar_t, typename rel_t>
-polynomial<scalar_t, rel_t> operator*(const scalar_t& a, const polynomial<scalar_t, rel_t>& b) {
-	if (a == 0) //0 polynomial
-		return polynomial<scalar_t, rel_t>::constant(0, b.monos[0].exponent.size());
-	if (a == 1)
-		return b;
-	auto ab = b;
-	for (auto& i : ab.monos)
-		i.coeff *= a;
-	return ab;
-}
-
-template<typename scalar_t, typename rel_t>
-inline polynomial<scalar_t, rel_t> operator*(const polynomial<scalar_t, rel_t>& a, const polynomial<scalar_t, rel_t>& b) {
-	return multiply(a, b);
-}
-
-///Returns the product of monomial and polynomial
-template<typename scalar_t, typename rel_t>
-inline polynomial<scalar_t, rel_t> operator*(const monomial<scalar_t, rel_t>& a, const polynomial<scalar_t, rel_t>& b) {
-	return multiply(polynomial<scalar_t, rel_t>(a), b);
-}
-
-///Returns the product of polynomial and monomial
-template<typename scalar_t, typename rel_t>
-inline polynomial<scalar_t, rel_t> operator*(const polynomial<scalar_t, rel_t>& a, const monomial<scalar_t, rel_t>& b) {
-	return multiply(a, polynomial<scalar_t, rel_t>(b));
-}
-
-///Computes a^p for polynomial a and nonnegative integer p
-template<typename scalar_t, typename rel_t>
-polynomial<scalar_t, rel_t> power(const polynomial<scalar_t, rel_t>& a, int p, bool dontcondense = 0) {
-	if (p == 0)
-		return polynomial<scalar_t, rel_t>::constant(1, a.monos[0].exponent.size()); //polynomial 1
-	auto pwr = a;
-	for (int i = 2; i <= p;i++)
-		pwr = multiply(pwr, a, dontcondense);
-	return pwr;
-}
-
-///Prints polynomial
-template<typename scalar_t, typename rel_t>
-std::ostream& operator<<(std::ostream& os, const polynomial<scalar_t, rel_t>& a) {
-	os << a.print();
-	return os;
-}
 }
