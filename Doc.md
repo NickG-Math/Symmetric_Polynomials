@@ -39,7 +39,7 @@ Furthermore, there is a simple algorithm for writing every symmetric polynomial 
 \section symr Symmetric polynomials with 'half idempotent' relations
 
 Let \f$R=\mathbb Z[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)\f$; there is an obvious action on \f$R\f$ by the symmetric group \f$\Sigma_n\f$ permuting the \f$x_i\f$ and \f$y_i\f$ variables separately. A minimal description of the \f$R^{\Sigma_n}\f$ is now more difficult:
-$$R^{\Sigma_n}=\frac{\mathbb Z[\gamma_{s,i}]}{\gamma_{s,i}\gamma_{t,j}={{\min(i+j+s,n)-t}\choose j}\gamma_{t,0}\gamma_{s,\min(i+j,n)}+\cdots}$$ where the "twisted Chern classes" are:
+$$R^{\Sigma_n}=\frac{\mathbb Z[\gamma_{s,i}]}{\gamma_{s,i}\gamma_{t,j}={\min(i+j+s,n)-t}\choose {j}\gamma_{t,0}\gamma_{s,\min(i+j,n)}+\cdots}$$ where the "twisted Chern classes" are:
 $$\gamma_{s,i}=\sum_{1\le j_1< \cdots< j_s\le n, 
 1\le k_1< \cdots< k_i\le n\\
 j_u\neq k_v}x_{j_1}....x_{j_s}y_{k_1}\cdots y_{k_i}$$
