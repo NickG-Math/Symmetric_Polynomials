@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['twistedchern_142',['TwistedChern',['../classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#aca9b99f1ef5afeed66a80779fc35e0c5',1,'Symmetric_Polynomials::Half_Idempotent_Basis']]]
+  ['second_365',['second',['../structrobin__hood_1_1pair.html#a3703b0d79fb2daa2d39ca48954278326',1,'robin_hood::pair']]]
 ];

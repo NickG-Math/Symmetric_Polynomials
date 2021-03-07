@@ -1,0 +1,6 @@
+<map id="Symmetric_Polynomials::Polynomial::reserve" name="Symmetric_Polynomials::Polynomial::reserve">
+<area shape="rect" id="node1" title="Reserve number of monomials (does nothing for ordered polynomials)" alt="" coords="233,71,413,112"/>
+<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1Polynomial.html#af40405868a00e3a54e32532748fb09f4" title="Multiplies polynomials." alt="" coords="5,5,185,47"/>
+<area shape="rect" id="node3" href="$classSymmetric__Polynomials_1_1Polynomial.html#a63ab1bb1b925b826cae1687854484f81" title="Adds polynomials." alt="" coords="5,71,185,112"/>
+<area shape="rect" id="node4" href="$classSymmetric__Polynomials_1_1Polynomial.html#aedae756a4dcac3e87981a99c0fe7f60b" title="Subtracts polynomials." alt="" coords="5,136,185,177"/>
+</map>

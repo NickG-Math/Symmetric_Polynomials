@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['all_5fcombinations_0',['all_combinations',['../namespaceSymmetric__Polynomials.html#aff3ebeea4f1bcee426cd01c41917f3aa',1,'Symmetric_Polynomials']]],
-  ['all_5fpermutations_1',['all_permutations',['../namespaceSymmetric__Polynomials.html#a9fbacd7a31bb040f9609e6bdc5cbc541',1,'Symmetric_Polynomials']]]
+  ['_5fgenerators_0',['_generators',['../classSymmetric__Polynomials_1_1Polynomial__Basis.html#a9909e4afb2731fa8f66cd2ee5b8cfd5b',1,'Symmetric_Polynomials::Polynomial_Basis']]]
 ];

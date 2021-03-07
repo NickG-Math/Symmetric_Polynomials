@@ -1,6 +1,6 @@
 <map id="source/Polynomials.h" name="source/Polynomials.h">
-<area shape="rect" id="node1" title="Contains the class of polynomials in multiple variables." alt="" coords="128,5,289,32"/>
-<area shape="rect" id="node2" href="$Half__Idempotent_8h.html" title="Contains the methods and classes for solving the following problem: If $$R=\mathbb Q[x_1,..." alt="" coords="5,80,196,107"/>
-<area shape="rect" id="node4" href="$Symmetric__Basis_8h.html" title="Contains methods for writing symmetric polynomials (with no relations) in terms of the elementary sym..." alt="" coords="221,80,415,107"/>
-<area shape="rect" id="node3" href="$Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="33,155,168,181"/>
+<area shape="rect" id="node1" title="Contains the class of polynomials in multiple variables." alt="" coords="22,5,183,32"/>
+<area shape="rect" id="node2" href="$Symmetric__Basis_8h.html" title="Contains methods for writing symmetric polynomials (with no relations) in terms of the elementary sym..." alt="" coords="5,80,200,107"/>
+<area shape="rect" id="node3" href="$Half__Idempotent_8h.html" title="Contains the methods and classes for solving the following problem: If $$R=\mathbb Z[x_1,..." alt="" coords="7,155,198,181"/>
+<area shape="rect" id="node4" href="$Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="35,229,170,256"/>
 </map>

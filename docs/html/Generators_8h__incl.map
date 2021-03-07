@@ -1,12 +1,11 @@
 <map id="source/Generators.h" name="source/Generators.h">
-<area shape="rect" id="node1" title="Contains classes for generating permutations, combinations and factory for such classes." alt="" coords="174,5,327,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="153,80,239,107"/>
-<area shape="rect" id="node3" href="$General_8h.html" title="Contains general operations on vectors (eg hashing, adding), the class of rational numbers,..." alt="" coords="264,80,349,107"/>
+<area shape="rect" id="node1" title="Contains classes for generating permutations, combinations and factory for such classes." alt="" coords="133,5,286,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="111,80,198,107"/>
+<area shape="rect" id="node3" href="$General_8h.html" title="Contains general operations on vectors (eg hashing, adding), the class of rational numbers,..." alt="" coords="223,80,308,107"/>
 <area shape="rect" id="node4" title=" " alt="" coords="5,155,85,181"/>
 <area shape="rect" id="node5" title=" " alt="" coords="110,155,173,181"/>
 <area shape="rect" id="node6" title=" " alt="" coords="197,155,253,181"/>
 <area shape="rect" id="node7" title=" " alt="" coords="277,155,336,181"/>
 <area shape="rect" id="node8" title=" " alt="" coords="360,155,435,181"/>
 <area shape="rect" id="node9" title=" " alt="" coords="459,155,533,181"/>
-<area shape="rect" id="node10" title=" " alt="" coords="557,155,643,181"/>
 </map>

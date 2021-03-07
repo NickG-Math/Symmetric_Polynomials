@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Symmetric Polynomials: Symmetric_Polynomials::Half_Idempotent_Basis&lt; scalar_t, exponent_t &gt; Class Template Reference</title>
+<title>Symmetric Polynomials: Symmetric_Polynomials::Half_Idempotent_Basis&lt; xy_container_t, chern_container_t &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -33,7 +33,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Symmetric Polynomials
-   &#160;<span id="projectnumber">V1</span>
+   &#160;<span id="projectnumber">V3</span>
    </div>
    <div id="projectbrief">A C++ library for symmetric polynomials with relations</div>
   </td>
@@ -92,75 +92,55 @@ $(document).ready(function(){initNavTree('classSymmetric__Polynomials_1_1Half__I
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Symmetric_Polynomials::Half_Idempotent_Basis&lt; scalar_t, exponent_t &gt; Class Template Reference</div>  </div>
+<div class="title">Symmetric_Polynomials::Half_Idempotent_Basis&lt; xy_container_t, chern_container_t &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Class for half-idempotent symmetric polynomials, allowing transformation from \(x_i,y_i\) variables to \(\alpha,c_i,\gamma_{s,i}\) variables and vice-versa.  
+<p>Class for half-idempotent symmetric polynomials, allowing transformation from \(x_i,y_i\) variables to \(\gamma_{s,i}\) variables and vice-versa.  
  <a href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Half__Idempotent_8h_source.html">Half_Idempotent.h</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for Symmetric_Polynomials::Half_Idempotent_Basis&lt; scalar_t, exponent_t &gt;:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSymmetric__Polynomials_1_1Half__Idempotent__Basis__coll__graph.png" border="0" usemap="#Symmetric__Polynomials_1_1Half__Idempotent__Basis_3_01scalar__t_00_01exponent__t_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="Symmetric__Polynomials_1_1Half__Idempotent__Basis_3_01scalar__t_00_01exponent__t_01_4_coll__map" id="Symmetric__Polynomials_1_1Half__Idempotent__Basis_3_01scalar__t_00_01exponent__t_01_4_coll__map">
-<area shape="rect" title="Class for half&#45;idempotent symmetric polynomials, allowing transformation from &#160;variables to &#160;variable..." alt="" coords="711,13,895,69"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1Polynomial.html" title=" " alt="" coords="445,13,625,69"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1Polynomial.html" title="Class of Polynomials in multiple variables." alt="" coords="5,5,231,76"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abb031c4c69c2a0b5a5bc14d52a130af9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#abb031c4c69c2a0b5a5bc14d52a130af9">Half_Idempotent_Basis</a> (int n)</td></tr>
-<tr class="memdesc:abb031c4c69c2a0b5a5bc14d52a130af9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the generators and the relation set.  <a href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#abb031c4c69c2a0b5a5bc14d52a130af9">More...</a><br /></td></tr>
-<tr class="separator:abb031c4c69c2a0b5a5bc14d52a130af9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9897125c664f79acb7e2ceac299347fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt; scalar_t, twistedChern_t, 1, 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#a9897125c664f79acb7e2ceac299347fc">operator()</a> (<a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt; scalar_t, exponent_t &gt; a) const</td></tr>
-<tr class="memdesc:a9897125c664f79acb7e2ceac299347fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform a symmetric polynomial on the \(x_i,y_i\) into a polynomial on \(\alpha,c_i,\gamma_{s,j}\).  <a href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#a9897125c664f79acb7e2ceac299347fc">More...</a><br /></td></tr>
-<tr class="separator:a9897125c664f79acb7e2ceac299347fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abeabe530136369c13c27a9d431440ea4"><td class="memTemplParams" colspan="2">template&lt;bool t, bool w&gt; </td></tr>
-<tr class="memitem:abeabe530136369c13c27a9d431440ea4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt; scalar_t, exponent_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#abeabe530136369c13c27a9d431440ea4">operator()</a> (<a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt; scalar_t, twistedChern_t, t, w &gt; a) const</td></tr>
-<tr class="memdesc:abeabe530136369c13c27a9d431440ea4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform a polynomial on the \(\alpha,c_i,\gamma_{s,j}\) into a symmetric polynomial on the original variables \(x_i,y_i\).  <a href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#abeabe530136369c13c27a9d431440ea4">More...</a><br /></td></tr>
-<tr class="separator:abeabe530136369c13c27a9d431440ea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5317cf38195863327b17aa9edf3888a3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#a5317cf38195863327b17aa9edf3888a3">Half_Idempotent_Basis</a> (int n)</td></tr>
+<tr class="memdesc:a5317cf38195863327b17aa9edf3888a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the generators and the relation set given \(n\) in \(x_1,...,x_n,y_1,...,y_n\). Warning: \(n\) is half(!) the number of variables.  <a href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#a5317cf38195863327b17aa9edf3888a3">More...</a><br /></td></tr>
+<tr class="separator:a5317cf38195863327b17aa9edf3888a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a518b512f97489b7e8d69fd6c8191f2c0"><td class="memItemLeft" align="right" valign="top">const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#a518b512f97489b7e8d69fd6c8191f2c0">relations</a> () const</td></tr>
+<tr class="memdesc:a518b512f97489b7e8d69fd6c8191f2c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns const&amp; of vector containing the Polynomials \(\alpha_s\gamma_{s,i}\) and \(\gamma_{s,i}\gamma_{t,j}\) for \(0&lt;s&lt;=t&lt;=s+i\) and \(i,j&gt;0\) (the LHS of the relations satisfied by the generators)  <a href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#a518b512f97489b7e8d69fd6c8191f2c0">More...</a><br /></td></tr>
+<tr class="separator:a518b512f97489b7e8d69fd6c8191f2c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c89739a10bd31f9a9bde580b47078be"><td class="memItemLeft" align="right" valign="top">const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#a0c89739a10bd31f9a9bde580b47078be">generator</a> (int s, int j) const</td></tr>
+<tr class="memdesc:a0c89739a10bd31f9a9bde580b47078be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns const&amp; of \(\gamma_{s,j}\) as <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html" title="Class of Polynomials in multiple variables.">Polynomial</a> on the \(x_i,y_i\) variables.  <a href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#a0c89739a10bd31f9a9bde580b47078be">More...</a><br /></td></tr>
+<tr class="separator:a0c89739a10bd31f9a9bde580b47078be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:ad0f646175daf74d9b04bd7d5639d8836"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt; scalar_t, twistedChern_t, 1, 1 &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#ad0f646175daf74d9b04bd7d5639d8836">relations</a></td></tr>
-<tr class="memdesc:ad0f646175daf74d9b04bd7d5639d8836"><td class="mdescLeft">&#160;</td><td class="mdescRight">The left hand side of the relations \(\alpha,c_i,\gamma_{s,j}\) satisfy i.e. \(\alpha^{n+1}, \alpha^s\gamma_{s,i}\) and \(\gamma_{s,i}\gamma_{t,j}\) for \(s&lt;=t&lt;=s+i\).  <a href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#ad0f646175daf74d9b04bd7d5639d8836">More...</a><br /></td></tr>
-<tr class="separator:ad0f646175daf74d9b04bd7d5639d8836"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad57200d57b096b0e27821a95e2824108"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt; scalar_t, exponent_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#ad57200d57b096b0e27821a95e2824108">Idem</a></td></tr>
-<tr class="memdesc:ad57200d57b096b0e27821a95e2824108"><td class="mdescLeft">&#160;</td><td class="mdescRight">The generator \(\alpha=y_1+...+y_n\).  <a href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#ad57200d57b096b0e27821a95e2824108">More...</a><br /></td></tr>
-<tr class="separator:ad57200d57b096b0e27821a95e2824108"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5800ca8d41bd9ac7f0368a6f28783d92"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt; scalar_t, exponent_t &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#a5800ca8d41bd9ac7f0368a6f28783d92">Chern</a></td></tr>
-<tr class="memdesc:a5800ca8d41bd9ac7f0368a6f28783d92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector consisting of the Chern classes \(c_i\).  <a href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#a5800ca8d41bd9ac7f0368a6f28783d92">More...</a><br /></td></tr>
-<tr class="separator:a5800ca8d41bd9ac7f0368a6f28783d92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca9b99f1ef5afeed66a80779fc35e0c5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt; scalar_t, exponent_t &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#aca9b99f1ef5afeed66a80779fc35e0c5">TwistedChern</a></td></tr>
-<tr class="memdesc:aca9b99f1ef5afeed66a80779fc35e0c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector consisting of the twisted Chern classes \(\gamma_{s,j}\).  <a href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#aca9b99f1ef5afeed66a80779fc35e0c5">More...</a><br /></td></tr>
-<tr class="separator:aca9b99f1ef5afeed66a80779fc35e0c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a44fed3ad3d09ff5edc504dc7c243f3e2"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#a44fed3ad3d09ff5edc504dc7c243f3e2">Polynomial_Basis&lt; Half_Idempotent_Basis&lt; xy_container_t, chern_container_t &gt;, xy_container_t, chern_container_t &gt;</a></td></tr>
+<tr class="memdesc:a44fed3ad3d09ff5edc504dc7c243f3e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Befriending parent for CRTP.  <a href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#a44fed3ad3d09ff5edc504dc7c243f3e2">More...</a><br /></td></tr>
+<tr class="separator:a44fed3ad3d09ff5edc504dc7c243f3e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename scalar_t, typename exponent_t&gt;<br />
-class Symmetric_Polynomials::Half_Idempotent_Basis&lt; scalar_t, exponent_t &gt;</h3>
+<div class="textblock"><h3>template&lt;typename xy_container_t, typename chern_container_t&gt;<br />
+class Symmetric_Polynomials::Half_Idempotent_Basis&lt; xy_container_t, chern_container_t &gt;</h3>
 
-<p>Class for half-idempotent symmetric polynomials, allowing transformation from \(x_i,y_i\) variables to \(\alpha,c_i,\gamma_{s,i}\) variables and vice-versa. </p>
+<p>Class for half-idempotent symmetric polynomials, allowing transformation from \(x_i,y_i\) variables to \(\gamma_{s,i}\) variables and vice-versa. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="abb031c4c69c2a0b5a5bc14d52a130af9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb031c4c69c2a0b5a5bc14d52a130af9">&#9670;&nbsp;</a></span>Half_Idempotent_Basis()</h2>
+<a id="a5317cf38195863327b17aa9edf3888a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5317cf38195863327b17aa9edf3888a3">&#9670;&nbsp;</a></span>Half_Idempotent_Basis()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename scalar_t , typename exponent_t &gt; </div>
+template&lt;typename xy_container_t , typename chern_container_t &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html">Symmetric_Polynomials::Half_Idempotent_Basis</a>&lt; scalar_t, exponent_t &gt;::<a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html">Half_Idempotent_Basis</a> </td>
+          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html">Symmetric_Polynomials::Half_Idempotent_Basis</a>&lt; xy_container_t, chern_container_t &gt;::<a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html">Half_Idempotent_Basis</a> </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>n</em></td><td>)</td>
@@ -174,27 +154,66 @@ template&lt;typename scalar_t , typename exponent_t &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs the generators and the relation set. </p>
+<p>Constructs the generators and the relation set given \(n\) in \(x_1,...,x_n,y_1,...,y_n\). Warning: \(n\) is half(!) the number of variables. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a9897125c664f79acb7e2ceac299347fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9897125c664f79acb7e2ceac299347fc">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/2]</span></h2>
+<a id="a0c89739a10bd31f9a9bde580b47078be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c89739a10bd31f9a9bde580b47078be">&#9670;&nbsp;</a></span>generator()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename scalar_t , typename exponent_t &gt; </div>
+template&lt;typename xy_container_t , typename chern_container_t &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt;scalar_t, twistedChern_t,1,1&gt; <a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html">Symmetric_Polynomials::Half_Idempotent_Basis</a>&lt; scalar_t, exponent_t &gt;::operator() </td>
+          <td class="memname">const auto&amp; <a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html">Symmetric_Polynomials::Half_Idempotent_Basis</a>&lt; xy_container_t, chern_container_t &gt;::generator </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt; scalar_t, exponent_t &gt;&#160;</td>
-          <td class="paramname"><em>a</em></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns const&amp; of \(\gamma_{s,j}\) as <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html" title="Class of Polynomials in multiple variables.">Polynomial</a> on the \(x_i,y_i\) variables. </p>
+
+</div>
+</div>
+<a id="a518b512f97489b7e8d69fd6c8191f2c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a518b512f97489b7e8d69fd6c8191f2c0">&#9670;&nbsp;</a></span>relations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename xy_container_t , typename chern_container_t &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const auto&amp; <a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html">Symmetric_Polynomials::Half_Idempotent_Basis</a>&lt; xy_container_t, chern_container_t &gt;::relations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -205,132 +224,34 @@ template&lt;typename scalar_t , typename exponent_t &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Transform a symmetric polynomial on the \(x_i,y_i\) into a polynomial on \(\alpha,c_i,\gamma_{s,j}\). </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSymmetric__Polynomials_1_1Half__Idempotent__Basis_a9897125c664f79acb7e2ceac299347fc_cgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1Half__Idempotent__Basis_a9897125c664f79acb7e2ceac299347fc_cgraph" alt=""/></div>
-<map name="classSymmetric__Polynomials_1_1Half__Idempotent__Basis_a9897125c664f79acb7e2ceac299347fc_cgraph" id="classSymmetric__Polynomials_1_1Half__Idempotent__Basis_a9897125c664f79acb7e2ceac299347fc_cgraph">
-<area shape="rect" title="Transform a symmetric polynomial on the &#160;into a polynomial on ." alt="" coords="5,31,187,87"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1Polynomial.html#a8efe548b8fef60ea79c3bdac7f79ea46" title="Returns highest term monomial in a polynomial." alt="" coords="235,5,432,47"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1Polynomial.html#a01ef9f68433da31e0a1d396535a37b24" title="Inserts monomial given exponent and coefficient." alt="" coords="243,71,423,112"/>
-</map>
-</div>
+<p>Returns const&amp; of vector containing the Polynomials \(\alpha_s\gamma_{s,i}\) and \(\gamma_{s,i}\gamma_{t,j}\) for \(0&lt;s&lt;=t&lt;=s+i\) and \(i,j&gt;0\) (the LHS of the relations satisfied by the generators) </p>
 
 </div>
 </div>
-<a id="abeabe530136369c13c27a9d431440ea4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abeabe530136369c13c27a9d431440ea4">&#9670;&nbsp;</a></span>operator()() <span class="overload">[2/2]</span></h2>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a44fed3ad3d09ff5edc504dc7c243f3e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44fed3ad3d09ff5edc504dc7c243f3e2">&#9670;&nbsp;</a></span>Polynomial_Basis&lt; Half_Idempotent_Basis&lt; xy_container_t, chern_container_t &gt;, xy_container_t, chern_container_t &gt;</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename scalar_t , typename exponent_t &gt; </div>
-<div class="memtemplate">
-template&lt;bool t, bool w&gt; </div>
+template&lt;typename xy_container_t , typename chern_container_t &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt;scalar_t, exponent_t&gt; <a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html">Symmetric_Polynomials::Half_Idempotent_Basis</a>&lt; scalar_t, exponent_t &gt;::operator() </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt; scalar_t, twistedChern_t, t, w &gt;&#160;</td>
-          <td class="paramname"><em>a</em></td><td>)</td>
-          <td> const</td>
+          <td class="memname">friend class <a class="el" href="classSymmetric__Polynomials_1_1Polynomial__Basis.html">Polynomial_Basis</a>&lt; <a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html">Half_Idempotent_Basis</a>&lt; xy_container_t, chern_container_t &gt;, xy_container_t, chern_container_t &gt;</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Transform a polynomial on the \(\alpha,c_i,\gamma_{s,j}\) into a symmetric polynomial on the original variables \(x_i,y_i\). </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSymmetric__Polynomials_1_1Half__Idempotent__Basis_abeabe530136369c13c27a9d431440ea4_cgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1Half__Idempotent__Basis_abeabe530136369c13c27a9d431440ea4_cgraph" alt=""/></div>
-<map name="classSymmetric__Polynomials_1_1Half__Idempotent__Basis_abeabe530136369c13c27a9d431440ea4_cgraph" id="classSymmetric__Polynomials_1_1Half__Idempotent__Basis_abeabe530136369c13c27a9d431440ea4_cgraph">
-<area shape="rect" title="Transform a polynomial on the &#160;into a symmetric polynomial on the original variables ." alt="" coords="5,31,187,87"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1Polynomial.html#ab1227051aee0a940a54611d83ecf9599" title="Starting iterator." alt="" coords="235,5,415,47"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1Polynomial.html#a27bbb0333bb054c7e80898dc44da2f90" title="Ending iterator." alt="" coords="235,71,415,112"/>
-</map>
-</div>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a5800ca8d41bd9ac7f0368a6f28783d92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5800ca8d41bd9ac7f0368a6f28783d92">&#9670;&nbsp;</a></span>Chern</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename scalar_t , typename exponent_t &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt;scalar_t, exponent_t&gt; &gt; <a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html">Symmetric_Polynomials::Half_Idempotent_Basis</a>&lt; scalar_t, exponent_t &gt;::Chern</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Vector consisting of the Chern classes \(c_i\). </p>
-
-</div>
-</div>
-<a id="ad57200d57b096b0e27821a95e2824108"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad57200d57b096b0e27821a95e2824108">&#9670;&nbsp;</a></span>Idem</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename scalar_t , typename exponent_t &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt;scalar_t, exponent_t&gt; <a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html">Symmetric_Polynomials::Half_Idempotent_Basis</a>&lt; scalar_t, exponent_t &gt;::Idem</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The generator \(\alpha=y_1+...+y_n\). </p>
-
-</div>
-</div>
-<a id="ad0f646175daf74d9b04bd7d5639d8836"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0f646175daf74d9b04bd7d5639d8836">&#9670;&nbsp;</a></span>relations</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename scalar_t , typename exponent_t &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt;scalar_t, twistedChern_t, 1, 1&gt; &gt; <a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html">Symmetric_Polynomials::Half_Idempotent_Basis</a>&lt; scalar_t, exponent_t &gt;::relations</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The left hand side of the relations \(\alpha,c_i,\gamma_{s,j}\) satisfy i.e. \(\alpha^{n+1}, \alpha^s\gamma_{s,i}\) and \(\gamma_{s,i}\gamma_{t,j}\) for \(s&lt;=t&lt;=s+i\). </p>
-
-</div>
-</div>
-<a id="aca9b99f1ef5afeed66a80779fc35e0c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca9b99f1ef5afeed66a80779fc35e0c5">&#9670;&nbsp;</a></span>TwistedChern</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename scalar_t , typename exponent_t &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;std::vector&lt;<a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt;scalar_t, exponent_t&gt; &gt; &gt; <a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html">Symmetric_Polynomials::Half_Idempotent_Basis</a>&lt; scalar_t, exponent_t &gt;::TwistedChern</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Vector consisting of the twisted Chern classes \(\gamma_{s,j}\). </p>
+<p>Befriending parent for CRTP. </p>
 
 </div>
 </div>

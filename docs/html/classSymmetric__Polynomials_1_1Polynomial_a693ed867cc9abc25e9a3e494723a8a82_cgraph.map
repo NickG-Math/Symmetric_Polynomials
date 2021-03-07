@@ -1,0 +1,4 @@
+<map id="Symmetric_Polynomials::Polynomial::operator+=" name="Symmetric_Polynomials::Polynomial::operator+=">
+<area shape="rect" id="node1" title="Adds polynomial on the RHS to polynomial on the LHS (in place)" alt="" coords="5,13,193,54"/>
+<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1Polynomial.html#ab682f9da699d3d9767586332ee32c4e4" title="Returns number of monomials in polynomial." alt="" coords="241,5,421,61"/>
+</map>

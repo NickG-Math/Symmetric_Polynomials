@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['idem_139',['Idem',['../classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#ad57200d57b096b0e27821a95e2824108',1,'Symmetric_Polynomials::Half_Idempotent_Basis']]]
+  ['number_5fof_5fvariables_162',['number_of_variables',['../classSymmetric__Polynomials_1_1Polynomial__Basis.html#a0bc2c682f8a72800b5e81d4a8106c4c3',1,'Symmetric_Polynomials::Polynomial_Basis']]]
 ];

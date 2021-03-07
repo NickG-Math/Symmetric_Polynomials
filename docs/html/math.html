@@ -33,7 +33,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Symmetric Polynomials
-   &#160;<span id="projectnumber">V1</span>
+   &#160;<span id="projectnumber">V3</span>
    </div>
    <div id="projectbrief">A C++ library for symmetric polynomials with relations</div>
   </td>
@@ -102,14 +102,13 @@ $(document).ready(function(){initNavTree('math.html',''); initResizable(); });
 </div>
 <div class="textblock"><h1><a class="anchor" id="sym"></a>
 Symmetric polynomials</h1>
-<p>Let \(R=\mathbb Q[x_1,...,x_n]\); there is an obvious action on \(R\) by the symmetric group \(\Sigma_n\) and the fixed points \(R^{\Sigma_n}\) i.e. the symmetric polynomials, form a polynomial algebra on the elementary symmetric polynomials: $$R^{\Sigma_n}=\mathbb Q[\sigma_1,...,\sigma_n]$$ where $$\sigma_k(x_1,...,x_n)=\sum_{1\le i_1&lt; \cdots&lt; i_k\le n}x_{i_1}....x_{i_k}$$ Furthermore, there is a simple algorithm for writing every symmetric polynomial on the \(x_i\) as a polynomial on the \(\sigma_i\). This library implements that algorithm.</p>
+<p>Let \(R=\mathbb Z[x_1,...,x_n]\); there is an obvious action on \(R\) by the symmetric group \(\Sigma_n\) and the fixed points \(R^{\Sigma_n}\) i.e. the symmetric polynomials, form a polynomial algebra on the elementary symmetric polynomials: $$R^{\Sigma_n}=\mathbb Z[\sigma_1,...,\sigma_n]$$ where $$\sigma_k(x_1,...,x_n)=\sum_{1\le i_1&lt; \cdots&lt; i_k\le n}x_{i_1}....x_{i_k}$$ Furthermore, there is a simple algorithm for writing every symmetric polynomial on the \(x_i\) as a polynomial on the \(\sigma_i\). This library implements that algorithm.</p>
 <h1><a class="anchor" id="symr"></a>
 Symmetric polynomials with 'half idempotent' relations</h1>
-<p>Let \(R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)\); there is an obvious action on \(R\) by the symmetric group \(\Sigma_n\) permuting the \(x_i\) and \(y_i\) variables separately. A minimal description of the \(R^{\Sigma_n}\) is now more difficult: $$R^{\Sigma_n}=\frac{\mathbb Q[\alpha,c_i,\gamma_{s,t}]}{\sim}$$ where $$\alpha=y_1+\cdots+y_n$$ $$c_k=\sum_{1\le i_1&lt; \cdots&lt; i_k\le n}x_{i_1}....x_{i_k}$$ $$\gamma_{s,t}=\sum_{1\le i_1&lt; \cdots&lt; i_s\le n\ 1\le j_1&lt; \cdots&lt; j_t\le n\ i_u\neq j_v}x_{i_1}....x_{i_s}y_{j_1}\cdots y_{j_t}$$ where \(1\le i\le n\) and \(1\le s\le n\) and \(1\le t\le n-s\).</p>
-<p>The relations \(\sim\) are:</p>
-<p>$$\alpha^{n+1}=\alpha^n+\cdots$$ $$\alpha^s\gamma_{s,i}=c_s\alpha^{i+s}+\cdots$$ $$\gamma_{s,i}\gamma_{t,j}=c_t\gamma_{s,\min(i+j,n)}+\cdots$$ where \(s\le t\le s+i\) for the last relation.</p>
-<p>The first relation can be explicitly computed as: $$ \alpha(\alpha-1)\cdots (\alpha-n)=0$$</p>
-<p>This library implements an algorithm that can write every element in \(R^{\Sigma_n}\) as a polynomial on the generators \(\alpha,c_i,\gamma_{s,t}\) and further produce every relation explicitly. The class \(\alpha\) is referred to as "idempotent class" (since it's made out of idempotents), the classes \(c_i\) are referred to as "Chern classes" and the classes \(\gamma_{s,t}\) are the "twisted Chern classes". </p>
+<p>Let \(R=\mathbb Z[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)\); there is an obvious action on \(R\) by the symmetric group \(\Sigma_n\) permuting the \(x_i\) and \(y_i\) variables separately. A minimal description of the \(R^{\Sigma_n}\) is now more difficult: $$R^{\Sigma_n}=\frac{\mathbb Z[\gamma_{s,i}]}{\gamma_{s,i}\gamma_{t,j}={{\min(i+j+s,n)-t}\choose j}\gamma_{t,0}\gamma_{s,\min(i+j,n)}+\cdots}$$ where the "twisted Chern classes" are: $$\gamma_{s,i}=\sum_{1\le j_1&lt; \cdots&lt; j_s\le n, 1\le k_1&lt; \cdots&lt; k_i\le n\ j_u\neq k_v}x_{j_1}....x_{j_s}y_{k_1}\cdots y_{k_i}$$ for \(0\le s\le n\) and \(0\le i\le n-s\). The relations require the indices \(s,i,t,j\) to satisfy \(s\le t\le s+i\) and \(i,j&gt;0\).</p>
+<p>For convenience we set: $$\alpha_i=\gamma_{0,i}=\sigma_i(y_1,...,y_n)$$ $$c_s=\gamma_{s,0}=\sigma_s(x_1,...,x_n)$$ Over \(\mathbb Q\), the \(\alpha_1^i\) can generate all \(\alpha_i\) via: $$\alpha_i=\frac{\alpha(\alpha-1)\cdots(\alpha-i+1)}{i!}$$ however for speed+numerical stability we prefer to use all \(\alpha_i\) and have \(\mathbb Z\) coefficients in our relations.</p>
+<p>This library implements an algorithm that can write every element in \(R^{\Sigma_n}\) as a polynomial on the generators \(\alpha_i,c_i,\gamma_{s,i}\) and further produce every relation explicitly.</p>
+<p>The "twisted Pontryagin/symplectic classes" are defined as: $$\kappa_{s,i}=\sum_{1\le j_1&lt; \cdots&lt; j_s\le n, 1\le k_1&lt; \cdots&lt; k_i\le n\ j_u\neq k_v}x^2_{j_1}....x^2_{j_s}y_{k_1}\cdots y_{k_i}$$ This library also allows one to write the \(\kappa_{s,i}\) in terms of the \(\gamma_{s,i}\) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

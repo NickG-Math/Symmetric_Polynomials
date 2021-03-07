@@ -1,5 +1,7 @@
 var structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables =
 [
-    [ "degree", "structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables.html#a856e36ed1841947f1e870546ee49cc4c", null ],
-    [ "name", "structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables.html#ad5edf9617f3f16037f31f5ce126903a2", null ]
+    [ "deg_t", "structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables.html#aad5f7091e4a27c872109b102ea04debe", null ],
+    [ "degree", "structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables.html#a217a60c45eac120397792a1b4130bd22", null ],
+    [ "name", "structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables.html#a1c5907361d57eb27e8a0892efd4dda93", null ],
+    [ "operator()", "structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables.html#a32085703a854ee215b883e249ab55a82", null ]
 ];

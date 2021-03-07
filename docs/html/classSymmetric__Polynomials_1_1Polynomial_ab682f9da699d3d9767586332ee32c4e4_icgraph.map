@@ -1,0 +1,8 @@
+<map id="Symmetric_Polynomials::Polynomial::number_of_monomials" name="Symmetric_Polynomials::Polynomial::number_of_monomials">
+<area shape="rect" id="node1" title="Returns number of monomials in polynomial." alt="" coords="241,129,421,185"/>
+<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1Polynomial.html#af40405868a00e3a54e32532748fb09f4" title="Multiplies polynomials." alt="" coords="9,5,189,47"/>
+<area shape="rect" id="node3" href="$classSymmetric__Polynomials_1_1Polynomial.html#a63ab1bb1b925b826cae1687854484f81" title="Adds polynomials." alt="" coords="9,71,189,112"/>
+<area shape="rect" id="node4" href="$classSymmetric__Polynomials_1_1Polynomial.html#a693ed867cc9abc25e9a3e494723a8a82" title="Adds polynomial on the RHS to polynomial on the LHS (in place)" alt="" coords="5,136,193,177"/>
+<area shape="rect" id="node5" href="$classSymmetric__Polynomials_1_1Polynomial.html#aedae756a4dcac3e87981a99c0fe7f60b" title="Subtracts polynomials." alt="" coords="9,201,189,243"/>
+<area shape="rect" id="node6" href="$classSymmetric__Polynomials_1_1Polynomial.html#a525327186722e962fec8856ceee605af" title="Subtracts polynomial on the RHS from polynomial on the LHS (in place)" alt="" coords="8,267,191,308"/>
+</map>

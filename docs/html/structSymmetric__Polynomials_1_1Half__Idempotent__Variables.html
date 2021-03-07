@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Symmetric Polynomials: Symmetric_Polynomials::Half_Idempotent_Variables&lt; T, N &gt; Struct Template Reference</title>
+<title>Symmetric Polynomials: Symmetric_Polynomials::Half_Idempotent_Variables&lt; T, _deg, N &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -33,7 +33,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Symmetric Polynomials
-   &#160;<span id="projectnumber">V1</span>
+   &#160;<span id="projectnumber">V3</span>
    </div>
    <div id="projectbrief">A C++ library for symmetric polynomials with relations</div>
   </td>
@@ -91,10 +91,12 @@ $(document).ready(function(){initNavTree('structSymmetric__Polynomials_1_1Half__
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Symmetric_Polynomials::Half_Idempotent_Variables&lt; T, N &gt; Struct Template Reference</div>  </div>
+<div class="title">Symmetric_Polynomials::Half_Idempotent_Variables&lt; T, _deg, N &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -103,90 +105,90 @@ $(document).ready(function(){initNavTree('structSymmetric__Polynomials_1_1Half__
 
 <p><code>#include &lt;<a class="el" href="Half__Idempotent_8h_source.html">Half_Idempotent.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Symmetric_Polynomials::Half_Idempotent_Variables&lt; T, N &gt;:</div>
+Inheritance diagram for Symmetric_Polynomials::Half_Idempotent_Variables&lt; T, _deg, N &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="structSymmetric__Polynomials_1_1Half__Idempotent__Variables__inherit__graph.png" border="0" usemap="#Symmetric__Polynomials_1_1Half__Idempotent__Variables_3_01T_00_01N_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="Symmetric__Polynomials_1_1Half__Idempotent__Variables_3_01T_00_01N_01_4_inherit__map" id="Symmetric__Polynomials_1_1Half__Idempotent__Variables_3_01T_00_01N_01_4_inherit__map">
+<div class="center"><img src="structSymmetric__Polynomials_1_1Half__Idempotent__Variables__inherit__graph.png" border="0" usemap="#Symmetric__Polynomials_1_1Half__Idempotent__Variables_3_01T_00_01__deg_00_01N_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="Symmetric__Polynomials_1_1Half__Idempotent__Variables_3_01T_00_01__deg_00_01N_01_4_inherit__map" id="Symmetric__Polynomials_1_1Half__Idempotent__Variables_3_01T_00_01__deg_00_01N_01_4_inherit__map">
 <area shape="rect" title="Class for variables &#160;where ." alt="" coords="5,80,212,136"/>
-<area shape="rect" title=" " alt="" coords="37,5,180,32"/>
+<area shape="rect" title=" " alt="" coords="57,5,160,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
-Collaboration diagram for Symmetric_Polynomials::Half_Idempotent_Variables&lt; T, N &gt;:</div>
+Collaboration diagram for Symmetric_Polynomials::Half_Idempotent_Variables&lt; T, _deg, N &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="structSymmetric__Polynomials_1_1Half__Idempotent__Variables__coll__graph.png" border="0" usemap="#Symmetric__Polynomials_1_1Half__Idempotent__Variables_3_01T_00_01N_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="Symmetric__Polynomials_1_1Half__Idempotent__Variables_3_01T_00_01N_01_4_coll__map" id="Symmetric__Polynomials_1_1Half__Idempotent__Variables_3_01T_00_01N_01_4_coll__map">
+<div class="center"><img src="structSymmetric__Polynomials_1_1Half__Idempotent__Variables__coll__graph.png" border="0" usemap="#Symmetric__Polynomials_1_1Half__Idempotent__Variables_3_01T_00_01__deg_00_01N_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="Symmetric__Polynomials_1_1Half__Idempotent__Variables_3_01T_00_01__deg_00_01N_01_4_coll__map" id="Symmetric__Polynomials_1_1Half__Idempotent__Variables_3_01T_00_01__deg_00_01N_01_4_coll__map">
 <area shape="rect" title="Class for variables &#160;where ." alt="" coords="5,80,212,136"/>
-<area shape="rect" title=" " alt="" coords="37,5,180,32"/>
+<area shape="rect" title=" " alt="" coords="57,5,160,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a2e89200e29193a10dcb7e68c74660617"><td class="memItemLeft" align="right" valign="top">typedef _deg&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html#a2e89200e29193a10dcb7e68c74660617">deg_t</a></td></tr>
+<tr class="memdesc:a2e89200e29193a10dcb7e68c74660617"><td class="mdescLeft">&#160;</td><td class="mdescRight">Degree typedef.  <a href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html#a2e89200e29193a10dcb7e68c74660617">More...</a><br /></td></tr>
+<tr class="separator:a2e89200e29193a10dcb7e68c74660617"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aeb99639434cc4f036fa5847aff1fc16e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html#aeb99639434cc4f036fa5847aff1fc16e">Half_Idempotent_Variables</a> (int)</td></tr>
-<tr class="memdesc:aeb99639434cc4f036fa5847aff1fc16e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor using size (does nothing as size is known in compile time for N!=-1)  <a href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html#aeb99639434cc4f036fa5847aff1fc16e">More...</a><br /></td></tr>
-<tr class="separator:aeb99639434cc4f036fa5847aff1fc16e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18c592fd8cd885f970613e1dd7fa6b1a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html#a18c592fd8cd885f970613e1dd7fa6b1a">degree</a> () const</td></tr>
-<tr class="memdesc:a18c592fd8cd885f970613e1dd7fa6b1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The degree of a monomial on the \(x_i,y_i\) with \(|x_i|=1\) and \(|y_i|=0\).  <a href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html#a18c592fd8cd885f970613e1dd7fa6b1a">More...</a><br /></td></tr>
-<tr class="separator:a18c592fd8cd885f970613e1dd7fa6b1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4f9bf2a64afe60afe736c74de18dc56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Half_Idempotent_Variables</a>&lt; T, N &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html#ad4f9bf2a64afe60afe736c74de18dc56">operator+</a> (const <a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Half_Idempotent_Variables</a>&lt; T, N &gt; &amp;other) const</td></tr>
-<tr class="memdesc:ad4f9bf2a64afe60afe736c74de18dc56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies monomials by adding their exponents, taking into account that \(y_i^2=y_i\).  <a href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html#ad4f9bf2a64afe60afe736c74de18dc56">More...</a><br /></td></tr>
-<tr class="separator:ad4f9bf2a64afe60afe736c74de18dc56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05c1037d0e379e5d6e81851f8dcd5cac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Half_Idempotent_Variables</a>&lt; T, N &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html#a05c1037d0e379e5d6e81851f8dcd5cac">operator-</a> (const <a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Half_Idempotent_Variables</a>&lt; T, N &gt; &amp;other) const</td></tr>
-<tr class="memdesc:a05c1037d0e379e5d6e81851f8dcd5cac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divides monomials a/b with b|a by subtracting their exponents, taking into account that \(y_i^2=y_i\).  <a href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html#a05c1037d0e379e5d6e81851f8dcd5cac">More...</a><br /></td></tr>
-<tr class="separator:a05c1037d0e379e5d6e81851f8dcd5cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a033343ccef121d3563224b08f2a6c135"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html#a2e89200e29193a10dcb7e68c74660617">deg_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html#a033343ccef121d3563224b08f2a6c135">degree</a> () const</td></tr>
+<tr class="memdesc:a033343ccef121d3563224b08f2a6c135"><td class="mdescLeft">&#160;</td><td class="mdescRight">The degree of a monomial on the \(x_i,y_i\) with \(|x_i|=1\) and \(|y_i|=0\).  <a href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html#a033343ccef121d3563224b08f2a6c135">More...</a><br /></td></tr>
+<tr class="separator:a033343ccef121d3563224b08f2a6c135"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add8e83c593656651928345d91b792844"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Half_Idempotent_Variables</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html#add8e83c593656651928345d91b792844">operator+</a> (const <a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Half_Idempotent_Variables</a> &amp;other) const</td></tr>
+<tr class="memdesc:add8e83c593656651928345d91b792844"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies monomials by adding their exponents, taking into account that \(y_i^2=y_i\).  <a href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html#add8e83c593656651928345d91b792844">More...</a><br /></td></tr>
+<tr class="separator:add8e83c593656651928345d91b792844"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a406982ee9afb87b103be5c957422510c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Half_Idempotent_Variables</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html#a406982ee9afb87b103be5c957422510c">operator-</a> (const <a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Half_Idempotent_Variables</a> &amp;other) const</td></tr>
+<tr class="memdesc:a406982ee9afb87b103be5c957422510c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divides monomials a/b when b|a by subtracting their exponents, taking into account that \(y_i^2=y_i\).  <a href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html#a406982ee9afb87b103be5c957422510c">More...</a><br /></td></tr>
+<tr class="separator:a406982ee9afb87b103be5c957422510c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7b0d8c1e9c1f0bf5d3135b2c5c6f502"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html#ad7b0d8c1e9c1f0bf5d3135b2c5c6f502">operator()</a> () const</td></tr>
+<tr class="memdesc:ad7b0d8c1e9c1f0bf5d3135b2c5c6f502"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard hash function.  <a href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html#ad7b0d8c1e9c1f0bf5d3135b2c5c6f502">More...</a><br /></td></tr>
+<tr class="separator:ad7b0d8c1e9c1f0bf5d3135b2c5c6f502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a522e75d79903760635999b338f1d9e96"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html#a522e75d79903760635999b338f1d9e96">name</a> (int i, int number_of_variables)</td></tr>
+<tr class="memdesc:a522e75d79903760635999b338f1d9e96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Names of variables x_i,y_i.  <a href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html#a522e75d79903760635999b338f1d9e96">More...</a><br /></td></tr>
+<tr class="separator:a522e75d79903760635999b338f1d9e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T, int N = -1&gt;<br />
-struct Symmetric_Polynomials::Half_Idempotent_Variables&lt; T, N &gt;</h3>
+<div class="textblock"><h3>template&lt;typename T = int64_t, typename _deg = int64_t, size_t N = 0&gt;<br />
+struct Symmetric_Polynomials::Half_Idempotent_Variables&lt; T, _deg, N &gt;</h3>
 
 <p>Class for variables \(x_1,...,x_n,y_1,...,y_n\) where \(y_i^2=y_i\). </p>
-<p>Parameter N is the number of variables in compile-time; set to -1 if unknown (default). Otherwise n=N. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aeb99639434cc4f036fa5847aff1fc16e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb99639434cc4f036fa5847aff1fc16e">&#9670;&nbsp;</a></span>Half_Idempotent_Variables()</h2>
+<p>Parameter N is the number of variables in compile-time; set to -1 (i.e. uint64_t max) if unknown (default). Otherwise n=N. </p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a2e89200e29193a10dcb7e68c74660617"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e89200e29193a10dcb7e68c74660617">&#9670;&nbsp;</a></span>deg_t</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , int N = -1&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+template&lt;typename T  = int64_t, typename _deg  = int64_t, size_t N = 0&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Symmetric_Polynomials::Half_Idempotent_Variables</a>&lt; T, N &gt;::<a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Half_Idempotent_Variables</a> </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="memname">typedef _deg <a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Symmetric_Polynomials::Half_Idempotent_Variables</a>&lt; T, _deg, N &gt;::<a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html#a2e89200e29193a10dcb7e68c74660617">deg_t</a></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Constructor using size (does nothing as size is known in compile time for N!=-1) </p>
+<p>Degree typedef. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a18c592fd8cd885f970613e1dd7fa6b1a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18c592fd8cd885f970613e1dd7fa6b1a">&#9670;&nbsp;</a></span>degree()</h2>
+<a id="a033343ccef121d3563224b08f2a6c135"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a033343ccef121d3563224b08f2a6c135">&#9670;&nbsp;</a></span>degree()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , int N = -1&gt; </div>
+template&lt;typename T  = int64_t, typename _deg  = int64_t, size_t N = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Symmetric_Polynomials::Half_Idempotent_Variables</a>&lt; T, N &gt;::degree </td>
+          <td class="memname"><a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html#a2e89200e29193a10dcb7e68c74660617">deg_t</a> <a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Symmetric_Polynomials::Half_Idempotent_Variables</a>&lt; T, _deg, N &gt;::degree </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -200,33 +202,102 @@ template&lt;typename T , int N = -1&gt; </div>
 </div><div class="memdoc">
 
 <p>The degree of a monomial on the \(x_i,y_i\) with \(|x_i|=1\) and \(|y_i|=0\). </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="structSymmetric__Polynomials_1_1Half__Idempotent__Variables_a18c592fd8cd885f970613e1dd7fa6b1a_icgraph.png" border="0" usemap="#structSymmetric__Polynomials_1_1Half__Idempotent__Variables_a18c592fd8cd885f970613e1dd7fa6b1a_icgraph" alt=""/></div>
-<map name="structSymmetric__Polynomials_1_1Half__Idempotent__Variables_a18c592fd8cd885f970613e1dd7fa6b1a_icgraph" id="structSymmetric__Polynomials_1_1Half__Idempotent__Variables_a18c592fd8cd885f970613e1dd7fa6b1a_icgraph">
-<area shape="rect" title="The degree of a monomial on the &#160;with &#160;and ." alt="" coords="260,5,467,61"/>
-<area shape="rect" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables_3_01T_00-1_01_4.html#a794a661ec819b5e8bf1b8aed2d48533c" title="The degree of a monomial on the x_i,y_i with |x_i|=1 and |y_i|=0." alt="" coords="5,5,212,61"/>
-</map>
-</div>
 
 </div>
 </div>
-<a id="ad4f9bf2a64afe60afe736c74de18dc56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4f9bf2a64afe60afe736c74de18dc56">&#9670;&nbsp;</a></span>operator+()</h2>
+<a id="a522e75d79903760635999b338f1d9e96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a522e75d79903760635999b338f1d9e96">&#9670;&nbsp;</a></span>name()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , int N = -1&gt; </div>
+template&lt;typename T  = int64_t, typename _deg  = int64_t, size_t N = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Half_Idempotent_Variables</a>&lt;T,N&gt; <a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Symmetric_Polynomials::Half_Idempotent_Variables</a>&lt; T, N &gt;::operator+ </td>
+          <td class="memname">static std::string <a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Symmetric_Polynomials::Half_Idempotent_Variables</a>&lt; T, _deg, N &gt;::name </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Half_Idempotent_Variables</a>&lt; T, N &gt; &amp;&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>number_of_variables</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Names of variables x_i,y_i. </p>
+
+</div>
+</div>
+<a id="ad7b0d8c1e9c1f0bf5d3135b2c5c6f502"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7b0d8c1e9c1f0bf5d3135b2c5c6f502">&#9670;&nbsp;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T  = int64_t, typename _deg  = int64_t, size_t N = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Symmetric_Polynomials::Half_Idempotent_Variables</a>&lt; T, _deg, N &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Standard hash function. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="structSymmetric__Polynomials_1_1Half__Idempotent__Variables_ad7b0d8c1e9c1f0bf5d3135b2c5c6f502_cgraph.png" border="0" usemap="#structSymmetric__Polynomials_1_1Half__Idempotent__Variables_ad7b0d8c1e9c1f0bf5d3135b2c5c6f502_cgraph" alt=""/></div>
+<map name="structSymmetric__Polynomials_1_1Half__Idempotent__Variables_ad7b0d8c1e9c1f0bf5d3135b2c5c6f502_cgraph" id="structSymmetric__Polynomials_1_1Half__Idempotent__Variables_ad7b0d8c1e9c1f0bf5d3135b2c5c6f502_cgraph">
+<area shape="rect" title="Standard hash function." alt="" coords="5,5,212,61"/>
+<area shape="rect" href="namespaceSymmetric__Polynomials.html#a144142657f3a44c85c04a63864d4d006" title="A generic hashing function that calls other hashing functions (second template parameter)" alt="" coords="260,13,440,54"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="add8e83c593656651928345d91b792844"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add8e83c593656651928345d91b792844">&#9670;&nbsp;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T  = int64_t, typename _deg  = int64_t, size_t N = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Half_Idempotent_Variables</a> <a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Symmetric_Polynomials::Half_Idempotent_Variables</a>&lt; T, _deg, N &gt;::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Half_Idempotent_Variables</a>&lt; T, _deg, N &gt; &amp;&#160;</td>
           <td class="paramname"><em>other</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -242,21 +313,21 @@ template&lt;typename T , int N = -1&gt; </div>
 
 </div>
 </div>
-<a id="a05c1037d0e379e5d6e81851f8dcd5cac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05c1037d0e379e5d6e81851f8dcd5cac">&#9670;&nbsp;</a></span>operator-()</h2>
+<a id="a406982ee9afb87b103be5c957422510c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a406982ee9afb87b103be5c957422510c">&#9670;&nbsp;</a></span>operator-()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , int N = -1&gt; </div>
+template&lt;typename T  = int64_t, typename _deg  = int64_t, size_t N = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Half_Idempotent_Variables</a>&lt;T,N&gt; <a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Symmetric_Polynomials::Half_Idempotent_Variables</a>&lt; T, N &gt;::operator- </td>
+          <td class="memname"><a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Half_Idempotent_Variables</a> <a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Symmetric_Polynomials::Half_Idempotent_Variables</a>&lt; T, _deg, N &gt;::operator- </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Half_Idempotent_Variables</a>&lt; T, N &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Half_Idempotent_Variables</a>&lt; T, _deg, N &gt; &amp;&#160;</td>
           <td class="paramname"><em>other</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -268,7 +339,7 @@ template&lt;typename T , int N = -1&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Divides monomials a/b with b|a by subtracting their exponents, taking into account that \(y_i^2=y_i\). </p>
+<p>Divides monomials a/b when b|a by subtracting their exponents, taking into account that \(y_i^2=y_i\). </p>
 
 </div>
 </div>

@@ -8,6 +8,7 @@ Contains the class of polynomials in multiple variables. ~\newline
 
 {\ttfamily \#include $<$functional$>$}\newline
 {\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
 {\ttfamily \#include \char`\"{}General.\+h\char`\"{}}\newline
 Include dependency graph for Polynomials.\+h\+:\nopagebreak
 \begin{figure}[H]
@@ -20,18 +21,24 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{Polynomials_8h__dep__incl}
+\includegraphics[width=226pt]{Polynomials_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial$<$ scalar\+\_\+t, exponent\+\_\+t, name\+\_\+override, dimension\+\_\+override $>$}}
+struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1hash__only__second__in__pair}{Symmetric\+\_\+\+Polynomials\+::hash\+\_\+only\+\_\+second\+\_\+in\+\_\+pair$<$ T, S $>$}}
+\begin{DoxyCompactList}\small\item\em Given a pair, hash only the second parameter. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1default__container}{Symmetric\+\_\+\+Polynomials\+::default\+\_\+container$<$ scl\+\_\+t, exp\+\_\+t, ordered $>$}}
+\begin{DoxyCompactList}\small\item\em The default container for polynomials given scalar (coefficient) type (eg int,float), exponent type (eg \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Standard\+\_\+\+Variables}} , \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}}) and whether the container should be ordered or not. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1default__container_3_01scl__t_00_01exp__t_00_011_01_4}{Symmetric\+\_\+\+Polynomials\+::default\+\_\+container$<$ scl\+\_\+t, exp\+\_\+t, 1 $>$}}
+\begin{DoxyCompactList}\small\item\em Ordered specialization of default container. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1default__container_3_01scl__t_00_01exp__t_00_010_01_4}{Symmetric\+\_\+\+Polynomials\+::default\+\_\+container$<$ scl\+\_\+t, exp\+\_\+t, 0 $>$}}
+\begin{DoxyCompactList}\small\item\em Unordered specialization of default container. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial$<$ container\+\_\+t $>$}}
 \begin{DoxyCompactList}\small\item\em Class of Polynomials in multiple variables. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial$<$ scalar\+\_\+t, exponent\+\_\+t, name\+\_\+override, dimension\+\_\+override $>$\+::const\+\_\+iterator}}
-\begin{DoxyCompactList}\small\item\em Constant iterator going through the monomials of the polynomial in increasing order. \end{DoxyCompactList}\item 
-struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Standard\+\_\+\+Variables$<$ T $>$}}
-\begin{DoxyCompactList}\small\item\em The standard variables $x_i$ in a polynomial, with $|x_i|=1$ and no relations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial$<$ container\+\_\+t $>$\+::const\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em Constant iterator going through the monomials of the polynomial in increasing order. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -40,7 +47,9 @@ struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Sym
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename scalar\+\_\+t , typename exponent\+\_\+t , bool t, bool w$>$ }\\std\+::ostream \& \mbox{\hyperlink{namespaceSymmetric__Polynomials_aee540cffbf130eed9641b895453e81c3}{Symmetric\+\_\+\+Polynomials\+::operator$<$$<$}} (std\+::ostream \&os, const Polynomial$<$ scalar\+\_\+t, exponent\+\_\+t, t, w $>$ \&a)
+{\footnotesize template$<$typename T , typename S $>$ }\\std\+::pair$<$ T, S $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a53326b4ece36f3f1ddeb6e79655df822}{Symmetric\+\_\+\+Polynomials\+::operator+}} (const std\+::pair$<$ T, S $>$ \&a, const std\+::pair$<$ T, S $>$ b)
+\begin{DoxyCompactList}\small\item\em Pairwise addition of pairs. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename container\+\_\+t $>$ }\\std\+::ostream \& \mbox{\hyperlink{namespaceSymmetric__Polynomials_a8e5fb0f43bf3e8c9822bc7e6fc1ee223}{Symmetric\+\_\+\+Polynomials\+::operator$<$$<$}} (std\+::ostream \&os, const Polynomial$<$ container\+\_\+t $>$ \&a)
 \begin{DoxyCompactList}\small\item\em Prints polynomial. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 

@@ -1,8 +1,8 @@
-\hypertarget{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables}{}\doxysection{Symmetric\+\_\+\+Polynomials\+::Elementary\+\_\+\+Symmetric\+\_\+\+Variables$<$ T $>$ Struct Template Reference}
-\label{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables}\index{Symmetric\_Polynomials::Elementary\_Symmetric\_Variables$<$ T $>$@{Symmetric\_Polynomials::Elementary\_Symmetric\_Variables$<$ T $>$}}
+\hypertarget{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables}{}\doxysection{Symmetric\+\_\+\+Polynomials\+::Elementary\+\_\+\+Symmetric\+\_\+\+Variables$<$ T, \+\_\+deg $>$ Struct Template Reference}
+\label{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables}\index{Symmetric\_Polynomials::Elementary\_Symmetric\_Variables$<$ T, \_deg $>$@{Symmetric\_Polynomials::Elementary\_Symmetric\_Variables$<$ T, \_deg $>$}}
 
 
-Variables $e_1,...,e_n$ denoting the elementary symmetric polynomials $e_i=\sigma_i$, of degrees $|e_i|=i$.  
+Variables $e_1,...,e_n$ denoting the elementary symmetric polynomials $e_i=\sigma_i$ of degrees $|e_i|=i$.  
 
 
 
@@ -11,63 +11,98 @@ Variables $e_1,...,e_n$ denoting the elementary symmetric polynomials $e_i=\sigm
 
 
 
-Inheritance diagram for Symmetric\+\_\+\+Polynomials\+::Elementary\+\_\+\+Symmetric\+\_\+\+Variables$<$ T $>$\+:\nopagebreak
+Inheritance diagram for Symmetric\+\_\+\+Polynomials\+::Elementary\+\_\+\+Symmetric\+\_\+\+Variables$<$ T, \+\_\+deg $>$\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=225pt]{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables__inherit__graph}
+\includegraphics[width=350pt]{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for Symmetric\+\_\+\+Polynomials\+::Elementary\+\_\+\+Symmetric\+\_\+\+Variables$<$ T $>$\+:\nopagebreak
+Collaboration diagram for Symmetric\+\_\+\+Polynomials\+::Elementary\+\_\+\+Symmetric\+\_\+\+Variables$<$ T, \+\_\+deg $>$\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=225pt]{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables__coll__graph}
+\includegraphics[width=350pt]{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables__coll__graph}
 \end{center}
 \end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \+\_\+deg \mbox{\hyperlink{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables_aad5f7091e4a27c872109b102ea04debe}{deg\+\_\+t}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables_a856e36ed1841947f1e870546ee49cc4c}{degree}} () const
-\begin{DoxyCompactList}\small\item\em The degree of a monomial on the $e_i$, $|e_i|=i$. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables_aad5f7091e4a27c872109b102ea04debe}{deg\+\_\+t}} \mbox{\hyperlink{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables_a217a60c45eac120397792a1b4130bd22}{degree}} () const
+\begin{DoxyCompactList}\small\item\em The degree of a monomial on the $e_i$, $|e_i|=i$. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables_a32085703a854ee215b883e249ab55a82}{operator()}} () const
+\begin{DoxyCompactList}\small\item\em Standard hash function. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static std\+::string \mbox{\hyperlink{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables_ad5edf9617f3f16037f31f5ce126903a2}{name}} (int i)
+static std\+::string \mbox{\hyperlink{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables_a1c5907361d57eb27e8a0892efd4dda93}{name}} (int i, int number\+\_\+of\+\_\+variables)
 \begin{DoxyCompactList}\small\item\em The names of the $e_i$. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-\subsubsection*{template$<$typename T$>$\newline
-struct Symmetric\+\_\+\+Polynomials\+::\+Elementary\+\_\+\+Symmetric\+\_\+\+Variables$<$ T $>$}
+\subsubsection*{template$<$typename T = int64\+\_\+t, typename \+\_\+deg = int64\+\_\+t$>$\newline
+struct Symmetric\+\_\+\+Polynomials\+::\+Elementary\+\_\+\+Symmetric\+\_\+\+Variables$<$ T, \+\_\+deg $>$}
 
-Variables $e_1,...,e_n$ denoting the elementary symmetric polynomials $e_i=\sigma_i$, of degrees $|e_i|=i$. 
+Variables $e_1,...,e_n$ denoting the elementary symmetric polynomials $e_i=\sigma_i$ of degrees $|e_i|=i$. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables_aad5f7091e4a27c872109b102ea04debe}\label{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables_aad5f7091e4a27c872109b102ea04debe}} 
+\index{Symmetric\_Polynomials::Elementary\_Symmetric\_Variables$<$ T, \_deg $>$@{Symmetric\_Polynomials::Elementary\_Symmetric\_Variables$<$ T, \_deg $>$}!deg\_t@{deg\_t}}
+\index{deg\_t@{deg\_t}!Symmetric\_Polynomials::Elementary\_Symmetric\_Variables$<$ T, \_deg $>$@{Symmetric\_Polynomials::Elementary\_Symmetric\_Variables$<$ T, \_deg $>$}}
+\doxysubsubsection{\texorpdfstring{deg\_t}{deg\_t}}
+{\footnotesize\ttfamily template$<$typename T  = int64\+\_\+t, typename \+\_\+deg  = int64\+\_\+t$>$ \\
+typedef \+\_\+deg \mbox{\hyperlink{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Elementary\+\_\+\+Symmetric\+\_\+\+Variables}}$<$ T, \+\_\+deg $>$\+::\mbox{\hyperlink{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables_aad5f7091e4a27c872109b102ea04debe}{deg\+\_\+t}}}
+
+Degree typedef 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables_a856e36ed1841947f1e870546ee49cc4c}\label{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables_a856e36ed1841947f1e870546ee49cc4c}} 
-\index{Symmetric\_Polynomials::Elementary\_Symmetric\_Variables$<$ T $>$@{Symmetric\_Polynomials::Elementary\_Symmetric\_Variables$<$ T $>$}!degree@{degree}}
-\index{degree@{degree}!Symmetric\_Polynomials::Elementary\_Symmetric\_Variables$<$ T $>$@{Symmetric\_Polynomials::Elementary\_Symmetric\_Variables$<$ T $>$}}
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables_a217a60c45eac120397792a1b4130bd22}\label{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables_a217a60c45eac120397792a1b4130bd22}} 
+\index{Symmetric\_Polynomials::Elementary\_Symmetric\_Variables$<$ T, \_deg $>$@{Symmetric\_Polynomials::Elementary\_Symmetric\_Variables$<$ T, \_deg $>$}!degree@{degree}}
+\index{degree@{degree}!Symmetric\_Polynomials::Elementary\_Symmetric\_Variables$<$ T, \_deg $>$@{Symmetric\_Polynomials::Elementary\_Symmetric\_Variables$<$ T, \_deg $>$}}
 \doxysubsubsection{\texorpdfstring{degree()}{degree()}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-int \mbox{\hyperlink{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Elementary\+\_\+\+Symmetric\+\_\+\+Variables}}$<$ T $>$\+::degree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$typename T  = int64\+\_\+t, typename \+\_\+deg  = int64\+\_\+t$>$ \\
+\mbox{\hyperlink{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables_aad5f7091e4a27c872109b102ea04debe}{deg\+\_\+t}} \mbox{\hyperlink{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Elementary\+\_\+\+Symmetric\+\_\+\+Variables}}$<$ T, \+\_\+deg $>$\+::degree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 The degree of a monomial on the $e_i$, $|e_i|=i$. 
 
-\mbox{\Hypertarget{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables_ad5edf9617f3f16037f31f5ce126903a2}\label{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables_ad5edf9617f3f16037f31f5ce126903a2}} 
-\index{Symmetric\_Polynomials::Elementary\_Symmetric\_Variables$<$ T $>$@{Symmetric\_Polynomials::Elementary\_Symmetric\_Variables$<$ T $>$}!name@{name}}
-\index{name@{name}!Symmetric\_Polynomials::Elementary\_Symmetric\_Variables$<$ T $>$@{Symmetric\_Polynomials::Elementary\_Symmetric\_Variables$<$ T $>$}}
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables_a1c5907361d57eb27e8a0892efd4dda93}\label{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables_a1c5907361d57eb27e8a0892efd4dda93}} 
+\index{Symmetric\_Polynomials::Elementary\_Symmetric\_Variables$<$ T, \_deg $>$@{Symmetric\_Polynomials::Elementary\_Symmetric\_Variables$<$ T, \_deg $>$}!name@{name}}
+\index{name@{name}!Symmetric\_Polynomials::Elementary\_Symmetric\_Variables$<$ T, \_deg $>$@{Symmetric\_Polynomials::Elementary\_Symmetric\_Variables$<$ T, \_deg $>$}}
 \doxysubsubsection{\texorpdfstring{name()}{name()}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-static std\+::string \mbox{\hyperlink{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Elementary\+\_\+\+Symmetric\+\_\+\+Variables}}$<$ T $>$\+::name (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily template$<$typename T  = int64\+\_\+t, typename \+\_\+deg  = int64\+\_\+t$>$ \\
+static std\+::string \mbox{\hyperlink{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Elementary\+\_\+\+Symmetric\+\_\+\+Variables}}$<$ T, \+\_\+deg $>$\+::name (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{number\+\_\+of\+\_\+variables }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
 
 
 The names of the $e_i$. 
 
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables_a32085703a854ee215b883e249ab55a82}\label{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables_a32085703a854ee215b883e249ab55a82}} 
+\index{Symmetric\_Polynomials::Elementary\_Symmetric\_Variables$<$ T, \_deg $>$@{Symmetric\_Polynomials::Elementary\_Symmetric\_Variables$<$ T, \_deg $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!Symmetric\_Polynomials::Elementary\_Symmetric\_Variables$<$ T, \_deg $>$@{Symmetric\_Polynomials::Elementary\_Symmetric\_Variables$<$ T, \_deg $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename T  = int64\+\_\+t, typename \+\_\+deg  = int64\+\_\+t$>$ \\
+size\+\_\+t \mbox{\hyperlink{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Elementary\+\_\+\+Symmetric\+\_\+\+Variables}}$<$ T, \+\_\+deg $>$\+::operator() (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Standard hash function. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables_a32085703a854ee215b883e249ab55a82_cgraph}
+\end{center}
+\end{figure}
 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}

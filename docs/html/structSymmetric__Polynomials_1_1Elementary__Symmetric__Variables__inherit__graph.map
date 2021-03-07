@@ -1,5 +1,7 @@
-<map id="Symmetric_Polynomials::Elementary_Symmetric_Variables&lt; T &gt;" name="Symmetric_Polynomials::Elementary_Symmetric_Variables&lt; T &gt;">
-<area shape="rect" id="node1" title="Variables &#160;denoting the elementary symmetric polynomials , of degrees ." alt="" coords="11,169,193,225"/>
-<area shape="rect" id="node2" href="$structSymmetric__Polynomials_1_1Standard__Variables.html" title="The standard variables &#160;in a polynomial, with &#160;and no relations." alt="" coords="5,80,199,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="37,5,167,32"/>
+<map id="Symmetric_Polynomials::Elementary_Symmetric_Variables&lt; T, _deg &gt;" name="Symmetric_Polynomials::Elementary_Symmetric_Variables&lt; T, _deg &gt;">
+<area shape="rect" id="node1" title="Variables &#160;denoting the elementary symmetric polynomials &#160;of degrees ." alt="" coords="57,305,240,361"/>
+<area shape="rect" id="node2" href="$structSymmetric__Polynomials_1_1Standard__Variables.html" title=" " alt="" coords="59,200,239,256"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,96,172,123"/>
+<area shape="rect" id="node4" href="$structSymmetric__Polynomials_1_1Standard__Variables.html" title="The standard variables &#160;in a polynomial, with &#160;and no relations." alt="" coords="196,81,376,137"/>
+<area shape="rect" id="node5" title=" " alt="" coords="203,5,369,32"/>
 </map>

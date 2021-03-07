@@ -1,4 +1,5 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title=" " alt="" coords="5,13,60,39"/>
-<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1monomial.html#a5eced96b3e7c61174ef864032be3c935" title="Print monomial using given variable names." alt="" coords="108,5,288,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,46,60,73"/>
+<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1Polynomial.html#a398889dc1151404048820a5c1b4baf5a" title="Inserts monomial given exponent and coefficient (it is the user&#39;s responsibility to make sure that th..." alt="" coords="121,5,301,47"/>
+<area shape="rect" id="node3" href="$Demo_8cpp.html#a1660780e039cee9f194c25e9be8c0ca4" title="Writes the twisted Pontryagin/symplectic classes pi_{s,j}/k_{s,j} in terms of the Chern classes under..." alt="" coords="108,71,315,112"/>
 </map>

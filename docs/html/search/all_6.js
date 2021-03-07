@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['general_2eh_20',['General.h',['../General_8h.html',1,'']]],
-  ['general_5fcompute_5fdegree_21',['general_compute_degree',['../namespaceSymmetric__Polynomials.html#a17c6bea90d7e164a084903de6086603d',1,'Symmetric_Polynomials']]],
-  ['generated_22',['generated',['../classSymmetric__Polynomials_1_1Factory__Generator.html#a5c7fd18834f4fe1424a3f6bdef4c406c',1,'Symmetric_Polynomials::Factory_Generator']]],
-  ['generators_2eh_23',['Generators.h',['../Generators_8h.html',1,'']]],
-  ['get_5fnumber_5fof_5fvariables_24',['get_number_of_variables',['../classSymmetric__Polynomials_1_1Polynomial.html#a8349707eec45b1b8776d70f18deb5426',1,'Symmetric_Polynomials::Polynomial']]],
-  ['general_20information_25',['General Information',['../index.html',1,'']]]
+  ['factory_5fgenerator_21',['Factory_Generator',['../classSymmetric__Polynomials_1_1Factory__Generator.html',1,'Symmetric_Polynomials::Factory_Generator&lt; specialization, gen_t &gt;'],['../classSymmetric__Polynomials_1_1Factory__Generator.html#a038b517134edf6991c98bcac9fa5e215',1,'Symmetric_Polynomials::Factory_Generator::Factory_Generator()']]],
+  ['factory_5fgenerator_3c_20combination_5fgenerator_3a_3aconst_5fiterator_2c_20std_3a_3avector_3c_20t_20_3e_20_3e_22',['Factory_Generator&lt; Combination_Generator::const_iterator, std::vector&lt; T &gt; &gt;',['../classSymmetric__Polynomials_1_1Factory__Generator.html',1,'Symmetric_Polynomials::Factory_Generator&lt; Combination_Generator::const_iterator, std::vector&lt; T &gt; &gt;'],['../classSymmetric__Polynomials_1_1Combination__Generator_1_1const__iterator.html#a7a17d42933649d59655767adc61467b5',1,'Symmetric_Polynomials::Combination_Generator::const_iterator::Factory_Generator&lt; Combination_Generator::const_iterator, std::vector&lt; T &gt; &gt;()']]],
+  ['factory_5fgenerator_3c_20permutation_5fgenerator_3a_3aconst_5fiterator_2c_20std_3a_3avector_3c_20t_20_3e_20_3e_23',['Factory_Generator&lt; Permutation_Generator::const_iterator, std::vector&lt; T &gt; &gt;',['../classSymmetric__Polynomials_1_1Factory__Generator.html',1,'Symmetric_Polynomials::Factory_Generator&lt; Permutation_Generator::const_iterator, std::vector&lt; T &gt; &gt;'],['../classSymmetric__Polynomials_1_1Permutation__Generator_1_1const__iterator.html#afcc4bbd9d7f7510c19c189842e641500',1,'Symmetric_Polynomials::Permutation_Generator::const_iterator::Factory_Generator&lt; Permutation_Generator::const_iterator, std::vector&lt; T &gt; &gt;()']]]
 ];

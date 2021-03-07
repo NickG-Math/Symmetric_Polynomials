@@ -10,48 +10,88 @@ The namespace which contains every method and class in the library.
 \item 
 class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Combination__Generator}{Combination\+\_\+\+Generator}}
 \begin{DoxyCompactList}\small\item\em Generates all combinations on a number of letters making a number of choices. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1default__container}{default\+\_\+container}}
+\begin{DoxyCompactList}\small\item\em The default container for polynomials given scalar (coefficient) type (eg int,float), exponent type (eg \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Standard\+\_\+\+Variables}} , \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}}) and whether the container should be ordered or not. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1default__container_3_01scl__t_00_01exp__t_00_010_01_4}{default\+\_\+container$<$ scl\+\_\+t, exp\+\_\+t, 0 $>$}}
+\begin{DoxyCompactList}\small\item\em Unordered specialization of default container. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1default__container_3_01scl__t_00_01exp__t_00_011_01_4}{default\+\_\+container$<$ scl\+\_\+t, exp\+\_\+t, 1 $>$}}
+\begin{DoxyCompactList}\small\item\em Ordered specialization of default container. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables}{Elementary\+\_\+\+Symmetric\+\_\+\+Variables}}
-\begin{DoxyCompactList}\small\item\em Variables $e_1,...,e_n$ denoting the elementary symmetric polynomials $e_i=\sigma_i$, of degrees $|e_i|=i$. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Variables $e_1,...,e_n$ denoting the elementary symmetric polynomials $e_i=\sigma_i$ of degrees $|e_i|=i$. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Factory__Generator}{Factory\+\_\+\+Generator}}
-\begin{DoxyCompactList}\small\item\em Prototype for an iterator that generates elements such as interpolating vectors, permutations, combinations and so on. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Prototype for classes providing iterators that generate elements such as interpolating vectors, permutations, combinations and so on. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Half\+\_\+\+Idempotent\+\_\+\+Basis}}
-\begin{DoxyCompactList}\small\item\em Class for half-\/idempotent symmetric polynomials, allowing transformation from $x_i,y_i$ variables to $\alpha,c_i,\gamma_{s,i}$ variables and vice-\/versa. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Class for half-\/idempotent symmetric polynomials, allowing transformation from $x_i,y_i$ variables to $\gamma_{s,i}$ variables and vice-\/versa. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}}
 \begin{DoxyCompactList}\small\item\em Class for variables $x_1,...,x_n,y_1,...,y_n$ where $y_i^2=y_i$. \end{DoxyCompactList}\item 
-struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_3_01T_00-1_01_4}{Half\+\_\+\+Idempotent\+\_\+\+Variables$<$ T,-\/1 $>$}}
-\begin{DoxyCompactList}\small\item\em Class specifying variables $x_1,...,x_n,y_1,...,y_n$ where $y_i^2=y_i$. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1hash__only__second__in__pair}{hash\+\_\+only\+\_\+second\+\_\+in\+\_\+pair}}
+\begin{DoxyCompactList}\small\item\em Given a pair, hash only the second parameter. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Permutation__Generator}{Permutation\+\_\+\+Generator}}
 \begin{DoxyCompactList}\small\item\em Generates all permutations on a number of letters. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}
 \begin{DoxyCompactList}\small\item\em Class of Polynomials in multiple variables. \end{DoxyCompactList}\item 
-struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1Rational}{Rational}}
-\begin{DoxyCompactList}\small\item\em Class of rational numbers. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis}{Polynomial\+\_\+\+Basis}}
+\begin{DoxyCompactList}\small\item\em Factory class that provides the general interface of a generating basis for a subring of a polynomial ring. Example implementations are \mbox{\hyperlink{classSymmetric__Polynomials_1_1Symmetric__Basis}{Symmetric\+\_\+\+Basis}} and \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Half\+\_\+\+Idempotent\+\_\+\+Basis}}. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Standard\+\_\+\+Variables}}
 \begin{DoxyCompactList}\small\item\em The standard variables $x_i$ in a polynomial, with $|x_i|=1$ and no relations. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Symmetric__Basis}{Symmetric\+\_\+\+Basis}}
-\begin{DoxyCompactList}\small\item\em Class for symmetric polynomials with no relations, allowing transformation from $x_i$ variables to $e_i$ variables and vice-\/versa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Class for symmetric polynomials with no relations, allowing transformation from $x_i$ variables to $e_i$ variables and vice-\/versa. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1Twisted__Chern__Variables}{Twisted\+\_\+\+Chern\+\_\+\+Variables}}
+\begin{DoxyCompactList}\small\item\em Class specifying the generators $\alpha_i,c_i,\gamma_{s,j}$. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename scl\+\_\+t , typename exp\+\_\+value\+\_\+t  = int64\+\_\+t, typename deg\+\_\+t  = int64\+\_\+t, bool ordered = 1$>$ }\\using \mbox{\hyperlink{namespaceSymmetric__Polynomials_a4fabc1695bf98cd5288dff6bacd769af}{Half\+\_\+\+Idempotent\+\_\+\+Basis\+\_\+\+Default}} = \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Half\+\_\+\+Idempotent\+\_\+\+Basis}}$<$ \mbox{\hyperlink{structSymmetric__Polynomials_1_1default__container}{default\+\_\+container}}$<$ scl\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}}$<$ exp\+\_\+value\+\_\+t, deg\+\_\+t $>$, ordered $>$, \mbox{\hyperlink{structSymmetric__Polynomials_1_1default__container}{default\+\_\+container}}$<$ scl\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1Twisted__Chern__Variables}{Twisted\+\_\+\+Chern\+\_\+\+Variables}}$<$ exp\+\_\+value\+\_\+t, deg\+\_\+t $>$, ordered $>$ $>$
+\begin{DoxyCompactList}\small\item\em Aliases \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Half\+\_\+\+Idempotent\+\_\+\+Basis}} for certain default template parameters. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename scl\+\_\+t , typename exp\+\_\+value\+\_\+t  = int64\+\_\+t, typename deg\+\_\+t  = int64\+\_\+t, bool ordered = 1$>$ }\\using \mbox{\hyperlink{namespaceSymmetric__Polynomials_a52e2cbc21c3608e6e400e57f8667bf20}{Symmetric\+\_\+\+Basis\+\_\+\+Default}} = \mbox{\hyperlink{classSymmetric__Polynomials_1_1Symmetric__Basis}{Symmetric\+\_\+\+Basis}}$<$ \mbox{\hyperlink{structSymmetric__Polynomials_1_1default__container}{default\+\_\+container}}$<$ scl\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Standard\+\_\+\+Variables}}$<$ exp\+\_\+value\+\_\+t, deg\+\_\+t $>$, ordered $>$, \mbox{\hyperlink{structSymmetric__Polynomials_1_1default__container}{default\+\_\+container}}$<$ scl\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables}{Elementary\+\_\+\+Symmetric\+\_\+\+Variables}}$<$ exp\+\_\+value\+\_\+t, deg\+\_\+t $>$, ordered $>$ $>$
+\begin{DoxyCompactList}\small\item\em Aliases \mbox{\hyperlink{classSymmetric__Polynomials_1_1Symmetric__Basis}{Symmetric\+\_\+\+Basis}} for certain default template parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T , typename S $>$ }\\int \mbox{\hyperlink{namespaceSymmetric__Polynomials_a17c6bea90d7e164a084903de6086603d}{general\+\_\+compute\+\_\+degree}} (const T \&exponent, const S \&dimensions)
+{\footnotesize template$<$typename T , typename hasher  = boost\+\_\+hash$>$ }\\size\+\_\+t \mbox{\hyperlink{namespaceSymmetric__Polynomials_a144142657f3a44c85c04a63864d4d006}{generic\+\_\+hasher}} (const T \&v)
+\begin{DoxyCompactList}\small\item\em A generic hashing function that calls other hashing functions (second template parameter) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename R , typename T , typename S $>$ }\\R \mbox{\hyperlink{namespaceSymmetric__Polynomials_a412c56e988d52dabedea682bcfcaf5f5}{general\+\_\+compute\+\_\+degree}} (const T \&exponent, const S \&\+\_\+dimensions)
 \begin{DoxyCompactList}\small\item\em Degree computation given exponent and dimensions (grading) \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T , typename S  = T$>$ }\\S \mbox{\hyperlink{namespaceSymmetric__Polynomials_abc4a90741eac710cd52a41a3ef03b050}{sum}} (const std\+::vector$<$ T $>$ \&a)
-\begin{DoxyCompactList}\small\item\em Returns the sum of all entries of a. \end{DoxyCompactList}\item 
-std\+::ostream \& \mbox{\hyperlink{namespaceSymmetric__Polynomials_a1e73be5bd3843fd88ac01b17239aff96}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{structSymmetric__Polynomials_1_1Rational}{Rational}} \&a)
-\begin{DoxyCompactList}\small\item\em Prints rational number. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a9fbacd7a31bb040f9609e6bdc5cbc541}{all\+\_\+permutations}} (T n)
 \begin{DoxyCompactList}\small\item\em Returns vector of all permutations on n letters. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_aff3ebeea4f1bcee426cd01c41917f3aa}{all\+\_\+combinations}} (T n, T m)
 \begin{DoxyCompactList}\small\item\em Returns vector of all combinations on n letters choosing m many ~\newline
  \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename scalar\+\_\+t , typename exponent\+\_\+t $>$ }\\void \mbox{\hyperlink{namespaceSymmetric__Polynomials_a843da471ac0687f5ffa34c497a2929a9}{print\+\_\+half\+\_\+idempotent\+\_\+relations}} (int n, bool print=0, bool verify=0)
-\begin{DoxyCompactList}\small\item\em Prints all relations in the description of the fixed points of R=Q\mbox{[}x\+\_\+1,...,x\+\_\+n,y\+\_\+1,...,y\+\_\+n\mbox{]}/(y\+\_\+i$^\wedge$2=y\+\_\+i) using Idem, Chern and Twisted\+Chern. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename scalar\+\_\+t , typename exponent\+\_\+t , bool t, bool w$>$ }\\std\+::ostream \& \mbox{\hyperlink{namespaceSymmetric__Polynomials_aee540cffbf130eed9641b895453e81c3}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ scalar\+\_\+t, exponent\+\_\+t, t, w $>$ \&a)
+{\footnotesize template$<$typename H\+IB  = Half\+\_\+\+Idempotent\+\_\+\+Basis\+\_\+\+Default$<$int64\+\_\+t, uint64\+\_\+t, uint64\+\_\+t, 0$>$$>$ }\\void \mbox{\hyperlink{namespaceSymmetric__Polynomials_a3c87e70d8d3eb671a12dcd957e7175ab}{print\+\_\+half\+\_\+idempotent\+\_\+relations}} (int n, bool print=0, bool verify=0, bool verify\+\_\+verbose=0)
+\begin{DoxyCompactList}\small\item\em Prints all relations in the description of the fixed points of $R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$ in terms of $\alpha_i, c_i, \gamma_{s,j}$ (printed as a\+\_\+i,c\+\_\+i,c\+\_\+\{s,j\} in the console) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename S $>$ }\\std\+::pair$<$ T, S $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a53326b4ece36f3f1ddeb6e79655df822}{operator+}} (const std\+::pair$<$ T, S $>$ \&a, const std\+::pair$<$ T, S $>$ b)
+\begin{DoxyCompactList}\small\item\em Pairwise addition of pairs. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename container\+\_\+t $>$ }\\std\+::ostream \& \mbox{\hyperlink{namespaceSymmetric__Polynomials_a8e5fb0f43bf3e8c9822bc7e6fc1ee223}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ container\+\_\+t $>$ \&a)
 \begin{DoxyCompactList}\small\item\em Prints polynomial. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 The namespace which contains every method and class in the library. 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespaceSymmetric__Polynomials_a4fabc1695bf98cd5288dff6bacd769af}\label{namespaceSymmetric__Polynomials_a4fabc1695bf98cd5288dff6bacd769af}} 
+\index{Symmetric\_Polynomials@{Symmetric\_Polynomials}!Half\_Idempotent\_Basis\_Default@{Half\_Idempotent\_Basis\_Default}}
+\index{Half\_Idempotent\_Basis\_Default@{Half\_Idempotent\_Basis\_Default}!Symmetric\_Polynomials@{Symmetric\_Polynomials}}
+\doxysubsubsection{\texorpdfstring{Half\_Idempotent\_Basis\_Default}{Half\_Idempotent\_Basis\_Default}}
+{\footnotesize\ttfamily template$<$typename scl\+\_\+t , typename exp\+\_\+value\+\_\+t  = int64\+\_\+t, typename deg\+\_\+t  = int64\+\_\+t, bool ordered = 1$>$ \\
+using \mbox{\hyperlink{namespaceSymmetric__Polynomials_a4fabc1695bf98cd5288dff6bacd769af}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Basis\+\_\+\+Default}} = typedef \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Half\+\_\+\+Idempotent\+\_\+\+Basis}}$<$\mbox{\hyperlink{structSymmetric__Polynomials_1_1default__container}{default\+\_\+container}}$<$scl\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}}$<$exp\+\_\+value\+\_\+t, deg\+\_\+t$>$, ordered$>$, \mbox{\hyperlink{structSymmetric__Polynomials_1_1default__container}{default\+\_\+container}}$<$scl\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1Twisted__Chern__Variables}{Twisted\+\_\+\+Chern\+\_\+\+Variables}}$<$exp\+\_\+value\+\_\+t, deg\+\_\+t$>$, ordered$>$ $>$}
+
+
+
+Aliases \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Half\+\_\+\+Idempotent\+\_\+\+Basis}} for certain default template parameters. 
+
+\mbox{\Hypertarget{namespaceSymmetric__Polynomials_a52e2cbc21c3608e6e400e57f8667bf20}\label{namespaceSymmetric__Polynomials_a52e2cbc21c3608e6e400e57f8667bf20}} 
+\index{Symmetric\_Polynomials@{Symmetric\_Polynomials}!Symmetric\_Basis\_Default@{Symmetric\_Basis\_Default}}
+\index{Symmetric\_Basis\_Default@{Symmetric\_Basis\_Default}!Symmetric\_Polynomials@{Symmetric\_Polynomials}}
+\doxysubsubsection{\texorpdfstring{Symmetric\_Basis\_Default}{Symmetric\_Basis\_Default}}
+{\footnotesize\ttfamily template$<$typename scl\+\_\+t , typename exp\+\_\+value\+\_\+t  = int64\+\_\+t, typename deg\+\_\+t  = int64\+\_\+t, bool ordered = 1$>$ \\
+using \mbox{\hyperlink{namespaceSymmetric__Polynomials_a52e2cbc21c3608e6e400e57f8667bf20}{Symmetric\+\_\+\+Polynomials\+::\+Symmetric\+\_\+\+Basis\+\_\+\+Default}} = typedef \mbox{\hyperlink{classSymmetric__Polynomials_1_1Symmetric__Basis}{Symmetric\+\_\+\+Basis}}$<$\mbox{\hyperlink{structSymmetric__Polynomials_1_1default__container}{default\+\_\+container}}$<$scl\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Standard\+\_\+\+Variables}}$<$exp\+\_\+value\+\_\+t, deg\+\_\+t$>$, ordered$>$, \mbox{\hyperlink{structSymmetric__Polynomials_1_1default__container}{default\+\_\+container}}$<$scl\+\_\+t, \mbox{\hyperlink{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables}{Elementary\+\_\+\+Symmetric\+\_\+\+Variables}}$<$exp\+\_\+value\+\_\+t, deg\+\_\+t$>$, ordered$>$ $>$}
+
+
+
+Aliases \mbox{\hyperlink{classSymmetric__Polynomials_1_1Symmetric__Basis}{Symmetric\+\_\+\+Basis}} for certain default template parameters. 
+
+
 
 \doxysubsection{Function Documentation}
 \mbox{\Hypertarget{namespaceSymmetric__Polynomials_aff3ebeea4f1bcee426cd01c41917f3aa}\label{namespaceSymmetric__Polynomials_aff3ebeea4f1bcee426cd01c41917f3aa}} 
@@ -91,30 +131,52 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{namespaceSymmetric__Polynomials_a9fbacd7a31bb040f9609e6bdc5cbc541_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{namespaceSymmetric__Polynomials_a17c6bea90d7e164a084903de6086603d}\label{namespaceSymmetric__Polynomials_a17c6bea90d7e164a084903de6086603d}} 
+\mbox{\Hypertarget{namespaceSymmetric__Polynomials_a412c56e988d52dabedea682bcfcaf5f5}\label{namespaceSymmetric__Polynomials_a412c56e988d52dabedea682bcfcaf5f5}} 
 \index{Symmetric\_Polynomials@{Symmetric\_Polynomials}!general\_compute\_degree@{general\_compute\_degree}}
 \index{general\_compute\_degree@{general\_compute\_degree}!Symmetric\_Polynomials@{Symmetric\_Polynomials}}
 \doxysubsubsection{\texorpdfstring{general\_compute\_degree()}{general\_compute\_degree()}}
-{\footnotesize\ttfamily template$<$typename T , typename S $>$ \\
-int Symmetric\+\_\+\+Polynomials\+::general\+\_\+compute\+\_\+degree (\begin{DoxyParamCaption}\item[{const T \&}]{exponent,  }\item[{const S \&}]{dimensions }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$typename R , typename T , typename S $>$ \\
+R Symmetric\+\_\+\+Polynomials\+::general\+\_\+compute\+\_\+degree (\begin{DoxyParamCaption}\item[{const T \&}]{exponent,  }\item[{const S \&}]{\+\_\+dimensions }\end{DoxyParamCaption})}
 
 
 
 Degree computation given exponent and dimensions (grading) 
 
+\mbox{\Hypertarget{namespaceSymmetric__Polynomials_a144142657f3a44c85c04a63864d4d006}\label{namespaceSymmetric__Polynomials_a144142657f3a44c85c04a63864d4d006}} 
+\index{Symmetric\_Polynomials@{Symmetric\_Polynomials}!generic\_hasher@{generic\_hasher}}
+\index{generic\_hasher@{generic\_hasher}!Symmetric\_Polynomials@{Symmetric\_Polynomials}}
+\doxysubsubsection{\texorpdfstring{generic\_hasher()}{generic\_hasher()}}
+{\footnotesize\ttfamily template$<$typename T , typename hasher  = boost\+\_\+hash$>$ \\
+size\+\_\+t Symmetric\+\_\+\+Polynomials\+::generic\+\_\+hasher (\begin{DoxyParamCaption}\item[{const T \&}]{v }\end{DoxyParamCaption})}
+
+
+
+A generic hashing function that calls other hashing functions (second template parameter) 
+
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespaceSymmetric__Polynomials_a17c6bea90d7e164a084903de6086603d_icgraph}
+\includegraphics[width=350pt]{namespaceSymmetric__Polynomials_a144142657f3a44c85c04a63864d4d006_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{namespaceSymmetric__Polynomials_aee540cffbf130eed9641b895453e81c3}\label{namespaceSymmetric__Polynomials_aee540cffbf130eed9641b895453e81c3}} 
+\mbox{\Hypertarget{namespaceSymmetric__Polynomials_a53326b4ece36f3f1ddeb6e79655df822}\label{namespaceSymmetric__Polynomials_a53326b4ece36f3f1ddeb6e79655df822}} 
+\index{Symmetric\_Polynomials@{Symmetric\_Polynomials}!operator+@{operator+}}
+\index{operator+@{operator+}!Symmetric\_Polynomials@{Symmetric\_Polynomials}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$typename T , typename S $>$ \\
+std\+::pair$<$T, S$>$ Symmetric\+\_\+\+Polynomials\+::operator+ (\begin{DoxyParamCaption}\item[{const std\+::pair$<$ T, S $>$ \&}]{a,  }\item[{const std\+::pair$<$ T, S $>$}]{b }\end{DoxyParamCaption})}
+
+
+
+Pairwise addition of pairs. 
+
+\mbox{\Hypertarget{namespaceSymmetric__Polynomials_a8e5fb0f43bf3e8c9822bc7e6fc1ee223}\label{namespaceSymmetric__Polynomials_a8e5fb0f43bf3e8c9822bc7e6fc1ee223}} 
 \index{Symmetric\_Polynomials@{Symmetric\_Polynomials}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!Symmetric\_Polynomials@{Symmetric\_Polynomials}}
-\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename exponent\+\_\+t , bool t, bool w$>$ \\
-std\+::ostream\& Symmetric\+\_\+\+Polynomials\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ scalar\+\_\+t, exponent\+\_\+t, t, w $>$ \&}]{a }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
+std\+::ostream\& Symmetric\+\_\+\+Polynomials\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ container\+\_\+t $>$ \&}]{a }\end{DoxyParamCaption})}
 
 
 
@@ -124,52 +186,24 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespaceSymmetric__Polynomials_aee540cffbf130eed9641b895453e81c3_cgraph}
+\includegraphics[width=350pt]{namespaceSymmetric__Polynomials_a8e5fb0f43bf3e8c9822bc7e6fc1ee223_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{namespaceSymmetric__Polynomials_a1e73be5bd3843fd88ac01b17239aff96}\label{namespaceSymmetric__Polynomials_a1e73be5bd3843fd88ac01b17239aff96}} 
-\index{Symmetric\_Polynomials@{Symmetric\_Polynomials}!operator$<$$<$@{operator$<$$<$}}
-\index{operator$<$$<$@{operator$<$$<$}!Symmetric\_Polynomials@{Symmetric\_Polynomials}}
-\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily std\+::ostream\& Symmetric\+\_\+\+Polynomials\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{structSymmetric__Polynomials_1_1Rational}{Rational}} \&}]{a }\end{DoxyParamCaption})}
-
-
-
-Prints rational number. 
-
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{namespaceSymmetric__Polynomials_a1e73be5bd3843fd88ac01b17239aff96_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{namespaceSymmetric__Polynomials_a843da471ac0687f5ffa34c497a2929a9}\label{namespaceSymmetric__Polynomials_a843da471ac0687f5ffa34c497a2929a9}} 
+\mbox{\Hypertarget{namespaceSymmetric__Polynomials_a3c87e70d8d3eb671a12dcd957e7175ab}\label{namespaceSymmetric__Polynomials_a3c87e70d8d3eb671a12dcd957e7175ab}} 
 \index{Symmetric\_Polynomials@{Symmetric\_Polynomials}!print\_half\_idempotent\_relations@{print\_half\_idempotent\_relations}}
 \index{print\_half\_idempotent\_relations@{print\_half\_idempotent\_relations}!Symmetric\_Polynomials@{Symmetric\_Polynomials}}
 \doxysubsubsection{\texorpdfstring{print\_half\_idempotent\_relations()}{print\_half\_idempotent\_relations()}}
-{\footnotesize\ttfamily template$<$typename scalar\+\_\+t , typename exponent\+\_\+t $>$ \\
-void Symmetric\+\_\+\+Polynomials\+::print\+\_\+half\+\_\+idempotent\+\_\+relations (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{bool}]{print = {\ttfamily 0},  }\item[{bool}]{verify = {\ttfamily 0} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$typename H\+IB  = Half\+\_\+\+Idempotent\+\_\+\+Basis\+\_\+\+Default$<$int64\+\_\+t, uint64\+\_\+t, uint64\+\_\+t, 0$>$$>$ \\
+void Symmetric\+\_\+\+Polynomials\+::print\+\_\+half\+\_\+idempotent\+\_\+relations (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{bool}]{print = {\ttfamily 0},  }\item[{bool}]{verify = {\ttfamily 0},  }\item[{bool}]{verify\+\_\+verbose = {\ttfamily 0} }\end{DoxyParamCaption})}
 
 
 
-Prints all relations in the description of the fixed points of R=Q\mbox{[}x\+\_\+1,...,x\+\_\+n,y\+\_\+1,...,y\+\_\+n\mbox{]}/(y\+\_\+i$^\wedge$2=y\+\_\+i) using Idem, Chern and Twisted\+Chern. 
-
-\mbox{\Hypertarget{namespaceSymmetric__Polynomials_abc4a90741eac710cd52a41a3ef03b050}\label{namespaceSymmetric__Polynomials_abc4a90741eac710cd52a41a3ef03b050}} 
-\index{Symmetric\_Polynomials@{Symmetric\_Polynomials}!sum@{sum}}
-\index{sum@{sum}!Symmetric\_Polynomials@{Symmetric\_Polynomials}}
-\doxysubsubsection{\texorpdfstring{sum()}{sum()}}
-{\footnotesize\ttfamily template$<$typename T , typename S  = T$>$ \\
-S Symmetric\+\_\+\+Polynomials\+::sum (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T $>$ \&}]{a }\end{DoxyParamCaption})}
-
-
-
-Returns the sum of all entries of a. 
+Prints all relations in the description of the fixed points of $R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$ in terms of $\alpha_i, c_i, \gamma_{s,j}$ (printed as a\+\_\+i,c\+\_\+i,c\+\_\+\{s,j\} in the console) 
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespaceSymmetric__Polynomials_abc4a90741eac710cd52a41a3ef03b050_icgraph}
+\includegraphics[width=337pt]{namespaceSymmetric__Polynomials_a3c87e70d8d3eb671a12dcd957e7175ab_icgraph}
 \end{center}
 \end{figure}

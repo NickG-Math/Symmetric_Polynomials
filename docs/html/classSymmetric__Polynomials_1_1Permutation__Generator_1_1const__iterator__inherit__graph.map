@@ -1,5 +1,5 @@
 <map id="Symmetric_Polynomials::Permutation_Generator&lt; T &gt;::const_iterator" name="Symmetric_Polynomials::Permutation_Generator&lt; T &gt;::const_iterator">
 <area shape="rect" id="node1" title="Constant iterator that is used in a ranged for loop to generate the permutations. Non constant versio..." alt="" coords="635,21,817,77"/>
 <area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1Factory__Generator.html" title=" " alt="" coords="405,7,585,92"/>
-<area shape="rect" id="node3" href="$classSymmetric__Polynomials_1_1Factory__Generator.html" title="Prototype for an iterator that generates elements such as interpolating vectors, permutations,..." alt="" coords="5,21,185,77"/>
+<area shape="rect" id="node3" href="$classSymmetric__Polynomials_1_1Factory__Generator.html" title="Prototype for classes providing iterators that generate elements such as interpolating vectors,..." alt="" coords="5,21,185,77"/>
 </map>

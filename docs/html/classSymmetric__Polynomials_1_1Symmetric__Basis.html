@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Symmetric Polynomials: Symmetric_Polynomials::Symmetric_Basis&lt; scalar_t, exponent_t &gt; Class Template Reference</title>
+<title>Symmetric Polynomials: Symmetric_Polynomials::Symmetric_Basis&lt; x_container_t, e_container_t &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -33,7 +33,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Symmetric Polynomials
-   &#160;<span id="projectnumber">V1</span>
+   &#160;<span id="projectnumber">V3</span>
    </div>
    <div id="projectbrief">A C++ library for symmetric polynomials with relations</div>
   </td>
@@ -92,9 +92,10 @@ $(document).ready(function(){initNavTree('classSymmetric__Polynomials_1_1Symmetr
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classSymmetric__Polynomials_1_1Symmetric__Basis-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Symmetric_Polynomials::Symmetric_Basis&lt; scalar_t, exponent_t &gt; Class Template Reference</div>  </div>
+<div class="title">Symmetric_Polynomials::Symmetric_Basis&lt; x_container_t, e_container_t &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -105,35 +106,35 @@ $(document).ready(function(){initNavTree('classSymmetric__Polynomials_1_1Symmetr
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad833028c3ae2dab79e41bc4cbc47c8a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt; scalar_t, exponent_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Symmetric__Basis.html#ad833028c3ae2dab79e41bc4cbc47c8a6">operator()</a> (const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt; scalar_t, <a class="el" href="structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables.html">elementary_symmetric_t</a> &gt; &amp;poly_on_ei) const</td></tr>
-<tr class="memdesc:ad833028c3ae2dab79e41bc4cbc47c8a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform a polynomial on the elementary symmetric polynomials e_i into a symmetric polynomial on the original variables x_i.  <a href="classSymmetric__Polynomials_1_1Symmetric__Basis.html#ad833028c3ae2dab79e41bc4cbc47c8a6">More...</a><br /></td></tr>
-<tr class="separator:ad833028c3ae2dab79e41bc4cbc47c8a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a348f7fc55913fcccfcc2605e5800ab08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt; scalar_t, <a class="el" href="structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables.html">elementary_symmetric_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Symmetric__Basis.html#a348f7fc55913fcccfcc2605e5800ab08">operator()</a> (<a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt; scalar_t, exponent_t &gt; a) const</td></tr>
-<tr class="memdesc:a348f7fc55913fcccfcc2605e5800ab08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform a symmetric polynomial on the original variables x_i into one on the elementary symmetric polynomials e_i.  <a href="classSymmetric__Polynomials_1_1Symmetric__Basis.html#a348f7fc55913fcccfcc2605e5800ab08">More...</a><br /></td></tr>
-<tr class="separator:a348f7fc55913fcccfcc2605e5800ab08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90a52edd06bcbc2ab632d328e4adbd70"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Symmetric__Basis.html#a90a52edd06bcbc2ab632d328e4adbd70">Symmetric_Basis</a> (int n)</td></tr>
-<tr class="memdesc:a90a52edd06bcbc2ab632d328e4adbd70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor given number of variables.  <a href="classSymmetric__Polynomials_1_1Symmetric__Basis.html#a90a52edd06bcbc2ab632d328e4adbd70">More...</a><br /></td></tr>
-<tr class="separator:a90a52edd06bcbc2ab632d328e4adbd70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45500758d8ad1d3c0b358b2b6c000f6b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Symmetric__Basis.html#a45500758d8ad1d3c0b358b2b6c000f6b">Symmetric_Basis</a> (int n)</td></tr>
+<tr class="memdesc:a45500758d8ad1d3c0b358b2b6c000f6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor given number of variables.  <a href="classSymmetric__Polynomials_1_1Symmetric__Basis.html#a45500758d8ad1d3c0b358b2b6c000f6b">More...</a><br /></td></tr>
+<tr class="separator:a45500758d8ad1d3c0b358b2b6c000f6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:ac46762423c09f46a5a1d120b7c80d76e"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Symmetric__Basis.html#ac46762423c09f46a5a1d120b7c80d76e">Polynomial_Basis&lt; Symmetric_Basis&lt; x_container_t, e_container_t &gt;, x_container_t, e_container_t &gt;</a></td></tr>
+<tr class="memdesc:ac46762423c09f46a5a1d120b7c80d76e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Befriending parent for CRTP.  <a href="classSymmetric__Polynomials_1_1Symmetric__Basis.html#ac46762423c09f46a5a1d120b7c80d76e">More...</a><br /></td></tr>
+<tr class="separator:ac46762423c09f46a5a1d120b7c80d76e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename scalar_t, typename exponent_t&gt;<br />
-class Symmetric_Polynomials::Symmetric_Basis&lt; scalar_t, exponent_t &gt;</h3>
+<div class="textblock"><h3>template&lt;typename x_container_t, typename e_container_t&gt;<br />
+class Symmetric_Polynomials::Symmetric_Basis&lt; x_container_t, e_container_t &gt;</h3>
 
 <p>Class for symmetric polynomials with no relations, allowing transformation from \(x_i\) variables to \(e_i\) variables and vice-versa. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a90a52edd06bcbc2ab632d328e4adbd70"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90a52edd06bcbc2ab632d328e4adbd70">&#9670;&nbsp;</a></span>Symmetric_Basis()</h2>
+<a id="a45500758d8ad1d3c0b358b2b6c000f6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45500758d8ad1d3c0b358b2b6c000f6b">&#9670;&nbsp;</a></span>Symmetric_Basis()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename scalar_t , typename exponent_t &gt; </div>
+template&lt;typename x_container_t , typename e_container_t &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Symmetric__Basis.html">Symmetric_Polynomials::Symmetric_Basis</a>&lt; scalar_t, exponent_t &gt;::<a class="el" href="classSymmetric__Polynomials_1_1Symmetric__Basis.html">Symmetric_Basis</a> </td>
+          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Symmetric__Basis.html">Symmetric_Polynomials::Symmetric_Basis</a>&lt; x_container_t, e_container_t &gt;::<a class="el" href="classSymmetric__Polynomials_1_1Symmetric__Basis.html">Symmetric_Basis</a> </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>n</em></td><td>)</td>
@@ -151,84 +152,30 @@ template&lt;typename scalar_t , typename exponent_t &gt; </div>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad833028c3ae2dab79e41bc4cbc47c8a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad833028c3ae2dab79e41bc4cbc47c8a6">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/2]</span></h2>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="ac46762423c09f46a5a1d120b7c80d76e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac46762423c09f46a5a1d120b7c80d76e">&#9670;&nbsp;</a></span>Polynomial_Basis&lt; Symmetric_Basis&lt; x_container_t, e_container_t &gt;, x_container_t, e_container_t &gt;</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename scalar_t , typename exponent_t &gt; </div>
+template&lt;typename x_container_t , typename e_container_t &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt;scalar_t, exponent_t&gt; <a class="el" href="classSymmetric__Polynomials_1_1Symmetric__Basis.html">Symmetric_Polynomials::Symmetric_Basis</a>&lt; scalar_t, exponent_t &gt;::operator() </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt; scalar_t, <a class="el" href="structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables.html">elementary_symmetric_t</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>poly_on_ei</em></td><td>)</td>
-          <td> const</td>
+          <td class="memname">friend class <a class="el" href="classSymmetric__Polynomials_1_1Polynomial__Basis.html">Polynomial_Basis</a>&lt; <a class="el" href="classSymmetric__Polynomials_1_1Symmetric__Basis.html">Symmetric_Basis</a>&lt; x_container_t, e_container_t &gt;, x_container_t, e_container_t &gt;</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Transform a polynomial on the elementary symmetric polynomials e_i into a symmetric polynomial on the original variables x_i. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSymmetric__Polynomials_1_1Symmetric__Basis_ad833028c3ae2dab79e41bc4cbc47c8a6_cgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1Symmetric__Basis_ad833028c3ae2dab79e41bc4cbc47c8a6_cgraph" alt=""/></div>
-<map name="classSymmetric__Polynomials_1_1Symmetric__Basis_ad833028c3ae2dab79e41bc4cbc47c8a6_cgraph" id="classSymmetric__Polynomials_1_1Symmetric__Basis_ad833028c3ae2dab79e41bc4cbc47c8a6_cgraph">
-<area shape="rect" title="Transform a polynomial on the elementary symmetric polynomials e_i into a symmetric polynomial on the..." alt="" coords="5,39,221,80"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1Polynomial.html#ab1227051aee0a940a54611d83ecf9599" title="Starting iterator." alt="" coords="269,5,449,47"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1Polynomial.html#a27bbb0333bb054c7e80898dc44da2f90" title="Ending iterator." alt="" coords="269,71,449,112"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a348f7fc55913fcccfcc2605e5800ab08"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a348f7fc55913fcccfcc2605e5800ab08">&#9670;&nbsp;</a></span>operator()() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename scalar_t , typename exponent_t &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt;scalar_t, <a class="el" href="structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables.html">elementary_symmetric_t</a>&gt; <a class="el" href="classSymmetric__Polynomials_1_1Symmetric__Basis.html">Symmetric_Polynomials::Symmetric_Basis</a>&lt; scalar_t, exponent_t &gt;::operator() </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt; scalar_t, exponent_t &gt;&#160;</td>
-          <td class="paramname"><em>a</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Transform a symmetric polynomial on the original variables x_i into one on the elementary symmetric polynomials e_i. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSymmetric__Polynomials_1_1Symmetric__Basis_a348f7fc55913fcccfcc2605e5800ab08_cgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1Symmetric__Basis_a348f7fc55913fcccfcc2605e5800ab08_cgraph" alt=""/></div>
-<map name="classSymmetric__Polynomials_1_1Symmetric__Basis_a348f7fc55913fcccfcc2605e5800ab08_cgraph" id="classSymmetric__Polynomials_1_1Symmetric__Basis_a348f7fc55913fcccfcc2605e5800ab08_cgraph">
-<area shape="rect" title="Transform a symmetric polynomial on the original variables x_i into one on the elementary symmetric p..." alt="" coords="5,39,221,80"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1Polynomial.html#a8efe548b8fef60ea79c3bdac7f79ea46" title="Returns highest term monomial in a polynomial." alt="" coords="269,5,467,47"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1Polynomial.html#a01ef9f68433da31e0a1d396535a37b24" title="Inserts monomial given exponent and coefficient." alt="" coords="278,71,458,112"/>
-</map>
-</div>
+<p>Befriending parent for CRTP. </p>
 
 </div>
 </div>

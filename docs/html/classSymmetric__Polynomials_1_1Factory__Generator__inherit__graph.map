@@ -1,7 +1,7 @@
 <map id="Symmetric_Polynomials::Factory_Generator&lt; specialization, gen_t &gt;" name="Symmetric_Polynomials::Factory_Generator&lt; specialization, gen_t &gt;">
-<area shape="rect" id="node1" title="Prototype for an iterator that generates elements such as interpolating vectors, permutations,..." alt="" coords="5,75,185,131"/>
-<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1Factory__Generator.html" title=" " alt="" coords="408,5,589,91"/>
-<area shape="rect" id="node4" href="$classSymmetric__Polynomials_1_1Factory__Generator.html" title=" " alt="" coords="409,115,589,200"/>
-<area shape="rect" id="node3" href="$classSymmetric__Polynomials_1_1Combination__Generator_1_1const__iterator.html" title="Constant iterator that is used in a ranged for loop to generate the combinations. Non constant versio..." alt="" coords="639,20,824,76"/>
-<area shape="rect" id="node5" href="$classSymmetric__Polynomials_1_1Permutation__Generator_1_1const__iterator.html" title="Constant iterator that is used in a ranged for loop to generate the permutations. Non constant versio..." alt="" coords="640,129,823,185"/>
+<area shape="rect" id="node1" title="Prototype for classes providing iterators that generate elements such as interpolating vectors,..." alt="" coords="5,129,185,185"/>
+<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1Combination__Generator_1_1const__iterator.html" title="Constant iterator that is used in a ranged for loop to generate the combinations. Non constant versio..." alt="" coords="408,5,605,91"/>
+<area shape="rect" id="node3" href="$classSymmetric__Polynomials_1_1Factory__Generator.html" title=" " alt="" coords="416,115,597,200"/>
+<area shape="rect" id="node4" href="$classSymmetric__Polynomials_1_1Factory__Generator.html" title=" " alt="" coords="417,224,597,309"/>
+<area shape="rect" id="node5" href="$classSymmetric__Polynomials_1_1Permutation__Generator_1_1const__iterator.html" title="Constant iterator that is used in a ranged for loop to generate the permutations. Non constant versio..." alt="" coords="655,239,837,295"/>
 </map>

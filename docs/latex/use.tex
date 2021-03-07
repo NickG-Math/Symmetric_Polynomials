@@ -1,5 +1,5 @@
 \hypertarget{use_demo}{}\doxysection{Quick Demonstration}\label{use_demo}
-For a quick demonstration you may use the binaries Demo.\+exe or Demo.\+out found \href{https://github.com/NickG-Math/Symmetric_Polynomials/releases}{\texttt{ here}}. These are compiled from \mbox{\hyperlink{Demo_8cpp}{Demo.\+cpp}} using M\+S\+VC and Clang respectively. You can also compile these binaries yourself. For example, on Linux use\+: \begin{DoxyVerb}clang++ source/Demo.cpp -std=c++17 -O3 -march=native -o Demo.out    
+For a quick demonstration you may use the binaries found \href{https://github.com/NickG-Math/Symmetric_Polynomials/releases}{\texttt{ here}}. These are compiled from \mbox{\hyperlink{Demo_8cpp}{Demo.\+cpp}} using M\+S\+VC and Clang respectively. You can also compile these binaries yourself. For example, on Linux use\+: \begin{DoxyVerb}clang++ source/Demo.cpp -std=c++17 -O3 -march=native -o Lin64.out   
 \end{DoxyVerb}
 
 
@@ -8,50 +8,58 @@ You can similarly do this over Windows using M\+S\+VC, producing a .exe file . M
 Everything in this library is under the namespace {\ttfamily \mbox{\hyperlink{namespaceSymmetric__Polynomials}{Symmetric\+\_\+\+Polynomials}}}. For all the following code examples to work, start with \begin{DoxyVerb}using namespace Symmetric_Polynomials;
 \end{DoxyVerb}
 \hypertarget{use_mono}{}\doxysubsection{Polynomials}\label{use_mono}
-A polynomial in multiple variables is specified by two template parameters\+:
+A polynomial in multiple variables can be default constructed as\+: \begin{DoxyVerb}Polynomial<default_container<int, Standard_Variables<>>> p;
+\end{DoxyVerb}
+
+
+Let us explain the template parameters\+:
 \begin{DoxyItemize}
-\item {\ttfamily scalar\+\_\+t}\+: the type of coefficients eg {\ttfamily int} or {\ttfamily Rational}
-\item {\ttfamily exponent\+\_\+t}\+: the type of variables used eg {\ttfamily Standard\+\_\+\+Variables$<$unsigned char$>$} or {\ttfamily Half\+\_\+\+Idempotent\+\_\+\+Variables$<$unsigned char$>$}. These specify the relations/degrees/names of the variables in the polynomial. For example, {\ttfamily Standard\+\_\+\+Variables$<$unsigned char$>$} specifies variables $x_1,...,x_n$ with degrees $|x_i|=1$ and no relations. On the other hand, {\ttfamily Half\+\_\+\+Idempotent\+\_\+\+Variables$<$unsigned char$>$} specifies variables $x_1,...,x_n,y_1,...,y_n$ with degrees $|x_i|=1, |y_i|=0$ and relations $y_i^2=y_i$. The {\ttfamily unsigned char} is the type for the exponent vectors (see below).
+\item {\ttfamily int} is the type of the scalar coefficients, so it can be replaced by {\ttfamily float} etc.
+\item {\ttfamily Standard\+\_\+\+Variables$<$$>$} specifies that our variables are $x_1,...,x_n$ with degrees $|x_i|=1$ and no relations. It can be replaced by {\ttfamily Half\+\_\+\+Idempotent\+\_\+\+Variables} that specify variables $x_1,...,x_n,y_1,...,y_n$ with degrees $|x_i|=1, |y_i|=0$ and relations $y_i^2=y_i$.
+\item The {\ttfamily default\+\_\+container} specifies the container used to store the monomials in the polynomial. See the advanced subsection below.
 \end{DoxyItemize}
 
-To initialize a polynomial, provide the desired number of variables $n$. For example, if $n=3$\+:
-
-\begin{DoxyVerb}polynomial<int,Standard_Variables<unsigned char>> p(3);
+To initialize a polynomial, provide the desired number of variables $n$. For example, if $n=3$\+: \begin{DoxyVerb}p=Polynomial<default_container<int, Standard_Variables<>>>(3);
 \end{DoxyVerb}
 
 
-Next, insert monomials $cx_1^{a_1}\cdots x_n^{a_n}$ by providing the exponent vector $[a_1,...,a_n]$ and the coefficient $c$. Eg\+:
-
-\begin{DoxyVerb}p.insert({0,1,4},7);
+Next, insert monomials $cx_1^{a_1}\cdots x_n^{a_n}$ by providing the exponent vector $[a_1,...,a_n]$ and the coefficient $c$. Eg\+: \begin{DoxyVerb}p.insert({0,1,4},7);
 \end{DoxyVerb}
 
 
-inserts the monomial $7x_2x_3^4$ in {\ttfamily p}. Note that the exponent vector is of type {\ttfamily Standard\+\_\+\+Variables$<$unsigned char$>$} so $a_i\le 2^8-1$. To allow for bigger $a_i$\textquotesingle{}s, at the cost of more memory, use {\ttfamily unsigned long} in the place of {\ttfamily unsigned char}.
-
-You can also use other coefficients, such as {\ttfamily Rational}, or other types of variables, such as {\ttfamily Half\+\_\+\+Idempotent\+\_\+\+Variables}. For example,
-
-\begin{DoxyVerb}polynomial<Rational,Half_Idempotent_Variables<unsigned char>> p(4);
-
-p.insert({1,2,0,1},Rational(2,3));
-
-p.insert({1,1,1,1},Rational(1,7));
+inserts the monomial $7x_2x_3^4$ in {\ttfamily p}. If we further insert \begin{DoxyVerb}p.insert({1,1,2},-8);
 \end{DoxyVerb}
 
 
-specifies the polynomial $\frac17 x_1x_2y_1y_2+\frac23x_1x_2^2y_2$.
+then {\ttfamily p} becomes $-8x_1x_2x_3^2+7x_2x_3^4$ and printing it to console verifies that\+: \begin{DoxyVerb}std::cout << p << "\n";
+\end{DoxyVerb}
 
-Polynomials can be added, subtracted and multiplied by binary operators {\ttfamily +,-\/,$\ast$}. One can also raise a polynomial to a nonnegative integer power using the binary operator {\ttfamily $^\wedge$}. They can also be printed to an output stream eg by using {\ttfamily std\+::cout $<$$<$ p;}\hypertarget{use_sym}{}\doxysubsection{Symmetric polynomials}\label{use_sym}
-The class {\ttfamily Symmetric\+\_\+\+Basis} allows us to transform polynomials on $x_i$ variables (using {\ttfamily Standard\+\_\+\+Variables}) into polynomials on the elementary symmetric polynomials {\ttfamily e\mbox{[}i\mbox{]}} (corresponding to $\sigma_i$). For example\+: \begin{DoxyVerb}Symmetric_Basis<int, Standard_Variables<unsigned char>> SB;
 
-polynomial<int,Standard_Variables<unsigned char>> poly(2);
+It is the user\textquotesingle{}s responsibility to make sure that
+\begin{DoxyItemize}
+\item the number of variables is the length of the exponent vector being inserted
+\item the coefficient provided is never $0$
+\item not attempt to insert a monomial with an already existing exponent vector (doing so does not change the polynomial)
+\end{DoxyItemize}
+
+Polynomials can be added, subtracted and multiplied by binary operators {\ttfamily +,-\/,$\ast$} eg\+: \begin{DoxyVerb}std::cout << (p+(p^2))<< "\n";
+\end{DoxyVerb}
+
+
+will print
+
+\$\$-\/8x\+\_\+1x\+\_\+2x\+\_\+3$^\wedge$2 + 7x\+\_\+2x\+\_\+3$^\wedge$4 + 64x\+\_\+1$^\wedge$2x\+\_\+2$^\wedge$2x\+\_\+3$^\wedge$4 + -\/112x\+\_\+1x\+\_\+2$^\wedge$2x\+\_\+3$^\wedge$6 + 49x\+\_\+2$^\wedge$2x\+\_\+3$^\wedge$8\$\$\hypertarget{use_sym}{}\doxysubsection{Symmetric polynomials}\label{use_sym}
+The class {\ttfamily Symmetric\+\_\+\+Basis\+\_\+\+Default} allows us to transform polynomials on $x_i$ variables ({\ttfamily Standard\+\_\+\+Variables}) into polynomials on the elementary symmetric polynomials $e_i=\sigma_i$ ({\ttfamily Elementary\+\_\+\+Symmetric\+\_\+\+Variables}). For example\+: \begin{DoxyVerb}Symmetric_Basis_Default<int> SB(2);
+
+Polynomial<default_container<int, Standard_Variables<>>> poly(2);
 
 poly.insert({1,2},2);
 
 poly.insert({2,1},2);
 
-polynomial<int, Elementary_Symmetric_Variables<unsigned char>>  new_poly= SB(poly);
+Polynomial<default_container<int, Elementary_Symmetric_Variables<>>>  new_poly= SB(poly);
 
-polynomial<int, Standard_Variables<unsigned char>>  new_new_poly= SB(new_poly);
+Polynomial<default_container<int, Standard_Variables<>>>  new_new_poly= SB(new_poly);
 
 std::cout << poly << "\n";
 
@@ -61,41 +69,56 @@ std::cout << new_new_poly << "\n";
 \end{DoxyVerb}
 
 
-does the following\+: First it sets {\ttfamily poly} to $2x_1x_2^2+2x_1^2x_2$, transforms into {\ttfamily new\+\_\+poly} which is $2e_1e_2$ and then transforms {\ttfamily new\+\_\+poly} into {\ttfamily new\+\_\+new\+\_\+poly} which is $2x_1x_2^2+2x_1^2x_2$ (i.\+e. the original polynomial) and finally prints the three polynomials. This all means that \$\$2x\+\_\+1x\+\_\+2$^\wedge$2+2x\+\_\+1$^\wedge$2x\+\_\+2=2\textbackslash{}sigma\+\_\+1\textbackslash{}sigma\+\_\+2\$\$\hypertarget{use_halfidem}{}\doxysubsection{Half idempotent relations}\label{use_halfidem}
-When we have the \char`\"{}half idempotent relation\char`\"{} i.\+e. variables $x_i,y_i$ with $y_i^2=y_i$ (as specified by {\ttfamily Half\+\_\+\+Idempotent\+\_\+\+Variables}), the generators are $\alpha, c_i, \gamma_{s,t}$ (see \mbox{\hyperlink{math}{The Math}}) or {\ttfamily Idem}, {\ttfamily Chern\mbox{[}i\mbox{]}} and {\ttfamily Twisted\+Chern\mbox{[}s\mbox{]}\mbox{[}t\mbox{]}} respectively as they are used in the program. We order them as $\alpha,c_1,...,c_n, \gamma_{1,1},...,\gamma_{1,n-1},\gamma_{2,1},...,\gamma_{n-1,1}$.
+does the following\+: First it sets {\ttfamily poly} to $2x_1x_2^2+2x_1^2x_2$, then transforms it in $e_i$ variables as {\ttfamily new\+\_\+poly} which is $2e_1e_2$ and then transforms that back to $x_i$ variables as {\ttfamily new\+\_\+new\+\_\+poly} which is $2x_1x_2^2+2x_1^2x_2$ (i.\+e. the original polynomial) and finally prints the three polynomials. This all means that \$\$2x\+\_\+1x\+\_\+2$^\wedge$2+2x\+\_\+1$^\wedge$2x\+\_\+2=2e\+\_\+1e\+\_\+2\$\$\hypertarget{use_halfidem}{}\doxysubsection{Half idempotent relations}\label{use_halfidem}
+When we have the \char`\"{}half idempotent relation\char`\"{} i.\+e. variables $x_i,y_i$ with $y_i^2=y_i$ (as specified by {\ttfamily Half\+\_\+\+Idempotent\+\_\+\+Variables}), the generators are $\alpha_i, c_i, \gamma_{s,t}$ (see \mbox{\hyperlink{math}{The Math}}) or {\ttfamily Idem\mbox{[}i\mbox{]}}, {\ttfamily Chern\mbox{[}i\mbox{]}} and {\ttfamily Twisted\+Chern\mbox{[}s\mbox{]}\mbox{[}t\mbox{]}} respectively as they are used in the program. We order them as $\alpha_1,...,\alpha_n,c_1,...,c_n, \gamma_{1,1},...,\gamma_{1,n-1},\gamma_{2,1},...,\gamma_{n-1,1}$.
 
-The class {\ttfamily Half\+\_\+\+Idempotent\+\_\+\+Basis} allows us to transform polynomials on $x_i$ variables (using {\ttfamily Standard\+\_\+\+Variables}) into polynomials on the elementary symmetric
+The class {\ttfamily Half\+\_\+\+Idempotent\+\_\+\+Basis\+\_\+\+Default} allows us to transform polynomials on $x_i,y_i$ variables ({\ttfamily Half\+\_\+\+Idempotent\+\_\+\+Variables}) into polynomials on the $\alpha_i,c_i,\gamma_{s,i}$ ({\ttfamily Twisted\+\_\+\+Chern\+\_\+\+Variables}).
 
-The code \begin{DoxyVerb}Half_Idempotent_Basis<Rational,Half_Idempotent_Variables<unsigned char>> HB;
+The code \begin{DoxyVerb}Half_Idempotent_Basis_Default<int> HB(2);
 
-polynomial<Rational,Half_Idempotent_Variables<unsigned char>> poly(4);
+Polynomial<default_container<int, Half_Idempotent_Variables<>>> poly2(4);
 
-poly.insert({ 1,0,1,0 }, 2);
+poly2.insert({ 1,0,1,0 }, 2);
 
-poly.insert({ 0,1,0,1 }, 2);
+poly2.insert({ 0,1,0,1 }, 2);
 
-auto new_poly= HB(poly);
+auto new_poly2= HB(poly2);
 
-auto new_new_poly= HB(new_poly);
+auto new_new_poly2= HB(new_poly2);
 
-std::cout << poly << "\n";
+std::cout << poly2 << "\n";
 
-std::cout << new_poly << "\n";
+std::cout << new_poly2 << "\n";
 
-std::cout << new_new_poly << "\n";
+std::cout << new_new_poly2 << "\n";
 \end{DoxyVerb}
 
 
-sets {\ttfamily poly} to be $x_1y_1+x_2y_2$, transforms it into {\ttfamily new\+\_\+poly} which is $2\alpha c_1 + -2\gamma_{1,1}$ and then transforms it to {\ttfamily new\+\_\+new\+\_\+poly} in the original variables, which is equal to {\ttfamily poly}, before printing their names. Thus\+:
+sets {\ttfamily poly} to be $x_1y_1+x_2y_2$, transforms it into {\ttfamily new\+\_\+poly} which is $2\alpha_1 c_1 + -2\gamma_{1,1}$ and then transforms it to {\ttfamily new\+\_\+new\+\_\+poly} in the original variables, which is equal to {\ttfamily poly}, before printing their names. Thus\+:
 
-\$\$x\+\_\+1y\+\_\+1+x\+\_\+2y\+\_\+2=2\textbackslash{}alpha c\+\_\+1-\/2\textbackslash{}gamma\+\_\+\{1,1\}\$\$
+\$\$x\+\_\+1y\+\_\+1+x\+\_\+2y\+\_\+2=-\/2\textbackslash{}gamma\+\_\+\{1,1\}+2\textbackslash{}alpha\+\_\+1 c\+\_\+1\$\$
 
-To print the relations amongst $\alpha,c_i,\gamma_{s,j}$ simply use\+: \begin{DoxyVerb}print_half_idempotent_relations<Rational, Half_Idempotent_Variables<unsigned char>>(3);
+To print the relations amongst $\alpha_i,c_i,\gamma_{s,j}$ simply use\+: \begin{DoxyVerb}print_half_idempotent_relations<>(3,1,1);
 \end{DoxyVerb}
 
 
-The $3$ here corresponds to the number of variables\+: $x_1,x_2,x_3,y_1,y_2,y_3$ and can be replaced by any positive integer.
+The $3$ here corresponds to the half the number of variables\+: $x_1,x_2,x_3,y_1,y_2,y_3$ and can be replaced by any positive integer.
 
 There is also a multithreaded version that you can compile yourself, by removing the comment from the \#pragma omp in the definition of {\ttfamily print\+\_\+half\+\_\+idempotent\+\_\+relations}.
 
-Finally, \mbox{\hyperlink{Demo_8cpp}{Demo.\+cpp}} contains another function, {\ttfamily write\+\_\+pontryagin\+\_\+\+C2\+\_\+in\+\_\+terms\+\_\+of\+\_\+\+Chern\+\_\+classes}. This prints the expressions of the twisted Pontryagin/symplectic classes given by \$\$\textbackslash{}pi\+\_\+\{s,t\}=\textbackslash{}kappa\+\_\+\{s,t\}=\textbackslash{}sum\+\_\+\{1\textbackslash{}le i\+\_\+1$<$ \textbackslash{}cdots$<$ i\+\_\+s\textbackslash{}le n\textbackslash{} 1\textbackslash{}le j\+\_\+1$<$ \textbackslash{}cdots$<$ j\+\_\+t\textbackslash{}le n\textbackslash{} i\+\_\+u\textbackslash{}neq j\+\_\+v\}x$^\wedge$2\+\_\+\{i\+\_\+1\}....x$^\wedge$2\+\_\+\{i\+\_\+s\}y\+\_\+\{j\+\_\+1\}\textbackslash{}cdots y\+\_\+\{j\+\_\+t\}\$\$ in terms of the Chern classes $\alpha,c_i,\gamma_{s,t}$. For example, try running write\+\_\+pontryagin\+\_\+\+C2\+\_\+in\+\_\+terms\+\_\+of\+\_\+\+Chern\+\_\+classes(5); 
+Finally, \mbox{\hyperlink{Demo_8cpp}{Demo.\+cpp}} contains another function, {\ttfamily write\+\_\+pontryagin\+\_\+\+C2\+\_\+in\+\_\+terms\+\_\+of\+\_\+\+Chern\+\_\+classes}. This prints the expressions of the twisted Pontryagin/symplectic classes given by
+
+\$\$\textbackslash{}pi\+\_\+\{s,t\}=\textbackslash{}kappa\+\_\+\{s,t\}=\textbackslash{}sum\+\_\+\{1\textbackslash{}le i\+\_\+1$<$ \textbackslash{}cdots$<$ i\+\_\+s\textbackslash{}le n\textbackslash{} 1\textbackslash{}le j\+\_\+1$<$ \textbackslash{}cdots$<$ j\+\_\+t\textbackslash{}le n\textbackslash{} i\+\_\+u\textbackslash{}neq j\+\_\+v\}x$^\wedge$2\+\_\+\{i\+\_\+1\}....x$^\wedge$2\+\_\+\{i\+\_\+s\}y\+\_\+\{j\+\_\+1\}\textbackslash{}cdots y\+\_\+\{j\+\_\+t\}\$\$
+
+in terms of the $\alpha_i,c_i,\gamma_{s,t}$. For example, try running \begin{DoxyVerb}write_pontryagin_C2_in_terms_of_Chern_classes(5);
+\end{DoxyVerb}
+\hypertarget{use_adv}{}\doxysubsection{Advanced}\label{use_adv}
+The {\ttfamily default\+\_\+container$<$scl\+\_\+t, exp\+\_\+t, ordered$>$} specifies the data structure that should be used to internally store the monomials of the polynomial. This must have the features of an ordered/unordered map (degree,exponent)-\/$>$coefficient. The boolean template parameter {\ttfamily ordered} specifies whether we want to use {\ttfamily std\+::map} (default) or {\ttfamily std\+::unordered\+\_\+map}. When unordered maps are used, it\textquotesingle{}s important to\+:
+\begin{DoxyItemize}
+\item Reserve space for the amount of monomials to be inserted by eg\+: {\ttfamily p.\+reserve(5);} if we expect to store $5$ monomials
+\item Keep in mind that when iterating through the polynomial, the monomials won\textquotesingle{}t be ordered. Same applies when printing the polynomial. In general, using unordered maps is faster especially with a good hashing function (see \mbox{\hyperlink{General_8h}{General.\+h}} for two possible hashing functions that can be used).
+\end{DoxyItemize}
+
+You can also use your own container instead of the {\ttfamily default\+\_\+container}. See the file \mbox{\hyperlink{Polynomials_8h}{Polynomials.\+h}} for the exact requirements from a custom container.
+
+Finally, the {\ttfamily Symmetric\+\_\+\+Basis\+\_\+\+Default} and {\ttfamily Half\+\_\+\+Idempotent\+\_\+\+Basis\+\_\+\+Default} are aliases for {\ttfamily Symmetric\+\_\+\+Basis} and {\ttfamily Half\+\_\+\+Idempotent\+\_\+\+Basis} that accept containers as template parameters for extra customization. 

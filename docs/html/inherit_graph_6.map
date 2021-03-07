@@ -1,6 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,57,68,84"/>
-<area shape="rect" id="node2" href="$structSymmetric__Polynomials_1_1Half__Idempotent__Variables_3_01T_00-1_01_4.html" title="Class specifying variables &#160;where ." alt="" coords="116,5,323,61"/>
-<area shape="rect" id="node3" href="$structSymmetric__Polynomials_1_1Standard__Variables.html" title="The standard variables &#160;in a polynomial, with &#160;and no relations." alt="" coords="123,86,316,127"/>
-<area shape="rect" id="node4" href="$structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables.html" title="Variables &#160;denoting the elementary symmetric polynomials , of degrees ." alt="" coords="371,79,553,135"/>
+<area shape="rect" id="node1" href="$classSymmetric__Polynomials_1_1Factory__Generator.html" title="Prototype for classes providing iterators that generate elements such as interpolating vectors,..." alt="" coords="5,5,185,61"/>
+<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1Combination__Generator_1_1const__iterator.html" title="Constant iterator that is used in a ranged for loop to generate the combinations. Non constant versio..." alt="" coords="233,5,419,61"/>
 </map>

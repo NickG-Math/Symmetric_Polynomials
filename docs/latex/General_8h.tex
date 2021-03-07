@@ -11,7 +11,6 @@ Contains general operations on vectors (eg hashing, adding), the class of ration
 {\ttfamily \#include $<$string$>$}\newline
 {\ttfamily \#include $<$sstream$>$}\newline
 {\ttfamily \#include $<$numeric$>$}\newline
-{\ttfamily \#include $<$algorithm$>$}\newline
 Include dependency graph for General.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -23,14 +22,9 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{General_8h__dep__incl}
+\includegraphics[width=334pt]{General_8h__dep__incl}
 \end{center}
 \end{figure}
-\doxysubsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1Rational}{Symmetric\+\_\+\+Polynomials\+::\+Rational}}
-\begin{DoxyCompactList}\small\item\em Class of rational numbers. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -39,12 +33,10 @@ struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1Rational}{Symmetric\+\_\
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T , typename S $>$ }\\int \mbox{\hyperlink{namespaceSymmetric__Polynomials_a17c6bea90d7e164a084903de6086603d}{Symmetric\+\_\+\+Polynomials\+::general\+\_\+compute\+\_\+degree}} (const T \&exponent, const S \&dimensions)
-\begin{DoxyCompactList}\small\item\em Degree computation given exponent and dimensions (grading) \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T , typename S  = T$>$ }\\S \mbox{\hyperlink{namespaceSymmetric__Polynomials_abc4a90741eac710cd52a41a3ef03b050}{Symmetric\+\_\+\+Polynomials\+::sum}} (const std\+::vector$<$ T $>$ \&a)
-\begin{DoxyCompactList}\small\item\em Returns the sum of all entries of a. \end{DoxyCompactList}\item 
-std\+::ostream \& \mbox{\hyperlink{namespaceSymmetric__Polynomials_a1e73be5bd3843fd88ac01b17239aff96}{Symmetric\+\_\+\+Polynomials\+::operator$<$$<$}} (std\+::ostream \&os, const Rational \&a)
-\begin{DoxyCompactList}\small\item\em Prints rational number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+{\footnotesize template$<$typename T , typename hasher  = boost\+\_\+hash$>$ }\\size\+\_\+t \mbox{\hyperlink{namespaceSymmetric__Polynomials_a144142657f3a44c85c04a63864d4d006}{Symmetric\+\_\+\+Polynomials\+::generic\+\_\+hasher}} (const T \&v)
+\begin{DoxyCompactList}\small\item\em A generic hashing function that calls other hashing functions (second template parameter) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename R , typename T , typename S $>$ }\\R \mbox{\hyperlink{namespaceSymmetric__Polynomials_a412c56e988d52dabedea682bcfcaf5f5}{Symmetric\+\_\+\+Polynomials\+::general\+\_\+compute\+\_\+degree}} (const T \&exponent, const S \&\+\_\+dimensions)
+\begin{DoxyCompactList}\small\item\em Degree computation given exponent and dimensions (grading) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}

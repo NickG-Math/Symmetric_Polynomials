@@ -2,12 +2,11 @@
 \label{Half__Idempotent_8h}\index{source/Half\_Idempotent.h@{source/Half\_Idempotent.h}}
 
 
-Contains the methods and classes for solving the following problem\+: If \$\$R=\textbackslash{}mathbb Q\mbox{[}x\+\_\+1,...,x\+\_\+n,y\+\_\+1,...,y\+\_\+n\mbox{]}/(y\+\_\+i$^\wedge$2=y\+\_\+i)\$\$ produce minimal algebra generators for the fixed points of $R$ under the $\Sigma_n$ action (permuting the $x_i,y_i$ separately), give an algorithm for writing a fixed point in terms of the generators and an algorithm for producing the relations of those generators. ~\newline
+Contains the methods and classes for solving the following problem\+: If \$\$R=\textbackslash{}mathbb Z\mbox{[}x\+\_\+1,...,x\+\_\+n,y\+\_\+1,...,y\+\_\+n\mbox{]}/(y\+\_\+i$^\wedge$2=y\+\_\+i)\$\$ produce minimal algebra generators for the fixed points of $R$ under the $\Sigma_n$ action (permuting the $x_i,y_i$ separately), give an algorithm for writing a fixed point in terms of the generators and an algorithm for producing the relations of those generators. ~\newline
   
 
 
-{\ttfamily \#include \char`\"{}Polynomials.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}Generators.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Symmetric\+\_\+\+Basis.\+h\char`\"{}}\newline
 Include dependency graph for Half\+\_\+\+Idempotent.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -25,25 +24,32 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Variables$<$ T, N $>$}}
+struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Variables$<$ T, \+\_\+deg, N $>$}}
 \begin{DoxyCompactList}\small\item\em Class for variables $x_1,...,x_n,y_1,...,y_n$ where $y_i^2=y_i$. \end{DoxyCompactList}\item 
-struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_3_01T_00-1_01_4}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Variables$<$ T,-\/1 $>$}}
-\begin{DoxyCompactList}\small\item\em Class specifying variables $x_1,...,x_n,y_1,...,y_n$ where $y_i^2=y_i$. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Basis$<$ scalar\+\_\+t, exponent\+\_\+t $>$}}
-\begin{DoxyCompactList}\small\item\em Class for half-\/idempotent symmetric polynomials, allowing transformation from $x_i,y_i$ variables to $\alpha,c_i,\gamma_{s,i}$ variables and vice-\/versa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1Twisted__Chern__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Twisted\+\_\+\+Chern\+\_\+\+Variables$<$ T, \+\_\+deg $>$}}
+\begin{DoxyCompactList}\small\item\em Class specifying the generators $\alpha_i,c_i,\gamma_{s,j}$. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Basis$<$ xy\+\_\+container\+\_\+t, chern\+\_\+container\+\_\+t $>$}}
+\begin{DoxyCompactList}\small\item\em Class for half-\/idempotent symmetric polynomials, allowing transformation from $x_i,y_i$ variables to $\gamma_{s,i}$ variables and vice-\/versa. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Basis$<$ xy\+\_\+container\+\_\+t, chern\+\_\+container\+\_\+t $>$}}
+\begin{DoxyCompactList}\small\item\em Class for half-\/idempotent symmetric polynomials, allowing transformation from $x_i,y_i$ variables to $\gamma_{s,i}$ variables and vice-\/versa. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
  \mbox{\hyperlink{namespaceSymmetric__Polynomials}{Symmetric\+\_\+\+Polynomials}}
 \begin{DoxyCompactList}\small\item\em The namespace which contains every method and class in the library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename scl\+\_\+t , typename exp\+\_\+value\+\_\+t  = int64\+\_\+t, typename deg\+\_\+t  = int64\+\_\+t, bool ordered = 1$>$ }\\using \mbox{\hyperlink{namespaceSymmetric__Polynomials_a4fabc1695bf98cd5288dff6bacd769af}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Basis\+\_\+\+Default}} = Half\+\_\+\+Idempotent\+\_\+\+Basis$<$ default\+\_\+container$<$ scl\+\_\+t, Half\+\_\+\+Idempotent\+\_\+\+Variables$<$ exp\+\_\+value\+\_\+t, deg\+\_\+t $>$, ordered $>$, default\+\_\+container$<$ scl\+\_\+t, Twisted\+\_\+\+Chern\+\_\+\+Variables$<$ exp\+\_\+value\+\_\+t, deg\+\_\+t $>$, ordered $>$ $>$
+\begin{DoxyCompactList}\small\item\em Aliases \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Half\+\_\+\+Idempotent\+\_\+\+Basis}} for certain default template parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename scalar\+\_\+t , typename exponent\+\_\+t $>$ }\\void \mbox{\hyperlink{namespaceSymmetric__Polynomials_a843da471ac0687f5ffa34c497a2929a9}{Symmetric\+\_\+\+Polynomials\+::print\+\_\+half\+\_\+idempotent\+\_\+relations}} (int n, bool print=0, bool verify=0)
-\begin{DoxyCompactList}\small\item\em Prints all relations in the description of the fixed points of R=Q\mbox{[}x\+\_\+1,...,x\+\_\+n,y\+\_\+1,...,y\+\_\+n\mbox{]}/(y\+\_\+i$^\wedge$2=y\+\_\+i) using Idem, Chern and Twisted\+Chern. \end{DoxyCompactList}\end{DoxyCompactItemize}
+{\footnotesize template$<$typename H\+IB  = Half\+\_\+\+Idempotent\+\_\+\+Basis\+\_\+\+Default$<$int64\+\_\+t, uint64\+\_\+t, uint64\+\_\+t, 0$>$$>$ }\\void \mbox{\hyperlink{namespaceSymmetric__Polynomials_a3c87e70d8d3eb671a12dcd957e7175ab}{Symmetric\+\_\+\+Polynomials\+::print\+\_\+half\+\_\+idempotent\+\_\+relations}} (int n, bool print=0, bool verify=0, bool verify\+\_\+verbose=0)
+\begin{DoxyCompactList}\small\item\em Prints all relations in the description of the fixed points of $R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$ in terms of $\alpha_i, c_i, \gamma_{s,j}$ (printed as a\+\_\+i,c\+\_\+i,c\+\_\+\{s,j\} in the console) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Contains the methods and classes for solving the following problem\+: If \$\$R=\textbackslash{}mathbb Q\mbox{[}x\+\_\+1,...,x\+\_\+n,y\+\_\+1,...,y\+\_\+n\mbox{]}/(y\+\_\+i$^\wedge$2=y\+\_\+i)\$\$ produce minimal algebra generators for the fixed points of $R$ under the $\Sigma_n$ action (permuting the $x_i,y_i$ separately), give an algorithm for writing a fixed point in terms of the generators and an algorithm for producing the relations of those generators. ~\newline
+Contains the methods and classes for solving the following problem\+: If \$\$R=\textbackslash{}mathbb Z\mbox{[}x\+\_\+1,...,x\+\_\+n,y\+\_\+1,...,y\+\_\+n\mbox{]}/(y\+\_\+i$^\wedge$2=y\+\_\+i)\$\$ produce minimal algebra generators for the fixed points of $R$ under the $\Sigma_n$ action (permuting the $x_i,y_i$ separately), give an algorithm for writing a fixed point in terms of the generators and an algorithm for producing the relations of those generators. ~\newline
  
 

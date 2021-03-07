@@ -31,41 +31,42 @@ This documentation is organized in pages as follows:
 \tableofcontents
 \section sym Symmetric polynomials
 
-Let \f$R=\mathbb Q[x_1,...,x_n]\f$; there is an obvious action on \f$R\f$ by the symmetric group \f$\Sigma_n\f$ and the fixed points \f$R^{\Sigma_n}\f$ i.e. the symmetric polynomials, form a polynomial algebra on the elementary symmetric polynomials: $$R^{\Sigma_n}=\mathbb Q[\sigma_1,...,\sigma_n]$$ where 
+Let \f$R=\mathbb Z[x_1,...,x_n]\f$; there is an obvious action on \f$R\f$ by the symmetric group \f$\Sigma_n\f$ and the fixed points \f$R^{\Sigma_n}\f$ i.e. the symmetric polynomials, form a polynomial algebra on the elementary symmetric polynomials: $$R^{\Sigma_n}=\mathbb Z[\sigma_1,...,\sigma_n]$$ where 
 $$\sigma_k(x_1,...,x_n)=\sum_{1\le i_1< \cdots< i_k\le n}x_{i_1}....x_{i_k}$$
 Furthermore, there is a simple algorithm for writing every symmetric polynomial on the \f$x_i\f$ as a polynomial on the \f$\sigma_i\f$. This library implements that algorithm.
 
 
 \section symr Symmetric polynomials with 'half idempotent' relations
 
-Let \f$R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)\f$; there is an obvious action on \f$R\f$ by the symmetric group \f$\Sigma_n\f$ permuting the \f$x_i\f$ and \f$y_i\f$ variables separately. A minimal description of the \f$R^{\Sigma_n}\f$ is now more difficult:
-$$R^{\Sigma_n}=\frac{\mathbb Q[\alpha,c_i,\gamma_{s,t}]}{\sim}$$ where 
-$$\alpha=y_1+\cdots+y_n$$
-$$c_k=\sum_{1\le i_1< \cdots< i_k\le n}x_{i_1}....x_{i_k}$$
-$$\gamma_{s,t}=\sum_{1\le i_1< \cdots< i_s\le n\\
-1\le j_1< \cdots< j_t\le n\\
-i_u\neq j_v}x_{i_1}....x_{i_s}y_{j_1}\cdots y_{j_t}$$
-where \f$1\le i\le n\f$ and \f$1\le s\le n\f$ and \f$1\le t\le n-s\f$.
+Let \f$R=\mathbb Z[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)\f$; there is an obvious action on \f$R\f$ by the symmetric group \f$\Sigma_n\f$ permuting the \f$x_i\f$ and \f$y_i\f$ variables separately. A minimal description of the \f$R^{\Sigma_n}\f$ is now more difficult:
+$$R^{\Sigma_n}=\frac{\mathbb Z[\gamma_{s,i}]}{\gamma_{s,i}\gamma_{t,j}={{\min(i+j+s,n)-t}\choose j}\gamma_{t,0}\gamma_{s,\min(i+j,n)}+\cdots}$$ where the "twisted Chern classes" are:
+$$\gamma_{s,i}=\sum_{1\le j_1< \cdots< j_s\le n, 
+1\le k_1< \cdots< k_i\le n\\
+j_u\neq k_v}x_{j_1}....x_{j_s}y_{k_1}\cdots y_{k_i}$$
+for \f$0\le s\le n\f$ and \f$0\le i\le n-s\f$. The relations require the indices \f$s,i,t,j\f$ to satisfy \f$s\le t\le s+i\f$ and \f$i,j>0\f$.
 
-The relations \f$\sim\f$ are:
+For convenience we set:
+$$\alpha_i=\gamma_{0,i}=\sigma_i(y_1,...,y_n)$$
+$$c_s=\gamma_{s,0}=\sigma_s(x_1,...,x_n)$$
+Over \f$\mathbb Q\f$, the \f$\alpha_1^i\f$ can generate all \f$\alpha_i\f$ via:
+$$\alpha_i=\frac{\alpha(\alpha-1)\cdots(\alpha-i+1)}{i!}$$
+however for speed+numerical stability we prefer to use all \f$\alpha_i\f$ and have \f$\mathbb Z\f$ coefficients in our relations.
 
-$$\alpha^{n+1}=\alpha^n+\cdots$$
-$$\alpha^s\gamma_{s,i}=c_s\alpha^{i+s}+\cdots$$ 
-$$\gamma_{s,i}\gamma_{t,j}=c_t\gamma_{s,\min(i+j,n)}+\cdots$$ 
-where \f$s\le t\le s+i\f$ for the last relation.
+This library implements an algorithm that can write every element in \f$R^{\Sigma_n}\f$ as a polynomial on the generators \f$\alpha_i,c_i,\gamma_{s,i}\f$ and further produce every relation explicitly. 
 
-The first relation can be explicitly computed as:
-$$	\alpha(\alpha-1)\cdots (\alpha-n)=0$$
-
-This library implements an algorithm that can write every element in \f$R^{\Sigma_n}\f$ as a polynomial on the generators \f$\alpha,c_i,\gamma_{s,t}\f$ and further produce every relation explicitly. The class \f$\alpha\f$ is referred to as "idempotent class" (since it's made out of idempotents), the classes \f$c_i\f$ are referred to as "Chern classes" and the classes \f$\gamma_{s,t}\f$ are the "twisted Chern classes".
+The "twisted Pontryagin/symplectic classes" are defined as:
+$$\kappa_{s,i}=\sum_{1\le j_1< \cdots< j_s\le n, 
+1\le k_1< \cdots< k_i\le n\\
+j_u\neq k_v}x^2_{j_1}....x^2_{j_s}y_{k_1}\cdots y_{k_i}$$
+This library also allows one to write the \f$\kappa_{s,i}\f$ in terms of the \f$\gamma_{s,i}\f$
 
 \page use How to Use
 \tableofcontents
 \section demo Quick Demonstration
 
-For a quick demonstration you may use the binaries Demo.exe or Demo.out found <a href="https://github.com/NickG-Math/Symmetric_Polynomials/releases">here</a>. These are compiled from Demo.cpp using MSVC and Clang respectively. You can also compile these binaries yourself. For example, on Linux use:
+For a quick demonstration you may use the binaries found <a href="https://github.com/NickG-Math/Symmetric_Polynomials/releases">here</a>. These are compiled from Demo.cpp using MSVC and Clang respectively. You can also compile these binaries yourself. For example, on Linux use:
 
-    clang++ source/Demo.cpp -std=c++17 -O3 -march=native -o Demo.out	
+    clang++ source/Demo.cpp -std=c++17 -O3 -march=native -o Lin64.out	
 
 You can similarly do this over Windows using MSVC, producing a .exe file . Make sure to use the ```-std=c++17``` flag (or set the language options in an IDE to support C++17).
 
@@ -79,106 +80,131 @@ Everything in this library is under the namespace ```Symmetric_Polynomials```. F
 
 \subsection mono Polynomials
 
-A polynomial in multiple variables is specified by two template parameters:
-- ```scalar_t```: the type of coefficients eg ```int``` or ```Rational```
-- ```exponent_t```: the type of variables used eg ```Standard_Variables<unsigned char>``` or ```Half_Idempotent_Variables<unsigned char>```. These specify the relations/degrees/names of the variables in the polynomial. For example, ```Standard_Variables<unsigned char>``` specifies variables \f$x_1,...,x_n\f$ with degrees \f$|x_i|=1\f$ and no relations. On the other hand, ```Half_Idempotent_Variables<unsigned char>``` specifies variables \f$x_1,...,x_n,y_1,...,y_n\f$ with degrees \f$|x_i|=1, |y_i|=0\f$ and relations \f$y_i^2=y_i\f$. The ```unsigned char``` is the type for the exponent vectors (see below).
+A polynomial in multiple variables can be default constructed as:
+	
+	Polynomial<default_container<int, Standard_Variables<>>> p;
+	
+Let us explain the template parameters:
+- ```int``` is the type of the scalar coefficients, so it can be replaced by ```float``` etc.
+- ```Standard_Variables<>``` specifies that our variables are \f$x_1,...,x_n\f$ with degrees \f$|x_i|=1\f$ and no relations. It can be replaced by ```Half_Idempotent_Variables```
+that specify variables \f$x_1,...,x_n,y_1,...,y_n\f$ with degrees \f$|x_i|=1, |y_i|=0\f$ and relations \f$y_i^2=y_i\f$.
+- The ```default_container``` specifies the container used to store the monomials in the polynomial. See the advanced subsection below. 
 
 To initialize a polynomial, provide the desired number of variables \f$n\f$. For example, if \f$n=3\f$:
 
-
-	polynomial<int,Standard_Variables<unsigned char>> p(3);
-
+	p=Polynomial<default_container<int, Standard_Variables<>>>(3);
 
 Next, insert monomials \f$cx_1^{a_1}\cdots x_n^{a_n}\f$ by providing the exponent vector \f$[a_1,...,a_n]\f$ and the coefficient \f$c\f$. Eg:
 
-
 	p.insert({0,1,4},7);
 
+inserts the monomial \f$7x_2x_3^4\f$ in ```p```. If we further insert
 
-inserts the monomial \f$7x_2x_3^4\f$ in ```p```. Note that the exponent vector is of type ```Standard_Variables<unsigned char>``` so \f$a_i\le 2^8-1\f$. To allow for bigger \f$a_i\f$'s, at the cost of more memory, use ```unsigned long``` in the place of ```unsigned char```.
+	p.insert({1,1,2},-8);
 
-You can also use other coefficients, such as ```Rational```, or other types of variables, such as ```Half_Idempotent_Variables```. For example,
+then ```p``` becomes \f$-8x_1x_2x_3^2+7x_2x_3^4\f$ and printing it to console verifies that:
 
+	std::cout << p << "\n";
 
-	polynomial<Rational,Half_Idempotent_Variables<unsigned char>> p(4);
+ It is the user's responsibility to make sure that
+- the number of variables is the length of the exponent vector being inserted
+- the coefficient provided is never \f$0\f$
+- not attempt to insert a monomial with an already existing exponent vector (doing so does not change the polynomial)
 
-	p.insert({1,2,0,1},Rational(2,3));
+Polynomials can be added, subtracted and multiplied by binary operators ```+,-,*``` eg:
 
-	p.insert({1,1,1,1},Rational(1,7));
+	std::cout << (p+(p^2))<< "\n";
 
-    
-specifies the polynomial \f$\frac17 x_1x_2y_1y_2+\frac23x_1x_2^2y_2\f$.
+will print 
 
-Polynomials can be added, subtracted and multiplied by binary operators ```+,-,*```. One can also raise a polynomial to a nonnegative integer power using the binary operator ```^```. They can also be printed to an output stream eg by using ```std::cout << p;```
+$$-8x_1x_2x_3^2 + 7x_2x_3^4 + 64x_1^2x_2^2x_3^4 + -112x_1x_2^2x_3^6 + 49x_2^2x_3^8$$
 
 \subsection sym Symmetric Basis
 
-The class ```Symmetric_Basis``` allows us to transform polynomials on \f$x_i\f$ variables (using ```Standard_Variables```) into polynomials on the elementary symmetric polynomials ```e[i]```  (corresponding to \f$\sigma_i\f$). For example:
+The class ```Symmetric_Basis_Default``` allows us to transform polynomials on \f$x_i\f$ variables (```Standard_Variables```) into polynomials on the elementary symmetric polynomials \f$e_i=\sigma_i\f$ (```Elementary_Symmetric_Variables```). For example:
 
-	Symmetric_Basis<int, Standard_Variables<unsigned char>> SB;
-	
-	polynomial<int,Standard_Variables<unsigned char>> poly(2);
-	
+	Symmetric_Basis_Default<int> SB(2);
+
+	Polynomial<default_container<int, Standard_Variables<>>> poly(2);
+
 	poly.insert({1,2},2);
-	
+
 	poly.insert({2,1},2);
-	
-	polynomial<int, Elementary_Symmetric_Variables<unsigned char>>  new_poly= SB(poly);
-	
-	polynomial<int, Standard_Variables<unsigned char>>  new_new_poly= SB(new_poly);
-	
+
+	Polynomial<default_container<int, Elementary_Symmetric_Variables<>>>  new_poly= SB(poly);
+
+	Polynomial<default_container<int, Standard_Variables<>>>  new_new_poly= SB(new_poly);
+
 	std::cout << poly << "\n";
-	
+
 	std::cout<< new_poly << "\n";
-	
+
 	std::cout << new_new_poly << "\n";
 
 
-does the following: First it sets ```poly``` to \f$2x_1x_2^2+2x_1^2x_2\f$, transforms into ```new_poly``` which is \f$2e_1e_2\f$ and then transforms ```new_poly``` into ```new_new_poly``` which is \f$2x_1x_2^2+2x_1^2x_2\f$ (i.e. the original polynomial) and finally prints the three polynomials. This all means that
-$$2x_1x_2^2+2x_1^2x_2=2\sigma_1\sigma_2$$
+does the following: First it sets ```poly``` to \f$2x_1x_2^2+2x_1^2x_2\f$, then transforms it in \f$e_i\f$ variables as ```new_poly``` which is \f$2e_1e_2\f$ and then transforms that back to \f$x_i\f$ variables as ```new_new_poly``` which is \f$2x_1x_2^2+2x_1^2x_2\f$ (i.e. the original polynomial) and finally prints the three polynomials. This all means that
+$$2x_1x_2^2+2x_1^2x_2=2e_1e_2$$
 
 \subsection halfidem Half idempotent relations
 
-When we have the "half idempotent relation" i.e. variables \f$x_i,y_i\f$ with \f$y_i^2=y_i\f$ (as specified by ```Half_Idempotent_Variables```), the generators are \f$\alpha, c_i, \gamma_{s,t}\f$ (see \ref math) or ```Idem```, ```Chern[i]``` and ```TwistedChern[s][t]``` respectively as they are used in the program. We order them as \f$\alpha,c_1,...,c_n, \gamma_{1,1},...,\gamma_{1,n-1},\gamma_{2,1},...,\gamma_{n-1,1}\f$. 
+When we have the "half idempotent relation" i.e. variables \f$x_i,y_i\f$ with \f$y_i^2=y_i\f$ (as specified by ```Half_Idempotent_Variables```), the generators are \f$\alpha_i, c_i, \gamma_{s,t}\f$ (see \ref math) or ```Idem[i]```, ```Chern[i]``` and ```TwistedChern[s][t]``` respectively as they are used in the program. We order them as \f$\alpha_1,...,\alpha_n,c_1,...,c_n, \gamma_{1,1},...,\gamma_{1,n-1},\gamma_{2,1},...,\gamma_{n-1,1}\f$. 
 
-The class ```Half_Idempotent_Basis``` allows us to transform polynomials on \f$x_i\f$ variables (using ```Standard_Variables```) into polynomials on the elementary symmetric
+The class ```Half_Idempotent_Basis_Default``` allows us to transform polynomials on \f$x_i,y_i\f$ variables (```Half_Idempotent_Variables```) into polynomials on the \f$\alpha_i,c_i,\gamma_{s,i}\f$ (```Twisted_Chern_Variables```).
 
 The code
 
-	Half_Idempotent_Basis<Rational,Half_Idempotent_Variables<unsigned char>> HB;
+	Half_Idempotent_Basis_Default<int> HB(2);
 
-	polynomial<Rational,Half_Idempotent_Variables<unsigned char>> poly(4);
+	Polynomial<default_container<int, Half_Idempotent_Variables<>>> poly2(4);
 	
-	poly.insert({ 1,0,1,0 }, 2);
+	poly2.insert({ 1,0,1,0 }, 2);
 	
-	poly.insert({ 0,1,0,1 }, 2);
+	poly2.insert({ 0,1,0,1 }, 2);
 	
-	auto new_poly= HB(poly);
+	auto new_poly2= HB(poly2);
 	
-	auto new_new_poly= HB(new_poly);
+	auto new_new_poly2= HB(new_poly2);
 	
-	std::cout << poly << "\n";
+	std::cout << poly2 << "\n";
 	
-	std::cout << new_poly << "\n";
+	std::cout << new_poly2 << "\n";
 	
-	std::cout << new_new_poly << "\n";
+	std::cout << new_new_poly2 << "\n";
 
-sets ```poly``` to be \f$x_1y_1+x_2y_2\f$, transforms it into ```new_poly``` which is \f$2\alpha c_1 + -2\gamma_{1,1}\f$ and then transforms it to ```new_new_poly``` in the original variables, which is equal to ```poly```, before printing their names. Thus:
+sets ```poly``` to be \f$x_1y_1+x_2y_2\f$, transforms it into ```new_poly``` which is \f$2\alpha_1 c_1 + -2\gamma_{1,1}\f$ and then transforms it to ```new_new_poly``` in the original variables, which is equal to ```poly```, before printing their names. Thus:
 
-$$x_1y_1+x_2y_2=2\alpha c_1-2\gamma_{1,1}$$
+$$x_1y_1+x_2y_2=-2\gamma_{1,1}+2\alpha_1 c_1$$
 
-To print the relations amongst \f$\alpha,c_i,\gamma_{s,j}\f$ simply use:
+To print the relations amongst \f$\alpha_i,c_i,\gamma_{s,j}\f$ simply use:
 
-	print_half_idempotent_relations<Rational, Half_Idempotent_Variables<unsigned char>>(3);
+	print_half_idempotent_relations<>(3,1,1);
 	
-The \f$3\f$ here corresponds to the number of variables: \f$x_1,x_2,x_3,y_1,y_2,y_3\f$ and can be replaced by any positive integer.
+The \f$3\f$ here corresponds to the half the number of variables: \f$x_1,x_2,x_3,y_1,y_2,y_3\f$ and can be replaced by any positive integer.
 
 There is also a multithreaded version that you can compile yourself, by removing the comment from the #pragma omp in the definition of ```print_half_idempotent_relations```.
 
 
 Finally, Demo.cpp contains another function, ```write_pontryagin_C2_in_terms_of_Chern_classes```. This prints the expressions of the twisted Pontryagin/symplectic classes given by
+
 $$\pi_{s,t}=\kappa_{s,t}=\sum_{1\le i_1< \cdots< i_s\le n\\
 1\le j_1< \cdots< j_t\le n\\
 i_u\neq j_v}x^2_{i_1}....x^2_{i_s}y_{j_1}\cdots y_{j_t}$$
-in terms of the Chern classes \f$\alpha,c_i,\gamma_{s,t}\f$. For example, try running
+
+in terms of the \f$\alpha_i,c_i,\gamma_{s,t}\f$. 
+For example, try running 
+
 	write_pontryagin_C2_in_terms_of_Chern_classes(5);
+	
+	
+\subsection adv Advanced
+
+The ```default_container<scl_t, exp_t, ordered>``` specifies the data structure that should be used to internally store the monomials of the polynomial. This must have the features of an ordered/unordered map (degree,exponent)->coefficient. The boolean template parameter ```ordered``` specifies whether we want to use ```std::map``` (default) or ```std::unordered_map```. 
+When unordered maps are used, it's important to:
+- Reserve space for the amount of monomials to be inserted by eg: ```p.reserve(5);``` if we expect to store \f$5\f$ monomials
+- Keep in mind that when iterating through the polynomial, the monomials won't be ordered. Same applies when printing the polynomial.
+In general, using unordered maps is faster especially with a good hashing function (see \ref General.h for two possible hashing functions that can be used).
+
+You can also use your own container instead of the ```default_container```. See the file \ref Polynomials.h for the exact requirements from 
+a custom container.
+
+Finally, the ```Symmetric_Basis_Default``` and ```Half_Idempotent_Basis_Default``` are aliases for ```Symmetric_Basis``` and ```Half_Idempotent_Basis``` that  accept containers as template parameters for extra customization.

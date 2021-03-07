@@ -40,14 +40,16 @@ var NAVTREE =
         [ "Symmetric polynomials", "math.html#sym", null ],
         [ "Namespaces", "use.html#namesp", null ],
         [ "Polynomials", "use.html#mono", null ],
-        [ "Half idempotent relations", "use.html#halfidem", null ]
+        [ "Half idempotent relations", "use.html#halfidem", null ],
+        [ "Advanced", "use.html#adv", null ]
       ] ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
-        [ "Functions", "namespacemembers_func.html", null ]
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Typedefs", "namespacemembers_type.html", null ]
       ] ]
     ] ],
     [ "Classes", "annotated.html", [
@@ -58,6 +60,7 @@ var NAVTREE =
         [ "All", "functions.html", null ],
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
+        [ "Typedefs", "functions_type.html", null ],
         [ "Related Functions", "functions_rela.html", null ]
       ] ]
     ] ],

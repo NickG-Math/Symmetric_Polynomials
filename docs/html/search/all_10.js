@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['write_5fpontryagin_5fc2_5fin_5fterms_5fof_5fchern_5fclasses_68',['write_pontryagin_C2_in_terms_of_Chern_classes',['../Demo_8cpp.html#a1660780e039cee9f194c25e9be8c0ca4',1,'Demo.cpp']]]
+  ['the_20math_80',['The Math',['../math.html',1,'']]],
+  ['twisted_5fchern_5fvariables_81',['Twisted_Chern_Variables',['../structSymmetric__Polynomials_1_1Twisted__Chern__Variables.html',1,'Symmetric_Polynomials']]]
 ];

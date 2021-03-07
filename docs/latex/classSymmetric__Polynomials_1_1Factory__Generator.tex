@@ -2,7 +2,7 @@
 \label{classSymmetric__Polynomials_1_1Factory__Generator}\index{Symmetric\_Polynomials::Factory\_Generator$<$ specialization, gen\_t $>$@{Symmetric\_Polynomials::Factory\_Generator$<$ specialization, gen\_t $>$}}
 
 
-Prototype for an iterator that generates elements such as interpolating vectors, permutations, combinations and so on.  
+Prototype for classes providing iterators that generate elements such as interpolating vectors, permutations, combinations and so on.  
 
 
 
@@ -50,7 +50,9 @@ gen\+\_\+t \mbox{\hyperlink{classSymmetric__Polynomials_1_1Factory__Generator_a5
 \subsubsection*{template$<$typename specialization, typename gen\+\_\+t$>$\newline
 class Symmetric\+\_\+\+Polynomials\+::\+Factory\+\_\+\+Generator$<$ specialization, gen\+\_\+t $>$}
 
-Prototype for an iterator that generates elements such as interpolating vectors, permutations, combinations and so on. 
+Prototype for classes providing iterators that generate elements such as interpolating vectors, permutations, combinations and so on. 
+
+Inherit from this class and define a method update() to get a const iterator (you will also need begin() and \mbox{\hyperlink{classSymmetric__Polynomials_1_1Factory__Generator_a4c5bb7b8ec49b21e6aa3ec09e4d435e7}{end()}} methods constructing such iterators; \mbox{\hyperlink{classSymmetric__Polynomials_1_1Factory__Generator_a4c5bb7b8ec49b21e6aa3ec09e4d435e7}{end()}} should always be defined by calling the factory \mbox{\hyperlink{classSymmetric__Polynomials_1_1Factory__Generator_a4c5bb7b8ec49b21e6aa3ec09e4d435e7}{end()}} ). The template specialization is used for compile-\/time polymorphism (C\+R\+TP) so set it to be the child class. The template gen\+\_\+t is the type of the generated element. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classSymmetric__Polynomials_1_1Factory__Generator_a038b517134edf6991c98bcac9fa5e215}\label{classSymmetric__Polynomials_1_1Factory__Generator_a038b517134edf6991c98bcac9fa5e215}} 
