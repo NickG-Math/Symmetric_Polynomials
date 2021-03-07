@@ -8,11 +8,12 @@
 namespace Symmetric_Polynomials {
 
 	///////////////////////////////////////////////////////////////////////////////////
-	///Prototype for an iterator that generates elements such as interpolating vectors, permutations, combinations and so on
+	///Prototype for classes providing iterators that generate elements such as interpolating vectors, permutations, combinations and so on
 	//
-	//Inherit from this class and define a method update() to get a const iterator (you will also need begin() and end() methods constructing such iterators; end() should always be defined by calling returning terminal() ).
-	//The template specialization is used for compile-time polymorphism (CRTP). Set it to be the child class and make sure the child class befriends generating_const_iterator.
-	//The template gen_t is the type of the generated element.
+	///Inherit from this class and define a method update() to get a const iterator (you will also need begin() and end() methods constructing such iterators; end() should always be defined by calling the factory end() ).
+	///The template specialization is used for compile-time polymorphism (CRTP) so set it to be the child class.
+	///The template gen_t is the type of the generated element.
+	//////////////////////////////////////////////////////////////////////////////////
 	template<typename specialization, typename gen_t>
 	class Factory_Generator {
 	public:
@@ -22,7 +23,7 @@ namespace Symmetric_Polynomials {
 		}
 		///Equality of iterators
 		bool operator!=(const Factory_Generator& other) const {
-			if (other.completed) //quick check
+			if (other.completed) //quick check if other=end
 				return !completed;
 			else
 				return generated == other.generated;
@@ -56,15 +57,15 @@ namespace Symmetric_Polynomials {
 		const T n;
 	public:
 		///Returns the total number of permutations i.e. the factorial
-		long size() const {
-			long factorial = 1;
+		size_t size() const {
+			size_t factorial = 1;
 			for (int i = 2; i <= n; i++) {
 				factorial *= i;
 			}
 			return factorial;
 		}
 		///Constructor using number of letters
-		Permutation_Generator(char n) : n(n) {}
+		Permutation_Generator(T n) : n(n) {}
 		///Constant iterator that is used in a ranged for loop to generate the permutations. Non constant version is illegal
 		class const_iterator : public Factory_Generator<Permutation_Generator::const_iterator, std::vector<T>> {
 			void update() {
@@ -102,10 +103,10 @@ namespace Symmetric_Polynomials {
 		const T total, choices;
 	public:
 		///Total number of combinations
-		long size() const {
+		auto size() const {
 			//safe implementation
 			auto lowchoices = (choices > total - choices) ? total - choices : choices;
-			int binom = total;
+			auto binom = total;
 			for (int i = 1; i <= lowchoices - 1; i++) { // $n/1 * (n-1)/2 * \cdots (n-k+1)/k$
 				binom *= (total - i);
 				binom /= i + 1;
@@ -113,17 +114,19 @@ namespace Symmetric_Polynomials {
 			return binom;
 		}
 		///Constructor using the total number of elements and the amount of choices we make
-		Combination_Generator(int total, int choices) : total(total), choices(choices) {}
+		Combination_Generator(T total, T choices) : total(total), choices(choices) {
+			if (choices> total)
+				throw("You can't choose more elements than those existing!");		
+		}
 
 		///Constant iterator that is used in a ranged for loop to generate the combinations. Non constant version is illegal
 		class const_iterator : public Factory_Generator<Combination_Generator::const_iterator, std::vector<T>> {
 			void update() {
-				for (int i = choices - 1; i >= 0; i--) {
-					if (this->generated[i] - i < total - choices) {
+				for (int i = (int)choices - 1; i >= 0; i--) { //must be signed!
+					if (this->generated[i] < total - choices + i) {
 						this->generated[i]++;
-						for (int j = i + 1; j < choices; j++) {
+						for (auto j = i + 1; j < (int)choices; j++)
 							this->generated[j] = this->generated[j - 1] + 1;
-						}
 						return;
 					}
 				}
@@ -133,7 +136,7 @@ namespace Symmetric_Polynomials {
 			const_iterator() {}
 			friend class Combination_Generator;
 			friend class Factory_Generator<Combination_Generator::const_iterator, std::vector<T>>;
-			int total, choices;
+			T total, choices;
 		};
 		///Initial generator
 		const_iterator begin() const {
@@ -208,10 +211,10 @@ namespace Symmetric_Polynomials {
 			vector_interpolate_generator(const std::vector<char>& min, const std::vector<char>& max, const std::function<char(const std::vector<char>&)>& policy = policy::always_true<std::vector<char>>)
 				: min(min), max(max), policy(policy) {}
 			///Returns upper bound on the amount of generated elements
-			long size() {
+			size_t size() {
 				if (min.empty())
 					return 0;
-				long total = max[0] - min[0] + 1;
+				size_t total = max[0] - min[0] + 1;
 				for (int i = 1; i < max.size(); i++) {
 					total *= max[i] - min[i] + 1;
 				}
@@ -284,63 +287,6 @@ namespace Symmetric_Polynomials {
 				vectors.push_back(i);
 			return vectors;
 		}
-
-		///The comparator that checks if the degree of a given exponent vector is equal to a desired degree
-		template<typename rel_t>
-		struct degree_comparator {
-			///Returns 1 if the degree agrees with the desired degree, -1 if it's higher than the desired degree and 0 otherwise.
-			char acceptable(const std::vector<char>& a) {
-				auto d = rel_t::compute_degree(a);
-				if (d > desired_degree)
-					return -1;
-				else if (d == desired_degree)
-					return 1;
-				else
-					return 0;
-			}
-			///Constructor given the desired degree
-			degree_comparator(int desired_degree) : desired_degree(desired_degree) {}
-
-		private:
-			const int desired_degree;
-		};
-
-		//////////////////////////////////////////////////////////////////
-		///The comparator that checks  if the degree of a given exponent vector is equal to a desired degree, and further disqualifies a exponent vector if it contains a relation.
-		//
-		///Eg a relation can be \f$a_1^2a_2=\cdots\f$. In that case, an exponent vector [2,1,0,...,] is disqualified, and so are all [v_1,v_2,v_3,...] with v_1>=2 and v_2>=1 since these also contain the relation
-		///The relations are allowed to be very complicated (think equivariant Chern classes) hence why they are not encoded in a rel_t
-		/////////////////////////////////////////////////////////////////////////////
-		class degree_comparator_relations {
-			const int desired_degree;
-			const std::vector<char> dimensions;
-			const std::vector<std::vector<char>> relations;
-
-			bool has_relation(const std::vector<char>& a) {
-				for (const auto& rel : relations)
-					if (rel <= a)
-						return 1;
-				return 0;
-			}
-
-		public:
-			///Constructor given the desired degree, unacceptable combinations and dimensions
-			degree_comparator_relations(int desired_degree, const std::vector<std::vector<char>>& relations, const std::vector<char>& dimensions)
-				: desired_degree(desired_degree), dimensions(dimensions), relations(relations) {}
-
-
-			///Returns 1 if the degree agrees with the desired degree and has no relations, -1 if it's higher than the desired degree and 0 otherwise.
-			char acceptable(const std::vector<char>& a) {
-				auto d = general_compute_degree(a, dimensions);
-				if (d > desired_degree)
-					return -1;
-				else if (d < desired_degree)
-					return 0;
-				return !has_relation(a);
-			}
-		};
-
-
 
 
 		///Applies permutation perm on the target from starting point begin
