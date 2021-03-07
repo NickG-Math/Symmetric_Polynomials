@@ -1,5 +1,5 @@
 # Symmetric Polynomials
-This is a header-only C++ library for computing decompositions of symmetric polynomials with relations. Please see this <a href="https://nickg-math.github.io/Symmetric_Polynomials/docs/html/index.html">page</a> for a lot more details.
+This is a header-only C++ library for computing decompositions of symmetric polynomials with relations. Please see this <a href="https://nickg-math.github.io/Symmetric_Polynomials/docs/html/math.html">page</a> for a lot more details.
 
 There are two ways you can use it:
 
