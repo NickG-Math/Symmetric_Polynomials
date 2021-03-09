@@ -283,8 +283,7 @@ namespace Symmetric_Polynomials {
 		///Raises polynomial to given power (does nothing if p<0)
 		template<typename any_int_type=int>
 		Polynomial operator^(any_int_type p) const {
-			if constexpr (!std::is_integral_v<any_int_type>)
-				static_assert("A polynomial may only be raised to a (nonnegative) integer power");
+			static_assert(std::is_integral_v<any_int_type>, "A polynomial may only be raised to a (nonnegative) integer power");
 			if (p == 0)
 				return Polynomial(_number_of_variables, 1, _dimensions, _variable_names);
 			if (p == 1)
