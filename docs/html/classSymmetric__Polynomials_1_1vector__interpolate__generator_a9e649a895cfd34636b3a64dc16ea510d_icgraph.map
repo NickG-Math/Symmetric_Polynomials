@@ -1,6 +1,0 @@
-<map id="Symmetric_Polynomials::vector_interpolate_generator::get_generated" name="Symmetric_Polynomials::vector_interpolate_generator::get_generated">
-<area shape="rect" id="node1" title="Returns the generated vector." alt="" coords="488,43,683,99"/>
-<area shape="rect" id="node2" href="$structSymmetric__Polynomials_1_1monomial__basis__generator.html#aa736ef8397a038f89e465d3bc2bc7d1d" title="Returns the generated monomial." alt="" coords="233,5,440,61"/>
-<area shape="rect" id="node4" href="$namespaceSymmetric__Polynomials.html#aa594e9902e2709cb0ba760b14577b7ee" title="Returns all vectors between min, max and satisfying a given policy." alt="" coords="247,86,427,127"/>
-<area shape="rect" id="node3" href="$namespaceSymmetric__Polynomials.html#a591a8f1544a9eb3c4c8113d4e55df622" title="Returns the monomial basis in given number of variables and degree." alt="" coords="5,13,185,54"/>
-</map>

@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('structSymmetric__Polynomials_1_1Standa
 <p>The standard variables \(x_i\) in a polynomial, with \(|x_i|=1\) and no relations.  
  <a href="structSymmetric__Polynomials_1_1Standard__Variables.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="Symmetric__Basis_8h_source.html">Symmetric_Basis.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="Symmetric__Basis_8hpp_source.html">Symmetric_Basis.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Symmetric_Polynomials::Standard_Variables&lt; T, _deg &gt;:</div>
 <div class="dyncontent">
@@ -128,31 +128,39 @@ Collaboration diagram for Symmetric_Polynomials::Standard_Variables&lt; T, _deg 
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a58a0bd0f0385d800f0b654064145b101"><td class="memItemLeft" align="right" valign="top">typedef _deg&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Standard__Variables.html#a58a0bd0f0385d800f0b654064145b101">deg_t</a></td></tr>
+<tr class="memdesc:a58a0bd0f0385d800f0b654064145b101"><td class="mdescLeft">&#160;</td><td class="mdescRight">Degree typedef.  <a href="structSymmetric__Polynomials_1_1Standard__Variables.html#a58a0bd0f0385d800f0b654064145b101">More...</a><br /></td></tr>
 <tr class="separator:a58a0bd0f0385d800f0b654064145b101"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7d38486ee780fd66404e3cd990b18bcf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSymmetric__Polynomials_1_1Standard__Variables.html#a58a0bd0f0385d800f0b654064145b101">deg_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Standard__Variables.html#a7d38486ee780fd66404e3cd990b18bcf">degree</a> () const</td></tr>
-<tr class="memdesc:a7d38486ee780fd66404e3cd990b18bcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Degree of exponent.  <a href="structSymmetric__Polynomials_1_1Standard__Variables.html#a7d38486ee780fd66404e3cd990b18bcf">More...</a><br /></td></tr>
+<tr class="memdesc:a7d38486ee780fd66404e3cd990b18bcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes degree of monomial on standard variables \(x_i\).  <a href="structSymmetric__Polynomials_1_1Standard__Variables.html#a7d38486ee780fd66404e3cd990b18bcf">More...</a><br /></td></tr>
 <tr class="separator:a7d38486ee780fd66404e3cd990b18bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c46303a66635f77d2a10aad22b41213"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSymmetric__Polynomials_1_1Standard__Variables.html">Standard_Variables</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Standard__Variables.html#a3c46303a66635f77d2a10aad22b41213">operator+</a> (const <a class="el" href="structSymmetric__Polynomials_1_1Standard__Variables.html">Standard_Variables</a> &amp;other) const</td></tr>
-<tr class="memdesc:a3c46303a66635f77d2a10aad22b41213"><td class="mdescLeft">&#160;</td><td class="mdescRight">Addition of exponents.  <a href="structSymmetric__Polynomials_1_1Standard__Variables.html#a3c46303a66635f77d2a10aad22b41213">More...</a><br /></td></tr>
-<tr class="separator:a3c46303a66635f77d2a10aad22b41213"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab38543295b288538b281271b5a8f7a7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSymmetric__Polynomials_1_1Standard__Variables.html">Standard_Variables</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Standard__Variables.html#ab38543295b288538b281271b5a8f7a7c">operator+</a> (const <a class="el" href="structSymmetric__Polynomials_1_1Standard__Variables.html">Standard_Variables</a> &amp;b) const</td></tr>
+<tr class="memdesc:ab38543295b288538b281271b5a8f7a7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies monomials by adding their exponents.  <a href="structSymmetric__Polynomials_1_1Standard__Variables.html#ab38543295b288538b281271b5a8f7a7c">More...</a><br /></td></tr>
+<tr class="separator:ab38543295b288538b281271b5a8f7a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7067ac2f1d120492623e5ca5c96973ef"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Standard__Variables.html#a7067ac2f1d120492623e5ca5c96973ef">operator()</a> () const</td></tr>
-<tr class="memdesc:a7067ac2f1d120492623e5ca5c96973ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard hash function.  <a href="structSymmetric__Polynomials_1_1Standard__Variables.html#a7067ac2f1d120492623e5ca5c96973ef">More...</a><br /></td></tr>
+<tr class="memdesc:a7067ac2f1d120492623e5ca5c96973ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns hash of monomial.  <a href="structSymmetric__Polynomials_1_1Standard__Variables.html#a7067ac2f1d120492623e5ca5c96973ef">More...</a><br /></td></tr>
 <tr class="separator:a7067ac2f1d120492623e5ca5c96973ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ad9def388d052f882c910391124a6b58c"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Standard__Variables.html#ad9def388d052f882c910391124a6b58c">name</a> (int i, int number_of_variables)</td></tr>
-<tr class="memdesc:ad9def388d052f882c910391124a6b58c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of variable.  <a href="structSymmetric__Polynomials_1_1Standard__Variables.html#ad9def388d052f882c910391124a6b58c">More...</a><br /></td></tr>
-<tr class="separator:ad9def388d052f882c910391124a6b58c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11aae6a8973480537d61ef5023155f5b"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Standard__Variables.html#a11aae6a8973480537d61ef5023155f5b">name</a> (int i, int n)</td></tr>
+<tr class="memdesc:a11aae6a8973480537d61ef5023155f5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the names of the standard variables \(x_i\).  <a href="structSymmetric__Polynomials_1_1Standard__Variables.html#a11aae6a8973480537d61ef5023155f5b">More...</a><br /></td></tr>
+<tr class="separator:a11aae6a8973480537d61ef5023155f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T = int64_t, typename _deg = int64_t&gt;<br />
 struct Symmetric_Polynomials::Standard_Variables&lt; T, _deg &gt;</h3>
 
 <p>The standard variables \(x_i\) in a polynomial, with \(|x_i|=1\) and no relations. </p>
+<p>A monomial \(x_1^{a_1}\cdots x_n^{a_n}\) is stored as the vector \([a_1,...,a_n]\) </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The (integral) value type of the exponent vector. </td></tr>
+    <tr><td class="paramname">_deg</td><td>The (integral) value type used in the degree function. </td></tr>
+  </table>
+  </dd>
+</dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a58a0bd0f0385d800f0b654064145b101"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a58a0bd0f0385d800f0b654064145b101">&#9670;&nbsp;</a></span>deg_t</h2>
@@ -167,7 +175,8 @@ template&lt;typename T  = int64_t, typename _deg  = int64_t&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Degree typedef </p>
+
+<p>Degree typedef. </p>
 
 </div>
 </div>
@@ -179,9 +188,6 @@ template&lt;typename T  = int64_t, typename _deg  = int64_t&gt; </div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T  = int64_t, typename _deg  = int64_t&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="structSymmetric__Polynomials_1_1Standard__Variables.html#a58a0bd0f0385d800f0b654064145b101">deg_t</a> <a class="el" href="structSymmetric__Polynomials_1_1Standard__Variables.html">Symmetric_Polynomials::Standard_Variables</a>&lt; T, _deg &gt;::degree </td>
@@ -190,19 +196,15 @@ template&lt;typename T  = int64_t, typename _deg  = int64_t&gt; </div>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Degree of exponent. </p>
+<p>Computes degree of monomial on standard variables \(x_i\). </p>
+<dl class="section return"><dt>Returns</dt><dd>\(\sum_ia_i\) for monomial \(x_1^{a_1}\cdots x_n^{a_n}\) (*this= \([a_1,...,a_n]\)) </dd></dl>
 
 </div>
 </div>
-<a id="ad9def388d052f882c910391124a6b58c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9def388d052f882c910391124a6b58c">&#9670;&nbsp;</a></span>name()</h2>
+<a id="a11aae6a8973480537d61ef5023155f5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11aae6a8973480537d61ef5023155f5b">&#9670;&nbsp;</a></span>name()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -222,7 +224,7 @@ template&lt;typename T  = int64_t, typename _deg  = int64_t&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>number_of_variables</em>&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -232,12 +234,21 @@ template&lt;typename T  = int64_t, typename _deg  = int64_t&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Name of variable. </p>
+<p>Returns the names of the standard variables \(x_i\). </p>
+<dl class="section return"><dt>Returns</dt><dd>"x_i" </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>The variable index </td></tr>
+    <tr><td class="paramname">n</td><td>The number variables <br  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -248,9 +259,6 @@ template&lt;typename T  = int64_t, typename _deg  = int64_t&gt; </div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T  = int64_t, typename _deg  = int64_t&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">size_t <a class="el" href="structSymmetric__Polynomials_1_1Standard__Variables.html">Symmetric_Polynomials::Standard_Variables</a>&lt; T, _deg &gt;::operator() </td>
@@ -259,49 +267,43 @@ template&lt;typename T  = int64_t, typename _deg  = int64_t&gt; </div>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Standard hash function. </p>
+<p>Returns hash of monomial. </p>
 
 </div>
 </div>
-<a id="a3c46303a66635f77d2a10aad22b41213"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c46303a66635f77d2a10aad22b41213">&#9670;&nbsp;</a></span>operator+()</h2>
+<a id="ab38543295b288538b281271b5a8f7a7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab38543295b288538b281271b5a8f7a7c">&#9670;&nbsp;</a></span>operator+()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T  = int64_t, typename _deg  = int64_t&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="structSymmetric__Polynomials_1_1Standard__Variables.html">Standard_Variables</a> <a class="el" href="structSymmetric__Polynomials_1_1Standard__Variables.html">Symmetric_Polynomials::Standard_Variables</a>&lt; T, _deg &gt;::operator+ </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structSymmetric__Polynomials_1_1Standard__Variables.html">Standard_Variables</a>&lt; T, _deg &gt; &amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
+          <td class="paramname"><em>b</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Addition of exponents. </p>
+<p>Multiplies monomials by adding their exponents. </p>
+<dl class="section return"><dt>Returns</dt><dd>\([a_1+b_1,...,a_n+b_n]\) where *this= \([a_1,...,a_n]\) </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">b</td><td>Second exponent \([b_1,...,b_n]\) </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>source/<a class="el" href="Symmetric__Basis_8h_source.html">Symmetric_Basis.h</a></li>
+<li>source/<a class="el" href="Symmetric__Basis_8hpp_source.html">Symmetric_Basis.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

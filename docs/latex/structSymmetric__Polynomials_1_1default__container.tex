@@ -1,24 +1,33 @@
-\hypertarget{structSymmetric__Polynomials_1_1default__container}{}\doxysection{Symmetric\+\_\+\+Polynomials\+::default\+\_\+container$<$ scl\+\_\+t, exp\+\_\+t, ordered $>$ Struct Template Reference}
+\hypertarget{structSymmetric__Polynomials_1_1default__container}{}\doxysubsection{Symmetric\+\_\+\+Polynomials\+::default\+\_\+container$<$ scl\+\_\+t, exp\+\_\+t, ordered $>$ Struct Template Reference}
 \label{structSymmetric__Polynomials_1_1default__container}\index{Symmetric\_Polynomials::default\_container$<$ scl\_t, exp\_t, ordered $>$@{Symmetric\_Polynomials::default\_container$<$ scl\_t, exp\_t, ordered $>$}}
 
 
-The default container for polynomials given scalar (coefficient) type (eg int,float), exponent type (eg \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Standard\+\_\+\+Variables}} , \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}}) and whether the container should be ordered or not.  
+The default container for polynomials using the S\+TL map or unordered\+\_\+map.  
 
 
 
 
-{\ttfamily \#include $<$Polynomials.\+h$>$}
+{\ttfamily \#include $<$Polynomials.\+hpp$>$}
 
 
 
-\doxysubsection{Detailed Description}
+\doxysubsubsection{Detailed Description}
 \subsubsection*{template$<$typename scl\+\_\+t, typename exp\+\_\+t, bool ordered = 1$>$\newline
 struct Symmetric\+\_\+\+Polynomials\+::default\+\_\+container$<$ scl\+\_\+t, exp\+\_\+t, ordered $>$}
 
-The default container for polynomials given scalar (coefficient) type (eg int,float), exponent type (eg \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Standard\+\_\+\+Variables}} , \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}}) and whether the container should be ordered or not. 
+The default container for polynomials using the S\+TL map or unordered\+\_\+map. 
 
-When ordered=1 this is a wrapper of std\+::map and when ordered=0 this is a wrapper of std\+::unordered\+\_\+map 
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em scl\+\_\+t} & The scalar (coefficient type) (eg int,float) \\
+\hline
+{\em exp\+\_\+t} & The exponent type eg \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Standard\+\_\+\+Variables}}, \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}} \\
+\hline
+{\em ordered} & Whether to use std\+::map or std\+::unordered\+\_\+map. \\
+\hline
+\end{DoxyTemplParams}
+
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-source/\mbox{\hyperlink{Polynomials_8h}{Polynomials.\+h}}\end{DoxyCompactItemize}
+source/\mbox{\hyperlink{Polynomials_8hpp}{Polynomials.\+hpp}}\end{DoxyCompactItemize}

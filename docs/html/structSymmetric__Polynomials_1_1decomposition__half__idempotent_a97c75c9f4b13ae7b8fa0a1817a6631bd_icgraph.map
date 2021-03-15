@@ -1,6 +1,0 @@
-<map id="Symmetric_Polynomials::decomposition_half_idempotent::decompose" name="Symmetric_Polynomials::decomposition_half_idempotent::decompose">
-<area shape="rect" id="node1" title="Computes the decomposition (polynomial on the generators Idem, Chern and TwistedChern)" alt="" coords="261,101,448,157"/>
-<area shape="rect" id="node2" href="$structSymmetric__Polynomials_1_1decomposition__half__idempotent.html#a233cabc2922a176682ca8ca9ccc0bdec" title="Initialize and decompose into polynomial on Idem,Chern and TwistedChern." alt="" coords="5,5,213,76"/>
-<area shape="rect" id="node3" href="$namespaceSymmetric__Polynomials.html#abc624e6ecd4b5ce3c02f150183362963" title="Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,..." alt="" coords="19,101,199,157"/>
-<area shape="rect" id="node4" href="$Demo_8cpp.html#a1660780e039cee9f194c25e9be8c0ca4" title="Writes the twisted Pontryagin/symplectic classes pi_{s,j}/k_{s,j} in terms of the Chern classes under..." alt="" coords="6,181,213,223"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="Symmetric_Polynomials::polynomial::condense" name="Symmetric_Polynomials::polynomial::condense">
-<area shape="rect" id="node1" title="Incorporates all monomials with same exponent vector into a single monomial by adding coefficients,..." alt="" coords="253,20,433,61"/>
-<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1polynomial.html#a92fbb313a8e72489e2930ac01d4dda4b" title="Constructs a polynomial given an iterator of monomials, applying relations to variables and reorderin..." alt="" coords="5,5,205,76"/>
-</map>

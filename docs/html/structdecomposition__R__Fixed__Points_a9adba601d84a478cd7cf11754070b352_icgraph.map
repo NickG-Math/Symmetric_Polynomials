@@ -1,6 +1,0 @@
-<map id="decomposition_R_Fixed_Points::print" name="decomposition_R_Fixed_Points::print">
-<area shape="rect" id="node1" title="Print a polynomial on the generators." alt="" coords="419,39,593,80"/>
-<area shape="rect" id="node2" href="$Half__Idempotent_8h.html#ac5b11fdb0afd7ced5433abb5b88290af" title="Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,..." alt="" coords="213,5,369,47"/>
-<area shape="rect" id="node3" href="$Half__Idempotent_8h.html#a2f7e7d9261985b948ffc40f89dabac64" title="Writes an element of the fixed points of R as polynomial on Idem, Chern and TwistedChern." alt="" coords="212,71,371,112"/>
-<area shape="rect" id="node4" href="$Half__Idempotent_8h.html#acd852f721caa87c9be63e1d58f702544" title="Given monomial, forms a polynomial by summing its orbit, and writes it as a polynomial on Idem,..." alt="" coords="5,71,164,112"/>
-</map>

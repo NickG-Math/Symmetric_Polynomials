@@ -1,3 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classSymmetric__Polynomials_1_1Polynomial__Basis.html" title="Factory class that provides the general interface of a generating basis for a subring of a polynomial..." alt="" coords="5,5,231,61"/>
+<area shape="rect" id="node1" href="$structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables.html" title="Variables &#160;denoting the elementary symmetric polynomials &#160;of degrees ." alt="" coords="5,45,188,101"/>
+<area shape="rect" id="node2" href="$structSymmetric__Polynomials_1_1Standard__Variables.html" title=" " alt="" coords="241,5,421,61"/>
+<area shape="rect" id="node3" href="$structSymmetric__Polynomials_1_1Standard__Variables.html" title="The standard variables &#160;in a polynomial, with &#160;and no relations." alt="" coords="241,85,421,141"/>
+<area shape="rect" id="node4" href="$structSymmetric__Polynomials_1_1Twisted__Chern__Variables.html" title="The twisted Chern generators as variables ." alt="" coords="236,165,427,221"/>
 </map>

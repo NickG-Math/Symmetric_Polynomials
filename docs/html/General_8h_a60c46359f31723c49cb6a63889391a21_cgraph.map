@@ -1,4 +1,0 @@
-<map id="apply_permutation_pieces" name="apply_permutation_pieces">
-<area shape="rect" id="node1" title="Breaks vector v into given number of pieces and applies given permutation on each one; then joins the..." alt="" coords="5,5,200,32"/>
-<area shape="rect" id="node2" href="$General_8h.html#a8146a1ec0d6b41af08c998b3c1f49e6d" title="Applies permutation perm on the target from starting point begin." alt="" coords="248,5,393,32"/>
-</map>

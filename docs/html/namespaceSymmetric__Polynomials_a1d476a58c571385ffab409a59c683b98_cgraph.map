@@ -1,5 +1,0 @@
-<map id="Symmetric_Polynomials::power" name="Symmetric_Polynomials::power">
-<area shape="rect" id="node1" title="Computes a^p for polynomial a and nonnegative integer p." alt="" coords="5,39,185,80"/>
-<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1polynomial.html#a29a3177f37777cd66cbf9b50402a10c6" title="Constructs constant polynomial given coefficient and number of variables." alt="" coords="233,5,413,47"/>
-<area shape="rect" id="node3" href="$namespaceSymmetric__Polynomials.html#aa3071663e4ec8ac6e28de064de66e492" title="Multiplies two polynomials with the ability to disable condensation (not recommended)" alt="" coords="233,71,413,112"/>
-</map>

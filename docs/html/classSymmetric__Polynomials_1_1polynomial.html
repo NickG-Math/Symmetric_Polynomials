@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Symmetric Polynomials: Symmetric_Polynomials::polynomial&lt; scalar_t, rel_t &gt; Class Template Reference</title>
+<title>Symmetric Polynomials: Symmetric_Polynomials::Polynomial&lt; container_t &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -33,7 +33,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Symmetric Polynomials
-   &#160;<span id="projectnumber">V1</span>
+   &#160;<span id="projectnumber">V3</span>
    </div>
    <div id="projectbrief">A C++ library for symmetric polynomials with relations</div>
   </td>
@@ -71,7 +71,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('classSymmetric__Polynomials_1_1polynomial.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('classSymmetric__Polynomials_1_1Polynomial.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -91,227 +91,211 @@ $(document).ready(function(){initNavTree('classSymmetric__Polynomials_1_1polynom
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="classSymmetric__Polynomials_1_1polynomial-members.html">List of all members</a>  </div>
+<a href="classSymmetric__Polynomials_1_1Polynomial-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Symmetric_Polynomials::polynomial&lt; scalar_t, rel_t &gt; Class Template Reference</div>  </div>
+<div class="title">Symmetric_Polynomials::Polynomial&lt; container_t &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Class of polynomials in multiple variables with relations.  
- <a href="classSymmetric__Polynomials_1_1polynomial.html#details">More...</a></p>
+<p>Polynomials in multiple variables.  
+ <a href="classSymmetric__Polynomials_1_1Polynomial.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="Polynomials_8h_source.html">Polynomials.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for Symmetric_Polynomials::polynomial&lt; scalar_t, rel_t &gt;:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSymmetric__Polynomials_1_1polynomial__inherit__graph.png" border="0" usemap="#Symmetric__Polynomials_1_1polynomial_3_01scalar__t_00_01rel__t_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="Symmetric__Polynomials_1_1polynomial_3_01scalar__t_00_01rel__t_01_4_inherit__map" id="Symmetric__Polynomials_1_1polynomial_3_01scalar__t_00_01rel__t_01_4_inherit__map">
-<area shape="rect" title="Class of polynomials in multiple variables with relations." alt="" coords="5,107,185,163"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1polynomial.html" title=" " alt="" coords="443,5,643,76"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1polynomial.html" title=" " alt="" coords="443,100,643,171"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1polynomial.html" title=" " alt="" coords="443,195,643,265"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<p><code>#include &lt;<a class="el" href="Polynomials_8hpp_source.html">Polynomials.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator.html">const_iterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant iterator going through the monomials of the polynomial in increasing order.  <a href="classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a59b08e7c10ddadcf8e89350d4975d6ae"><td class="memItemLeft" align="right" valign="top">typedef container_t::mapped_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#a59b08e7c10ddadcf8e89350d4975d6ae">scl_t</a></td></tr>
+<tr class="memdesc:a59b08e7c10ddadcf8e89350d4975d6ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">The scalar type.  <a href="classSymmetric__Polynomials_1_1Polynomial.html#a59b08e7c10ddadcf8e89350d4975d6ae">More...</a><br /></td></tr>
+<tr class="separator:a59b08e7c10ddadcf8e89350d4975d6ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa465567e5f113d3366dc71ff32af55b1"><td class="memItemLeft" align="right" valign="top">typedef container_t::key_type::second_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#aa465567e5f113d3366dc71ff32af55b1">exp_t</a></td></tr>
+<tr class="memdesc:aa465567e5f113d3366dc71ff32af55b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The exponent type.  <a href="classSymmetric__Polynomials_1_1Polynomial.html#aa465567e5f113d3366dc71ff32af55b1">More...</a><br /></td></tr>
+<tr class="separator:aa465567e5f113d3366dc71ff32af55b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa98da159492216c1282d406944f0747f"><td class="memItemLeft" align="right" valign="top">typedef container_t::key_type::first_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#aa98da159492216c1282d406944f0747f">deg_t</a></td></tr>
+<tr class="memdesc:aa98da159492216c1282d406944f0747f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The degree type.  <a href="classSymmetric__Polynomials_1_1Polynomial.html#aa98da159492216c1282d406944f0747f">More...</a><br /></td></tr>
+<tr class="separator:aa98da159492216c1282d406944f0747f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac0a6e7d6fdbef8a955f5fd72ee2f2ead"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html#ac0a6e7d6fdbef8a955f5fd72ee2f2ead">condense</a> ()</td></tr>
-<tr class="memdesc:ac0a6e7d6fdbef8a955f5fd72ee2f2ead"><td class="mdescLeft">&#160;</td><td class="mdescRight">Incorporates all monomials with same exponent vector into a single monomial by adding coefficients, condensing the polynomial.  <a href="classSymmetric__Polynomials_1_1polynomial.html#ac0a6e7d6fdbef8a955f5fd72ee2f2ead">More...</a><br /></td></tr>
-<tr class="separator:ac0a6e7d6fdbef8a955f5fd72ee2f2ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0df36baf0c00178007ab065b33f1f33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html#ab0df36baf0c00178007ab065b33f1f33">highest_term</a> () const</td></tr>
-<tr class="memdesc:ab0df36baf0c00178007ab065b33f1f33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns highest term monomial in a polynomial.  <a href="classSymmetric__Polynomials_1_1polynomial.html#ab0df36baf0c00178007ab065b33f1f33">More...</a><br /></td></tr>
-<tr class="separator:ab0df36baf0c00178007ab065b33f1f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92fbb313a8e72489e2930ac01d4dda4b"><td class="memTemplParams" colspan="2">template&lt;typename iterator &gt; </td></tr>
-<tr class="memitem:a92fbb313a8e72489e2930ac01d4dda4b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html#a92fbb313a8e72489e2930ac01d4dda4b">polynomial</a> (iterator begin, iterator end, bool dontcondense=0)</td></tr>
-<tr class="memdesc:a92fbb313a8e72489e2930ac01d4dda4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a polynomial given an iterator of monomials, applying relations to variables and reordering as needed. Condensation is performed by default but can be disabled at the user's risk.  <a href="classSymmetric__Polynomials_1_1polynomial.html#a92fbb313a8e72489e2930ac01d4dda4b">More...</a><br /></td></tr>
-<tr class="separator:a92fbb313a8e72489e2930ac01d4dda4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71f3c9e5235f925ccc61b25ab784abbe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html#a71f3c9e5235f925ccc61b25ab784abbe">polynomial</a> (const std::vector&lt; <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt;&gt; &amp;<a class="el" href="classSymmetric__Polynomials_1_1polynomial.html#ab9d8736a84257e51748cefff853c43a4">monos</a>, bool dontcondense=0)</td></tr>
-<tr class="memdesc:a71f3c9e5235f925ccc61b25ab784abbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a polynomial given a vector of monomials, applying relations to variables and reordering as needed. Condensation is performed by default but can be disabled at the user's risk.  <a href="classSymmetric__Polynomials_1_1polynomial.html#a71f3c9e5235f925ccc61b25ab784abbe">More...</a><br /></td></tr>
-<tr class="separator:a71f3c9e5235f925ccc61b25ab784abbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82cab1d2cec4b6a533836a41e3945ff9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html#a82cab1d2cec4b6a533836a41e3945ff9">polynomial</a> (const <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &amp;mono)</td></tr>
-<tr class="memdesc:a82cab1d2cec4b6a533836a41e3945ff9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a polynomial from a single monomial.  <a href="classSymmetric__Polynomials_1_1polynomial.html#a82cab1d2cec4b6a533836a41e3945ff9">More...</a><br /></td></tr>
-<tr class="separator:a82cab1d2cec4b6a533836a41e3945ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae65ae6ff604a638732d872b479844ba5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html#ae65ae6ff604a638732d872b479844ba5">polynomial</a> ()</td></tr>
-<tr class="memdesc:ae65ae6ff604a638732d872b479844ba5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor.  <a href="classSymmetric__Polynomials_1_1polynomial.html#ae65ae6ff604a638732d872b479844ba5">More...</a><br /></td></tr>
-<tr class="separator:ae65ae6ff604a638732d872b479844ba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa907a0fb17c89025757bb89237adeaab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html#aa907a0fb17c89025757bb89237adeaab">operator+</a> (const <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt; &amp;b) const</td></tr>
-<tr class="memdesc:aa907a0fb17c89025757bb89237adeaab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds two polynomials.  <a href="classSymmetric__Polynomials_1_1polynomial.html#aa907a0fb17c89025757bb89237adeaab">More...</a><br /></td></tr>
-<tr class="separator:aa907a0fb17c89025757bb89237adeaab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a7f680478bff58807a4f19bacb0486b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html#a1a7f680478bff58807a4f19bacb0486b">operator-</a> () const</td></tr>
-<tr class="memdesc:a1a7f680478bff58807a4f19bacb0486b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns -b for polynomial b.  <a href="classSymmetric__Polynomials_1_1polynomial.html#a1a7f680478bff58807a4f19bacb0486b">More...</a><br /></td></tr>
-<tr class="separator:a1a7f680478bff58807a4f19bacb0486b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24cd31f0a1ecc50804b772925a744e61"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html#a24cd31f0a1ecc50804b772925a744e61">operator-</a> (const <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt; &amp;b) const</td></tr>
-<tr class="memdesc:a24cd31f0a1ecc50804b772925a744e61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtracts polynomial from polynomial.  <a href="classSymmetric__Polynomials_1_1polynomial.html#a24cd31f0a1ecc50804b772925a744e61">More...</a><br /></td></tr>
-<tr class="separator:a24cd31f0a1ecc50804b772925a744e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fb9218857967bee4dad6de36db12774"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html#a3fb9218857967bee4dad6de36db12774">operator==</a> (const <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt; &amp;b) const</td></tr>
-<tr class="memdesc:a3fb9218857967bee4dad6de36db12774"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard equality of polynomials.  <a href="classSymmetric__Polynomials_1_1polynomial.html#a3fb9218857967bee4dad6de36db12774">More...</a><br /></td></tr>
-<tr class="separator:a3fb9218857967bee4dad6de36db12774"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77254223dd126132da67a49bdf6bda4e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html#a77254223dd126132da67a49bdf6bda4e">operator!=</a> (const <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt; &amp;b) const</td></tr>
-<tr class="memdesc:a77254223dd126132da67a49bdf6bda4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard inequality of polynomials.  <a href="classSymmetric__Polynomials_1_1polynomial.html#a77254223dd126132da67a49bdf6bda4e">More...</a><br /></td></tr>
-<tr class="separator:a77254223dd126132da67a49bdf6bda4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a282b9660df877b4a5ed1ec57a7714634"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html#a282b9660df877b4a5ed1ec57a7714634">print</a> (const std::function&lt; std::string(int)&gt; &amp;variable_names) const</td></tr>
-<tr class="memdesc:a282b9660df877b4a5ed1ec57a7714634"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print polynomial using given variable names.  <a href="classSymmetric__Polynomials_1_1polynomial.html#a282b9660df877b4a5ed1ec57a7714634">More...</a><br /></td></tr>
-<tr class="separator:a282b9660df877b4a5ed1ec57a7714634"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74ab4a485e9017d4517dc7cf24e9ee9a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html#a74ab4a485e9017d4517dc7cf24e9ee9a">print</a> (const std::vector&lt; std::string &gt; &amp;variable_names) const</td></tr>
-<tr class="memdesc:a74ab4a485e9017d4517dc7cf24e9ee9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print monomial using given variable names.  <a href="classSymmetric__Polynomials_1_1polynomial.html#a74ab4a485e9017d4517dc7cf24e9ee9a">More...</a><br /></td></tr>
-<tr class="separator:a74ab4a485e9017d4517dc7cf24e9ee9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7582ebc7d8e2fcfd5c01c8b5acc50350"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html#a7582ebc7d8e2fcfd5c01c8b5acc50350">print</a> () const</td></tr>
-<tr class="memdesc:a7582ebc7d8e2fcfd5c01c8b5acc50350"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print polynomial using default variable names x_1,...,x_n.  <a href="classSymmetric__Polynomials_1_1polynomial.html#a7582ebc7d8e2fcfd5c01c8b5acc50350">More...</a><br /></td></tr>
-<tr class="separator:a7582ebc7d8e2fcfd5c01c8b5acc50350"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a29a3177f37777cd66cbf9b50402a10c6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html#a29a3177f37777cd66cbf9b50402a10c6">constant</a> (int coeff, int variables)</td></tr>
-<tr class="memdesc:a29a3177f37777cd66cbf9b50402a10c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs constant polynomial given coefficient and number of variables.  <a href="classSymmetric__Polynomials_1_1polynomial.html#a29a3177f37777cd66cbf9b50402a10c6">More...</a><br /></td></tr>
-<tr class="separator:a29a3177f37777cd66cbf9b50402a10c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:ab9d8736a84257e51748cefff853c43a4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html#ab9d8736a84257e51748cefff853c43a4">monos</a></td></tr>
-<tr class="memdesc:ab9d8736a84257e51748cefff853c43a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The vector of monomials, ordered in increasing degree.  <a href="classSymmetric__Polynomials_1_1polynomial.html#ab9d8736a84257e51748cefff853c43a4">More...</a><br /></td></tr>
-<tr class="separator:ab9d8736a84257e51748cefff853c43a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93b757ce0ba805dda3f49f36571489fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#a93b757ce0ba805dda3f49f36571489fc">Polynomial</a> ()=default</td></tr>
+<tr class="memdesc:a93b757ce0ba805dda3f49f36571489fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor (empty polynomial)  <a href="classSymmetric__Polynomials_1_1Polynomial.html#a93b757ce0ba805dda3f49f36571489fc">More...</a><br /></td></tr>
+<tr class="separator:a93b757ce0ba805dda3f49f36571489fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a933cac974c20391586e4d7d739e7ec73"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#a933cac974c20391586e4d7d739e7ec73">Polynomial</a> (int num_var, const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#aa98da159492216c1282d406944f0747f">deg_t</a> *dim_var=nullptr, const std::string *name_var=nullptr)</td></tr>
+<tr class="memdesc:a933cac974c20391586e4d7d739e7ec73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs empty polynomial.  <a href="classSymmetric__Polynomials_1_1Polynomial.html#a933cac974c20391586e4d7d739e7ec73">More...</a><br /></td></tr>
+<tr class="separator:a933cac974c20391586e4d7d739e7ec73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4cf350e86906b729806425b1360373c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#ad4cf350e86906b729806425b1360373c">Polynomial</a> (const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#aa465567e5f113d3366dc71ff32af55b1">exp_t</a> &amp;exp, <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#a59b08e7c10ddadcf8e89350d4975d6ae">scl_t</a> coeff, const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#aa98da159492216c1282d406944f0747f">deg_t</a> *dim_var=nullptr, const std::string *name_var=nullptr)</td></tr>
+<tr class="memdesc:ad4cf350e86906b729806425b1360373c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs polynomial with a single monomial term.  <a href="classSymmetric__Polynomials_1_1Polynomial.html#ad4cf350e86906b729806425b1360373c">More...</a><br /></td></tr>
+<tr class="separator:ad4cf350e86906b729806425b1360373c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3bb15f601ead6d169fff44b37a1b68a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#ae3bb15f601ead6d169fff44b37a1b68a">Polynomial</a> (int num_var, <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#a59b08e7c10ddadcf8e89350d4975d6ae">scl_t</a> coeff, const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#aa98da159492216c1282d406944f0747f">deg_t</a> *dim_var=nullptr, const std::string *name_var=nullptr)</td></tr>
+<tr class="memdesc:ae3bb15f601ead6d169fff44b37a1b68a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs constant polynomial.  <a href="classSymmetric__Polynomials_1_1Polynomial.html#ae3bb15f601ead6d169fff44b37a1b68a">More...</a><br /></td></tr>
+<tr class="separator:ae3bb15f601ead6d169fff44b37a1b68a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57d1a73579c3462cd6b86de62361092d"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#a57d1a73579c3462cd6b86de62361092d">number_of_variables</a> () const</td></tr>
+<tr class="memdesc:a57d1a73579c3462cd6b86de62361092d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the numbers of variables of the polynomial.  <a href="classSymmetric__Polynomials_1_1Polynomial.html#a57d1a73579c3462cd6b86de62361092d">More...</a><br /></td></tr>
+<tr class="separator:a57d1a73579c3462cd6b86de62361092d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf413d58aa5d7f36e58884d91e9aabda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#adf413d58aa5d7f36e58884d91e9aabda">reserve</a> (size_t n)</td></tr>
+<tr class="memdesc:adf413d58aa5d7f36e58884d91e9aabda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reserve number of monomials (does nothing if the container used does not have a reserve function)  <a href="classSymmetric__Polynomials_1_1Polynomial.html#adf413d58aa5d7f36e58884d91e9aabda">More...</a><br /></td></tr>
+<tr class="separator:adf413d58aa5d7f36e58884d91e9aabda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab682f9da699d3d9767586332ee32c4e4"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#ab682f9da699d3d9767586332ee32c4e4">number_of_monomials</a> () const</td></tr>
+<tr class="memdesc:ab682f9da699d3d9767586332ee32c4e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns number of monomials in polynomial.  <a href="classSymmetric__Polynomials_1_1Polynomial.html#ab682f9da699d3d9767586332ee32c4e4">More...</a><br /></td></tr>
+<tr class="separator:ab682f9da699d3d9767586332ee32c4e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4f5846886261f04aa8c66ab45fac567"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#aa4f5846886261f04aa8c66ab45fac567">clear</a> ()</td></tr>
+<tr class="memdesc:aa4f5846886261f04aa8c66ab45fac567"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears all data of polynomial apart from number of variables.  <a href="classSymmetric__Polynomials_1_1Polynomial.html#aa4f5846886261f04aa8c66ab45fac567">More...</a><br /></td></tr>
+<tr class="separator:aa4f5846886261f04aa8c66ab45fac567"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a398889dc1151404048820a5c1b4baf5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#a398889dc1151404048820a5c1b4baf5a">insert</a> (const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#aa465567e5f113d3366dc71ff32af55b1">exp_t</a> &amp;exponent, <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#a59b08e7c10ddadcf8e89350d4975d6ae">scl_t</a> scalar)</td></tr>
+<tr class="memdesc:a398889dc1151404048820a5c1b4baf5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts monomial given exponent and coefficient.  <a href="classSymmetric__Polynomials_1_1Polynomial.html#a398889dc1151404048820a5c1b4baf5a">More...</a><br /></td></tr>
+<tr class="separator:a398889dc1151404048820a5c1b4baf5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af40d654efe6e0d1ac9904774a8a7994a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator.html">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#af40d654efe6e0d1ac9904774a8a7994a">begin</a> () const</td></tr>
+<tr class="memdesc:af40d654efe6e0d1ac9904774a8a7994a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns starting iterator.  <a href="classSymmetric__Polynomials_1_1Polynomial.html#af40d654efe6e0d1ac9904774a8a7994a">More...</a><br /></td></tr>
+<tr class="separator:af40d654efe6e0d1ac9904774a8a7994a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee8a3dc9d127069f4672416658b74442"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator.html">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#aee8a3dc9d127069f4672416658b74442">end</a> () const</td></tr>
+<tr class="memdesc:aee8a3dc9d127069f4672416658b74442"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns ending iterator.  <a href="classSymmetric__Polynomials_1_1Polynomial.html#aee8a3dc9d127069f4672416658b74442">More...</a><br /></td></tr>
+<tr class="separator:aee8a3dc9d127069f4672416658b74442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bf09e3b24c5787316b3dff30a55cc94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator.html">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#a0bf09e3b24c5787316b3dff30a55cc94">highest_term</a> () const</td></tr>
+<tr class="memdesc:a0bf09e3b24c5787316b3dff30a55cc94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns iterator to the highest term monomial.  <a href="classSymmetric__Polynomials_1_1Polynomial.html#a0bf09e3b24c5787316b3dff30a55cc94">More...</a><br /></td></tr>
+<tr class="separator:a0bf09e3b24c5787316b3dff30a55cc94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa49555b707c9faf64489567484b1713"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#aaa49555b707c9faf64489567484b1713">operator+=</a> (const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a> &amp;)</td></tr>
+<tr class="memdesc:aaa49555b707c9faf64489567484b1713"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds polynomial on the RHS to polynomial on the LHS (in place)  <a href="classSymmetric__Polynomials_1_1Polynomial.html#aaa49555b707c9faf64489567484b1713">More...</a><br /></td></tr>
+<tr class="separator:aaa49555b707c9faf64489567484b1713"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fd8ad93a5b1a0a07ce3db9508f744c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#a1fd8ad93a5b1a0a07ce3db9508f744c7">operator-=</a> (const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a> &amp;)</td></tr>
+<tr class="memdesc:a1fd8ad93a5b1a0a07ce3db9508f744c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtracts polynomial on the RHS from polynomial on the LHS (in place)  <a href="classSymmetric__Polynomials_1_1Polynomial.html#a1fd8ad93a5b1a0a07ce3db9508f744c7">More...</a><br /></td></tr>
+<tr class="separator:a1fd8ad93a5b1a0a07ce3db9508f744c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad544586e3ce37d8ae86ddf1aeac85073"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#ad544586e3ce37d8ae86ddf1aeac85073">operator+</a> (const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a> &amp;) const</td></tr>
+<tr class="memdesc:ad544586e3ce37d8ae86ddf1aeac85073"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds polynomials.  <a href="classSymmetric__Polynomials_1_1Polynomial.html#ad544586e3ce37d8ae86ddf1aeac85073">More...</a><br /></td></tr>
+<tr class="separator:ad544586e3ce37d8ae86ddf1aeac85073"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ca2766434a4523921cc4e3ee04a8fe8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#a8ca2766434a4523921cc4e3ee04a8fe8">operator-</a> (const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a> &amp;) const</td></tr>
+<tr class="memdesc:a8ca2766434a4523921cc4e3ee04a8fe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtracts polynomials.  <a href="classSymmetric__Polynomials_1_1Polynomial.html#a8ca2766434a4523921cc4e3ee04a8fe8">More...</a><br /></td></tr>
+<tr class="separator:a8ca2766434a4523921cc4e3ee04a8fe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6061ac87d99411be3a6aaca89a3eba8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#ab6061ac87d99411be3a6aaca89a3eba8">operator*</a> (const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a> &amp;) const</td></tr>
+<tr class="memdesc:ab6061ac87d99411be3a6aaca89a3eba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies polynomials.  <a href="classSymmetric__Polynomials_1_1Polynomial.html#ab6061ac87d99411be3a6aaca89a3eba8">More...</a><br /></td></tr>
+<tr class="separator:ab6061ac87d99411be3a6aaca89a3eba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae870e2d56b371f10790a9d8339e11029"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#ae870e2d56b371f10790a9d8339e11029">operator*=</a> (const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a> &amp;)</td></tr>
+<tr class="memdesc:ae870e2d56b371f10790a9d8339e11029"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies polynomial on the LHS with polynomial on the RHS (not in place)  <a href="classSymmetric__Polynomials_1_1Polynomial.html#ae870e2d56b371f10790a9d8339e11029">More...</a><br /></td></tr>
+<tr class="separator:ae870e2d56b371f10790a9d8339e11029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0fa602ddb4a1642ee0cb8a6ef486f5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#ae0fa602ddb4a1642ee0cb8a6ef486f5b">operator*=</a> (<a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#a59b08e7c10ddadcf8e89350d4975d6ae">scl_t</a>)</td></tr>
+<tr class="memdesc:ae0fa602ddb4a1642ee0cb8a6ef486f5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies polynomial on the LHS with scalar coefficient on the RHS (in place)  <a href="classSymmetric__Polynomials_1_1Polynomial.html#ae0fa602ddb4a1642ee0cb8a6ef486f5b">More...</a><br /></td></tr>
+<tr class="separator:ae0fa602ddb4a1642ee0cb8a6ef486f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a721ab7489794b15755ed733eccd6e858"><td class="memTemplParams" colspan="2">template&lt;typename any_int_type  = int&gt; </td></tr>
+<tr class="memitem:a721ab7489794b15755ed733eccd6e858"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#a721ab7489794b15755ed733eccd6e858">operator^</a> (any_int_type) const</td></tr>
+<tr class="memdesc:a721ab7489794b15755ed733eccd6e858"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raises polynomial to given power (does nothing if given power is &lt;0)  <a href="classSymmetric__Polynomials_1_1Polynomial.html#a721ab7489794b15755ed733eccd6e858">More...</a><br /></td></tr>
+<tr class="separator:a721ab7489794b15755ed733eccd6e858"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79ee3c7a321c648b32cac4d13d39fb47"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#a79ee3c7a321c648b32cac4d13d39fb47">print</a> () const</td></tr>
+<tr class="memdesc:a79ee3c7a321c648b32cac4d13d39fb47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints polynomial.  <a href="classSymmetric__Polynomials_1_1Polynomial.html#a79ee3c7a321c648b32cac4d13d39fb47">More...</a><br /></td></tr>
+<tr class="separator:a79ee3c7a321c648b32cac4d13d39fb47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e2857d9cf3315a748928e33f8681b3e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#a1e2857d9cf3315a748928e33f8681b3e">operator==</a> (const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a> &amp;) const</td></tr>
+<tr class="memdesc:a1e2857d9cf3315a748928e33f8681b3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equality of polynomials.  <a href="classSymmetric__Polynomials_1_1Polynomial.html#a1e2857d9cf3315a748928e33f8681b3e">More...</a><br /></td></tr>
+<tr class="separator:a1e2857d9cf3315a748928e33f8681b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7868332701c639696435bb600e116867"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#a7868332701c639696435bb600e116867">operator!=</a> (const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a> &amp;) const</td></tr>
+<tr class="memdesc:a7868332701c639696435bb600e116867"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inequality of polynomials.  <a href="classSymmetric__Polynomials_1_1Polynomial.html#a7868332701c639696435bb600e116867">More...</a><br /></td></tr>
+<tr class="separator:a7868332701c639696435bb600e116867"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename scalar_t, typename rel_t&gt;<br />
-class Symmetric_Polynomials::polynomial&lt; scalar_t, rel_t &gt;</h3>
+<div class="textblock"><h3>template&lt;typename container_t&gt;<br />
+class Symmetric_Polynomials::Polynomial&lt; container_t &gt;</h3>
 
-<p>Class of polynomials in multiple variables with relations. </p>
-<p>A polynomial is just a vector of monomials, ordered in increasing degree The template scalar_t determines the type of the coefficients. The template rel_t determines the relations that the variables x_i satisfy. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a92fbb313a8e72489e2930ac01d4dda4b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92fbb313a8e72489e2930ac01d4dda4b">&#9670;&nbsp;</a></span>polynomial() <span class="overload">[1/4]</span></h2>
+<p>Polynomials in multiple variables. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">container_t</td><td>Specifies the container for the monomials in the polynomial eg <a class="el" href="structSymmetric__Polynomials_1_1default__container.html" title="The default container for polynomials using the STL map or unordered_map.">default_container</a>&lt;int, Standard_Variables&lt;&gt;, 1&gt; or <a class="el" href="structSymmetric__Polynomials_1_1default__container.html" title="The default container for polynomials using the STL map or unordered_map.">default_container</a>&lt;float, Half_Idempotent_Variables&lt;&gt;, 0&gt;</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>In essence the container must map pairs (degree,exponent)= \((d,e)\) to scalars= \(c\) representing the monomial \(cx_1^{e_1}\cdots x_n^{e_n}\) of degree \(d\).</p>
+<p>Requirements from container_t:</p>
+<ul>
+<li>container_t must have a static constexpr bool variable ordered that specifies whether it keeps the monomials in increasing order (yes if ordered=1, no if ordered=0)</li>
+<li>If ordered=1, container_t should be equivalent to std::map&lt;std::pair&lt;typename exp_t::deg_t, exp_t&gt;, scl_t&gt;</li>
+<li>If ordered=0, container_t should be equivalent to std::unordered_map&lt;std::pair&lt;typename exp_t::deg_t, exp_t&gt;, scl_t, hasher&gt;</li>
+</ul>
+<p>In particular container_t must also have: operator[](), <a class="el" href="classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator.html" title="Constant iterator going through the monomials of the polynomial in increasing order.">const_iterator</a> with <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#af40d654efe6e0d1ac9904774a8a7994a" title="Returns starting iterator.">begin()</a>,<a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#aee8a3dc9d127069f4672416658b74442" title="Returns ending iterator.">end()</a> methods, and methods <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#a398889dc1151404048820a5c1b4baf5a" title="Inserts monomial given exponent and coefficient.">insert()</a> and erase().</p>
+<p>Finally, it must have the typedefs mapped_type (the scalar), key_type::first_type (the degree), key_type::second_type (the exponent).</p>
+<p>The exponent type key_type::second_type, henceforth exp_t, must have functionality similar to <a class="el" href="structSymmetric__Polynomials_1_1Standard__Variables.html" title="The standard variables  in a polynomial, with  and no relations.">Standard_Variables</a> or <a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html" title="The variables  where  and , .">Half_Idempotent_Variables</a></p>
+<p>Requirements of exp_t (i.e. key_type::second_type):</p>
+<ul>
+<li>A typedef deg_t that represents the degree type (eg int or uint64_t)</li>
+<li>Basic vector functionality (constructor that takes int n and produces exponent of 0's with that number of variables n, operator[])</li>
+<li>It should have an operator + to be used in the product of monomials and an operator - to be used in the division of monomials (if products/divisions need to be used).</li>
+<li>If ordered=1 it needs to have an operator &lt; (implementing a lexicographic ordering) and if ordered=0 it needs to have an operator () implementing a hash function</li>
+<li>It may also optionally have a degree() function and a static name(int,int) function that compute the degree of the exponent and print the names of the variables (first parameter is the index of the variable, second is the total number of variables).</li>
+<li>if exp_t does not have a degree() function then the user needs to provide the dimensions of the variables through a deg_t* (the user also needs to make sure that this pointer is not invalidated as long as the polynomial is used)</li>
+<li>if exp_t does not have a static name(int,int) function then the user needs to provide the names of the variables through an std::string* (the user also user needs to make sure that this pointer is not invalidated as long as the polynomial is used) </li>
+</ul>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="aa98da159492216c1282d406944f0747f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa98da159492216c1282d406944f0747f">&#9670;&nbsp;</a></span>deg_t</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t &gt; </div>
-<div class="memtemplate">
-template&lt;typename iterator &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+template&lt;typename container_t &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">Symmetric_Polynomials::polynomial</a>&lt; scalar_t, rel_t &gt;::<a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a> </td>
-          <td>(</td>
-          <td class="paramtype">iterator&#160;</td>
-          <td class="paramname"><em>begin</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">iterator&#160;</td>
-          <td class="paramname"><em>end</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>dontcondense</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">typedef container_t::key_type::first_type <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Symmetric_Polynomials::Polynomial</a>&lt; container_t &gt;::<a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#aa98da159492216c1282d406944f0747f">deg_t</a></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Constructs a polynomial given an iterator of monomials, applying relations to variables and reordering as needed. Condensation is performed by default but can be disabled at the user's risk. </p>
+<p>The degree type. </p>
 
 </div>
 </div>
-<a id="a71f3c9e5235f925ccc61b25ab784abbe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71f3c9e5235f925ccc61b25ab784abbe">&#9670;&nbsp;</a></span>polynomial() <span class="overload">[2/4]</span></h2>
+<a id="aa465567e5f113d3366dc71ff32af55b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa465567e5f113d3366dc71ff32af55b1">&#9670;&nbsp;</a></span>exp_t</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+template&lt;typename container_t &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">Symmetric_Polynomials::polynomial</a>&lt; scalar_t, rel_t &gt;::<a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a> </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>monos</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>dontcondense</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">typedef container_t::key_type::second_type <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Symmetric_Polynomials::Polynomial</a>&lt; container_t &gt;::<a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#aa465567e5f113d3366dc71ff32af55b1">exp_t</a></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Constructs a polynomial given a vector of monomials, applying relations to variables and reordering as needed. Condensation is performed by default but can be disabled at the user's risk. </p>
+<p>The exponent type. </p>
 
 </div>
 </div>
-<a id="a82cab1d2cec4b6a533836a41e3945ff9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82cab1d2cec4b6a533836a41e3945ff9">&#9670;&nbsp;</a></span>polynomial() <span class="overload">[3/4]</span></h2>
+<a id="a59b08e7c10ddadcf8e89350d4975d6ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59b08e7c10ddadcf8e89350d4975d6ae">&#9670;&nbsp;</a></span>scl_t</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+template&lt;typename container_t &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">Symmetric_Polynomials::polynomial</a>&lt; scalar_t, rel_t &gt;::<a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a> </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt; scalar_t, rel_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>mono</em></td><td>)</td>
-          <td></td>
+          <td class="memname">typedef container_t::mapped_type <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Symmetric_Polynomials::Polynomial</a>&lt; container_t &gt;::<a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#a59b08e7c10ddadcf8e89350d4975d6ae">scl_t</a></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Constructs a polynomial from a single monomial. </p>
+<p>The scalar type. </p>
 
 </div>
 </div>
-<a id="ae65ae6ff604a638732d872b479844ba5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae65ae6ff604a638732d872b479844ba5">&#9670;&nbsp;</a></span>polynomial() <span class="overload">[4/4]</span></h2>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a93b757ce0ba805dda3f49f36571489fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93b757ce0ba805dda3f49f36571489fc">&#9670;&nbsp;</a></span>Polynomial() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t &gt; </div>
+template&lt;typename container_t &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">Symmetric_Polynomials::polynomial</a>&lt; scalar_t, rel_t &gt;::<a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a> </td>
+          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Symmetric_Polynomials::Polynomial</a>&lt; container_t &gt;::<a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -319,76 +303,92 @@ template&lt;typename scalar_t , typename rel_t &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Default Constructor. </p>
+<p>Default constructor (empty polynomial) </p>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac0a6e7d6fdbef8a955f5fd72ee2f2ead"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0a6e7d6fdbef8a955f5fd72ee2f2ead">&#9670;&nbsp;</a></span>condense()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">Symmetric_Polynomials::polynomial</a>&lt; scalar_t, rel_t &gt;::condense </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Incorporates all monomials with same exponent vector into a single monomial by adding coefficients, condensing the polynomial. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSymmetric__Polynomials_1_1polynomial_ac0a6e7d6fdbef8a955f5fd72ee2f2ead_icgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1polynomial_ac0a6e7d6fdbef8a955f5fd72ee2f2ead_icgraph" alt=""/></div>
-<map name="classSymmetric__Polynomials_1_1polynomial_ac0a6e7d6fdbef8a955f5fd72ee2f2ead_icgraph" id="classSymmetric__Polynomials_1_1polynomial_ac0a6e7d6fdbef8a955f5fd72ee2f2ead_icgraph">
-<area shape="rect" title="Incorporates all monomials with same exponent vector into a single monomial by adding coefficients,..." alt="" coords="253,20,433,61"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1polynomial.html#a92fbb313a8e72489e2930ac01d4dda4b" title="Constructs a polynomial given an iterator of monomials, applying relations to variables and reorderin..." alt="" coords="5,5,205,76"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a29a3177f37777cd66cbf9b50402a10c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29a3177f37777cd66cbf9b50402a10c6">&#9670;&nbsp;</a></span>constant()</h2>
+<a id="a933cac974c20391586e4d7d739e7ec73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a933cac974c20391586e4d7d739e7ec73">&#9670;&nbsp;</a></span>Polynomial() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+template&lt;typename container_t &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt;scalar_t, rel_t&gt; <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">Symmetric_Polynomials::polynomial</a>&lt; scalar_t, rel_t &gt;::constant </td>
+          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Symmetric_Polynomials::Polynomial</a>&lt; container_t &gt;::<a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a> </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num_var</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#aa98da159492216c1282d406944f0747f">deg_t</a> *&#160;</td>
+          <td class="paramname"><em>dim_var</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string *&#160;</td>
+          <td class="paramname"><em>name_var</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs empty polynomial. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">num_var</td><td>The number of variables </td></tr>
+    <tr><td class="paramname">dim_var</td><td>Pointer to the dimensions of the variables (used only when exp_t does not implement method degree()) </td></tr>
+    <tr><td class="paramname">name_var</td><td>Pointer to the names of the variables (used only when exp_t does not implement static method name(int,int)) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad4cf350e86906b729806425b1360373c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4cf350e86906b729806425b1360373c">&#9670;&nbsp;</a></span>Polynomial() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename container_t &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Symmetric_Polynomials::Polynomial</a>&lt; container_t &gt;::<a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#aa465567e5f113d3366dc71ff32af55b1">exp_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>exp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#a59b08e7c10ddadcf8e89350d4975d6ae">scl_t</a>&#160;</td>
           <td class="paramname"><em>coeff</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>variables</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#aa98da159492216c1282d406944f0747f">deg_t</a> *&#160;</td>
+          <td class="paramname"><em>dim_var</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string *&#160;</td>
+          <td class="paramname"><em>name_var</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -396,348 +396,523 @@ template&lt;typename scalar_t , typename rel_t &gt; </div>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Constructs constant polynomial given coefficient and number of variables. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSymmetric__Polynomials_1_1polynomial_a29a3177f37777cd66cbf9b50402a10c6_icgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1polynomial_a29a3177f37777cd66cbf9b50402a10c6_icgraph" alt=""/></div>
-<map name="classSymmetric__Polynomials_1_1polynomial_a29a3177f37777cd66cbf9b50402a10c6_icgraph" id="classSymmetric__Polynomials_1_1polynomial_a29a3177f37777cd66cbf9b50402a10c6_icgraph">
-<area shape="rect" title="Constructs constant polynomial given coefficient and number of variables." alt="" coords="952,49,1132,90"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1elementary__symmetric.html#ac01a1ee9fb360c2112e918b295cbe9b8" title="Given vector exponent computes e_1^{exponent_1}*...*e_n^{exponent_n}." alt="" coords="477,5,660,61"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a81926a9c4e5dbb2083c79d181f6145a4" title="Multiplies scalar and polynomial." alt="" coords="724,49,904,90"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a1d476a58c571385ffab409a59c683b98" title="Computes a^p for polynomial a and nonnegative integer p." alt="" coords="724,114,904,155"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1half__idempotent__generators.html#a249b2ebc59f817e258e30904de4f7b89" title="Computes a product of a monomial on our generators Idem, Chern, TwistedChern." alt="" coords="461,107,676,163"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#abc624e6ecd4b5ce3c02f150183362963" title="Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,..." alt="" coords="5,107,185,163"/>
-<area shape="rect" href="structSymmetric__Polynomials_1_1decomposition__half__idempotent.html#ac706fb88d949c91c7945ad29df72b084" title="Verifies that the decomposition is correct (i.e. expanding the generators in the original variables &#160;..." alt="" coords="233,139,413,195"/>
-</map>
-</div>
+<p>Constructs polynomial with a single monomial term. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">exp</td><td>The exponent of the monomial </td></tr>
+    <tr><td class="paramname">coeff</td><td>The coefficient of the monomial </td></tr>
+    <tr><td class="paramname">dim_var</td><td>Pointer to the dimensions of the variables (used only when exp_t does not implement method degree()) </td></tr>
+    <tr><td class="paramname">name_var</td><td>Pointer to the names of the variables (used only when exp_t does not implement static method name(int,int)) </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="ab0df36baf0c00178007ab065b33f1f33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0df36baf0c00178007ab065b33f1f33">&#9670;&nbsp;</a></span>highest_term()</h2>
+<a id="ae3bb15f601ead6d169fff44b37a1b68a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3bb15f601ead6d169fff44b37a1b68a">&#9670;&nbsp;</a></span>Polynomial() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+template&lt;typename container_t &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt;scalar_t, rel_t&gt; <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">Symmetric_Polynomials::polynomial</a>&lt; scalar_t, rel_t &gt;::highest_term </td>
+          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Symmetric_Polynomials::Polynomial</a>&lt; container_t &gt;::<a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num_var</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#a59b08e7c10ddadcf8e89350d4975d6ae">scl_t</a>&#160;</td>
+          <td class="paramname"><em>coeff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#aa98da159492216c1282d406944f0747f">deg_t</a> *&#160;</td>
+          <td class="paramname"><em>dim_var</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string *&#160;</td>
+          <td class="paramname"><em>name_var</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs constant polynomial. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">num_var</td><td>The number of variables </td></tr>
+    <tr><td class="paramname">coeff</td><td>The coefficient of the monomial </td></tr>
+    <tr><td class="paramname">dim_var</td><td>Pointer to the dimensions of the variables (used only when exp_t does not implement method degree()) </td></tr>
+    <tr><td class="paramname">name_var</td><td>Pointer to the names of the variables (used only when exp_t does not implement static method name(int,int)) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="af40d654efe6e0d1ac9904774a8a7994a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af40d654efe6e0d1ac9904774a8a7994a">&#9670;&nbsp;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename container_t &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator.html">const_iterator</a> <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Symmetric_Polynomials::Polynomial</a>&lt; container_t &gt;::begin </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Returns highest term monomial in a polynomial. </p>
+<p>Returns starting iterator. </p>
 
 </div>
 </div>
-<a id="a77254223dd126132da67a49bdf6bda4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77254223dd126132da67a49bdf6bda4e">&#9670;&nbsp;</a></span>operator!=()</h2>
+<a id="aa4f5846886261f04aa8c66ab45fac567"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4f5846886261f04aa8c66ab45fac567">&#9670;&nbsp;</a></span>clear()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+template&lt;typename container_t &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">Symmetric_Polynomials::polynomial</a>&lt; scalar_t, rel_t &gt;::operator!= </td>
+          <td class="memname">void <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Symmetric_Polynomials::Polynomial</a>&lt; container_t &gt;::clear </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Standard inequality of polynomials. </p>
+<p>Clears all data of polynomial apart from number of variables. </p>
 
 </div>
 </div>
-<a id="aa907a0fb17c89025757bb89237adeaab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa907a0fb17c89025757bb89237adeaab">&#9670;&nbsp;</a></span>operator+()</h2>
+<a id="aee8a3dc9d127069f4672416658b74442"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee8a3dc9d127069f4672416658b74442">&#9670;&nbsp;</a></span>end()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+template&lt;typename container_t &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt;scalar_t, rel_t&gt; <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">Symmetric_Polynomials::polynomial</a>&lt; scalar_t, rel_t &gt;::operator+ </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Adds two polynomials. </p>
-
-</div>
-</div>
-<a id="a1a7f680478bff58807a4f19bacb0486b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a7f680478bff58807a4f19bacb0486b">&#9670;&nbsp;</a></span>operator-() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt;scalar_t, rel_t&gt; <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">Symmetric_Polynomials::polynomial</a>&lt; scalar_t, rel_t &gt;::operator- </td>
+          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator.html">const_iterator</a> <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Symmetric_Polynomials::Polynomial</a>&lt; container_t &gt;::end </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Returns -b for polynomial b. </p>
+<p>Returns ending iterator. </p>
 
 </div>
 </div>
-<a id="a24cd31f0a1ecc50804b772925a744e61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24cd31f0a1ecc50804b772925a744e61">&#9670;&nbsp;</a></span>operator-() <span class="overload">[2/2]</span></h2>
+<a id="a0bf09e3b24c5787316b3dff30a55cc94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bf09e3b24c5787316b3dff30a55cc94">&#9670;&nbsp;</a></span>highest_term()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+template&lt;typename container_t &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt;scalar_t, rel_t&gt; <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">Symmetric_Polynomials::polynomial</a>&lt; scalar_t, rel_t &gt;::operator- </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Subtracts polynomial from polynomial. </p>
-
-</div>
-</div>
-<a id="a3fb9218857967bee4dad6de36db12774"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3fb9218857967bee4dad6de36db12774">&#9670;&nbsp;</a></span>operator==()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">Symmetric_Polynomials::polynomial</a>&lt; scalar_t, rel_t &gt;::operator== </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a>&lt; scalar_t, rel_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Standard equality of polynomials. </p>
-
-</div>
-</div>
-<a id="a7582ebc7d8e2fcfd5c01c8b5acc50350"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7582ebc7d8e2fcfd5c01c8b5acc50350">&#9670;&nbsp;</a></span>print() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">Symmetric_Polynomials::polynomial</a>&lt; scalar_t, rel_t &gt;::print </td>
+          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator.html">const_iterator</a> <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Symmetric_Polynomials::Polynomial</a>&lt; container_t &gt;::highest_term </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Print polynomial using default variable names x_1,...,x_n. </p>
+<p>Returns iterator to the highest term monomial. </p>
+
+</div>
+</div>
+<a id="a398889dc1151404048820a5c1b4baf5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a398889dc1151404048820a5c1b4baf5a">&#9670;&nbsp;</a></span>insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename container_t &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Symmetric_Polynomials::Polynomial</a>&lt; container_t &gt;::insert </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#aa465567e5f113d3366dc71ff32af55b1">exp_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>exponent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#a59b08e7c10ddadcf8e89350d4975d6ae">scl_t</a>&#160;</td>
+          <td class="paramname"><em>scalar</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inserts monomial given exponent and coefficient. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">exponent</td><td>The exponent of the monomial. If a monomial with same exponent already exists in the polynomial then insert does nothing </td></tr>
+    <tr><td class="paramname">scalar</td><td>The coefficient of the monomial. It is the user's responsibility to make sure that the coefficient is nonzero </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classSymmetric__Polynomials_1_1polynomial_a7582ebc7d8e2fcfd5c01c8b5acc50350_icgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1polynomial_a7582ebc7d8e2fcfd5c01c8b5acc50350_icgraph" alt=""/></div>
-<map name="classSymmetric__Polynomials_1_1polynomial_a7582ebc7d8e2fcfd5c01c8b5acc50350_icgraph" id="classSymmetric__Polynomials_1_1polynomial_a7582ebc7d8e2fcfd5c01c8b5acc50350_icgraph">
-<area shape="rect" title="Print polynomial using default variable names x_1,...,x_n." alt="" coords="253,20,433,61"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1polynomial.html#a74ab4a485e9017d4517dc7cf24e9ee9a" title="Print monomial using given variable names." alt="" coords="5,5,205,76"/>
+<div class="center"><img src="classSymmetric__Polynomials_1_1Polynomial_a398889dc1151404048820a5c1b4baf5a_icgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1Polynomial_a398889dc1151404048820a5c1b4baf5a_icgraph" alt=""/></div>
+<map name="classSymmetric__Polynomials_1_1Polynomial_a398889dc1151404048820a5c1b4baf5a_icgraph" id="classSymmetric__Polynomials_1_1Polynomial_a398889dc1151404048820a5c1b4baf5a_icgraph">
+<area shape="rect" title="Inserts monomial given exponent and coefficient." alt="" coords="260,5,440,47"/>
+<area shape="rect" href="Demo_8cpp.html#a1660780e039cee9f194c25e9be8c0ca4" title=" " alt="" coords="5,5,212,47"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a282b9660df877b4a5ed1ec57a7714634"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a282b9660df877b4a5ed1ec57a7714634">&#9670;&nbsp;</a></span>print() <span class="overload">[2/3]</span></h2>
+<a id="ab682f9da699d3d9767586332ee32c4e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab682f9da699d3d9767586332ee32c4e4">&#9670;&nbsp;</a></span>number_of_monomials()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+template&lt;typename container_t &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::string <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">Symmetric_Polynomials::polynomial</a>&lt; scalar_t, rel_t &gt;::print </td>
+          <td class="memname">auto <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Symmetric_Polynomials::Polynomial</a>&lt; container_t &gt;::number_of_monomials </td>
           <td>(</td>
-          <td class="paramtype">const std::function&lt; std::string(int)&gt; &amp;&#160;</td>
-          <td class="paramname"><em>variable_names</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Print polynomial using given variable names. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSymmetric__Polynomials_1_1polynomial_a282b9660df877b4a5ed1ec57a7714634_icgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1polynomial_a282b9660df877b4a5ed1ec57a7714634_icgraph" alt=""/></div>
-<map name="classSymmetric__Polynomials_1_1polynomial_a282b9660df877b4a5ed1ec57a7714634_icgraph" id="classSymmetric__Polynomials_1_1polynomial_a282b9660df877b4a5ed1ec57a7714634_icgraph">
-<area shape="rect" title="Print polynomial using given variable names." alt="" coords="496,115,676,156"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1half__idempotent__generators.html#a1bcf78e321dbff9f8699ec7ef3017ae5" title="Print a polynomial on the generators Idem, Chern and TwistedChern." alt="" coords="233,67,448,123"/>
-<area shape="rect" href="structSymmetric__Polynomials_1_1decomposition__elementary__symmetric.html#a64708d98e4dcf8644562aa5cd115d650" title="Print a polynomial on elementary symmetric polynomials." alt="" coords="237,147,445,203"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a883bc8a69d911cdc3692dff4297d17e2" title="Prints polynomial." alt="" coords="5,5,185,47"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#abc624e6ecd4b5ce3c02f150183362963" title="Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,..." alt="" coords="5,71,185,127"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a58c3ea2d58a1501fc02442da2ae837a4" title="Prints decomposition into elementary symmetric polynomials." alt="" coords="5,155,185,196"/>
-</map>
-</div>
+<p>Returns number of monomials in polynomial. </p>
 
 </div>
 </div>
-<a id="a74ab4a485e9017d4517dc7cf24e9ee9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74ab4a485e9017d4517dc7cf24e9ee9a">&#9670;&nbsp;</a></span>print() <span class="overload">[3/3]</span></h2>
+<a id="a57d1a73579c3462cd6b86de62361092d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57d1a73579c3462cd6b86de62361092d">&#9670;&nbsp;</a></span>number_of_variables()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+template&lt;typename container_t &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::string <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">Symmetric_Polynomials::polynomial</a>&lt; scalar_t, rel_t &gt;::print </td>
+          <td class="memname">auto <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Symmetric_Polynomials::Polynomial</a>&lt; container_t &gt;::number_of_variables </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
-          <td class="paramname"><em>variable_names</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Print monomial using given variable names. </p>
+<p>Returns the numbers of variables of the polynomial. </p>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="ab9d8736a84257e51748cefff853c43a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9d8736a84257e51748cefff853c43a4">&#9670;&nbsp;</a></span>monos</h2>
+<a id="a7868332701c639696435bb600e116867"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7868332701c639696435bb600e116867">&#9670;&nbsp;</a></span>operator!=()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename scalar_t , typename rel_t &gt; </div>
+template&lt;typename container_t &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classSymmetric__Polynomials_1_1monomial.html">monomial</a>&lt;scalar_t, rel_t&gt; &gt; <a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">Symmetric_Polynomials::polynomial</a>&lt; scalar_t, rel_t &gt;::monos</td>
+          <td class="memname">bool <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Symmetric_Polynomials::Polynomial</a>&lt; container_t &gt;::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt; container_t &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>The vector of monomials, ordered in increasing degree. </p>
+<p>Inequality of polynomials. </p>
+
+</div>
+</div>
+<a id="ab6061ac87d99411be3a6aaca89a3eba8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6061ac87d99411be3a6aaca89a3eba8">&#9670;&nbsp;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename container_t &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a> <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Symmetric_Polynomials::Polynomial</a>&lt; container_t &gt;::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt; container_t &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Multiplies polynomials. </p>
+
+</div>
+</div>
+<a id="ae870e2d56b371f10790a9d8339e11029"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae870e2d56b371f10790a9d8339e11029">&#9670;&nbsp;</a></span>operator*=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename container_t &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&amp; <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Symmetric_Polynomials::Polynomial</a>&lt; container_t &gt;::operator*= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt; container_t &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Multiplies polynomial on the LHS with polynomial on the RHS (not in place) </p>
+
+</div>
+</div>
+<a id="ae0fa602ddb4a1642ee0cb8a6ef486f5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0fa602ddb4a1642ee0cb8a6ef486f5b">&#9670;&nbsp;</a></span>operator*=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename container_t &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&amp; <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Symmetric_Polynomials::Polynomial</a>&lt; container_t &gt;::operator*= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#a59b08e7c10ddadcf8e89350d4975d6ae">scl_t</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Multiplies polynomial on the LHS with scalar coefficient on the RHS (in place) </p>
+
+</div>
+</div>
+<a id="ad544586e3ce37d8ae86ddf1aeac85073"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad544586e3ce37d8ae86ddf1aeac85073">&#9670;&nbsp;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename container_t &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a> <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Symmetric_Polynomials::Polynomial</a>&lt; container_t &gt;::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt; container_t &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds polynomials. </p>
+
+</div>
+</div>
+<a id="aaa49555b707c9faf64489567484b1713"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa49555b707c9faf64489567484b1713">&#9670;&nbsp;</a></span>operator+=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename container_t &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&amp; <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Symmetric_Polynomials::Polynomial</a>&lt; container_t &gt;::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt; container_t &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds polynomial on the RHS to polynomial on the LHS (in place) </p>
+
+</div>
+</div>
+<a id="a8ca2766434a4523921cc4e3ee04a8fe8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ca2766434a4523921cc4e3ee04a8fe8">&#9670;&nbsp;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename container_t &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a> <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Symmetric_Polynomials::Polynomial</a>&lt; container_t &gt;::operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt; container_t &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Subtracts polynomials. </p>
+
+</div>
+</div>
+<a id="a1fd8ad93a5b1a0a07ce3db9508f744c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fd8ad93a5b1a0a07ce3db9508f744c7">&#9670;&nbsp;</a></span>operator-=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename container_t &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&amp; <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Symmetric_Polynomials::Polynomial</a>&lt; container_t &gt;::operator-= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt; container_t &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Subtracts polynomial on the RHS from polynomial on the LHS (in place) </p>
+
+</div>
+</div>
+<a id="a1e2857d9cf3315a748928e33f8681b3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e2857d9cf3315a748928e33f8681b3e">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename container_t &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Symmetric_Polynomials::Polynomial</a>&lt; container_t &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a>&lt; container_t &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Equality of polynomials. </p>
+
+</div>
+</div>
+<a id="a721ab7489794b15755ed733eccd6e858"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a721ab7489794b15755ed733eccd6e858">&#9670;&nbsp;</a></span>operator^()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename container_t &gt; </div>
+<div class="memtemplate">
+template&lt;typename any_int_type  = int&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a> <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Symmetric_Polynomials::Polynomial</a>&lt; container_t &gt;::operator^ </td>
+          <td>(</td>
+          <td class="paramtype">any_int_type&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Raises polynomial to given power (does nothing if given power is &lt;0) </p>
+
+</div>
+</div>
+<a id="a79ee3c7a321c648b32cac4d13d39fb47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79ee3c7a321c648b32cac4d13d39fb47">&#9670;&nbsp;</a></span>print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename container_t &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Symmetric_Polynomials::Polynomial</a>&lt; container_t &gt;::print </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prints polynomial. </p>
+
+</div>
+</div>
+<a id="adf413d58aa5d7f36e58884d91e9aabda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf413d58aa5d7f36e58884d91e9aabda">&#9670;&nbsp;</a></span>reserve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename container_t &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Symmetric_Polynomials::Polynomial</a>&lt; container_t &gt;::reserve </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reserve number of monomials (does nothing if the container used does not have a reserve function) </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>source/<a class="el" href="Polynomials_8h_source.html">Polynomials.h</a></li>
+<li>source/<a class="el" href="Polynomials_8hpp_source.html">Polynomials.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespaceSymmetric__Polynomials.html">Symmetric_Polynomials</a></li><li class="navelem"><a class="el" href="classSymmetric__Polynomials_1_1polynomial.html">polynomial</a></li>
+    <li class="navelem"><a class="el" href="namespaceSymmetric__Polynomials.html">Symmetric_Polynomials</a></li><li class="navelem"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Polynomial</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

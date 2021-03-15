@@ -1,4 +1,0 @@
-<map id="vector_interpolate_generator" name="vector_interpolate_generator">
-<area shape="rect" id="node1" title="Generates all vectors between a given min and max vector, and satisfying a given policy." alt="" coords="34,5,175,47"/>
-<area shape="rect" id="node2" href="$structmonomial__basis__generator.html" title="Generates a basis of monomials in given number of variables and degree." alt="" coords="5,95,204,136"/>
-</map>

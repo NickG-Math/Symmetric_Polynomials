@@ -1,5 +1,0 @@
-<map id="Symmetric_Polynomials::relations_base" name="Symmetric_Polynomials::relations_base">
-<area shape="rect" id="node1" title="Base class for all relations. Inherit from it and specialize static methods to get a functioning rela..." alt="" coords="107,5,287,47"/>
-<area shape="rect" id="node2" href="$structSymmetric__Polynomials_1_1halfidempotent.html" title="Class when we have variables &#160;and the relations are: ." alt="" coords="5,95,185,136"/>
-<area shape="rect" id="node3" href="$structSymmetric__Polynomials_1_1norelations.html" title="Class when no relations are needed." alt="" coords="209,95,389,136"/>
-</map>

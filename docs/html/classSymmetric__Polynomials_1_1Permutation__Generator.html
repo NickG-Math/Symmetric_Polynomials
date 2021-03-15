@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('classSymmetric__Polynomials_1_1Permuta
 <p>Generates all permutations on a number of letters.  
  <a href="classSymmetric__Polynomials_1_1Permutation__Generator.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="Generators_8h_source.html">Generators.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="Generators_8hpp_source.html">Generators.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -113,10 +113,10 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8bb95ad96b98c13af256f195b88e6be2"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Permutation__Generator.html#a8bb95ad96b98c13af256f195b88e6be2">size</a> () const</td></tr>
-<tr class="memdesc:a8bb95ad96b98c13af256f195b88e6be2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total number of permutations i.e. the factorial.  <a href="classSymmetric__Polynomials_1_1Permutation__Generator.html#a8bb95ad96b98c13af256f195b88e6be2">More...</a><br /></td></tr>
+<tr class="memdesc:a8bb95ad96b98c13af256f195b88e6be2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes total number of permutations.  <a href="classSymmetric__Polynomials_1_1Permutation__Generator.html#a8bb95ad96b98c13af256f195b88e6be2">More...</a><br /></td></tr>
 <tr class="separator:a8bb95ad96b98c13af256f195b88e6be2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a707511eefe29d67fbe00eea1fead115a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Permutation__Generator.html#a707511eefe29d67fbe00eea1fead115a">Permutation_Generator</a> (T n)</td></tr>
-<tr class="memdesc:a707511eefe29d67fbe00eea1fead115a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor using number of letters.  <a href="classSymmetric__Polynomials_1_1Permutation__Generator.html#a707511eefe29d67fbe00eea1fead115a">More...</a><br /></td></tr>
+<tr class="memdesc:a707511eefe29d67fbe00eea1fead115a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up the generator.  <a href="classSymmetric__Polynomials_1_1Permutation__Generator.html#a707511eefe29d67fbe00eea1fead115a">More...</a><br /></td></tr>
 <tr class="separator:a707511eefe29d67fbe00eea1fead115a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba949bf0a3d1ba9bfbd3f9c3b7e89b4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1Permutation__Generator_1_1const__iterator.html">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Permutation__Generator.html#aba949bf0a3d1ba9bfbd3f9c3b7e89b4d">begin</a> () const</td></tr>
 <tr class="memdesc:aba949bf0a3d1ba9bfbd3f9c3b7e89b4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initial generator.  <a href="classSymmetric__Polynomials_1_1Permutation__Generator.html#aba949bf0a3d1ba9bfbd3f9c3b7e89b4d">More...</a><br /></td></tr>
@@ -130,6 +130,12 @@ Public Member Functions</h2></td></tr>
 class Symmetric_Polynomials::Permutation_Generator&lt; T &gt;</h3>
 
 <p>Generates all permutations on a number of letters. </p>
+<p>Use with a ranged for loop: Ex for (const auto&amp; i:v){ ... } where v is a permutations_generator object. Then i will be a permutation Warning: Not thread safe! </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The data type of our permutations eg std::vector&lt;int&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a707511eefe29d67fbe00eea1fead115a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a707511eefe29d67fbe00eea1fead115a">&#9670;&nbsp;</a></span>Permutation_Generator()</h2>
@@ -138,9 +144,6 @@ class Symmetric_Polynomials::Permutation_Generator&lt; T &gt;</h3>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Permutation__Generator.html">Symmetric_Polynomials::Permutation_Generator</a>&lt; T &gt;::<a class="el" href="classSymmetric__Polynomials_1_1Permutation__Generator.html">Permutation_Generator</a> </td>
@@ -150,14 +153,15 @@ template&lt;typename T &gt; </div>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Constructor using number of letters. </p>
+<p>Sets up the generator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>the total number of letters </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -169,9 +173,6 @@ template&lt;typename T &gt; </div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Permutation__Generator_1_1const__iterator.html">const_iterator</a> <a class="el" href="classSymmetric__Polynomials_1_1Permutation__Generator.html">Symmetric_Polynomials::Permutation_Generator</a>&lt; T &gt;::begin </td>
@@ -180,11 +181,6 @@ template&lt;typename T &gt; </div>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Initial generator. </p>
@@ -198,9 +194,6 @@ template&lt;typename T &gt; </div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Permutation__Generator_1_1const__iterator.html">const_iterator</a> <a class="el" href="classSymmetric__Polynomials_1_1Permutation__Generator.html">Symmetric_Polynomials::Permutation_Generator</a>&lt; T &gt;::end </td>
@@ -209,32 +202,9 @@ template&lt;typename T &gt; </div>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Terminal generator. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSymmetric__Polynomials_1_1Permutation__Generator_ad84ae916e915cef1107644a7d624c877_cgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1Permutation__Generator_ad84ae916e915cef1107644a7d624c877_cgraph" alt=""/></div>
-<map name="classSymmetric__Polynomials_1_1Permutation__Generator_ad84ae916e915cef1107644a7d624c877_cgraph" id="classSymmetric__Polynomials_1_1Permutation__Generator_ad84ae916e915cef1107644a7d624c877_cgraph">
-<area shape="rect" title="Terminal generator." alt="" coords="5,27,220,69"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1Factory__Generator.html#a4c5bb7b8ec49b21e6aa3ec09e4d435e7" title="Terminal iterator." alt="" coords="268,5,448,91"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSymmetric__Polynomials_1_1Permutation__Generator_ad84ae916e915cef1107644a7d624c877_icgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1Permutation__Generator_ad84ae916e915cef1107644a7d624c877_icgraph" alt=""/></div>
-<map name="classSymmetric__Polynomials_1_1Permutation__Generator_ad84ae916e915cef1107644a7d624c877_icgraph" id="classSymmetric__Polynomials_1_1Permutation__Generator_ad84ae916e915cef1107644a7d624c877_icgraph">
-<area shape="rect" title="Terminal generator." alt="" coords="271,5,485,47"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1Combination__Generator.html#a32aa4897e4da0c9fc905b63fe756ada1" title="Terminal generator." alt="" coords="5,5,223,47"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -245,9 +215,6 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">size_t <a class="el" href="classSymmetric__Polynomials_1_1Permutation__Generator.html">Symmetric_Polynomials::Permutation_Generator</a>&lt; T &gt;::size </td>
@@ -256,28 +223,15 @@ template&lt;typename T &gt; </div>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Returns the total number of permutations i.e. the factorial. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSymmetric__Polynomials_1_1Permutation__Generator_a8bb95ad96b98c13af256f195b88e6be2_icgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1Permutation__Generator_a8bb95ad96b98c13af256f195b88e6be2_icgraph" alt=""/></div>
-<map name="classSymmetric__Polynomials_1_1Permutation__Generator_a8bb95ad96b98c13af256f195b88e6be2_icgraph" id="classSymmetric__Polynomials_1_1Permutation__Generator_a8bb95ad96b98c13af256f195b88e6be2_icgraph">
-<area shape="rect" title="Returns the total number of permutations i.e. the factorial." alt="" coords="233,5,449,47"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#a9fbacd7a31bb040f9609e6bdc5cbc541" title="Returns vector of all permutations on n letters." alt="" coords="5,5,185,47"/>
-</map>
-</div>
+<p>Computes total number of permutations. </p>
+<dl class="section return"><dt>Returns</dt><dd>\(n!\) where \(n\) is the number of letters </dd></dl>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>source/<a class="el" href="Generators_8h_source.html">Generators.h</a></li>
+<li>source/<a class="el" href="Generators_8hpp_source.html">Generators.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -1,7 +1,0 @@
-<map id="Symmetric_Polynomials::Polynomial::insert" name="Symmetric_Polynomials::Polynomial::insert">
-<area shape="rect" id="node1" title="Inserts monomial given exponent and coefficient." alt="" coords="269,119,449,160"/>
-<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1Symmetric__Basis.html#a348f7fc55913fcccfcc2605e5800ab08" title="Transform a symmetric polynomial on the original variables x_i into one on the elementary symmetric p..." alt="" coords="5,5,221,47"/>
-<area shape="rect" id="node3" href="$classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#a9897125c664f79acb7e2ceac299347fc" title="Transform a symmetric polynomial on the &#160;into a polynomial on ." alt="" coords="23,71,204,127"/>
-<area shape="rect" id="node4" href="$classSymmetric__Polynomials_1_1Polynomial.html#a04d54797ea0df375a1d0d10adac0fa2f" title="Constructs monomial given exponent and scalar coefficient." alt="" coords="8,151,219,207"/>
-<area shape="rect" id="node5" href="$Demo_8cpp.html#a1660780e039cee9f194c25e9be8c0ca4" title="Writes the twisted Pontryagin/symplectic classes pi_{s,j}/k_{s,j} in terms of the Chern classes under..." alt="" coords="10,232,217,273"/>
-</map>

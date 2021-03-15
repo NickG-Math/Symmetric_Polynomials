@@ -1,5 +1,0 @@
-<map id="Symmetric_Polynomials::Symmetric_Basis::operator()" name="Symmetric_Polynomials::Symmetric_Basis::operator()">
-<area shape="rect" id="node1" title="Transform a symmetric polynomial on the original variables x_i into one on the elementary symmetric p..." alt="" coords="5,39,221,80"/>
-<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1Polynomial.html#a8efe548b8fef60ea79c3bdac7f79ea46" title="Returns highest term monomial in a polynomial." alt="" coords="269,5,467,47"/>
-<area shape="rect" id="node3" href="$classSymmetric__Polynomials_1_1Polynomial.html#a01ef9f68433da31e0a1d396535a37b24" title="Inserts monomial given exponent and coefficient." alt="" coords="278,71,458,112"/>
-</map>

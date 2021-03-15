@@ -1,4 +1,0 @@
-<map id="Symmetric_Polynomials::operator*" name="Symmetric_Polynomials::operator*">
-<area shape="rect" id="node1" title="Returns the product of monomial and polynomial." alt="" coords="5,5,185,47"/>
-<area shape="rect" id="node2" href="$namespaceSymmetric__Polynomials.html#aa3071663e4ec8ac6e28de064de66e492" title="Multiplies two polynomials with the ability to disable condensation (not recommended)" alt="" coords="233,5,413,47"/>
-</map>

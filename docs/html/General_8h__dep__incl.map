@@ -1,8 +1,0 @@
-<map id="source/General.h" name="source/General.h">
-<area shape="rect" id="node1" title="Contains general operations on vectors (eg hashing, adding), the class of rational numbers,..." alt="" coords="111,5,243,32"/>
-<area shape="rect" id="node2" href="$Polynomials_8h.html" title="Contains the class of polynomials in multiple variables." alt="" coords="5,80,167,107"/>
-<area shape="rect" id="node6" href="$Generators_8h.html" title="Contains classes for generating permutations, combinations and factory for such classes." alt="" coords="191,80,344,107"/>
-<area shape="rect" id="node3" href="$Symmetric__Basis_8h.html" title="Contains methods for writing symmetric polynomials (with no relations) in terms of the elementary sym..." alt="" coords="79,155,274,181"/>
-<area shape="rect" id="node4" href="$Half__Idempotent_8h.html" title="Contains the methods and classes for solving the following problem: If $$R=\mathbb Z[x_1,..." alt="" coords="81,229,272,256"/>
-<area shape="rect" id="node5" href="$Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="109,304,244,331"/>
-</map>

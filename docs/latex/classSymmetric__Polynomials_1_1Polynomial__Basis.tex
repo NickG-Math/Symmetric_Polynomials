@@ -1,5 +1,5 @@
-\hypertarget{classSymmetric__Polynomials_1_1Polynomial__Basis}{}\doxysection{Symmetric\+\_\+\+Polynomials\+::Polynomial\+\_\+\+Basis$<$ T, container\+\_\+1\+\_\+t, container\+\_\+2\+\_\+t $>$ Class Template Reference}
-\label{classSymmetric__Polynomials_1_1Polynomial__Basis}\index{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$}}
+\hypertarget{classSymmetric__Polynomials_1_1Polynomial__Basis}{}\doxysubsection{Symmetric\+\_\+\+Polynomials\+::Polynomial\+\_\+\+Basis$<$ specialization, container\+\_\+1\+\_\+t, container\+\_\+2\+\_\+t $>$ Class Template Reference}
+\label{classSymmetric__Polynomials_1_1Polynomial__Basis}\index{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$}}
 
 
 Factory class that provides the general interface of a generating basis for a subring of a polynomial ring. Example implementations are \mbox{\hyperlink{classSymmetric__Polynomials_1_1Symmetric__Basis}{Symmetric\+\_\+\+Basis}} and \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Half\+\_\+\+Idempotent\+\_\+\+Basis}}.  
@@ -7,179 +7,200 @@ Factory class that provides the general interface of a generating basis for a su
 
 
 
-{\ttfamily \#include $<$Symmetric\+\_\+\+Basis.\+h$>$}
+{\ttfamily \#include $<$Symmetric\+\_\+\+Basis.\+hpp$>$}
 
-\doxysubsection*{Public Member Functions}
+
+
+Inheritance diagram for Symmetric\+\_\+\+Polynomials\+::Polynomial\+\_\+\+Basis$<$ specialization, container\+\_\+1\+\_\+t, container\+\_\+2\+\_\+t $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1Polynomial__Basis__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ container\+\_\+2\+\_\+t $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis_af05e6fa6042a0e764a6770fce596b619}{operator()}} (\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ container\+\_\+1\+\_\+t $>$ a) const
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ container\+\_\+2\+\_\+t $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis_ab5a0d3b3e9b9907e74bc9453c96e310e}{operator()}} (\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ container\+\_\+1\+\_\+t $>$ a) const
 \begin{DoxyCompactList}\small\item\em Transform a polynomial on the original variables to one on the generating basis. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ container\+\_\+1\+\_\+t $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis_a6d2f1be65b138c5521becc231543698a}{operator()}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ container\+\_\+2\+\_\+t $>$ \&a) const
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ container\+\_\+1\+\_\+t $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis_a92334581511add5404f56d111c08957d}{operator()}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ container\+\_\+2\+\_\+t $>$ \&a) const
 \begin{DoxyCompactList}\small\item\em Transform a polynomial on the generating basis into a polynomial on the original variables. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis_af90b4a3bcfca5f06f0523f888a579f00}{Polynomial\+\_\+\+Basis}} (int \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis_a0bc2c682f8a72800b5e81d4a8106c4c3}{number\+\_\+of\+\_\+variables}})
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis_a3287ce475705fe67a98cdfbad6a79b6e}{Polynomial\+\_\+\+Basis}} (int \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis_a464c6f8663253d54b5f485053074bf64}{number\+\_\+of\+\_\+variables}})
 \begin{DoxyCompactList}\small\item\em Constructor given number of variables. \end{DoxyCompactList}\item 
-const auto \& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis_adea58c108a26380dfd3fb2bb018953a9}{generators}} () const
-\begin{DoxyCompactList}\small\item\em Returns const\& of vector containing the generating basis. \end{DoxyCompactList}\item 
-const auto \& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis_adbf6b2b9ac7e0503a6a406f9c31d6dec}{dimensions}} () const
-\begin{DoxyCompactList}\small\item\em Returns const\& of vector containing the dimensions of the generating basis (can be empty!) \end{DoxyCompactList}\item 
-const auto \& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis_aab76c0573eb2c23a5cfbfc8259f5e010}{names}} () const
-\begin{DoxyCompactList}\small\item\em Returns const\& of vector containing the names of the generating basis (can be empty!) \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes}
+const auto \& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis_a723daf45d9e28d66e982f78311fedcea}{generators}} () const
+\begin{DoxyCompactList}\small\item\em Returns vector containing the generating basis. \end{DoxyCompactList}\item 
+const auto \& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis_a14a74e1fe604243f3eb8461e06755438}{dimensions}} () const
+\begin{DoxyCompactList}\small\item\em Returns vector containing the dimensions of the generating basis (can be empty!) \end{DoxyCompactList}\item 
+const auto \& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis_a4ae624ffe4e1224b9da21775068df002}{names}} () const
+\begin{DoxyCompactList}\small\item\em Returns vector containing the names of the generating basis (can be empty!) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-const int \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis_a0bc2c682f8a72800b5e81d4a8106c4c3}{number\+\_\+of\+\_\+variables}}
+const int \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis_a464c6f8663253d54b5f485053074bf64}{number\+\_\+of\+\_\+variables}}
 \begin{DoxyCompactList}\small\item\em The number of (the original) variables of the polynomial ring. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Protected Attributes}
+\doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-std\+::vector$<$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ container\+\_\+1\+\_\+t $>$ $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis_a9909e4afb2731fa8f66cd2ee5b8cfd5b}{\+\_\+generators}}
+std\+::vector$<$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ container\+\_\+1\+\_\+t $>$ $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis_a9848e60702a97d3e17794131dad025f8}{\+\_\+generators}}
 \begin{DoxyCompactList}\small\item\em The generators of the polynomial basis, constructed in the inheriting class. \end{DoxyCompactList}\item 
-std\+::vector$<$ typename \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ container\+\_\+2\+\_\+t $>$\+::deg\+\_\+t $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis_a7da888621f50dff50a42ccdc942e2785}{generator\+\_\+dimensions}}
+std\+::vector$<$ typename \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ container\+\_\+2\+\_\+t $>$\+::deg\+\_\+t $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis_a70bc4d6ae12adfa6bd6fcc4600963836}{generator\+\_\+dimensions}}
 \begin{DoxyCompactList}\small\item\em The dimensions of the generators, optionally constructed in the inheriting class. \end{DoxyCompactList}\item 
-std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis_aa041f5445e3354614642393bcf3b2ee8}{generator\+\_\+names}}
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis_aae0baab1fa525e9e15b13ca76263231e}{generator\+\_\+names}}
 \begin{DoxyCompactList}\small\item\em The names of the generators, optionally constructed in the inheriting class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
-\subsubsection*{template$<$typename T, typename container\+\_\+1\+\_\+t, typename container\+\_\+2\+\_\+t$>$\newline
-class Symmetric\+\_\+\+Polynomials\+::\+Polynomial\+\_\+\+Basis$<$ T, container\+\_\+1\+\_\+t, container\+\_\+2\+\_\+t $>$}
+\doxysubsubsection{Detailed Description}
+\subsubsection*{template$<$typename specialization, typename container\+\_\+1\+\_\+t, typename container\+\_\+2\+\_\+t$>$\newline
+class Symmetric\+\_\+\+Polynomials\+::\+Polynomial\+\_\+\+Basis$<$ specialization, container\+\_\+1\+\_\+t, container\+\_\+2\+\_\+t $>$}
 
 Factory class that provides the general interface of a generating basis for a subring of a polynomial ring. Example implementations are \mbox{\hyperlink{classSymmetric__Polynomials_1_1Symmetric__Basis}{Symmetric\+\_\+\+Basis}} and \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Half\+\_\+\+Idempotent\+\_\+\+Basis}}. 
 
-Use by inheriting and setting T be the inheriting class (C\+R\+TP). Then construct \+\_\+generators (an optionally generator\+\_\+names and generator\+\_\+dimensions) in the inheriting class.
+Inherit from this class and construct data member \+\_\+generators through the child class (and optionally generator\+\_\+names and generator\+\_\+dimensions).
 
-The inheriting class T must implement a method find\+\_\+exponent with singature\+: \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_aa465567e5f113d3366dc71ff32af55b1}{Polynomial$<$container\+\_\+2\+\_\+t$>$\+::exp\+\_\+t}} find\+\_\+exponent(const Polynomial$<$container\+\_\+1\+\_\+t$>$\+::exp\+\_\+t\&);
+The child class must also have a method find\+\_\+exponent with singature\+: \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_aa465567e5f113d3366dc71ff32af55b1}{Polynomial$<$container\+\_\+2\+\_\+t$>$\+::exp\+\_\+t}} find\+\_\+exponent(const Polynomial$<$container\+\_\+1\+\_\+t$>$\+::exp\+\_\+t\&); 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em specialization} & Used for compile-\/time polymorphism (C\+R\+TP)\+: set it to be the child class. \\
+\hline
+{\em container\+\_\+1\+\_\+t} & The container type of the original variables (of the polynomial ring) \\
+\hline
+{\em container\+\_\+2\+\_\+t} & The container type of the new variables that are the basis elements (of the subring) \\
+\hline
+\end{DoxyTemplParams}
 
-container\+\_\+1\+\_\+t is the container type of the original variables (of the polynomial ring)
 
-container\+\_\+2\+\_\+t is the container type of the new variables that are the basis elements (of the subring) 
-
-\doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial__Basis_af90b4a3bcfca5f06f0523f888a579f00}\label{classSymmetric__Polynomials_1_1Polynomial__Basis_af90b4a3bcfca5f06f0523f888a579f00}} 
-\index{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$}!Polynomial\_Basis@{Polynomial\_Basis}}
-\index{Polynomial\_Basis@{Polynomial\_Basis}!Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$}}
-\doxysubsubsection{\texorpdfstring{Polynomial\_Basis()}{Polynomial\_Basis()}}
-{\footnotesize\ttfamily template$<$typename T , typename container\+\_\+1\+\_\+t , typename container\+\_\+2\+\_\+t $>$ \\
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial\+\_\+\+Basis}}$<$ T, container\+\_\+1\+\_\+t, container\+\_\+2\+\_\+t $>$\+::\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis}{Polynomial\+\_\+\+Basis}} (\begin{DoxyParamCaption}\item[{int}]{number\+\_\+of\+\_\+variables }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial__Basis_a3287ce475705fe67a98cdfbad6a79b6e}\label{classSymmetric__Polynomials_1_1Polynomial__Basis_a3287ce475705fe67a98cdfbad6a79b6e}} 
+\index{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$}!Polynomial\_Basis@{Polynomial\_Basis}}
+\index{Polynomial\_Basis@{Polynomial\_Basis}!Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$}}
+\doxyparagraph{\texorpdfstring{Polynomial\_Basis()}{Polynomial\_Basis()}}
+{\footnotesize\ttfamily template$<$typename specialization , typename container\+\_\+1\+\_\+t , typename container\+\_\+2\+\_\+t $>$ \\
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial\+\_\+\+Basis}}$<$ specialization, container\+\_\+1\+\_\+t, container\+\_\+2\+\_\+t $>$\+::\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis}{Polynomial\+\_\+\+Basis}} (\begin{DoxyParamCaption}\item[{int}]{number\+\_\+of\+\_\+variables }\end{DoxyParamCaption})}
 
 
 
 Constructor given number of variables. 
 
 
-
-\doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial__Basis_adbf6b2b9ac7e0503a6a406f9c31d6dec}\label{classSymmetric__Polynomials_1_1Polynomial__Basis_adbf6b2b9ac7e0503a6a406f9c31d6dec}} 
-\index{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$}!dimensions@{dimensions}}
-\index{dimensions@{dimensions}!Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$}}
-\doxysubsubsection{\texorpdfstring{dimensions()}{dimensions()}}
-{\footnotesize\ttfamily template$<$typename T , typename container\+\_\+1\+\_\+t , typename container\+\_\+2\+\_\+t $>$ \\
-const auto\& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial\+\_\+\+Basis}}$<$ T, container\+\_\+1\+\_\+t, container\+\_\+2\+\_\+t $>$\+::dimensions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+\begin{DoxyParams}{Parameters}
+{\em number\+\_\+of\+\_\+variables} & The number of variables for the polynomials \\
+\hline
+\end{DoxyParams}
 
 
-
-Returns const\& of vector containing the dimensions of the generating basis (can be empty!) 
-
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial__Basis_adea58c108a26380dfd3fb2bb018953a9}\label{classSymmetric__Polynomials_1_1Polynomial__Basis_adea58c108a26380dfd3fb2bb018953a9}} 
-\index{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$}!generators@{generators}}
-\index{generators@{generators}!Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$}}
-\doxysubsubsection{\texorpdfstring{generators()}{generators()}}
-{\footnotesize\ttfamily template$<$typename T , typename container\+\_\+1\+\_\+t , typename container\+\_\+2\+\_\+t $>$ \\
-const auto\& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial\+\_\+\+Basis}}$<$ T, container\+\_\+1\+\_\+t, container\+\_\+2\+\_\+t $>$\+::generators (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial__Basis_a14a74e1fe604243f3eb8461e06755438}\label{classSymmetric__Polynomials_1_1Polynomial__Basis_a14a74e1fe604243f3eb8461e06755438}} 
+\index{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$}!dimensions@{dimensions}}
+\index{dimensions@{dimensions}!Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$}}
+\doxyparagraph{\texorpdfstring{dimensions()}{dimensions()}}
+{\footnotesize\ttfamily template$<$typename specialization , typename container\+\_\+1\+\_\+t , typename container\+\_\+2\+\_\+t $>$ \\
+const auto\& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial\+\_\+\+Basis}}$<$ specialization, container\+\_\+1\+\_\+t, container\+\_\+2\+\_\+t $>$\+::dimensions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
-Returns const\& of vector containing the generating basis. 
+Returns vector containing the dimensions of the generating basis (can be empty!) 
 
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial__Basis_aab76c0573eb2c23a5cfbfc8259f5e010}\label{classSymmetric__Polynomials_1_1Polynomial__Basis_aab76c0573eb2c23a5cfbfc8259f5e010}} 
-\index{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$}!names@{names}}
-\index{names@{names}!Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$}}
-\doxysubsubsection{\texorpdfstring{names()}{names()}}
-{\footnotesize\ttfamily template$<$typename T , typename container\+\_\+1\+\_\+t , typename container\+\_\+2\+\_\+t $>$ \\
-const auto\& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial\+\_\+\+Basis}}$<$ T, container\+\_\+1\+\_\+t, container\+\_\+2\+\_\+t $>$\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial__Basis_a723daf45d9e28d66e982f78311fedcea}\label{classSymmetric__Polynomials_1_1Polynomial__Basis_a723daf45d9e28d66e982f78311fedcea}} 
+\index{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$}!generators@{generators}}
+\index{generators@{generators}!Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$}}
+\doxyparagraph{\texorpdfstring{generators()}{generators()}}
+{\footnotesize\ttfamily template$<$typename specialization , typename container\+\_\+1\+\_\+t , typename container\+\_\+2\+\_\+t $>$ \\
+const auto\& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial\+\_\+\+Basis}}$<$ specialization, container\+\_\+1\+\_\+t, container\+\_\+2\+\_\+t $>$\+::generators (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
-Returns const\& of vector containing the names of the generating basis (can be empty!) 
+Returns vector containing the generating basis. 
 
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial__Basis_a6d2f1be65b138c5521becc231543698a}\label{classSymmetric__Polynomials_1_1Polynomial__Basis_a6d2f1be65b138c5521becc231543698a}} 
-\index{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$}!operator()@{operator()}}
-\index{operator()@{operator()}!Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$}}
-\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily template$<$typename T , typename container\+\_\+1\+\_\+t , typename container\+\_\+2\+\_\+t $>$ \\
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$container\+\_\+1\+\_\+t$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial\+\_\+\+Basis}}$<$ T, container\+\_\+1\+\_\+t, container\+\_\+2\+\_\+t $>$\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ container\+\_\+2\+\_\+t $>$ \&}]{a }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial__Basis_a4ae624ffe4e1224b9da21775068df002}\label{classSymmetric__Polynomials_1_1Polynomial__Basis_a4ae624ffe4e1224b9da21775068df002}} 
+\index{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$}!names@{names}}
+\index{names@{names}!Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$}}
+\doxyparagraph{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily template$<$typename specialization , typename container\+\_\+1\+\_\+t , typename container\+\_\+2\+\_\+t $>$ \\
+const auto\& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial\+\_\+\+Basis}}$<$ specialization, container\+\_\+1\+\_\+t, container\+\_\+2\+\_\+t $>$\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns vector containing the names of the generating basis (can be empty!) 
+
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial__Basis_a92334581511add5404f56d111c08957d}\label{classSymmetric__Polynomials_1_1Polynomial__Basis_a92334581511add5404f56d111c08957d}} 
+\index{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$}}
+\doxyparagraph{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename specialization , typename container\+\_\+1\+\_\+t , typename container\+\_\+2\+\_\+t $>$ \\
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$container\+\_\+1\+\_\+t$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial\+\_\+\+Basis}}$<$ specialization, container\+\_\+1\+\_\+t, container\+\_\+2\+\_\+t $>$\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ container\+\_\+2\+\_\+t $>$ \&}]{a }\end{DoxyParamCaption}) const}
 
 
 
 Transform a polynomial on the generating basis into a polynomial on the original variables. 
 
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1Polynomial__Basis_a6d2f1be65b138c5521becc231543698a_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial__Basis_af05e6fa6042a0e764a6770fce596b619}\label{classSymmetric__Polynomials_1_1Polynomial__Basis_af05e6fa6042a0e764a6770fce596b619}} 
-\index{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$}!operator()@{operator()}}
-\index{operator()@{operator()}!Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$}}
-\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily template$<$typename T , typename container\+\_\+1\+\_\+t , typename container\+\_\+2\+\_\+t $>$ \\
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$container\+\_\+2\+\_\+t$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial\+\_\+\+Basis}}$<$ T, container\+\_\+1\+\_\+t, container\+\_\+2\+\_\+t $>$\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ container\+\_\+1\+\_\+t $>$}]{a }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} on the original variables 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} on the new variables \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial__Basis_ab5a0d3b3e9b9907e74bc9453c96e310e}\label{classSymmetric__Polynomials_1_1Polynomial__Basis_ab5a0d3b3e9b9907e74bc9453c96e310e}} 
+\index{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$}}
+\doxyparagraph{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename specialization , typename container\+\_\+1\+\_\+t , typename container\+\_\+2\+\_\+t $>$ \\
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$container\+\_\+2\+\_\+t$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial\+\_\+\+Basis}}$<$ specialization, container\+\_\+1\+\_\+t, container\+\_\+2\+\_\+t $>$\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ container\+\_\+1\+\_\+t $>$}]{a }\end{DoxyParamCaption}) const}
 
 
 
 Transform a polynomial on the original variables to one on the generating basis. 
 
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1Polynomial__Basis_af05e6fa6042a0e764a6770fce596b619_cgraph}
-\end{center}
-\end{figure}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} on the new variables 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} on the original variables \\
+\hline
+\end{DoxyParams}
 
 
-\doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial__Basis_a9909e4afb2731fa8f66cd2ee5b8cfd5b}\label{classSymmetric__Polynomials_1_1Polynomial__Basis_a9909e4afb2731fa8f66cd2ee5b8cfd5b}} 
-\index{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$}!\_generators@{\_generators}}
-\index{\_generators@{\_generators}!Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$}}
-\doxysubsubsection{\texorpdfstring{\_generators}{\_generators}}
-{\footnotesize\ttfamily template$<$typename T , typename container\+\_\+1\+\_\+t , typename container\+\_\+2\+\_\+t $>$ \\
-std\+::vector$<$\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$container\+\_\+1\+\_\+t$>$ $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial\+\_\+\+Basis}}$<$ T, container\+\_\+1\+\_\+t, container\+\_\+2\+\_\+t $>$\+::\+\_\+generators\hspace{0.3cm}{\ttfamily [protected]}}
+\doxysubsubsection{Member Data Documentation}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial__Basis_a9848e60702a97d3e17794131dad025f8}\label{classSymmetric__Polynomials_1_1Polynomial__Basis_a9848e60702a97d3e17794131dad025f8}} 
+\index{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$}!\_generators@{\_generators}}
+\index{\_generators@{\_generators}!Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$}}
+\doxyparagraph{\texorpdfstring{\_generators}{\_generators}}
+{\footnotesize\ttfamily template$<$typename specialization , typename container\+\_\+1\+\_\+t , typename container\+\_\+2\+\_\+t $>$ \\
+std\+::vector$<$\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$container\+\_\+1\+\_\+t$>$ $>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial\+\_\+\+Basis}}$<$ specialization, container\+\_\+1\+\_\+t, container\+\_\+2\+\_\+t $>$\+::\+\_\+generators\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
 The generators of the polynomial basis, constructed in the inheriting class. 
 
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial__Basis_a7da888621f50dff50a42ccdc942e2785}\label{classSymmetric__Polynomials_1_1Polynomial__Basis_a7da888621f50dff50a42ccdc942e2785}} 
-\index{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$}!generator\_dimensions@{generator\_dimensions}}
-\index{generator\_dimensions@{generator\_dimensions}!Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$}}
-\doxysubsubsection{\texorpdfstring{generator\_dimensions}{generator\_dimensions}}
-{\footnotesize\ttfamily template$<$typename T , typename container\+\_\+1\+\_\+t , typename container\+\_\+2\+\_\+t $>$ \\
-std\+::vector$<$typename \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$container\+\_\+2\+\_\+t$>$\+::deg\+\_\+t$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial\+\_\+\+Basis}}$<$ T, container\+\_\+1\+\_\+t, container\+\_\+2\+\_\+t $>$\+::generator\+\_\+dimensions\hspace{0.3cm}{\ttfamily [protected]}}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial__Basis_a70bc4d6ae12adfa6bd6fcc4600963836}\label{classSymmetric__Polynomials_1_1Polynomial__Basis_a70bc4d6ae12adfa6bd6fcc4600963836}} 
+\index{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$}!generator\_dimensions@{generator\_dimensions}}
+\index{generator\_dimensions@{generator\_dimensions}!Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$}}
+\doxyparagraph{\texorpdfstring{generator\_dimensions}{generator\_dimensions}}
+{\footnotesize\ttfamily template$<$typename specialization , typename container\+\_\+1\+\_\+t , typename container\+\_\+2\+\_\+t $>$ \\
+std\+::vector$<$typename \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$container\+\_\+2\+\_\+t$>$\+::deg\+\_\+t$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial\+\_\+\+Basis}}$<$ specialization, container\+\_\+1\+\_\+t, container\+\_\+2\+\_\+t $>$\+::generator\+\_\+dimensions\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
 The dimensions of the generators, optionally constructed in the inheriting class. 
 
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial__Basis_aa041f5445e3354614642393bcf3b2ee8}\label{classSymmetric__Polynomials_1_1Polynomial__Basis_aa041f5445e3354614642393bcf3b2ee8}} 
-\index{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$}!generator\_names@{generator\_names}}
-\index{generator\_names@{generator\_names}!Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$}}
-\doxysubsubsection{\texorpdfstring{generator\_names}{generator\_names}}
-{\footnotesize\ttfamily template$<$typename T , typename container\+\_\+1\+\_\+t , typename container\+\_\+2\+\_\+t $>$ \\
-std\+::vector$<$std\+::string$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial\+\_\+\+Basis}}$<$ T, container\+\_\+1\+\_\+t, container\+\_\+2\+\_\+t $>$\+::generator\+\_\+names\hspace{0.3cm}{\ttfamily [protected]}}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial__Basis_aae0baab1fa525e9e15b13ca76263231e}\label{classSymmetric__Polynomials_1_1Polynomial__Basis_aae0baab1fa525e9e15b13ca76263231e}} 
+\index{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$}!generator\_names@{generator\_names}}
+\index{generator\_names@{generator\_names}!Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$}}
+\doxyparagraph{\texorpdfstring{generator\_names}{generator\_names}}
+{\footnotesize\ttfamily template$<$typename specialization , typename container\+\_\+1\+\_\+t , typename container\+\_\+2\+\_\+t $>$ \\
+std\+::vector$<$std\+::string$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial\+\_\+\+Basis}}$<$ specialization, container\+\_\+1\+\_\+t, container\+\_\+2\+\_\+t $>$\+::generator\+\_\+names\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
 The names of the generators, optionally constructed in the inheriting class. 
 
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial__Basis_a0bc2c682f8a72800b5e81d4a8106c4c3}\label{classSymmetric__Polynomials_1_1Polynomial__Basis_a0bc2c682f8a72800b5e81d4a8106c4c3}} 
-\index{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$}!number\_of\_variables@{number\_of\_variables}}
-\index{number\_of\_variables@{number\_of\_variables}!Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ T, container\_1\_t, container\_2\_t $>$}}
-\doxysubsubsection{\texorpdfstring{number\_of\_variables}{number\_of\_variables}}
-{\footnotesize\ttfamily template$<$typename T , typename container\+\_\+1\+\_\+t , typename container\+\_\+2\+\_\+t $>$ \\
-const int \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial\+\_\+\+Basis}}$<$ T, container\+\_\+1\+\_\+t, container\+\_\+2\+\_\+t $>$\+::number\+\_\+of\+\_\+variables}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial__Basis_a464c6f8663253d54b5f485053074bf64}\label{classSymmetric__Polynomials_1_1Polynomial__Basis_a464c6f8663253d54b5f485053074bf64}} 
+\index{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$}!number\_of\_variables@{number\_of\_variables}}
+\index{number\_of\_variables@{number\_of\_variables}!Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$@{Symmetric\_Polynomials::Polynomial\_Basis$<$ specialization, container\_1\_t, container\_2\_t $>$}}
+\doxyparagraph{\texorpdfstring{number\_of\_variables}{number\_of\_variables}}
+{\footnotesize\ttfamily template$<$typename specialization , typename container\+\_\+1\+\_\+t , typename container\+\_\+2\+\_\+t $>$ \\
+const int \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial\+\_\+\+Basis}}$<$ specialization, container\+\_\+1\+\_\+t, container\+\_\+2\+\_\+t $>$\+::number\+\_\+of\+\_\+variables}
 
 
 
@@ -189,4 +210,4 @@ The number of (the original) variables of the polynomial ring.
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-source/\mbox{\hyperlink{Symmetric__Basis_8h}{Symmetric\+\_\+\+Basis.\+h}}\end{DoxyCompactItemize}
+source/\mbox{\hyperlink{Symmetric__Basis_8hpp}{Symmetric\+\_\+\+Basis.\+hpp}}\end{DoxyCompactItemize}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['polynomials_2eh_108',['Polynomials.h',['../Polynomials_8h.html',1,'']]]
+  ['polynomials_2ehpp_109',['Polynomials.hpp',['../Polynomials_8hpp.html',1,'']]]
 ];

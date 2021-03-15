@@ -1,5 +1,0 @@
-<map id="Symmetric_Polynomials::monomial_basis" name="Symmetric_Polynomials::monomial_basis">
-<area shape="rect" id="node1" title="Returns the monomial basis in given number of variables and degree." alt="" coords="5,43,185,84"/>
-<area shape="rect" id="node2" href="$namespaceSymmetric__Polynomials_1_1policy.html#a40a0271299de2343a3c29a2d0cee4477" title="The policy made by a given comparactor function." alt="" coords="233,5,413,47"/>
-<area shape="rect" id="node3" href="$classSymmetric__Polynomials_1_1vector__interpolate__generator.html#a1d15d2426618c2237bbecdf408b358ab" title="Returns upper bound on the amount of generated elements." alt="" coords="233,71,413,127"/>
-</map>

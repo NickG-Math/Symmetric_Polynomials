@@ -1,4 +1,4 @@
-\hypertarget{structSymmetric__Polynomials_1_1Standard__Variables}{}\doxysection{Symmetric\+\_\+\+Polynomials\+::Standard\+\_\+\+Variables$<$ T, \+\_\+deg $>$ Struct Template Reference}
+\hypertarget{structSymmetric__Polynomials_1_1Standard__Variables}{}\doxysubsection{Symmetric\+\_\+\+Polynomials\+::Standard\+\_\+\+Variables$<$ T, \+\_\+deg $>$ Struct Template Reference}
 \label{structSymmetric__Polynomials_1_1Standard__Variables}\index{Symmetric\_Polynomials::Standard\_Variables$<$ T, \_deg $>$@{Symmetric\_Polynomials::Standard\_Variables$<$ T, \_deg $>$}}
 
 
@@ -7,7 +7,7 @@ The standard variables $x_i$ in a polynomial, with $|x_i|=1$ and no relations.
 
 
 
-{\ttfamily \#include $<$Symmetric\+\_\+\+Basis.\+h$>$}
+{\ttfamily \#include $<$Symmetric\+\_\+\+Basis.\+hpp$>$}
 
 
 
@@ -27,90 +27,125 @@ Collaboration diagram for Symmetric\+\_\+\+Polynomials\+::Standard\+\_\+\+Variab
 \includegraphics[width=215pt]{structSymmetric__Polynomials_1_1Standard__Variables__coll__graph}
 \end{center}
 \end{figure}
-\doxysubsection*{Public Types}
+\doxysubsubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
 typedef \+\_\+deg \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables_a58a0bd0f0385d800f0b654064145b101}{deg\+\_\+t}}
-\end{DoxyCompactItemize}
-\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactList}\small\item\em Degree typedef. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables_a58a0bd0f0385d800f0b654064145b101}{deg\+\_\+t}} \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables_a7d38486ee780fd66404e3cd990b18bcf}{degree}} () const
-\begin{DoxyCompactList}\small\item\em Degree of exponent. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Standard\+\_\+\+Variables}} \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables_a3c46303a66635f77d2a10aad22b41213}{operator+}} (const \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Standard\+\_\+\+Variables}} \&other) const
-\begin{DoxyCompactList}\small\item\em Addition of exponents. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Computes degree of monomial on standard variables $x_i$. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Standard\+\_\+\+Variables}} \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables_ab38543295b288538b281271b5a8f7a7c}{operator+}} (const \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Standard\+\_\+\+Variables}} \&b) const
+\begin{DoxyCompactList}\small\item\em Multiplies monomials by adding their exponents. \end{DoxyCompactList}\item 
 size\+\_\+t \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables_a7067ac2f1d120492623e5ca5c96973ef}{operator()}} () const
-\begin{DoxyCompactList}\small\item\em Standard hash function. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactList}\small\item\em Returns hash of monomial. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static std\+::string \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables_ad9def388d052f882c910391124a6b58c}{name}} (int i, int number\+\_\+of\+\_\+variables)
-\begin{DoxyCompactList}\small\item\em Name of variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+static std\+::string \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables_a11aae6a8973480537d61ef5023155f5b}{name}} (int i, int n)
+\begin{DoxyCompactList}\small\item\em Returns the names of the standard variables $x_i$. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsubsection{Detailed Description}
 \subsubsection*{template$<$typename T = int64\+\_\+t, typename \+\_\+deg = int64\+\_\+t$>$\newline
 struct Symmetric\+\_\+\+Polynomials\+::\+Standard\+\_\+\+Variables$<$ T, \+\_\+deg $>$}
 
 The standard variables $x_i$ in a polynomial, with $|x_i|=1$ and no relations. 
 
-\doxysubsection{Member Typedef Documentation}
+A monomial $x_1^{a_1}\cdots x_n^{a_n}$ is stored as the vector $[a_1,...,a_n]$ 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The (integral) value type of the exponent vector. \\
+\hline
+{\em \+\_\+deg} & The (integral) value type used in the degree function. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsubsection{Member Typedef Documentation}
 \mbox{\Hypertarget{structSymmetric__Polynomials_1_1Standard__Variables_a58a0bd0f0385d800f0b654064145b101}\label{structSymmetric__Polynomials_1_1Standard__Variables_a58a0bd0f0385d800f0b654064145b101}} 
 \index{Symmetric\_Polynomials::Standard\_Variables$<$ T, \_deg $>$@{Symmetric\_Polynomials::Standard\_Variables$<$ T, \_deg $>$}!deg\_t@{deg\_t}}
 \index{deg\_t@{deg\_t}!Symmetric\_Polynomials::Standard\_Variables$<$ T, \_deg $>$@{Symmetric\_Polynomials::Standard\_Variables$<$ T, \_deg $>$}}
-\doxysubsubsection{\texorpdfstring{deg\_t}{deg\_t}}
+\doxyparagraph{\texorpdfstring{deg\_t}{deg\_t}}
 {\footnotesize\ttfamily template$<$typename T  = int64\+\_\+t, typename \+\_\+deg  = int64\+\_\+t$>$ \\
 typedef \+\_\+deg \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Standard\+\_\+\+Variables}}$<$ T, \+\_\+deg $>$\+::\mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables_a58a0bd0f0385d800f0b654064145b101}{deg\+\_\+t}}}
 
-Degree typedef 
 
-\doxysubsection{Member Function Documentation}
+
+Degree typedef. 
+
+
+
+\doxysubsubsection{Member Function Documentation}
 \mbox{\Hypertarget{structSymmetric__Polynomials_1_1Standard__Variables_a7d38486ee780fd66404e3cd990b18bcf}\label{structSymmetric__Polynomials_1_1Standard__Variables_a7d38486ee780fd66404e3cd990b18bcf}} 
 \index{Symmetric\_Polynomials::Standard\_Variables$<$ T, \_deg $>$@{Symmetric\_Polynomials::Standard\_Variables$<$ T, \_deg $>$}!degree@{degree}}
 \index{degree@{degree}!Symmetric\_Polynomials::Standard\_Variables$<$ T, \_deg $>$@{Symmetric\_Polynomials::Standard\_Variables$<$ T, \_deg $>$}}
-\doxysubsubsection{\texorpdfstring{degree()}{degree()}}
+\doxyparagraph{\texorpdfstring{degree()}{degree()}}
 {\footnotesize\ttfamily template$<$typename T  = int64\+\_\+t, typename \+\_\+deg  = int64\+\_\+t$>$ \\
-\mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables_a58a0bd0f0385d800f0b654064145b101}{deg\+\_\+t}} \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Standard\+\_\+\+Variables}}$<$ T, \+\_\+deg $>$\+::degree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables_a58a0bd0f0385d800f0b654064145b101}{deg\+\_\+t}} \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Standard\+\_\+\+Variables}}$<$ T, \+\_\+deg $>$\+::degree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
-Degree of exponent. 
+Computes degree of monomial on standard variables $x_i$. 
 
-\mbox{\Hypertarget{structSymmetric__Polynomials_1_1Standard__Variables_ad9def388d052f882c910391124a6b58c}\label{structSymmetric__Polynomials_1_1Standard__Variables_ad9def388d052f882c910391124a6b58c}} 
+\begin{DoxyReturn}{Returns}
+$\sum_ia_i$ for monomial $x_1^{a_1}\cdots x_n^{a_n}$ ($\ast$this= $[a_1,...,a_n]$) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1Standard__Variables_a11aae6a8973480537d61ef5023155f5b}\label{structSymmetric__Polynomials_1_1Standard__Variables_a11aae6a8973480537d61ef5023155f5b}} 
 \index{Symmetric\_Polynomials::Standard\_Variables$<$ T, \_deg $>$@{Symmetric\_Polynomials::Standard\_Variables$<$ T, \_deg $>$}!name@{name}}
 \index{name@{name}!Symmetric\_Polynomials::Standard\_Variables$<$ T, \_deg $>$@{Symmetric\_Polynomials::Standard\_Variables$<$ T, \_deg $>$}}
-\doxysubsubsection{\texorpdfstring{name()}{name()}}
+\doxyparagraph{\texorpdfstring{name()}{name()}}
 {\footnotesize\ttfamily template$<$typename T  = int64\+\_\+t, typename \+\_\+deg  = int64\+\_\+t$>$ \\
-static std\+::string \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Standard\+\_\+\+Variables}}$<$ T, \+\_\+deg $>$\+::name (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{number\+\_\+of\+\_\+variables }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+static std\+::string \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Standard\+\_\+\+Variables}}$<$ T, \+\_\+deg $>$\+::name (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Name of variable. 
+Returns the names of the standard variables $x_i$. 
 
+\begin{DoxyReturn}{Returns}
+\char`\"{}x\+\_\+i\char`\"{} 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em i} & The variable index \\
+\hline
+{\em n} & The number variables ~\newline
+ \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{structSymmetric__Polynomials_1_1Standard__Variables_a7067ac2f1d120492623e5ca5c96973ef}\label{structSymmetric__Polynomials_1_1Standard__Variables_a7067ac2f1d120492623e5ca5c96973ef}} 
 \index{Symmetric\_Polynomials::Standard\_Variables$<$ T, \_deg $>$@{Symmetric\_Polynomials::Standard\_Variables$<$ T, \_deg $>$}!operator()@{operator()}}
 \index{operator()@{operator()}!Symmetric\_Polynomials::Standard\_Variables$<$ T, \_deg $>$@{Symmetric\_Polynomials::Standard\_Variables$<$ T, \_deg $>$}}
-\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+\doxyparagraph{\texorpdfstring{operator()()}{operator()()}}
 {\footnotesize\ttfamily template$<$typename T  = int64\+\_\+t, typename \+\_\+deg  = int64\+\_\+t$>$ \\
-size\+\_\+t \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Standard\+\_\+\+Variables}}$<$ T, \+\_\+deg $>$\+::operator() (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+size\+\_\+t \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Standard\+\_\+\+Variables}}$<$ T, \+\_\+deg $>$\+::operator() (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
-Standard hash function. 
+Returns hash of monomial. 
 
-\mbox{\Hypertarget{structSymmetric__Polynomials_1_1Standard__Variables_a3c46303a66635f77d2a10aad22b41213}\label{structSymmetric__Polynomials_1_1Standard__Variables_a3c46303a66635f77d2a10aad22b41213}} 
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1Standard__Variables_ab38543295b288538b281271b5a8f7a7c}\label{structSymmetric__Polynomials_1_1Standard__Variables_ab38543295b288538b281271b5a8f7a7c}} 
 \index{Symmetric\_Polynomials::Standard\_Variables$<$ T, \_deg $>$@{Symmetric\_Polynomials::Standard\_Variables$<$ T, \_deg $>$}!operator+@{operator+}}
 \index{operator+@{operator+}!Symmetric\_Polynomials::Standard\_Variables$<$ T, \_deg $>$@{Symmetric\_Polynomials::Standard\_Variables$<$ T, \_deg $>$}}
-\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+\doxyparagraph{\texorpdfstring{operator+()}{operator+()}}
 {\footnotesize\ttfamily template$<$typename T  = int64\+\_\+t, typename \+\_\+deg  = int64\+\_\+t$>$ \\
-\mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Standard\+\_\+\+Variables}} \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Standard\+\_\+\+Variables}}$<$ T, \+\_\+deg $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Standard\+\_\+\+Variables}}$<$ T, \+\_\+deg $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Standard\+\_\+\+Variables}} \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Standard\+\_\+\+Variables}}$<$ T, \+\_\+deg $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Standard\+\_\+\+Variables}}$<$ T, \+\_\+deg $>$ \&}]{b }\end{DoxyParamCaption}) const}
 
 
 
-Addition of exponents. 
+Multiplies monomials by adding their exponents. 
 
+\begin{DoxyReturn}{Returns}
+$[a_1+b_1,...,a_n+b_n]$ where $\ast$this= $[a_1,...,a_n]$ 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Second exponent $[b_1,...,b_n]$ \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-source/\mbox{\hyperlink{Symmetric__Basis_8h}{Symmetric\+\_\+\+Basis.\+h}}\end{DoxyCompactItemize}
+source/\mbox{\hyperlink{Symmetric__Basis_8hpp}{Symmetric\+\_\+\+Basis.\+hpp}}\end{DoxyCompactItemize}

@@ -1,7 +1,0 @@
-<map id="all_permutations" name="all_permutations">
-<area shape="rect" id="node1" title="Returns vector of all permutations on n letters." alt="" coords="5,97,137,124"/>
-<area shape="rect" id="node2" href="$Permutations_8h.html#ae1b37c26bb8e5744f5747d6cd6505356" title="Returns n!" alt="" coords="237,5,313,32"/>
-<area shape="rect" id="node3" href="$classpermutations__generator.html#a3c232cb1fbaac2583fe63a3ee5475ef4" title="Returns generated permutation." alt="" coords="185,57,364,98"/>
-<area shape="rect" id="node4" href="$classpermutations__generator.html#aad5d3018cdbe839c18db5871f56db8b1" title="Returns 0 if there are no more permutations to be generated." alt="" coords="185,122,364,163"/>
-<area shape="rect" id="node5" href="$classpermutations__generator.html#ad2e89c8e166225ece184913c7634ca9c" title="Generates new permutation." alt="" coords="185,187,364,229"/>
-</map>

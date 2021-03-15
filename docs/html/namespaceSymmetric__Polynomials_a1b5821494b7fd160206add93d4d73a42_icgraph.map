@@ -1,4 +1,0 @@
-<map id="Symmetric_Polynomials::join" name="Symmetric_Polynomials::join">
-<area shape="rect" id="node1" title="Joins two vectors a,b into a new vector with entries a[0],...,a[a.size()&#45;1],b[0],...." alt="" coords="253,20,433,61"/>
-<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1polynomial.html#aa907a0fb17c89025757bb89237adeaab" title="Adds two polynomials." alt="" coords="5,5,205,76"/>
-</map>

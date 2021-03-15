@@ -1,4 +1,0 @@
-<map id="Symmetric_Polynomials::max_in_orbit" name="Symmetric_Polynomials::max_in_orbit">
-<area shape="rect" id="node1" title="Returns the greatest monomial in an orbit of permutations." alt="" coords="5,5,185,47"/>
-<area shape="rect" id="node2" href="$namespaceSymmetric__Polynomials.html#abdbc4a51aab1bb201ebfedcd26896cb4" title="Permutes the variables in a monomial according permutation; returns permuted monomial." alt="" coords="233,5,413,47"/>
-</map>

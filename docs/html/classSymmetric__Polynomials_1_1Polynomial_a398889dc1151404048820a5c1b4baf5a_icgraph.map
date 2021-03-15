@@ -1,4 +1,4 @@
 <map id="Symmetric_Polynomials::Polynomial::insert" name="Symmetric_Polynomials::Polynomial::insert">
-<area shape="rect" id="node1" title="Inserts monomial given exponent and coefficient (it is the user&#39;s responsibility to make sure that th..." alt="" coords="272,5,452,47"/>
-<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1Polynomial__Basis.html#af05e6fa6042a0e764a6770fce596b619" title="Transform a polynomial on the original variables to one on the generating basis." alt="" coords="5,5,224,47"/>
+<area shape="rect" id="node1" title="Inserts monomial given exponent and coefficient." alt="" coords="260,5,440,47"/>
+<area shape="rect" id="node2" href="$Demo_8cpp.html#a1660780e039cee9f194c25e9be8c0ca4" title=" " alt="" coords="5,5,212,47"/>
 </map>

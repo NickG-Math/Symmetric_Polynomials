@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classSymmetric__Polynomials_1_1Polynomial.html" title="Class of Polynomials in multiple variables." alt="" coords="5,5,212,47"/>
+<area shape="rect" id="node1" href="$classSymmetric__Polynomials_1_1Polynomial__Basis.html" title="Factory class that provides the general interface of a generating basis for a subring of a polynomial..." alt="" coords="5,13,260,69"/>
+<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html" title="Class for half&#45;idempotent symmetric polynomials, allowing transformation from &#160;variables to &#160;variable..." alt="" coords="308,5,489,76"/>
 </map>

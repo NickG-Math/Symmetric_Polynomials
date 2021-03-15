@@ -1,9 +1,0 @@
-<map id="Symmetric_Polynomials::half_idempotent_generators::compute_product_max_term" name="Symmetric_Polynomials::half_idempotent_generators::compute_product_max_term">
-<area shape="rect" id="node1" title="Computes the dominant term of a product of a monomial on our generators Idem, Chern,..." alt="" coords="5,93,223,149"/>
-<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1polynomial.html#ab0df36baf0c00178007ab065b33f1f33" title="Returns highest term monomial in a polynomial." alt="" coords="271,5,468,47"/>
-<area shape="rect" id="node3" href="$namespaceSymmetric__Polynomials.html#aa3071663e4ec8ac6e28de064de66e492" title="Multiplies two polynomials with the ability to disable condensation (not recommended)" alt="" coords="516,132,696,173"/>
-<area shape="rect" id="node4" href="$namespaceSymmetric__Polynomials.html#aca3363cff5919c3f416bd56d80f6ca72" title="Computes the orbit of a monomial under a set of permutations." alt="" coords="279,71,459,112"/>
-<area shape="rect" id="node6" href="$namespaceSymmetric__Polynomials.html#a1d476a58c571385ffab409a59c683b98" title="Computes a^p for polynomial a and nonnegative integer p." alt="" coords="279,188,459,229"/>
-<area shape="rect" id="node5" href="$namespaceSymmetric__Polynomials.html#abdbc4a51aab1bb201ebfedcd26896cb4" title="Permutes the variables in a monomial according permutation; returns permuted monomial." alt="" coords="516,67,696,108"/>
-<area shape="rect" id="node7" href="$classSymmetric__Polynomials_1_1polynomial.html#a29a3177f37777cd66cbf9b50402a10c6" title="Constructs constant polynomial given coefficient and number of variables." alt="" coords="516,197,696,239"/>
-</map>

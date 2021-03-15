@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('classSymmetric__Polynomials_1_1Combina
 <p>Generates all combinations on a number of letters making a number of choices.  
  <a href="classSymmetric__Polynomials_1_1Combination__Generator.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="Generators_8h_source.html">Generators.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="Generators_8hpp_source.html">Generators.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -113,10 +113,10 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3dd545735d9fd8f58cbaac5e7a9cf7c8"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Combination__Generator.html#a3dd545735d9fd8f58cbaac5e7a9cf7c8">size</a> () const</td></tr>
-<tr class="memdesc:a3dd545735d9fd8f58cbaac5e7a9cf7c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total number of combinations.  <a href="classSymmetric__Polynomials_1_1Combination__Generator.html#a3dd545735d9fd8f58cbaac5e7a9cf7c8">More...</a><br /></td></tr>
+<tr class="memdesc:a3dd545735d9fd8f58cbaac5e7a9cf7c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes total number of combinations.  <a href="classSymmetric__Polynomials_1_1Combination__Generator.html#a3dd545735d9fd8f58cbaac5e7a9cf7c8">More...</a><br /></td></tr>
 <tr class="separator:a3dd545735d9fd8f58cbaac5e7a9cf7c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f0d06e54f8d58bbe47cf18e42e05d5e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Combination__Generator.html#a2f0d06e54f8d58bbe47cf18e42e05d5e">Combination_Generator</a> (T total, T choices)</td></tr>
-<tr class="memdesc:a2f0d06e54f8d58bbe47cf18e42e05d5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor using the total number of elements and the amount of choices we make.  <a href="classSymmetric__Polynomials_1_1Combination__Generator.html#a2f0d06e54f8d58bbe47cf18e42e05d5e">More...</a><br /></td></tr>
+<tr class="memdesc:a2f0d06e54f8d58bbe47cf18e42e05d5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up the generator.  <a href="classSymmetric__Polynomials_1_1Combination__Generator.html#a2f0d06e54f8d58bbe47cf18e42e05d5e">More...</a><br /></td></tr>
 <tr class="separator:a2f0d06e54f8d58bbe47cf18e42e05d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07988e1a6a0411322ea9c7059029b102"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1Combination__Generator_1_1const__iterator.html">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Combination__Generator.html#a07988e1a6a0411322ea9c7059029b102">begin</a> () const</td></tr>
 <tr class="memdesc:a07988e1a6a0411322ea9c7059029b102"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initial generator.  <a href="classSymmetric__Polynomials_1_1Combination__Generator.html#a07988e1a6a0411322ea9c7059029b102">More...</a><br /></td></tr>
@@ -130,6 +130,12 @@ Public Member Functions</h2></td></tr>
 class Symmetric_Polynomials::Combination_Generator&lt; T &gt;</h3>
 
 <p>Generates all combinations on a number of letters making a number of choices. </p>
+<p>Use with a ranged for loop: Ex for (const auto&amp; i:v){ ... } where v is a combinations_generator object. Then i will be a combination Warning: Not thread safe! </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The data type of our combinations eg std::vector&lt;int&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2f0d06e54f8d58bbe47cf18e42e05d5e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2f0d06e54f8d58bbe47cf18e42e05d5e">&#9670;&nbsp;</a></span>Combination_Generator()</h2>
@@ -138,9 +144,6 @@ class Symmetric_Polynomials::Combination_Generator&lt; T &gt;</h3>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Combination__Generator.html">Symmetric_Polynomials::Combination_Generator</a>&lt; T &gt;::<a class="el" href="classSymmetric__Polynomials_1_1Combination__Generator.html">Combination_Generator</a> </td>
@@ -160,14 +163,16 @@ template&lt;typename T &gt; </div>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Constructor using the total number of elements and the amount of choices we make. </p>
+<p>Sets up the generator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">total</td><td>the total number of letters </td></tr>
+    <tr><td class="paramname">choices</td><td>the total number of choices </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -179,9 +184,6 @@ template&lt;typename T &gt; </div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Combination__Generator_1_1const__iterator.html">const_iterator</a> <a class="el" href="classSymmetric__Polynomials_1_1Combination__Generator.html">Symmetric_Polynomials::Combination_Generator</a>&lt; T &gt;::begin </td>
@@ -190,11 +192,6 @@ template&lt;typename T &gt; </div>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Initial generator. </p>
@@ -208,9 +205,6 @@ template&lt;typename T &gt; </div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Combination__Generator_1_1const__iterator.html">const_iterator</a> <a class="el" href="classSymmetric__Polynomials_1_1Combination__Generator.html">Symmetric_Polynomials::Combination_Generator</a>&lt; T &gt;::end </td>
@@ -219,24 +213,9 @@ template&lt;typename T &gt; </div>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Terminal generator. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSymmetric__Polynomials_1_1Combination__Generator_a32aa4897e4da0c9fc905b63fe756ada1_cgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1Combination__Generator_a32aa4897e4da0c9fc905b63fe756ada1_cgraph" alt=""/></div>
-<map name="classSymmetric__Polynomials_1_1Combination__Generator_a32aa4897e4da0c9fc905b63fe756ada1_cgraph" id="classSymmetric__Polynomials_1_1Combination__Generator_a32aa4897e4da0c9fc905b63fe756ada1_cgraph">
-<area shape="rect" title="Terminal generator." alt="" coords="5,27,223,69"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1Permutation__Generator.html#ad84ae916e915cef1107644a7d624c877" title="Terminal generator." alt="" coords="271,27,485,69"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1Factory__Generator.html#a4c5bb7b8ec49b21e6aa3ec09e4d435e7" title="Terminal iterator." alt="" coords="533,5,713,91"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -247,9 +226,6 @@ Here is the call graph for this function:</div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">auto <a class="el" href="classSymmetric__Polynomials_1_1Combination__Generator.html">Symmetric_Polynomials::Combination_Generator</a>&lt; T &gt;::size </td>
@@ -258,28 +234,15 @@ template&lt;typename T &gt; </div>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Total number of combinations. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSymmetric__Polynomials_1_1Combination__Generator_a3dd545735d9fd8f58cbaac5e7a9cf7c8_icgraph.png" border="0" usemap="#classSymmetric__Polynomials_1_1Combination__Generator_a3dd545735d9fd8f58cbaac5e7a9cf7c8_icgraph" alt=""/></div>
-<map name="classSymmetric__Polynomials_1_1Combination__Generator_a3dd545735d9fd8f58cbaac5e7a9cf7c8_icgraph" id="classSymmetric__Polynomials_1_1Combination__Generator_a3dd545735d9fd8f58cbaac5e7a9cf7c8_icgraph">
-<area shape="rect" title="Total number of combinations." alt="" coords="233,5,452,47"/>
-<area shape="rect" href="namespaceSymmetric__Polynomials.html#aff3ebeea4f1bcee426cd01c41917f3aa" title="Returns vector of all combinations on n letters choosing m many" alt="" coords="5,5,185,47"/>
-</map>
-</div>
+<p>Computes total number of combinations. </p>
+<dl class="section return"><dt>Returns</dt><dd>\({n}\choose{k}\) where \(n\)=total and \(k\)=choices </dd></dl>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>source/<a class="el" href="Generators_8h_source.html">Generators.h</a></li>
+<li>source/<a class="el" href="Generators_8hpp_source.html">Generators.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

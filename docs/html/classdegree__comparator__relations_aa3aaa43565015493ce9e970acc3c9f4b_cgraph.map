@@ -1,4 +1,0 @@
-<map id="degree_comparator_relations::acceptable" name="degree_comparator_relations::acceptable">
-<area shape="rect" id="node1" title="Returns 1 if the degree agrees with the desired degree and has no relations, &#45;1 if it&#39;s higher than t..." alt="" coords="5,5,219,47"/>
-<area shape="rect" id="node2" href="$Polynomials_8h.html#ada7262f8474394b46d0571ab9b3edb7c" title=" " alt="" coords="267,13,453,39"/>
-</map>

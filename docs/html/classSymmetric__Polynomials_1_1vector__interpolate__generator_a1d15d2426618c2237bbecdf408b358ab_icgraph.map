@@ -1,5 +1,0 @@
-<map id="Symmetric_Polynomials::vector_interpolate_generator::size" name="Symmetric_Polynomials::vector_interpolate_generator::size">
-<area shape="rect" id="node1" title="Returns upper bound on the amount of generated elements." alt="" coords="233,31,413,87"/>
-<area shape="rect" id="node2" href="$namespaceSymmetric__Polynomials.html#a591a8f1544a9eb3c4c8113d4e55df622" title="Returns the monomial basis in given number of variables and degree." alt="" coords="5,5,185,47"/>
-<area shape="rect" id="node3" href="$namespaceSymmetric__Polynomials.html#aaec53907a3a9bc0c57745f1775c6fcb9" title="Returns all vectors interpolating between min, max and satisfying a given policy." alt="" coords="5,71,185,112"/>
-</map>

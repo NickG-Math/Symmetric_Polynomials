@@ -1,5 +1,0 @@
-<map id="Symmetric_Polynomials::apply_permutation_pieces" name="Symmetric_Polynomials::apply_permutation_pieces">
-<area shape="rect" id="node1" title="Breaks vector v into given number of pieces and applies given permutation on each one; then joins the..." alt="" coords="245,39,448,80"/>
-<area shape="rect" id="node2" href="$namespaceSymmetric__Polynomials.html#a27efdd26eaaeafdf5a8de46a3ab9a194" title="Applies permutation perm on the vector v." alt="" coords="11,5,191,47"/>
-<area shape="rect" id="node3" href="$structSymmetric__Polynomials_1_1halfidempotent.html#acfd8e716d051482f0790925ef0ad4f94" title="Apply permutation on exponent vector, separately on the variables x_i and the variables y_i." alt="" coords="5,71,197,112"/>
-</map>

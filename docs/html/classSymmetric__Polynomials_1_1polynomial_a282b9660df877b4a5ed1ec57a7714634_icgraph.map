@@ -1,8 +1,0 @@
-<map id="Symmetric_Polynomials::polynomial::print" name="Symmetric_Polynomials::polynomial::print">
-<area shape="rect" id="node1" title="Print polynomial using given variable names." alt="" coords="496,115,676,156"/>
-<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1half__idempotent__generators.html#a1bcf78e321dbff9f8699ec7ef3017ae5" title="Print a polynomial on the generators Idem, Chern and TwistedChern." alt="" coords="233,67,448,123"/>
-<area shape="rect" id="node5" href="$structSymmetric__Polynomials_1_1decomposition__elementary__symmetric.html#a64708d98e4dcf8644562aa5cd115d650" title="Print a polynomial on elementary symmetric polynomials." alt="" coords="237,147,445,203"/>
-<area shape="rect" id="node3" href="$namespaceSymmetric__Polynomials.html#a883bc8a69d911cdc3692dff4297d17e2" title="Prints polynomial." alt="" coords="5,5,185,47"/>
-<area shape="rect" id="node4" href="$namespaceSymmetric__Polynomials.html#abc624e6ecd4b5ce3c02f150183362963" title="Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,..." alt="" coords="5,71,185,127"/>
-<area shape="rect" id="node6" href="$namespaceSymmetric__Polynomials.html#a58c3ea2d58a1501fc02442da2ae837a4" title="Prints decomposition into elementary symmetric polynomials." alt="" coords="5,155,185,196"/>
-</map>

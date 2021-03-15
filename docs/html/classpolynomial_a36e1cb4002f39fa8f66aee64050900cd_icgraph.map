@@ -1,9 +1,0 @@
-<map id="polynomial::print" name="polynomial::print">
-<area shape="rect" id="node1" title="Print polynomial using given variable names." alt="" coords="475,64,608,91"/>
-<area shape="rect" id="node2" href="$Polynomials_8h.html#af2b1d508ef570e3f34c941a143db36d1" title="Prints polynomial." alt="" coords="274,5,373,32"/>
-<area shape="rect" id="node3" href="$classhalf__idempotent__generators.html#ae8757d221881cd95a72b47bcebfb3c76" title="Print a polynomial on the generators Idem, Chern and TwistedChern." alt="" coords="220,57,427,98"/>
-<area shape="rect" id="node6" href="$structdecomposition__elementary__symmetric.html#a55d7eeee7f18ede03c64d25e9264f826" title="Print a polynomial on elementary symmetric polynomials." alt="" coords="223,122,423,163"/>
-<area shape="rect" id="node4" href="$Half__Idempotent_8h.html#aabb5e057d26dec62f0fbd6a5f851bfac" title="Prints polynomial." alt="" coords="39,9,138,36"/>
-<area shape="rect" id="node5" href="$Half__Idempotent_8h.html#a26e3c0f834aa8fb9502fa69bf12f88b1" title="Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,..." alt="" coords="5,61,172,102"/>
-<area shape="rect" id="node7" href="$Permutations_8h.html#a0f55feca9e573ef2d832fdbf9097a0c9" title="Prints decomposition into elementary symmetric polynomials." alt="" coords="39,129,138,156"/>
-</map>

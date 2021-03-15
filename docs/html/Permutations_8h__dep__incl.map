@@ -1,5 +1,0 @@
-<map id="source/Permutations.h" name="source/Permutations.h">
-<area shape="rect" id="node1" title="Contains methods for producing permutations, orbits of monomials under symmetric group action,..." alt="" coords="17,5,185,32"/>
-<area shape="rect" id="node2" href="$Half__Idempotent_8h.html" title="If $$R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$$, the goal is to produce algebra generators fo..." alt="" coords="5,80,196,107"/>
-<area shape="rect" id="node3" href="$Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="33,155,168,181"/>
-</map>

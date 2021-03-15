@@ -1,6 +1,0 @@
-<map id="write_in_elementary_symmetric" name="write_in_elementary_symmetric">
-<area shape="rect" id="node1" title="Writes symmetric polynomial as polynomial on elementary symmetric polynomials." alt="" coords="5,39,161,80"/>
-<area shape="rect" id="node2" href="$structdecomposition__elementary__symmetric.html#ae3e3ee379522a19f2d42050abbefb9fa" title="Decompose as polynomial on elementary symmetric polynomials." alt="" coords="209,5,409,47"/>
-<area shape="rect" id="node3" href="$structdecomposition__elementary__symmetric.html#a9f1d5bf5b4f3df87213062a3676fdbd7" title="Print a polynomial on elementary symmetric polynomials." alt="" coords="209,71,409,112"/>
-<area shape="rect" id="node4" href="$structelementary__symmetric.html#ac3b3777df63949cb7cb3eac7176d0857" title="Prints e_1^{pwr_1}*...*e_n^{pwr_n}." alt="" coords="457,71,632,112"/>
-</map>

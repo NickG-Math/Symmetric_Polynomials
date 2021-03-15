@@ -1,5 +1,0 @@
-<map id="polynomial::operator+" name="polynomial::operator+">
-<area shape="rect" id="node1" title="Adds two polynomials." alt="" coords="5,31,175,57"/>
-<area shape="rect" id="node2" href="$General_8h.html#a73037d042b5bbba37d5ecc7bc87b4dc9" title="Joins two vectors a,b into a new vector with entries a[0],...,a[a.size()&#45;1],b[0],...." alt="" coords="225,5,271,32"/>
-<area shape="rect" id="node3" href="$General_8h.html#aa75e65d369f5ff26a0ed850ee572bac2" title="Returns a[0]+...+a[end]." alt="" coords="223,56,273,83"/>
-</map>

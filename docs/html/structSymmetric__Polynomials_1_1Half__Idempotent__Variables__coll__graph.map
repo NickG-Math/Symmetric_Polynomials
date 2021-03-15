@@ -1,4 +1,5 @@
 <map id="Symmetric_Polynomials::Half_Idempotent_Variables&lt; T, _deg, N &gt;" name="Symmetric_Polynomials::Half_Idempotent_Variables&lt; T, _deg, N &gt;">
-<area shape="rect" id="node1" title="Class for variables &#160;where ." alt="" coords="5,80,212,136"/>
-<area shape="rect" id="node2" title=" " alt="" coords="57,5,160,32"/>
+<area shape="rect" id="node1" title="The variables &#160;where &#160;and , ." alt="" coords="5,229,212,285"/>
+<area shape="rect" id="node2" href="$structSymmetric__Polynomials_1_1Array__Vector__Wrapper.html" title=" " alt="" coords="19,124,199,180"/>
+<area shape="rect" id="node3" href="$structSymmetric__Polynomials_1_1Array__Vector__Wrapper.html" title="Wrapping array and vector in the same interface." alt="" coords="19,5,199,61"/>
 </map>

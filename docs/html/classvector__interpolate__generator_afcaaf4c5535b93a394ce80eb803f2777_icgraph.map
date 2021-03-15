@@ -1,5 +1,0 @@
-<map id="vector_interpolate_generator::keep_going" name="vector_interpolate_generator::keep_going">
-<area shape="rect" id="node1" title="False if all vectors have been generated." alt="" coords="195,23,369,65"/>
-<area shape="rect" id="node2" href="$Generators_8h.html#a0af5726a13b0228010fc8733a2bbd070" title="Returns the monomial basis in given number of variables and degree." alt="" coords="11,5,141,32"/>
-<area shape="rect" id="node3" href="$Generators_8h.html#a599dde09a4173ed797ef5746a9774c92" title="Returns all vectors between min, max and satisfying a given policy." alt="" coords="5,56,147,83"/>
-</map>

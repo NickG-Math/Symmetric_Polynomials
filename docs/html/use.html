@@ -106,8 +106,9 @@ $(document).ready(function(){initNavTree('use.html',''); initResizable(); });
 </div>
 <div class="textblock"><h1><a class="anchor" id="demo"></a>
 Quick Demonstration</h1>
-<p>For a quick demonstration you may use the binaries found <a href="https://github.com/NickG-Math/Symmetric_Polynomials/releases">here</a>. These are compiled from <a class="el" href="Demo_8cpp.html" title="A demonstration file that can be compiled.">Demo.cpp</a> using MSVC and Clang respectively. You can also compile these binaries yourself. For example, on Linux use: </p><pre class="fragment">clang++ source/Demo.cpp -std=c++17 -O3 -march=native -o Lin64.out   
-</pre><p>You can similarly do this over Windows using MSVC, producing a .exe file . Make sure to use the <code>-std=c++17</code> flag (or set the language options in an IDE to support C++17).</p>
+<p>For a quick demonstration you may use the binaries found <a href="https://github.com/NickG-Math/Symmetric_Polynomials/releases">here</a>. These are compiled from <a class="el" href="Demo_8cpp.html" title="A demonstration file that can be compiled.">Demo.cpp</a> using MSVC and Clang respectively. You can also compile these binaries yourself. For example, on Linux use: </p><pre class="fragment">clang++ source/Demo.cpp -std=c++17 -O3 -fopenmp -march=native -o Lin64.out  
+</pre><p>(disable -fopenmp if a multithreading is not desired; eg to save on resources and decrease total memory footprint).</p>
+<p>You can similarly do this over Windows using MSVC, producing a .exe file . Make sure to use the <code>-std=c++17</code> flag (or set the language options in an IDE to support C++17).</p>
 <h1><a class="anchor" id="exa"></a>
 Code examples</h1>
 <h2><a class="anchor" id="namesp"></a>
@@ -186,9 +187,9 @@ std::cout &lt;&lt; new_new_poly2 &lt;&lt; "\n";
 Advanced</h2>
 <p>The <code>default_container&lt;scl_t, exp_t, ordered&gt;</code> specifies the data structure that should be used to internally store the monomials of the polynomial. This must have the features of an ordered/unordered map (degree,exponent)-&gt;coefficient. The boolean template parameter <code>ordered</code> specifies whether we want to use <code>std::map</code> (default) or <code>std::unordered_map</code>. When unordered maps are used, it's important to:</p><ul>
 <li>Reserve space for the amount of monomials to be inserted by eg: <code>p.reserve(5);</code> if we expect to store \(5\) monomials</li>
-<li>Keep in mind that when iterating through the polynomial, the monomials won't be ordered. Same applies when printing the polynomial. In general, using unordered maps is faster especially with a good hashing function (see <a class="el" href="General_8h.html">General.h</a> for two possible hashing functions that can be used).</li>
+<li>Keep in mind that when iterating through the polynomial, the monomials won't be ordered. Same applies when printing the polynomial. In general, using unordered maps is faster especially with a good hashing function (see General.h for two possible hashing functions that can be used).</li>
 </ul>
-<p>You can also use your own container instead of the <code>default_container</code>. See the file <a class="el" href="Polynomials_8h.html">Polynomials.h</a> for the exact requirements from a custom container.</p>
+<p>You can also use your own container instead of the <code>default_container</code>. See the file Polynomials.h for the exact requirements from a custom container.</p>
 <p>Finally, the <code>Symmetric_Basis_Default</code> and <code>Half_Idempotent_Basis_Default</code> are aliases for <code>Symmetric_Basis</code> and <code>Half_Idempotent_Basis</code> that accept containers as template parameters for extra customization. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

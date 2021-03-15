@@ -1,13 +1,15 @@
-\hypertarget{use_demo}{}\doxysection{Quick Demonstration}\label{use_demo}
-For a quick demonstration you may use the binaries found \href{https://github.com/NickG-Math/Symmetric_Polynomials/releases}{\texttt{ here}}. These are compiled from \mbox{\hyperlink{Demo_8cpp}{Demo.\+cpp}} using M\+S\+VC and Clang respectively. You can also compile these binaries yourself. For example, on Linux use\+: \begin{DoxyVerb}clang++ source/Demo.cpp -std=c++17 -O3 -march=native -o Lin64.out   
+\hypertarget{use_demo}{}\doxysubsection{Quick Demonstration}\label{use_demo}
+For a quick demonstration you may use the binaries found \href{https://github.com/NickG-Math/Symmetric_Polynomials/releases}{\texttt{ here}}. These are compiled from \mbox{\hyperlink{Demo_8cpp}{Demo.\+cpp}} using M\+S\+VC and Clang respectively. You can also compile these binaries yourself. For example, on Linux use\+: \begin{DoxyVerb}clang++ source/Demo.cpp -std=c++17 -O3 -fopenmp -march=native -o Lin64.out  
 \end{DoxyVerb}
 
 
-You can similarly do this over Windows using M\+S\+VC, producing a .exe file . Make sure to use the {\ttfamily -\/std=c++17} flag (or set the language options in an I\+DE to support C++17).\hypertarget{use_exa}{}\doxysection{Code examples}\label{use_exa}
-\hypertarget{use_namesp}{}\doxysubsection{Namespaces}\label{use_namesp}
+(disable -\/fopenmp if a multithreading is not desired; eg to save on resources and decrease total memory footprint).
+
+You can similarly do this over Windows using M\+S\+VC, producing a .exe file . Make sure to use the {\ttfamily -\/std=c++17} flag (or set the language options in an I\+DE to support C++17).\hypertarget{use_exa}{}\doxysubsection{Code examples}\label{use_exa}
+\hypertarget{use_namesp}{}\doxysubsubsection{Namespaces}\label{use_namesp}
 Everything in this library is under the namespace {\ttfamily \mbox{\hyperlink{namespaceSymmetric__Polynomials}{Symmetric\+\_\+\+Polynomials}}}. For all the following code examples to work, start with \begin{DoxyVerb}using namespace Symmetric_Polynomials;
 \end{DoxyVerb}
-\hypertarget{use_mono}{}\doxysubsection{Polynomials}\label{use_mono}
+\hypertarget{use_mono}{}\doxysubsubsection{Polynomials}\label{use_mono}
 A polynomial in multiple variables can be default constructed as\+: \begin{DoxyVerb}Polynomial<default_container<int, Standard_Variables<>>> p;
 \end{DoxyVerb}
 
@@ -48,7 +50,7 @@ Polynomials can be added, subtracted and multiplied by binary operators {\ttfami
 
 will print
 
-\$\$-\/8x\+\_\+1x\+\_\+2x\+\_\+3$^\wedge$2 + 7x\+\_\+2x\+\_\+3$^\wedge$4 + 64x\+\_\+1$^\wedge$2x\+\_\+2$^\wedge$2x\+\_\+3$^\wedge$4 + -\/112x\+\_\+1x\+\_\+2$^\wedge$2x\+\_\+3$^\wedge$6 + 49x\+\_\+2$^\wedge$2x\+\_\+3$^\wedge$8\$\$\hypertarget{use_sym}{}\doxysubsection{Symmetric polynomials}\label{use_sym}
+\$\$-\/8x\+\_\+1x\+\_\+2x\+\_\+3$^\wedge$2 + 7x\+\_\+2x\+\_\+3$^\wedge$4 + 64x\+\_\+1$^\wedge$2x\+\_\+2$^\wedge$2x\+\_\+3$^\wedge$4 + -\/112x\+\_\+1x\+\_\+2$^\wedge$2x\+\_\+3$^\wedge$6 + 49x\+\_\+2$^\wedge$2x\+\_\+3$^\wedge$8\$\$\hypertarget{use_sym}{}\doxysubsubsection{Symmetric polynomials}\label{use_sym}
 The class {\ttfamily Symmetric\+\_\+\+Basis\+\_\+\+Default} allows us to transform polynomials on $x_i$ variables ({\ttfamily Standard\+\_\+\+Variables}) into polynomials on the elementary symmetric polynomials $e_i=\sigma_i$ ({\ttfamily Elementary\+\_\+\+Symmetric\+\_\+\+Variables}). For example\+: \begin{DoxyVerb}Symmetric_Basis_Default<int> SB(2);
 
 Polynomial<default_container<int, Standard_Variables<>>> poly(2);
@@ -69,7 +71,7 @@ std::cout << new_new_poly << "\n";
 \end{DoxyVerb}
 
 
-does the following\+: First it sets {\ttfamily poly} to $2x_1x_2^2+2x_1^2x_2$, then transforms it in $e_i$ variables as {\ttfamily new\+\_\+poly} which is $2e_1e_2$ and then transforms that back to $x_i$ variables as {\ttfamily new\+\_\+new\+\_\+poly} which is $2x_1x_2^2+2x_1^2x_2$ (i.\+e. the original polynomial) and finally prints the three polynomials. This all means that \$\$2x\+\_\+1x\+\_\+2$^\wedge$2+2x\+\_\+1$^\wedge$2x\+\_\+2=2e\+\_\+1e\+\_\+2\$\$\hypertarget{use_halfidem}{}\doxysubsection{Half idempotent relations}\label{use_halfidem}
+does the following\+: First it sets {\ttfamily poly} to $2x_1x_2^2+2x_1^2x_2$, then transforms it in $e_i$ variables as {\ttfamily new\+\_\+poly} which is $2e_1e_2$ and then transforms that back to $x_i$ variables as {\ttfamily new\+\_\+new\+\_\+poly} which is $2x_1x_2^2+2x_1^2x_2$ (i.\+e. the original polynomial) and finally prints the three polynomials. This all means that \$\$2x\+\_\+1x\+\_\+2$^\wedge$2+2x\+\_\+1$^\wedge$2x\+\_\+2=2e\+\_\+1e\+\_\+2\$\$\hypertarget{use_halfidem}{}\doxysubsubsection{Half idempotent relations}\label{use_halfidem}
 When we have the \char`\"{}half idempotent relation\char`\"{} i.\+e. variables $x_i,y_i$ with $y_i^2=y_i$ (as specified by {\ttfamily Half\+\_\+\+Idempotent\+\_\+\+Variables}), the generators are $\alpha_i, c_i, \gamma_{s,t}$ (see \mbox{\hyperlink{math}{The Math}}) or {\ttfamily Idem\mbox{[}i\mbox{]}}, {\ttfamily Chern\mbox{[}i\mbox{]}} and {\ttfamily Twisted\+Chern\mbox{[}s\mbox{]}\mbox{[}t\mbox{]}} respectively as they are used in the program. We order them as $\alpha_1,...,\alpha_n,c_1,...,c_n, \gamma_{1,1},...,\gamma_{1,n-1},\gamma_{2,1},...,\gamma_{n-1,1}$.
 
 The class {\ttfamily Half\+\_\+\+Idempotent\+\_\+\+Basis\+\_\+\+Default} allows us to transform polynomials on $x_i,y_i$ variables ({\ttfamily Half\+\_\+\+Idempotent\+\_\+\+Variables}) into polynomials on the $\alpha_i,c_i,\gamma_{s,i}$ ({\ttfamily Twisted\+\_\+\+Chern\+\_\+\+Variables}).
@@ -112,13 +114,13 @@ Finally, \mbox{\hyperlink{Demo_8cpp}{Demo.\+cpp}} contains another function, {\t
 
 in terms of the $\alpha_i,c_i,\gamma_{s,t}$. For example, try running \begin{DoxyVerb}write_pontryagin_C2_in_terms_of_Chern_classes(5);
 \end{DoxyVerb}
-\hypertarget{use_adv}{}\doxysubsection{Advanced}\label{use_adv}
+\hypertarget{use_adv}{}\doxysubsubsection{Advanced}\label{use_adv}
 The {\ttfamily default\+\_\+container$<$scl\+\_\+t, exp\+\_\+t, ordered$>$} specifies the data structure that should be used to internally store the monomials of the polynomial. This must have the features of an ordered/unordered map (degree,exponent)-\/$>$coefficient. The boolean template parameter {\ttfamily ordered} specifies whether we want to use {\ttfamily std\+::map} (default) or {\ttfamily std\+::unordered\+\_\+map}. When unordered maps are used, it\textquotesingle{}s important to\+:
 \begin{DoxyItemize}
 \item Reserve space for the amount of monomials to be inserted by eg\+: {\ttfamily p.\+reserve(5);} if we expect to store $5$ monomials
-\item Keep in mind that when iterating through the polynomial, the monomials won\textquotesingle{}t be ordered. Same applies when printing the polynomial. In general, using unordered maps is faster especially with a good hashing function (see \mbox{\hyperlink{General_8h}{General.\+h}} for two possible hashing functions that can be used).
+\item Keep in mind that when iterating through the polynomial, the monomials won\textquotesingle{}t be ordered. Same applies when printing the polynomial. In general, using unordered maps is faster especially with a good hashing function (see General.\+h for two possible hashing functions that can be used).
 \end{DoxyItemize}
 
-You can also use your own container instead of the {\ttfamily default\+\_\+container}. See the file \mbox{\hyperlink{Polynomials_8h}{Polynomials.\+h}} for the exact requirements from a custom container.
+You can also use your own container instead of the {\ttfamily default\+\_\+container}. See the file Polynomials.\+h for the exact requirements from a custom container.
 
 Finally, the {\ttfamily Symmetric\+\_\+\+Basis\+\_\+\+Default} and {\ttfamily Half\+\_\+\+Idempotent\+\_\+\+Basis\+\_\+\+Default} are aliases for {\ttfamily Symmetric\+\_\+\+Basis} and {\ttfamily Half\+\_\+\+Idempotent\+\_\+\+Basis} that accept containers as template parameters for extra customization. 

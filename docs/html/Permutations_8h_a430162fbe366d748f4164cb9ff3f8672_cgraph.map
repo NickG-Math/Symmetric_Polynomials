@@ -1,4 +1,0 @@
-<map id="max_in_orbit" name="max_in_orbit">
-<area shape="rect" id="node1" title="Returns the greatest monomial in an orbit of permutations." alt="" coords="5,5,112,32"/>
-<area shape="rect" id="node2" href="$Polynomials_8h.html#a1ee0f8c937cbcf51cd4dffa29d7ab4c0" title="Permutes the variables in a monomial according permutation; returns permuted monomial." alt="" coords="160,5,237,32"/>
-</map>

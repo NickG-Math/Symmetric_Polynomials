@@ -1,5 +1,0 @@
-<map id="Symmetric_Polynomials::Polynomial::operator&#45;" name="Symmetric_Polynomials::Polynomial::operator&#45;">
-<area shape="rect" id="node1" title="Subtracts polynomials." alt="" coords="5,50,185,91"/>
-<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1Polynomial.html#ab682f9da699d3d9767586332ee32c4e4" title="Returns number of monomials in polynomial." alt="" coords="233,5,413,61"/>
-<area shape="rect" id="node3" href="$classSymmetric__Polynomials_1_1Polynomial.html#adf413d58aa5d7f36e58884d91e9aabda" title="Reserve number of monomials (does nothing for ordered polynomials)" alt="" coords="233,86,413,127"/>
-</map>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['general_2eh_105',['General.h',['../General_8h.html',1,'']]],
-  ['generators_2eh_106',['Generators.h',['../Generators_8h.html',1,'']]]
+  ['general_2ehpp_106',['General.hpp',['../General_8hpp.html',1,'']]],
+  ['generators_2ehpp_107',['Generators.hpp',['../Generators_8hpp.html',1,'']]]
 ];

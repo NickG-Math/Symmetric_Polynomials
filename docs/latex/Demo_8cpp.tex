@@ -1,12 +1,12 @@
-\hypertarget{Demo_8cpp}{}\doxysection{source/\+Demo.cpp File Reference}
+\hypertarget{Demo_8cpp}{}\doxysubsection{source/\+Demo.cpp File Reference}
 \label{Demo_8cpp}\index{source/Demo.cpp@{source/Demo.cpp}}
 
 
 A demonstration file that can be compiled.  
 
 
-{\ttfamily \#include \char`\"{}Half\+\_\+\+Idempotent.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include \char`\"{}Half\+\_\+\+Idempotent.\+hpp\char`\"{}}\newline
 Include dependency graph for Demo.\+cpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -14,36 +14,51 @@ Include dependency graph for Demo.\+cpp\+:\nopagebreak
 \includegraphics[width=350pt]{Demo_8cpp__incl}
 \end{center}
 \end{figure}
-\doxysubsection*{Functions}
+\doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$typename H\+IB  = Half\+\_\+\+Idempotent\+\_\+\+Basis\+\_\+\+Default$<$int64\+\_\+t$>$$>$ }\\void \mbox{\hyperlink{Demo_8cpp_a1660780e039cee9f194c25e9be8c0ca4}{write\+\_\+pontryagin\+\_\+\+C2\+\_\+in\+\_\+terms\+\_\+of\+\_\+\+Chern\+\_\+classes}} (int n)
-\begin{DoxyCompactList}\small\item\em Writes the twisted Pontryagin/symplectic classes pi\+\_\+\{s,j\}/k\+\_\+\{s,j\} in terms of the Chern classes under the forgetful map B\+U(n)-\/$>$B\+S\+O(n) / hermitianization B\+U(n) -\/$>$ B\+Sp(n) \end{DoxyCompactList}\item 
+\item 
 void \mbox{\hyperlink{Demo_8cpp_aa4379c1f8675ccb9d3360e1087853dae}{show\+\_\+and\+\_\+tell}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em User facing interface. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename scl\+\_\+t , typename exp\+\_\+value\+\_\+t , typename deg\+\_\+t $>$ }\\void \mbox{\hyperlink{Demo_8cpp_a635f37a2d635613a0e38558fb33d269a}{speed\+\_\+test}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Optimized speedtest (no console output). For benchmarking. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{Demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Main. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsubsection{Detailed Description}
 A demonstration file that can be compiled. 
 
 
 
-\doxysubsection{Function Documentation}
+\doxysubsubsection{Function Documentation}
 \mbox{\Hypertarget{Demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{Demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
 \index{Demo.cpp@{Demo.cpp}!main@{main}}
 \index{main@{main}!Demo.cpp@{Demo.cpp}}
-\doxysubsubsection{\texorpdfstring{main()}{main()}}
+\doxyparagraph{\texorpdfstring{main()}{main()}}
 {\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Main. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{Demo_8cpp_aa4379c1f8675ccb9d3360e1087853dae}\label{Demo_8cpp_aa4379c1f8675ccb9d3360e1087853dae}} 
 \index{Demo.cpp@{Demo.cpp}!show\_and\_tell@{show\_and\_tell}}
 \index{show\_and\_tell@{show\_and\_tell}!Demo.cpp@{Demo.cpp}}
-\doxysubsubsection{\texorpdfstring{show\_and\_tell()}{show\_and\_tell()}}
+\doxyparagraph{\texorpdfstring{show\_and\_tell()}{show\_and\_tell()}}
 {\footnotesize\ttfamily void show\+\_\+and\+\_\+tell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+User facing interface. 
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -52,21 +67,45 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=337pt]{Demo_8cpp_aa4379c1f8675ccb9d3360e1087853dae_cgraph}
 \end{center}
 \end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{Demo_8cpp_aa4379c1f8675ccb9d3360e1087853dae_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{Demo_8cpp_a635f37a2d635613a0e38558fb33d269a}\label{Demo_8cpp_a635f37a2d635613a0e38558fb33d269a}} 
 \index{Demo.cpp@{Demo.cpp}!speed\_test@{speed\_test}}
 \index{speed\_test@{speed\_test}!Demo.cpp@{Demo.cpp}}
-\doxysubsubsection{\texorpdfstring{speed\_test()}{speed\_test()}}
+\doxyparagraph{\texorpdfstring{speed\_test()}{speed\_test()}}
 {\footnotesize\ttfamily template$<$typename scl\+\_\+t , typename exp\+\_\+value\+\_\+t , typename deg\+\_\+t $>$ \\
 void speed\+\_\+test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Optimized speedtest (no console output). For benchmarking. 
 
 \mbox{\Hypertarget{Demo_8cpp_a1660780e039cee9f194c25e9be8c0ca4}\label{Demo_8cpp_a1660780e039cee9f194c25e9be8c0ca4}} 
 \index{Demo.cpp@{Demo.cpp}!write\_pontryagin\_C2\_in\_terms\_of\_Chern\_classes@{write\_pontryagin\_C2\_in\_terms\_of\_Chern\_classes}}
 \index{write\_pontryagin\_C2\_in\_terms\_of\_Chern\_classes@{write\_pontryagin\_C2\_in\_terms\_of\_Chern\_classes}!Demo.cpp@{Demo.cpp}}
-\doxysubsubsection{\texorpdfstring{write\_pontryagin\_C2\_in\_terms\_of\_Chern\_classes()}{write\_pontryagin\_C2\_in\_terms\_of\_Chern\_classes()}}
+\doxyparagraph{\texorpdfstring{write\_pontryagin\_C2\_in\_terms\_of\_Chern\_classes()}{write\_pontryagin\_C2\_in\_terms\_of\_Chern\_classes()}}
 {\footnotesize\ttfamily template$<$typename H\+IB  = Half\+\_\+\+Idempotent\+\_\+\+Basis\+\_\+\+Default$<$int64\+\_\+t$>$$>$ \\
 void write\+\_\+pontryagin\+\_\+\+C2\+\_\+in\+\_\+terms\+\_\+of\+\_\+\+Chern\+\_\+classes (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
 
+Writes the twisted Pontryagin/symplectic classes $\pi_{s,j}, \kappa_{s,j}$ in terms of the Chern classes under the forgetful map $BU(n)\to BSO(n)$ , hermitianization $BU(n)\to BSp(n)$ 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em H\+IB} & The Half\+\_\+\+Idempotent\+\_\+\+Basis type \\
+\hline
+\end{DoxyTemplParams}
 
-
-Writes the twisted Pontryagin/symplectic classes pi\+\_\+\{s,j\}/k\+\_\+\{s,j\} in terms of the Chern classes under the forgetful map B\+U(n)-\/$>$B\+S\+O(n) / hermitianization B\+U(n) -\/$>$ B\+Sp(n) 
-
+\begin{DoxyParams}{Parameters}
+{\em n} & The $n$ in $BU(n), BSO(n), BSp(n)$ \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Demo_8cpp_a1660780e039cee9f194c25e9be8c0ca4_cgraph}
+\end{center}
+\end{figure}

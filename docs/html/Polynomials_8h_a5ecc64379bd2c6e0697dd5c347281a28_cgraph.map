@@ -1,4 +1,0 @@
-<map id="operator*" name="operator*">
-<area shape="rect" id="node1" title="Multiplies scalar and polynomial." alt="" coords="5,5,89,32"/>
-<area shape="rect" id="node2" href="$classpolynomial.html#a40be2da6ad189700b0bf65b02c37fcdf" title="Constructs constant polynomial given coefficient and number of variables." alt="" coords="137,5,296,32"/>
-</map>

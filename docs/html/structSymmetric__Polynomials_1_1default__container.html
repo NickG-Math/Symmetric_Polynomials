@@ -95,18 +95,25 @@ $(document).ready(function(){initNavTree('structSymmetric__Polynomials_1_1defaul
 </div><!--header-->
 <div class="contents">
 
-<p>The default container for polynomials given scalar (coefficient) type (eg int,float), exponent type (eg <a class="el" href="structSymmetric__Polynomials_1_1Standard__Variables.html" title="The standard variables  in a polynomial, with  and no relations.">Standard_Variables</a> , <a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html" title="Class for variables  where .">Half_Idempotent_Variables</a>) and whether the container should be ordered or not.  
+<p>The default container for polynomials using the STL map or unordered_map.  
  <a href="structSymmetric__Polynomials_1_1default__container.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="Polynomials_8h_source.html">Polynomials.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="Polynomials_8hpp_source.html">Polynomials.hpp</a>&gt;</code></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename scl_t, typename exp_t, bool ordered = 1&gt;<br />
 struct Symmetric_Polynomials::default_container&lt; scl_t, exp_t, ordered &gt;</h3>
 
-<p>The default container for polynomials given scalar (coefficient) type (eg int,float), exponent type (eg <a class="el" href="structSymmetric__Polynomials_1_1Standard__Variables.html" title="The standard variables  in a polynomial, with  and no relations.">Standard_Variables</a> , <a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html" title="Class for variables  where .">Half_Idempotent_Variables</a>) and whether the container should be ordered or not. </p>
-<p>When ordered=1 this is a wrapper of std::map and when ordered=0 this is a wrapper of std::unordered_map </p>
+<p>The default container for polynomials using the STL map or unordered_map. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">scl_t</td><td>The scalar (coefficient type) (eg int,float) </td></tr>
+    <tr><td class="paramname">exp_t</td><td>The exponent type eg <a class="el" href="structSymmetric__Polynomials_1_1Standard__Variables.html" title="The standard variables  in a polynomial, with  and no relations.">Standard_Variables</a>, <a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html" title="The variables  where  and , .">Half_Idempotent_Variables</a> </td></tr>
+    <tr><td class="paramname">ordered</td><td>Whether to use std::map or std::unordered_map. </td></tr>
+  </table>
+  </dd>
+</dl>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>source/<a class="el" href="Polynomials_8h_source.html">Polynomials.h</a></li>
+<li>source/<a class="el" href="Polynomials_8hpp_source.html">Polynomials.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

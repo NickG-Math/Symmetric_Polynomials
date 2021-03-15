@@ -1,7 +1,0 @@
-<map id="apply_permutation" name="apply_permutation">
-<area shape="rect" id="node1" title="Applies permutation perm on the target from starting point begin." alt="" coords="480,56,625,83"/>
-<area shape="rect" id="node2" href="$General_8h.html#a60c46359f31723c49cb6a63889391a21" title="Breaks vector v into given number of pieces and applies given permutation on each one; then joins the..." alt="" coords="237,31,432,57"/>
-<area shape="rect" id="node5" href="$structnorelations.html#a415b5a572531a57394987e4089349420" title=" " alt="" coords="255,81,414,108"/>
-<area shape="rect" id="node3" href="$General_8h.html#a42e83a0e37f09dfa0f180b94b0510779" title="Applies permutation perm on the vector v." alt="" coords="25,5,170,32"/>
-<area shape="rect" id="node4" href="$structhalfidempotent.html#abc46e148d41b3c3eb65528cf93666d77" title=" " alt="" coords="5,56,189,83"/>
-</map>

@@ -1,4 +1,4 @@
-\hypertarget{classSymmetric__Polynomials_1_1Symmetric__Basis}{}\doxysection{Symmetric\+\_\+\+Polynomials\+::Symmetric\+\_\+\+Basis$<$ x\+\_\+container\+\_\+t, e\+\_\+container\+\_\+t $>$ Class Template Reference}
+\hypertarget{classSymmetric__Polynomials_1_1Symmetric__Basis}{}\doxysubsection{Symmetric\+\_\+\+Polynomials\+::Symmetric\+\_\+\+Basis$<$ x\+\_\+container\+\_\+t, e\+\_\+container\+\_\+t $>$ Class Template Reference}
 \label{classSymmetric__Polynomials_1_1Symmetric__Basis}\index{Symmetric\_Polynomials::Symmetric\_Basis$<$ x\_container\_t, e\_container\_t $>$@{Symmetric\_Polynomials::Symmetric\_Basis$<$ x\_container\_t, e\_container\_t $>$}}
 
 
@@ -7,45 +7,78 @@ Class for symmetric polynomials with no relations, allowing transformation from 
 
 
 
-{\ttfamily \#include $<$Symmetric\+\_\+\+Basis.\+h$>$}
+{\ttfamily \#include $<$Symmetric\+\_\+\+Basis.\+hpp$>$}
 
-\doxysubsection*{Public Member Functions}
+
+
+Inheritance diagram for Symmetric\+\_\+\+Polynomials\+::Symmetric\+\_\+\+Basis$<$ x\+\_\+container\+\_\+t, e\+\_\+container\+\_\+t $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1Symmetric__Basis__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Symmetric\+\_\+\+Polynomials\+::Symmetric\+\_\+\+Basis$<$ x\+\_\+container\+\_\+t, e\+\_\+container\+\_\+t $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1Symmetric__Basis__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Symmetric__Basis_a45500758d8ad1d3c0b358b2b6c000f6b}{Symmetric\+\_\+\+Basis}} (int n)
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1Symmetric__Basis_aff2a4d28db846311d49b67dbfd7a3ada}{Symmetric\+\_\+\+Basis}} (int \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis_a464c6f8663253d54b5f485053074bf64}{number\+\_\+of\+\_\+variables}})
 \begin{DoxyCompactList}\small\item\em Constructor given number of variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Friends}
+\doxysubsubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Symmetric__Basis_ac46762423c09f46a5a1d120b7c80d76e}{Polynomial\+\_\+\+Basis$<$ Symmetric\+\_\+\+Basis$<$ x\+\_\+container\+\_\+t, e\+\_\+container\+\_\+t $>$, x\+\_\+container\+\_\+t, e\+\_\+container\+\_\+t $>$}}
 \begin{DoxyCompactList}\small\item\em Befriending parent for C\+R\+TP. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsubsection{Detailed Description}
 \subsubsection*{template$<$typename x\+\_\+container\+\_\+t, typename e\+\_\+container\+\_\+t$>$\newline
 class Symmetric\+\_\+\+Polynomials\+::\+Symmetric\+\_\+\+Basis$<$ x\+\_\+container\+\_\+t, e\+\_\+container\+\_\+t $>$}
 
 Class for symmetric polynomials with no relations, allowing transformation from $x_i$ variables to $e_i$ variables and vice-\/versa. 
 
-\doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Symmetric__Basis_a45500758d8ad1d3c0b358b2b6c000f6b}\label{classSymmetric__Polynomials_1_1Symmetric__Basis_a45500758d8ad1d3c0b358b2b6c000f6b}} 
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em x\+\_\+container\+\_\+t} & The container type on the \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Standard\+\_\+\+Variables}} $x_i$ \\
+\hline
+{\em e\+\_\+container\+\_\+t} & The container type on the \mbox{\hyperlink{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables}{Elementary\+\_\+\+Symmetric\+\_\+\+Variables}} $e_i$ \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Symmetric__Basis_aff2a4d28db846311d49b67dbfd7a3ada}\label{classSymmetric__Polynomials_1_1Symmetric__Basis_aff2a4d28db846311d49b67dbfd7a3ada}} 
 \index{Symmetric\_Polynomials::Symmetric\_Basis$<$ x\_container\_t, e\_container\_t $>$@{Symmetric\_Polynomials::Symmetric\_Basis$<$ x\_container\_t, e\_container\_t $>$}!Symmetric\_Basis@{Symmetric\_Basis}}
 \index{Symmetric\_Basis@{Symmetric\_Basis}!Symmetric\_Polynomials::Symmetric\_Basis$<$ x\_container\_t, e\_container\_t $>$@{Symmetric\_Polynomials::Symmetric\_Basis$<$ x\_container\_t, e\_container\_t $>$}}
-\doxysubsubsection{\texorpdfstring{Symmetric\_Basis()}{Symmetric\_Basis()}}
+\doxyparagraph{\texorpdfstring{Symmetric\_Basis()}{Symmetric\_Basis()}}
 {\footnotesize\ttfamily template$<$typename x\+\_\+container\+\_\+t , typename e\+\_\+container\+\_\+t $>$ \\
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Symmetric__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Symmetric\+\_\+\+Basis}}$<$ x\+\_\+container\+\_\+t, e\+\_\+container\+\_\+t $>$\+::\mbox{\hyperlink{classSymmetric__Polynomials_1_1Symmetric__Basis}{Symmetric\+\_\+\+Basis}} (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1Symmetric__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Symmetric\+\_\+\+Basis}}$<$ x\+\_\+container\+\_\+t, e\+\_\+container\+\_\+t $>$\+::\mbox{\hyperlink{classSymmetric__Polynomials_1_1Symmetric__Basis}{Symmetric\+\_\+\+Basis}} (\begin{DoxyParamCaption}\item[{int}]{number\+\_\+of\+\_\+variables }\end{DoxyParamCaption})}
 
 
 
 Constructor given number of variables. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em number\+\_\+of\+\_\+variables} & The number of variables for our symmetric polynomials \\
+\hline
+\end{DoxyParams}
 
-\doxysubsection{Friends And Related Function Documentation}
+
+\doxysubsubsection{Friends And Related Function Documentation}
 \mbox{\Hypertarget{classSymmetric__Polynomials_1_1Symmetric__Basis_ac46762423c09f46a5a1d120b7c80d76e}\label{classSymmetric__Polynomials_1_1Symmetric__Basis_ac46762423c09f46a5a1d120b7c80d76e}} 
 \index{Symmetric\_Polynomials::Symmetric\_Basis$<$ x\_container\_t, e\_container\_t $>$@{Symmetric\_Polynomials::Symmetric\_Basis$<$ x\_container\_t, e\_container\_t $>$}!Polynomial\_Basis$<$ Symmetric\_Basis$<$ x\_container\_t, e\_container\_t $>$, x\_container\_t, e\_container\_t $>$@{Polynomial\_Basis$<$ Symmetric\_Basis$<$ x\_container\_t, e\_container\_t $>$, x\_container\_t, e\_container\_t $>$}}
 \index{Polynomial\_Basis$<$ Symmetric\_Basis$<$ x\_container\_t, e\_container\_t $>$, x\_container\_t, e\_container\_t $>$@{Polynomial\_Basis$<$ Symmetric\_Basis$<$ x\_container\_t, e\_container\_t $>$, x\_container\_t, e\_container\_t $>$}!Symmetric\_Polynomials::Symmetric\_Basis$<$ x\_container\_t, e\_container\_t $>$@{Symmetric\_Polynomials::Symmetric\_Basis$<$ x\_container\_t, e\_container\_t $>$}}
-\doxysubsubsection{\texorpdfstring{Polynomial\_Basis$<$ Symmetric\_Basis$<$ x\_container\_t, e\_container\_t $>$, x\_container\_t, e\_container\_t $>$}{Polynomial\_Basis< Symmetric\_Basis< x\_container\_t, e\_container\_t >, x\_container\_t, e\_container\_t >}}
+\doxyparagraph{\texorpdfstring{Polynomial\_Basis$<$ Symmetric\_Basis$<$ x\_container\_t, e\_container\_t $>$, x\_container\_t, e\_container\_t $>$}{Polynomial\_Basis< Symmetric\_Basis< x\_container\_t, e\_container\_t >, x\_container\_t, e\_container\_t >}}
 {\footnotesize\ttfamily template$<$typename x\+\_\+container\+\_\+t , typename e\+\_\+container\+\_\+t $>$ \\
 friend class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis}{Polynomial\+\_\+\+Basis}}$<$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Symmetric__Basis}{Symmetric\+\_\+\+Basis}}$<$ x\+\_\+container\+\_\+t, e\+\_\+container\+\_\+t $>$, x\+\_\+container\+\_\+t, e\+\_\+container\+\_\+t $>$\hspace{0.3cm}{\ttfamily [friend]}}
 
@@ -57,4 +90,4 @@ Befriending parent for C\+R\+TP.
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-source/\mbox{\hyperlink{Symmetric__Basis_8h}{Symmetric\+\_\+\+Basis.\+h}}\end{DoxyCompactItemize}
+source/\mbox{\hyperlink{Symmetric__Basis_8hpp}{Symmetric\+\_\+\+Basis.\+hpp}}\end{DoxyCompactItemize}

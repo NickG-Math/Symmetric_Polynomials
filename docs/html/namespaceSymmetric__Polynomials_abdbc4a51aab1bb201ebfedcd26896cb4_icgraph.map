@@ -1,5 +1,0 @@
-<map id="Symmetric_Polynomials::permute" name="Symmetric_Polynomials::permute">
-<area shape="rect" id="node1" title="Permutes the variables in a monomial according permutation; returns permuted monomial." alt="" coords="233,39,413,80"/>
-<area shape="rect" id="node2" href="$namespaceSymmetric__Polynomials.html#a472a68b7c1d92e6a99b6a563222d170e" title="Returns the greatest monomial in an orbit of permutations." alt="" coords="5,5,185,47"/>
-<area shape="rect" id="node3" href="$namespaceSymmetric__Polynomials.html#a9352cb1a7f217f13c7038d2f182db347" title="Computes the orbit of a monomial under a set of permutations. The number_of_orbits is provided as an ..." alt="" coords="5,71,185,112"/>
-</map>

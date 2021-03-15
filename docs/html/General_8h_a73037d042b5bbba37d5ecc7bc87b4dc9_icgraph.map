@@ -1,4 +1,0 @@
-<map id="join" name="join">
-<area shape="rect" id="node1" title="Joins two vectors a,b into a new vector with entries a[0],...,a[a.size()&#45;1],b[0],...." alt="" coords="257,13,304,39"/>
-<area shape="rect" id="node2" href="$classpolynomial.html#a4cebd8600c8ba28d78f71603046c8f59" title="Adds two polynomials." alt="" coords="5,5,209,47"/>
-</map>

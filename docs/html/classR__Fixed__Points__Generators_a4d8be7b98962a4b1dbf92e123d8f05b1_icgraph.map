@@ -1,5 +1,0 @@
-<map id="R_Fixed_Points_Generators::compute_product" name="R_Fixed_Points_Generators::compute_product">
-<area shape="rect" id="node1" title="Computes a product of a monomial on our generators Idem, Chern, TwistedChern." alt="" coords="432,5,631,47"/>
-<area shape="rect" id="node2" href="$Half__Idempotent_8h.html#ac5b11fdb0afd7ced5433abb5b88290af" title="Prints all relations in the description of the fixed points of R=Q[x_1,...,x_n,y_1,..." alt="" coords="5,5,161,47"/>
-<area shape="rect" id="node3" href="$structdecomposition__R__Fixed__Points.html#a3a585b6102e3e752970ac616b052fdd9" title="Verifies that the decomposition is correct (i.e. gives the original polynomial in the original variab..." alt="" coords="209,35,384,76"/>
-</map>

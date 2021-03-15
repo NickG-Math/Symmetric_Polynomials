@@ -1,9 +1,0 @@
-<map id="half_idempotent_generators::compute_product" name="half_idempotent_generators::compute_product">
-<area shape="rect" id="node1" title="Computes a product of a monomial on our generators Idem, Chern, TwistedChern." alt="" coords="5,74,212,115"/>
-<area shape="rect" id="node2" href="$classpolynomial.html#a1f2690b2973d0f6f3b519c8924d17835" title="Incorporates all monomials with same powers vector into a single monomial by adding coefficients,..." alt="" coords="260,5,425,32"/>
-<area shape="rect" id="node3" href="$Polynomials_8h.html#a70b3c7ad51b10d0a0d601de9c93ef694" title="Multiplies two polynomials with the ability to disable condensation (not recommended)" alt="" coords="515,107,591,133"/>
-<area shape="rect" id="node4" href="$Permutations_8h.html#af52302784662ec62fd3266daf195a5e7" title="Computes the orbit of a monomial under a set of permutations." alt="" coords="317,56,369,83"/>
-<area shape="rect" id="node6" href="$Polynomials_8h.html#abe6541bafde6451eb4806b124d8ba458" title="Computes a^p for polynomial a and nonnegative integer p." alt="" coords="311,157,374,184"/>
-<area shape="rect" id="node5" href="$Polynomials_8h.html#a1ee0f8c937cbcf51cd4dffa29d7ab4c0" title="Permutes the variables in a monomial according permutation; returns permuted monomial." alt="" coords="514,56,591,83"/>
-<area shape="rect" id="node7" href="$classpolynomial.html#a40be2da6ad189700b0bf65b02c37fcdf" title="Constructs constant polynomial given coefficient and number of variables." alt="" coords="473,157,632,184"/>
-</map>

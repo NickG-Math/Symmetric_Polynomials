@@ -1,4 +1,0 @@
-<map id="polynomial::print" name="polynomial::print">
-<area shape="rect" id="node1" title="Print polynomial using default variable names x_1,...,x_n." alt="" coords="221,13,355,39"/>
-<area shape="rect" id="node2" href="$classpolynomial.html#a704d84fdfbeda7a0b6d9beace884648b" title="Print monomial using given variable names." alt="" coords="5,5,173,47"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="Symmetric_Polynomials::all_monomial_orbits" name="Symmetric_Polynomials::all_monomial_orbits">
-<area shape="rect" id="node1" title="Returns a vector of all monomials in given variables and degree organized in orbits under the symmetr..." alt="" coords="5,71,185,112"/>
-<area shape="rect" id="node2" href="$structSymmetric__Polynomials_1_1hasher.html#a1e1a3b7aa979c2581049169d3bcc54f5" title=" " alt="" coords="237,5,417,47"/>
-<area shape="rect" id="node3" href="$namespaceSymmetric__Polynomials.html#a675d14e03452c17f67177947b5dfa927" title="Computes the orbit of a monomial under a set of permutations." alt="" coords="237,71,417,112"/>
-<area shape="rect" id="node4" href="$classSymmetric__Polynomials_1_1permutations__generator.html#ab053821b3ca274b6ef292aae9a395dc5" title="Constructor using number of letters." alt="" coords="233,137,420,193"/>
-</map>
