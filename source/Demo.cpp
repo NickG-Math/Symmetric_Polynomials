@@ -1,27 +1,38 @@
-#include "Half_Idempotent.h"
+#ifdef _OPENMP
+#include "omp.h"
+#endif
 #include <chrono>
+#include "Half_Idempotent.hpp"
 ///@file
 ///@brief A demonstration file that can be compiled
 
 using namespace Symmetric_Polynomials;
 
 
-///Writes the twisted Pontryagin/symplectic classes pi_{s,j}/k_{s,j} in terms of the Chern classes under the forgetful map BU(n)->BSO(n) / hermitianization BU(n) -> BSp(n)
+///Writes the twisted Pontryagin/symplectic classes \f$\pi_{s,j}, \kappa_{s,j}\f$ in terms of the Chern classes
+/// under the forgetful map \f$BU(n)\to BSO(n)\f$ , hermitianization \f$BU(n)\to BSp(n)\f$
+///@tparam HIB The Half_Idempotent_Basis type
+///@param n The \f$n\f$ in \f$BU(n), BSO(n), BSp(n)\f$
 template<typename HIB= Half_Idempotent_Basis_Default<int64_t>>
 void write_pontryagin_C2_in_terms_of_Chern_classes(int n)
 {
 	HIB hib(n);
+#ifdef _OPENMP
+#pragma omp parallel for num_threads(omp_get_max_threads()) schedule(dynamic)
+#endif
 	for (int s = 1; s <= n; s++)
 		for (int i = 1; i <= n - s; i++) {
-			auto twistedChern = hib.generator(s,i);
-			decltype(twistedChern) twistedPontryagin(hib.number_of_variables);
+			const auto& twistedChern = hib.generator(s,i);
+			Polynomial<typename HIB::xy_container_t> twistedPontryagin(hib.number_of_variables);
 			for (auto it = twistedChern.begin(); it != twistedChern.end(); ++it)
 				twistedPontryagin.insert(it.exponent() + it.exponent(), it.coeff());
-			std::cout << "k_{" << s << "," << i << "}= ";
-			std::cout << hib(twistedPontryagin) << "\n";
+			std::stringstream ss;
+			ss << "k_{" << s << "," << i << "}= " << hib(twistedPontryagin) << "\n";
+			std::cout << ss.str();
 		}
 }
 
+///User facing interface
 void show_and_tell() {
 
 	std::cout << "Consider the polynomial ring (over Z) with variables x_1,...,x_n,y_1,...,y_n and relations y_i^2=y_i \n";
@@ -84,9 +95,10 @@ void show_and_tell() {
 
 }
 
+///Optimized speedtest (no console output). For benchmarking
 template<typename scl_t, typename exp_value_t, typename deg_t>
 void speed_test() {
-	constexpr int varcount = 9;
+	constexpr int varcount = 10;
 	std::chrono::time_point<std::chrono::high_resolution_clock> start, end;
 	start = std::chrono::high_resolution_clock::now();
 	print_half_idempotent_relations<Half_Idempotent_Basis<default_container<scl_t, Half_Idempotent_Variables<exp_value_t, deg_t, 2 * varcount>, 0>, default_container<scl_t, Twisted_Chern_Variables<exp_value_t, deg_t>, 0>>>(varcount);
@@ -94,15 +106,12 @@ void speed_test() {
 	std::cout << varcount << " many variables took: " << std::chrono::duration_cast<std::chrono::seconds>(end - start).count() << "seconds" << "\n";
 }
 
+///Main
 int main() {
 	using namespace Symmetric_Polynomials;
 		
 	show_and_tell();
 	//speed_test<int64_t,uint8_t,uint16_t>();
-
-	//If we know the number of variables by compile time we can use that information with half_idempotent:
-	//constexpr int n = 4;
-	//print_half_idempotent_relations2<Rational, Half_Idempotent_Variables<T, 2*n>>(n, 1, 1);
 
 	//code examples
 	//Polynomial<default_container<int, Standard_Variables<>>> p;
