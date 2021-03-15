@@ -6,7 +6,7 @@ This is a C++ header only library devoted to computations of symmetric polynomia
 
 
 \section req Requirements
- * A C++17 compiler, such as Clang (LLVM) or GCC or Visual C++. 
+ * A C++17 compiler, such as Clang (LLVM) or GCC or MSVC. 
  
 \section install Installation
 
@@ -66,7 +66,9 @@ This library also allows one to write the \f$\kappa_{s,i}\f$ in terms of the \f$
 
 For a quick demonstration you may use the binaries found <a href="https://github.com/NickG-Math/Symmetric_Polynomials/releases">here</a>. These are compiled from Demo.cpp using MSVC and Clang respectively. You can also compile these binaries yourself. For example, on Linux use:
 
-    clang++ source/Demo.cpp -std=c++17 -O3 -march=native -o Lin64.out	
+    clang++ source/Demo.cpp -std=c++17 -O3 -fopenmp -march=native -o Lin64.out	
+
+(disable -fopenmp if a multithreading is not desired; eg to save on resources and decrease total memory footprint).
 
 You can similarly do this over Windows using MSVC, producing a .exe file . Make sure to use the ```-std=c++17``` flag (or set the language options in an IDE to support C++17).
 
