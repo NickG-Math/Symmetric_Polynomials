@@ -11,7 +11,8 @@ The variables $x_1,...,x_n,y_1,...,y_n$ where $y_i^2=y_i$ and $|x_i|=1$, $|y_i|=
 
 
 
-Inheritance diagram for Symmetric\+\_\+\+Polynomials\+::Half\+\_\+\+Idempotent\+\_\+\+Variables$<$ T, \+\_\+deg, N $>$\+:\nopagebreak
+Inheritance diagram for Symmetric\+\_\+\+Polynomials\+::Half\+\_\+\+Idempotent\+\_\+\+Variables$<$ T, \+\_\+deg, N $>$\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,7 +21,8 @@ Inheritance diagram for Symmetric\+\_\+\+Polynomials\+::Half\+\_\+\+Idempotent\+
 \end{figure}
 
 
-Collaboration diagram for Symmetric\+\_\+\+Polynomials\+::Half\+\_\+\+Idempotent\+\_\+\+Variables$<$ T, \+\_\+deg, N $>$\+:\nopagebreak
+Collaboration diagram for Symmetric\+\_\+\+Polynomials\+::Half\+\_\+\+Idempotent\+\_\+\+Variables$<$ T, \+\_\+deg, N $>$\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -35,14 +37,14 @@ typedef \+\_\+deg \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempot
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}} \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_aec6305e77d731da405a208c7610b5ac4}{operator+}} (const \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}} \&) const
+\mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}} \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_aa57f2bbc4945654f960798fe991da8fd}{operator+}} (const \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}} \&b) const
 \begin{DoxyCompactList}\small\item\em Multiplies monomials by adding their exponents. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}} \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_a013afaf5dfcc267c68dc4d06575c16b3}{operator-\/}} (const \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}} \&) const
+\mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}} \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_abf7ab3728195ad45302b8d975b96583f}{operator-\/}} (const \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}} \&b) const
 \begin{DoxyCompactList}\small\item\em Divides monomials by subtracting their exponents. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_a2e89200e29193a10dcb7e68c74660617}{deg\+\_\+t}} \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_a033343ccef121d3563224b08f2a6c135}{degree}} () const
 \begin{DoxyCompactList}\small\item\em Computes degree of monomial on on the $x_i,y_i$ with $|x_i|=1$ and $|y_i|=0$. \end{DoxyCompactList}\item 
 size\+\_\+t \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_ad7b0d8c1e9c1f0bf5d3135b2c5c6f502}{operator()}} () const
-\begin{DoxyCompactList}\small\item\em Returns hash of monomial. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Hashes monomial. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -107,17 +109,16 @@ static std\+::string \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idem
 
 Returns the names of the variables $x_i,y_i$. 
 
-\begin{DoxyReturn}{Returns}
-\char`\"{}x\+\_\+i\char`\"{} if i$<$n and \char`\"{}y\+\_\+\{i-\/n\}\char`\"{} if i$>$n 
-\end{DoxyReturn}
 
 \begin{DoxyParams}{Parameters}
 {\em i} & The variable index \\
 \hline
-{\em num} & The number variables = $2n$ ~\newline
- \\
+{\em num} & The number variables = $2n$ \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\char`\"{}x\+\_\+i\char`\"{} if i$<$n and \char`\"{}y\+\_\+\{i-\/n\}\char`\"{} if i$>$n 
+\end{DoxyReturn}
 \mbox{\Hypertarget{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_ad7b0d8c1e9c1f0bf5d3135b2c5c6f502}\label{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_ad7b0d8c1e9c1f0bf5d3135b2c5c6f502}} 
 \index{Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, \_deg, N $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, \_deg, N $>$}!operator()@{operator()}}
 \index{operator()@{operator()}!Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, \_deg, N $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, \_deg, N $>$}}
@@ -127,48 +128,51 @@ size\+\_\+t \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__V
 
 
 
-Returns hash of monomial. 
+Hashes monomial. 
 
-\mbox{\Hypertarget{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_aec6305e77d731da405a208c7610b5ac4}\label{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_aec6305e77d731da405a208c7610b5ac4}} 
+\begin{DoxyReturn}{Returns}
+Hash of exponent vector (calls generic\+\_\+hasher) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_aa57f2bbc4945654f960798fe991da8fd}\label{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_aa57f2bbc4945654f960798fe991da8fd}} 
 \index{Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, \_deg, N $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, \_deg, N $>$}!operator+@{operator+}}
 \index{operator+@{operator+}!Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, \_deg, N $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, \_deg, N $>$}}
 \doxyparagraph{\texorpdfstring{operator+()}{operator+()}}
 {\footnotesize\ttfamily template$<$typename T  = int64\+\_\+t, typename \+\_\+deg  = int64\+\_\+t, size\+\_\+t N = 0$>$ \\
-\mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}} \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Variables}}$<$ T, \+\_\+deg, N $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}}$<$ T, \+\_\+deg, N $>$ \&}]{ }\end{DoxyParamCaption}) const}
+\mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}} \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Variables}}$<$ T, \+\_\+deg, N $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}}$<$ T, \+\_\+deg, N $>$ \&}]{b }\end{DoxyParamCaption}) const}
 
 
 
 Multiplies monomials by adding their exponents. 
 
-\begin{DoxyReturn}{Returns}
-$[a_1+b_1,...,a_n+b_n, \max(a_{n+1},b_{n+1}), ..., \max(a_{2n},b_{2n})]$ where $\ast$this= $[a_1,...,a_{2n}]$ 
-\end{DoxyReturn}
 
 \begin{DoxyParams}{Parameters}
 {\em b} & Second exponent $[b_1,...,b_{2n}]$ \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_a013afaf5dfcc267c68dc4d06575c16b3}\label{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_a013afaf5dfcc267c68dc4d06575c16b3}} 
+\begin{DoxyReturn}{Returns}
+$[a_1+b_1,...,a_n+b_n, \max(a_{n+1},b_{n+1}), ..., \max(a_{2n},b_{2n})]$ where $\ast$this= $[a_1,...,a_{2n}]$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_abf7ab3728195ad45302b8d975b96583f}\label{structSymmetric__Polynomials_1_1Half__Idempotent__Variables_abf7ab3728195ad45302b8d975b96583f}} 
 \index{Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, \_deg, N $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, \_deg, N $>$}!operator-\/@{operator-\/}}
 \index{operator-\/@{operator-\/}!Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, \_deg, N $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Variables$<$ T, \_deg, N $>$}}
 \doxyparagraph{\texorpdfstring{operator-\/()}{operator-()}}
 {\footnotesize\ttfamily template$<$typename T  = int64\+\_\+t, typename \+\_\+deg  = int64\+\_\+t, size\+\_\+t N = 0$>$ \\
-\mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}} \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Variables}}$<$ T, \+\_\+deg, N $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}}$<$ T, \+\_\+deg, N $>$ \&}]{ }\end{DoxyParamCaption}) const}
+\mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}} \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Variables}}$<$ T, \+\_\+deg, N $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}}$<$ T, \+\_\+deg, N $>$ \&}]{b }\end{DoxyParamCaption}) const}
 
 
 
 Divides monomials by subtracting their exponents. 
 
-\begin{DoxyReturn}{Returns}
-$[a_1-b_1,...,a_n-b_n, |a_{n+1}-b_{n+1}|, ..., |a_{2n}-b_{2n}|]$ where $\ast$this= $[a_1,...,a_{2n}]$ 
-\end{DoxyReturn}
 
 \begin{DoxyParams}{Parameters}
 {\em b} & Second exponent $[b_1,...,b_{2n}]$. We must have $b_i\le a_i$ for every $i$. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$[a_1-b_1,...,a_n-b_n, |a_{n+1}-b_{n+1}|, ..., |a_{2n}-b_{2n}|]$ where $\ast$this= $[a_1,...,a_{2n}]$ 
+\end{DoxyReturn}
 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-source/\mbox{\hyperlink{Half__Idempotent_8hpp}{Half\+\_\+\+Idempotent.\+hpp}}\end{DoxyCompactItemize}
+\mbox{\hyperlink{Half__Idempotent_8hpp}{Half\+\_\+\+Idempotent.\+hpp}}\end{DoxyCompactItemize}

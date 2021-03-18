@@ -29,21 +29,24 @@ var NAVTREE =
       [ "Introduction", "index.html#intro", null ],
       [ "Requirements", "index.html#req", null ],
       [ "Installation", "index.html#install", null ],
-      [ "Documentation", "index.html#doc", null ]
+      [ "Documentation", "index.html#doc", null ],
+      [ "Future Update Plans", "index.html#fut", null ]
     ] ],
     [ "The Math", "math.html", [
-      [ "Symmetric polynomials with 'half idempotent' relations", "math.html#symr", null ]
+      [ "Symmetric polynomials", "math.html#sym", null ],
+      [ "Symmetric polynomials with 'half idempotent' relations", "math.html#hir", null ]
     ] ],
     [ "How to Use", "use.html", [
       [ "Quick Demonstration", "use.html#demo", null ],
       [ "Code examples", "use.html#exa", [
-        [ "Symmetric polynomials", "math.html#sym", null ],
         [ "Namespaces", "use.html#namesp", null ],
         [ "Polynomials", "use.html#mono", null ],
+        [ "Symmetric Basis", "use.html#symbasis", null ],
         [ "Half idempotent relations", "use.html#halfidem", null ],
         [ "Advanced", "use.html#adv", null ]
       ] ]
     ] ],
+    [ "Todo List", "todo.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -68,7 +71,8 @@ var NAVTREE =
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ]
+        [ "Functions", "globals_func.html", null ],
+        [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
   ] ]

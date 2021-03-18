@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Symmetric Polynomials: source/Generators.hpp File Reference</title>
+<title>Symmetric Polynomials: Generators.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('Generators_8hpp.html',''); initResizab
 </div><!--header-->
 <div class="contents">
 
-<p>Contains classes for generating permutations, combinations and factory for such classes.  
+<p>Contains classes for generating permutations, combinations and a factory for such classes.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
 <code>#include &quot;<a class="el" href="General_8hpp_source.html">General.hpp</a>&quot;</code><br />
@@ -107,11 +107,11 @@ $(document).ready(function(){initNavTree('Generators_8hpp.html',''); initResizab
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Generators.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="Generators_8hpp__incl.png" border="0" usemap="#source_2Generators_8hpp" alt=""/></div>
-<map name="source_2Generators_8hpp" id="source_2Generators_8hpp">
-<area shape="rect" title="Contains classes for generating permutations, combinations and factory for such classes." alt="" coords="222,5,391,32"/>
+<div class="center"><img src="Generators_8hpp__incl.png" border="0" usemap="#Generators_8hpp" alt=""/></div>
+<map name="Generators_8hpp" id="Generators_8hpp">
+<area shape="rect" title="Contains classes for generating permutations, combinations and a factory for such classes." alt="" coords="245,5,368,32"/>
 <area shape="rect" title=" " alt="" coords="147,80,232,107"/>
-<area shape="rect" href="General_8hpp.html" title="Contains general operations on vectors: hashing, adding." alt="" coords="256,80,357,107"/>
+<area shape="rect" href="General_8hpp.html" title="Contains general operations on vectors: hashing, computing degrees." alt="" coords="256,80,357,107"/>
 <area shape="rect" title=" " alt="" coords="382,80,533,107"/>
 <area shape="rect" title=" " alt="" coords="5,155,85,181"/>
 <area shape="rect" title=" " alt="" coords="110,155,173,181"/>
@@ -125,12 +125,12 @@ Include dependency graph for Generators.hpp:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="Generators_8hpp__dep__incl.png" border="0" usemap="#source_2Generators_8hppdep" alt=""/></div>
-<map name="source_2Generators_8hppdep" id="source_2Generators_8hppdep">
-<area shape="rect" title="Contains classes for generating permutations, combinations and factory for such classes." alt="" coords="26,5,195,32"/>
-<area shape="rect" href="Symmetric__Basis_8hpp.html" title="Contains methods for writing symmetric polynomials (with no relations) in terms of the elementary sym..." alt="" coords="5,80,216,107"/>
-<area shape="rect" href="Half__Idempotent_8hpp.html" title="Contains the methods and classes for solving the following problem: If $$R=\mathbb Z[x_1,..." alt="" coords="7,155,214,181"/>
-<area shape="rect" href="Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="43,229,178,256"/>
+<div class="center"><img src="Generators_8hpp__dep__incl.png" border="0" usemap="#Generators_8hppdep" alt=""/></div>
+<map name="Generators_8hppdep" id="Generators_8hppdep">
+<area shape="rect" title="Contains classes for generating permutations, combinations and a factory for such classes." alt="" coords="25,5,148,32"/>
+<area shape="rect" href="Symmetric__Basis_8hpp.html" title="Contains the methods and classes for generatic symmetric polynomials." alt="" coords="5,80,168,107"/>
+<area shape="rect" href="Half__Idempotent_8hpp.html" title="Contains the methods and classes for symmetric polynomials with half idempotent variables." alt="" coords="7,155,166,181"/>
+<area shape="rect" href="Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="43,229,131,256"/>
 </map>
 </div>
 </div>
@@ -138,20 +138,20 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html">Symmetric_Polynomials::Factory_Generator&lt; specialization, gen_t &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prototype for classes providing iterators that generate elements such as interpolating vectors, permutations, combinations and so on.  <a href="classSymmetric__Polynomials_1_1Factory__Generator.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html">Symmetric_Polynomials::Factory_Generator&lt; spec_t, gen_t &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prototype for coroutine-like iterators that generate elements such as interpolating vectors, permutations, combinations...  <a href="classSymmetric__Polynomials_1_1Factory__Generator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Permutation__Generator.html">Symmetric_Polynomials::Permutation_Generator&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates all permutations on a number of letters.  <a href="classSymmetric__Polynomials_1_1Permutation__Generator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Permutation__Generator_1_1const__iterator.html">Symmetric_Polynomials::Permutation_Generator&lt; T &gt;::const_iterator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant iterator that is used in a ranged for loop to generate the permutations. Non constant version is illegal.  <a href="classSymmetric__Polynomials_1_1Permutation__Generator_1_1const__iterator.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant iterator that is used in a ranged for loop to generate the permutations.  <a href="classSymmetric__Polynomials_1_1Permutation__Generator_1_1const__iterator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Combination__Generator.html">Symmetric_Polynomials::Combination_Generator&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates all combinations on a number of letters making a number of choices.  <a href="classSymmetric__Polynomials_1_1Combination__Generator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Combination__Generator_1_1const__iterator.html">Symmetric_Polynomials::Combination_Generator&lt; T &gt;::const_iterator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant iterator that is used in a ranged for loop to generate the combinations. Non constant version is illegal.  <a href="classSymmetric__Polynomials_1_1Combination__Generator_1_1const__iterator.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant iterator that is used in a ranged for loop to generate the combinations.  <a href="classSymmetric__Polynomials_1_1Combination__Generator_1_1const__iterator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -164,16 +164,15 @@ Namespaces</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a9fbacd7a31bb040f9609e6bdc5cbc541"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a9fbacd7a31bb040f9609e6bdc5cbc541"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a9fbacd7a31bb040f9609e6bdc5cbc541">Symmetric_Polynomials::all_permutations</a> (T n)</td></tr>
-<tr class="memdesc:a9fbacd7a31bb040f9609e6bdc5cbc541"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns vector of all permutations on n letters.  <a href="namespaceSymmetric__Polynomials.html#a9fbacd7a31bb040f9609e6bdc5cbc541">More...</a><br /></td></tr>
+<tr class="memdesc:a9fbacd7a31bb040f9609e6bdc5cbc541"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns vector of all permutations on <code>n</code> letters.  <a href="namespaceSymmetric__Polynomials.html#a9fbacd7a31bb040f9609e6bdc5cbc541">More...</a><br /></td></tr>
 <tr class="separator:a9fbacd7a31bb040f9609e6bdc5cbc541"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff3ebeea4f1bcee426cd01c41917f3aa"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:aff3ebeea4f1bcee426cd01c41917f3aa"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#aff3ebeea4f1bcee426cd01c41917f3aa">Symmetric_Polynomials::all_combinations</a> (T n, T m)</td></tr>
-<tr class="memdesc:aff3ebeea4f1bcee426cd01c41917f3aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns vector of all combinations on n letters choosing m many <br  />
-  <a href="namespaceSymmetric__Polynomials.html#aff3ebeea4f1bcee426cd01c41917f3aa">More...</a><br /></td></tr>
+<tr class="memdesc:aff3ebeea4f1bcee426cd01c41917f3aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns vector of all combinations on <code>n</code> letters choosing <code>m</code> many.  <a href="namespaceSymmetric__Polynomials.html#aff3ebeea4f1bcee426cd01c41917f3aa">More...</a><br /></td></tr>
 <tr class="separator:aff3ebeea4f1bcee426cd01c41917f3aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Contains classes for generating permutations, combinations and factory for such classes. </p>
+<div class="textblock"><p>Contains classes for generating permutations, combinations and a factory for such classes. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

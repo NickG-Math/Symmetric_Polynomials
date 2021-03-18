@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Symmetric Polynomials: source/Symmetric_Basis.hpp File Reference</title>
+<title>Symmetric Polynomials: Symmetric_Basis.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('Symmetric__Basis_8hpp.html',''); initR
 </div><!--header-->
 <div class="contents">
 
-<p>Contains methods for writing symmetric polynomials (with no relations) in terms of the elementary symmetric ones. Also contains a factory class that generalizes the interface to any subring of a polynomial ring.  
+<p>Contains the methods and classes for generatic symmetric polynomials.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="Polynomials_8hpp_source.html">Polynomials.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Generators_8hpp_source.html">Generators.hpp</a>&quot;</code><br />
@@ -107,15 +107,15 @@ $(document).ready(function(){initNavTree('Symmetric__Basis_8hpp.html',''); initR
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Symmetric_Basis.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="Symmetric__Basis_8hpp__incl.png" border="0" usemap="#source_2Symmetric__Basis_8hpp" alt=""/></div>
-<map name="source_2Symmetric__Basis_8hpp" id="source_2Symmetric__Basis_8hpp">
-<area shape="rect" title="Contains methods for writing symmetric polynomials (with no relations) in terms of the elementary sym..." alt="" coords="416,5,627,32"/>
+<div class="center"><img src="Symmetric__Basis_8hpp__incl.png" border="0" usemap="#Symmetric__Basis_8hpp" alt=""/></div>
+<map name="Symmetric__Basis_8hpp" id="Symmetric__Basis_8hpp">
+<area shape="rect" title="Contains the methods and classes for generatic symmetric polynomials." alt="" coords="440,5,603,32"/>
 <area shape="rect" href="Polynomials_8hpp.html" title="Contains the class of polynomials in multiple variables." alt="" coords="243,80,373,107"/>
-<area shape="rect" href="Generators_8hpp.html" title="Contains classes for generating permutations, combinations and factory for such classes." alt="" coords="460,80,583,107"/>
+<area shape="rect" href="Generators_8hpp.html" title="Contains classes for generating permutations, combinations and a factory for such classes." alt="" coords="460,80,583,107"/>
 <area shape="rect" title=" " alt="" coords="607,80,799,107"/>
 <area shape="rect" title=" " alt="" coords="5,155,56,181"/>
 <area shape="rect" title=" " alt="" coords="81,155,205,181"/>
-<area shape="rect" href="General_8hpp.html" title="Contains general operations on vectors: hashing, adding." alt="" coords="412,155,513,181"/>
+<area shape="rect" href="General_8hpp.html" title="Contains general operations on vectors: hashing, computing degrees." alt="" coords="412,155,513,181"/>
 <area shape="rect" title=" " alt="" coords="229,155,387,181"/>
 <area shape="rect" title=" " alt="" coords="161,229,241,256"/>
 <area shape="rect" title=" " alt="" coords="266,229,329,256"/>
@@ -131,11 +131,11 @@ Include dependency graph for Symmetric_Basis.hpp:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="Symmetric__Basis_8hpp__dep__incl.png" border="0" usemap="#source_2Symmetric__Basis_8hppdep" alt=""/></div>
-<map name="source_2Symmetric__Basis_8hppdep" id="source_2Symmetric__Basis_8hppdep">
-<area shape="rect" title="Contains methods for writing symmetric polynomials (with no relations) in terms of the elementary sym..." alt="" coords="5,5,216,32"/>
-<area shape="rect" href="Half__Idempotent_8hpp.html" title="Contains the methods and classes for solving the following problem: If $$R=\mathbb Z[x_1,..." alt="" coords="7,80,214,107"/>
-<area shape="rect" href="Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="43,155,178,181"/>
+<div class="center"><img src="Symmetric__Basis_8hpp__dep__incl.png" border="0" usemap="#Symmetric__Basis_8hppdep" alt=""/></div>
+<map name="Symmetric__Basis_8hppdep" id="Symmetric__Basis_8hppdep">
+<area shape="rect" title="Contains the methods and classes for generatic symmetric polynomials." alt="" coords="5,5,168,32"/>
+<area shape="rect" href="Half__Idempotent_8hpp.html" title="Contains the methods and classes for symmetric polynomials with half idempotent variables." alt="" coords="7,80,166,107"/>
+<area shape="rect" href="Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="43,155,131,181"/>
 </map>
 </div>
 </div>
@@ -149,8 +149,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables.html">Symmetric_Polynomials::Elementary_Symmetric_Variables&lt; T, _deg &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variables \(e_1,...,e_n\) denoting the elementary symmetric polynomials \(e_i=\sigma_i\) of degrees \(|e_i|=i\).  <a href="structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial__Basis.html">Symmetric_Polynomials::Polynomial_Basis&lt; specialization, container_1_t, container_2_t &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory class that provides the general interface of a generating basis for a subring of a polynomial ring. Example implementations are <a class="el" href="classSymmetric__Polynomials_1_1Symmetric__Basis.html" title="Class for symmetric polynomials with no relations, allowing transformation from  variables to  variab...">Symmetric_Basis</a> and <a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html" title="Class for half-idempotent symmetric polynomials, allowing transformation from  variables to  variable...">Half_Idempotent_Basis</a>.  <a href="classSymmetric__Polynomials_1_1Polynomial__Basis.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Polynomial__Basis.html">Symmetric_Polynomials::Polynomial_Basis&lt; spec_t, container_1_t, container_2_t &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory class that provides the general interface of a generating basis for a subring of a polynomial ring.  <a href="classSymmetric__Polynomials_1_1Polynomial__Basis.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Symmetric__Basis.html">Symmetric_Polynomials::Symmetric_Basis&lt; x_container_t, e_container_t &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for symmetric polynomials with no relations, allowing transformation from \(x_i\) variables to \(e_i\) variables and vice-versa.  <a href="classSymmetric__Polynomials_1_1Symmetric__Basis.html#details">More...</a><br /></td></tr>
@@ -164,12 +164,14 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a52e2cbc21c3608e6e400e57f8667bf20"><td class="memTemplParams" colspan="2">template&lt;typename scl_t , typename exp_value_t  = int64_t, typename deg_t  = int64_t, bool ordered = 1&gt; </td></tr>
-<tr class="memitem:a52e2cbc21c3608e6e400e57f8667bf20"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a52e2cbc21c3608e6e400e57f8667bf20">Symmetric_Polynomials::Symmetric_Basis_Default</a> = Symmetric_Basis&lt; default_container&lt; scl_t, Standard_Variables&lt; exp_value_t, deg_t &gt;, ordered &gt;, default_container&lt; scl_t, Elementary_Symmetric_Variables&lt; exp_value_t, deg_t &gt;, ordered &gt; &gt;</td></tr>
-<tr class="separator:a52e2cbc21c3608e6e400e57f8667bf20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3a24813b2b81133d1969920e2b64b0e"><td class="memTemplParams" colspan="2">template&lt;typename scl_t , typename exp_val_t  = int64_t, typename deg_t  = int64_t, bool ordered = 1&gt; </td></tr>
+<tr class="memitem:aa3a24813b2b81133d1969920e2b64b0e"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#aa3a24813b2b81133d1969920e2b64b0e">Symmetric_Polynomials::Symmetric_Basis_Default</a> = Symmetric_Basis&lt; default_container&lt; scl_t, Standard_Variables&lt; exp_val_t, deg_t &gt;, ordered &gt;, default_container&lt; scl_t, Elementary_Symmetric_Variables&lt; exp_val_t, deg_t &gt;, ordered &gt; &gt;</td></tr>
+<tr class="memdesc:aa3a24813b2b81133d1969920e2b64b0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aliases <a class="el" href="classSymmetric__Polynomials_1_1Symmetric__Basis.html" title="Class for symmetric polynomials with no relations, allowing transformation from  variables to  variab...">Symmetric_Basis</a> for certain default template parameters.  <a href="namespaceSymmetric__Polynomials.html#aa3a24813b2b81133d1969920e2b64b0e">More...</a><br /></td></tr>
+<tr class="separator:aa3a24813b2b81133d1969920e2b64b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Contains methods for writing symmetric polynomials (with no relations) in terms of the elementary symmetric ones. Also contains a factory class that generalizes the interface to any subring of a polynomial ring. </p>
+<div class="textblock"><p>Contains the methods and classes for generatic symmetric polynomials. </p>
+<p>The goal is to write any symmetric polynomial with no relations in terms of elementary symmetric polynomials The general interface for doing this can be generalized to polynomial rings with relations </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -1,8 +1,8 @@
-<map id="source/General.hpp" name="source/General.hpp">
-<area shape="rect" id="node1" title="Contains general operations on vectors: hashing, adding." alt="" coords="119,5,267,32"/>
-<area shape="rect" id="node2" href="$Polynomials_8hpp.html" title="Contains the class of polynomials in multiple variables." alt="" coords="5,80,183,107"/>
-<area shape="rect" id="node6" href="$Generators_8hpp.html" title="Contains classes for generating permutations, combinations and factory for such classes." alt="" coords="207,80,376,107"/>
-<area shape="rect" id="node3" href="$Symmetric__Basis_8hpp.html" title="Contains methods for writing symmetric polynomials (with no relations) in terms of the elementary sym..." alt="" coords="87,155,298,181"/>
-<area shape="rect" id="node4" href="$Half__Idempotent_8hpp.html" title="Contains the methods and classes for solving the following problem: If $$R=\mathbb Z[x_1,..." alt="" coords="89,229,296,256"/>
-<area shape="rect" id="node5" href="$Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="125,304,260,331"/>
+<map id="General.hpp" name="General.hpp">
+<area shape="rect" id="node1" title="Contains general operations on vectors: hashing, computing degrees." alt="" coords="95,5,196,32"/>
+<area shape="rect" id="node2" href="$Polynomials_8hpp.html" title="Contains the class of polynomials in multiple variables." alt="" coords="5,80,136,107"/>
+<area shape="rect" id="node6" href="$Generators_8hpp.html" title="Contains classes for generating permutations, combinations and a factory for such classes." alt="" coords="160,80,283,107"/>
+<area shape="rect" id="node3" href="$Symmetric__Basis_8hpp.html" title="Contains the methods and classes for generatic symmetric polynomials." alt="" coords="64,155,227,181"/>
+<area shape="rect" id="node4" href="$Half__Idempotent_8hpp.html" title="Contains the methods and classes for symmetric polynomials with half idempotent variables." alt="" coords="66,229,225,256"/>
+<area shape="rect" id="node5" href="$Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="101,304,189,331"/>
 </map>

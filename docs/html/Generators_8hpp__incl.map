@@ -1,7 +1,7 @@
-<map id="source/Generators.hpp" name="source/Generators.hpp">
-<area shape="rect" id="node1" title="Contains classes for generating permutations, combinations and factory for such classes." alt="" coords="222,5,391,32"/>
+<map id="Generators.hpp" name="Generators.hpp">
+<area shape="rect" id="node1" title="Contains classes for generating permutations, combinations and a factory for such classes." alt="" coords="245,5,368,32"/>
 <area shape="rect" id="node2" title=" " alt="" coords="147,80,232,107"/>
-<area shape="rect" id="node3" href="$General_8hpp.html" title="Contains general operations on vectors: hashing, adding." alt="" coords="256,80,357,107"/>
+<area shape="rect" id="node3" href="$General_8hpp.html" title="Contains general operations on vectors: hashing, computing degrees." alt="" coords="256,80,357,107"/>
 <area shape="rect" id="node11" title=" " alt="" coords="382,80,533,107"/>
 <area shape="rect" id="node4" title=" " alt="" coords="5,155,85,181"/>
 <area shape="rect" id="node5" title=" " alt="" coords="110,155,173,181"/>

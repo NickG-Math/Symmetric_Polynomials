@@ -13,18 +13,18 @@ Generates all permutations on a number of letters.
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Permutation__Generator_1_1const__iterator}{const\+\_\+iterator}}
-\begin{DoxyCompactList}\small\item\em Constant iterator that is used in a ranged for loop to generate the permutations. Non constant version is illegal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Constant iterator that is used in a ranged for loop to generate the permutations. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 size\+\_\+t \mbox{\hyperlink{classSymmetric__Polynomials_1_1Permutation__Generator_a8bb95ad96b98c13af256f195b88e6be2}{size}} () const
 \begin{DoxyCompactList}\small\item\em Computes total number of permutations. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classSymmetric__Polynomials_1_1Permutation__Generator_a707511eefe29d67fbe00eea1fead115a}{Permutation\+\_\+\+Generator}} (T n)
-\begin{DoxyCompactList}\small\item\em Sets up the generator. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Constructor sets up the generator. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classSymmetric__Polynomials_1_1Permutation__Generator_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classSymmetric__Polynomials_1_1Permutation__Generator_aba949bf0a3d1ba9bfbd3f9c3b7e89b4d}{begin}} () const
-\begin{DoxyCompactList}\small\item\em Initial generator. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Begin iterator. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classSymmetric__Polynomials_1_1Permutation__Generator_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classSymmetric__Polynomials_1_1Permutation__Generator_ad84ae916e915cef1107644a7d624c877}{end}} () const
-\begin{DoxyCompactList}\small\item\em Terminal generator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em End iterator. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsubsection{Detailed Description}
@@ -33,9 +33,18 @@ class Symmetric\+\_\+\+Polynomials\+::\+Permutation\+\_\+\+Generator$<$ T $>$}
 
 Generates all permutations on a number of letters. 
 
-Use with a ranged for loop\+: Ex for (const auto\& i\+:v)\{ ... \} where v is a permutations\+\_\+generator object. Then i will be a permutation Warning\+: Not thread safe! 
+Use with a ranged for loop\+:
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto}\& i:v) \{...\} }
+\end{DoxyCode}
+ where {\ttfamily v} is a {\ttfamily \mbox{\hyperlink{classSymmetric__Polynomials_1_1Permutation__Generator}{Permutation\+\_\+\+Generator}}} object. Then {\ttfamily i} will be a permutation \begin{DoxyWarning}{Warning}
+Not thread safe! 
+\end{DoxyWarning}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000002}{Todo}}]Implement via coroutine (C++20) \end{DoxyRefDesc}
+
 \begin{DoxyTemplParams}{Template Parameters}
-{\em T} & The data type of our permutations eg std\+::vector$<$int$>$ \\
+{\em T} & The data type of our permutations eg {\ttfamily std\+::vector$<$int$>$} \\
 \hline
 \end{DoxyTemplParams}
 
@@ -50,11 +59,11 @@ Use with a ranged for loop\+: Ex for (const auto\& i\+:v)\{ ... \} where v is a 
 
 
 
-Sets up the generator. 
+Constructor sets up the generator. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em n} & the total number of letters \\
+{\em n} & The total number of letters \\
 \hline
 \end{DoxyParams}
 
@@ -69,8 +78,11 @@ Sets up the generator.
 
 
 
-Initial generator. 
+Begin iterator. 
 
+\begin{DoxyReturn}{Returns}
+An iterator to the first generated element 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classSymmetric__Polynomials_1_1Permutation__Generator_ad84ae916e915cef1107644a7d624c877}\label{classSymmetric__Polynomials_1_1Permutation__Generator_ad84ae916e915cef1107644a7d624c877}} 
 \index{Symmetric\_Polynomials::Permutation\_Generator$<$ T $>$@{Symmetric\_Polynomials::Permutation\_Generator$<$ T $>$}!end@{end}}
 \index{end@{end}!Symmetric\_Polynomials::Permutation\_Generator$<$ T $>$@{Symmetric\_Polynomials::Permutation\_Generator$<$ T $>$}}
@@ -80,8 +92,11 @@ Initial generator.
 
 
 
-Terminal generator. 
+End iterator. 
 
+\begin{DoxyReturn}{Returns}
+An iterator to the end of the generator (equality with this indicates that the generator has completed) 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classSymmetric__Polynomials_1_1Permutation__Generator_a8bb95ad96b98c13af256f195b88e6be2}\label{classSymmetric__Polynomials_1_1Permutation__Generator_a8bb95ad96b98c13af256f195b88e6be2}} 
 \index{Symmetric\_Polynomials::Permutation\_Generator$<$ T $>$@{Symmetric\_Polynomials::Permutation\_Generator$<$ T $>$}!size@{size}}
 \index{size@{size}!Symmetric\_Polynomials::Permutation\_Generator$<$ T $>$@{Symmetric\_Polynomials::Permutation\_Generator$<$ T $>$}}
@@ -100,4 +115,4 @@ $n!$ where $n$ is the number of letters
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-source/\mbox{\hyperlink{Generators_8hpp}{Generators.\+hpp}}\end{DoxyCompactItemize}
+\mbox{\hyperlink{Generators_8hpp}{Generators.\+hpp}}\end{DoxyCompactItemize}

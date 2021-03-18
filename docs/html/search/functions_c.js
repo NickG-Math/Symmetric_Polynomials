@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['permutation_5fgenerator_146',['Permutation_Generator',['../classSymmetric__Polynomials_1_1Permutation__Generator.html#a707511eefe29d67fbe00eea1fead115a',1,'Symmetric_Polynomials::Permutation_Generator']]],
-  ['polynomial_147',['Polynomial',['../classSymmetric__Polynomials_1_1Polynomial.html#a93b757ce0ba805dda3f49f36571489fc',1,'Symmetric_Polynomials::Polynomial::Polynomial()=default'],['../classSymmetric__Polynomials_1_1Polynomial.html#a933cac974c20391586e4d7d739e7ec73',1,'Symmetric_Polynomials::Polynomial::Polynomial(int num_var, const deg_t *dim_var=nullptr, const std::string *name_var=nullptr)'],['../classSymmetric__Polynomials_1_1Polynomial.html#ad4cf350e86906b729806425b1360373c',1,'Symmetric_Polynomials::Polynomial::Polynomial(const exp_t &amp;exp, scl_t coeff, const deg_t *dim_var=nullptr, const std::string *name_var=nullptr)'],['../classSymmetric__Polynomials_1_1Polynomial.html#ae3bb15f601ead6d169fff44b37a1b68a',1,'Symmetric_Polynomials::Polynomial::Polynomial(int num_var, scl_t coeff, const deg_t *dim_var=nullptr, const std::string *name_var=nullptr)']]],
-  ['polynomial_5fbasis_148',['Polynomial_Basis',['../classSymmetric__Polynomials_1_1Polynomial__Basis.html#a3287ce475705fe67a98cdfbad6a79b6e',1,'Symmetric_Polynomials::Polynomial_Basis']]],
-  ['print_149',['print',['../classSymmetric__Polynomials_1_1Polynomial.html#a79ee3c7a321c648b32cac4d13d39fb47',1,'Symmetric_Polynomials::Polynomial']]],
-  ['print_5fhalf_5fidempotent_5frelations_150',['print_half_idempotent_relations',['../namespaceSymmetric__Polynomials.html#a3c87e70d8d3eb671a12dcd957e7175ab',1,'Symmetric_Polynomials']]]
+  ['relations_153',['relations',['../classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#a7567091aa93230877cc358f698ab4e90',1,'Symmetric_Polynomials::Half_Idempotent_Basis']]],
+  ['reserve_154',['reserve',['../classSymmetric__Polynomials_1_1Polynomial.html#adf413d58aa5d7f36e58884d91e9aabda',1,'Symmetric_Polynomials::Polynomial']]]
 ];

@@ -6,7 +6,7 @@ This is a C++ header only library devoted to computations of symmetric polynomia
 
 
 \section req Requirements
- * A C++17 compiler, such as Clang (LLVM) or GCC or MSVC. 
+ * A C++17 compiler, such as Clang (LLVM), GCC or MSVC. 
  
 \section install Installation
 
@@ -14,7 +14,7 @@ This is a C++ header only library devoted to computations of symmetric polynomia
 
 * See the page \ref use for a tutorial on using the library. For a brief explanation on the math behind it, see \ref math.
 
-* As for compiler support, the latest version of the code is always tested with the latest stable versions of Clang, GCC (Linux) and MSVC (Windows). Remember to use the option ```-std=c++17```. 
+* The latest version of the code is always tested with the latest stable versions of Clang, GCC (Linux) and MSVC (Windows). Remember to use the option ```-std=c++17```. 
 
 \section doc Documentation
 
@@ -26,51 +26,55 @@ This documentation is organized in pages as follows:
 
 * I recommend starting with \ref math and then testing the code examples in \ref use, before moving to the automatically generated pages.
 
+\section fut Future Update Plans
+
+* Use C++20 features: Concepts, Coroutines and Modules
 
 \page math The Math
 \tableofcontents
 \section sym Symmetric polynomials
 
-Let \f$R=\mathbb Z[x_1,...,x_n]\f$; there is an obvious action on \f$R\f$ by the symmetric group \f$\Sigma_n\f$ and the fixed points \f$R^{\Sigma_n}\f$ i.e. the symmetric polynomials, form a polynomial algebra on the elementary symmetric polynomials: $$R^{\Sigma_n}=\mathbb Z[\sigma_1,...,\sigma_n]$$ where 
-$$\sigma_k(x_1,...,x_n)=\sum_{1\le i_1< \cdots< i_k\le n}x_{i_1}....x_{i_k}$$
+Let \f$R=\mathbb Z[x_1,...,x_n]\f$; there is an obvious action on \f$R\f$ by the symmetric group \f$\Sigma_n\f$ and the fixed points \f$R^{\Sigma_n}\f$ i.e. the symmetric polynomials, form a polynomial algebra on the elementary symmetric polynomials: 
+\f[R^{\Sigma_n}=\mathbb Z[\sigma_1,...,\sigma_n]\f] where 
+\f[\sigma_k(x_1,...,x_n)=\sum_{1\le i_1< \cdots< i_k\le n}x_{i_1}....x_{i_k}\f]
 Furthermore, there is a simple algorithm for writing every symmetric polynomial on the \f$x_i\f$ as a polynomial on the \f$\sigma_i\f$. This library implements that algorithm.
 
 
-\section symr Symmetric polynomials with 'half idempotent' relations
+\section hir Symmetric polynomials with 'half idempotent' relations
 
 Let \f$R=\mathbb Z[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)\f$; there is an obvious action on \f$R\f$ by the symmetric group \f$\Sigma_n\f$ permuting the \f$x_i\f$ and \f$y_i\f$ variables separately. A minimal description of the \f$R^{\Sigma_n}\f$ is now more difficult:
-$$R^{\Sigma_n}=\frac{\mathbb Z[\gamma_{s,i}]}{\gamma_{s,i}\gamma_{t,j}={\min(i+j+s,n)-t}\choose {j}\gamma_{t,0}\gamma_{s,\min(i+j,n)}+\cdots}$$ where the "twisted Chern classes" are:
-$$\gamma_{s,i}=\sum_{1\le j_1< \cdots< j_s\le n, 
-1\le k_1< \cdots< k_i\le n\\
-j_u\neq k_v}x_{j_1}....x_{j_s}y_{k_1}\cdots y_{k_i}$$
-for \f$0\le s\le n\f$ and \f$0\le i\le n-s\f$. The relations require the indices \f$s,i,t,j\f$ to satisfy \f$s\le t\le s+i\f$ and \f$i,j>0\f$.
+\f[R^{\Sigma_n}=\frac{\mathbb Z[\gamma_{s,i}]}{\gamma_{s,i}\gamma_{t,j}=r_{n,s,i,t,j}\gamma_{t,0}\gamma_{s,\min(i+j,n)}+\cdots}\f] where the "twisted Chern classes" are:
+\f[\gamma_{s,i}=
+\sum_{1\le j_1< \cdots< j_s\le n, 1\le k_1< \cdots< k_i\le n\\ j_u\neq k_v}
+x_{j_1}....x_{j_s}y_{k_1}\cdots y_{k_i}\f]
+for \f$0\le s\le n\f$ and \f$0\le i\le n-s\f$. The coefficient \f$r_{n,s,i,t,j}\f$ in the relations is
+\f[r_{n,s,i,t,j}={{\min(i+j+s,n)-t}\choose {j}}\f] 
+Moreover, the relations require the indices \f$s,i,t,j\f$ to satisfy \f$s\le t\le s+i\f$ and \f$i,j>0\f$.
 
 For convenience we set:
-$$\alpha_i=\gamma_{0,i}=\sigma_i(y_1,...,y_n)$$
-$$c_s=\gamma_{s,0}=\sigma_s(x_1,...,x_n)$$
+\f[\alpha_i=\gamma_{0,i}=\sigma_i(y_1,...,y_n)\f]
+\f[c_s=\gamma_{s,0}=\sigma_s(x_1,...,x_n)\f]
 Over \f$\mathbb Q\f$, the \f$\alpha_1^i\f$ can generate all \f$\alpha_i\f$ via:
-$$\alpha_i=\frac{\alpha(\alpha-1)\cdots(\alpha-i+1)}{i!}$$
+\f[\alpha_i=\frac{\alpha(\alpha-1)\cdots(\alpha-i+1)}{i!}\f]
 however for speed+numerical stability we prefer to use all \f$\alpha_i\f$ and have \f$\mathbb Z\f$ coefficients in our relations.
 
 This library implements an algorithm that can write every element in \f$R^{\Sigma_n}\f$ as a polynomial on the generators \f$\alpha_i,c_i,\gamma_{s,i}\f$ and further produce every relation explicitly. 
 
 The "twisted Pontryagin/symplectic classes" are defined as:
-$$\kappa_{s,i}=\sum_{1\le j_1< \cdots< j_s\le n, 
+\f[\kappa_{s,i}=\sum_{1\le j_1< \cdots< j_s\le n, 
 1\le k_1< \cdots< k_i\le n\\
-j_u\neq k_v}x^2_{j_1}....x^2_{j_s}y_{k_1}\cdots y_{k_i}$$
+j_u\neq k_v}x^2_{j_1}....x^2_{j_s}y_{k_1}\cdots y_{k_i}\f]
 This library also allows one to write the \f$\kappa_{s,i}\f$ in terms of the \f$\gamma_{s,i}\f$
 
 \page use How to Use
 \tableofcontents
 \section demo Quick Demonstration
 
-For a quick demonstration you may use the binaries found <a href="https://github.com/NickG-Math/Symmetric_Polynomials/releases">here</a>. These are compiled from Demo.cpp using MSVC and Clang respectively. You can also compile these binaries yourself. For example, on Linux use:
+For a quick demonstration you may use the binaries found <a href="https://github.com/NickG-Math/Symmetric_Polynomials/releases">here</a>. These are compiled from Demo.cpp using MSVC (Windows) and GCC (Linux). You can also compile these binaries yourself. For example, on Linux use:
 
-    clang++ source/Demo.cpp -std=c++17 -O3 -fopenmp -march=native -o Lin64.out	
+    g++ source/Demo.cpp -std=c++17 -O3 -fopenmp -march=native -o Lin64.out	
 
-(disable -fopenmp if a multithreading is not desired; eg to save on resources and decrease total memory footprint).
-
-You can similarly do this over Windows using MSVC, producing a .exe file . Make sure to use the ```-std=c++17``` flag (or set the language options in an IDE to support C++17).
+Only the ```-std=c++17``` flag is required.
 
 \section exa Code examples
 
@@ -121,7 +125,7 @@ will print
 
 $$-8x_1x_2x_3^2 + 7x_2x_3^4 + 64x_1^2x_2^2x_3^4 + -112x_1x_2^2x_3^6 + 49x_2^2x_3^8$$
 
-\subsection sym Symmetric Basis
+\subsection symbasis Symmetric Basis
 
 The class ```Symmetric_Basis_Default``` allows us to transform polynomials on \f$x_i\f$ variables (```Standard_Variables```) into polynomials on the elementary symmetric polynomials \f$e_i=\sigma_i\f$ (```Elementary_Symmetric_Variables```). For example:
 
@@ -175,7 +179,7 @@ The code
 
 sets ```poly``` to be \f$x_1y_1+x_2y_2\f$, transforms it into ```new_poly``` which is \f$2\alpha_1 c_1 + -2\gamma_{1,1}\f$ and then transforms it to ```new_new_poly``` in the original variables, which is equal to ```poly```, before printing their names. Thus:
 
-$$x_1y_1+x_2y_2=-2\gamma_{1,1}+2\alpha_1 c_1$$
+\f[x_1y_1+x_2y_2=-2\gamma_{1,1}+2\alpha_1 c_1\f]
 
 To print the relations amongst \f$\alpha_i,c_i,\gamma_{s,j}\f$ simply use:
 
@@ -183,20 +187,16 @@ To print the relations amongst \f$\alpha_i,c_i,\gamma_{s,j}\f$ simply use:
 	
 The \f$3\f$ here corresponds to the half the number of variables: \f$x_1,x_2,x_3,y_1,y_2,y_3\f$ and can be replaced by any positive integer.
 
-There is also a multithreaded version that you can compile yourself, by removing the comment from the #pragma omp in the definition of ```print_half_idempotent_relations```.
-
-
 Finally, Demo.cpp contains another function, ```write_pontryagin_C2_in_terms_of_Chern_classes```. This prints the expressions of the twisted Pontryagin/symplectic classes given by
 
-$$\pi_{s,t}=\kappa_{s,t}=\sum_{1\le i_1< \cdots< i_s\le n\\
+\f[\pi_{s,t}=\kappa_{s,t}=\sum_{1\le i_1< \cdots< i_s\le n\\
 1\le j_1< \cdots< j_t\le n\\
-i_u\neq j_v}x^2_{i_1}....x^2_{i_s}y_{j_1}\cdots y_{j_t}$$
+i_u\neq j_v}x^2_{i_1}....x^2_{i_s}y_{j_1}\cdots y_{j_t}\f]
 
 in terms of the \f$\alpha_i,c_i,\gamma_{s,t}\f$. 
 For example, try running 
 
 	write_pontryagin_C2_in_terms_of_Chern_classes(5);
-	
 	
 \subsection adv Advanced
 
@@ -204,9 +204,9 @@ The ```default_container<scl_t, exp_t, ordered>``` specifies the data structure 
 When unordered maps are used, it's important to:
 - Reserve space for the amount of monomials to be inserted by eg: ```p.reserve(5);``` if we expect to store \f$5\f$ monomials
 - Keep in mind that when iterating through the polynomial, the monomials won't be ordered. Same applies when printing the polynomial.
-In general, using unordered maps is faster especially with a good hashing function (see \ref General.h for two possible hashing functions that can be used).
+In general, using unordered maps is faster especially with a good hashing function (see \ref General.hpp for two possible hashing functions that can be used).
 
-You can also use your own container instead of the ```default_container```. See the file \ref Polynomials.h for the exact requirements from 
+You can also use your own container instead of the ```default_container```. See the file \ref Polynomials.hpp for the exact requirements from 
 a custom container.
 
 Finally, the ```Symmetric_Basis_Default``` and ```Half_Idempotent_Basis_Default``` are aliases for ```Symmetric_Basis``` and ```Half_Idempotent_Basis``` that  accept containers as template parameters for extra customization.

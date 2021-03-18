@@ -13,7 +13,7 @@ Generates all combinations on a number of letters making a number of choices.
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Combination__Generator_1_1const__iterator}{const\+\_\+iterator}}
-\begin{DoxyCompactList}\small\item\em Constant iterator that is used in a ranged for loop to generate the combinations. Non constant version is illegal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Constant iterator that is used in a ranged for loop to generate the combinations. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -22,9 +22,9 @@ auto \mbox{\hyperlink{classSymmetric__Polynomials_1_1Combination__Generator_a3dd
 \mbox{\hyperlink{classSymmetric__Polynomials_1_1Combination__Generator_a2f0d06e54f8d58bbe47cf18e42e05d5e}{Combination\+\_\+\+Generator}} (T total, T choices)
 \begin{DoxyCompactList}\small\item\em Sets up the generator. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classSymmetric__Polynomials_1_1Combination__Generator_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classSymmetric__Polynomials_1_1Combination__Generator_a07988e1a6a0411322ea9c7059029b102}{begin}} () const
-\begin{DoxyCompactList}\small\item\em Initial generator. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Begin iterator. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classSymmetric__Polynomials_1_1Combination__Generator_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classSymmetric__Polynomials_1_1Combination__Generator_a32aa4897e4da0c9fc905b63fe756ada1}{end}} () const
-\begin{DoxyCompactList}\small\item\em Terminal generator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em End iterator. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsubsection{Detailed Description}
@@ -33,9 +33,18 @@ class Symmetric\+\_\+\+Polynomials\+::\+Combination\+\_\+\+Generator$<$ T $>$}
 
 Generates all combinations on a number of letters making a number of choices. 
 
-Use with a ranged for loop\+: Ex for (const auto\& i\+:v)\{ ... \} where v is a combinations\+\_\+generator object. Then i will be a combination Warning\+: Not thread safe! 
+Use with a ranged for loop\+:
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto}\& i:v) \{...\} }
+\end{DoxyCode}
+ where {\ttfamily v} is a {\ttfamily \mbox{\hyperlink{classSymmetric__Polynomials_1_1Combination__Generator}{Combination\+\_\+\+Generator}}} object. Then {\ttfamily i} will be a combination \begin{DoxyWarning}{Warning}
+Not thread safe! 
+\end{DoxyWarning}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000003}{Todo}}]Implement via coroutine (C++20) \end{DoxyRefDesc}
+
 \begin{DoxyTemplParams}{Template Parameters}
-{\em T} & The data type of our combinations eg std\+::vector$<$int$>$ \\
+{\em T} & The data type of our combinations eg {\ttfamily std\+::vector$<$int$>$} \\
 \hline
 \end{DoxyTemplParams}
 
@@ -54,9 +63,9 @@ Sets up the generator.
 
 
 \begin{DoxyParams}{Parameters}
-{\em total} & the total number of letters \\
+{\em total} & The number of letters \\
 \hline
-{\em choices} & the total number of choices \\
+{\em choices} & The number of choices \\
 \hline
 \end{DoxyParams}
 
@@ -71,8 +80,11 @@ Sets up the generator.
 
 
 
-Initial generator. 
+Begin iterator. 
 
+\begin{DoxyReturn}{Returns}
+An iterator to the first generated element 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classSymmetric__Polynomials_1_1Combination__Generator_a32aa4897e4da0c9fc905b63fe756ada1}\label{classSymmetric__Polynomials_1_1Combination__Generator_a32aa4897e4da0c9fc905b63fe756ada1}} 
 \index{Symmetric\_Polynomials::Combination\_Generator$<$ T $>$@{Symmetric\_Polynomials::Combination\_Generator$<$ T $>$}!end@{end}}
 \index{end@{end}!Symmetric\_Polynomials::Combination\_Generator$<$ T $>$@{Symmetric\_Polynomials::Combination\_Generator$<$ T $>$}}
@@ -82,8 +94,11 @@ Initial generator.
 
 
 
-Terminal generator. 
+End iterator. 
 
+\begin{DoxyReturn}{Returns}
+An iterator to the end of the generator (equality with this indicates that the generator has completed) 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classSymmetric__Polynomials_1_1Combination__Generator_a3dd545735d9fd8f58cbaac5e7a9cf7c8}\label{classSymmetric__Polynomials_1_1Combination__Generator_a3dd545735d9fd8f58cbaac5e7a9cf7c8}} 
 \index{Symmetric\_Polynomials::Combination\_Generator$<$ T $>$@{Symmetric\_Polynomials::Combination\_Generator$<$ T $>$}!size@{size}}
 \index{size@{size}!Symmetric\_Polynomials::Combination\_Generator$<$ T $>$@{Symmetric\_Polynomials::Combination\_Generator$<$ T $>$}}
@@ -102,4 +117,4 @@ ${n}\choose{k}$ where $n$=total and $k$=choices
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-source/\mbox{\hyperlink{Generators_8hpp}{Generators.\+hpp}}\end{DoxyCompactItemize}
+\mbox{\hyperlink{Generators_8hpp}{Generators.\+hpp}}\end{DoxyCompactItemize}

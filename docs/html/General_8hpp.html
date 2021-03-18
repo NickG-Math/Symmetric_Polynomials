@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Symmetric Polynomials: source/General.hpp File Reference</title>
+<title>Symmetric Polynomials: General.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('General_8hpp.html',''); initResizable(
 </div><!--header-->
 <div class="contents">
 
-<p>Contains general operations on vectors: hashing, adding.  
+<p>Contains general operations on vectors: hashing, computing degrees.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
@@ -110,9 +110,9 @@ $(document).ready(function(){initNavTree('General_8hpp.html',''); initResizable(
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for General.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="General_8hpp__incl.png" border="0" usemap="#source_2General_8hpp" alt=""/></div>
-<map name="source_2General_8hpp" id="source_2General_8hpp">
-<area shape="rect" title="Contains general operations on vectors: hashing, adding." alt="" coords="233,5,381,32"/>
+<div class="center"><img src="General_8hpp__incl.png" border="0" usemap="#General_8hpp" alt=""/></div>
+<map name="General_8hpp" id="General_8hpp">
+<area shape="rect" title="Contains general operations on vectors: hashing, computing degrees." alt="" coords="256,5,357,32"/>
 <area shape="rect" title=" " alt="" coords="5,80,85,107"/>
 <area shape="rect" title=" " alt="" coords="110,80,173,107"/>
 <area shape="rect" title=" " alt="" coords="197,80,253,107"/>
@@ -125,14 +125,14 @@ Include dependency graph for General.hpp:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="General_8hpp__dep__incl.png" border="0" usemap="#source_2General_8hppdep" alt=""/></div>
-<map name="source_2General_8hppdep" id="source_2General_8hppdep">
-<area shape="rect" title="Contains general operations on vectors: hashing, adding." alt="" coords="119,5,267,32"/>
-<area shape="rect" href="Polynomials_8hpp.html" title="Contains the class of polynomials in multiple variables." alt="" coords="5,80,183,107"/>
-<area shape="rect" href="Generators_8hpp.html" title="Contains classes for generating permutations, combinations and factory for such classes." alt="" coords="207,80,376,107"/>
-<area shape="rect" href="Symmetric__Basis_8hpp.html" title="Contains methods for writing symmetric polynomials (with no relations) in terms of the elementary sym..." alt="" coords="87,155,298,181"/>
-<area shape="rect" href="Half__Idempotent_8hpp.html" title="Contains the methods and classes for solving the following problem: If $$R=\mathbb Z[x_1,..." alt="" coords="89,229,296,256"/>
-<area shape="rect" href="Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="125,304,260,331"/>
+<div class="center"><img src="General_8hpp__dep__incl.png" border="0" usemap="#General_8hppdep" alt=""/></div>
+<map name="General_8hppdep" id="General_8hppdep">
+<area shape="rect" title="Contains general operations on vectors: hashing, computing degrees." alt="" coords="95,5,196,32"/>
+<area shape="rect" href="Polynomials_8hpp.html" title="Contains the class of polynomials in multiple variables." alt="" coords="5,80,136,107"/>
+<area shape="rect" href="Generators_8hpp.html" title="Contains classes for generating permutations, combinations and a factory for such classes." alt="" coords="160,80,283,107"/>
+<area shape="rect" href="Symmetric__Basis_8hpp.html" title="Contains the methods and classes for generatic symmetric polynomials." alt="" coords="64,155,227,181"/>
+<area shape="rect" href="Half__Idempotent_8hpp.html" title="Contains the methods and classes for symmetric polynomials with half idempotent variables." alt="" coords="66,229,225,256"/>
+<area shape="rect" href="Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="101,304,189,331"/>
 </map>
 </div>
 </div>
@@ -148,15 +148,15 @@ Namespaces</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a144142657f3a44c85c04a63864d4d006"><td class="memTemplParams" colspan="2">template&lt;typename T , typename hasher  = boost_hash&gt; </td></tr>
 <tr class="memitem:a144142657f3a44c85c04a63864d4d006"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a144142657f3a44c85c04a63864d4d006">Symmetric_Polynomials::generic_hasher</a> (const T &amp;v)</td></tr>
-<tr class="memdesc:a144142657f3a44c85c04a63864d4d006"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hash algorithm using golden ratio (idea from boost)  <a href="namespaceSymmetric__Polynomials.html#a144142657f3a44c85c04a63864d4d006">More...</a><br /></td></tr>
+<tr class="memdesc:a144142657f3a44c85c04a63864d4d006"><td class="mdescLeft">&#160;</td><td class="mdescRight">A generic hashing function that calls other hashing functions.  <a href="namespaceSymmetric__Polynomials.html#a144142657f3a44c85c04a63864d4d006">More...</a><br /></td></tr>
 <tr class="separator:a144142657f3a44c85c04a63864d4d006"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bed593f8db7be7d105332a08910dc9d"><td class="memTemplParams" colspan="2">template&lt;typename R , typename T , typename S &gt; </td></tr>
-<tr class="memitem:a3bed593f8db7be7d105332a08910dc9d"><td class="memTemplItemLeft" align="right" valign="top">R&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a3bed593f8db7be7d105332a08910dc9d">Symmetric_Polynomials::general_compute_degree</a> (const T &amp;exponent, const S &amp;dimensions)</td></tr>
-<tr class="memdesc:a3bed593f8db7be7d105332a08910dc9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Degree computation given exponent and dimensions (grading).  <a href="namespaceSymmetric__Polynomials.html#a3bed593f8db7be7d105332a08910dc9d">More...</a><br /></td></tr>
-<tr class="separator:a3bed593f8db7be7d105332a08910dc9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72024f84f84636ed15ba5795c2a102eb"><td class="memTemplParams" colspan="2">template&lt;typename R , typename T , typename S &gt; </td></tr>
+<tr class="memitem:a72024f84f84636ed15ba5795c2a102eb"><td class="memTemplItemLeft" align="right" valign="top">R&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a72024f84f84636ed15ba5795c2a102eb">Symmetric_Polynomials::general_compute_degree</a> (const T &amp;exp, const S &amp;dim)</td></tr>
+<tr class="memdesc:a72024f84f84636ed15ba5795c2a102eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Degree computation given exponent and dimensions (grading).  <a href="namespaceSymmetric__Polynomials.html#a72024f84f84636ed15ba5795c2a102eb">More...</a><br /></td></tr>
+<tr class="separator:a72024f84f84636ed15ba5795c2a102eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Contains general operations on vectors: hashing, adding. </p>
+<div class="textblock"><p>Contains general operations on vectors: hashing, computing degrees. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

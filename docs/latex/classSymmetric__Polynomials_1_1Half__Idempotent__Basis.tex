@@ -40,7 +40,7 @@ typedef \+\_\+chern\+\_\+container \mbox{\hyperlink{classSymmetric__Polynomials_
 \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_aac5e4cbc16138448828c4ffded90ef24}{Half\+\_\+\+Idempotent\+\_\+\+Basis}} (int n)
 \begin{DoxyCompactList}\small\item\em Constructs the generators and the relation set given $n$ in $x_1,...,x_n,y_1,...,y_n$. \end{DoxyCompactList}\item 
 const auto \& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_a7567091aa93230877cc358f698ab4e90}{relations}} () const
-\begin{DoxyCompactList}\small\item\em Returns const\& of vector containing the Polynomials $\alpha_s\gamma_{s,i}$ and $\gamma_{s,i}\gamma_{t,j}$ for $0<s<=t<=s+i$ and $i,j>0$ (the L\+HS of the relations satisfied by the generators) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Stores the relations $\gamma_{s,i}\gamma_{t,j}$ for $0<s<=t<=s+i$ and $i,j>0$. \end{DoxyCompactList}\item 
 const auto \& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_ad28d3005631ff1f1f3960d85d9796989}{generator}} (int s, int j) const
 \begin{DoxyCompactList}\small\item\em Returns generator $\gamma_{s,j}$. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Friends}
@@ -122,9 +122,6 @@ const auto\& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__B
 
 Returns generator $\gamma_{s,j}$. 
 
-\begin{DoxyReturn}{Returns}
-$\gamma_{s,j}$ as \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} on the $x_i,y_i$ variables 
-\end{DoxyReturn}
 
 \begin{DoxyParams}{Parameters}
 {\em s} & The index of $s$ of $\gamma_{s,j}$. \\
@@ -132,6 +129,9 @@ $\gamma_{s,j}$ as \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Po
 {\em j} & The index of $j$ of $\gamma_{s,j}$. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\gamma_{s,j}$ as \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} on the $x_i,y_i$ variables 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_a7567091aa93230877cc358f698ab4e90}\label{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_a7567091aa93230877cc358f698ab4e90}} 
 \index{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$}!relations@{relations}}
 \index{relations@{relations}!Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$}}
@@ -141,8 +141,11 @@ const auto\& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__B
 
 
 
-Returns const\& of vector containing the Polynomials $\alpha_s\gamma_{s,i}$ and $\gamma_{s,i}\gamma_{t,j}$ for $0<s<=t<=s+i$ and $i,j>0$ (the L\+HS of the relations satisfied by the generators) 
+Stores the relations $\gamma_{s,i}\gamma_{t,j}$ for $0<s<=t<=s+i$ and $i,j>0$. 
 
+\begin{DoxyReturn}{Returns}
+const\& of vector containing the relation Polynomials $\gamma_{s,i}\gamma_{t,j}$ 
+\end{DoxyReturn}
 
 
 \doxysubsubsection{Friends And Related Function Documentation}
@@ -161,4 +164,4 @@ Befriending parent for C\+R\+TP.
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-source/\mbox{\hyperlink{Half__Idempotent_8hpp}{Half\+\_\+\+Idempotent.\+hpp}}\end{DoxyCompactItemize}
+\mbox{\hyperlink{Half__Idempotent_8hpp}{Half\+\_\+\+Idempotent.\+hpp}}\end{DoxyCompactItemize}

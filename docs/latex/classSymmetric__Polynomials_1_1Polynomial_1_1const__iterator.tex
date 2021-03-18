@@ -2,7 +2,7 @@
 \label{classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator}\index{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$::const\_iterator@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$::const\_iterator}}
 
 
-Constant iterator going through the monomials of the polynomial in increasing order.  
+Constant iterator through the monomials of the polynomial.  
 
 
 
@@ -28,14 +28,19 @@ bool \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1const__iterat
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator_af3841474533d8bd1db7c131548d0bc27}{Polynomial}}
-\begin{DoxyCompactList}\small\item\em Befriend polynomial. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Befriend outer class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsubsection{Detailed Description}
 \subsubsection*{template$<$typename container\+\_\+t$>$\newline
 class Symmetric\+\_\+\+Polynomials\+::\+Polynomial$<$ container\+\_\+t $>$\+::const\+\_\+iterator}
 
-Constant iterator going through the monomials of the polynomial in increasing order. 
+Constant iterator through the monomials of the polynomial. 
+
+\begin{DoxyWarning}{Warning}
+The monomials are traversed in increasing order only for ordered containers 
+\end{DoxyWarning}
+
 
 \doxysubsubsection{Member Function Documentation}
 \mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator_ae294f78efbfc7aaed2ece8d902a45dd0}\label{classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator_ae294f78efbfc7aaed2ece8d902a45dd0}} 
@@ -116,10 +121,10 @@ friend class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynom
 
 
 
-Befriend polynomial. 
+Befriend outer class. 
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-source/\mbox{\hyperlink{Polynomials_8hpp}{Polynomials.\+hpp}}\end{DoxyCompactItemize}
+\mbox{\hyperlink{Polynomials_8hpp}{Polynomials.\+hpp}}\end{DoxyCompactItemize}

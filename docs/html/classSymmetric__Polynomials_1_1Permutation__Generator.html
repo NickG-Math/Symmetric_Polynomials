@@ -107,7 +107,7 @@ $(document).ready(function(){initNavTree('classSymmetric__Polynomials_1_1Permuta
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Permutation__Generator_1_1const__iterator.html">const_iterator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant iterator that is used in a ranged for loop to generate the permutations. Non constant version is illegal.  <a href="classSymmetric__Polynomials_1_1Permutation__Generator_1_1const__iterator.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant iterator that is used in a ranged for loop to generate the permutations.  <a href="classSymmetric__Polynomials_1_1Permutation__Generator_1_1const__iterator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -116,13 +116,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8bb95ad96b98c13af256f195b88e6be2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes total number of permutations.  <a href="classSymmetric__Polynomials_1_1Permutation__Generator.html#a8bb95ad96b98c13af256f195b88e6be2">More...</a><br /></td></tr>
 <tr class="separator:a8bb95ad96b98c13af256f195b88e6be2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a707511eefe29d67fbe00eea1fead115a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Permutation__Generator.html#a707511eefe29d67fbe00eea1fead115a">Permutation_Generator</a> (T n)</td></tr>
-<tr class="memdesc:a707511eefe29d67fbe00eea1fead115a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up the generator.  <a href="classSymmetric__Polynomials_1_1Permutation__Generator.html#a707511eefe29d67fbe00eea1fead115a">More...</a><br /></td></tr>
+<tr class="memdesc:a707511eefe29d67fbe00eea1fead115a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor sets up the generator.  <a href="classSymmetric__Polynomials_1_1Permutation__Generator.html#a707511eefe29d67fbe00eea1fead115a">More...</a><br /></td></tr>
 <tr class="separator:a707511eefe29d67fbe00eea1fead115a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba949bf0a3d1ba9bfbd3f9c3b7e89b4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1Permutation__Generator_1_1const__iterator.html">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Permutation__Generator.html#aba949bf0a3d1ba9bfbd3f9c3b7e89b4d">begin</a> () const</td></tr>
-<tr class="memdesc:aba949bf0a3d1ba9bfbd3f9c3b7e89b4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initial generator.  <a href="classSymmetric__Polynomials_1_1Permutation__Generator.html#aba949bf0a3d1ba9bfbd3f9c3b7e89b4d">More...</a><br /></td></tr>
+<tr class="memdesc:aba949bf0a3d1ba9bfbd3f9c3b7e89b4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin iterator.  <a href="classSymmetric__Polynomials_1_1Permutation__Generator.html#aba949bf0a3d1ba9bfbd3f9c3b7e89b4d">More...</a><br /></td></tr>
 <tr class="separator:aba949bf0a3d1ba9bfbd3f9c3b7e89b4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad84ae916e915cef1107644a7d624c877"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSymmetric__Polynomials_1_1Permutation__Generator_1_1const__iterator.html">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Permutation__Generator.html#ad84ae916e915cef1107644a7d624c877">end</a> () const</td></tr>
-<tr class="memdesc:ad84ae916e915cef1107644a7d624c877"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminal generator.  <a href="classSymmetric__Polynomials_1_1Permutation__Generator.html#ad84ae916e915cef1107644a7d624c877">More...</a><br /></td></tr>
+<tr class="memdesc:ad84ae916e915cef1107644a7d624c877"><td class="mdescLeft">&#160;</td><td class="mdescRight">End iterator.  <a href="classSymmetric__Polynomials_1_1Permutation__Generator.html#ad84ae916e915cef1107644a7d624c877">More...</a><br /></td></tr>
 <tr class="separator:ad84ae916e915cef1107644a7d624c877"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -130,9 +130,12 @@ Public Member Functions</h2></td></tr>
 class Symmetric_Polynomials::Permutation_Generator&lt; T &gt;</h3>
 
 <p>Generates all permutations on a number of letters. </p>
-<p>Use with a ranged for loop: Ex for (const auto&amp; i:v){ ... } where v is a permutations_generator object. Then i will be a permutation Warning: Not thread safe! </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+<p>Use with a ranged for loop:</p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; i:v) {...} </div>
+</div><!-- fragment --><p> where <code>v</code> is a <code><a class="el" href="classSymmetric__Polynomials_1_1Permutation__Generator.html" title="Generates all permutations on a number of letters.">Permutation_Generator</a></code> object. Then <code>i</code> will be a permutation </p><dl class="section warning"><dt>Warning</dt><dd>Not thread safe! </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Implement via coroutine (C++20) </dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>The data type of our permutations eg std::vector&lt;int&gt; </td></tr>
+    <tr><td class="paramname">T</td><td>The data type of our permutations eg <code>std::vector&lt;int&gt;</code> </td></tr>
   </table>
   </dd>
 </dl>
@@ -155,10 +158,10 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Sets up the generator. </p>
+<p>Constructor sets up the generator. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">n</td><td>the total number of letters </td></tr>
+    <tr><td class="paramname">n</td><td>The total number of letters </td></tr>
   </table>
   </dd>
 </dl>
@@ -183,7 +186,8 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Initial generator. </p>
+<p>Begin iterator. </p>
+<dl class="section return"><dt>Returns</dt><dd>An iterator to the first generated element </dd></dl>
 
 </div>
 </div>
@@ -204,7 +208,8 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Terminal generator. </p>
+<p>End iterator. </p>
+<dl class="section return"><dt>Returns</dt><dd>An iterator to the end of the generator (equality with this indicates that the generator has completed) </dd></dl>
 
 </div>
 </div>
@@ -231,7 +236,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>source/<a class="el" href="Generators_8hpp_source.html">Generators.hpp</a></li>
+<li><a class="el" href="Generators_8hpp_source.html">Generators.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

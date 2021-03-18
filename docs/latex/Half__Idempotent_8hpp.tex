@@ -1,9 +1,8 @@
-\hypertarget{Half__Idempotent_8hpp}{}\doxysubsection{source/\+Half\+\_\+\+Idempotent.hpp File Reference}
-\label{Half__Idempotent_8hpp}\index{source/Half\_Idempotent.hpp@{source/Half\_Idempotent.hpp}}
+\hypertarget{Half__Idempotent_8hpp}{}\doxysubsection{Half\+\_\+\+Idempotent.\+hpp File Reference}
+\label{Half__Idempotent_8hpp}\index{Half\_Idempotent.hpp@{Half\_Idempotent.hpp}}
 
 
-Contains the methods and classes for solving the following problem\+: If \$\$R=\textbackslash{}mathbb Z\mbox{[}x\+\_\+1,...,x\+\_\+n,y\+\_\+1,...,y\+\_\+n\mbox{]}/(y\+\_\+i$^\wedge$2=y\+\_\+i)\$\$ produce minimal algebra generators for the fixed points of $R$ under the $\Sigma_n$ action (permuting the $x_i,y_i$ separately), give an algorithm for writing a fixed point in terms of the generators and an algorithm for producing the relations of those generators. ~\newline
-  
+Contains the methods and classes for symmetric polynomials with half idempotent variables.  
 
 
 {\ttfamily \#include \char`\"{}Symmetric\+\_\+\+Basis.\+hpp\char`\"{}}\newline
@@ -19,7 +18,7 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=235pt]{Half__Idempotent_8hpp__dep__incl}
+\includegraphics[width=199pt]{Half__Idempotent_8hpp__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Classes}
@@ -41,8 +40,8 @@ class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{S
 \doxysubsubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename scl\+\_\+t , typename exp\+\_\+value\+\_\+t  = int64\+\_\+t, typename deg\+\_\+t  = int64\+\_\+t, bool ordered = 1$>$ }\\using \mbox{\hyperlink{namespaceSymmetric__Polynomials_a4fabc1695bf98cd5288dff6bacd769af}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Basis\+\_\+\+Default}} = Half\+\_\+\+Idempotent\+\_\+\+Basis$<$ default\+\_\+container$<$ scl\+\_\+t, Half\+\_\+\+Idempotent\+\_\+\+Variables$<$ exp\+\_\+value\+\_\+t, deg\+\_\+t $>$, ordered $>$, default\+\_\+container$<$ scl\+\_\+t, Twisted\+\_\+\+Chern\+\_\+\+Variables$<$ exp\+\_\+value\+\_\+t, deg\+\_\+t $>$, ordered $>$ $>$
-\end{DoxyCompactItemize}
+{\footnotesize template$<$typename scl\+\_\+t , typename exp\+\_\+val\+\_\+t  = int64\+\_\+t, typename deg\+\_\+t  = int64\+\_\+t, bool ordered = 1$>$ }\\using \mbox{\hyperlink{namespaceSymmetric__Polynomials_a14acf407fa68839a1031d9393492d049}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Basis\+\_\+\+Default}} = Half\+\_\+\+Idempotent\+\_\+\+Basis$<$ default\+\_\+container$<$ scl\+\_\+t, Half\+\_\+\+Idempotent\+\_\+\+Variables$<$ exp\+\_\+val\+\_\+t, deg\+\_\+t $>$, ordered $>$, default\+\_\+container$<$ scl\+\_\+t, Twisted\+\_\+\+Chern\+\_\+\+Variables$<$ exp\+\_\+val\+\_\+t, deg\+\_\+t $>$, ordered $>$ $>$
+\begin{DoxyCompactList}\small\item\em Aliases \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Half\+\_\+\+Idempotent\+\_\+\+Basis}} for certain default template parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -51,6 +50,6 @@ class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{S
 
 
 \doxysubsubsection{Detailed Description}
-Contains the methods and classes for solving the following problem\+: If \$\$R=\textbackslash{}mathbb Z\mbox{[}x\+\_\+1,...,x\+\_\+n,y\+\_\+1,...,y\+\_\+n\mbox{]}/(y\+\_\+i$^\wedge$2=y\+\_\+i)\$\$ produce minimal algebra generators for the fixed points of $R$ under the $\Sigma_n$ action (permuting the $x_i,y_i$ separately), give an algorithm for writing a fixed point in terms of the generators and an algorithm for producing the relations of those generators. ~\newline
- 
+Contains the methods and classes for symmetric polynomials with half idempotent variables. 
 
+The goal is to solve the following problem\+: If \[R=\mathbb Z[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)\] produce minimal algebra generators for the fixed points of $R$ under the $\Sigma_n$ action (permuting the $x_i,y_i$ separately), give an algorithm for writing a fixed point in terms of the generators and an algorithm for producing the relations of those generators. 

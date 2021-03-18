@@ -1,5 +1,11 @@
-#ifdef _OPENMP
+#define SYMMETRIC_POLY_USE_OPEN_MP ///<Define this macro to enable openMP in the library (you will also need to compile with -fopenmp).
+#if defined SYMMETRIC_POLY_USE_OPEN_MP & defined _OPENMP
 #include "omp.h"
+///Macro that does openMP parallel for if SYMMETRIC_POLY_USE_OPEN_MP is defined, and nothing otherwise
+#define PARALLELIZE _Pragma("omp parallel for num_threads(omp_get_max_threads()) schedule(dynamic)")
+#else
+///Macro that does ```openMP parallel for``` if \c SYMMETRIC_POLY_USE_OPEN_MP is defined, and nothing otherwise
+#define PARALLELIZE
 #endif
 #include <chrono>
 #include "Half_Idempotent.hpp"
@@ -8,21 +14,18 @@
 
 using namespace Symmetric_Polynomials;
 
-
-///Writes the twisted Pontryagin/symplectic classes \f$\pi_{s,j}, \kappa_{s,j}\f$ in terms of the Chern classes
-/// under the forgetful map \f$BU(n)\to BSO(n)\f$ , hermitianization \f$BU(n)\to BSp(n)\f$
-///@tparam HIB The Half_Idempotent_Basis type
-///@param n The \f$n\f$ in \f$BU(n), BSO(n), BSp(n)\f$
-template<typename HIB= Half_Idempotent_Basis_Default<int64_t>>
+/// @brief		Writes the twisted Pontryagin or symplectic classes \f$\pi_{s,j}\f$ or \f$\kappa_{s,j}\f$ in terms of the Chern classes under the forgetful map \f$BU(n)\to BSO(n)\f$ or hermitianization \f$BU(n)\to BSp(n)\f$
+/// @tparam HIB The Half_Idempotent_Basis type eg The Half_Idempotent_Basis_Default
+/// @param	n	The \f$n\f$ in \f$BU(n), BSO(n), BSp(n)\f$
+template <typename HIB = Half_Idempotent_Basis_Default<int64_t>>
 void write_pontryagin_C2_in_terms_of_Chern_classes(int n)
 {
 	HIB hib(n);
-#ifdef _OPENMP
-#pragma omp parallel for num_threads(omp_get_max_threads()) schedule(dynamic)
-#endif
+	PARALLELIZE
 	for (int s = 1; s <= n; s++)
-		for (int i = 1; i <= n - s; i++) {
-			const auto& twistedChern = hib.generator(s,i);
+		for (int i = 1; i <= n - s; i++)
+		{
+			const auto &twistedChern = hib.generator(s, i);
 			Polynomial<typename HIB::xy_container_t> twistedPontryagin(hib.number_of_variables);
 			for (auto it = twistedChern.begin(); it != twistedChern.end(); ++it)
 				twistedPontryagin.insert(it.exponent() + it.exponent(), it.coeff());
@@ -32,8 +35,9 @@ void write_pontryagin_C2_in_terms_of_Chern_classes(int n)
 		}
 }
 
-///User facing interface
-void show_and_tell() {
+/// @brief User facing interface for computing relations/writing Pontryagin/symplectic in terms of Chern.
+void show_and_tell()
+{
 
 	std::cout << "Consider the polynomial ring (over Z) with variables x_1,...,x_n,y_1,...,y_n and relations y_i^2=y_i \n";
 	std::cout << "The symmetric group Sigma_n acts on this ring by separately permuting the x_i,y_i separately\n";
@@ -44,72 +48,91 @@ void show_and_tell() {
 	std::cout << "Over the rationals, we can actually explicitly generate all a_j from a_1, but in the interest of speed/numerical stability, this computation uses all a_j\n\n";
 	std::cout << "We can similarly define the twisted Pontryagin/symplectic classes k_{s,j} as the sum of all elements in the Sigma_n-orbit of x_1^2....x_s^2y_{s+1}....y_{s+j}\n\n";
 
-
 	std::cout << "This demo program can compute the relations between the twisted Chern classes or write the twisted Pontryagin/symplectic classes in terms of the twisted Chern classes\n";
 	std::cout << "Enter 0 if you want the former and 1 if you want the latter. Enter any other number to exit the program.\n";
 	std::cout << "Waiting for user input: \n";
 	int opt;
 	std::cin >> opt;
-	if (opt == 0) {
+	if (opt == 0)
+	{
 		std::cout << "\nThe twisted Chern classes satisfy relations c_{s,i}*c_{t,j}=c_{t,0}c_{s,min(i+j,n-s)}+... when s<=t<=s+i and i,j>0.\n";
 		std::cout << "As we can obtain the a_j from just the a_1, we only really need to compute the relations when s,t>0 or s==0, i==t.\n\n";
-		while (true) {
-			std::cout << "Enter the number n>=2 of variables x_1,..., x_n,y_1,...,y_n and these relations for the given n will be printed" << "\n";
-			std::cout << "To exit the program enter any n<=1" << "\n";
+		while (true)
+		{
+			std::cout << "Enter the number n>=2 of variables x_1,..., x_n,y_1,...,y_n and these relations for the given n will be printed"
+					  << "\n";
+			std::cout << "To exit the program enter any n<=1"
+					  << "\n";
 			std::cout << "Waiting for user input:\n";
 			int n;
 			std::cin >> n;
-			if (n <=1) {
+			if (n <= 1)
+			{
 				std::cout << "Program exited by user request. \n";
 				return;
 			}
-			else {
-				std::cout << "The relations for n= " << n << " follow:" << "\n";
+			else
+			{
+				std::cout << "The relations for n= " << n << " follow:"
+						  << "\n";
 				print_half_idempotent_relations(n, 1);
 				std::cout << "\n\n";
 			}
 		}
 	}
-	if (opt == 1) {
-		while (true) {
-			std::cout << "\nEnter the number n>=2 of variables x_1,..., x_n,y_1,...,y_n and the twisted Pontryagin classes k_{s,j} for s+j<=n will be written in terms of the c_{s,j}" << "\n";
-			std::cout << "To exit the program enter any n<=1" << "\n";
+	if (opt == 1)
+	{
+		while (true)
+		{
+			std::cout << "\nEnter the number n>=2 of variables x_1,..., x_n,y_1,...,y_n and the twisted Pontryagin classes k_{s,j} for s+j<=n will be written in terms of the c_{s,j}"
+					  << "\n";
+			std::cout << "To exit the program enter any n<=1"
+					  << "\n";
 			std::cout << "Waiting for user input:\n";
 			int n;
 			std::cin >> n;
-			if (n <= 1) {
+			if (n <= 1)
+			{
 				std::cout << "Program exited by user request. \n";
 				return;
 			}
-			else {
-				std::cout << "The twisted Pontryagin/symplectic classes k_{s,j} in terms of the twisted Chern classes c_{s,j} for s+j<=" << n << " follow:" << "\n";
+			else
+			{
+				std::cout << "The twisted Pontryagin/symplectic classes k_{s,j} in terms of the twisted Chern classes c_{s,j} for s+j<=" << n << " follow:"
+						  << "\n";
 				write_pontryagin_C2_in_terms_of_Chern_classes<>(n);
 				std::cout << "\n\n";
 			}
 		}
 	}
-	else {
+	else
+	{
 		std::cout << "Program exited by user request. \n";
 		return;
 	}
-
 }
 
-///Optimized speedtest (no console output). For benchmarking
-template<typename scl_t, typename exp_value_t, typename deg_t>
-void speed_test() {
-	constexpr int varcount = 10;
+/// @brief				Optimized speedtest (no console output). For benchmarking and regression testing
+///	@tparam scl_t		The type of scalars eg int
+///	@tparam exp_val_t	The value type of the exponent vectors
+///	@tparam deg_t		The type of the degree of the monomials
+template <typename scl_t, typename exp_val_t, typename deg_t>
+void speed_test()
+{
+	constexpr int varcount = 9;
 	std::chrono::time_point<std::chrono::high_resolution_clock> start, end;
 	start = std::chrono::high_resolution_clock::now();
-	print_half_idempotent_relations<Half_Idempotent_Basis<default_container<scl_t, Half_Idempotent_Variables<exp_value_t, deg_t, 2 * varcount>, 0>, default_container<scl_t, Twisted_Chern_Variables<exp_value_t, deg_t>, 0>>>(varcount);
+	print_half_idempotent_relations<Half_Idempotent_Basis<default_container<scl_t, Half_Idempotent_Variables<exp_val_t, deg_t, 2 * varcount>, 0>, default_container<scl_t, Twisted_Chern_Variables<exp_val_t, deg_t>, 0>>>(varcount);
 	end = std::chrono::high_resolution_clock::now();
-	std::cout << varcount << " many variables took: " << std::chrono::duration_cast<std::chrono::seconds>(end - start).count() << "seconds" << "\n";
+	std::cout << varcount << " many variables took: " << std::chrono::duration_cast<std::chrono::seconds>(end - start).count() << "seconds"
+			  << "\n";
 }
 
-///Main
-int main() {
+///@brief	Main
+int main()
+{
 	using namespace Symmetric_Polynomials;
-		
+
 	show_and_tell();
 	//speed_test<int64_t,uint8_t,uint16_t>();
 
@@ -144,5 +167,4 @@ int main() {
 	//print_half_idempotent_relations<>(3,1,1);
 	//write_pontryagin_C2_in_terms_of_Chern_classes(5);
 	return 0;
-
 }

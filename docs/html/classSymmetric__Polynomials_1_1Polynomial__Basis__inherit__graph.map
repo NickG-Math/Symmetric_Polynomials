@@ -1,7 +1,7 @@
-<map id="Symmetric_Polynomials::Polynomial_Basis&lt; specialization, container_1_t, container_2_t &gt;" name="Symmetric_Polynomials::Polynomial_Basis&lt; specialization, container_1_t, container_2_t &gt;">
-<area shape="rect" id="node1" title="Factory class that provides the general interface of a generating basis for a subring of a polynomial..." alt="" coords="5,137,260,193"/>
-<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html" title="Class for half&#45;idempotent symmetric polynomials, allowing transformation from &#160;variables to &#160;variable..." alt="" coords="567,5,775,105"/>
-<area shape="rect" id="node3" href="$classSymmetric__Polynomials_1_1Polynomial__Basis.html" title=" " alt="" coords="543,129,799,200"/>
-<area shape="rect" id="node5" href="$classSymmetric__Polynomials_1_1Polynomial__Basis.html" title=" " alt="" coords="543,225,799,310"/>
-<area shape="rect" id="node4" href="$classSymmetric__Polynomials_1_1Symmetric__Basis.html" title="Class for symmetric polynomials with no relations, allowing transformation from &#160;variables to &#160;variab..." alt="" coords="848,137,1061,193"/>
+<map id="Symmetric_Polynomials::Polynomial_Basis&lt; spec_t, container_1_t, container_2_t &gt;" name="Symmetric_Polynomials::Polynomial_Basis&lt; spec_t, container_1_t, container_2_t &gt;">
+<area shape="rect" id="node1" title="Factory class that provides the general interface of a generating basis for a subring of a polynomial..." alt="" coords="5,137,247,193"/>
+<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html" title="Class for half&#45;idempotent symmetric polynomials, allowing transformation from &#160;variables to &#160;variable..." alt="" coords="553,5,761,105"/>
+<area shape="rect" id="node3" href="$classSymmetric__Polynomials_1_1Polynomial__Basis.html" title=" " alt="" coords="529,129,785,200"/>
+<area shape="rect" id="node5" href="$classSymmetric__Polynomials_1_1Polynomial__Basis.html" title=" " alt="" coords="529,225,785,310"/>
+<area shape="rect" id="node4" href="$classSymmetric__Polynomials_1_1Symmetric__Basis.html" title="Class for symmetric polynomials with no relations, allowing transformation from &#160;variables to &#160;variab..." alt="" coords="835,137,1048,193"/>
 </map>

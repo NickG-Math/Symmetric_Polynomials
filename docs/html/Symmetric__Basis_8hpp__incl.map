@@ -1,11 +1,11 @@
-<map id="source/Symmetric_Basis.hpp" name="source/Symmetric_Basis.hpp">
-<area shape="rect" id="node1" title="Contains methods for writing symmetric polynomials (with no relations) in terms of the elementary sym..." alt="" coords="416,5,627,32"/>
+<map id="Symmetric_Basis.hpp" name="Symmetric_Basis.hpp">
+<area shape="rect" id="node1" title="Contains the methods and classes for generatic symmetric polynomials." alt="" coords="440,5,603,32"/>
 <area shape="rect" id="node2" href="$Polynomials_8hpp.html" title="Contains the class of polynomials in multiple variables." alt="" coords="243,80,373,107"/>
-<area shape="rect" id="node14" href="$Generators_8hpp.html" title="Contains classes for generating permutations, combinations and factory for such classes." alt="" coords="460,80,583,107"/>
+<area shape="rect" id="node14" href="$Generators_8hpp.html" title="Contains classes for generating permutations, combinations and a factory for such classes." alt="" coords="460,80,583,107"/>
 <area shape="rect" id="node17" title=" " alt="" coords="607,80,799,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,155,56,181"/>
 <area shape="rect" id="node4" title=" " alt="" coords="81,155,205,181"/>
-<area shape="rect" id="node5" href="$General_8hpp.html" title="Contains general operations on vectors: hashing, adding." alt="" coords="412,155,513,181"/>
+<area shape="rect" id="node5" href="$General_8hpp.html" title="Contains general operations on vectors: hashing, computing degrees." alt="" coords="412,155,513,181"/>
 <area shape="rect" id="node13" title=" " alt="" coords="229,155,387,181"/>
 <area shape="rect" id="node6" title=" " alt="" coords="161,229,241,256"/>
 <area shape="rect" id="node7" title=" " alt="" coords="266,229,329,256"/>

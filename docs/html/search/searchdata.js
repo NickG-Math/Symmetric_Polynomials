@@ -4,11 +4,12 @@ var indexSectionsWithContent =
   1: "acdefhpst",
   2: "s",
   3: "dghps",
-  4: "abcdefghimnoprsw",
+  4: "abcdeghimnoprsw",
   5: "_cgn",
   6: "cdehsx",
   7: "cfp",
-  8: "ght"
+  8: "ps",
+  9: "ght"
 };
 
 var indexSectionNames =
@@ -21,7 +22,8 @@ var indexSectionNames =
   5: "variables",
   6: "typedefs",
   7: "related",
-  8: "pages"
+  8: "defines",
+  9: "pages"
 };
 
 var indexSectionLabels =
@@ -34,6 +36,7 @@ var indexSectionLabels =
   5: "Variables",
   6: "Typedefs",
   7: "Friends",
-  8: "Pages"
+  8: "Macros",
+  9: "Pages"
 };
 

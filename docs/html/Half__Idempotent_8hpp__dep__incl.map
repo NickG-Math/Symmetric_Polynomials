@@ -1,4 +1,4 @@
-<map id="source/Half_Idempotent.hpp" name="source/Half_Idempotent.hpp">
-<area shape="rect" id="node1" title="Contains the methods and classes for solving the following problem: If $$R=\mathbb Z[x_1,..." alt="" coords="5,5,212,32"/>
-<area shape="rect" id="node2" href="$Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="41,80,176,107"/>
+<map id="Half_Idempotent.hpp" name="Half_Idempotent.hpp">
+<area shape="rect" id="node1" title="Contains the methods and classes for symmetric polynomials with half idempotent variables." alt="" coords="5,5,164,32"/>
+<area shape="rect" id="node2" href="$Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="41,80,129,107"/>
 </map>

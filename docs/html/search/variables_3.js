@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['number_5fof_5fvariables_163',['number_of_variables',['../classSymmetric__Polynomials_1_1Polynomial__Basis.html#a464c6f8663253d54b5f485053074bf64',1,'Symmetric_Polynomials::Polynomial_Basis']]]
+  ['number_5fof_5fvariables_165',['number_of_variables',['../classSymmetric__Polynomials_1_1Polynomial__Basis.html#a2711b95d665f3392886ed96171f6c88a',1,'Symmetric_Polynomials::Polynomial_Basis']]]
 ];

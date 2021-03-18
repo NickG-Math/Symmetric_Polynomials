@@ -1,8 +1,8 @@
-\hypertarget{Symmetric__Basis_8hpp}{}\doxysubsection{source/\+Symmetric\+\_\+\+Basis.hpp File Reference}
-\label{Symmetric__Basis_8hpp}\index{source/Symmetric\_Basis.hpp@{source/Symmetric\_Basis.hpp}}
+\hypertarget{Symmetric__Basis_8hpp}{}\doxysubsection{Symmetric\+\_\+\+Basis.\+hpp File Reference}
+\label{Symmetric__Basis_8hpp}\index{Symmetric\_Basis.hpp@{Symmetric\_Basis.hpp}}
 
 
-Contains methods for writing symmetric polynomials (with no relations) in terms of the elementary symmetric ones. Also contains a factory class that generalizes the interface to any subring of a polynomial ring.  
+Contains the methods and classes for generatic symmetric polynomials.  
 
 
 {\ttfamily \#include \char`\"{}Polynomials.\+hpp\char`\"{}}\newline
@@ -19,7 +19,7 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=238pt]{Symmetric__Basis_8hpp__dep__incl}
+\includegraphics[width=202pt]{Symmetric__Basis_8hpp__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Classes}
@@ -29,8 +29,8 @@ struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Sym
 \begin{DoxyCompactList}\small\item\em The standard variables $x_i$ in a polynomial, with $|x_i|=1$ and no relations. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1Elementary__Symmetric__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Elementary\+\_\+\+Symmetric\+\_\+\+Variables$<$ T, \+\_\+deg $>$}}
 \begin{DoxyCompactList}\small\item\em Variables $e_1,...,e_n$ denoting the elementary symmetric polynomials $e_i=\sigma_i$ of degrees $|e_i|=i$. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial\+\_\+\+Basis$<$ specialization, container\+\_\+1\+\_\+t, container\+\_\+2\+\_\+t $>$}}
-\begin{DoxyCompactList}\small\item\em Factory class that provides the general interface of a generating basis for a subring of a polynomial ring. Example implementations are \mbox{\hyperlink{classSymmetric__Polynomials_1_1Symmetric__Basis}{Symmetric\+\_\+\+Basis}} and \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Half\+\_\+\+Idempotent\+\_\+\+Basis}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial\+\_\+\+Basis$<$ spec\+\_\+t, container\+\_\+1\+\_\+t, container\+\_\+2\+\_\+t $>$}}
+\begin{DoxyCompactList}\small\item\em Factory class that provides the general interface of a generating basis for a subring of a polynomial ring. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Symmetric__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Symmetric\+\_\+\+Basis$<$ x\+\_\+container\+\_\+t, e\+\_\+container\+\_\+t $>$}}
 \begin{DoxyCompactList}\small\item\em Class for symmetric polynomials with no relations, allowing transformation from $x_i$ variables to $e_i$ variables and vice-\/versa. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Namespaces}
@@ -41,10 +41,11 @@ class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Symmetric__Basis}{Symmetri
 \doxysubsubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename scl\+\_\+t , typename exp\+\_\+value\+\_\+t  = int64\+\_\+t, typename deg\+\_\+t  = int64\+\_\+t, bool ordered = 1$>$ }\\using \mbox{\hyperlink{namespaceSymmetric__Polynomials_a52e2cbc21c3608e6e400e57f8667bf20}{Symmetric\+\_\+\+Polynomials\+::\+Symmetric\+\_\+\+Basis\+\_\+\+Default}} = Symmetric\+\_\+\+Basis$<$ default\+\_\+container$<$ scl\+\_\+t, Standard\+\_\+\+Variables$<$ exp\+\_\+value\+\_\+t, deg\+\_\+t $>$, ordered $>$, default\+\_\+container$<$ scl\+\_\+t, Elementary\+\_\+\+Symmetric\+\_\+\+Variables$<$ exp\+\_\+value\+\_\+t, deg\+\_\+t $>$, ordered $>$ $>$
-\end{DoxyCompactItemize}
+{\footnotesize template$<$typename scl\+\_\+t , typename exp\+\_\+val\+\_\+t  = int64\+\_\+t, typename deg\+\_\+t  = int64\+\_\+t, bool ordered = 1$>$ }\\using \mbox{\hyperlink{namespaceSymmetric__Polynomials_aa3a24813b2b81133d1969920e2b64b0e}{Symmetric\+\_\+\+Polynomials\+::\+Symmetric\+\_\+\+Basis\+\_\+\+Default}} = Symmetric\+\_\+\+Basis$<$ default\+\_\+container$<$ scl\+\_\+t, Standard\+\_\+\+Variables$<$ exp\+\_\+val\+\_\+t, deg\+\_\+t $>$, ordered $>$, default\+\_\+container$<$ scl\+\_\+t, Elementary\+\_\+\+Symmetric\+\_\+\+Variables$<$ exp\+\_\+val\+\_\+t, deg\+\_\+t $>$, ordered $>$ $>$
+\begin{DoxyCompactList}\small\item\em Aliases \mbox{\hyperlink{classSymmetric__Polynomials_1_1Symmetric__Basis}{Symmetric\+\_\+\+Basis}} for certain default template parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsubsection{Detailed Description}
-Contains methods for writing symmetric polynomials (with no relations) in terms of the elementary symmetric ones. Also contains a factory class that generalizes the interface to any subring of a polynomial ring. 
+Contains the methods and classes for generatic symmetric polynomials. 
 
+The goal is to write any symmetric polynomial with no relations in terms of elementary symmetric polynomials The general interface for doing this can be generalized to polynomial rings with relations 

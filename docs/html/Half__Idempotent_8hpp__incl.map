@@ -1,13 +1,13 @@
-<map id="source/Half_Idempotent.hpp" name="source/Half_Idempotent.hpp">
-<area shape="rect" id="node1" title="Contains the methods and classes for solving the following problem: If $$R=\mathbb Z[x_1,..." alt="" coords="518,5,725,32"/>
-<area shape="rect" id="node2" href="$Symmetric__Basis_8hpp.html" title="Contains methods for writing symmetric polynomials (with no relations) in terms of the elementary sym..." alt="" coords="440,80,603,107"/>
+<map id="Half_Idempotent.hpp" name="Half_Idempotent.hpp">
+<area shape="rect" id="node1" title="Contains the methods and classes for symmetric polynomials with half idempotent variables." alt="" coords="542,5,701,32"/>
+<area shape="rect" id="node2" href="$Symmetric__Basis_8hpp.html" title="Contains the methods and classes for generatic symmetric polynomials." alt="" coords="440,80,603,107"/>
 <area shape="rect" id="node19" title=" " alt="" coords="627,80,815,107"/>
 <area shape="rect" id="node3" href="$Polynomials_8hpp.html" title="Contains the class of polynomials in multiple variables." alt="" coords="243,155,373,181"/>
-<area shape="rect" id="node15" href="$Generators_8hpp.html" title="Contains classes for generating permutations, combinations and factory for such classes." alt="" coords="460,155,583,181"/>
+<area shape="rect" id="node15" href="$Generators_8hpp.html" title="Contains classes for generating permutations, combinations and a factory for such classes." alt="" coords="460,155,583,181"/>
 <area shape="rect" id="node18" title=" " alt="" coords="607,155,799,181"/>
 <area shape="rect" id="node4" title=" " alt="" coords="5,229,56,256"/>
 <area shape="rect" id="node5" title=" " alt="" coords="81,229,205,256"/>
-<area shape="rect" id="node6" href="$General_8hpp.html" title="Contains general operations on vectors: hashing, adding." alt="" coords="412,229,513,256"/>
+<area shape="rect" id="node6" href="$General_8hpp.html" title="Contains general operations on vectors: hashing, computing degrees." alt="" coords="412,229,513,256"/>
 <area shape="rect" id="node14" title=" " alt="" coords="229,229,387,256"/>
 <area shape="rect" id="node7" title=" " alt="" coords="161,304,241,331"/>
 <area shape="rect" id="node8" title=" " alt="" coords="266,304,329,331"/>

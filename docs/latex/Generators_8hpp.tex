@@ -1,8 +1,8 @@
-\hypertarget{Generators_8hpp}{}\doxysubsection{source/\+Generators.hpp File Reference}
-\label{Generators_8hpp}\index{source/Generators.hpp@{source/Generators.hpp}}
+\hypertarget{Generators_8hpp}{}\doxysubsection{Generators.\+hpp File Reference}
+\label{Generators_8hpp}\index{Generators.hpp@{Generators.hpp}}
 
 
-Contains classes for generating permutations, combinations and factory for such classes.  
+Contains classes for generating permutations, combinations and a factory for such classes.  
 
 
 {\ttfamily \#include $<$algorithm$>$}\newline
@@ -19,22 +19,22 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=238pt]{Generators_8hpp__dep__incl}
+\includegraphics[width=202pt]{Generators_8hpp__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Factory__Generator}{Symmetric\+\_\+\+Polynomials\+::\+Factory\+\_\+\+Generator$<$ specialization, gen\+\_\+t $>$}}
-\begin{DoxyCompactList}\small\item\em Prototype for classes providing iterators that generate elements such as interpolating vectors, permutations, combinations and so on. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Factory__Generator}{Symmetric\+\_\+\+Polynomials\+::\+Factory\+\_\+\+Generator$<$ spec\+\_\+t, gen\+\_\+t $>$}}
+\begin{DoxyCompactList}\small\item\em Prototype for coroutine-\/like iterators that generate elements such as interpolating vectors, permutations, combinations... \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Permutation__Generator}{Symmetric\+\_\+\+Polynomials\+::\+Permutation\+\_\+\+Generator$<$ T $>$}}
 \begin{DoxyCompactList}\small\item\em Generates all permutations on a number of letters. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Permutation__Generator_1_1const__iterator}{Symmetric\+\_\+\+Polynomials\+::\+Permutation\+\_\+\+Generator$<$ T $>$\+::const\+\_\+iterator}}
-\begin{DoxyCompactList}\small\item\em Constant iterator that is used in a ranged for loop to generate the permutations. Non constant version is illegal. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Constant iterator that is used in a ranged for loop to generate the permutations. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Combination__Generator}{Symmetric\+\_\+\+Polynomials\+::\+Combination\+\_\+\+Generator$<$ T $>$}}
 \begin{DoxyCompactList}\small\item\em Generates all combinations on a number of letters making a number of choices. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Combination__Generator_1_1const__iterator}{Symmetric\+\_\+\+Polynomials\+::\+Combination\+\_\+\+Generator$<$ T $>$\+::const\+\_\+iterator}}
-\begin{DoxyCompactList}\small\item\em Constant iterator that is used in a ranged for loop to generate the combinations. Non constant version is illegal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Constant iterator that is used in a ranged for loop to generate the combinations. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -44,12 +44,11 @@ class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Combination__Generator_1_1
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_a9fbacd7a31bb040f9609e6bdc5cbc541}{Symmetric\+\_\+\+Polynomials\+::all\+\_\+permutations}} (T n)
-\begin{DoxyCompactList}\small\item\em Returns vector of all permutations on n letters. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Returns vector of all permutations on {\ttfamily n} letters. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{namespaceSymmetric__Polynomials_aff3ebeea4f1bcee426cd01c41917f3aa}{Symmetric\+\_\+\+Polynomials\+::all\+\_\+combinations}} (T n, T m)
-\begin{DoxyCompactList}\small\item\em Returns vector of all combinations on n letters choosing m many ~\newline
- \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns vector of all combinations on {\ttfamily n} letters choosing {\ttfamily m} many. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsubsection{Detailed Description}
-Contains classes for generating permutations, combinations and factory for such classes. 
+Contains classes for generating permutations, combinations and a factory for such classes. 
 

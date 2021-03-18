@@ -1,8 +1,8 @@
-\hypertarget{General_8hpp}{}\doxysubsection{source/\+General.hpp File Reference}
-\label{General_8hpp}\index{source/General.hpp@{source/General.hpp}}
+\hypertarget{General_8hpp}{}\doxysubsection{General.\+hpp File Reference}
+\label{General_8hpp}\index{General.hpp@{General.hpp}}
 
 
-Contains general operations on vectors\+: hashing, adding.  
+Contains general operations on vectors\+: hashing, computing degrees.  
 
 
 {\ttfamily \#include $<$iostream$>$}\newline
@@ -23,7 +23,7 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{General_8hpp__dep__incl}
+\includegraphics[width=288pt]{General_8hpp__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Namespaces}
@@ -35,11 +35,11 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$typename T , typename hasher  = boost\+\_\+hash$>$ }\\size\+\_\+t \mbox{\hyperlink{namespaceSymmetric__Polynomials_a144142657f3a44c85c04a63864d4d006}{Symmetric\+\_\+\+Polynomials\+::generic\+\_\+hasher}} (const T \&v)
-\begin{DoxyCompactList}\small\item\em Hash algorithm using golden ratio (idea from boost) \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename R , typename T , typename S $>$ }\\R \mbox{\hyperlink{namespaceSymmetric__Polynomials_a3bed593f8db7be7d105332a08910dc9d}{Symmetric\+\_\+\+Polynomials\+::general\+\_\+compute\+\_\+degree}} (const T \&exponent, const S \&dimensions)
+\begin{DoxyCompactList}\small\item\em A generic hashing function that calls other hashing functions. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename R , typename T , typename S $>$ }\\R \mbox{\hyperlink{namespaceSymmetric__Polynomials_a72024f84f84636ed15ba5795c2a102eb}{Symmetric\+\_\+\+Polynomials\+::general\+\_\+compute\+\_\+degree}} (const T \&exp, const S \&dim)
 \begin{DoxyCompactList}\small\item\em Degree computation given exponent and dimensions (grading). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsubsection{Detailed Description}
-Contains general operations on vectors\+: hashing, adding. 
+Contains general operations on vectors\+: hashing, computing degrees. 
 

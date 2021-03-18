@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Symmetric Polynomials: Symmetric_Polynomials::Factory_Generator&lt; specialization, gen_t &gt; Class Template Reference</title>
+<title>Symmetric Polynomials: Symmetric_Polynomials::Factory_Generator&lt; spec_t, gen_t &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -93,120 +93,87 @@ $(document).ready(function(){initNavTree('classSymmetric__Polynomials_1_1Factory
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classSymmetric__Polynomials_1_1Factory__Generator-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Symmetric_Polynomials::Factory_Generator&lt; specialization, gen_t &gt; Class Template Reference</div>  </div>
+<div class="title">Symmetric_Polynomials::Factory_Generator&lt; spec_t, gen_t &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Prototype for classes providing iterators that generate elements such as interpolating vectors, permutations, combinations and so on.  
+<p>Prototype for coroutine-like iterators that generate elements such as interpolating vectors, permutations, combinations...  
  <a href="classSymmetric__Polynomials_1_1Factory__Generator.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Generators_8hpp_source.html">Generators.hpp</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Symmetric_Polynomials::Factory_Generator&lt; specialization, gen_t &gt;:</div>
+Inheritance diagram for Symmetric_Polynomials::Factory_Generator&lt; spec_t, gen_t &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="classSymmetric__Polynomials_1_1Factory__Generator__inherit__graph.png" border="0" usemap="#Symmetric__Polynomials_1_1Factory__Generator_3_01specialization_00_01gen__t_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="Symmetric__Polynomials_1_1Factory__Generator_3_01specialization_00_01gen__t_01_4_inherit__map" id="Symmetric__Polynomials_1_1Factory__Generator_3_01specialization_00_01gen__t_01_4_inherit__map">
-<area shape="rect" title="Prototype for classes providing iterators that generate elements such as interpolating vectors,..." alt="" coords="5,129,185,185"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1Permutation__Generator_1_1const__iterator.html" title="Constant iterator that is used in a ranged for loop to generate the permutations. Non constant versio..." alt="" coords="408,5,605,91"/>
+<div class="center"><img src="classSymmetric__Polynomials_1_1Factory__Generator__inherit__graph.png" border="0" usemap="#Symmetric__Polynomials_1_1Factory__Generator_3_01spec__t_00_01gen__t_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="Symmetric__Polynomials_1_1Factory__Generator_3_01spec__t_00_01gen__t_01_4_inherit__map" id="Symmetric__Polynomials_1_1Factory__Generator_3_01spec__t_00_01gen__t_01_4_inherit__map">
+<area shape="rect" title="Prototype for coroutine&#45;like iterators that generate elements such as interpolating vectors,..." alt="" coords="5,129,185,185"/>
+<area shape="rect" href="classSymmetric__Polynomials_1_1Permutation__Generator_1_1const__iterator.html" title="Constant iterator that is used in a ranged for loop to generate the permutations." alt="" coords="408,5,605,91"/>
 <area shape="rect" href="classSymmetric__Polynomials_1_1Factory__Generator.html" title=" " alt="" coords="416,115,597,200"/>
 <area shape="rect" href="classSymmetric__Polynomials_1_1Factory__Generator.html" title=" " alt="" coords="417,224,597,309"/>
-<area shape="rect" href="classSymmetric__Polynomials_1_1Combination__Generator_1_1const__iterator.html" title="Constant iterator that is used in a ranged for loop to generate the combinations. Non constant versio..." alt="" coords="655,129,840,185"/>
+<area shape="rect" href="classSymmetric__Polynomials_1_1Combination__Generator_1_1const__iterator.html" title="Constant iterator that is used in a ranged for loop to generate the combinations." alt="" coords="655,129,840,185"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af7099c18230b93eaf1927941a8075bd9"><td class="memItemLeft" align="right" valign="top">const gen_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html#af7099c18230b93eaf1927941a8075bd9">operator*</a> () const</td></tr>
-<tr class="memdesc:af7099c18230b93eaf1927941a8075bd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the generated element.  <a href="classSymmetric__Polynomials_1_1Factory__Generator.html#af7099c18230b93eaf1927941a8075bd9">More...</a><br /></td></tr>
-<tr class="separator:af7099c18230b93eaf1927941a8075bd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace95ec35b3933df2dcf3e763322f477e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html#ace95ec35b3933df2dcf3e763322f477e">operator!=</a> (const <a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html">Factory_Generator</a> &amp;other) const</td></tr>
-<tr class="memdesc:ace95ec35b3933df2dcf3e763322f477e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equality of iterators.  <a href="classSymmetric__Polynomials_1_1Factory__Generator.html#ace95ec35b3933df2dcf3e763322f477e">More...</a><br /></td></tr>
-<tr class="separator:ace95ec35b3933df2dcf3e763322f477e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12ebc1a5c6212d5c284557ee4ef5e97e"><td class="memItemLeft" align="right" valign="top">specialization &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html#a12ebc1a5c6212d5c284557ee4ef5e97e">operator++</a> ()</td></tr>
-<tr class="memdesc:a12ebc1a5c6212d5c284557ee4ef5e97e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates next element.  <a href="classSymmetric__Polynomials_1_1Factory__Generator.html#a12ebc1a5c6212d5c284557ee4ef5e97e">More...</a><br /></td></tr>
-<tr class="separator:a12ebc1a5c6212d5c284557ee4ef5e97e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac23d14e0e2e6d29d8b33266a9af68e7f"><td class="memItemLeft" align="right" valign="top">const gen_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html#ac23d14e0e2e6d29d8b33266a9af68e7f">operator*</a> () const</td></tr>
+<tr class="memdesc:ac23d14e0e2e6d29d8b33266a9af68e7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the generated element.  <a href="classSymmetric__Polynomials_1_1Factory__Generator.html#ac23d14e0e2e6d29d8b33266a9af68e7f">More...</a><br /></td></tr>
+<tr class="separator:ac23d14e0e2e6d29d8b33266a9af68e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f080d6c05163902d79c0beb952ada21"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html#a6f080d6c05163902d79c0beb952ada21">operator!=</a> (const <a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html">Factory_Generator</a> &amp;other) const</td></tr>
+<tr class="memdesc:a6f080d6c05163902d79c0beb952ada21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inequality of iterators (used to detect if generation has been completed)  <a href="classSymmetric__Polynomials_1_1Factory__Generator.html#a6f080d6c05163902d79c0beb952ada21">More...</a><br /></td></tr>
+<tr class="separator:a6f080d6c05163902d79c0beb952ada21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb84f4ab315cd2921702b360c665f79f"><td class="memItemLeft" align="right" valign="top">spec_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html#afb84f4ab315cd2921702b360c665f79f">operator++</a> ()</td></tr>
+<tr class="memdesc:afb84f4ab315cd2921702b360c665f79f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates next element.  <a href="classSymmetric__Polynomials_1_1Factory__Generator.html#afb84f4ab315cd2921702b360c665f79f">More...</a><br /></td></tr>
+<tr class="separator:afb84f4ab315cd2921702b360c665f79f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a4c5bb7b8ec49b21e6aa3ec09e4d435e7"><td class="memItemLeft" align="right" valign="top">static specialization&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html#a4c5bb7b8ec49b21e6aa3ec09e4d435e7">end</a> ()</td></tr>
-<tr class="memdesc:a4c5bb7b8ec49b21e6aa3ec09e4d435e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminal iterator.  <a href="classSymmetric__Polynomials_1_1Factory__Generator.html#a4c5bb7b8ec49b21e6aa3ec09e4d435e7">More...</a><br /></td></tr>
-<tr class="separator:a4c5bb7b8ec49b21e6aa3ec09e4d435e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a8eaff43f34d0fd74c8d38347481a9db9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html#a8eaff43f34d0fd74c8d38347481a9db9">Factory_Generator</a> ()=default</td></tr>
-<tr class="memdesc:a8eaff43f34d0fd74c8d38347481a9db9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="classSymmetric__Polynomials_1_1Factory__Generator.html#a8eaff43f34d0fd74c8d38347481a9db9">More...</a><br /></td></tr>
-<tr class="separator:a8eaff43f34d0fd74c8d38347481a9db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a703e81ab4d6c144c8b926b4c0121ea3e"><td class="memItemLeft" align="right" valign="top">static spec_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html#a703e81ab4d6c144c8b926b4c0121ea3e">end</a> ()</td></tr>
+<tr class="memdesc:a703e81ab4d6c144c8b926b4c0121ea3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminal iterator.  <a href="classSymmetric__Polynomials_1_1Factory__Generator.html#a703e81ab4d6c144c8b926b4c0121ea3e">More...</a><br /></td></tr>
+<tr class="separator:a703e81ab4d6c144c8b926b4c0121ea3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:afca6876d2981feaafd857ace96759f8d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html#afca6876d2981feaafd857ace96759f8d">completed</a></td></tr>
-<tr class="memdesc:afca6876d2981feaafd857ace96759f8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">1 if the iterator is <a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html#a4c5bb7b8ec49b21e6aa3ec09e4d435e7" title="Terminal iterator.">end()</a> i.e. if all elements have been generated  <a href="classSymmetric__Polynomials_1_1Factory__Generator.html#afca6876d2981feaafd857ace96759f8d">More...</a><br /></td></tr>
-<tr class="separator:afca6876d2981feaafd857ace96759f8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c7fd18834f4fe1424a3f6bdef4c406c"><td class="memItemLeft" align="right" valign="top">gen_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html#a5c7fd18834f4fe1424a3f6bdef4c406c">generated</a></td></tr>
-<tr class="memdesc:a5c7fd18834f4fe1424a3f6bdef4c406c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The currently generated element.  <a href="classSymmetric__Polynomials_1_1Factory__Generator.html#a5c7fd18834f4fe1424a3f6bdef4c406c">More...</a><br /></td></tr>
-<tr class="separator:a5c7fd18834f4fe1424a3f6bdef4c406c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a718d2c8bc539873fe356701ca9def01c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html#a718d2c8bc539873fe356701ca9def01c">completed</a></td></tr>
+<tr class="memdesc:a718d2c8bc539873fe356701ca9def01c"><td class="mdescLeft">&#160;</td><td class="mdescRight">1 if the iterator is <a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html#a703e81ab4d6c144c8b926b4c0121ea3e" title="Terminal iterator.">end()</a> i.e. if all elements have been generated  <a href="classSymmetric__Polynomials_1_1Factory__Generator.html#a718d2c8bc539873fe356701ca9def01c">More...</a><br /></td></tr>
+<tr class="separator:a718d2c8bc539873fe356701ca9def01c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28c05b056305bcd6ac3d91cd689f8c5a"><td class="memItemLeft" align="right" valign="top">gen_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html#a28c05b056305bcd6ac3d91cd689f8c5a">generated</a></td></tr>
+<tr class="memdesc:a28c05b056305bcd6ac3d91cd689f8c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The currently generated element.  <a href="classSymmetric__Polynomials_1_1Factory__Generator.html#a28c05b056305bcd6ac3d91cd689f8c5a">More...</a><br /></td></tr>
+<tr class="separator:a28c05b056305bcd6ac3d91cd689f8c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename specialization, typename gen_t&gt;<br />
-class Symmetric_Polynomials::Factory_Generator&lt; specialization, gen_t &gt;</h3>
+<div class="textblock"><h3>template&lt;typename spec_t, typename gen_t&gt;<br />
+class Symmetric_Polynomials::Factory_Generator&lt; spec_t, gen_t &gt;</h3>
 
-<p>Prototype for classes providing iterators that generate elements such as interpolating vectors, permutations, combinations and so on. </p>
-<p>Inherit from this class and define a method update() to get a const iterator. You will also need begin() and <a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html#a4c5bb7b8ec49b21e6aa3ec09e4d435e7" title="Terminal iterator.">end()</a> methods constructing such iterators; <a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html#a4c5bb7b8ec49b21e6aa3ec09e4d435e7" title="Terminal iterator.">end()</a> should always be defined by calling the factory <a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html#a4c5bb7b8ec49b21e6aa3ec09e4d435e7" title="Terminal iterator.">end()</a>. Warning: Probably not thread-safe (depends on child's update() method). </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+<p>Prototype for coroutine-like iterators that generate elements such as interpolating vectors, permutations, combinations... </p>
+<p>Inherit from this class and define a method update() to get a const iterator. <br  />
+ You will also need begin() and <a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html#a703e81ab4d6c144c8b926b4c0121ea3e" title="Terminal iterator.">end()</a> methods constructing such iterators; <a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html#a703e81ab4d6c144c8b926b4c0121ea3e" title="Terminal iterator.">end()</a> should always be defined by calling the factory <a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html#a703e81ab4d6c144c8b926b4c0121ea3e" title="Terminal iterator.">end()</a>.<br  />
+ Example implementations: <code><a class="el" href="classSymmetric__Polynomials_1_1Combination__Generator.html" title="Generates all combinations on a number of letters making a number of choices.">Combination_Generator</a></code> and <code><a class="el" href="classSymmetric__Polynomials_1_1Permutation__Generator.html" title="Generates all permutations on a number of letters.">Permutation_Generator</a></code> </p><dl class="section attention"><dt>Attention</dt><dd>Probably not thread-safe (depends on child's update() method). </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Implement as coroutine (C++20) </dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">specialization</td><td>Used for compile-time polymorphism (CRTP): set it to be the child class. </td></tr>
+    <tr><td class="paramname">spec_t</td><td>Used for compile-time polymorphism (CRTP): set it to be the child class. </td></tr>
     <tr><td class="paramname">gen_t</td><td>The type of the generated element. </td></tr>
   </table>
   </dd>
 </dl>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a8eaff43f34d0fd74c8d38347481a9db9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8eaff43f34d0fd74c8d38347481a9db9">&#9670;&nbsp;</a></span>Factory_Generator()</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a703e81ab4d6c144c8b926b4c0121ea3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a703e81ab4d6c144c8b926b4c0121ea3e">&#9670;&nbsp;</a></span>end()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename specialization , typename gen_t &gt; </div>
+template&lt;typename spec_t , typename gen_t &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html">Symmetric_Polynomials::Factory_Generator</a>&lt; specialization, gen_t &gt;::<a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html">Factory_Generator</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Default constructor. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a4c5bb7b8ec49b21e6aa3ec09e4d435e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c5bb7b8ec49b21e6aa3ec09e4d435e7">&#9670;&nbsp;</a></span>end()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename specialization , typename gen_t &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static specialization <a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html">Symmetric_Polynomials::Factory_Generator</a>&lt; specialization, gen_t &gt;::end </td>
+          <td class="memname">static spec_t <a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html">Symmetric_Polynomials::Factory_Generator</a>&lt; spec_t, gen_t &gt;::end </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -223,38 +190,38 @@ template&lt;typename specialization , typename gen_t &gt; </div>
 
 </div>
 </div>
-<a id="ace95ec35b3933df2dcf3e763322f477e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace95ec35b3933df2dcf3e763322f477e">&#9670;&nbsp;</a></span>operator!=()</h2>
+<a id="a6f080d6c05163902d79c0beb952ada21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f080d6c05163902d79c0beb952ada21">&#9670;&nbsp;</a></span>operator!=()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename specialization , typename gen_t &gt; </div>
+template&lt;typename spec_t , typename gen_t &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html">Symmetric_Polynomials::Factory_Generator</a>&lt; specialization, gen_t &gt;::operator!= </td>
+          <td class="memname">bool <a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html">Symmetric_Polynomials::Factory_Generator</a>&lt; spec_t, gen_t &gt;::operator!= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html">Factory_Generator</a>&lt; specialization, gen_t &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html">Factory_Generator</a>&lt; spec_t, gen_t &gt; &amp;&#160;</td>
           <td class="paramname"><em>other</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Equality of iterators. </p>
+<p>Inequality of iterators (used to detect if generation has been completed) </p>
 
 </div>
 </div>
-<a id="af7099c18230b93eaf1927941a8075bd9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7099c18230b93eaf1927941a8075bd9">&#9670;&nbsp;</a></span>operator*()</h2>
+<a id="ac23d14e0e2e6d29d8b33266a9af68e7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac23d14e0e2e6d29d8b33266a9af68e7f">&#9670;&nbsp;</a></span>operator*()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename specialization , typename gen_t &gt; </div>
+template&lt;typename spec_t , typename gen_t &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const gen_t&amp; <a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html">Symmetric_Polynomials::Factory_Generator</a>&lt; specialization, gen_t &gt;::operator* </td>
+          <td class="memname">const gen_t&amp; <a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html">Symmetric_Polynomials::Factory_Generator</a>&lt; spec_t, gen_t &gt;::operator* </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -266,16 +233,16 @@ template&lt;typename specialization , typename gen_t &gt; </div>
 
 </div>
 </div>
-<a id="a12ebc1a5c6212d5c284557ee4ef5e97e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12ebc1a5c6212d5c284557ee4ef5e97e">&#9670;&nbsp;</a></span>operator++()</h2>
+<a id="afb84f4ab315cd2921702b360c665f79f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb84f4ab315cd2921702b360c665f79f">&#9670;&nbsp;</a></span>operator++()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename specialization , typename gen_t &gt; </div>
+template&lt;typename spec_t , typename gen_t &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">specialization&amp; <a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html">Symmetric_Polynomials::Factory_Generator</a>&lt; specialization, gen_t &gt;::operator++ </td>
+          <td class="memname">spec_t&amp; <a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html">Symmetric_Polynomials::Factory_Generator</a>&lt; spec_t, gen_t &gt;::operator++ </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -288,19 +255,19 @@ template&lt;typename specialization , typename gen_t &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="afca6876d2981feaafd857ace96759f8d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afca6876d2981feaafd857ace96759f8d">&#9670;&nbsp;</a></span>completed</h2>
+<a id="a718d2c8bc539873fe356701ca9def01c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a718d2c8bc539873fe356701ca9def01c">&#9670;&nbsp;</a></span>completed</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename specialization , typename gen_t &gt; </div>
+template&lt;typename spec_t , typename gen_t &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html">Symmetric_Polynomials::Factory_Generator</a>&lt; specialization, gen_t &gt;::completed</td>
+          <td class="memname">bool <a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html">Symmetric_Polynomials::Factory_Generator</a>&lt; spec_t, gen_t &gt;::completed</td>
         </tr>
       </table>
   </td>
@@ -310,23 +277,23 @@ template&lt;typename specialization , typename gen_t &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>1 if the iterator is <a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html#a4c5bb7b8ec49b21e6aa3ec09e4d435e7" title="Terminal iterator.">end()</a> i.e. if all elements have been generated </p>
+<p>1 if the iterator is <a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html#a703e81ab4d6c144c8b926b4c0121ea3e" title="Terminal iterator.">end()</a> i.e. if all elements have been generated </p>
 
 </div>
 </div>
-<a id="a5c7fd18834f4fe1424a3f6bdef4c406c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c7fd18834f4fe1424a3f6bdef4c406c">&#9670;&nbsp;</a></span>generated</h2>
+<a id="a28c05b056305bcd6ac3d91cd689f8c5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28c05b056305bcd6ac3d91cd689f8c5a">&#9670;&nbsp;</a></span>generated</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename specialization , typename gen_t &gt; </div>
+template&lt;typename spec_t , typename gen_t &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">gen_t <a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html">Symmetric_Polynomials::Factory_Generator</a>&lt; specialization, gen_t &gt;::generated</td>
+          <td class="memname">gen_t <a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html">Symmetric_Polynomials::Factory_Generator</a>&lt; spec_t, gen_t &gt;::generated</td>
         </tr>
       </table>
   </td>
@@ -341,7 +308,7 @@ template&lt;typename specialization , typename gen_t &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>source/<a class="el" href="Generators_8hpp_source.html">Generators.hpp</a></li>
+<li><a class="el" href="Generators_8hpp_source.html">Generators.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

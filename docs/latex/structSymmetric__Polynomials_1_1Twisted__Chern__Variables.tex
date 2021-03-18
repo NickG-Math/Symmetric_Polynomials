@@ -11,7 +11,8 @@ The twisted Chern generators as variables $\gamma_{s,j}$.
 
 
 
-Inheritance diagram for Symmetric\+\_\+\+Polynomials\+::Twisted\+\_\+\+Chern\+\_\+\+Variables$<$ T, \+\_\+deg $>$\+:\nopagebreak
+Inheritance diagram for Symmetric\+\_\+\+Polynomials\+::Twisted\+\_\+\+Chern\+\_\+\+Variables$<$ T, \+\_\+deg $>$\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,7 +21,8 @@ Inheritance diagram for Symmetric\+\_\+\+Polynomials\+::Twisted\+\_\+\+Chern\+\_
 \end{figure}
 
 
-Collaboration diagram for Symmetric\+\_\+\+Polynomials\+::Twisted\+\_\+\+Chern\+\_\+\+Variables$<$ T, \+\_\+deg $>$\+:\nopagebreak
+Collaboration diagram for Symmetric\+\_\+\+Polynomials\+::Twisted\+\_\+\+Chern\+\_\+\+Variables$<$ T, \+\_\+deg $>$\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -36,9 +38,9 @@ typedef \+\_\+deg \mbox{\hyperlink{structSymmetric__Polynomials_1_1Twisted__Cher
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{structSymmetric__Polynomials_1_1Twisted__Chern__Variables}{Twisted\+\_\+\+Chern\+\_\+\+Variables}} \mbox{\hyperlink{structSymmetric__Polynomials_1_1Twisted__Chern__Variables_a9ce1cca18d90a7ecd069956646db4b75}{operator+}} (const \mbox{\hyperlink{structSymmetric__Polynomials_1_1Twisted__Chern__Variables}{Twisted\+\_\+\+Chern\+\_\+\+Variables}} \&b) const
-\item 
+\begin{DoxyCompactList}\small\item\em Multiplies monomials by adding their exponents. \end{DoxyCompactList}\item 
 size\+\_\+t \mbox{\hyperlink{structSymmetric__Polynomials_1_1Twisted__Chern__Variables_a6ae3d1fd8e20bf6fd9c742e2f4a8f454}{operator()}} () const
-\begin{DoxyCompactList}\small\item\em Returns hash of monomial. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Hashes monomial. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsubsection{Detailed Description}
@@ -47,9 +49,10 @@ struct Symmetric\+\_\+\+Polynomials\+::\+Twisted\+\_\+\+Chern\+\_\+\+Variables$<
 
 The twisted Chern generators as variables $\gamma_{s,j}$. 
 
-Monomial $\prod_{s,j}\gamma_{s,j}^{a_{s_j}}$ is stored as vector $[a_{0,1},...,a_{0,n},a_{1,0},a_{1,1},...,a_{n-1,1},a_{n,0}]$
-
+Monomial $\prod_{s,j}\gamma_{s,j}^{a_{s_j}}$ is stored as vector $[a_{0,1},...,a_{0,n},a_{1,0},a_{1,1},...,a_{n-1,1},a_{n,0}]$ \begin{DoxyNote}{Note}
 This class does N\+OT provide functions for degrees or variable names\+: these are provided as pointers directly in \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Half\+\_\+\+Idempotent\+\_\+\+Basis}} 
+\end{DoxyNote}
+
 \begin{DoxyTemplParams}{Template Parameters}
 {\em T} & The (integral) value type of the exponent vector. \\
 \hline
@@ -70,16 +73,6 @@ typedef \+\_\+deg \mbox{\hyperlink{structSymmetric__Polynomials_1_1Twisted__Cher
 
 Degree typedef. 
 
-Multiplies monomials by adding their exponents.
-
-No relations are used as these wouldn\textquotesingle{}t produce monomials \begin{DoxyReturn}{Returns}
-$[a_{0,1}+b_{0,1},...,a_{n,0}+b_{n,0}]$ where $\ast$this= $[a_{0,1},...,a_{n,0}]$ 
-\end{DoxyReturn}
-
-\begin{DoxyParams}{Parameters}
-{\em b} & Second exponent $[b_{0,1},...,b_{n,0}]$ \\
-\hline
-\end{DoxyParams}
 
 
 \doxysubsubsection{Member Function Documentation}
@@ -92,8 +85,11 @@ size\+\_\+t \mbox{\hyperlink{structSymmetric__Polynomials_1_1Twisted__Chern__Var
 
 
 
-Returns hash of monomial. 
+Hashes monomial. 
 
+\begin{DoxyReturn}{Returns}
+Hash of exponent vector (calls generic\+\_\+hasher) 
+\end{DoxyReturn}
 \mbox{\Hypertarget{structSymmetric__Polynomials_1_1Twisted__Chern__Variables_a9ce1cca18d90a7ecd069956646db4b75}\label{structSymmetric__Polynomials_1_1Twisted__Chern__Variables_a9ce1cca18d90a7ecd069956646db4b75}} 
 \index{Symmetric\_Polynomials::Twisted\_Chern\_Variables$<$ T, \_deg $>$@{Symmetric\_Polynomials::Twisted\_Chern\_Variables$<$ T, \_deg $>$}!operator+@{operator+}}
 \index{operator+@{operator+}!Symmetric\_Polynomials::Twisted\_Chern\_Variables$<$ T, \_deg $>$@{Symmetric\_Polynomials::Twisted\_Chern\_Variables$<$ T, \_deg $>$}}
@@ -103,6 +99,21 @@ Returns hash of monomial.
 
 
 
+Multiplies monomials by adding their exponents. 
+
+\begin{DoxyNote}{Note}
+No relations are used as these wouldn\textquotesingle{}t produce monomials 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Second exponent $[b_{0,1},...,b_{n,0}]$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$[a_{0,1}+b_{0,1},...,a_{n,0}+b_{n,0}]$ where $\ast$this= $[a_{0,1},...,a_{n,0}]$ 
+\end{DoxyReturn}
+
+
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-source/\mbox{\hyperlink{Half__Idempotent_8hpp}{Half\+\_\+\+Idempotent.\+hpp}}\end{DoxyCompactItemize}
+\mbox{\hyperlink{Half__Idempotent_8hpp}{Half\+\_\+\+Idempotent.\+hpp}}\end{DoxyCompactItemize}

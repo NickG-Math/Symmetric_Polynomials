@@ -7,7 +7,7 @@ var hierarchy =
     [ "Symmetric_Polynomials::Combination_Generator< T >", "classSymmetric__Polynomials_1_1Combination__Generator.html", null ],
     [ "Symmetric_Polynomials::Polynomial< container_t >::const_iterator", "classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator.html", null ],
     [ "Symmetric_Polynomials::default_container< scl_t, exp_t, ordered >", "structSymmetric__Polynomials_1_1default__container.html", null ],
-    [ "Symmetric_Polynomials::Factory_Generator< specialization, gen_t >", "classSymmetric__Polynomials_1_1Factory__Generator.html", [
+    [ "Symmetric_Polynomials::Factory_Generator< spec_t, gen_t >", "classSymmetric__Polynomials_1_1Factory__Generator.html", [
       [ "Symmetric_Polynomials::Permutation_Generator< T >::const_iterator", "classSymmetric__Polynomials_1_1Permutation__Generator_1_1const__iterator.html", null ]
     ] ],
     [ "Symmetric_Polynomials::Factory_Generator< Combination_Generator::const_iterator, std::vector< T > >", "classSymmetric__Polynomials_1_1Factory__Generator.html", [
@@ -16,7 +16,7 @@ var hierarchy =
     [ "Symmetric_Polynomials::Factory_Generator< Permutation_Generator::const_iterator, std::vector< T > >", "classSymmetric__Polynomials_1_1Factory__Generator.html", null ],
     [ "Symmetric_Polynomials::Permutation_Generator< T >", "classSymmetric__Polynomials_1_1Permutation__Generator.html", null ],
     [ "Symmetric_Polynomials::Polynomial< container_t >", "classSymmetric__Polynomials_1_1Polynomial.html", null ],
-    [ "Symmetric_Polynomials::Polynomial_Basis< specialization, container_1_t, container_2_t >", "classSymmetric__Polynomials_1_1Polynomial__Basis.html", [
+    [ "Symmetric_Polynomials::Polynomial_Basis< spec_t, container_1_t, container_2_t >", "classSymmetric__Polynomials_1_1Polynomial__Basis.html", [
       [ "Symmetric_Polynomials::Half_Idempotent_Basis< _xy_container, _chern_container >", "classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html", null ]
     ] ],
     [ "Symmetric_Polynomials::Polynomial_Basis< Half_Idempotent_Basis< _xy_container, _chern_container >, _xy_container, _chern_container >", "classSymmetric__Polynomials_1_1Polynomial__Basis.html", null ],

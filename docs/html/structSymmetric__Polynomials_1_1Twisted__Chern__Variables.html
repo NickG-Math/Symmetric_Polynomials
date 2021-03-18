@@ -131,9 +131,10 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9ce1cca18d90a7ecd069956646db4b75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structSymmetric__Polynomials_1_1Twisted__Chern__Variables.html">Twisted_Chern_Variables</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Twisted__Chern__Variables.html#a9ce1cca18d90a7ecd069956646db4b75">operator+</a> (const <a class="el" href="structSymmetric__Polynomials_1_1Twisted__Chern__Variables.html">Twisted_Chern_Variables</a> &amp;b) const</td></tr>
+<tr class="memdesc:a9ce1cca18d90a7ecd069956646db4b75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies monomials by adding their exponents.  <a href="structSymmetric__Polynomials_1_1Twisted__Chern__Variables.html#a9ce1cca18d90a7ecd069956646db4b75">More...</a><br /></td></tr>
 <tr class="separator:a9ce1cca18d90a7ecd069956646db4b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ae3d1fd8e20bf6fd9c742e2f4a8f454"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Twisted__Chern__Variables.html#a6ae3d1fd8e20bf6fd9c742e2f4a8f454">operator()</a> () const</td></tr>
-<tr class="memdesc:a6ae3d1fd8e20bf6fd9c742e2f4a8f454"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns hash of monomial.  <a href="structSymmetric__Polynomials_1_1Twisted__Chern__Variables.html#a6ae3d1fd8e20bf6fd9c742e2f4a8f454">More...</a><br /></td></tr>
+<tr class="memdesc:a6ae3d1fd8e20bf6fd9c742e2f4a8f454"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hashes monomial.  <a href="structSymmetric__Polynomials_1_1Twisted__Chern__Variables.html#a6ae3d1fd8e20bf6fd9c742e2f4a8f454">More...</a><br /></td></tr>
 <tr class="separator:a6ae3d1fd8e20bf6fd9c742e2f4a8f454"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -141,8 +142,8 @@ Public Member Functions</h2></td></tr>
 struct Symmetric_Polynomials::Twisted_Chern_Variables&lt; T, _deg &gt;</h3>
 
 <p>The twisted Chern generators as variables \(\gamma_{s,j}\). </p>
-<p>Monomial \(\prod_{s,j}\gamma_{s,j}^{a_{s_j}}\) is stored as vector \([a_{0,1},...,a_{0,n},a_{1,0},a_{1,1},...,a_{n-1,1},a_{n,0}]\)</p>
-<p>This class does NOT provide functions for degrees or variable names: these are provided as pointers directly in <a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html" title="Class for half-idempotent symmetric polynomials, allowing transformation from  variables to  variable...">Half_Idempotent_Basis</a> </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+<p>Monomial \(\prod_{s,j}\gamma_{s,j}^{a_{s_j}}\) is stored as vector \([a_{0,1},...,a_{0,n},a_{1,0},a_{1,1},...,a_{n-1,1},a_{n,0}]\) </p><dl class="section note"><dt>Note</dt><dd>This class does NOT provide functions for degrees or variable names: these are provided as pointers directly in <a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html" title="Class for half-idempotent symmetric polynomials, allowing transformation from  variables to  variable...">Half_Idempotent_Basis</a> </dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The (integral) value type of the exponent vector. </td></tr>
     <tr><td class="paramname">_deg</td><td>The (integral) value type used in the degree function. </td></tr>
@@ -165,14 +166,6 @@ template&lt;typename T  = int64_t, typename _deg  = int64_t&gt; </div>
 </div><div class="memdoc">
 
 <p>Degree typedef. </p>
-<p>Multiplies monomials by adding their exponents.</p>
-<p>No relations are used as these wouldn't produce monomials </p><dl class="section return"><dt>Returns</dt><dd>\([a_{0,1}+b_{0,1},...,a_{n,0}+b_{n,0}]\) where *this= \([a_{0,1},...,a_{n,0}]\) </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">b</td><td>Second exponent \([b_{0,1},...,b_{n,0}]\) </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -194,7 +187,8 @@ template&lt;typename T  = int64_t, typename _deg  = int64_t&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Returns hash of monomial. </p>
+<p>Hashes monomial. </p>
+<dl class="section return"><dt>Returns</dt><dd>Hash of exponent vector (calls generic_hasher) </dd></dl>
 
 </div>
 </div>
@@ -216,10 +210,20 @@ template&lt;typename T  = int64_t, typename _deg  = int64_t&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Multiplies monomials by adding their exponents. </p>
+<dl class="section note"><dt>Note</dt><dd>No relations are used as these wouldn't produce monomials </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">b</td><td>Second exponent \([b_{0,1},...,b_{n,0}]\) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>\([a_{0,1}+b_{0,1},...,a_{n,0}+b_{n,0}]\) where *this= \([a_{0,1},...,a_{n,0}]\) </dd></dl>
+
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>source/<a class="el" href="Half__Idempotent_8hpp_source.html">Half_Idempotent.hpp</a></li>
+<li><a class="el" href="Half__Idempotent_8hpp_source.html">Half_Idempotent.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
