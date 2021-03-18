@@ -48,7 +48,7 @@ Let \f$R=\mathbb Z[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)\f$; there is an obvious 
 \sum_{1\le j_1< \cdots< j_s\le n, 1\le k_1< \cdots< k_i\le n\\ j_u\neq k_v}
 x_{j_1}....x_{j_s}y_{k_1}\cdots y_{k_i}\f]
 for \f$0\le s\le n\f$ and \f$0\le i\le n-s\f$. The coefficient \f$r_{n,s,i,t,j}\f$ in the relations is
-\f[r_{n,s,i,t,j}={{\min(i+j+s,n)-t}\choose {j}}\f] 
+\f[r_{n,s,i,t,j}={\min(i+j+s,n)-t}\choose {j}\f] 
 Moreover, the relations require the indices \f$s,i,t,j\f$ to satisfy \f$s\le t\le s+i\f$ and \f$i,j>0\f$.
 
 For convenience we set:
