@@ -5,25 +5,25 @@
 ///@file
 ///@brief Contains classes for generating permutations, combinations and a factory for such classes
 
-namespace Symmetric_Polynomials
+namespace symmp
 {
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	///	@brief			Prototype for coroutine-like iterators that generate elements such as interpolating vectors, permutations, combinations...
 	///	@details		Inherit from this class and define a method update() to get a const iterator. \n
 	///					You will also need begin() and end() methods constructing such iterators; end() should always be defined by calling the factory end().\n
-	///					Example implementations: \c Combination_Generator and \c Permutation_Generator
+	///					Example implementations: \c CombinationGenerator and \c PermutationGenerator
 	///	@attention		Probably not thread-safe (depends on child's update() method).
 	///	@todo			Implement as coroutine (C++20)
 	///	@tparam	spec_t	Used for compile-time polymorphism (CRTP): set it to be the child class.
 	///	@tparam	gen_t	The type of the generated element.
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	template <typename spec_t, typename gen_t>
-	class Factory_Generator
+	class FactoryGenerator
 	{
 	public:
 		const gen_t &operator*() const;						   ///<Returns the generated element
-		bool operator!=(const Factory_Generator &other) const; ///<Inequality of iterators (used to detect if generation has been completed)
+		bool operator!=(const FactoryGenerator &other) const; ///<Inequality of iterators (used to detect if generation has been completed)
 		spec_t &operator++();								   ///<Generates next element
 		static spec_t end();								   ///<Terminal iterator
 	protected:
@@ -33,13 +33,13 @@ namespace Symmetric_Polynomials
 
 	////////////////////////////////////////////////////////////////////////////////////////
 	///	@brief		Generates all permutations on a number of letters
-	///	@details	Use with a ranged for loop: \code for (const auto& i:v) {...} \endcode where \c v is a \c Permutation_Generator object. Then \c i will be a permutation
+	///	@details	Use with a ranged for loop: \code for (const auto& i:v) {...} \endcode where \c v is a \c PermutationGenerator object. Then \c i will be a permutation
 	///	@warning	Not thread safe!
 	///	@todo		Implement via coroutine (C++20)
 	///	@tparam T	The data type of our permutations eg \c std::vector<int>
 	//////////////////////////////////////////////////////////////////////////////////
 	template <typename T>
-	class Permutation_Generator
+	class PermutationGenerator
 	{
 		const T n;
 
@@ -50,35 +50,35 @@ namespace Symmetric_Polynomials
 
 		///	@brief		Constructor sets up the generator
 		///	@param n	The total number of letters
-		Permutation_Generator(T n);
+		PermutationGenerator(T n);
 
 		///	@brief		Constant iterator that is used in a ranged for loop to generate the permutations.
 		///	@warning	Non constant version is illegal
-		class const_iterator : public Factory_Generator<Permutation_Generator::const_iterator, std::vector<T>>
+		class constIterator : public FactoryGenerator<PermutationGenerator::constIterator, std::vector<T>>
 		{
 			void update();
-			friend class Permutation_Generator;													   ///<Befriending outer class
-			friend class Factory_Generator<Permutation_Generator::const_iterator, std::vector<T>>; ///<Befriending parent
+			friend class PermutationGenerator;													   ///<Befriending outer class
+			friend class FactoryGenerator<PermutationGenerator::constIterator, std::vector<T>>; ///<Befriending parent
 		};
 
 		/// @brief	Begin iterator
 		/// @return An iterator to the first generated element
-		const_iterator begin() const;
+		constIterator begin() const;
 
 		/// @brief	End iterator
 		/// @return An iterator to the end of the generator (equality with this indicates that the generator has completed)
-		const_iterator end() const;
+		constIterator end() const;
 	};
 
 	////////////////////////////////////////////////////////////////////////////////////////
 	///	@brief		Generates all combinations on a number of letters making a number of choices
-	///	@details	Use with a ranged for loop: \code for (const auto& i:v) {...} \endcode where \c v is a \c Combination_Generator object. Then \c i will be a combination
+	///	@details	Use with a ranged for loop: \code for (const auto& i:v) {...} \endcode where \c v is a \c CombinationGenerator object. Then \c i will be a combination
 	///	@warning	Not thread safe!
 	///	@todo		Implement via coroutine (C++20)
 	///	@tparam  T	The data type of our combinations eg \c std::vector<int>
 	//////////////////////////////////////////////////////////////////////////////////
 	template <typename T>
-	class Combination_Generator
+	class CombinationGenerator
 	{
 		const T total, choices;
 
@@ -90,25 +90,25 @@ namespace Symmetric_Polynomials
 		///	@brief			Sets up the generator
 		///	@param total	The number of letters
 		///	@param choices	The number of choices
-		Combination_Generator(T total, T choices);
+		CombinationGenerator(T total, T choices);
 
 		///	@brief		Constant iterator that is used in a ranged for loop to generate the combinations.
 		///	@warning	Non \c const version is illegal
-		class const_iterator : public Factory_Generator<Combination_Generator::const_iterator, std::vector<T>>
+		class constIterator : public FactoryGenerator<CombinationGenerator::constIterator, std::vector<T>>
 		{
 			void update();
-			friend class Combination_Generator;													   ///<Befriending outer class
-			friend class Factory_Generator<Combination_Generator::const_iterator, std::vector<T>>; ///<Befriending parent
+			friend class CombinationGenerator;													   	///<Befriending outer class
+			friend class FactoryGenerator<CombinationGenerator::constIterator, std::vector<T>>; 	///<Befriending parent
 			T total, choices;
 		};
 
 		/// @brief	Begin iterator
 		/// @return An iterator to the first generated element
-		const_iterator begin() const;
+		constIterator begin() const;
 
 		/// @brief	End iterator
 		/// @return An iterator to the end of the generator (equality with this indicates that the generator has completed)
-		const_iterator end() const;
+		constIterator end() const;
 	};
 
 	///@brief		Returns vector of all permutations on \p n letters

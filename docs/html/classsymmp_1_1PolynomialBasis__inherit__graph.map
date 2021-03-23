@@ -1,0 +1,7 @@
+<map id="PolynomialBasis&lt; spec_t, orig_poly_t, new_poly_t &gt;" name="PolynomialBasis&lt; spec_t, orig_poly_t, new_poly_t &gt;">
+<area shape="rect" id="node1" title="Factory class that provides the general interface of a generating basis for a subring of a polynomial..." alt="" coords="5,64,180,120"/>
+<area shape="rect" id="node2" href="$classsymmp_1_1PolynomialBasis.html" title=" " alt="" coords="387,13,584,83"/>
+<area shape="rect" id="node4" href="$classsymmp_1_1PolynomialBasis.html" title=" " alt="" coords="377,108,593,164"/>
+<area shape="rect" id="node3" href="$classsymmp_1_1TwistedChernBasis.html" title="Class for half&#45;idempotent symmetric polynomials, allowing transformation from &#160;variables to &#160;variable..." alt="" coords="659,20,813,76"/>
+<area shape="rect" id="node5" href="$classsymmp_1_1SymmetricBasis.html" title="Class for symmetric polynomials with no relations, allowing transformation from &#160;variables to &#160;variab..." alt="" coords="643,115,829,157"/>
+</map>

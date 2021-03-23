@@ -2,13 +2,13 @@
 #include "../Symmetric_Basis.hpp"
 
 ///@file
-///@brief Implementation of Symmetric_Basis.hpp
+///@brief Implementation of SymmetricBasis.hpp
 
-namespace Symmetric_Polynomials
+namespace symmp
 {
 
 	template <typename T, typename _deg>
-	_deg Standard_Variables<T, _deg>::degree() const
+	_deg StandardVariables<T, _deg>::degree() const
 	{
 		deg_t sum = 0;
 		for (const auto i : *this)
@@ -17,28 +17,28 @@ namespace Symmetric_Polynomials
 	}
 
 	template <typename T, typename _deg>
-	std::string Standard_Variables<T, _deg>::name(int i, int)
+	std::string StandardVariables<T, _deg>::name(int i, int)
 	{
 		return "x_" + std::to_string(i + 1);
 	}
 
 	template <typename T, typename _deg>
-	Standard_Variables<T, _deg> Standard_Variables<T, _deg>::operator+(const Standard_Variables &other) const
+	StandardVariables<T, _deg> StandardVariables<T, _deg>::operator+(const StandardVariables &other) const
 	{
-		Standard_Variables v(*this);
+		StandardVariables v(*this);
 		for (size_t i = 0; i < this->size(); i++)
 			v[i] += other[i];
 		return v;
 	}
 
 	template <typename T, typename _deg>
-	size_t Standard_Variables<T, _deg>::operator()() const
+	size_t StandardVariables<T, _deg>::operator()() const
 	{
 		return generic_hasher(*this);
 	}
 
 	template <typename T, typename _deg>
-	_deg Elementary_Symmetric_Variables<T, _deg>::degree() const
+	_deg ElementarySymmetricVariables<T, _deg>::degree() const
 	{
 		deg_t deg = 0;
 		for (size_t i = 0; i < this->size(); i++)
@@ -47,18 +47,18 @@ namespace Symmetric_Polynomials
 	}
 
 	template <typename T, typename _deg>
-	std::string Elementary_Symmetric_Variables<T, _deg>::name(int i, int)
+	std::string ElementarySymmetricVariables<T, _deg>::name(int i, int)
 	{
 		return "e_" + std::to_string(i + 1);
 	}
 
-	template <typename T, typename c1, typename c2>
-	Polynomial<c2> Polynomial_Basis<T, c1, c2>::operator()(Polynomial<c1> a) const
+	template <typename T, typename orig_poly_t, typename new_poly_t>
+	new_poly_t PolynomialBasis<T, orig_poly_t, new_poly_t>::operator()(orig_poly_t a) const
 	{
 		//set dimensions and names if nonempty
-		const typename Polynomial<c2>::deg_t *gen_dims = generator_dimensions.empty() ? nullptr : generator_dimensions.data();
+		const typename new_poly_t::deg_t *gen_dims = generator_dimensions.empty() ? nullptr : generator_dimensions.data();
 		const std::string *gen_names = generator_names.empty() ? nullptr : generator_names.data();
-		Polynomial<c2> decomposition(number_of_variables, gen_dims, gen_names);
+		new_poly_t decomposition(gen_dims, gen_names);
 		while (true)
 		{
 			auto max = a.highest_term();
@@ -74,10 +74,10 @@ namespace Symmetric_Polynomials
 		}
 	}
 
-	template <typename T, typename c1, typename c2>
-	Polynomial<c1> Polynomial_Basis<T, c1, c2>::operator()(const Polynomial<c2> &a) const
+	template <typename T, typename orig_poly_t, typename new_poly_t>
+	orig_poly_t PolynomialBasis<T, orig_poly_t, new_poly_t>::operator()(const new_poly_t&a) const
 	{
-		Polynomial<c1> p(number_of_variables);
+		orig_poly_t p;
 		for (auto it = a.begin(); it != a.end(); ++it)
 		{
 			auto prod = compute_product(it.exponent());
@@ -87,51 +87,51 @@ namespace Symmetric_Polynomials
 		return p;
 	}
 
-	template <typename T, typename c1, typename c2>
-	Polynomial_Basis<T, c1, c2>::Polynomial_Basis(int number_of_variables) : number_of_variables(number_of_variables) {}
+	template <typename T, typename orig_poly_t, typename new_poly_t>
+	PolynomialBasis<T, orig_poly_t, new_poly_t>::PolynomialBasis(int number_of_variables) : number_of_variables(number_of_variables) {}
 
-	template <typename T, typename c1, typename c2>
-	const auto &Polynomial_Basis<T, c1, c2>::generators() const
+	template <typename T, typename orig_poly_t, typename new_poly_t>
+	const std::vector<orig_poly_t> & PolynomialBasis<T, orig_poly_t, new_poly_t>::generators() const
 	{
 		return _generators;
 	}
 
-	template <typename T, typename c1, typename c2>
-	const auto &Polynomial_Basis<T, c1, c2>::dimensions() const
+	template <typename T, typename orig_poly_t, typename new_poly_t>
+	const std::vector<typename new_poly_t::deg_t> & PolynomialBasis<T, orig_poly_t, new_poly_t>::dimensions() const
 	{
 		return generator_dimensions;
 	}
 
-	template <typename T, typename c1, typename c2>
-	const auto &Polynomial_Basis<T, c1, c2>::names() const
+	template <typename T, typename orig_poly_t, typename new_poly_t>
+	const std::vector<std::string>& PolynomialBasis<T, orig_poly_t, new_poly_t>::names() const
 	{
 		return generator_names;
 	}
 
-	template <typename T, typename c1, typename c2>
-	Polynomial<c1> Polynomial_Basis<T, c1, c2>::compute_product(const typename Polynomial<c2>::exp_t &exponent) const
+	template <typename T, typename orig_poly_t, typename new_poly_t>
+	orig_poly_t PolynomialBasis<T, orig_poly_t, new_poly_t>::compute_product(const typename new_poly_t::exp_t &exponent) const
 	{
-		Polynomial<c1> product(number_of_variables, 1);
+		orig_poly_t product(number_of_variables, 1);
 		for (size_t i = 0; i < _generators.size(); i++)
 			if (exponent[i] != 0)
 				product *= (_generators[i] ^ exponent[i]);
 		return product;
 	}
 
-	template <typename x, typename e>
-	Symmetric_Basis<x, e>::Symmetric_Basis(int n) : Polynomial_Basis<Symmetric_Basis<x, e>, x, e>(n)
+	template <typename x_poly_t, typename e_poly_t>
+	SymmetricBasis<x_poly_t, e_poly_t>::SymmetricBasis(int n) : PolynomialBasis<SymmetricBasis<x_poly_t, e_poly_t>, x_poly_t, e_poly_t>(n)
 	{
 		_generators.reserve(number_of_variables);
 		for (int i = 1; i <= number_of_variables; i++)
 			_generators.push_back(get_elementary_symmetric(i));
 	}
 
-	template <typename x, typename e>
-	Polynomial<x> Symmetric_Basis<x, e>::get_elementary_symmetric(int i) const
+	template <typename x_poly_t, typename e_poly_t>
+	x_poly_t SymmetricBasis<x_poly_t, e_poly_t>::get_elementary_symmetric(int i) const
 	{
-		Polynomial<x> poly(number_of_variables);
+		x_poly_t poly;
 		x_t mono(number_of_variables);
-		auto c = Combination_Generator(number_of_variables, i);
+		auto c = CombinationGenerator(number_of_variables, i);
 		for (const auto &comb : c)
 		{
 			for (const auto j : comb)
@@ -143,14 +143,14 @@ namespace Symmetric_Polynomials
 		return poly;
 	}
 
-	template <typename x, typename e>
-	auto Symmetric_Basis<x, e>::find_exponent(const x_t &term) const
+	template <typename x_poly_t, typename e_poly_t>
+	auto SymmetricBasis<x_poly_t, e_poly_t>::find_exponent(const x_t &term) const -> e_t
 	{
 		e_t exponent;
 		exponent.reserve(number_of_variables);
-		for (int i = 0; i < term.size(); i++)
+		for (size_t i = 0; i < term.size(); i++)
 		{
-			if (i == term.size() - 1)
+			if (i+1 == term.size())
 				exponent.push_back(term[i]);
 			else
 				exponent.push_back(term[i] - term[i + 1]);

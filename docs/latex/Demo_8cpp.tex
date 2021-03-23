@@ -24,7 +24,7 @@ Include dependency graph for Demo.\+cpp\+:\nopagebreak
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename H\+IB  = Half\+\_\+\+Idempotent\+\_\+\+Basis\+\_\+\+Default$<$int64\+\_\+t$>$$>$ }\\void \mbox{\hyperlink{Demo_8cpp_a1660780e039cee9f194c25e9be8c0ca4}{write\+\_\+pontryagin\+\_\+\+C2\+\_\+in\+\_\+terms\+\_\+of\+\_\+\+Chern\+\_\+classes}} (int n)
+{\footnotesize template$<$typename xy\+\_\+poly\+\_\+t , typename chern\+\_\+poly\+\_\+t $>$ }\\void \mbox{\hyperlink{Demo_8cpp_a4035f75fec6b080c4047d6b04281910f}{write\+\_\+pontryagin\+\_\+\+C2\+\_\+in\+\_\+terms\+\_\+of\+\_\+\+Chern\+\_\+classes}} (int n)
 \begin{DoxyCompactList}\small\item\em Writes the twisted Pontryagin or symplectic classes $\pi_{s,j}$ or $\kappa_{s,j}$ in terms of the Chern classes under the forgetful map $BU(n)\to BSO(n)$ or hermitianization $BU(n)\to BSp(n)$. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{Demo_8cpp_aa4379c1f8675ccb9d3360e1087853dae}{show\+\_\+and\+\_\+tell}} ()
 \begin{DoxyCompactList}\small\item\em User facing interface for computing relations/writing Pontryagin/symplectic in terms of Chern. \end{DoxyCompactList}\item 
@@ -77,7 +77,7 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{Demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\includegraphics[width=243pt]{Demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{Demo_8cpp_aa4379c1f8675ccb9d3360e1087853dae}\label{Demo_8cpp_aa4379c1f8675ccb9d3360e1087853dae}} 
@@ -90,13 +90,6 @@ Here is the call graph for this function\+:\nopagebreak
 
 User facing interface for computing relations/writing Pontryagin/symplectic in terms of Chern. 
 
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=337pt]{Demo_8cpp_aa4379c1f8675ccb9d3360e1087853dae_cgraph}
-\end{center}
-\end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -108,8 +101,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \index{Demo.cpp@{Demo.cpp}!speed\_test@{speed\_test}}
 \index{speed\_test@{speed\_test}!Demo.cpp@{Demo.cpp}}
 \doxyparagraph{\texorpdfstring{speed\_test()}{speed\_test()}}
-{\footnotesize\ttfamily template$<$typename scl\+\_\+t , typename exp\+\_\+val\+\_\+t , typename deg\+\_\+t $>$ \\
-void speed\+\_\+test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void speed\+\_\+test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -124,12 +116,11 @@ Optimized speedtest (no console output). For benchmarking and regression testing
 {\em deg\+\_\+t} & The type of the degree of the monomials \\
 \hline
 \end{DoxyTemplParams}
-\mbox{\Hypertarget{Demo_8cpp_a1660780e039cee9f194c25e9be8c0ca4}\label{Demo_8cpp_a1660780e039cee9f194c25e9be8c0ca4}} 
+\mbox{\Hypertarget{Demo_8cpp_a4035f75fec6b080c4047d6b04281910f}\label{Demo_8cpp_a4035f75fec6b080c4047d6b04281910f}} 
 \index{Demo.cpp@{Demo.cpp}!write\_pontryagin\_C2\_in\_terms\_of\_Chern\_classes@{write\_pontryagin\_C2\_in\_terms\_of\_Chern\_classes}}
 \index{write\_pontryagin\_C2\_in\_terms\_of\_Chern\_classes@{write\_pontryagin\_C2\_in\_terms\_of\_Chern\_classes}!Demo.cpp@{Demo.cpp}}
 \doxyparagraph{\texorpdfstring{write\_pontryagin\_C2\_in\_terms\_of\_Chern\_classes()}{write\_pontryagin\_C2\_in\_terms\_of\_Chern\_classes()}}
-{\footnotesize\ttfamily template$<$typename H\+IB  = Half\+\_\+\+Idempotent\+\_\+\+Basis\+\_\+\+Default$<$int64\+\_\+t$>$$>$ \\
-void write\+\_\+pontryagin\+\_\+\+C2\+\_\+in\+\_\+terms\+\_\+of\+\_\+\+Chern\+\_\+classes (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void write\+\_\+pontryagin\+\_\+\+C2\+\_\+in\+\_\+terms\+\_\+of\+\_\+\+Chern\+\_\+classes (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
 
 
 
@@ -137,7 +128,9 @@ Writes the twisted Pontryagin or symplectic classes $\pi_{s,j}$ or $\kappa_{s,j}
 
 
 \begin{DoxyTemplParams}{Template Parameters}
-{\em H\+IB} & The Half\+\_\+\+Idempotent\+\_\+\+Basis type eg The Half\+\_\+\+Idempotent\+\_\+\+Basis\+\_\+\+Default \\
+{\em xy\+\_\+poly\+\_\+t} & The type of polynomial on the $x_i,y_i$ variables \\
+\hline
+{\em chern\+\_\+poly\+\_\+t} & The type of polynomial on the $\gamma_{s,j}$ variables \\
 \hline
 \end{DoxyTemplParams}
 
@@ -149,6 +142,6 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{Demo_8cpp_a1660780e039cee9f194c25e9be8c0ca4_cgraph}
+\includegraphics[width=350pt]{Demo_8cpp_a4035f75fec6b080c4047d6b04281910f_cgraph}
 \end{center}
 \end{figure}

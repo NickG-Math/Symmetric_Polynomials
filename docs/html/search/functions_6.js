@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['half_5fidempotent_5fbasis_128',['Half_Idempotent_Basis',['../classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#aac5e4cbc16138448828c4ffded90ef24',1,'Symmetric_Polynomials::Half_Idempotent_Basis']]],
-  ['highest_5fterm_129',['highest_term',['../classSymmetric__Polynomials_1_1Polynomial.html#a0bf09e3b24c5787316b3dff30a55cc94',1,'Symmetric_Polynomials::Polynomial']]]
+  ['highest_5fterm_122',['highest_term',['../classsymmp_1_1Polynomial.html#a7e4d4d7333cd9732b53ca4a4ed0f628f',1,'symmp::Polynomial']]]
 ];

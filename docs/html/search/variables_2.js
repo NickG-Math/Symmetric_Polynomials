@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['generated_162',['generated',['../classSymmetric__Polynomials_1_1Factory__Generator.html#a28c05b056305bcd6ac3d91cd689f8c5a',1,'Symmetric_Polynomials::Factory_Generator']]],
-  ['generator_5fdimensions_163',['generator_dimensions',['../classSymmetric__Polynomials_1_1Polynomial__Basis.html#a2ca7f793b63a55a4aa718cddfb012245',1,'Symmetric_Polynomials::Polynomial_Basis']]],
-  ['generator_5fnames_164',['generator_names',['../classSymmetric__Polynomials_1_1Polynomial__Basis.html#a5db59844001dc1dafdfcdcb8d0fa2b83',1,'Symmetric_Polynomials::Polynomial_Basis']]]
+  ['generated_156',['generated',['../classsymmp_1_1FactoryGenerator.html#acfa9d7bdc6f6edb5aa8b1d570ec3b15a',1,'symmp::FactoryGenerator']]],
+  ['generator_5fdimensions_157',['generator_dimensions',['../classsymmp_1_1PolynomialBasis.html#afba7b5d8ad929bf149ad3fc0b35d06ec',1,'symmp::PolynomialBasis']]],
+  ['generator_5fnames_158',['generator_names',['../classsymmp_1_1PolynomialBasis.html#a4867a7fd4fad1c2ce7a65656ee5a0bd7',1,'symmp::PolynomialBasis']]]
 ];

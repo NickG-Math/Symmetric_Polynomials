@@ -33,9 +33,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Symmetric Polynomials
-   &#160;<span id="projectnumber">V3</span>
+   &#160;<span id="projectnumber">V3.1</span>
    </div>
-   <div id="projectbrief">A C++ library for symmetric polynomials with relations</div>
+   <div id="projectbrief">A C++ library for generating symmetric polynomials with relations</div>
   </td>
  </tr>
  </tbody>
@@ -95,20 +95,18 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
-<dt>Class <a class="el" href="classSymmetric__Polynomials_1_1Factory__Generator.html">Symmetric_Polynomials::Factory_Generator&lt; spec_t, gen_t &gt;</a>  </dt>
+<dt>Class <a class="el" href="classsymmp_1_1FactoryGenerator.html">FactoryGenerator&lt; spec_t, gen_t &gt;</a>  </dt>
 <dd><a class="anchor" id="_todo000001"></a>Implement as coroutine (C++20)  </dd>
-<dt>Class <a class="el" href="classSymmetric__Polynomials_1_1Permutation__Generator.html">Symmetric_Polynomials::Permutation_Generator&lt; T &gt;</a>  </dt>
+<dt>Class <a class="el" href="classsymmp_1_1PermutationGenerator.html">PermutationGenerator&lt; T &gt;</a>  </dt>
 <dd><a class="anchor" id="_todo000002"></a>Implement via coroutine (C++20)  </dd>
-<dt>Class <a class="el" href="classSymmetric__Polynomials_1_1Combination__Generator.html">Symmetric_Polynomials::Combination_Generator&lt; T &gt;</a>  </dt>
+<dt>Class <a class="el" href="classsymmp_1_1CombinationGenerator.html">CombinationGenerator&lt; T &gt;</a>  </dt>
 <dd><a class="anchor" id="_todo000003"></a>Implement via coroutine (C++20)  </dd>
-<dt>Class <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html">Symmetric_Polynomials::Polynomial&lt; container_t &gt;</a>  </dt>
-<dd><p class="startdd"><a class="anchor" id="_todo000004"></a>Use concepts (C++20) to express these requirements </p>
-<p class="enddd">Improve multiplication <code><a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#a84947ebd102746aed50c0f600b3409e8" title="Replaces *this by *this*other.">operator*=()</a></code>  </p>
-</dd>
-<dt>Member <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#a84947ebd102746aed50c0f600b3409e8">Symmetric_Polynomials::Polynomial&lt; container_t &gt;::operator*=</a>  (const <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html" title="Polynomials in multiple variables.">Polynomial</a> &amp;other)</dt>
+<dt>Class <a class="el" href="classsymmp_1_1Polynomial.html">Polynomial&lt; _scl, _exp, _container, container_is_ordered, _Args &gt;</a>  </dt>
+<dd><a class="anchor" id="_todo000004"></a>Use concepts (C++20) to express these requirements  </dd>
+<dt>Member <a class="el" href="classsymmp_1_1Polynomial.html#aa19a420790fbe79b9b73b503bf37bece">Polynomial&lt; _scl, _exp, _container, container_is_ordered, _Args &gt;::operator*=</a>  (const <a class="el" href="classsymmp_1_1Polynomial.html" title="Class for polynomials in multiple variables with relations.">Polynomial</a> &amp;other) -&gt; <a class="el" href="classsymmp_1_1Polynomial.html" title="Class for polynomials in multiple variables with relations.">Polynomial</a> &amp;</dt>
 <dd><a class="anchor" id="_todo000005"></a>Could this be done in place?  </dd>
-<dt>Member <a class="el" href="classSymmetric__Polynomials_1_1Polynomial.html#a85b255fec954a2fa5a261f7be522104f">Symmetric_Polynomials::Polynomial&lt; container_t &gt;::operator^</a>  (any_int_type p) const</dt>
-<dd><a class="anchor" id="_todo000006"></a>Improve compared to multiplying p many times (eg iterating squaring) </dd>
+<dt>Member <a class="el" href="classsymmp_1_1Polynomial.html#a39143ef3ebb433a42659875d3b955daf">Polynomial&lt; _scl, _exp, _container, container_is_ordered, _Args &gt;::operator^</a>  (T p) const -&gt; <a class="el" href="classsymmp_1_1Polynomial.html" title="Class for polynomials in multiple variables with relations.">Polynomial</a></dt>
+<dd><a class="anchor" id="_todo000006"></a>Improve implementation (currently multiplying p many times; would iterating the square be better? ) </dd>
 </dl>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

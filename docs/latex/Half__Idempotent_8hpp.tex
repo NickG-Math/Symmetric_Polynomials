@@ -24,28 +24,23 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1Array__Vector__Wrapper}{Symmetric\+\_\+\+Polynomials\+::\+Array\+\_\+\+Vector\+\_\+\+Wrapper$<$ T, N $>$}}
+struct \mbox{\hyperlink{structsymmp_1_1ArrayVectorWrapper}{Array\+Vector\+Wrapper$<$ T, N $>$}}
 \begin{DoxyCompactList}\small\item\em Wrapping array and vector in the same interface. \end{DoxyCompactList}\item 
-struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Variables$<$ T, \+\_\+deg, N $>$}}
+struct \mbox{\hyperlink{structsymmp_1_1HalfIdempotentVariables}{Half\+Idempotent\+Variables$<$ T, \+\_\+deg, N $>$}}
 \begin{DoxyCompactList}\small\item\em The variables $x_1,...,x_n,y_1,...,y_n$ where $y_i^2=y_i$ and $|x_i|=1$, $|y_i|=0$. \end{DoxyCompactList}\item 
-struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1Twisted__Chern__Variables}{Symmetric\+\_\+\+Polynomials\+::\+Twisted\+\_\+\+Chern\+\_\+\+Variables$<$ T, \+\_\+deg $>$}}
+struct \mbox{\hyperlink{structsymmp_1_1TwistedChernVariables}{Twisted\+Chern\+Variables$<$ T, \+\_\+deg $>$}}
 \begin{DoxyCompactList}\small\item\em The twisted Chern generators as variables $\gamma_{s,j}$. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Basis$<$ \+\_\+xy\+\_\+container, \+\_\+chern\+\_\+container $>$}}
+class \mbox{\hyperlink{classsymmp_1_1TwistedChernBasis}{Twisted\+Chern\+Basis$<$ \+\_\+xy\+\_\+poly\+\_\+t, \+\_\+chern\+\_\+poly\+\_\+t $>$}}
 \begin{DoxyCompactList}\small\item\em Class for half-\/idempotent symmetric polynomials, allowing transformation from $x_i,y_i$ variables to $\gamma_{s,i}$ variables and vice-\/versa. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
- \mbox{\hyperlink{namespaceSymmetric__Polynomials}{Symmetric\+\_\+\+Polynomials}}
+ \mbox{\hyperlink{namespacesymmp}{symmp}}
 \begin{DoxyCompactList}\small\item\em The namespace which contains every method and class in the library. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Typedefs}
-\begin{DoxyCompactItemize}
-\item 
-{\footnotesize template$<$typename scl\+\_\+t , typename exp\+\_\+val\+\_\+t  = int64\+\_\+t, typename deg\+\_\+t  = int64\+\_\+t, bool ordered = 1$>$ }\\using \mbox{\hyperlink{namespaceSymmetric__Polynomials_a14acf407fa68839a1031d9393492d049}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Basis\+\_\+\+Default}} = Half\+\_\+\+Idempotent\+\_\+\+Basis$<$ default\+\_\+container$<$ scl\+\_\+t, Half\+\_\+\+Idempotent\+\_\+\+Variables$<$ exp\+\_\+val\+\_\+t, deg\+\_\+t $>$, ordered $>$, default\+\_\+container$<$ scl\+\_\+t, Twisted\+\_\+\+Chern\+\_\+\+Variables$<$ exp\+\_\+val\+\_\+t, deg\+\_\+t $>$, ordered $>$ $>$
-\begin{DoxyCompactList}\small\item\em Aliases \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Half\+\_\+\+Idempotent\+\_\+\+Basis}} for certain default template parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename H\+IB  = Half\+\_\+\+Idempotent\+\_\+\+Basis\+\_\+\+Default$<$int64\+\_\+t, uint64\+\_\+t, uint64\+\_\+t, 0$>$$>$ }\\void \mbox{\hyperlink{namespaceSymmetric__Polynomials_a3c87e70d8d3eb671a12dcd957e7175ab}{Symmetric\+\_\+\+Polynomials\+::print\+\_\+half\+\_\+idempotent\+\_\+relations}} (int n, bool print=0, bool verify=0, bool verify\+\_\+verbose=0)
+{\footnotesize template$<$typename xy\+\_\+poly\+\_\+t , typename chern\+\_\+poly\+\_\+t $>$ }\\void \mbox{\hyperlink{namespacesymmp_ad180d30365dcabd734acd1490037eab1}{print\+\_\+half\+\_\+idempotent\+\_\+relations}} (int n, bool print=0, bool verify=0, bool verify\+\_\+verbose=0)
 \begin{DoxyCompactList}\small\item\em Prints all relations in the description of the fixed points of $R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$ in terms of $\alpha_i, c_i, \gamma_{s,j}$ (printed as a\+\_\+i,c\+\_\+i,c\+\_\+\{s,j\} in the console) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 

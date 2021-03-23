@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['factory_5fgenerator_3c_20combination_5fgenerator_3a_3aconst_5fiterator_2c_20std_3a_3avector_3c_20t_20_3e_20_3e_174',['Factory_Generator&lt; Combination_Generator::const_iterator, std::vector&lt; T &gt; &gt;',['../classSymmetric__Polynomials_1_1Combination__Generator_1_1const__iterator.html#a7a17d42933649d59655767adc61467b5',1,'Symmetric_Polynomials::Combination_Generator::const_iterator']]],
-  ['factory_5fgenerator_3c_20permutation_5fgenerator_3a_3aconst_5fiterator_2c_20std_3a_3avector_3c_20t_20_3e_20_3e_175',['Factory_Generator&lt; Permutation_Generator::const_iterator, std::vector&lt; T &gt; &gt;',['../classSymmetric__Polynomials_1_1Permutation__Generator_1_1const__iterator.html#afcc4bbd9d7f7510c19c189842e641500',1,'Symmetric_Polynomials::Permutation_Generator::const_iterator']]]
+  ['factorygenerator_3c_20combinationgenerator_3a_3aconstiterator_2c_20std_3a_3avector_3c_20t_20_3e_20_3e_166',['FactoryGenerator&lt; CombinationGenerator::constIterator, std::vector&lt; T &gt; &gt;',['../classsymmp_1_1CombinationGenerator_1_1constIterator.html#a55f76b622f60f913f05f096235e32951',1,'symmp::CombinationGenerator::constIterator']]],
+  ['factorygenerator_3c_20permutationgenerator_3a_3aconstiterator_2c_20std_3a_3avector_3c_20t_20_3e_20_3e_167',['FactoryGenerator&lt; PermutationGenerator::constIterator, std::vector&lt; T &gt; &gt;',['../classsymmp_1_1PermutationGenerator_1_1constIterator.html#a9158e4e8c1b149de156827fbef0e2552',1,'symmp::PermutationGenerator::constIterator']]]
 ];

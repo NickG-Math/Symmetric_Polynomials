@@ -4,25 +4,25 @@
 ///@file
 ///@brief Implementation of Half_Idempotent.hpp
 
-namespace Symmetric_Polynomials
+namespace symmp
 {
 
 	template <typename T, size_t N>
-	struct Array_Vector_Wrapper : public std::array<T, N>
+	struct ArrayVectorWrapper : public std::array<T, N>
 	{
 		using std::array<T, N>::array;
 		///Constructor with "size" does nothing (used to have consistent interface with vector)
-		Array_Vector_Wrapper(size_t) : std::array<T, N>() {}
+		ArrayVectorWrapper(size_t) : std::array<T, N>() {}
 	};
 
 	template <typename T>
-	struct Array_Vector_Wrapper<T, 0> : public std::vector<T>
+	struct ArrayVectorWrapper<T, 0> : public std::vector<T>
 	{
 		using std::vector<T>::vector;
 	};
 
 	template <typename T, typename _deg, size_t N>
-	_deg Half_Idempotent_Variables<T, _deg, N>::degree() const
+	_deg HalfIdempotentVariables<T, _deg, N>::degree() const
 	{
 		deg_t degree = 0;
 		for (size_t i = 0; i < this->size() / 2; i++)
@@ -31,9 +31,9 @@ namespace Symmetric_Polynomials
 	}
 
 	template <typename T, typename _deg, size_t N>
-	Half_Idempotent_Variables<T, _deg, N> Half_Idempotent_Variables<T, _deg, N>::operator+(const Half_Idempotent_Variables &other) const
+	HalfIdempotentVariables<T, _deg, N> HalfIdempotentVariables<T, _deg, N>::operator+(const HalfIdempotentVariables &other) const
 	{
-		Half_Idempotent_Variables v(this->size());
+		HalfIdempotentVariables v(this->size());
 		for (size_t i = 0; i < this->size(); i++)
 			v[i] = (*this)[i] + other[i];
 		for (size_t i = this->size() / 2; i < this->size(); i++)
@@ -42,9 +42,9 @@ namespace Symmetric_Polynomials
 	}
 
 	template <typename T, typename _deg, size_t N>
-	Half_Idempotent_Variables<T, _deg, N> Half_Idempotent_Variables<T, _deg, N>::operator-(const Half_Idempotent_Variables &other) const
+	HalfIdempotentVariables<T, _deg, N> HalfIdempotentVariables<T, _deg, N>::operator-(const HalfIdempotentVariables &other) const
 	{
-		Half_Idempotent_Variables v(this->size());
+		HalfIdempotentVariables v(this->size());
 		for (size_t i = 0; i < this->size(); i++)
 			v[i] = (*this)[i] - other[i];
 		for (size_t i = this->size() / 2; i < this->size(); i++)
@@ -53,7 +53,7 @@ namespace Symmetric_Polynomials
 	}
 
 	template <typename T, typename _deg, size_t N>
-	std::string Half_Idempotent_Variables<T, _deg, N>::name(int i, int number_of_variables)
+	std::string HalfIdempotentVariables<T, _deg, N>::name(int i, int number_of_variables)
 	{
 		if (i < number_of_variables / 2)
 			return "x_" + std::to_string(i + 1);
@@ -62,58 +62,58 @@ namespace Symmetric_Polynomials
 	}
 
 	template <typename T, typename _deg, size_t N>
-	size_t Half_Idempotent_Variables<T, _deg, N>::operator()() const
+	size_t HalfIdempotentVariables<T, _deg, N>::operator()() const
 	{
 		return generic_hasher(*this);
 	}
 
 	template <typename T, typename _deg>
-	Twisted_Chern_Variables<T, _deg> Twisted_Chern_Variables<T, _deg>::operator+(const Twisted_Chern_Variables &other) const
+	TwistedChernVariables<T, _deg> TwistedChernVariables<T, _deg>::operator+(const TwistedChernVariables &other) const
 	{
-		Standard_Variables v(*this);
+		StandardVariables v(*this);
 		for (size_t i = 0; i < this->size(); i++)
 			v[i] += other[i];
 		return v;
 	}
 
 	template <typename T, typename _deg>
-	size_t Twisted_Chern_Variables<T, _deg>::operator()() const
+	size_t TwistedChernVariables<T, _deg>::operator()() const
 	{
 		return generic_hasher(*this);
 	}
 
 	template <typename xy, typename ch>
-	Half_Idempotent_Basis<xy, ch>::Half_Idempotent_Basis(int n) : Polynomial_Basis<Half_Idempotent_Basis<xy, ch>, xy, ch>(2 * n), n(n), number_of_generators(n + (n * n + n) / 2)
+	TwistedChernBasis<xy, ch>::TwistedChernBasis(int n) : PolynomialBasis<TwistedChernBasis<xy, ch>, xy, ch>(2 * n), n(n), number_of_generators(n + (n * n + n) / 2)
 	{
 		set_generators();
 		set_relations();
 	}
 
 	template <typename xy, typename ch>
-	const auto &Half_Idempotent_Basis<xy, ch>::relations() const
+	const auto &TwistedChernBasis<xy, ch>::relations() const
 	{
 		return _relations;
 	}
 
 	template <typename xy, typename ch>
-	const auto &Half_Idempotent_Basis<xy, ch>::generator(int s, int j) const
+	const auto &TwistedChernBasis<xy, ch>::generator(int s, int j) const
 	{
 		return _generators[index(s, j)];
 	}
 
 	template <typename xy, typename ch>
-	int Half_Idempotent_Basis<xy, ch>::index(int s, int j) const
+	int TwistedChernBasis<xy, ch>::index(int s, int j) const
 	{
 		return generator_double_index.at({s, j});
 	}
 
 	template <typename xy, typename ch>
-	auto Half_Idempotent_Basis<xy, ch>::create_generator(int s, int i)
+	auto TwistedChernBasis<xy, ch>::create_generator(int s, int i)
 	{
-		Polynomial<xy> tchern(2 * n);
+		xy tchern;
 		xy_t mono(2 * n);
-		auto c_x = Combination_Generator<typename xy_t::value_type>(n, s);
-		auto c_y = Combination_Generator<typename xy_t::value_type>(n - s, i);
+		auto c_x = CombinationGenerator<typename xy_t::value_type>(n, s);
+		auto c_y = CombinationGenerator<typename xy_t::value_type>(n - s, i);
 		for (const auto &comb_x : c_x)
 		{
 			for (const auto &j : comb_x)
@@ -140,7 +140,7 @@ namespace Symmetric_Polynomials
 	}
 
 	template <typename xy, typename ch>
-	void Half_Idempotent_Basis<xy, ch>::set_generators()
+	void TwistedChernBasis<xy, ch>::set_generators()
 	{
 		generator_names.reserve(number_of_generators);
 		generator_dimensions.reserve(number_of_generators);
@@ -167,7 +167,7 @@ namespace Symmetric_Polynomials
 	}
 
 	template <typename xy, typename ch>
-	void Half_Idempotent_Basis<xy, ch>::set_relations()
+	void TwistedChernBasis<xy, ch>::set_relations()
 	{
 		for (int s = 0; s < n; s++)
 			for (int t = s; t < n; t++)
@@ -184,7 +184,7 @@ namespace Symmetric_Polynomials
 	}
 
 	template <typename xy, typename ch>
-	auto Half_Idempotent_Basis<xy, ch>::find_exponent(const xy_t &term) const
+	auto TwistedChernBasis<xy, ch>::find_exponent(const xy_t &term) const
 	{
 		chern_t exponent(number_of_generators);
 		find_exponent_recursive(term, exponent);
@@ -192,7 +192,7 @@ namespace Symmetric_Polynomials
 	}
 
 	template <typename xy, typename ch>
-	void Half_Idempotent_Basis<xy, ch>::find_exponent_recursive(const xy_t &term, chern_t &exponent) const
+	void TwistedChernBasis<xy, ch>::find_exponent_recursive(const xy_t &term, chern_t &exponent) const
 	{
 		if (term[n] > 0)
 		{ //clear the consecutive y_i at the start
@@ -238,22 +238,22 @@ namespace Symmetric_Polynomials
 	}
 
 	///Prints all relations in the description of the fixed points of \f$R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)\f$ in terms of \f$\alpha_i, c_i, \gamma_{s,j}\f$ (printed as a_i,c_i,c_{s,j} in the console)
-	template <typename HIB>
+	template <typename xy_poly_t, typename chern_poly_t>
 	void print_half_idempotent_relations(int n, bool print, bool verify, bool verify_verbose)
 	{
-		HIB hib(n);
+		TwistedChernBasis<xy_poly_t,chern_poly_t> tcb(n);
 PARALLELIZE
-		for (int64_t i = 0; i < (int64_t)hib.relations().size(); i++)
+		for (int64_t i = 0; i < (int64_t)tcb.relations().size(); i++)
 		{ //i is signed as MSVC still does not support OMP3.0...
-			const auto &rel = hib.relations()[i];
-			auto p = hib(rel);
-			auto q = hib(p);
+			const auto &rel = tcb.relations()[i];
+			auto p = tcb(rel);
+			auto q = tcb(p);
 			std::stringstream ss;
 			if (print)
 				ss << rel << " = " << q << "\n";
 			if (verify)
 			{
-				if (p != hib(q))
+				if (p != tcb(q))
 				{
 					std::cerr << "Verification failed! Relation in x_i,y_i is:\n"
 							  << rel << "\n Relation in a,c_i,c_{s,j} is\n"

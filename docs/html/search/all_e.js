@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['relations_68',['relations',['../classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#a7567091aa93230877cc358f698ab4e90',1,'Symmetric_Polynomials::Half_Idempotent_Basis']]],
-  ['reserve_69',['reserve',['../classSymmetric__Polynomials_1_1Polynomial.html#adf413d58aa5d7f36e58884d91e9aabda',1,'Symmetric_Polynomials::Polynomial']]]
+  ['relations_64',['relations',['../classsymmp_1_1TwistedChernBasis.html#af336c73e3990b2a95c27ca79376edb3c',1,'symmp::TwistedChernBasis']]],
+  ['reserve_65',['reserve',['../classsymmp_1_1Polynomial.html#af45d30f307f301b9d43fcdf52897bbce',1,'symmp::Polynomial']]]
 ];

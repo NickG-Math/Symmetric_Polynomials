@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['insert_41',['insert',['../classSymmetric__Polynomials_1_1Polynomial.html#a398889dc1151404048820a5c1b4baf5a',1,'Symmetric_Polynomials::Polynomial']]]
+  ['insert_36',['insert',['../classsymmp_1_1Polynomial.html#a3fdc0ef3971651e3b978d65e62ca1776',1,'symmp::Polynomial']]]
 ];

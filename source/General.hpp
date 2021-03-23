@@ -15,7 +15,7 @@
 ///	@brief Contains general operations on vectors: hashing, computing degrees
 
 ///	@brief The namespace which contains every method and class in the library
-namespace Symmetric_Polynomials
+namespace symmp
 {
 
 	///Hash algorithm CRC32. SSE4.1 and up

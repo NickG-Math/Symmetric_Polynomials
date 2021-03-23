@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['xy_5fcontainer_5ft_85',['xy_container_t',['../classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#ac468c9f33e9c25c20f6d1d41aaef462a',1,'Symmetric_Polynomials::Half_Idempotent_Basis']]]
+  ['write_5fpontryagin_5fc2_5fin_5fterms_5fof_5fchern_5fclasses_81',['write_pontryagin_C2_in_terms_of_Chern_classes',['../Demo_8cpp.html#a4035f75fec6b080c4047d6b04281910f',1,'Demo.cpp']]]
 ];

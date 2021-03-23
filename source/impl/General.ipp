@@ -4,7 +4,7 @@
 ///@file
 ///@brief Implementation of General.hpp
 
-namespace Symmetric_Polynomials
+namespace symmp
 {
 
 	///Hashing algorithm using CRC32 (SSE4.1 and up)

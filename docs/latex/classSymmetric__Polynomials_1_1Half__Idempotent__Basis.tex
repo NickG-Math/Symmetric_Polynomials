@@ -1,5 +1,5 @@
-\hypertarget{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{}\doxysubsection{Symmetric\+\_\+\+Polynomials\+::Half\+\_\+\+Idempotent\+\_\+\+Basis$<$ \+\_\+xy\+\_\+container, \+\_\+chern\+\_\+container $>$ Class Template Reference}
-\label{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}\index{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$}}
+\hypertarget{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{}\doxysubsection{Symmetric\+\_\+\+Polynomials\+::Half\+\_\+\+Idempotent\+\_\+\+Basis$<$ \+\_\+xy\+\_\+poly\+\_\+t, \+\_\+chern\+\_\+poly\+\_\+t $>$ Class Template Reference}
+\label{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}\index{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$}}
 
 
 Class for half-\/idempotent symmetric polynomials, allowing transformation from $x_i,y_i$ variables to $\gamma_{s,i}$ variables and vice-\/versa.  
@@ -11,7 +11,7 @@ Class for half-\/idempotent symmetric polynomials, allowing transformation from 
 
 
 
-Inheritance diagram for Symmetric\+\_\+\+Polynomials\+::Half\+\_\+\+Idempotent\+\_\+\+Basis$<$ \+\_\+xy\+\_\+container, \+\_\+chern\+\_\+container $>$\+:\nopagebreak
+Inheritance diagram for Symmetric\+\_\+\+Polynomials\+::Half\+\_\+\+Idempotent\+\_\+\+Basis$<$ \+\_\+xy\+\_\+poly\+\_\+t, \+\_\+chern\+\_\+poly\+\_\+t $>$\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,84 +20,52 @@ Inheritance diagram for Symmetric\+\_\+\+Polynomials\+::Half\+\_\+\+Idempotent\+
 \end{figure}
 
 
-Collaboration diagram for Symmetric\+\_\+\+Polynomials\+::Half\+\_\+\+Idempotent\+\_\+\+Basis$<$ \+\_\+xy\+\_\+container, \+\_\+chern\+\_\+container $>$\+:\nopagebreak
+Collaboration diagram for Symmetric\+\_\+\+Polynomials\+::Half\+\_\+\+Idempotent\+\_\+\+Basis$<$ \+\_\+xy\+\_\+poly\+\_\+t, \+\_\+chern\+\_\+poly\+\_\+t $>$\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classSymmetric__Polynomials_1_1Half__Idempotent__Basis__coll__graph}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Public Types}
-\begin{DoxyCompactItemize}
-\item 
-typedef \+\_\+xy\+\_\+container \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_ac468c9f33e9c25c20f6d1d41aaef462a}{xy\+\_\+container\+\_\+t}}
-\begin{DoxyCompactList}\small\item\em The container of polynomials on x,y variables. \end{DoxyCompactList}\item 
-typedef \+\_\+chern\+\_\+container \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_a71d396530f096587ae2ba38431ba7dad}{chern\+\_\+container\+\_\+t}}
-\begin{DoxyCompactList}\small\item\em The container of polynomials on x,y variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_aac5e4cbc16138448828c4ffded90ef24}{Half\+\_\+\+Idempotent\+\_\+\+Basis}} (int n)
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_a2528c6d897921b951cdd711ae19172ce}{Half\+\_\+\+Idempotent\+\_\+\+Basis}} (int n)
 \begin{DoxyCompactList}\small\item\em Constructs the generators and the relation set given $n$ in $x_1,...,x_n,y_1,...,y_n$. \end{DoxyCompactList}\item 
-const auto \& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_a7567091aa93230877cc358f698ab4e90}{relations}} () const
+const auto \& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_ae6ea9db7ca29c8d874da41bf971ebe92}{relations}} () const
 \begin{DoxyCompactList}\small\item\em Stores the relations $\gamma_{s,i}\gamma_{t,j}$ for $0<s<=t<=s+i$ and $i,j>0$. \end{DoxyCompactList}\item 
-const auto \& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_ad28d3005631ff1f1f3960d85d9796989}{generator}} (int s, int j) const
+const auto \& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_a0cb37f2754dae0581b91cdc29c517d8c}{generator}} (int s, int j) const
 \begin{DoxyCompactList}\small\item\em Returns generator $\gamma_{s,j}$. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_a0ceab473cdb4c549c94e866d7caf85d1}{Polynomial\+\_\+\+Basis$<$ Half\+\_\+\+Idempotent\+\_\+\+Basis$<$ \+\_\+xy\+\_\+container, \+\_\+chern\+\_\+container $>$, \+\_\+xy\+\_\+container, \+\_\+chern\+\_\+container $>$}}
+class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_ad67de33b0a0d967b20a0ebe93695a00b}{Polynomial\+Basis$<$ Half\+\_\+\+Idempotent\+\_\+\+Basis$<$ \+\_\+xy\+\_\+poly\+\_\+t, \+\_\+chern\+\_\+poly\+\_\+t $>$, \+\_\+xy\+\_\+poly\+\_\+t, \+\_\+chern\+\_\+poly\+\_\+t $>$}}
 \begin{DoxyCompactList}\small\item\em Befriending parent for C\+R\+TP. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 
 
 \doxysubsubsection{Detailed Description}
-\subsubsection*{template$<$typename \+\_\+xy\+\_\+container, typename \+\_\+chern\+\_\+container$>$\newline
-class Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Basis$<$ \+\_\+xy\+\_\+container, \+\_\+chern\+\_\+container $>$}
+\subsubsection*{template$<$typename \+\_\+xy\+\_\+poly\+\_\+t, typename \+\_\+chern\+\_\+poly\+\_\+t$>$\newline
+class Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Basis$<$ \+\_\+xy\+\_\+poly\+\_\+t, \+\_\+chern\+\_\+poly\+\_\+t $>$}
 
 Class for half-\/idempotent symmetric polynomials, allowing transformation from $x_i,y_i$ variables to $\gamma_{s,i}$ variables and vice-\/versa. 
 
 
 \begin{DoxyTemplParams}{Template Parameters}
-{\em \+\_\+xy\+\_\+container} & The container type on the \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}} $x_i,y_i$ \\
+{\em \+\_\+xy\+\_\+poly\+\_\+t} & The container type on the \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}} $x_i,y_i$ \\
 \hline
-{\em \+\_\+chern\+\_\+container} & The container type on the \mbox{\hyperlink{structSymmetric__Polynomials_1_1Twisted__Chern__Variables}{Twisted\+\_\+\+Chern\+\_\+\+Variables}} $\gamma_{s,j}$ \\
+{\em \+\_\+chern\+\_\+poly\+\_\+t} & The container type on the \mbox{\hyperlink{structSymmetric__Polynomials_1_1Twisted__Chern__Variables}{Twisted\+\_\+\+Chern\+\_\+\+Variables}} $\gamma_{s,j}$ \\
 \hline
 \end{DoxyTemplParams}
 
 
-\doxysubsubsection{Member Typedef Documentation}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_a71d396530f096587ae2ba38431ba7dad}\label{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_a71d396530f096587ae2ba38431ba7dad}} 
-\index{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$}!chern\_container\_t@{chern\_container\_t}}
-\index{chern\_container\_t@{chern\_container\_t}!Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$}}
-\doxyparagraph{\texorpdfstring{chern\_container\_t}{chern\_container\_t}}
-{\footnotesize\ttfamily template$<$typename \+\_\+xy\+\_\+container , typename \+\_\+chern\+\_\+container $>$ \\
-typedef \+\_\+chern\+\_\+container \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Basis}}$<$ \+\_\+xy\+\_\+container, \+\_\+chern\+\_\+container $>$\+::\mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_a71d396530f096587ae2ba38431ba7dad}{chern\+\_\+container\+\_\+t}}}
-
-
-
-The container of polynomials on x,y variables. 
-
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_ac468c9f33e9c25c20f6d1d41aaef462a}\label{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_ac468c9f33e9c25c20f6d1d41aaef462a}} 
-\index{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$}!xy\_container\_t@{xy\_container\_t}}
-\index{xy\_container\_t@{xy\_container\_t}!Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$}}
-\doxyparagraph{\texorpdfstring{xy\_container\_t}{xy\_container\_t}}
-{\footnotesize\ttfamily template$<$typename \+\_\+xy\+\_\+container , typename \+\_\+chern\+\_\+container $>$ \\
-typedef \+\_\+xy\+\_\+container \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Basis}}$<$ \+\_\+xy\+\_\+container, \+\_\+chern\+\_\+container $>$\+::\mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_ac468c9f33e9c25c20f6d1d41aaef462a}{xy\+\_\+container\+\_\+t}}}
-
-
-
-The container of polynomials on x,y variables. 
-
-
-
 \doxysubsubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_aac5e4cbc16138448828c4ffded90ef24}\label{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_aac5e4cbc16138448828c4ffded90ef24}} 
-\index{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$}!Half\_Idempotent\_Basis@{Half\_Idempotent\_Basis}}
-\index{Half\_Idempotent\_Basis@{Half\_Idempotent\_Basis}!Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$}}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_a2528c6d897921b951cdd711ae19172ce}\label{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_a2528c6d897921b951cdd711ae19172ce}} 
+\index{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$}!Half\_Idempotent\_Basis@{Half\_Idempotent\_Basis}}
+\index{Half\_Idempotent\_Basis@{Half\_Idempotent\_Basis}!Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$}}
 \doxyparagraph{\texorpdfstring{Half\_Idempotent\_Basis()}{Half\_Idempotent\_Basis()}}
-{\footnotesize\ttfamily template$<$typename \+\_\+xy\+\_\+container , typename \+\_\+chern\+\_\+container $>$ \\
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Basis}}$<$ \+\_\+xy\+\_\+container, \+\_\+chern\+\_\+container $>$\+::\mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Half\+\_\+\+Idempotent\+\_\+\+Basis}} (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$typename \+\_\+xy\+\_\+poly\+\_\+t , typename \+\_\+chern\+\_\+poly\+\_\+t $>$ \\
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Basis}}$<$ \+\_\+xy\+\_\+poly\+\_\+t, \+\_\+chern\+\_\+poly\+\_\+t $>$\+::\mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Half\+\_\+\+Idempotent\+\_\+\+Basis}} (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
 
 
 
@@ -111,12 +79,12 @@ Constructs the generators and the relation set given $n$ in $x_1,...,x_n,y_1,...
 
 
 \doxysubsubsection{Member Function Documentation}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_ad28d3005631ff1f1f3960d85d9796989}\label{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_ad28d3005631ff1f1f3960d85d9796989}} 
-\index{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$}!generator@{generator}}
-\index{generator@{generator}!Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$}}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_a0cb37f2754dae0581b91cdc29c517d8c}\label{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_a0cb37f2754dae0581b91cdc29c517d8c}} 
+\index{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$}!generator@{generator}}
+\index{generator@{generator}!Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$}}
 \doxyparagraph{\texorpdfstring{generator()}{generator()}}
-{\footnotesize\ttfamily template$<$typename \+\_\+xy\+\_\+container , typename \+\_\+chern\+\_\+container $>$ \\
-const auto\& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Basis}}$<$ \+\_\+xy\+\_\+container, \+\_\+chern\+\_\+container $>$\+::generator (\begin{DoxyParamCaption}\item[{int}]{s,  }\item[{int}]{j }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily template$<$typename \+\_\+xy\+\_\+poly\+\_\+t , typename \+\_\+chern\+\_\+poly\+\_\+t $>$ \\
+const auto\& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Basis}}$<$ \+\_\+xy\+\_\+poly\+\_\+t, \+\_\+chern\+\_\+poly\+\_\+t $>$\+::generator (\begin{DoxyParamCaption}\item[{int}]{s,  }\item[{int}]{j }\end{DoxyParamCaption}) const}
 
 
 
@@ -132,12 +100,19 @@ Returns generator $\gamma_{s,j}$.
 \begin{DoxyReturn}{Returns}
 $\gamma_{s,j}$ as \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} on the $x_i,y_i$ variables 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_a7567091aa93230877cc358f698ab4e90}\label{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_a7567091aa93230877cc358f698ab4e90}} 
-\index{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$}!relations@{relations}}
-\index{relations@{relations}!Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$}}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_a0cb37f2754dae0581b91cdc29c517d8c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_ae6ea9db7ca29c8d874da41bf971ebe92}\label{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_ae6ea9db7ca29c8d874da41bf971ebe92}} 
+\index{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$}!relations@{relations}}
+\index{relations@{relations}!Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$}}
 \doxyparagraph{\texorpdfstring{relations()}{relations()}}
-{\footnotesize\ttfamily template$<$typename \+\_\+xy\+\_\+container , typename \+\_\+chern\+\_\+container $>$ \\
-const auto\& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Basis}}$<$ \+\_\+xy\+\_\+container, \+\_\+chern\+\_\+container $>$\+::relations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily template$<$typename \+\_\+xy\+\_\+poly\+\_\+t , typename \+\_\+chern\+\_\+poly\+\_\+t $>$ \\
+const auto\& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Symmetric\+\_\+\+Polynomials\+::\+Half\+\_\+\+Idempotent\+\_\+\+Basis}}$<$ \+\_\+xy\+\_\+poly\+\_\+t, \+\_\+chern\+\_\+poly\+\_\+t $>$\+::relations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -149,12 +124,12 @@ const\& of vector containing the relation Polynomials $\gamma_{s,i}\gamma_{t,j}$
 
 
 \doxysubsubsection{Friends And Related Function Documentation}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_a0ceab473cdb4c549c94e866d7caf85d1}\label{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_a0ceab473cdb4c549c94e866d7caf85d1}} 
-\index{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$}!Polynomial\_Basis$<$ Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$, \_xy\_container, \_chern\_container $>$@{Polynomial\_Basis$<$ Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$, \_xy\_container, \_chern\_container $>$}}
-\index{Polynomial\_Basis$<$ Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$, \_xy\_container, \_chern\_container $>$@{Polynomial\_Basis$<$ Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$, \_xy\_container, \_chern\_container $>$}!Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$}}
-\doxyparagraph{\texorpdfstring{Polynomial\_Basis$<$ Half\_Idempotent\_Basis$<$ \_xy\_container, \_chern\_container $>$, \_xy\_container, \_chern\_container $>$}{Polynomial\_Basis< Half\_Idempotent\_Basis< \_xy\_container, \_chern\_container >, \_xy\_container, \_chern\_container >}}
-{\footnotesize\ttfamily template$<$typename \+\_\+xy\+\_\+container , typename \+\_\+chern\+\_\+container $>$ \\
-friend class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial__Basis}{Polynomial\+\_\+\+Basis}}$<$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Half\+\_\+\+Idempotent\+\_\+\+Basis}}$<$ \+\_\+xy\+\_\+container, \+\_\+chern\+\_\+container $>$, \+\_\+xy\+\_\+container, \+\_\+chern\+\_\+container $>$\hspace{0.3cm}{\ttfamily [friend]}}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_ad67de33b0a0d967b20a0ebe93695a00b}\label{classSymmetric__Polynomials_1_1Half__Idempotent__Basis_ad67de33b0a0d967b20a0ebe93695a00b}} 
+\index{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$}!PolynomialBasis$<$ Half\_Idempotent\_Basis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$, \_xy\_poly\_t, \_chern\_poly\_t $>$@{PolynomialBasis$<$ Half\_Idempotent\_Basis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$, \_xy\_poly\_t, \_chern\_poly\_t $>$}}
+\index{PolynomialBasis$<$ Half\_Idempotent\_Basis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$, \_xy\_poly\_t, \_chern\_poly\_t $>$@{PolynomialBasis$<$ Half\_Idempotent\_Basis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$, \_xy\_poly\_t, \_chern\_poly\_t $>$}!Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$@{Symmetric\_Polynomials::Half\_Idempotent\_Basis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$}}
+\doxyparagraph{\texorpdfstring{PolynomialBasis$<$ Half\_Idempotent\_Basis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$, \_xy\_poly\_t, \_chern\_poly\_t $>$}{PolynomialBasis< Half\_Idempotent\_Basis< \_xy\_poly\_t, \_chern\_poly\_t >, \_xy\_poly\_t, \_chern\_poly\_t >}}
+{\footnotesize\ttfamily template$<$typename \+\_\+xy\+\_\+poly\+\_\+t , typename \+\_\+chern\+\_\+poly\+\_\+t $>$ \\
+friend class \mbox{\hyperlink{classSymmetric__Polynomials_1_1PolynomialBasis}{Polynomial\+Basis}}$<$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Half__Idempotent__Basis}{Half\+\_\+\+Idempotent\+\_\+\+Basis}}$<$ \+\_\+xy\+\_\+poly\+\_\+t, \+\_\+chern\+\_\+poly\+\_\+t $>$, \+\_\+xy\+\_\+poly\+\_\+t, \+\_\+chern\+\_\+poly\+\_\+t $>$\hspace{0.3cm}{\ttfamily [friend]}}
 
 
 

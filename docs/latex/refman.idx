@@ -1,0 +1,215 @@
+\indexentry{symmp@{symmp}|hyperpage}{9}
+\indexentry{symmp@{symmp}!OrderedPolynomial@{OrderedPolynomial}|hyperpage}{10}
+\indexentry{OrderedPolynomial@{OrderedPolynomial}!symmp@{symmp}|hyperpage}{10}
+\indexentry{symmp@{symmp}!UnorderedPolynomial@{UnorderedPolynomial}|hyperpage}{11}
+\indexentry{UnorderedPolynomial@{UnorderedPolynomial}!symmp@{symmp}|hyperpage}{11}
+\indexentry{symmp@{symmp}!all\_combinations@{all\_combinations}|hyperpage}{11}
+\indexentry{all\_combinations@{all\_combinations}!symmp@{symmp}|hyperpage}{11}
+\indexentry{symmp@{symmp}!all\_permutations@{all\_permutations}|hyperpage}{11}
+\indexentry{all\_permutations@{all\_permutations}!symmp@{symmp}|hyperpage}{11}
+\indexentry{symmp@{symmp}!general\_compute\_degree@{general\_compute\_degree}|hyperpage}{12}
+\indexentry{general\_compute\_degree@{general\_compute\_degree}!symmp@{symmp}|hyperpage}{12}
+\indexentry{symmp@{symmp}!generic\_hasher@{generic\_hasher}|hyperpage}{12}
+\indexentry{generic\_hasher@{generic\_hasher}!symmp@{symmp}|hyperpage}{12}
+\indexentry{symmp@{symmp}!operator$<$$<$@{operator$<$$<$}|hyperpage}{13}
+\indexentry{operator$<$$<$@{operator$<$$<$}!symmp@{symmp}|hyperpage}{13}
+\indexentry{symmp@{symmp}!print\_half\_idempotent\_relations@{print\_half\_idempotent\_relations}|hyperpage}{13}
+\indexentry{print\_half\_idempotent\_relations@{print\_half\_idempotent\_relations}!symmp@{symmp}|hyperpage}{13}
+\indexentry{ArrayVectorWrapper$<$ T, N $>$@{ArrayVectorWrapper$<$ T, N $>$}|hyperpage}{13}
+\indexentry{CombinationGenerator$<$ T $>$@{CombinationGenerator$<$ T $>$}|hyperpage}{14}
+\indexentry{CombinationGenerator$<$ T $>$@{CombinationGenerator$<$ T $>$}!CombinationGenerator@{CombinationGenerator}|hyperpage}{15}
+\indexentry{CombinationGenerator@{CombinationGenerator}!CombinationGenerator$<$ T $>$@{CombinationGenerator$<$ T $>$}|hyperpage}{15}
+\indexentry{CombinationGenerator$<$ T $>$@{CombinationGenerator$<$ T $>$}!begin@{begin}|hyperpage}{16}
+\indexentry{begin@{begin}!CombinationGenerator$<$ T $>$@{CombinationGenerator$<$ T $>$}|hyperpage}{16}
+\indexentry{CombinationGenerator$<$ T $>$@{CombinationGenerator$<$ T $>$}!end@{end}|hyperpage}{16}
+\indexentry{end@{end}!CombinationGenerator$<$ T $>$@{CombinationGenerator$<$ T $>$}|hyperpage}{16}
+\indexentry{CombinationGenerator$<$ T $>$@{CombinationGenerator$<$ T $>$}!size@{size}|hyperpage}{16}
+\indexentry{size@{size}!CombinationGenerator$<$ T $>$@{CombinationGenerator$<$ T $>$}|hyperpage}{16}
+\indexentry{PermutationGenerator$<$ T $>$::constIterator@{PermutationGenerator$<$ T $>$::constIterator}|hyperpage}{17}
+\indexentry{PermutationGenerator$<$ T $>$::constIterator@{PermutationGenerator$<$ T $>$::constIterator}!FactoryGenerator$<$ PermutationGenerator::constIterator, std::vector$<$ T $>$ $>$@{FactoryGenerator$<$ PermutationGenerator::constIterator, std::vector$<$ T $>$ $>$}|hyperpage}{18}
+\indexentry{FactoryGenerator$<$ PermutationGenerator::constIterator, std::vector$<$ T $>$ $>$@{FactoryGenerator$<$ PermutationGenerator::constIterator, std::vector$<$ T $>$ $>$}!PermutationGenerator$<$ T $>$::constIterator@{PermutationGenerator$<$ T $>$::constIterator}|hyperpage}{18}
+\indexentry{PermutationGenerator$<$ T $>$::constIterator@{PermutationGenerator$<$ T $>$::constIterator}!PermutationGenerator@{PermutationGenerator}|hyperpage}{19}
+\indexentry{PermutationGenerator@{PermutationGenerator}!PermutationGenerator$<$ T $>$::constIterator@{PermutationGenerator$<$ T $>$::constIterator}|hyperpage}{19}
+\indexentry{CombinationGenerator$<$ T $>$::constIterator@{CombinationGenerator$<$ T $>$::constIterator}|hyperpage}{19}
+\indexentry{CombinationGenerator$<$ T $>$::constIterator@{CombinationGenerator$<$ T $>$::constIterator}!CombinationGenerator@{CombinationGenerator}|hyperpage}{20}
+\indexentry{CombinationGenerator@{CombinationGenerator}!CombinationGenerator$<$ T $>$::constIterator@{CombinationGenerator$<$ T $>$::constIterator}|hyperpage}{20}
+\indexentry{CombinationGenerator$<$ T $>$::constIterator@{CombinationGenerator$<$ T $>$::constIterator}!FactoryGenerator$<$ CombinationGenerator::constIterator, std::vector$<$ T $>$ $>$@{FactoryGenerator$<$ CombinationGenerator::constIterator, std::vector$<$ T $>$ $>$}|hyperpage}{20}
+\indexentry{FactoryGenerator$<$ CombinationGenerator::constIterator, std::vector$<$ T $>$ $>$@{FactoryGenerator$<$ CombinationGenerator::constIterator, std::vector$<$ T $>$ $>$}!CombinationGenerator$<$ T $>$::constIterator@{CombinationGenerator$<$ T $>$::constIterator}|hyperpage}{20}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator}|hyperpage}{20}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator}!coeff@{coeff}|hyperpage}{21}
+\indexentry{coeff@{coeff}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator}|hyperpage}{21}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator}!degree@{degree}|hyperpage}{21}
+\indexentry{degree@{degree}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator}|hyperpage}{21}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator}!exponent@{exponent}|hyperpage}{21}
+\indexentry{exponent@{exponent}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator}|hyperpage}{21}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator}!operator"!=@{operator"!=}|hyperpage}{22}
+\indexentry{operator"!=@{operator"!=}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator}|hyperpage}{22}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator}!operator++@{operator++}|hyperpage}{22}
+\indexentry{operator++@{operator++}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator}|hyperpage}{22}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator}!operator==@{operator==}|hyperpage}{22}
+\indexentry{operator==@{operator==}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator}|hyperpage}{22}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator}!Polynomial@{Polynomial}|hyperpage}{22}
+\indexentry{Polynomial@{Polynomial}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator}|hyperpage}{22}
+\indexentry{ElementarySymmetricVariables$<$ T, \_deg $>$@{ElementarySymmetricVariables$<$ T, \_deg $>$}|hyperpage}{23}
+\indexentry{ElementarySymmetricVariables$<$ T, \_deg $>$@{ElementarySymmetricVariables$<$ T, \_deg $>$}!deg\_t@{deg\_t}|hyperpage}{26}
+\indexentry{deg\_t@{deg\_t}!ElementarySymmetricVariables$<$ T, \_deg $>$@{ElementarySymmetricVariables$<$ T, \_deg $>$}|hyperpage}{26}
+\indexentry{ElementarySymmetricVariables$<$ T, \_deg $>$@{ElementarySymmetricVariables$<$ T, \_deg $>$}!degree@{degree}|hyperpage}{26}
+\indexentry{degree@{degree}!ElementarySymmetricVariables$<$ T, \_deg $>$@{ElementarySymmetricVariables$<$ T, \_deg $>$}|hyperpage}{26}
+\indexentry{ElementarySymmetricVariables$<$ T, \_deg $>$@{ElementarySymmetricVariables$<$ T, \_deg $>$}!name@{name}|hyperpage}{26}
+\indexentry{name@{name}!ElementarySymmetricVariables$<$ T, \_deg $>$@{ElementarySymmetricVariables$<$ T, \_deg $>$}|hyperpage}{26}
+\indexentry{FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}|hyperpage}{27}
+\indexentry{FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}!end@{end}|hyperpage}{29}
+\indexentry{end@{end}!FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}|hyperpage}{29}
+\indexentry{FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}!operator"!=@{operator"!=}|hyperpage}{29}
+\indexentry{operator"!=@{operator"!=}!FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}|hyperpage}{29}
+\indexentry{FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}!operator$\ast$@{operator$\ast$}|hyperpage}{29}
+\indexentry{operator$\ast$@{operator$\ast$}!FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}|hyperpage}{29}
+\indexentry{FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}!operator++@{operator++}|hyperpage}{29}
+\indexentry{operator++@{operator++}!FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}|hyperpage}{29}
+\indexentry{FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}!completed@{completed}|hyperpage}{29}
+\indexentry{completed@{completed}!FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}|hyperpage}{29}
+\indexentry{FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}!generated@{generated}|hyperpage}{29}
+\indexentry{generated@{generated}!FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}|hyperpage}{29}
+\indexentry{HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}|hyperpage}{30}
+\indexentry{HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}!deg\_t@{deg\_t}|hyperpage}{32}
+\indexentry{deg\_t@{deg\_t}!HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}|hyperpage}{32}
+\indexentry{HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}!degree@{degree}|hyperpage}{32}
+\indexentry{degree@{degree}!HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}|hyperpage}{32}
+\indexentry{HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}!name@{name}|hyperpage}{32}
+\indexentry{name@{name}!HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}|hyperpage}{32}
+\indexentry{HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}!operator()@{operator()}|hyperpage}{32}
+\indexentry{operator()@{operator()}!HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}|hyperpage}{32}
+\indexentry{HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}!operator+@{operator+}|hyperpage}{33}
+\indexentry{operator+@{operator+}!HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}|hyperpage}{33}
+\indexentry{HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}!operator-\/@{operator-\/}|hyperpage}{33}
+\indexentry{operator-\/@{operator-\/}!HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}|hyperpage}{33}
+\indexentry{PermutationGenerator$<$ T $>$@{PermutationGenerator$<$ T $>$}|hyperpage}{33}
+\indexentry{PermutationGenerator$<$ T $>$@{PermutationGenerator$<$ T $>$}!PermutationGenerator@{PermutationGenerator}|hyperpage}{34}
+\indexentry{PermutationGenerator@{PermutationGenerator}!PermutationGenerator$<$ T $>$@{PermutationGenerator$<$ T $>$}|hyperpage}{34}
+\indexentry{PermutationGenerator$<$ T $>$@{PermutationGenerator$<$ T $>$}!begin@{begin}|hyperpage}{35}
+\indexentry{begin@{begin}!PermutationGenerator$<$ T $>$@{PermutationGenerator$<$ T $>$}|hyperpage}{35}
+\indexentry{PermutationGenerator$<$ T $>$@{PermutationGenerator$<$ T $>$}!end@{end}|hyperpage}{35}
+\indexentry{end@{end}!PermutationGenerator$<$ T $>$@{PermutationGenerator$<$ T $>$}|hyperpage}{35}
+\indexentry{PermutationGenerator$<$ T $>$@{PermutationGenerator$<$ T $>$}!size@{size}|hyperpage}{35}
+\indexentry{size@{size}!PermutationGenerator$<$ T $>$@{PermutationGenerator$<$ T $>$}|hyperpage}{35}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}|hyperpage}{35}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!deg\_t@{deg\_t}|hyperpage}{38}
+\indexentry{deg\_t@{deg\_t}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}|hyperpage}{38}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!exp\_t@{exp\_t}|hyperpage}{38}
+\indexentry{exp\_t@{exp\_t}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}|hyperpage}{38}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!scl\_t@{scl\_t}|hyperpage}{38}
+\indexentry{scl\_t@{scl\_t}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}|hyperpage}{38}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!Polynomial@{Polynomial}|hyperpage}{38}
+\indexentry{Polynomial@{Polynomial}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}|hyperpage}{38}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!Polynomial@{Polynomial}|hyperpage}{38}
+\indexentry{Polynomial@{Polynomial}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}|hyperpage}{38}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!Polynomial@{Polynomial}|hyperpage}{39}
+\indexentry{Polynomial@{Polynomial}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}|hyperpage}{39}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!begin@{begin}|hyperpage}{39}
+\indexentry{begin@{begin}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}|hyperpage}{39}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!end@{end}|hyperpage}{39}
+\indexentry{end@{end}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}|hyperpage}{39}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!highest\_term@{highest\_term}|hyperpage}{39}
+\indexentry{highest\_term@{highest\_term}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}|hyperpage}{39}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!insert@{insert}|hyperpage}{40}
+\indexentry{insert@{insert}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}|hyperpage}{40}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!number\_of\_monomials@{number\_of\_monomials}|hyperpage}{40}
+\indexentry{number\_of\_monomials@{number\_of\_monomials}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}|hyperpage}{40}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!number\_of\_variables@{number\_of\_variables}|hyperpage}{40}
+\indexentry{number\_of\_variables@{number\_of\_variables}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}|hyperpage}{40}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!operator"!=@{operator"!=}|hyperpage}{40}
+\indexentry{operator"!=@{operator"!=}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}|hyperpage}{40}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!operator$\ast$@{operator$\ast$}|hyperpage}{41}
+\indexentry{operator$\ast$@{operator$\ast$}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}|hyperpage}{41}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!operator$\ast$=@{operator$\ast$=}|hyperpage}{41}
+\indexentry{operator$\ast$=@{operator$\ast$=}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}|hyperpage}{41}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!operator$\ast$=@{operator$\ast$=}|hyperpage}{41}
+\indexentry{operator$\ast$=@{operator$\ast$=}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}|hyperpage}{41}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!operator+@{operator+}|hyperpage}{42}
+\indexentry{operator+@{operator+}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}|hyperpage}{42}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!operator+=@{operator+=}|hyperpage}{42}
+\indexentry{operator+=@{operator+=}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}|hyperpage}{42}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!operator-\/@{operator-\/}|hyperpage}{42}
+\indexentry{operator-\/@{operator-\/}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}|hyperpage}{42}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!operator-\/=@{operator-\/=}|hyperpage}{43}
+\indexentry{operator-\/=@{operator-\/=}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}|hyperpage}{43}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!operator==@{operator==}|hyperpage}{43}
+\indexentry{operator==@{operator==}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}|hyperpage}{43}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!operator$^\wedge$@{operator$^\wedge$}|hyperpage}{43}
+\indexentry{operator$^\wedge$@{operator$^\wedge$}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}|hyperpage}{43}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!print@{print}|hyperpage}{44}
+\indexentry{print@{print}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}|hyperpage}{44}
+\indexentry{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!reserve@{reserve}|hyperpage}{44}
+\indexentry{reserve@{reserve}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}|hyperpage}{44}
+\indexentry{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$@{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$}|hyperpage}{45}
+\indexentry{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$@{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$}!PolynomialBasis@{PolynomialBasis}|hyperpage}{46}
+\indexentry{PolynomialBasis@{PolynomialBasis}!PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$@{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$}|hyperpage}{46}
+\indexentry{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$@{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$}!dimensions@{dimensions}|hyperpage}{47}
+\indexentry{dimensions@{dimensions}!PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$@{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$}|hyperpage}{47}
+\indexentry{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$@{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$}!generators@{generators}|hyperpage}{47}
+\indexentry{generators@{generators}!PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$@{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$}|hyperpage}{47}
+\indexentry{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$@{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$}!names@{names}|hyperpage}{47}
+\indexentry{names@{names}!PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$@{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$}|hyperpage}{47}
+\indexentry{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$@{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$}!operator()@{operator()}|hyperpage}{47}
+\indexentry{operator()@{operator()}!PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$@{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$}|hyperpage}{47}
+\indexentry{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$@{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$}!operator()@{operator()}|hyperpage}{47}
+\indexentry{operator()@{operator()}!PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$@{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$}|hyperpage}{47}
+\indexentry{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$@{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$}!\_generators@{\_generators}|hyperpage}{48}
+\indexentry{\_generators@{\_generators}!PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$@{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$}|hyperpage}{48}
+\indexentry{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$@{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$}!generator\_dimensions@{generator\_dimensions}|hyperpage}{48}
+\indexentry{generator\_dimensions@{generator\_dimensions}!PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$@{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$}|hyperpage}{48}
+\indexentry{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$@{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$}!generator\_names@{generator\_names}|hyperpage}{48}
+\indexentry{generator\_names@{generator\_names}!PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$@{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$}|hyperpage}{48}
+\indexentry{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$@{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$}!number\_of\_variables@{number\_of\_variables}|hyperpage}{48}
+\indexentry{number\_of\_variables@{number\_of\_variables}!PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$@{PolynomialBasis$<$ spec\_t, orig\_poly\_t, new\_poly\_t $>$}|hyperpage}{48}
+\indexentry{StandardVariables$<$ T, \_deg $>$@{StandardVariables$<$ T, \_deg $>$}|hyperpage}{49}
+\indexentry{StandardVariables$<$ T, \_deg $>$@{StandardVariables$<$ T, \_deg $>$}!deg\_t@{deg\_t}|hyperpage}{50}
+\indexentry{deg\_t@{deg\_t}!StandardVariables$<$ T, \_deg $>$@{StandardVariables$<$ T, \_deg $>$}|hyperpage}{50}
+\indexentry{StandardVariables$<$ T, \_deg $>$@{StandardVariables$<$ T, \_deg $>$}!degree@{degree}|hyperpage}{50}
+\indexentry{degree@{degree}!StandardVariables$<$ T, \_deg $>$@{StandardVariables$<$ T, \_deg $>$}|hyperpage}{50}
+\indexentry{StandardVariables$<$ T, \_deg $>$@{StandardVariables$<$ T, \_deg $>$}!name@{name}|hyperpage}{51}
+\indexentry{name@{name}!StandardVariables$<$ T, \_deg $>$@{StandardVariables$<$ T, \_deg $>$}|hyperpage}{51}
+\indexentry{StandardVariables$<$ T, \_deg $>$@{StandardVariables$<$ T, \_deg $>$}!operator()@{operator()}|hyperpage}{51}
+\indexentry{operator()@{operator()}!StandardVariables$<$ T, \_deg $>$@{StandardVariables$<$ T, \_deg $>$}|hyperpage}{51}
+\indexentry{StandardVariables$<$ T, \_deg $>$@{StandardVariables$<$ T, \_deg $>$}!operator+@{operator+}|hyperpage}{51}
+\indexentry{operator+@{operator+}!StandardVariables$<$ T, \_deg $>$@{StandardVariables$<$ T, \_deg $>$}|hyperpage}{51}
+\indexentry{SymmetricBasis$<$ x\_poly\_t, e\_poly\_t $>$@{SymmetricBasis$<$ x\_poly\_t, e\_poly\_t $>$}|hyperpage}{52}
+\indexentry{SymmetricBasis$<$ x\_poly\_t, e\_poly\_t $>$@{SymmetricBasis$<$ x\_poly\_t, e\_poly\_t $>$}!SymmetricBasis@{SymmetricBasis}|hyperpage}{53}
+\indexentry{SymmetricBasis@{SymmetricBasis}!SymmetricBasis$<$ x\_poly\_t, e\_poly\_t $>$@{SymmetricBasis$<$ x\_poly\_t, e\_poly\_t $>$}|hyperpage}{53}
+\indexentry{SymmetricBasis$<$ x\_poly\_t, e\_poly\_t $>$@{SymmetricBasis$<$ x\_poly\_t, e\_poly\_t $>$}!PolynomialBasis$<$ SymmetricBasis$<$ x\_poly\_t, e\_poly\_t $>$, x\_poly\_t, e\_poly\_t $>$@{PolynomialBasis$<$ SymmetricBasis$<$ x\_poly\_t, e\_poly\_t $>$, x\_poly\_t, e\_poly\_t $>$}|hyperpage}{53}
+\indexentry{PolynomialBasis$<$ SymmetricBasis$<$ x\_poly\_t, e\_poly\_t $>$, x\_poly\_t, e\_poly\_t $>$@{PolynomialBasis$<$ SymmetricBasis$<$ x\_poly\_t, e\_poly\_t $>$, x\_poly\_t, e\_poly\_t $>$}!SymmetricBasis$<$ x\_poly\_t, e\_poly\_t $>$@{SymmetricBasis$<$ x\_poly\_t, e\_poly\_t $>$}|hyperpage}{53}
+\indexentry{TwistedChernBasis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$@{TwistedChernBasis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$}|hyperpage}{54}
+\indexentry{TwistedChernBasis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$@{TwistedChernBasis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$}!TwistedChernBasis@{TwistedChernBasis}|hyperpage}{55}
+\indexentry{TwistedChernBasis@{TwistedChernBasis}!TwistedChernBasis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$@{TwistedChernBasis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$}|hyperpage}{55}
+\indexentry{TwistedChernBasis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$@{TwistedChernBasis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$}!generator@{generator}|hyperpage}{55}
+\indexentry{generator@{generator}!TwistedChernBasis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$@{TwistedChernBasis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$}|hyperpage}{55}
+\indexentry{TwistedChernBasis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$@{TwistedChernBasis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$}!relations@{relations}|hyperpage}{56}
+\indexentry{relations@{relations}!TwistedChernBasis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$@{TwistedChernBasis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$}|hyperpage}{56}
+\indexentry{TwistedChernBasis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$@{TwistedChernBasis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$}!PolynomialBasis$<$ TwistedChernBasis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$, \_xy\_poly\_t, \_chern\_poly\_t $>$@{PolynomialBasis$<$ TwistedChernBasis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$, \_xy\_poly\_t, \_chern\_poly\_t $>$}|hyperpage}{56}
+\indexentry{PolynomialBasis$<$ TwistedChernBasis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$, \_xy\_poly\_t, \_chern\_poly\_t $>$@{PolynomialBasis$<$ TwistedChernBasis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$, \_xy\_poly\_t, \_chern\_poly\_t $>$}!TwistedChernBasis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$@{TwistedChernBasis$<$ \_xy\_poly\_t, \_chern\_poly\_t $>$}|hyperpage}{56}
+\indexentry{TwistedChernVariables$<$ T, \_deg $>$@{TwistedChernVariables$<$ T, \_deg $>$}|hyperpage}{57}
+\indexentry{TwistedChernVariables$<$ T, \_deg $>$@{TwistedChernVariables$<$ T, \_deg $>$}!deg\_t@{deg\_t}|hyperpage}{58}
+\indexentry{deg\_t@{deg\_t}!TwistedChernVariables$<$ T, \_deg $>$@{TwistedChernVariables$<$ T, \_deg $>$}|hyperpage}{58}
+\indexentry{TwistedChernVariables$<$ T, \_deg $>$@{TwistedChernVariables$<$ T, \_deg $>$}!operator()@{operator()}|hyperpage}{58}
+\indexentry{operator()@{operator()}!TwistedChernVariables$<$ T, \_deg $>$@{TwistedChernVariables$<$ T, \_deg $>$}|hyperpage}{58}
+\indexentry{TwistedChernVariables$<$ T, \_deg $>$@{TwistedChernVariables$<$ T, \_deg $>$}!operator+@{operator+}|hyperpage}{58}
+\indexentry{operator+@{operator+}!TwistedChernVariables$<$ T, \_deg $>$@{TwistedChernVariables$<$ T, \_deg $>$}|hyperpage}{58}
+\indexentry{Demo.cpp@{Demo.cpp}|hyperpage}{59}
+\indexentry{Demo.cpp@{Demo.cpp}!PARALLELIZE@{PARALLELIZE}|hyperpage}{60}
+\indexentry{PARALLELIZE@{PARALLELIZE}!Demo.cpp@{Demo.cpp}|hyperpage}{60}
+\indexentry{Demo.cpp@{Demo.cpp}!SYMMETRIC\_POLY\_USE\_OPEN\_MP@{SYMMETRIC\_POLY\_USE\_OPEN\_MP}|hyperpage}{60}
+\indexentry{SYMMETRIC\_POLY\_USE\_OPEN\_MP@{SYMMETRIC\_POLY\_USE\_OPEN\_MP}!Demo.cpp@{Demo.cpp}|hyperpage}{60}
+\indexentry{Demo.cpp@{Demo.cpp}!main@{main}|hyperpage}{60}
+\indexentry{main@{main}!Demo.cpp@{Demo.cpp}|hyperpage}{60}
+\indexentry{Demo.cpp@{Demo.cpp}!show\_and\_tell@{show\_and\_tell}|hyperpage}{60}
+\indexentry{show\_and\_tell@{show\_and\_tell}!Demo.cpp@{Demo.cpp}|hyperpage}{60}
+\indexentry{Demo.cpp@{Demo.cpp}!speed\_test@{speed\_test}|hyperpage}{61}
+\indexentry{speed\_test@{speed\_test}!Demo.cpp@{Demo.cpp}|hyperpage}{61}
+\indexentry{Demo.cpp@{Demo.cpp}!write\_pontryagin\_C2\_in\_terms\_of\_Chern\_classes@{write\_pontryagin\_C2\_in\_terms\_of\_Chern\_classes}|hyperpage}{61}
+\indexentry{write\_pontryagin\_C2\_in\_terms\_of\_Chern\_classes@{write\_pontryagin\_C2\_in\_terms\_of\_Chern\_classes}!Demo.cpp@{Demo.cpp}|hyperpage}{61}
+\indexentry{General.hpp@{General.hpp}|hyperpage}{62}
+\indexentry{Generators.hpp@{Generators.hpp}|hyperpage}{64}
+\indexentry{Guide.md@{Guide.md}|hyperpage}{65}
+\indexentry{Half\_Idempotent.hpp@{Half\_Idempotent.hpp}|hyperpage}{65}
+\indexentry{Polynomials.hpp@{Polynomials.hpp}|hyperpage}{67}
+\indexentry{Symmetric\_Basis.hpp@{Symmetric\_Basis.hpp}|hyperpage}{68}

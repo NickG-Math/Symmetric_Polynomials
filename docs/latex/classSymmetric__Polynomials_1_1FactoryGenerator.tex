@@ -1,0 +1,134 @@
+\hypertarget{classSymmetric__Polynomials_1_1FactoryGenerator}{}\doxysubsection{Factory\+Generator$<$ spec\+\_\+t, gen\+\_\+t $>$ Class Template Reference}
+\label{classSymmetric__Polynomials_1_1FactoryGenerator}\index{FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}}
+
+
+Prototype for coroutine-\/like iterators that generate elements such as interpolating vectors, permutations, combinations...  
+
+
+
+
+{\ttfamily \#include $<$Generators.\+hpp$>$}
+
+
+
+Inheritance diagram for Factory\+Generator$<$ spec\+\_\+t, gen\+\_\+t $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1FactoryGenerator__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const gen\+\_\+t \& \mbox{\hyperlink{classSymmetric__Polynomials_1_1FactoryGenerator_a9ca57d053c95efe01bf9d5997558aafd}{operator$\ast$}} () const
+\begin{DoxyCompactList}\small\item\em Returns the generated element. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSymmetric__Polynomials_1_1FactoryGenerator_a054334765bb29ffd6d6b87451bbd9279}{operator!=}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1FactoryGenerator}{Factory\+Generator}} \&other) const
+\begin{DoxyCompactList}\small\item\em Inequality of iterators (used to detect if generation has been completed) \end{DoxyCompactList}\item 
+spec\+\_\+t \& \mbox{\hyperlink{classSymmetric__Polynomials_1_1FactoryGenerator_a3a2c5520b2bfff5c55b75e179d1306ef}{operator++}} ()
+\begin{DoxyCompactList}\small\item\em Generates next element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static spec\+\_\+t \mbox{\hyperlink{classSymmetric__Polynomials_1_1FactoryGenerator_a7632d62f41f7e3c7e85d9c67cb926415}{end}} ()
+\begin{DoxyCompactList}\small\item\em Terminal iterator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classSymmetric__Polynomials_1_1FactoryGenerator_a8c06e370b709d689e392a4b7b53b47c5}{completed}}
+\begin{DoxyCompactList}\small\item\em 1 if the iterator is \mbox{\hyperlink{classSymmetric__Polynomials_1_1FactoryGenerator_a7632d62f41f7e3c7e85d9c67cb926415}{end()}} i.\+e. if all elements have been generated \end{DoxyCompactList}\item 
+gen\+\_\+t \mbox{\hyperlink{classSymmetric__Polynomials_1_1FactoryGenerator_acfa9d7bdc6f6edb5aa8b1d570ec3b15a}{generated}}
+\begin{DoxyCompactList}\small\item\em The currently generated element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+\subsubsection*{template$<$typename spec\+\_\+t, typename gen\+\_\+t$>$\newline
+class Symmetric\+\_\+\+Polynomials\+::\+Factory\+Generator$<$ spec\+\_\+t, gen\+\_\+t $>$}
+
+Prototype for coroutine-\/like iterators that generate elements such as interpolating vectors, permutations, combinations... 
+
+Inherit from this class and define a method update() to get a const iterator. ~\newline
+ You will also need begin() and \mbox{\hyperlink{classSymmetric__Polynomials_1_1FactoryGenerator_a7632d62f41f7e3c7e85d9c67cb926415}{end()}} methods constructing such iterators; \mbox{\hyperlink{classSymmetric__Polynomials_1_1FactoryGenerator_a7632d62f41f7e3c7e85d9c67cb926415}{end()}} should always be defined by calling the factory \mbox{\hyperlink{classSymmetric__Polynomials_1_1FactoryGenerator_a7632d62f41f7e3c7e85d9c67cb926415}{end()}}.~\newline
+ Example implementations\+: {\ttfamily \mbox{\hyperlink{classSymmetric__Polynomials_1_1CombinationGenerator}{Combination\+Generator}}} and {\ttfamily \mbox{\hyperlink{classSymmetric__Polynomials_1_1PermutationGenerator}{Permutation\+Generator}}} \begin{DoxyAttention}{Attention}
+Probably not thread-\/safe (depends on child\textquotesingle{}s update() method). 
+\end{DoxyAttention}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]Implement as coroutine (C++20) \end{DoxyRefDesc}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em spec\+\_\+t} & Used for compile-\/time polymorphism (C\+R\+TP)\+: set it to be the child class. \\
+\hline
+{\em gen\+\_\+t} & The type of the generated element. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1FactoryGenerator_a7632d62f41f7e3c7e85d9c67cb926415}\label{classSymmetric__Polynomials_1_1FactoryGenerator_a7632d62f41f7e3c7e85d9c67cb926415}} 
+\index{FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}!end@{end}}
+\index{end@{end}!FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}}
+\doxyparagraph{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily static spec\+\_\+t end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Terminal iterator. 
+
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1FactoryGenerator_a054334765bb29ffd6d6b87451bbd9279}\label{classSymmetric__Polynomials_1_1FactoryGenerator_a054334765bb29ffd6d6b87451bbd9279}} 
+\index{FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}}
+\doxyparagraph{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1FactoryGenerator}{Factory\+Generator}}$<$ spec\+\_\+t, gen\+\_\+t $>$ \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Inequality of iterators (used to detect if generation has been completed) 
+
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1FactoryGenerator_a9ca57d053c95efe01bf9d5997558aafd}\label{classSymmetric__Polynomials_1_1FactoryGenerator_a9ca57d053c95efe01bf9d5997558aafd}} 
+\index{FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}}
+\doxyparagraph{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily const gen\+\_\+t\& operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the generated element. 
+
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1FactoryGenerator_a3a2c5520b2bfff5c55b75e179d1306ef}\label{classSymmetric__Polynomials_1_1FactoryGenerator_a3a2c5520b2bfff5c55b75e179d1306ef}} 
+\index{FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}!operator++@{operator++}}
+\index{operator++@{operator++}!FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}}
+\doxyparagraph{\texorpdfstring{operator++()}{operator++()}}
+{\footnotesize\ttfamily spec\+\_\+t\& operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generates next element. 
+
+
+
+\doxysubsubsection{Member Data Documentation}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1FactoryGenerator_a8c06e370b709d689e392a4b7b53b47c5}\label{classSymmetric__Polynomials_1_1FactoryGenerator_a8c06e370b709d689e392a4b7b53b47c5}} 
+\index{FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}!completed@{completed}}
+\index{completed@{completed}!FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}}
+\doxyparagraph{\texorpdfstring{completed}{completed}}
+{\footnotesize\ttfamily bool completed\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+1 if the iterator is \mbox{\hyperlink{classSymmetric__Polynomials_1_1FactoryGenerator_a7632d62f41f7e3c7e85d9c67cb926415}{end()}} i.\+e. if all elements have been generated 
+
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1FactoryGenerator_acfa9d7bdc6f6edb5aa8b1d570ec3b15a}\label{classSymmetric__Polynomials_1_1FactoryGenerator_acfa9d7bdc6f6edb5aa8b1d570ec3b15a}} 
+\index{FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}!generated@{generated}}
+\index{generated@{generated}!FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}}
+\doxyparagraph{\texorpdfstring{generated}{generated}}
+{\footnotesize\ttfamily gen\+\_\+t generated\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The currently generated element. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Generators_8hpp}{Generators.\+hpp}}\end{DoxyCompactItemize}

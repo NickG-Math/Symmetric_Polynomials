@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_5fgenerators_0',['_generators',['../classSymmetric__Polynomials_1_1Polynomial__Basis.html#ae1418baa374f60493d75a19a1021fb28',1,'Symmetric_Polynomials::Polynomial_Basis']]]
+  ['_5fgenerators_0',['_generators',['../classsymmp_1_1PolynomialBasis.html#a82a0b79e96aec4dde7f31917dd46fc44',1,'symmp::PolynomialBasis']]]
 ];

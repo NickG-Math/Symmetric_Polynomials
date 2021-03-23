@@ -4,17 +4,17 @@
 ///@file
 ///@brief Implementation of Generators.hpp
 
-namespace Symmetric_Polynomials
+namespace symmp
 {
 
 	template <typename spec_t, typename gen_t>
-	const gen_t &Factory_Generator<spec_t, gen_t>::operator*() const
+	const gen_t &FactoryGenerator<spec_t, gen_t>::operator*() const
 	{
 		return generated;
 	}
 
 	template <typename spec_t, typename gen_t>
-	bool Factory_Generator<spec_t, gen_t>::operator!=(const Factory_Generator &other) const
+	bool FactoryGenerator<spec_t, gen_t>::operator!=(const FactoryGenerator &other) const
 	{
 		if (other.completed) //quick check if other=end
 			return !completed;
@@ -23,14 +23,14 @@ namespace Symmetric_Polynomials
 	}
 
 	template <typename spec_t, typename gen_t>
-	spec_t &Factory_Generator<spec_t, gen_t>::operator++()
+	spec_t &FactoryGenerator<spec_t, gen_t>::operator++()
 	{
 		static_cast<spec_t *>(this)->update();
 		return *static_cast<spec_t *>(this);
 	}
 
 	template <typename spec_t, typename gen_t>
-	spec_t Factory_Generator<spec_t, gen_t>::end()
+	spec_t FactoryGenerator<spec_t, gen_t>::end()
 	{
 		spec_t end;
 		end.completed = 1;
@@ -38,10 +38,10 @@ namespace Symmetric_Polynomials
 	}
 
 	template <typename T>
-	Permutation_Generator<T>::Permutation_Generator(T n) : n(n) {}
+	PermutationGenerator<T>::PermutationGenerator(T n) : n(n) {}
 
 	template <typename T>
-	size_t Permutation_Generator<T>::size() const
+	size_t PermutationGenerator<T>::size() const
 	{
 		size_t factorial = 1;
 		for (int i = 2; i <= n; i++)
@@ -52,16 +52,16 @@ namespace Symmetric_Polynomials
 	}
 
 	template <typename T>
-	void Permutation_Generator<T>::const_iterator::update()
+	void PermutationGenerator<T>::constIterator::update()
 	{
 		if (!std::next_permutation(this->generated.begin(), this->generated.end()))
 			this->completed = 1;
 	}
 
 	template <typename T>
-	typename Permutation_Generator<T>::const_iterator Permutation_Generator<T>::begin() const
+	typename PermutationGenerator<T>::constIterator PermutationGenerator<T>::begin() const
 	{
-		const_iterator it;
+		constIterator it;
 		it.generated.resize(n);
 		std::iota(it.generated.begin(), it.generated.end(), 0);
 		it.completed = 0;
@@ -69,13 +69,13 @@ namespace Symmetric_Polynomials
 	}
 
 	template <typename T>
-	typename Permutation_Generator<T>::const_iterator Permutation_Generator<T>::end() const
+	typename PermutationGenerator<T>::constIterator PermutationGenerator<T>::end() const
 	{
-		return Factory_Generator<Permutation_Generator::const_iterator, std::vector<T>>::end();
+		return FactoryGenerator<PermutationGenerator::constIterator, std::vector<T>>::end();
 	}
 
 	template <typename T>
-	Combination_Generator<T>::Combination_Generator(T total, T choices) : total(total), choices(choices)
+	CombinationGenerator<T>::CombinationGenerator(T total, T choices) : total(total), choices(choices)
 	{
 		if (choices > total)
 		{
@@ -85,7 +85,7 @@ namespace Symmetric_Polynomials
 	}
 
 	template <typename T>
-	auto Combination_Generator<T>::size() const
+	auto CombinationGenerator<T>::size() const
 	{
 		//safe implementation
 		auto lowchoices = (choices > total - choices) ? total - choices : choices;
@@ -99,7 +99,7 @@ namespace Symmetric_Polynomials
 	}
 
 	template <typename T>
-	void Combination_Generator<T>::const_iterator::update()
+	void CombinationGenerator<T>::constIterator::update()
 	{
 		for (int64_t i = (int64_t)choices - 1; i >= 0; i--)
 		{ //must be signed!
@@ -116,9 +116,9 @@ namespace Symmetric_Polynomials
 	}
 
 	template <typename T>
-	typename Combination_Generator<T>::const_iterator Combination_Generator<T>::begin() const
+	typename CombinationGenerator<T>::constIterator CombinationGenerator<T>::begin() const
 	{
-		const_iterator it;
+		constIterator it;
 		it.generated.resize(choices);
 		std::iota(it.generated.begin(), it.generated.end(), 0);
 		it.total = total;
@@ -128,16 +128,16 @@ namespace Symmetric_Polynomials
 	}
 
 	template <typename T>
-	typename Combination_Generator<T>::const_iterator Combination_Generator<T>::end() const
+	typename CombinationGenerator<T>::constIterator CombinationGenerator<T>::end() const
 	{
-		return Factory_Generator<Combination_Generator::const_iterator, std::vector<T>>::end();
+		return FactoryGenerator<CombinationGenerator::constIterator, std::vector<T>>::end();
 	}
 
 	template <typename T>
 	std::vector<std::vector<T>> all_permutations(T n)
 	{
 		std::vector<std::vector<T>> v;
-		Permutation_Generator<T> p(n);
+		PermutationGenerator<T> p(n);
 		v.reserve(p.size());
 		for (const auto &i : p)
 			v.push_back(i);
@@ -148,7 +148,7 @@ namespace Symmetric_Polynomials
 	std::vector<std::vector<T>> all_combinations(T n, T m)
 	{
 		std::vector<std::vector<T>> v;
-		Combination_Generator<T> p(n, m);
+		CombinationGenerator<T> p(n, m);
 		v.reserve(p.size());
 		for (const auto &i : p)
 			v.push_back(i);

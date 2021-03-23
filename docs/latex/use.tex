@@ -5,41 +5,37 @@ For a quick demonstration you may use the binaries found \href{https://github.co
 
 Only the {\ttfamily -\/std=c++17} flag is required.\hypertarget{use_exa}{}\doxysubsection{Code examples}\label{use_exa}
 \hypertarget{use_namesp}{}\doxysubsubsection{Namespaces}\label{use_namesp}
-Everything in this library is under the namespace {\ttfamily \mbox{\hyperlink{namespaceSymmetric__Polynomials}{Symmetric\+\_\+\+Polynomials}}}. For all the following code examples to work, start with \begin{DoxyVerb}using namespace Symmetric_Polynomials;
+Everything in this library is under the namespace \mbox{\hyperlink{namespacesymmp}{symmp}} (short for Symmetric Polynomials). To keep names short, the code examples will assume we are using this namespace. So start with\+: \begin{DoxyVerb}using symmp;
 \end{DoxyVerb}
 \hypertarget{use_mono}{}\doxysubsubsection{Polynomials}\label{use_mono}
-A polynomial in multiple variables can be default constructed as\+: \begin{DoxyVerb}Polynomial<default_container<int, Standard_Variables<>>> p;
+A polynomial $p$ in the graded ring $\mathbb Z[x_1,...,x_n]$, $|x_i|=1$, can be declared as\+: \begin{DoxyVerb}OrderedPolynomial<int, StandardVariables<>> p;
 \end{DoxyVerb}
 
 
-Let us explain the template parameters\+:
+Here\+:
 \begin{DoxyItemize}
-\item {\ttfamily int} is the type of the scalar coefficients, so it can be replaced by {\ttfamily float} etc.
-\item {\ttfamily Standard\+\_\+\+Variables$<$$>$} specifies that our variables are $x_1,...,x_n$ with degrees $|x_i|=1$ and no relations. It can be replaced by {\ttfamily Half\+\_\+\+Idempotent\+\_\+\+Variables} that specify variables $x_1,...,x_n,y_1,...,y_n$ with degrees $|x_i|=1, |y_i|=0$ and relations $y_i^2=y_i$.
-\item The {\ttfamily default\+\_\+container} specifies the container used to store the monomials in the polynomial. See the advanced subsection below.
+\item \mbox{\hyperlink{namespacesymmp_a2ab4ba4bf25e718d78428e1b04332a2a}{symmp\+::\+Ordered\+Polynomial}} means that the monomials of the polynomial are kept in increasing order. See below for alternatives.
+\item {\ttfamily int} is the type of the scalar coefficients (i.\+e. elements of the base ring; in our case $\mathbb Z$), so it can be replaced by {\ttfamily double} etc.
+\item \mbox{\hyperlink{structsymmp_1_1StandardVariables}{symmp\+::\+Standard\+Variables}} specify we have variables of degree $1$, names $x_i$ and no relations. See the next few subsections for alternatives.
 \end{DoxyItemize}
 
-To initialize a polynomial, provide the desired number of variables $n$. For example, if $n=3$\+: \begin{DoxyVerb}p=Polynomial<default_container<int, Standard_Variables<>>>(3);
+To insert a monomial $cx_1^{a_1}\cdots x_n^{a_n}$ in $p$ we provide the exponent vector $[a_1,...,a_n]$ and the coefficient $c$. Eg\+: \begin{DoxyVerb}p.insert({0,1,4},7);
 \end{DoxyVerb}
 
 
-Next, insert monomials $cx_1^{a_1}\cdots x_n^{a_n}$ by providing the exponent vector $[a_1,...,a_n]$ and the coefficient $c$. Eg\+: \begin{DoxyVerb}p.insert({0,1,4},7);
+inserts the monomial $7x_2x_3^4$ in $p$. If we further do\+: \begin{DoxyVerb}p.insert({1,1,2},-8);
 \end{DoxyVerb}
 
 
-inserts the monomial $7x_2x_3^4$ in {\ttfamily p}. If we further insert \begin{DoxyVerb}p.insert({1,1,2},-8);
+then $p$ becomes $-8x_1x_2x_3^2+7x_2x_3^4$. We can verify that by printing it to the console\+: \begin{DoxyVerb}std::cout << p << "\n";
 \end{DoxyVerb}
 
 
-then {\ttfamily p} becomes $-8x_1x_2x_3^2+7x_2x_3^4$ and printing it to console verifies that\+: \begin{DoxyVerb}std::cout << p << "\n";
-\end{DoxyVerb}
-
-
-It is the user\textquotesingle{}s responsibility to make sure that
+When inserting keep in mind that\+:
 \begin{DoxyItemize}
-\item the number of variables is the length of the exponent vector being inserted
-\item the coefficient provided is never $0$
-\item not attempt to insert a monomial with an already existing exponent vector (doing so does not change the polynomial)
+\item every exponent vector must have the same length (number of variables)
+\item the coefficients provided must never be $0$
+\item attempting to insert a monomial with an already existing exponent vector does nothing
 \end{DoxyItemize}
 
 Polynomials can be added, subtracted and multiplied by binary operators {\ttfamily +,-\/,$\ast$} eg\+: \begin{DoxyVerb}std::cout << (p+(p^2))<< "\n";
@@ -48,57 +44,62 @@ Polynomials can be added, subtracted and multiplied by binary operators {\ttfami
 
 will print
 
-\$\$-\/8x\+\_\+1x\+\_\+2x\+\_\+3$^\wedge$2 + 7x\+\_\+2x\+\_\+3$^\wedge$4 + 64x\+\_\+1$^\wedge$2x\+\_\+2$^\wedge$2x\+\_\+3$^\wedge$4 + -\/112x\+\_\+1x\+\_\+2$^\wedge$2x\+\_\+3$^\wedge$6 + 49x\+\_\+2$^\wedge$2x\+\_\+3$^\wedge$8\$\$\hypertarget{use_symbasis}{}\doxysubsubsection{Symmetric Basis}\label{use_symbasis}
-The class {\ttfamily Symmetric\+\_\+\+Basis\+\_\+\+Default} allows us to transform polynomials on $x_i$ variables ({\ttfamily Standard\+\_\+\+Variables}) into polynomials on the elementary symmetric polynomials $e_i=\sigma_i$ ({\ttfamily Elementary\+\_\+\+Symmetric\+\_\+\+Variables}). For example\+: \begin{DoxyVerb}Symmetric_Basis_Default<int> SB(2);
+\$\$-\/8x\+\_\+1x\+\_\+2x\+\_\+3$^\wedge$2 + 7x\+\_\+2x\+\_\+3$^\wedge$4 + 64x\+\_\+1$^\wedge$2x\+\_\+2$^\wedge$2x\+\_\+3$^\wedge$4 + -\/112x\+\_\+1x\+\_\+2$^\wedge$2x\+\_\+3$^\wedge$6 + 49x\+\_\+2$^\wedge$2x\+\_\+3$^\wedge$8\$\$
 
-Polynomial<default_container<int, Standard_Variables<>>> poly(2);
+which is exactly $p+p^2$.
 
-poly.insert({1,2},2);
+Instead of \mbox{\hyperlink{namespacesymmp_a2ab4ba4bf25e718d78428e1b04332a2a}{symmp\+::\+Ordered\+Polynomial}}, we can also use \mbox{\hyperlink{namespacesymmp_ad286838abde5fae48d25eda95a49dbed}{symmp\+::\+Unordered\+Polynomial}} which does not store the monomials in increasing order. This has performance benefits (internal data structure is {\ttfamily std\+::unordered\+\_\+map} as opposed to {\ttfamily std\+::map}). Ordered and unordered polynomials have the exact same A\+PI.\hypertarget{use_symbasis}{}\doxysubsubsection{Symmetric Basis}\label{use_symbasis}
+Apart from the \mbox{\hyperlink{structsymmp_1_1StandardVariables}{symmp\+::\+Standard\+Variables}}, we can also use the \mbox{\hyperlink{structsymmp_1_1ElementarySymmetricVariables}{symmp\+::\+Elementary\+Symmetric\+Variables}} which specify variables with names $e_i$, degrees $|e_i|=i$ and no relations.
 
-poly.insert({2,1},2);
-
-Polynomial<default_container<int, Elementary_Symmetric_Variables<>>>  new_poly= SB(poly);
-
-Polynomial<default_container<int, Standard_Variables<>>>  new_new_poly= SB(new_poly);
-
-std::cout << poly << "\n";
-
-std::cout<< new_poly << "\n";
-
-std::cout << new_new_poly << "\n";
+Example\+: An element $q$ of the ring $\mathbb R[e_1,...,e_n]$ can be defined as\+: \begin{DoxyVerb}OrderedPolynomial<double, ElementarySymmetricVariables<>> q({ 2,3 }, -1.5);
+std::cout << q << "\n";
 \end{DoxyVerb}
 
 
-does the following\+: First it sets {\ttfamily poly} to $2x_1x_2^2+2x_1^2x_2$, then transforms it in $e_i$ variables as {\ttfamily new\+\_\+poly} which is $2e_1e_2$ and then transforms that back to $x_i$ variables as {\ttfamily new\+\_\+new\+\_\+poly} which is $2x_1x_2^2+2x_1^2x_2$ (i.\+e. the original polynomial) and finally prints the three polynomials. This all means that \$\$2x\+\_\+1x\+\_\+2$^\wedge$2+2x\+\_\+1$^\wedge$2x\+\_\+2=2e\+\_\+1e\+\_\+2\$\$\hypertarget{use_halfidem}{}\doxysubsubsection{Half idempotent relations}\label{use_halfidem}
-When we have the \char`\"{}half idempotent relation\char`\"{} i.\+e. variables $x_i,y_i$ with $y_i^2=y_i$ (as specified by {\ttfamily Half\+\_\+\+Idempotent\+\_\+\+Variables}), the generators are $\alpha_i, c_i, \gamma_{s,t}$ (see \mbox{\hyperlink{math}{The Math}}) or {\ttfamily Idem\mbox{[}i\mbox{]}}, {\ttfamily Chern\mbox{[}i\mbox{]}} and {\ttfamily Twisted\+Chern\mbox{[}s\mbox{]}\mbox{[}t\mbox{]}} respectively as they are used in the program. We order them as $\alpha_1,...,\alpha_n,c_1,...,c_n, \gamma_{1,1},...,\gamma_{1,n-1},\gamma_{2,1},...,\gamma_{n-1,1}$.
+which will print $-1.5e_1e_2$. We used the constructor that takes a single monomial in the form of exponent+vector.
 
-The class {\ttfamily Half\+\_\+\+Idempotent\+\_\+\+Basis\+\_\+\+Default} allows us to transform polynomials on $x_i,y_i$ variables ({\ttfamily Half\+\_\+\+Idempotent\+\_\+\+Variables}) into polynomials on the $\alpha_i,c_i,\gamma_{s,i}$ ({\ttfamily Twisted\+\_\+\+Chern\+\_\+\+Variables}).
-
-The code \begin{DoxyVerb}Half_Idempotent_Basis_Default<int> HB(2);
-
-Polynomial<default_container<int, Half_Idempotent_Variables<>>> poly2(4);
-
-poly2.insert({ 1,0,1,0 }, 2);
-
-poly2.insert({ 0,1,0,1 }, 2);
-
-auto new_poly2= HB(poly2);
-
-auto new_new_poly2= HB(new_poly2);
-
-std::cout << poly2 << "\n";
-
-std::cout << new_poly2 << "\n";
-
-std::cout << new_new_poly2 << "\n";
+We can view \[\mathbb R[e_1,...,e_n]=\mathbb R[x_1,...,x_n]^{\Sigma_n}\] with $e_i=\sigma_i$ being the elementary symmetric polynomials. To convert $q$ from $e_i$ variables to $x_i$ variables we use the class \mbox{\hyperlink{classsymmp_1_1SymmetricBasis}{symmp\+::\+Symmetric\+Basis}} \+: \begin{DoxyVerb}SymmetricBasis<OrderedPolynomial<double, StandardVariables<>>, OrderedPolynomial<double, ElementarySymmetricVariables<>>> SB(2);
 \end{DoxyVerb}
 
 
-sets {\ttfamily poly} to be $x_1y_1+x_2y_2$, transforms it into {\ttfamily new\+\_\+poly} which is $2\alpha_1 c_1 + -2\gamma_{1,1}$ and then transforms it to {\ttfamily new\+\_\+new\+\_\+poly} in the original variables, which is equal to {\ttfamily poly}, before printing their names. Thus\+:
+The {\ttfamily 2} signifies that we are using two variables $x_1,x_2$. Then\+: \begin{DoxyVerb}auto q_in_x_var=SB(q);
+std::cout << q_in_x_var;
+\end{DoxyVerb}
+
+
+will define a {\ttfamily Ordered\+Polynomial$<$double, Standard\+Variables$<$$>$$>$ q\+\_\+in\+\_\+x\+\_\+var} that is {\ttfamily q} transformed into the \mbox{\hyperlink{structsymmp_1_1StandardVariables}{symmp\+::\+Standard\+Variables}} and print \[-1.5x_1^3x_2^5 + -3x_1^4x_2^4 + -1.5x_1^5x_2^3\]
+
+We can perform the conversion the other way as well\+: given a polynomial in \mbox{\hyperlink{structsymmp_1_1StandardVariables}{symmp\+::\+Standard\+Variables}} such as {\ttfamily q\+\_\+in\+\_\+x\+\_\+var} we can use the {\ttfamily SB} from before to transform it into a polynomial on the \mbox{\hyperlink{structsymmp_1_1ElementarySymmetricVariables}{symmp\+::\+Elementary\+Symmetric\+Variables}} \+: \begin{DoxyVerb}auto q_in_e_var=SB(q_in_x_var);
+std::cout << q_in_e_var;
+\end{DoxyVerb}
+
+
+which will print $-1.5e_1e_2$. Observe that {\ttfamily q==q\+\_\+in\+\_\+e\+\_\+var};\hypertarget{use_halfidem}{}\doxysubsubsection{Twisted Chern Basis}\label{use_halfidem}
+We can generate \[(R[x_1,...,x_n,y_1,...,y_n]/y_i^2=y_i)^{\Sigma_n}\]
+
+by the $\alpha_i, c_i, \gamma_{s,t}$ (see \mbox{\hyperlink{math}{The Math}}).
+
+The class \mbox{\hyperlink{classsymmp_1_1TwistedChernBasis}{symmp\+::\+Twisted\+Chern\+Basis}} allows us to transform polynomials on $x_i,y_i$ variables (\mbox{\hyperlink{structsymmp_1_1HalfIdempotentVariables}{symmp\+::\+Half\+Idempotent\+Variables}}) into polynomials on the $\alpha_i,c_i,\gamma_{s,i}$ (\mbox{\hyperlink{structsymmp_1_1TwistedChernVariables}{symmp\+::\+Twisted\+Chern\+Variables}}).
+
+Example\+: \begin{DoxyVerb}UnorderedPolynomial<int, HalfIdempotentVariables<>> poly;
+poly.insert({ 1,0,1,0 }, 2);
+poly.insert({ 0,1,0,1 }, 2);
+TwistedChernBasis<UnorderedPolynomial<int, HalfIdempotentVariables<>>, UnorderedPolynomial<int, TwistedChernVariables<>>> TCB(2);
+std::cout << TCB(poly);
+\end{DoxyVerb}
+
+
+sets {\ttfamily poly} to be $x_1y_1+x_2y_2$, transforms it into $\gamma_{s,j}$ variables and prints the result\+:
 
 \[x_1y_1+x_2y_2=-2\gamma_{1,1}+2\alpha_1 c_1\]
 
-To print the relations amongst $\alpha_i,c_i,\gamma_{s,j}$ simply use\+: \begin{DoxyVerb}print_half_idempotent_relations<>(3,1,1);
+Note that \begin{DoxyVerb}std::cout << TCB(TCB(poly));
+\end{DoxyVerb}
+
+
+prints the original polynomial $x_1y_1+x_2y_2$. The argument {\ttfamily 2} in the construction of {\ttfamily T\+CB} is half the number of variables $x_1,x_2,y_1,y_2$.
+
+To print the relations amongst $\alpha_i,c_i,\gamma_{s,j}$ use\+: \begin{DoxyVerb}print_half_idempotent_relations<UnorderedPolynomial<int, HalfIdempotentVariables<>>, UnorderedPolynomial<int, TwistedChernVariables<>>>(3,1,1);
 \end{DoxyVerb}
 
 
@@ -108,15 +109,6 @@ Finally, \mbox{\hyperlink{Demo_8cpp}{Demo.\+cpp}} contains another function, {\t
 
 \[\pi_{s,t}=\kappa_{s,t}=\sum_{1\le i_1< \cdots< i_s\le n\\ 1\le j_1< \cdots< j_t\le n\\ i_u\neq j_v}x^2_{i_1}....x^2_{i_s}y_{j_1}\cdots y_{j_t}\]
 
-in terms of the $\alpha_i,c_i,\gamma_{s,t}$. For example, try running \begin{DoxyVerb}write_pontryagin_C2_in_terms_of_Chern_classes(5);
+in terms of the $\alpha_i,c_i,\gamma_{s,t}$. For example, try running \begin{DoxyVerb}write_pontryagin_C2_in_terms_of_Chern_classes < UnorderedPolynomial<int, HalfIdempotentVariables<>>, UnorderedPolynomial<int, TwistedChernVariables<>>>(5);
 \end{DoxyVerb}
-\hypertarget{use_adv}{}\doxysubsubsection{Advanced}\label{use_adv}
-The {\ttfamily default\+\_\+container$<$scl\+\_\+t, exp\+\_\+t, ordered$>$} specifies the data structure that should be used to internally store the monomials of the polynomial. This must have the features of an ordered/unordered map (degree,exponent)-\/$>$coefficient. The boolean template parameter {\ttfamily ordered} specifies whether we want to use {\ttfamily std\+::map} (default) or {\ttfamily std\+::unordered\+\_\+map}. When unordered maps are used, it\textquotesingle{}s important to\+:
-\begin{DoxyItemize}
-\item Reserve space for the amount of monomials to be inserted by eg\+: {\ttfamily p.\+reserve(5);} if we expect to store $5$ monomials
-\item Keep in mind that when iterating through the polynomial, the monomials won\textquotesingle{}t be ordered. Same applies when printing the polynomial. In general, using unordered maps is faster especially with a good hashing function (see \mbox{\hyperlink{General_8hpp}{General.\+hpp}} for two possible hashing functions that can be used).
-\end{DoxyItemize}
-
-You can also use your own container instead of the {\ttfamily default\+\_\+container}. See the file \mbox{\hyperlink{Polynomials_8hpp}{Polynomials.\+hpp}} for the exact requirements from a custom container.
-
-Finally, the {\ttfamily Symmetric\+\_\+\+Basis\+\_\+\+Default} and {\ttfamily Half\+\_\+\+Idempotent\+\_\+\+Basis\+\_\+\+Default} are aliases for {\ttfamily Symmetric\+\_\+\+Basis} and {\ttfamily Half\+\_\+\+Idempotent\+\_\+\+Basis} that accept containers as template parameters for extra customization. 
+ 

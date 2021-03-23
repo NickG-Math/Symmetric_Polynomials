@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['clear_117',['clear',['../classSymmetric__Polynomials_1_1Polynomial.html#aa4f5846886261f04aa8c66ab45fac567',1,'Symmetric_Polynomials::Polynomial']]],
-  ['coeff_118',['coeff',['../classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator.html#ae294f78efbfc7aaed2ece8d902a45dd0',1,'Symmetric_Polynomials::Polynomial::const_iterator']]],
-  ['combination_5fgenerator_119',['Combination_Generator',['../classSymmetric__Polynomials_1_1Combination__Generator.html#a2f0d06e54f8d58bbe47cf18e42e05d5e',1,'Symmetric_Polynomials::Combination_Generator']]]
+  ['coeff_112',['coeff',['../classsymmp_1_1Polynomial_1_1constIterator.html#aae63ec39b53317f98b57b1af2e2cb181',1,'symmp::Polynomial::constIterator']]],
+  ['combinationgenerator_113',['CombinationGenerator',['../classsymmp_1_1CombinationGenerator.html#a02a72795e93e67bb84e39f7e7daed955',1,'symmp::CombinationGenerator']]]
 ];

@@ -8,6 +8,7 @@ Contains the class of polynomials in multiple variables.
 {\ttfamily \#include $<$map$>$}\newline
 {\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
 {\ttfamily \#include \char`\"{}General.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}impl/\+Details.\+ipp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}impl/\+Polynomials.\+ipp\char`\"{}}\newline
 Include dependency graph for Polynomials.\+hpp\+:\nopagebreak
 \begin{figure}[H]
@@ -26,21 +27,26 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{structSymmetric__Polynomials_1_1default__container}{Symmetric\+\_\+\+Polynomials\+::default\+\_\+container$<$ scl\+\_\+t, exp\+\_\+t, ordered $>$}}
-\begin{DoxyCompactList}\small\item\em The default container for polynomials using the S\+TL map or unordered map. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial$<$ container\+\_\+t $>$}}
-\begin{DoxyCompactList}\small\item\em Polynomials in multiple variables. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial$<$ container\+\_\+t $>$\+::const\+\_\+iterator}}
+class \mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial$<$ \+\_\+scl, \+\_\+exp, \+\_\+container, container\+\_\+is\+\_\+ordered, \+\_\+\+Args $>$}}
+\begin{DoxyCompactList}\small\item\em Class for polynomials in multiple variables with relations. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsymmp_1_1Polynomial_1_1constIterator}{Polynomial$<$ \+\_\+scl, \+\_\+exp, \+\_\+container, container\+\_\+is\+\_\+ordered, \+\_\+\+Args $>$\+::const\+Iterator}}
 \begin{DoxyCompactList}\small\item\em Constant iterator through the monomials of the polynomial. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
- \mbox{\hyperlink{namespaceSymmetric__Polynomials}{Symmetric\+\_\+\+Polynomials}}
+ \mbox{\hyperlink{namespacesymmp}{symmp}}
 \begin{DoxyCompactList}\small\item\em The namespace which contains every method and class in the library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename \+\_\+scl , typename \+\_\+exp $>$ }\\using \mbox{\hyperlink{namespacesymmp_a2ab4ba4bf25e718d78428e1b04332a2a}{Ordered\+Polynomial}} = Polynomial$<$ \+\_\+scl, \+\_\+exp, std\+::map, 1 $>$
+\begin{DoxyCompactList}\small\item\em A polynomial whose monomials are stored in increasing order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename \+\_\+scl , typename \+\_\+exp $>$ }\\using \mbox{\hyperlink{namespacesymmp_ad286838abde5fae48d25eda95a49dbed}{Unordered\+Polynomial}} = Polynomial$<$ \+\_\+scl, \+\_\+exp, std\+::unordered\+\_\+map, 0 $>$
+\begin{DoxyCompactList}\small\item\em A polynomial whose monomials are not stored in any particular order. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename container\+\_\+t $>$ }\\std\+::ostream \& \mbox{\hyperlink{namespaceSymmetric__Polynomials_a8e5fb0f43bf3e8c9822bc7e6fc1ee223}{Symmetric\+\_\+\+Polynomials\+::operator$<$$<$}} (std\+::ostream \&os, const Polynomial$<$ container\+\_\+t $>$ \&a)
+{\footnotesize template$<$typename scl\+\_\+t , typename exp\+\_\+t , template$<$ typename... $>$ typename container\+\_\+t, bool container\+\_\+is\+\_\+ordered, typename ... Args$>$ }\\std\+::ostream \& \mbox{\hyperlink{namespacesymmp_a8e6a94a09932295f6d8c345a80998934}{operator$<$$<$}} (std\+::ostream \&os, const Polynomial$<$ scl\+\_\+t, exp\+\_\+t, container\+\_\+t, container\+\_\+is\+\_\+ordered, Args... $>$ \&a)
 \begin{DoxyCompactList}\small\item\em Prints polynomial to output stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 

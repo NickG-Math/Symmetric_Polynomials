@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['general_5fcompute_5fdegree_124',['general_compute_degree',['../namespaceSymmetric__Polynomials.html#a72024f84f84636ed15ba5795c2a102eb',1,'Symmetric_Polynomials']]],
-  ['generator_125',['generator',['../classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#ad28d3005631ff1f1f3960d85d9796989',1,'Symmetric_Polynomials::Half_Idempotent_Basis']]],
-  ['generators_126',['generators',['../classSymmetric__Polynomials_1_1Polynomial__Basis.html#a147bd2ab1f17dc2e65dff43b711e9306',1,'Symmetric_Polynomials::Polynomial_Basis']]],
-  ['generic_5fhasher_127',['generic_hasher',['../namespaceSymmetric__Polynomials.html#a144142657f3a44c85c04a63864d4d006',1,'Symmetric_Polynomials']]]
+  ['general_5fcompute_5fdegree_118',['general_compute_degree',['../namespacesymmp.html#a89e193c5649231a649e17cb90ebf6932',1,'symmp']]],
+  ['generator_119',['generator',['../classsymmp_1_1TwistedChernBasis.html#ad05b1690e2698e5b50ead06cd6aadd0a',1,'symmp::TwistedChernBasis']]],
+  ['generators_120',['generators',['../classsymmp_1_1PolynomialBasis.html#a9ff5995862b2fe5ff087ad965ace9ce0',1,'symmp::PolynomialBasis']]],
+  ['generic_5fhasher_121',['generic_hasher',['../namespacesymmp.html#ac26e0fc4b8ad188e9b24d49d806b1855',1,'symmp']]]
 ];

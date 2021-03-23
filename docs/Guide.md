@@ -80,42 +80,37 @@ Only the ```-std=c++17``` flag is required.
 
 \subsection namesp Namespaces
 
-Everything in this library is under the namespace ```Symmetric_Polynomials```. For all the following code examples to work, start with
+Everything in this library is under the namespace \ref symmp (short for Symmetric Polynomials). To keep names short, the code examples will assume we are using this namespace. So start with:
 
-	using namespace Symmetric_Polynomials;
+	using symmp;
 
 \subsection mono Polynomials
 
-A polynomial in multiple variables can be default constructed as:
+A polynomial \f$p\f$ in the graded ring \f$\mathbb Z[x_1,...,x_n]\f$, \f$|x_i|=1\f$, can be declared as:
 	
-	Polynomial<default_container<int, Standard_Variables<>>> p;
-	
-Let us explain the template parameters:
-- ```int``` is the type of the scalar coefficients, so it can be replaced by ```float``` etc.
-- ```Standard_Variables<>``` specifies that our variables are \f$x_1,...,x_n\f$ with degrees \f$|x_i|=1\f$ and no relations. It can be replaced by ```Half_Idempotent_Variables```
-that specify variables \f$x_1,...,x_n,y_1,...,y_n\f$ with degrees \f$|x_i|=1, |y_i|=0\f$ and relations \f$y_i^2=y_i\f$.
-- The ```default_container``` specifies the container used to store the monomials in the polynomial. See the advanced subsection below. 
+	OrderedPolynomial<int, StandardVariables<>> p;
 
-To initialize a polynomial, provide the desired number of variables \f$n\f$. For example, if \f$n=3\f$:
+Here:
+- \ref symmp::OrderedPolynomial means that the monomials of the polynomial are kept in increasing order. See below for alternatives.
+- ```int``` is the type of the scalar coefficients (i.e. elements of the base ring; in our case \f$\mathbb Z\f$), so it can be replaced by ```double``` etc.
+- \ref symmp::StandardVariables specify we have variables of degree \f$1\f$, names \f$x_i\f$ and no relations. See the next few subsections for alternatives.
 
-	p=Polynomial<default_container<int, Standard_Variables<>>>(3);
-
-Next, insert monomials \f$cx_1^{a_1}\cdots x_n^{a_n}\f$ by providing the exponent vector \f$[a_1,...,a_n]\f$ and the coefficient \f$c\f$. Eg:
+To insert a monomial \f$cx_1^{a_1}\cdots x_n^{a_n}\f$ in \f$p\f$ we provide the exponent vector \f$[a_1,...,a_n]\f$ and the coefficient \f$c\f$. Eg:
 
 	p.insert({0,1,4},7);
 
-inserts the monomial \f$7x_2x_3^4\f$ in ```p```. If we further insert
+inserts the monomial \f$7x_2x_3^4\f$ in \f$p\f$. If we further do:
 
 	p.insert({1,1,2},-8);
 
-then ```p``` becomes \f$-8x_1x_2x_3^2+7x_2x_3^4\f$ and printing it to console verifies that:
+then \f$p\f$ becomes \f$-8x_1x_2x_3^2+7x_2x_3^4\f$. We can verify that by printing it to the console:
 
 	std::cout << p << "\n";
 
- It is the user's responsibility to make sure that
-- the number of variables is the length of the exponent vector being inserted
-- the coefficient provided is never \f$0\f$
-- not attempt to insert a monomial with an already existing exponent vector (doing so does not change the polynomial)
+When inserting keep in mind that:
+- every exponent vector must have the same length (number of variables)
+- the coefficients provided must never be \f$0\f$
+- attempting to insert a monomial with an already existing exponent vector does nothing
 
 Polynomials can be added, subtracted and multiplied by binary operators ```+,-,*``` eg:
 
@@ -125,65 +120,72 @@ will print
 
 $$-8x_1x_2x_3^2 + 7x_2x_3^4 + 64x_1^2x_2^2x_3^4 + -112x_1x_2^2x_3^6 + 49x_2^2x_3^8$$
 
+which is exactly \f$p+p^2\f$.
+
+Instead of \ref symmp::OrderedPolynomial, we can also use \ref symmp::UnorderedPolynomial which does not store the monomials in increasing order. This has performance benefits (internal data structure is \c std::unordered_map as opposed to \c std::map). Ordered and unordered polynomials have the exact same API.
+
+
 \subsection symbasis Symmetric Basis
 
-The class ```Symmetric_Basis_Default``` allows us to transform polynomials on \f$x_i\f$ variables (```Standard_Variables```) into polynomials on the elementary symmetric polynomials \f$e_i=\sigma_i\f$ (```Elementary_Symmetric_Variables```). For example:
+Apart from the  \ref symmp::StandardVariables, we can also use the 	\ref symmp::ElementarySymmetricVariables which specify variables with names \f$e_i\f$, degrees \f$|e_i|=i\f$ and no relations. 
 
-	Symmetric_Basis_Default<int> SB(2);
+Example: An element \f$q\f$ of the ring \f$\mathbb R[e_1,...,e_n]\f$ can be defined as: 
 
-	Polynomial<default_container<int, Standard_Variables<>>> poly(2);
+	OrderedPolynomial<double, ElementarySymmetricVariables<>> q({ 2,3 }, -1.5);
+	std::cout << q << "\n";
 
-	poly.insert({1,2},2);
+which will print \f$-1.5e_1e_2\f$. We used the constructor that takes a single monomial in the form of exponent+vector.
 
-	poly.insert({2,1},2);
+We can view \f[\mathbb R[e_1,...,e_n]=\mathbb R[x_1,...,x_n]^{\Sigma_n}\f] with \f$e_i=\sigma_i\f$ being the elementary symmetric polynomials. 
+To convert \f$q\f$ from \f$e_i\f$ variables to \f$x_i\f$ variables we use the class  \ref symmp::SymmetricBasis :
 
-	Polynomial<default_container<int, Elementary_Symmetric_Variables<>>>  new_poly= SB(poly);
+	SymmetricBasis<OrderedPolynomial<double, StandardVariables<>>, OrderedPolynomial<double, ElementarySymmetricVariables<>>> SB(2);
 
-	Polynomial<default_container<int, Standard_Variables<>>>  new_new_poly= SB(new_poly);
+The ```2``` signifies that we are using two variables \f$x_1,x_2\f$. Then:
 
-	std::cout << poly << "\n";
+	auto q_in_x_var=SB(q);
+	std::cout << q_in_x_var;
 
-	std::cout<< new_poly << "\n";
+will define a ```OrderedPolynomial<double, StandardVariables<>> q_in_x_var``` that is ```q``` transformed into the \ref symmp::StandardVariables and print \f[-1.5x_1^3x_2^5 + -3x_1^4x_2^4 + -1.5x_1^5x_2^3\f]
 
-	std::cout << new_new_poly << "\n";
+We can perform the conversion the other way as well: given a polynomial in \ref symmp::StandardVariables such as ```q_in_x_var``` we can use the ```SB``` from before to transform it into a polynomial on the 	\ref symmp::ElementarySymmetricVariables : 
 
+	auto q_in_e_var=SB(q_in_x_var);
+	std::cout << q_in_e_var;
 
-does the following: First it sets ```poly``` to \f$2x_1x_2^2+2x_1^2x_2\f$, then transforms it in \f$e_i\f$ variables as ```new_poly``` which is \f$2e_1e_2\f$ and then transforms that back to \f$x_i\f$ variables as ```new_new_poly``` which is \f$2x_1x_2^2+2x_1^2x_2\f$ (i.e. the original polynomial) and finally prints the three polynomials. This all means that
-$$2x_1x_2^2+2x_1^2x_2=2e_1e_2$$
+which will print \f$-1.5e_1e_2\f$. Observe that ```q==q_in_e_var```;
 
-\subsection halfidem Half idempotent relations
+\subsection halfidem Twisted Chern Basis
 
-When we have the "half idempotent relation" i.e. variables \f$x_i,y_i\f$ with \f$y_i^2=y_i\f$ (as specified by ```Half_Idempotent_Variables```), the generators are \f$\alpha_i, c_i, \gamma_{s,t}\f$ (see \ref math) or ```Idem[i]```, ```Chern[i]``` and ```TwistedChern[s][t]``` respectively as they are used in the program. We order them as \f$\alpha_1,...,\alpha_n,c_1,...,c_n, \gamma_{1,1},...,\gamma_{1,n-1},\gamma_{2,1},...,\gamma_{n-1,1}\f$. 
+We can generate
+\f[(R[x_1,...,x_n,y_1,...,y_n]/y_i^2=y_i)^{\Sigma_n}\f]
 
-The class ```Half_Idempotent_Basis_Default``` allows us to transform polynomials on \f$x_i,y_i\f$ variables (```Half_Idempotent_Variables```) into polynomials on the \f$\alpha_i,c_i,\gamma_{s,i}\f$ (```Twisted_Chern_Variables```).
+by the \f$\alpha_i, c_i, \gamma_{s,t}\f$ (see \ref math).
 
-The code
+The class \ref symmp::TwistedChernBasis allows us to transform polynomials on \f$x_i,y_i\f$ variables (\ref symmp::HalfIdempotentVariables) into polynomials on the \f$\alpha_i,c_i,\gamma_{s,i}\f$ (\ref symmp::TwistedChernVariables).
 
-	Half_Idempotent_Basis_Default<int> HB(2);
+Example:
 
-	Polynomial<default_container<int, Half_Idempotent_Variables<>>> poly2(4);
-	
-	poly2.insert({ 1,0,1,0 }, 2);
-	
-	poly2.insert({ 0,1,0,1 }, 2);
-	
-	auto new_poly2= HB(poly2);
-	
-	auto new_new_poly2= HB(new_poly2);
-	
-	std::cout << poly2 << "\n";
-	
-	std::cout << new_poly2 << "\n";
-	
-	std::cout << new_new_poly2 << "\n";
+	UnorderedPolynomial<int, HalfIdempotentVariables<>> poly;
+	poly.insert({ 1,0,1,0 }, 2);
+	poly.insert({ 0,1,0,1 }, 2);
+	TwistedChernBasis<UnorderedPolynomial<int, HalfIdempotentVariables<>>, UnorderedPolynomial<int, TwistedChernVariables<>>> TCB(2);
+	std::cout << TCB(poly);
 
-sets ```poly``` to be \f$x_1y_1+x_2y_2\f$, transforms it into ```new_poly``` which is \f$2\alpha_1 c_1 + -2\gamma_{1,1}\f$ and then transforms it to ```new_new_poly``` in the original variables, which is equal to ```poly```, before printing their names. Thus:
+sets ```poly``` to be \f$x_1y_1+x_2y_2\f$, transforms it into \f$\gamma_{s,j}\f$ variables and prints the result:
 
 \f[x_1y_1+x_2y_2=-2\gamma_{1,1}+2\alpha_1 c_1\f]
 
-To print the relations amongst \f$\alpha_i,c_i,\gamma_{s,j}\f$ simply use:
+Note that 
 
-	print_half_idempotent_relations<>(3,1,1);
+	std::cout << TCB(TCB(poly));
+
+prints the original polynomial \f$x_1y_1+x_2y_2\f$. The argument ```2``` in the construction of ```TCB``` is half the number of variables \f$x_1,x_2,y_1,y_2\f$.
+
+
+To print the relations amongst \f$\alpha_i,c_i,\gamma_{s,j}\f$ use:
+
+	print_half_idempotent_relations<UnorderedPolynomial<int, HalfIdempotentVariables<>>, UnorderedPolynomial<int, TwistedChernVariables<>>>(3,1,1);
 	
 The \f$3\f$ here corresponds to the half the number of variables: \f$x_1,x_2,x_3,y_1,y_2,y_3\f$ and can be replaced by any positive integer.
 
@@ -196,17 +198,4 @@ i_u\neq j_v}x^2_{i_1}....x^2_{i_s}y_{j_1}\cdots y_{j_t}\f]
 in terms of the \f$\alpha_i,c_i,\gamma_{s,t}\f$. 
 For example, try running 
 
-	write_pontryagin_C2_in_terms_of_Chern_classes(5);
-	
-\subsection adv Advanced
-
-The ```default_container<scl_t, exp_t, ordered>``` specifies the data structure that should be used to internally store the monomials of the polynomial. This must have the features of an ordered/unordered map (degree,exponent)->coefficient. The boolean template parameter ```ordered``` specifies whether we want to use ```std::map``` (default) or ```std::unordered_map```. 
-When unordered maps are used, it's important to:
-- Reserve space for the amount of monomials to be inserted by eg: ```p.reserve(5);``` if we expect to store \f$5\f$ monomials
-- Keep in mind that when iterating through the polynomial, the monomials won't be ordered. Same applies when printing the polynomial.
-In general, using unordered maps is faster especially with a good hashing function (see \ref General.hpp for two possible hashing functions that can be used).
-
-You can also use your own container instead of the ```default_container```. See the file \ref Polynomials.hpp for the exact requirements from 
-a custom container.
-
-Finally, the ```Symmetric_Basis_Default``` and ```Half_Idempotent_Basis_Default``` are aliases for ```Symmetric_Basis``` and ```Half_Idempotent_Basis``` that  accept containers as template parameters for extra customization.
+	write_pontryagin_C2_in_terms_of_Chern_classes < UnorderedPolynomial<int, HalfIdempotentVariables<>>, UnorderedPolynomial<int, TwistedChernVariables<>>>(5);

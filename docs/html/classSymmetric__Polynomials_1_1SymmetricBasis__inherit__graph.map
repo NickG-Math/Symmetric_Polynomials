@@ -1,0 +1,5 @@
+<map id="SymmetricBasis&lt; x_poly_t, e_poly_t &gt;" name="SymmetricBasis&lt; x_poly_t, e_poly_t &gt;">
+<area shape="rect" id="node1" title="Class for symmetric polynomials with no relations, allowing transformation from &#160;variables to &#160;variab..." alt="" coords="20,259,207,300"/>
+<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1PolynomialBasis.html" title=" " alt="" coords="5,153,221,209"/>
+<area shape="rect" id="node3" href="$classSymmetric__Polynomials_1_1PolynomialBasis.html" title="Factory class that provides the general interface of a generating basis for a subring of a polynomial..." alt="" coords="26,5,201,61"/>
+</map>

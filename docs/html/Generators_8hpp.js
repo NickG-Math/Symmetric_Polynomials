@@ -1,10 +1,10 @@
 var Generators_8hpp =
 [
-    [ "Factory_Generator", "classSymmetric__Polynomials_1_1Factory__Generator.html", "classSymmetric__Polynomials_1_1Factory__Generator" ],
-    [ "Permutation_Generator", "classSymmetric__Polynomials_1_1Permutation__Generator.html", "classSymmetric__Polynomials_1_1Permutation__Generator" ],
-    [ "const_iterator", "classSymmetric__Polynomials_1_1Permutation__Generator_1_1const__iterator.html", "classSymmetric__Polynomials_1_1Permutation__Generator_1_1const__iterator" ],
-    [ "Combination_Generator", "classSymmetric__Polynomials_1_1Combination__Generator.html", "classSymmetric__Polynomials_1_1Combination__Generator" ],
-    [ "const_iterator", "classSymmetric__Polynomials_1_1Combination__Generator_1_1const__iterator.html", "classSymmetric__Polynomials_1_1Combination__Generator_1_1const__iterator" ],
-    [ "all_combinations", "Generators_8hpp.html#aff3ebeea4f1bcee426cd01c41917f3aa", null ],
-    [ "all_permutations", "Generators_8hpp.html#a9fbacd7a31bb040f9609e6bdc5cbc541", null ]
+    [ "FactoryGenerator", "classsymmp_1_1FactoryGenerator.html", "classsymmp_1_1FactoryGenerator" ],
+    [ "PermutationGenerator", "classsymmp_1_1PermutationGenerator.html", "classsymmp_1_1PermutationGenerator" ],
+    [ "constIterator", "classsymmp_1_1PermutationGenerator_1_1constIterator.html", "classsymmp_1_1PermutationGenerator_1_1constIterator" ],
+    [ "CombinationGenerator", "classsymmp_1_1CombinationGenerator.html", "classsymmp_1_1CombinationGenerator" ],
+    [ "constIterator", "classsymmp_1_1CombinationGenerator_1_1constIterator.html", "classsymmp_1_1CombinationGenerator_1_1constIterator" ],
+    [ "all_combinations", "Generators_8hpp.html#a17719500ed6cb508460abd6bcd8e1965", null ],
+    [ "all_permutations", "Generators_8hpp.html#a8cfd6b8437995490f6d6ad254c07f5a3", null ]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['array_5fvector_5fwrapper_86',['Array_Vector_Wrapper',['../structSymmetric__Polynomials_1_1Array__Vector__Wrapper.html',1,'Symmetric_Polynomials']]],
-  ['array_5fvector_5fwrapper_3c_20int64_5ft_2c_200_20_3e_87',['Array_Vector_Wrapper&lt; int64_t, 0 &gt;',['../structSymmetric__Polynomials_1_1Array__Vector__Wrapper.html',1,'Symmetric_Polynomials']]]
+  ['arrayvectorwrapper_82',['ArrayVectorWrapper',['../structsymmp_1_1ArrayVectorWrapper.html',1,'symmp']]],
+  ['arrayvectorwrapper_3c_20int64_5ft_2c_200_20_3e_83',['ArrayVectorWrapper&lt; int64_t, 0 &gt;',['../structsymmp_1_1ArrayVectorWrapper.html',1,'symmp']]]
 ];

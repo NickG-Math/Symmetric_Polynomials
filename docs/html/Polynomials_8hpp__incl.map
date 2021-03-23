@@ -1,9 +1,10 @@
 <map id="Polynomials.hpp" name="Polynomials.hpp">
-<area shape="rect" id="node1" title="Contains the class of polynomials in multiple variables." alt="" coords="172,5,303,32"/>
+<area shape="rect" id="node1" title="Contains the class of polynomials in multiple variables." alt="" coords="241,5,372,32"/>
 <area shape="rect" id="node2" title=" " alt="" coords="32,80,83,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="107,80,231,107"/>
 <area shape="rect" id="node4" href="$General_8hpp.html" title="Contains general operations on vectors: hashing, computing degrees." alt="" coords="256,80,357,107"/>
-<area shape="rect" id="node12" title=" " alt="" coords="382,80,541,107"/>
+<area shape="rect" id="node12" title=" " alt="" coords="381,80,507,107"/>
+<area shape="rect" id="node13" title=" " alt="" coords="531,80,690,107"/>
 <area shape="rect" id="node5" title=" " alt="" coords="5,155,85,181"/>
 <area shape="rect" id="node6" title=" " alt="" coords="110,155,173,181"/>
 <area shape="rect" id="node7" title=" " alt="" coords="197,155,253,181"/>

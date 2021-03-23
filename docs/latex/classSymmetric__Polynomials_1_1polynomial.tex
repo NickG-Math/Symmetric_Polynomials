@@ -1,8 +1,8 @@
-\hypertarget{classSymmetric__Polynomials_1_1Polynomial}{}\doxysubsection{Symmetric\+\_\+\+Polynomials\+::Polynomial$<$ container\+\_\+t $>$ Class Template Reference}
-\label{classSymmetric__Polynomials_1_1Polynomial}\index{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}}
+\hypertarget{classSymmetric__Polynomials_1_1Polynomial}{}\doxysubsection{Polynomial$<$ \+\_\+scl, \+\_\+exp, \+\_\+container, container\+\_\+is\+\_\+ordered, \+\_\+\+Args $>$ Class Template Reference}
+\label{classSymmetric__Polynomials_1_1Polynomial}\index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}}
 
 
-Polynomials in multiple variables.  
+Class for polynomials in multiple variables with relations.  
 
 
 
@@ -12,192 +12,160 @@ Polynomials in multiple variables.
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator}{const\+\_\+iterator}}
+class \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1constIterator}{const\+Iterator}}
 \begin{DoxyCompactList}\small\item\em Constant iterator through the monomials of the polynomial. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-typedef container\+\_\+t\+::mapped\+\_\+type \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a59b08e7c10ddadcf8e89350d4975d6ae}{scl\+\_\+t}}
-\begin{DoxyCompactList}\small\item\em The scalar type eg {\ttfamily int}. \end{DoxyCompactList}\item 
-typedef container\+\_\+t\+::key\+\_\+type\+::second\+\_\+type \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_aa465567e5f113d3366dc71ff32af55b1}{exp\+\_\+t}}
-\begin{DoxyCompactList}\small\item\em The exponent type eg {\ttfamily \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Standard\+\_\+\+Variables}}}. \end{DoxyCompactList}\item 
-typedef container\+\_\+t\+::key\+\_\+type\+::first\+\_\+type \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_aa98da159492216c1282d406944f0747f}{deg\+\_\+t}}
+typedef \+\_\+scl \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a8e22f5fc1b62271e6ef144911adecde8}{scl\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em The scalar/coefficient type eg {\ttfamily int}. \end{DoxyCompactList}\item 
+typedef \+\_\+exp \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_adb6914c33db4513e34a8e2149b97d359}{exp\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em The variable/exponent type eg {\ttfamily \mbox{\hyperlink{structSymmetric__Polynomials_1_1StandardVariables}{Standard\+Variables}}}. \end{DoxyCompactList}\item 
+typedef \+\_\+exp\+::deg\+\_\+t \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a60553fbae1e4a58c189d046501f1ede8}{deg\+\_\+t}}
 \begin{DoxyCompactList}\small\item\em The degree type eg {\ttfamily uint64\+\_\+t}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a93b757ce0ba805dda3f49f36571489fc}{Polynomial}} ()=default
-\begin{DoxyCompactList}\small\item\em Default constructor (empty polynomial) \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a933cac974c20391586e4d7d739e7ec73}{Polynomial}} (int num\+\_\+var, const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_aa98da159492216c1282d406944f0747f}{deg\+\_\+t}} $\ast$dim\+\_\+var=nullptr, const std\+::string $\ast$name\+\_\+var=nullptr)
-\begin{DoxyCompactList}\small\item\em Constructs empty polynomial with certain number of variables and optionally dimensions/names. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_ad4cf350e86906b729806425b1360373c}{Polynomial}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_aa465567e5f113d3366dc71ff32af55b1}{exp\+\_\+t}} \&exp, \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a59b08e7c10ddadcf8e89350d4975d6ae}{scl\+\_\+t}} coeff, const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_aa98da159492216c1282d406944f0747f}{deg\+\_\+t}} $\ast$dim\+\_\+var=nullptr, const std\+::string $\ast$name\+\_\+var=nullptr)
-\begin{DoxyCompactList}\small\item\em Constructs polynomial with a single monomial term. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_ae3bb15f601ead6d169fff44b37a1b68a}{Polynomial}} (int num\+\_\+var, \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a59b08e7c10ddadcf8e89350d4975d6ae}{scl\+\_\+t}} coeff, const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_aa98da159492216c1282d406944f0747f}{deg\+\_\+t}} $\ast$dim\+\_\+var=nullptr, const std\+::string $\ast$name\+\_\+var=nullptr)
-\begin{DoxyCompactList}\small\item\em Constructs constant polynomial. \end{DoxyCompactList}\item 
-auto \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a57d1a73579c3462cd6b86de62361092d}{number\+\_\+of\+\_\+variables}} () const
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a12f9dff77773d79b3e29ecd5040f8c70}{Polynomial}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a60553fbae1e4a58c189d046501f1ede8}{deg\+\_\+t}} $\ast$dim\+\_\+var=nullptr, const std\+::string $\ast$name\+\_\+var=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructs zero polynomial. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a15df77b4539067fa38081a809e874627}{Polynomial}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_adb6914c33db4513e34a8e2149b97d359}{exp\+\_\+t}} \&exp, \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a8e22f5fc1b62271e6ef144911adecde8}{scl\+\_\+t}} coeff, const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a60553fbae1e4a58c189d046501f1ede8}{deg\+\_\+t}} $\ast$dim\+\_\+var=nullptr, const std\+::string $\ast$name\+\_\+var=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructs polynomial with a single nonzero monomial term. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_ae95f0e5890867ea12910ce5eae2a9318}{Polynomial}} (int num\+\_\+var, \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a8e22f5fc1b62271e6ef144911adecde8}{scl\+\_\+t}} coeff, const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a60553fbae1e4a58c189d046501f1ede8}{deg\+\_\+t}} $\ast$dim\+\_\+var=nullptr, const std\+::string $\ast$name\+\_\+var=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructs constant nonzero polynomial. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_af45d30f307f301b9d43fcdf52897bbce}{reserve}} (size\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Reserves number of monomials. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a6ece838d12bfe695e2a59d94f8fc1856}{number\+\_\+of\+\_\+variables}} () const
 \begin{DoxyCompactList}\small\item\em Returns the number of variables of the polynomial. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_adf413d58aa5d7f36e58884d91e9aabda}{reserve}} (size\+\_\+t n)
-\begin{DoxyCompactList}\small\item\em Returns number of monomials. \end{DoxyCompactList}\item 
-auto \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_ab682f9da699d3d9767586332ee32c4e4}{number\+\_\+of\+\_\+monomials}} () const
+size\+\_\+t \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a5b2cb23f1a89d1c9cd17c9bbba894027}{number\+\_\+of\+\_\+monomials}} () const
 \begin{DoxyCompactList}\small\item\em Returns the number of monomials of the polynomial. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_aa4f5846886261f04aa8c66ab45fac567}{clear}} ()
-\begin{DoxyCompactList}\small\item\em Clears all monomials of polynomial (equivalent to setting polynomial to 0) \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a398889dc1151404048820a5c1b4baf5a}{insert}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_aa465567e5f113d3366dc71ff32af55b1}{exp\+\_\+t}} \&exponent, \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a59b08e7c10ddadcf8e89350d4975d6ae}{scl\+\_\+t}} scalar)
-\begin{DoxyCompactList}\small\item\em Inserts monomial given exponent and coefficient. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_af40d654efe6e0d1ac9904774a8a7994a}{begin}} () const
-\begin{DoxyCompactList}\small\item\em Returns {\ttfamily \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator}{const\+\_\+iterator}}} to the first monomial. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_aee8a3dc9d127069f4672416658b74442}{end}} () const
-\begin{DoxyCompactList}\small\item\em Returns {\ttfamily \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator}{const\+\_\+iterator}}} to the end. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a0bf09e3b24c5787316b3dff30a55cc94}{highest\+\_\+term}} () const
-\begin{DoxyCompactList}\small\item\em Returns {\ttfamily \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator}{const\+\_\+iterator}}} to the highest term monomial. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a58527fc7feb195334a8e3a7589bb8ca3}{operator+=}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \&other)
-\begin{DoxyCompactList}\small\item\em Replaces {\ttfamily $\ast$this} by {\ttfamily $\ast$this+other}. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a7a976d12d62e2b2f10841ef945e2ed35}{operator-\/=}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \&other)
-\begin{DoxyCompactList}\small\item\em Replaces {\ttfamily $\ast$this} by {\ttfamily $\ast$this-\/other}. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a14aa63bd7a4934ad639f4e5d09fae129}{operator+}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \&other) const
-\begin{DoxyCompactList}\small\item\em Adds polynomials {\ttfamily $\ast$this} and {\ttfamily other}. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_aa0e696aa1fcfc30a2b7c90fd804bc08b}{operator-\/}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \&other) const
-\begin{DoxyCompactList}\small\item\em Subtracts polynomials {\ttfamily $\ast$this} and {\ttfamily other}. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a03075aa87a3a4dd9c54976d6427aecd3}{operator$\ast$}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \&other) const
-\begin{DoxyCompactList}\small\item\em Multiplies polynomials {\ttfamily $\ast$this} and {\ttfamily other}. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a84947ebd102746aed50c0f600b3409e8}{operator$\ast$=}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \&other)
-\begin{DoxyCompactList}\small\item\em Replaces {\ttfamily $\ast$this} by {\ttfamily $\ast$this$\ast$other}. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_ac6fe36bf1079d0541c2f009d7d2b7e98}{operator$\ast$=}} (\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a59b08e7c10ddadcf8e89350d4975d6ae}{scl\+\_\+t}} scalar)
-\begin{DoxyCompactList}\small\item\em Replaces {\ttfamily $\ast$this} by {\ttfamily $\ast$this$\ast$scalar}. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename any\+\_\+int\+\_\+type  = int$>$ }\\\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a85b255fec954a2fa5a261f7be522104f}{operator$^\wedge$}} (any\+\_\+int\+\_\+type p) const
-\begin{DoxyCompactList}\small\item\em Raises {\ttfamily $\ast$this} to given power {\ttfamily p}. \end{DoxyCompactList}\item 
-std\+::string \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a79ee3c7a321c648b32cac4d13d39fb47}{print}} () const
-\begin{DoxyCompactList}\small\item\em Prints polynomial. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a1e2857d9cf3315a748928e33f8681b3e}{operator==}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \&) const
+void \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a3fdc0ef3971651e3b978d65e62ca1776}{insert}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_adb6914c33db4513e34a8e2149b97d359}{exp\+\_\+t}} \&exponent, \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a8e22f5fc1b62271e6ef144911adecde8}{scl\+\_\+t}} coeff)
+\begin{DoxyCompactList}\small\item\em Inserts monomial in polynomial. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_aad01a9b1bb9b68c6476f8162e731f511}{begin}} () const -\/$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1constIterator}{const\+Iterator}}
+\begin{DoxyCompactList}\small\item\em Returns {\ttfamily \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1constIterator}{const\+Iterator}}} to the first monomial. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_ab65c1c78818d2edf0be9c5b736ab0272}{end}} () const -\/$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1constIterator}{const\+Iterator}}
+\begin{DoxyCompactList}\small\item\em Returns {\ttfamily \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1constIterator}{const\+Iterator}}} to the end. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a7e4d4d7333cd9732b53ca4a4ed0f628f}{highest\+\_\+term}} () const -\/$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1constIterator}{const\+Iterator}}
+\begin{DoxyCompactList}\small\item\em Returns {\ttfamily \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1constIterator}{const\+Iterator}}} to the highest term monomial. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a331ffc367a7669767d0c203b3e68907f}{operator+=}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \&other) -\/$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \&
+\begin{DoxyCompactList}\small\item\em Addition assignment. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_aa4630f9593ebc6310d1cc3320249b86c}{operator-\/=}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \&other) -\/$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \&
+\begin{DoxyCompactList}\small\item\em Subtraction assignment. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_aa19a420790fbe79b9b73b503bf37bece}{operator$\ast$=}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \&other) -\/$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \&
+\begin{DoxyCompactList}\small\item\em Multiplication assignment. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a0fb0bb12bf91b49556b3f965d267b1cb}{operator$\ast$=}} (\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a8e22f5fc1b62271e6ef144911adecde8}{scl\+\_\+t}} scalar) -\/$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \&
+\begin{DoxyCompactList}\small\item\em Scalar multiplication assignment. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a4a1e0655274f4060a271bbc2cb6c0f20}{operator+}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \&other) const -\/$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}
+\begin{DoxyCompactList}\small\item\em Addition of polynomials. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a83304d45c36427da1b975ef442424e6c}{operator-\/}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \&other) const -\/$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}
+\begin{DoxyCompactList}\small\item\em Subtraction of polynomials. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a6201cfc56b51a30ae1f01570c8e66841}{operator$\ast$}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \&other) const -\/$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}
+\begin{DoxyCompactList}\small\item\em Multiplication of polynomials. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T  = int$>$ }\\auto \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a39143ef3ebb433a42659875d3b955daf}{operator$^\wedge$}} (T p) const -\/$>$ \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}
+\begin{DoxyCompactList}\small\item\em Raises polynomial to integer power. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_acd848ed8bb05466e6d96bd387a8326c2}{print}} () const
+\begin{DoxyCompactList}\small\item\em Prints polynomial to string. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a96b711878928dbe44c00a41c8a792838}{operator==}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \&) const
 \begin{DoxyCompactList}\small\item\em Equality of polynomials. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a7868332701c639696435bb600e116867}{operator!=}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \&) const
+bool \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a548205649375618bfd70ceabd8fba4a5}{operator!=}} (const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \&) const
 \begin{DoxyCompactList}\small\item\em Inequality of polynomials. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsubsection{Detailed Description}
-\subsubsection*{template$<$typename container\+\_\+t$>$\newline
-class Symmetric\+\_\+\+Polynomials\+::\+Polynomial$<$ container\+\_\+t $>$}
+\subsubsection*{template$<$typename \+\_\+scl, typename \+\_\+exp, template$<$ typename... $>$ typename \+\_\+container, bool container\+\_\+is\+\_\+ordered, typename ... \+\_\+\+Args$>$\newline
+class Symmetric\+\_\+\+Polynomials\+::\+Polynomial$<$ \+\_\+scl, \+\_\+exp, \+\_\+container, container\+\_\+is\+\_\+ordered, \+\_\+\+Args $>$}
 
-Polynomials in multiple variables. 
+Class for polynomials in multiple variables with relations. 
 
 
 \begin{DoxyTemplParams}{Template Parameters}
-{\em container\+\_\+t} & Specifies the container for the monomials in the polynomial eg \mbox{\hyperlink{structSymmetric__Polynomials_1_1default__container}{default\+\_\+container}}$<$int, Standard\+\_\+\+Variables$<$$>$, 1$>$ or \mbox{\hyperlink{structSymmetric__Polynomials_1_1default__container}{default\+\_\+container}}$<$float, Half\+\_\+\+Idempotent\+\_\+\+Variables$<$$>$, 0$>$ \\
+{\em \+\_\+scl} & The scalar/coefficient type of the polynomial eg {\ttfamily float} or {\ttfamily int64})t \\
+\hline
+{\em \+\_\+exp} & The variable/exponent type of the polynomial eg {\ttfamily \mbox{\hyperlink{structSymmetric__Polynomials_1_1StandardVariables}{Standard\+Variables}}} or {\ttfamily \mbox{\hyperlink{structSymmetric__Polynomials_1_1HalfIdempotentVariables}{Half\+Idempotent\+Variables}}} \\
+\hline
+{\em \+\_\+container} & The data storage type of the polynomial. This should be equivalent to {\ttfamily std\+::map} if {\ttfamily container\+\_\+is\+\_\+ordered==1} and {\ttfamily std\+::unordered\+\_\+map} otherwise \\
+\hline
+{\em container\+\_\+is\+\_\+ordered} & This should be 1 if the {\ttfamily \+\_\+container} is equivalent to {\ttfamily std\+::map} and 0 if it\textquotesingle{}s equivalent to {\ttfamily std\+::unordered\+\_\+map} \\
+\hline
+{\em ...\+\_\+\+Args} & Any extra optional arguments to pass to the \+\_\+container apart from key,value, comparator/hash. Typically an allocator \\
 \hline
 \end{DoxyTemplParams}
-\begin{DoxyParagraph}{Requirements from container\+\_\+t}
-The container must map pairs (degree,exponent) to scalars\+: $(d,e)\mapsto c$ represents the monomial $cx_1^{e_1}\cdots x_n^{e_n}$ of degree $d$. Specifically\+:
-\begin{DoxyItemize}
-\item {\ttfamily container\+\_\+t} must have a member {\ttfamily static} {\ttfamily constexpr} {\ttfamily bool} {\ttfamily ordered} that specifies whether it keeps the monomials in increasing order (yes if {\ttfamily ordered==1}, no otherwise)
-\item If {\ttfamily ordered==1}, {\ttfamily container\+\_\+t} should be equivalent to {\ttfamily std\+::map$<$std\+::pair$<$typename exp\+\_\+t\+::deg\+\_\+t, exp\+\_\+t$>$}, scl\+\_\+t$>$
-\item If {\ttfamily ordered==0}, {\ttfamily container\+\_\+t} should be equivalent to {\ttfamily std\+::unordered\+\_\+map$<$std\+::pair$<$typename exp\+\_\+t\+::deg\+\_\+t, exp\+\_\+t$>$}, scl\+\_\+t, hasher$>$
-\item In particular {\ttfamily container\+\_\+t} must also have\+: {\ttfamily operator\mbox{[}$\,$\mbox{]}()}, {\ttfamily \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator}{const\+\_\+iterator}}} with {\ttfamily \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_af40d654efe6e0d1ac9904774a8a7994a}{begin()}}},\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_aee8a3dc9d127069f4672416658b74442}{end()}} methods, and methods {\ttfamily \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a398889dc1151404048820a5c1b4baf5a}{insert()}}} and {\ttfamily erase()}.
-\item Finally, it must have the typedefs {\ttfamily mapped\+\_\+type} (the scalar), {\ttfamily key\+\_\+type\+::first\+\_\+type} (the degree), {\ttfamily key\+\_\+type\+::second\+\_\+type} (the exponent). 
-\end{DoxyItemize}
-\end{DoxyParagraph}
-\begin{DoxyParagraph}{Requirements from the exponent type {\ttfamily exp\+\_\+t} (i.e. {\ttfamily key\+\_\+type\+::second\+\_\+type})\+:}
-The exponent must have functionality similar to {\ttfamily \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Standard\+\_\+\+Variables}}} or {\ttfamily \mbox{\hyperlink{structSymmetric__Polynomials_1_1Half__Idempotent__Variables}{Half\+\_\+\+Idempotent\+\_\+\+Variables}}} Specifically\+:
+\begin{DoxyParagraph}{Requirements from {\ttfamily exp\+\_\+t}\+:}
+The exponent must have functionality similar to {\ttfamily \mbox{\hyperlink{structSymmetric__Polynomials_1_1StandardVariables}{Standard\+Variables}}} or {\ttfamily \mbox{\hyperlink{structSymmetric__Polynomials_1_1HalfIdempotentVariables}{Half\+Idempotent\+Variables}}} Specifically\+:
 \begin{DoxyItemize}
 \item It must have a typedef {\ttfamily deg\+\_\+t} that represents the degree type (eg {\ttfamily int},uint64\+\_\+t)
 \item It must have basic vector functionality (constructor that takes {\ttfamily int} {\ttfamily n} and produces exponent of 0\textquotesingle{}s with that number of variables {\ttfamily n}, operator \mbox{[}\mbox{]}...)
-\item It should have an operator + to be used in the product of monomials and an operator -\/ to be used in the division of monomials (if products/divisions need to be used).
-\item If {\ttfamily ordered==1} it needs to have an operator $<$ (implementing a lexicographic ordering) and otherwise it needs to have an operator () implementing a hash function
-\item It may also optionally have a {\ttfamily deg\+\_\+t} {\ttfamily degree()} function that compute the degree of the exponent
-\item It may also optionally have a {\ttfamily std\+::string} {\ttfamily static} {\ttfamily name(int,int)} function that prints the names of the variables (first parameter is the index of the variable, second is the total number of variables).
-\item If {\ttfamily exp\+\_\+t} does not have a {\ttfamily degree()} function then the user needs to provide the dimensions of the variables through a {\ttfamily deg\+\_\+t$\ast$} 
-\item If {\ttfamily exp\+\_\+t} does not have a {\ttfamily static} {\ttfamily name(int,int)} function then the user needs to provide the names of the variables through a {\ttfamily std\+::string$\ast$} 
+\item It should have an operator + to be used in the product of monomials (if products need to be used) and an operator -\/ to be used in the division of monomials (if divisions need to be used).
+\item If {\ttfamily container\+\_\+is\+\_\+ordered==1} it needs to have a {\ttfamily bool} {\ttfamily operator$<$()} {\ttfamily const} and otherwise it needs to have a hash function {\ttfamily size\+\_\+t} {\ttfamily operator()()} {\ttfamily const} 
+\item Optionally, it may have a {\ttfamily deg\+\_\+t} {\ttfamily degree()} {\ttfamily const} method that computes the degree of the monomial exponent
+\item Optionally, it may a {\ttfamily std\+::string} {\ttfamily static} {\ttfamily name(int,int)} method that prints the names of the variables (first parameter is the index of the variable, second is the total number of variables).
+\item If {\ttfamily exp\+\_\+t} does not have a {\ttfamily degree} method then the user needs to provide the dimensions of the variables through a {\ttfamily deg\+\_\+t$\ast$} in the constructor
+\item If {\ttfamily exp\+\_\+t} does not have a {\ttfamily name} method then the user needs to provide the names of the variables through a {\ttfamily std\+::string$\ast$} in the constructor 
 \end{DoxyItemize}
 \end{DoxyParagraph}
 \begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000004}{Todo}}]Use concepts (C++20) to express these requirements 
-
-Improve multiplication {\ttfamily \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a84947ebd102746aed50c0f600b3409e8}{operator$\ast$=()}}} \end{DoxyRefDesc}
-\begin{DoxyNote}{Note}
-We save the degree in order to speed up the {\ttfamily \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a0bf09e3b24c5787316b3dff30a55cc94}{highest\+\_\+term()}}} computation 
-\end{DoxyNote}
+\item[\mbox{\hyperlink{todo__todo000004}{Todo}}]Use concepts (C++20) to express these requirements \end{DoxyRefDesc}
 
 
 \doxysubsubsection{Member Typedef Documentation}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_aa98da159492216c1282d406944f0747f}\label{classSymmetric__Polynomials_1_1Polynomial_aa98da159492216c1282d406944f0747f}} 
-\index{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}!deg\_t@{deg\_t}}
-\index{deg\_t@{deg\_t}!Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a60553fbae1e4a58c189d046501f1ede8}\label{classSymmetric__Polynomials_1_1Polynomial_a60553fbae1e4a58c189d046501f1ede8}} 
+\index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!deg\_t@{deg\_t}}
+\index{deg\_t@{deg\_t}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}}
 \doxyparagraph{\texorpdfstring{deg\_t}{deg\_t}}
-{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
-typedef container\+\_\+t\+::key\+\_\+type\+::first\+\_\+type \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial}}$<$ container\+\_\+t $>$\+::\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_aa98da159492216c1282d406944f0747f}{deg\+\_\+t}}}
+{\footnotesize\ttfamily typedef \+\_\+exp\+::deg\+\_\+t \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a60553fbae1e4a58c189d046501f1ede8}{deg\+\_\+t}}}
 
 
 
 The degree type eg {\ttfamily uint64\+\_\+t}. 
 
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_aa465567e5f113d3366dc71ff32af55b1}\label{classSymmetric__Polynomials_1_1Polynomial_aa465567e5f113d3366dc71ff32af55b1}} 
-\index{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}!exp\_t@{exp\_t}}
-\index{exp\_t@{exp\_t}!Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_adb6914c33db4513e34a8e2149b97d359}\label{classSymmetric__Polynomials_1_1Polynomial_adb6914c33db4513e34a8e2149b97d359}} 
+\index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!exp\_t@{exp\_t}}
+\index{exp\_t@{exp\_t}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}}
 \doxyparagraph{\texorpdfstring{exp\_t}{exp\_t}}
-{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
-typedef container\+\_\+t\+::key\+\_\+type\+::second\+\_\+type \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial}}$<$ container\+\_\+t $>$\+::\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_aa465567e5f113d3366dc71ff32af55b1}{exp\+\_\+t}}}
+{\footnotesize\ttfamily typedef \+\_\+exp \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_adb6914c33db4513e34a8e2149b97d359}{exp\+\_\+t}}}
 
 
 
-The exponent type eg {\ttfamily \mbox{\hyperlink{structSymmetric__Polynomials_1_1Standard__Variables}{Standard\+\_\+\+Variables}}}. 
+The variable/exponent type eg {\ttfamily \mbox{\hyperlink{structSymmetric__Polynomials_1_1StandardVariables}{Standard\+Variables}}}. 
 
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a59b08e7c10ddadcf8e89350d4975d6ae}\label{classSymmetric__Polynomials_1_1Polynomial_a59b08e7c10ddadcf8e89350d4975d6ae}} 
-\index{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}!scl\_t@{scl\_t}}
-\index{scl\_t@{scl\_t}!Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a8e22f5fc1b62271e6ef144911adecde8}\label{classSymmetric__Polynomials_1_1Polynomial_a8e22f5fc1b62271e6ef144911adecde8}} 
+\index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!scl\_t@{scl\_t}}
+\index{scl\_t@{scl\_t}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}}
 \doxyparagraph{\texorpdfstring{scl\_t}{scl\_t}}
-{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
-typedef container\+\_\+t\+::mapped\+\_\+type \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial}}$<$ container\+\_\+t $>$\+::\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a59b08e7c10ddadcf8e89350d4975d6ae}{scl\+\_\+t}}}
+{\footnotesize\ttfamily typedef \+\_\+scl \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a8e22f5fc1b62271e6ef144911adecde8}{scl\+\_\+t}}}
 
 
 
-The scalar type eg {\ttfamily int}. 
+The scalar/coefficient type eg {\ttfamily int}. 
 
 
 
 \doxysubsubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a93b757ce0ba805dda3f49f36571489fc}\label{classSymmetric__Polynomials_1_1Polynomial_a93b757ce0ba805dda3f49f36571489fc}} 
-\index{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}!Polynomial@{Polynomial}}
-\index{Polynomial@{Polynomial}!Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}}
-\doxyparagraph{\texorpdfstring{Polynomial()}{Polynomial()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
-{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial}}$<$ container\+\_\+t $>$\+::\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a12f9dff77773d79b3e29ecd5040f8c70}\label{classSymmetric__Polynomials_1_1Polynomial_a12f9dff77773d79b3e29ecd5040f8c70}} 
+\index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!Polynomial@{Polynomial}}
+\index{Polynomial@{Polynomial}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}}
+\doxyparagraph{\texorpdfstring{Polynomial()}{Polynomial()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a60553fbae1e4a58c189d046501f1ede8}{deg\+\_\+t}} $\ast$}]{dim\+\_\+var = {\ttfamily nullptr},  }\item[{const std\+::string $\ast$}]{name\+\_\+var = {\ttfamily nullptr} }\end{DoxyParamCaption})}
 
 
 
-Default constructor (empty polynomial) 
-
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a933cac974c20391586e4d7d739e7ec73}\label{classSymmetric__Polynomials_1_1Polynomial_a933cac974c20391586e4d7d739e7ec73}} 
-\index{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}!Polynomial@{Polynomial}}
-\index{Polynomial@{Polynomial}!Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}}
-\doxyparagraph{\texorpdfstring{Polynomial()}{Polynomial()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
-{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial}}$<$ container\+\_\+t $>$\+::\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+var,  }\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_aa98da159492216c1282d406944f0747f}{deg\+\_\+t}} $\ast$}]{dim\+\_\+var = {\ttfamily nullptr},  }\item[{const std\+::string $\ast$}]{name\+\_\+var = {\ttfamily nullptr} }\end{DoxyParamCaption})}
-
-
-
-Constructs empty polynomial with certain number of variables and optionally dimensions/names. 
+Constructs zero polynomial. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em num\+\_\+var} & The number of variables \\
+{\em dim\+\_\+var} & Pointer to the dimensions of the variables; used only when {\ttfamily exp\+\_\+t} does not implement method {\ttfamily deg\+\_\+t} {\ttfamily degree()} {\ttfamily const} \\
 \hline
-{\em dim\+\_\+var} & Pointer to the dimensions of the variables (used only when {\ttfamily exp\+\_\+t} does not implement method {\ttfamily deg\+\_\+t} {\ttfamily degree()}) \\
-\hline
-{\em name\+\_\+var} & Pointer to the names of the variables (used only when {\ttfamily exp\+\_\+t} does not implement {\ttfamily std\+::string} {\ttfamily static} {\ttfamily name(int,int)}) \\
+{\em name\+\_\+var} & Pointer to the names of the variables; used only when {\ttfamily exp\+\_\+t} does not implement {\ttfamily std\+::string} {\ttfamily static} {\ttfamily name(int,int)} \\
 \hline
 \end{DoxyParams}
-\begin{DoxyAttention}{Attention}
-The {\ttfamily dim\+\_\+var} and {\ttfamily name\+\_\+var} need not be provided (as long as {\ttfamily exp\+\_\+t} implements the methods above), but if they are, the user must ensure the pointers are not invalidated 
-\end{DoxyAttention}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_ad4cf350e86906b729806425b1360373c}\label{classSymmetric__Polynomials_1_1Polynomial_ad4cf350e86906b729806425b1360373c}} 
-\index{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}!Polynomial@{Polynomial}}
-\index{Polynomial@{Polynomial}!Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}}
-\doxyparagraph{\texorpdfstring{Polynomial()}{Polynomial()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
-{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial}}$<$ container\+\_\+t $>$\+::\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_aa465567e5f113d3366dc71ff32af55b1}{exp\+\_\+t}} \&}]{exp,  }\item[{\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a59b08e7c10ddadcf8e89350d4975d6ae}{scl\+\_\+t}}}]{coeff,  }\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_aa98da159492216c1282d406944f0747f}{deg\+\_\+t}} $\ast$}]{dim\+\_\+var = {\ttfamily nullptr},  }\item[{const std\+::string $\ast$}]{name\+\_\+var = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a15df77b4539067fa38081a809e874627}\label{classSymmetric__Polynomials_1_1Polynomial_a15df77b4539067fa38081a809e874627}} 
+\index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!Polynomial@{Polynomial}}
+\index{Polynomial@{Polynomial}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}}
+\doxyparagraph{\texorpdfstring{Polynomial()}{Polynomial()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_adb6914c33db4513e34a8e2149b97d359}{exp\+\_\+t}} \&}]{exp,  }\item[{\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a8e22f5fc1b62271e6ef144911adecde8}{scl\+\_\+t}}}]{coeff,  }\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a60553fbae1e4a58c189d046501f1ede8}{deg\+\_\+t}} $\ast$}]{dim\+\_\+var = {\ttfamily nullptr},  }\item[{const std\+::string $\ast$}]{name\+\_\+var = {\ttfamily nullptr} }\end{DoxyParamCaption})}
 
 
 
-Constructs polynomial with a single monomial term. 
+Constructs polynomial with a single nonzero monomial term. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -205,24 +173,23 @@ Constructs polynomial with a single monomial term.
 \hline
 {\em coeff} & The coefficient of the monomial \\
 \hline
-{\em dim\+\_\+var} & Pointer to the dimensions of the variables (used only when {\ttfamily exp\+\_\+t} does not implement method {\ttfamily deg\+\_\+t} {\ttfamily degree()}) \\
+{\em dim\+\_\+var} & Pointer to the dimensions of the variables; used only when {\ttfamily exp\+\_\+t} does not implement method {\ttfamily deg\+\_\+t} {\ttfamily degree()} {\ttfamily const} \\
 \hline
-{\em name\+\_\+var} & Pointer to the names of the variables (used only when {\ttfamily exp\+\_\+t} does not implement {\ttfamily std\+::string} {\ttfamily static} {\ttfamily name(int,int)}) \\
+{\em name\+\_\+var} & Pointer to the names of the variables; used only when {\ttfamily exp\+\_\+t} does not implement {\ttfamily std\+::string} {\ttfamily static} {\ttfamily name(int,int)} \\
 \hline
 \end{DoxyParams}
-\begin{DoxyAttention}{Attention}
-The {\ttfamily dim\+\_\+var} and {\ttfamily name\+\_\+var} need not be provided (as long as {\ttfamily exp\+\_\+t} implements the methods above), but if they are, the user must ensure the pointers are not invalidated 
-\end{DoxyAttention}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_ae3bb15f601ead6d169fff44b37a1b68a}\label{classSymmetric__Polynomials_1_1Polynomial_ae3bb15f601ead6d169fff44b37a1b68a}} 
-\index{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}!Polynomial@{Polynomial}}
-\index{Polynomial@{Polynomial}!Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}}
-\doxyparagraph{\texorpdfstring{Polynomial()}{Polynomial()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
-{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial}}$<$ container\+\_\+t $>$\+::\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+var,  }\item[{\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a59b08e7c10ddadcf8e89350d4975d6ae}{scl\+\_\+t}}}]{coeff,  }\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_aa98da159492216c1282d406944f0747f}{deg\+\_\+t}} $\ast$}]{dim\+\_\+var = {\ttfamily nullptr},  }\item[{const std\+::string $\ast$}]{name\+\_\+var = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+\begin{DoxyWarning}{Warning}
+It is the user\textquotesingle{}s responsibility to make sure {\ttfamily coeff!=0} 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_ae95f0e5890867ea12910ce5eae2a9318}\label{classSymmetric__Polynomials_1_1Polynomial_ae95f0e5890867ea12910ce5eae2a9318}} 
+\index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!Polynomial@{Polynomial}}
+\index{Polynomial@{Polynomial}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}}
+\doxyparagraph{\texorpdfstring{Polynomial()}{Polynomial()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+var,  }\item[{\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a8e22f5fc1b62271e6ef144911adecde8}{scl\+\_\+t}}}]{coeff,  }\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a60553fbae1e4a58c189d046501f1ede8}{deg\+\_\+t}} $\ast$}]{dim\+\_\+var = {\ttfamily nullptr},  }\item[{const std\+::string $\ast$}]{name\+\_\+var = {\ttfamily nullptr} }\end{DoxyParamCaption})}
 
 
 
-Constructs constant polynomial. 
+Constructs constant nonzero polynomial. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -230,319 +197,326 @@ Constructs constant polynomial.
 \hline
 {\em coeff} & The coefficient of the monomial \\
 \hline
-{\em dim\+\_\+var} & Pointer to the dimensions of the variables (used only when {\ttfamily exp\+\_\+t} does not implement method {\ttfamily deg\+\_\+t} {\ttfamily degree()}) \\
+{\em dim\+\_\+var} & Pointer to the dimensions of the variables; used only when {\ttfamily exp\+\_\+t} does not implement method {\ttfamily deg\+\_\+t} {\ttfamily degree()} {\ttfamily const} \\
 \hline
-{\em name\+\_\+var} & Pointer to the names of the variables (used only when {\ttfamily exp\+\_\+t} does not implement {\ttfamily std\+::string} {\ttfamily static} {\ttfamily name(int,int)}) \\
+{\em name\+\_\+var} & Pointer to the names of the variables; used only when {\ttfamily exp\+\_\+t} does not implement {\ttfamily std\+::string} {\ttfamily static} {\ttfamily name(int,int)} \\
 \hline
 \end{DoxyParams}
-\begin{DoxyAttention}{Attention}
-The {\ttfamily dim\+\_\+var} and {\ttfamily name\+\_\+var} need not be provided (as long as {\ttfamily exp\+\_\+t} implements the methods above), but if they are, the user must ensure the pointers are not invalidated 
-\end{DoxyAttention}
+\begin{DoxyWarning}{Warning}
+It is the user\textquotesingle{}s responsibility to make sure {\ttfamily coeff!=0} 
+\end{DoxyWarning}
 
 
 \doxysubsubsection{Member Function Documentation}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_af40d654efe6e0d1ac9904774a8a7994a}\label{classSymmetric__Polynomials_1_1Polynomial_af40d654efe6e0d1ac9904774a8a7994a}} 
-\index{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}!begin@{begin}}
-\index{begin@{begin}!Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_aad01a9b1bb9b68c6476f8162e731f511}\label{classSymmetric__Polynomials_1_1Polynomial_aad01a9b1bb9b68c6476f8162e731f511}} 
+\index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!begin@{begin}}
+\index{begin@{begin}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}}
 \doxyparagraph{\texorpdfstring{begin()}{begin()}}
-{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial}}$<$ container\+\_\+t $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily auto begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$  \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1constIterator}{const\+Iterator}}}
 
 
 
-Returns {\ttfamily \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator}{const\+\_\+iterator}}} to the first monomial. 
+Returns {\ttfamily \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1constIterator}{const\+Iterator}}} to the first monomial. 
 
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_aa4f5846886261f04aa8c66ab45fac567}\label{classSymmetric__Polynomials_1_1Polynomial_aa4f5846886261f04aa8c66ab45fac567}} 
-\index{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}!clear@{clear}}
-\index{clear@{clear}!Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}}
-\doxyparagraph{\texorpdfstring{clear()}{clear()}}
-{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
-void \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial}}$<$ container\+\_\+t $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Clears all monomials of polynomial (equivalent to setting polynomial to 0) 
-
-\begin{DoxyAttention}{Attention}
-Does not affect number of variables 
-\end{DoxyAttention}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_aee8a3dc9d127069f4672416658b74442}\label{classSymmetric__Polynomials_1_1Polynomial_aee8a3dc9d127069f4672416658b74442}} 
-\index{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}!end@{end}}
-\index{end@{end}!Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_ab65c1c78818d2edf0be9c5b736ab0272}\label{classSymmetric__Polynomials_1_1Polynomial_ab65c1c78818d2edf0be9c5b736ab0272}} 
+\index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!end@{end}}
+\index{end@{end}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}}
 \doxyparagraph{\texorpdfstring{end()}{end()}}
-{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial}}$<$ container\+\_\+t $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily auto end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$  \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1constIterator}{const\+Iterator}}}
 
 
 
-Returns {\ttfamily \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator}{const\+\_\+iterator}}} to the end. 
+Returns {\ttfamily \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1constIterator}{const\+Iterator}}} to the end. 
 
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a0bf09e3b24c5787316b3dff30a55cc94}\label{classSymmetric__Polynomials_1_1Polynomial_a0bf09e3b24c5787316b3dff30a55cc94}} 
-\index{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}!highest\_term@{highest\_term}}
-\index{highest\_term@{highest\_term}!Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a7e4d4d7333cd9732b53ca4a4ed0f628f}\label{classSymmetric__Polynomials_1_1Polynomial_a7e4d4d7333cd9732b53ca4a4ed0f628f}} 
+\index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!highest\_term@{highest\_term}}
+\index{highest\_term@{highest\_term}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}}
 \doxyparagraph{\texorpdfstring{highest\_term()}{highest\_term()}}
-{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial}}$<$ container\+\_\+t $>$\+::highest\+\_\+term (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily auto highest\+\_\+term (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$  \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1constIterator}{const\+Iterator}}}
 
 
 
-Returns {\ttfamily \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1const__iterator}{const\+\_\+iterator}}} to the highest term monomial. 
+Returns {\ttfamily \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_1_1constIterator}{const\+Iterator}}} to the highest term monomial. 
 
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a398889dc1151404048820a5c1b4baf5a}\label{classSymmetric__Polynomials_1_1Polynomial_a398889dc1151404048820a5c1b4baf5a}} 
-\index{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}!insert@{insert}}
-\index{insert@{insert}!Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a3fdc0ef3971651e3b978d65e62ca1776}\label{classSymmetric__Polynomials_1_1Polynomial_a3fdc0ef3971651e3b978d65e62ca1776}} 
+\index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!insert@{insert}}
+\index{insert@{insert}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}}
 \doxyparagraph{\texorpdfstring{insert()}{insert()}}
-{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
-void \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial}}$<$ container\+\_\+t $>$\+::insert (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_aa465567e5f113d3366dc71ff32af55b1}{exp\+\_\+t}} \&}]{exponent,  }\item[{\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a59b08e7c10ddadcf8e89350d4975d6ae}{scl\+\_\+t}}}]{scalar }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void insert (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_adb6914c33db4513e34a8e2149b97d359}{exp\+\_\+t}} \&}]{exponent,  }\item[{\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a8e22f5fc1b62271e6ef144911adecde8}{scl\+\_\+t}}}]{coeff }\end{DoxyParamCaption})}
 
 
 
-Inserts monomial given exponent and coefficient. 
+Inserts monomial in polynomial. 
 
 
 \begin{DoxyParams}{Parameters}
 {\em exponent} & The exponent of the monomial. \\
 \hline
-{\em scalar} & The coefficient of the monomial. \\
+{\em coeff} & The coefficient of the monomial. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyAttention}{Attention}
 If a monomial with same exponent already exists in the polynomial then insert does nothing 
 \end{DoxyAttention}
 \begin{DoxyWarning}{Warning}
-It is the user\textquotesingle{}s responsibility to make sure that the coefficient is nonzero 
+It is the user\textquotesingle{}s responsibility to make sure that the coefficient is nonzero and that all exponents have the same size (number of variables) 
 \end{DoxyWarning}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classSymmetric__Polynomials_1_1Polynomial_a398889dc1151404048820a5c1b4baf5a_icgraph}
+\includegraphics[width=201pt]{classSymmetric__Polynomials_1_1Polynomial_a3fdc0ef3971651e3b978d65e62ca1776_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_ab682f9da699d3d9767586332ee32c4e4}\label{classSymmetric__Polynomials_1_1Polynomial_ab682f9da699d3d9767586332ee32c4e4}} 
-\index{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}!number\_of\_monomials@{number\_of\_monomials}}
-\index{number\_of\_monomials@{number\_of\_monomials}!Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a5b2cb23f1a89d1c9cd17c9bbba894027}\label{classSymmetric__Polynomials_1_1Polynomial_a5b2cb23f1a89d1c9cd17c9bbba894027}} 
+\index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!number\_of\_monomials@{number\_of\_monomials}}
+\index{number\_of\_monomials@{number\_of\_monomials}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}}
 \doxyparagraph{\texorpdfstring{number\_of\_monomials()}{number\_of\_monomials()}}
-{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
-auto \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial}}$<$ container\+\_\+t $>$\+::number\+\_\+of\+\_\+monomials (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily size\+\_\+t number\+\_\+of\+\_\+monomials (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
 Returns the number of monomials of the polynomial. 
 
 \begin{DoxyReturn}{Returns}
-The number of of monomials of the polynomial 
+The number of monomials of {\ttfamily $\ast$this} 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a57d1a73579c3462cd6b86de62361092d}\label{classSymmetric__Polynomials_1_1Polynomial_a57d1a73579c3462cd6b86de62361092d}} 
-\index{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}!number\_of\_variables@{number\_of\_variables}}
-\index{number\_of\_variables@{number\_of\_variables}!Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a6ece838d12bfe695e2a59d94f8fc1856}\label{classSymmetric__Polynomials_1_1Polynomial_a6ece838d12bfe695e2a59d94f8fc1856}} 
+\index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!number\_of\_variables@{number\_of\_variables}}
+\index{number\_of\_variables@{number\_of\_variables}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}}
 \doxyparagraph{\texorpdfstring{number\_of\_variables()}{number\_of\_variables()}}
-{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
-auto \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial}}$<$ container\+\_\+t $>$\+::number\+\_\+of\+\_\+variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily size\+\_\+t number\+\_\+of\+\_\+variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
 Returns the number of variables of the polynomial. 
 
 \begin{DoxyReturn}{Returns}
-The number of variables of the polynomial 
+The number of variables of {\ttfamily $\ast$this} 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a7868332701c639696435bb600e116867}\label{classSymmetric__Polynomials_1_1Polynomial_a7868332701c639696435bb600e116867}} 
-\index{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}!operator"!=@{operator"!=}}
-\index{operator"!=@{operator"!=}!Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}}
+\begin{DoxyWarning}{Warning}
+May only be used on nonempty polynomials 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a548205649375618bfd70ceabd8fba4a5}\label{classSymmetric__Polynomials_1_1Polynomial_a548205649375618bfd70ceabd8fba4a5}} 
+\index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}}
 \doxyparagraph{\texorpdfstring{operator"!=()}{operator!=()}}
-{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
-bool \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial}}$<$ container\+\_\+t $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ container\+\_\+t $>$ \&}]{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily bool operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ \+\_\+scl, \+\_\+exp, \+\_\+container, container\+\_\+is\+\_\+ordered, \+\_\+\+Args $>$ \&}]{ }\end{DoxyParamCaption}) const}
 
 
 
 Inequality of polynomials. 
 
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a03075aa87a3a4dd9c54976d6427aecd3}\label{classSymmetric__Polynomials_1_1Polynomial_a03075aa87a3a4dd9c54976d6427aecd3}} 
-\index{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}!operator$\ast$@{operator$\ast$}}
-\index{operator$\ast$@{operator$\ast$}!Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a6201cfc56b51a30ae1f01570c8e66841}\label{classSymmetric__Polynomials_1_1Polynomial_a6201cfc56b51a30ae1f01570c8e66841}} 
+\index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}}
 \doxyparagraph{\texorpdfstring{operator$\ast$()}{operator*()}}
-{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial}}$<$ container\+\_\+t $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ container\+\_\+t $>$ \&}]{other }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily auto operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ \+\_\+scl, \+\_\+exp, \+\_\+container, container\+\_\+is\+\_\+ordered, \+\_\+\+Args $>$ \&}]{other }\end{DoxyParamCaption}) const -\/$>$  \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}}
 
 
 
-Multiplies polynomials {\ttfamily $\ast$this} and {\ttfamily other}. 
-
-\begin{DoxyReturn}{Returns}
-{\ttfamily $\ast$this$\ast$other} 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a84947ebd102746aed50c0f600b3409e8}\label{classSymmetric__Polynomials_1_1Polynomial_a84947ebd102746aed50c0f600b3409e8}} 
-\index{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}!operator$\ast$=@{operator$\ast$=}}
-\index{operator$\ast$=@{operator$\ast$=}!Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}}
-\doxyparagraph{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}\& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial}}$<$ container\+\_\+t $>$\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ container\+\_\+t $>$ \&}]{other }\end{DoxyParamCaption})}
-
-
-
-Replaces {\ttfamily $\ast$this} by {\ttfamily $\ast$this$\ast$other}. 
-
-\begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000005}{Todo}}]Could this be done in place? \end{DoxyRefDesc}
-\begin{DoxyReturn}{Returns}
-Reference to {\ttfamily $\ast$this} 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_ac6fe36bf1079d0541c2f009d7d2b7e98}\label{classSymmetric__Polynomials_1_1Polynomial_ac6fe36bf1079d0541c2f009d7d2b7e98}} 
-\index{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}!operator$\ast$=@{operator$\ast$=}}
-\index{operator$\ast$=@{operator$\ast$=}!Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}}
-\doxyparagraph{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}\& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial}}$<$ container\+\_\+t $>$\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a59b08e7c10ddadcf8e89350d4975d6ae}{scl\+\_\+t}}}]{scalar }\end{DoxyParamCaption})}
-
-
-
-Replaces {\ttfamily $\ast$this} by {\ttfamily $\ast$this$\ast$scalar}. 
+Multiplication of polynomials. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em scalar} & Scalar we multiply with \\
+{\em other} & The polynomial we multiply with {\ttfamily $\ast$this} \\
 \hline
 \end{DoxyParams}
-\begin{DoxyNote}{Note}
-Efficient, in place 
-\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+{\ttfamily }($\ast$this)$\ast$other 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_aa19a420790fbe79b9b73b503bf37bece}\label{classSymmetric__Polynomials_1_1Polynomial_aa19a420790fbe79b9b73b503bf37bece}} 
+\index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}}
+\doxyparagraph{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily auto operator$\ast$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ \+\_\+scl, \+\_\+exp, \+\_\+container, container\+\_\+is\+\_\+ordered, \+\_\+\+Args $>$ \&}]{other }\end{DoxyParamCaption}) -\/$>$  \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \&}
+
+
+
+Multiplication assignment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The polynomial we multiply with {\ttfamily $\ast$this} ~\newline
+ \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Reference to {\ttfamily $\ast$this} 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a14aa63bd7a4934ad639f4e5d09fae129}\label{classSymmetric__Polynomials_1_1Polynomial_a14aa63bd7a4934ad639f4e5d09fae129}} 
-\index{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}!operator+@{operator+}}
-\index{operator+@{operator+}!Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000005}{Todo}}]Could this be done in place? \end{DoxyRefDesc}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a0fb0bb12bf91b49556b3f965d267b1cb}\label{classSymmetric__Polynomials_1_1Polynomial_a0fb0bb12bf91b49556b3f965d267b1cb}} 
+\index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}}
+\doxyparagraph{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily auto operator$\ast$= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial_a8e22f5fc1b62271e6ef144911adecde8}{scl\+\_\+t}}}]{scalar }\end{DoxyParamCaption}) -\/$>$  \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \&}
+
+
+
+Scalar multiplication assignment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scalar} & The scalar we multiply with {\ttfamily $\ast$this} ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to {\ttfamily $\ast$this} 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Efficient, in place 
+\end{DoxyNote}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a4a1e0655274f4060a271bbc2cb6c0f20}\label{classSymmetric__Polynomials_1_1Polynomial_a4a1e0655274f4060a271bbc2cb6c0f20}} 
+\index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}}
 \doxyparagraph{\texorpdfstring{operator+()}{operator+()}}
-{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial}}$<$ container\+\_\+t $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ container\+\_\+t $>$ \&}]{other }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily auto operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ \+\_\+scl, \+\_\+exp, \+\_\+container, container\+\_\+is\+\_\+ordered, \+\_\+\+Args $>$ \&}]{other }\end{DoxyParamCaption}) const -\/$>$  \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}}
 
 
 
-Adds polynomials {\ttfamily $\ast$this} and {\ttfamily other}. 
+Addition of polynomials. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The polynomial we add to {\ttfamily $\ast$this} \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-{\ttfamily $\ast$this+other} 
+{\ttfamily }($\ast$this)+other 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a58527fc7feb195334a8e3a7589bb8ca3}\label{classSymmetric__Polynomials_1_1Polynomial_a58527fc7feb195334a8e3a7589bb8ca3}} 
-\index{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}!operator+=@{operator+=}}
-\index{operator+=@{operator+=}!Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a331ffc367a7669767d0c203b3e68907f}\label{classSymmetric__Polynomials_1_1Polynomial_a331ffc367a7669767d0c203b3e68907f}} 
+\index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}}
 \doxyparagraph{\texorpdfstring{operator+=()}{operator+=()}}
-{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}\& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial}}$<$ container\+\_\+t $>$\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ container\+\_\+t $>$ \&}]{other }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily auto operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ \+\_\+scl, \+\_\+exp, \+\_\+container, container\+\_\+is\+\_\+ordered, \+\_\+\+Args $>$ \&}]{other }\end{DoxyParamCaption}) -\/$>$  \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \&}
 
 
 
-Replaces {\ttfamily $\ast$this} by {\ttfamily $\ast$this+other}. 
+Addition assignment. 
 
-\begin{DoxyNote}{Note}
-Efficient, in place 
-\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The polynomial we add to {\ttfamily $\ast$this} ~\newline
+ \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Reference to {\ttfamily $\ast$this} 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_aa0e696aa1fcfc30a2b7c90fd804bc08b}\label{classSymmetric__Polynomials_1_1Polynomial_aa0e696aa1fcfc30a2b7c90fd804bc08b}} 
-\index{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}!operator-\/@{operator-\/}}
-\index{operator-\/@{operator-\/}!Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}}
+\begin{DoxyNote}{Note}
+Efficient, in place 
+\end{DoxyNote}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a83304d45c36427da1b975ef442424e6c}\label{classSymmetric__Polynomials_1_1Polynomial_a83304d45c36427da1b975ef442424e6c}} 
+\index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}}
 \doxyparagraph{\texorpdfstring{operator-\/()}{operator-()}}
-{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial}}$<$ container\+\_\+t $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ container\+\_\+t $>$ \&}]{other }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily auto operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ \+\_\+scl, \+\_\+exp, \+\_\+container, container\+\_\+is\+\_\+ordered, \+\_\+\+Args $>$ \&}]{other }\end{DoxyParamCaption}) const -\/$>$  \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}}
 
 
 
-Subtracts polynomials {\ttfamily $\ast$this} and {\ttfamily other}. 
+Subtraction of polynomials. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The polynomial we subtract from {\ttfamily $\ast$this} \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-{\ttfamily $\ast$this-\/other} 
+{\ttfamily }($\ast$this)-\/other 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a7a976d12d62e2b2f10841ef945e2ed35}\label{classSymmetric__Polynomials_1_1Polynomial_a7a976d12d62e2b2f10841ef945e2ed35}} 
-\index{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}!operator-\/=@{operator-\/=}}
-\index{operator-\/=@{operator-\/=}!Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_aa4630f9593ebc6310d1cc3320249b86c}\label{classSymmetric__Polynomials_1_1Polynomial_aa4630f9593ebc6310d1cc3320249b86c}} 
+\index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}}
 \doxyparagraph{\texorpdfstring{operator-\/=()}{operator-=()}}
-{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}\& \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial}}$<$ container\+\_\+t $>$\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ container\+\_\+t $>$ \&}]{other }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily auto operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ \+\_\+scl, \+\_\+exp, \+\_\+container, container\+\_\+is\+\_\+ordered, \+\_\+\+Args $>$ \&}]{other }\end{DoxyParamCaption}) -\/$>$  \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \&}
 
 
 
-Replaces {\ttfamily $\ast$this} by {\ttfamily $\ast$this-\/other}. 
+Subtraction assignment. 
 
-\begin{DoxyNote}{Note}
-Efficient, in place 
-\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The polynomial we subtract from {\ttfamily $\ast$this} ~\newline
+ \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Reference to {\ttfamily $\ast$this} 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a1e2857d9cf3315a748928e33f8681b3e}\label{classSymmetric__Polynomials_1_1Polynomial_a1e2857d9cf3315a748928e33f8681b3e}} 
-\index{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}!operator==@{operator==}}
-\index{operator==@{operator==}!Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}}
+\begin{DoxyNote}{Note}
+Efficient, in place 
+\end{DoxyNote}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a96b711878928dbe44c00a41c8a792838}\label{classSymmetric__Polynomials_1_1Polynomial_a96b711878928dbe44c00a41c8a792838}} 
+\index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}}
 \doxyparagraph{\texorpdfstring{operator==()}{operator==()}}
-{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
-bool \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial}}$<$ container\+\_\+t $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ container\+\_\+t $>$ \&}]{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}$<$ \+\_\+scl, \+\_\+exp, \+\_\+container, container\+\_\+is\+\_\+ordered, \+\_\+\+Args $>$ \&}]{ }\end{DoxyParamCaption}) const}
 
 
 
 Equality of polynomials. 
 
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a85b255fec954a2fa5a261f7be522104f}\label{classSymmetric__Polynomials_1_1Polynomial_a85b255fec954a2fa5a261f7be522104f}} 
-\index{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}!operator$^\wedge$@{operator$^\wedge$}}
-\index{operator$^\wedge$@{operator$^\wedge$}!Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a39143ef3ebb433a42659875d3b955daf}\label{classSymmetric__Polynomials_1_1Polynomial_a39143ef3ebb433a42659875d3b955daf}} 
+\index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!operator$^\wedge$@{operator$^\wedge$}}
+\index{operator$^\wedge$@{operator$^\wedge$}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}}
 \doxyparagraph{\texorpdfstring{operator$^\wedge$()}{operator^()}}
-{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
-template$<$typename any\+\_\+int\+\_\+type  = int$>$ \\
-\mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}} \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial}}$<$ container\+\_\+t $>$\+::operator$^\wedge$ (\begin{DoxyParamCaption}\item[{any\+\_\+int\+\_\+type}]{p }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily auto operator$^\wedge$ (\begin{DoxyParamCaption}\item[{T}]{p }\end{DoxyParamCaption}) const -\/$>$  \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Polynomial}}}
 
 
 
-Raises {\ttfamily $\ast$this} to given power {\ttfamily p}. 
+Raises polynomial to integer power. 
 
 
 \begin{DoxyTemplParams}{Template Parameters}
-{\em any\+\_\+int\+\_\+type} & Any integer type eg {\ttfamily int},uint64\+\_\+t \\
+{\em T} & Any integer type eg {\ttfamily int},uint64\+\_\+t \\
 \hline
 \end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Power we raise {\ttfamily $\ast$this} to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily }($\ast$this)$^\wedge$p 
+\end{DoxyReturn}
 \begin{DoxyWarning}{Warning}
 Does nothing if {\ttfamily p$<$0} 
 \end{DoxyWarning}
 \begin{DoxyAttention}{Attention}
-Raises {\ttfamily static\+\_\+assert} if {\ttfamily any\+\_\+int\+\_\+type} is not an integer type 
+Raises {\ttfamily static\+\_\+assert} if {\ttfamily T} is not an integer type 
 \end{DoxyAttention}
-
-\begin{DoxyParams}{Parameters}
-{\em p} & Power we raise to \\
-\hline
-\end{DoxyParams}
 \begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000006}{Todo}}]Improve compared to multiplying p many times (eg iterating squaring) \end{DoxyRefDesc}
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_a79ee3c7a321c648b32cac4d13d39fb47}\label{classSymmetric__Polynomials_1_1Polynomial_a79ee3c7a321c648b32cac4d13d39fb47}} 
-\index{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}!print@{print}}
-\index{print@{print}!Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}}
+\item[\mbox{\hyperlink{todo__todo000006}{Todo}}]Improve implementation (currently multiplying p many times; would iterating the square be better? ) \end{DoxyRefDesc}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_acd848ed8bb05466e6d96bd387a8326c2}\label{classSymmetric__Polynomials_1_1Polynomial_acd848ed8bb05466e6d96bd387a8326c2}} 
+\index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!print@{print}}
+\index{print@{print}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}}
 \doxyparagraph{\texorpdfstring{print()}{print()}}
-{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
-std\+::string \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial}}$<$ container\+\_\+t $>$\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily std\+::string print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
-Prints polynomial. 
+Prints polynomial to string. 
 
-\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_adf413d58aa5d7f36e58884d91e9aabda}\label{classSymmetric__Polynomials_1_1Polynomial_adf413d58aa5d7f36e58884d91e9aabda}} 
-\index{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}!reserve@{reserve}}
-\index{reserve@{reserve}!Symmetric\_Polynomials::Polynomial$<$ container\_t $>$@{Symmetric\_Polynomials::Polynomial$<$ container\_t $>$}}
+\mbox{\Hypertarget{classSymmetric__Polynomials_1_1Polynomial_af45d30f307f301b9d43fcdf52897bbce}\label{classSymmetric__Polynomials_1_1Polynomial_af45d30f307f301b9d43fcdf52897bbce}} 
+\index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}!reserve@{reserve}}
+\index{reserve@{reserve}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$}}
 \doxyparagraph{\texorpdfstring{reserve()}{reserve()}}
-{\footnotesize\ttfamily template$<$typename container\+\_\+t $>$ \\
-void \mbox{\hyperlink{classSymmetric__Polynomials_1_1Polynomial}{Symmetric\+\_\+\+Polynomials\+::\+Polynomial}}$<$ container\+\_\+t $>$\+::reserve (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void reserve (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
 
 
 
-Returns number of monomials. 
+Reserves number of monomials. 
 
-\begin{DoxyAttention}{Attention}
-Does nothing if the container used does not have a reserve function 
-\end{DoxyAttention}
 
 \begin{DoxyParams}{Parameters}
 {\em n} & The amount of expected monomials \\
 \hline
 \end{DoxyParams}
+\begin{DoxyAttention}{Attention}
+Does nothing if {\ttfamily \+\_\+container} does not have a reserve function 
+\end{DoxyAttention}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['exp_5ft_168',['exp_t',['../classSymmetric__Polynomials_1_1Polynomial.html#aa465567e5f113d3366dc71ff32af55b1',1,'Symmetric_Polynomials::Polynomial']]]
+  ['orderedpolynomial_162',['OrderedPolynomial',['../namespacesymmp.html#a2ab4ba4bf25e718d78428e1b04332a2a',1,'symmp']]]
 ];

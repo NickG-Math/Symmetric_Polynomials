@@ -33,9 +33,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Symmetric Polynomials
-   &#160;<span id="projectnumber">V3</span>
+   &#160;<span id="projectnumber">V3.1</span>
    </div>
-   <div id="projectbrief">A C++ library for symmetric polynomials with relations</div>
+   <div id="projectbrief">A C++ library for generating symmetric polynomials with relations</div>
   </td>
  </tr>
  </tbody>
@@ -93,7 +93,6 @@ $(document).ready(function(){initNavTree('Half__Idempotent_8hpp.html',''); initR
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Half_Idempotent.hpp File Reference</div>  </div>
@@ -109,25 +108,26 @@ Include dependency graph for Half_Idempotent.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="Half__Idempotent_8hpp__incl.png" border="0" usemap="#Half__Idempotent_8hpp" alt=""/></div>
 <map name="Half__Idempotent_8hpp" id="Half__Idempotent_8hpp">
-<area shape="rect" title="Contains the methods and classes for symmetric polynomials with half idempotent variables." alt="" coords="542,5,701,32"/>
-<area shape="rect" href="Symmetric__Basis_8hpp.html" title="Contains the methods and classes for generatic symmetric polynomials." alt="" coords="440,80,603,107"/>
-<area shape="rect" title=" " alt="" coords="627,80,815,107"/>
-<area shape="rect" href="Polynomials_8hpp.html" title="Contains the class of polynomials in multiple variables." alt="" coords="243,155,373,181"/>
-<area shape="rect" href="Generators_8hpp.html" title="Contains classes for generating permutations, combinations and a factory for such classes." alt="" coords="460,155,583,181"/>
-<area shape="rect" title=" " alt="" coords="607,155,799,181"/>
+<area shape="rect" title="Contains the methods and classes for symmetric polynomials with half idempotent variables." alt="" coords="693,5,851,32"/>
+<area shape="rect" href="Symmetric__Basis_8hpp.html" title="Contains the methods and classes for generatic symmetric polynomials." alt="" coords="591,80,753,107"/>
+<area shape="rect" title=" " alt="" coords="778,80,966,107"/>
+<area shape="rect" href="Polynomials_8hpp.html" title="Contains the class of polynomials in multiple variables." alt="" coords="311,155,441,181"/>
+<area shape="rect" href="Generators_8hpp.html" title="Contains classes for generating permutations, combinations and a factory for such classes." alt="" coords="611,155,733,181"/>
+<area shape="rect" title=" " alt="" coords="757,155,949,181"/>
 <area shape="rect" title=" " alt="" coords="5,229,56,256"/>
 <area shape="rect" title=" " alt="" coords="81,229,205,256"/>
-<area shape="rect" href="General_8hpp.html" title="Contains general operations on vectors: hashing, computing degrees." alt="" coords="412,229,513,256"/>
-<area shape="rect" title=" " alt="" coords="229,229,387,256"/>
-<area shape="rect" title=" " alt="" coords="161,304,241,331"/>
-<area shape="rect" title=" " alt="" coords="266,304,329,331"/>
-<area shape="rect" title=" " alt="" coords="353,304,409,331"/>
-<area shape="rect" title=" " alt="" coords="433,304,492,331"/>
-<area shape="rect" title=" " alt="" coords="516,304,591,331"/>
-<area shape="rect" title=" " alt="" coords="615,304,689,331"/>
-<area shape="rect" title=" " alt="" coords="713,304,844,331"/>
-<area shape="rect" title=" " alt="" coords="537,229,623,256"/>
-<area shape="rect" title=" " alt="" coords="647,229,798,256"/>
+<area shape="rect" href="General_8hpp.html" title="Contains general operations on vectors: hashing, computing degrees." alt="" coords="563,229,664,256"/>
+<area shape="rect" title=" " alt="" coords="229,229,355,256"/>
+<area shape="rect" title=" " alt="" coords="379,229,538,256"/>
+<area shape="rect" title=" " alt="" coords="312,304,392,331"/>
+<area shape="rect" title=" " alt="" coords="417,304,479,331"/>
+<area shape="rect" title=" " alt="" coords="504,304,560,331"/>
+<area shape="rect" title=" " alt="" coords="584,304,643,331"/>
+<area shape="rect" title=" " alt="" coords="667,304,741,331"/>
+<area shape="rect" title=" " alt="" coords="765,304,840,331"/>
+<area shape="rect" title=" " alt="" coords="864,304,995,331"/>
+<area shape="rect" title=" " alt="" coords="688,229,773,256"/>
+<area shape="rect" title=" " alt="" coords="798,229,949,256"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -144,38 +144,31 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Array__Vector__Wrapper.html">Symmetric_Polynomials::Array_Vector_Wrapper&lt; T, N &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapping array and vector in the same interface.  <a href="structSymmetric__Polynomials_1_1Array__Vector__Wrapper.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsymmp_1_1ArrayVectorWrapper.html">ArrayVectorWrapper&lt; T, N &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapping array and vector in the same interface.  <a href="structsymmp_1_1ArrayVectorWrapper.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html">Symmetric_Polynomials::Half_Idempotent_Variables&lt; T, _deg, N &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The variables \(x_1,...,x_n,y_1,...,y_n\) where \(y_i^2=y_i\) and \(|x_i|=1\), \(|y_i|=0\).  <a href="structSymmetric__Polynomials_1_1Half__Idempotent__Variables.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsymmp_1_1HalfIdempotentVariables.html">HalfIdempotentVariables&lt; T, _deg, N &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The variables \(x_1,...,x_n,y_1,...,y_n\) where \(y_i^2=y_i\) and \(|x_i|=1\), \(|y_i|=0\).  <a href="structsymmp_1_1HalfIdempotentVariables.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSymmetric__Polynomials_1_1Twisted__Chern__Variables.html">Symmetric_Polynomials::Twisted_Chern_Variables&lt; T, _deg &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The twisted Chern generators as variables \(\gamma_{s,j}\).  <a href="structSymmetric__Polynomials_1_1Twisted__Chern__Variables.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsymmp_1_1TwistedChernVariables.html">TwistedChernVariables&lt; T, _deg &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The twisted Chern generators as variables \(\gamma_{s,j}\).  <a href="structsymmp_1_1TwistedChernVariables.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html">Symmetric_Polynomials::Half_Idempotent_Basis&lt; _xy_container, _chern_container &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for half-idempotent symmetric polynomials, allowing transformation from \(x_i,y_i\) variables to \(\gamma_{s,i}\) variables and vice-versa.  <a href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsymmp_1_1TwistedChernBasis.html">TwistedChernBasis&lt; _xy_poly_t, _chern_poly_t &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for half-idempotent symmetric polynomials, allowing transformation from \(x_i,y_i\) variables to \(\gamma_{s,i}\) variables and vice-versa.  <a href="classsymmp_1_1TwistedChernBasis.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:namespaceSymmetric__Polynomials"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html">Symmetric_Polynomials</a></td></tr>
-<tr class="memdesc:namespaceSymmetric__Polynomials"><td class="mdescLeft">&#160;</td><td class="mdescRight">The namespace which contains every method and class in the library. <br /></td></tr>
+<tr class="memitem:namespacesymmp"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesymmp.html">symmp</a></td></tr>
+<tr class="memdesc:namespacesymmp"><td class="mdescLeft">&#160;</td><td class="mdescRight">The namespace which contains every method and class in the library. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a14acf407fa68839a1031d9393492d049"><td class="memTemplParams" colspan="2">template&lt;typename scl_t , typename exp_val_t  = int64_t, typename deg_t  = int64_t, bool ordered = 1&gt; </td></tr>
-<tr class="memitem:a14acf407fa68839a1031d9393492d049"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a14acf407fa68839a1031d9393492d049">Symmetric_Polynomials::Half_Idempotent_Basis_Default</a> = Half_Idempotent_Basis&lt; default_container&lt; scl_t, Half_Idempotent_Variables&lt; exp_val_t, deg_t &gt;, ordered &gt;, default_container&lt; scl_t, Twisted_Chern_Variables&lt; exp_val_t, deg_t &gt;, ordered &gt; &gt;</td></tr>
-<tr class="memdesc:a14acf407fa68839a1031d9393492d049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aliases <a class="el" href="classSymmetric__Polynomials_1_1Half__Idempotent__Basis.html" title="Class for half-idempotent symmetric polynomials, allowing transformation from  variables to  variable...">Half_Idempotent_Basis</a> for certain default template parameters.  <a href="namespaceSymmetric__Polynomials.html#a14acf407fa68839a1031d9393492d049">More...</a><br /></td></tr>
-<tr class="separator:a14acf407fa68839a1031d9393492d049"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a3c87e70d8d3eb671a12dcd957e7175ab"><td class="memTemplParams" colspan="2">template&lt;typename HIB  = Half_Idempotent_Basis_Default&lt;int64_t, uint64_t, uint64_t, 0&gt;&gt; </td></tr>
-<tr class="memitem:a3c87e70d8d3eb671a12dcd957e7175ab"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSymmetric__Polynomials.html#a3c87e70d8d3eb671a12dcd957e7175ab">Symmetric_Polynomials::print_half_idempotent_relations</a> (int n, bool print=0, bool verify=0, bool verify_verbose=0)</td></tr>
-<tr class="memdesc:a3c87e70d8d3eb671a12dcd957e7175ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints all relations in the description of the fixed points of \(R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)\) in terms of \(\alpha_i, c_i, \gamma_{s,j}\) (printed as a_i,c_i,c_{s,j} in the console)  <a href="namespaceSymmetric__Polynomials.html#a3c87e70d8d3eb671a12dcd957e7175ab">More...</a><br /></td></tr>
-<tr class="separator:a3c87e70d8d3eb671a12dcd957e7175ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad180d30365dcabd734acd1490037eab1"><td class="memTemplParams" colspan="2">template&lt;typename xy_poly_t , typename chern_poly_t &gt; </td></tr>
+<tr class="memitem:ad180d30365dcabd734acd1490037eab1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesymmp.html#ad180d30365dcabd734acd1490037eab1">print_half_idempotent_relations</a> (int n, bool print=0, bool verify=0, bool verify_verbose=0)</td></tr>
+<tr class="memdesc:ad180d30365dcabd734acd1490037eab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints all relations in the description of the fixed points of \(R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)\) in terms of \(\alpha_i, c_i, \gamma_{s,j}\) (printed as a_i,c_i,c_{s,j} in the console)  <a href="namespacesymmp.html#ad180d30365dcabd734acd1490037eab1">More...</a><br /></td></tr>
+<tr class="separator:ad180d30365dcabd734acd1490037eab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains the methods and classes for symmetric polynomials with half idempotent variables. </p>

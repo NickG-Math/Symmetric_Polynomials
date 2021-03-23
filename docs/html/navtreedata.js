@@ -42,8 +42,7 @@ var NAVTREE =
         [ "Namespaces", "use.html#namesp", null ],
         [ "Polynomials", "use.html#mono", null ],
         [ "Symmetric Basis", "use.html#symbasis", null ],
-        [ "Half idempotent relations", "use.html#halfidem", null ],
-        [ "Advanced", "use.html#adv", null ]
+        [ "Twisted Chern Basis", "use.html#halfidem", null ]
       ] ]
     ] ],
     [ "Todo List", "todo.html", null ],

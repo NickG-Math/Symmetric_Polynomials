@@ -12,21 +12,22 @@
 ///@file
 ///@brief A demonstration file that can be compiled
 
-using namespace Symmetric_Polynomials;
+using namespace symmp;
 
 /// @brief		Writes the twisted Pontryagin or symplectic classes \f$\pi_{s,j}\f$ or \f$\kappa_{s,j}\f$ in terms of the Chern classes under the forgetful map \f$BU(n)\to BSO(n)\f$ or hermitianization \f$BU(n)\to BSp(n)\f$
-/// @tparam HIB The Half_Idempotent_Basis type eg The Half_Idempotent_Basis_Default
+///	@tparam xy_poly_t		The type of polynomial on the \f$x_i,y_i\f$ variables
+///	@tparam chern_poly_t	The type of polynomial on the \f$\gamma_{s,j}\f$ variables
 /// @param	n	The \f$n\f$ in \f$BU(n), BSO(n), BSp(n)\f$
-template <typename HIB = Half_Idempotent_Basis_Default<int64_t>>
+template <typename xy_poly_t, typename chern_poly_t>
 void write_pontryagin_C2_in_terms_of_Chern_classes(int n)
 {
-	HIB hib(n);
+	TwistedChernBasis<xy_poly_t,chern_poly_t> hib(n);
 	PARALLELIZE
 	for (int s = 1; s <= n; s++)
 		for (int i = 1; i <= n - s; i++)
 		{
 			const auto &twistedChern = hib.generator(s, i);
-			Polynomial<typename HIB::xy_container_t> twistedPontryagin(hib.number_of_variables);
+			xy_poly_t twistedPontryagin;
 			for (auto it = twistedChern.begin(); it != twistedChern.end(); ++it)
 				twistedPontryagin.insert(it.exponent() + it.exponent(), it.coeff());
 			std::stringstream ss;
@@ -38,6 +39,8 @@ void write_pontryagin_C2_in_terms_of_Chern_classes(int n)
 /// @brief User facing interface for computing relations/writing Pontryagin/symplectic in terms of Chern.
 void show_and_tell()
 {
+	typedef UnorderedPolynomial<int64_t, HalfIdempotentVariables<uint64_t, uint64_t>> xy_poly_t;
+	typedef UnorderedPolynomial<int64_t, TwistedChernVariables<uint64_t, uint64_t>> chern_poly_t;
 
 	std::cout << "Consider the polynomial ring (over Z) with variables x_1,...,x_n,y_1,...,y_n and relations y_i^2=y_i \n";
 	std::cout << "The symmetric group Sigma_n acts on this ring by separately permuting the x_i,y_i separately\n";
@@ -75,7 +78,7 @@ void show_and_tell()
 			{
 				std::cout << "The relations for n= " << n << " follow:"
 						  << "\n";
-				print_half_idempotent_relations(n, 1);
+				print_half_idempotent_relations<xy_poly_t,chern_poly_t>(n, 1);
 				std::cout << "\n\n";
 			}
 		}
@@ -100,7 +103,7 @@ void show_and_tell()
 			{
 				std::cout << "The twisted Pontryagin/symplectic classes k_{s,j} in terms of the twisted Chern classes c_{s,j} for s+j<=" << n << " follow:"
 						  << "\n";
-				write_pontryagin_C2_in_terms_of_Chern_classes<>(n);
+				write_pontryagin_C2_in_terms_of_Chern_classes<xy_poly_t, chern_poly_t>(n);
 				std::cout << "\n\n";
 			}
 		}
@@ -119,10 +122,16 @@ void show_and_tell()
 template <typename scl_t, typename exp_val_t, typename deg_t>
 void speed_test()
 {
+
+
 	constexpr int varcount = 9;
+
+	typedef UnorderedPolynomial<int64_t, HalfIdempotentVariables<uint64_t, uint64_t>> xy_poly_t;
+	typedef UnorderedPolynomial<int64_t, TwistedChernVariables<uint64_t, uint64_t>> chern_poly_t;
+
 	std::chrono::time_point<std::chrono::high_resolution_clock> start, end;
 	start = std::chrono::high_resolution_clock::now();
-	print_half_idempotent_relations<Half_Idempotent_Basis<default_container<scl_t, Half_Idempotent_Variables<exp_val_t, deg_t, 2 * varcount>, 0>, default_container<scl_t, Twisted_Chern_Variables<exp_val_t, deg_t>, 0>>>(varcount);
+	print_half_idempotent_relations<xy_poly_t, chern_poly_t>(varcount);
 	end = std::chrono::high_resolution_clock::now();
 	std::cout << varcount << " many variables took: " << std::chrono::duration_cast<std::chrono::seconds>(end - start).count() << "seconds"
 			  << "\n";
@@ -131,40 +140,36 @@ void speed_test()
 ///@brief	Main
 int main()
 {
-	using namespace Symmetric_Polynomials;
+	using namespace symmp;
 
 	show_and_tell();
 	//speed_test<int64_t,uint8_t,uint16_t>();
 
-	//code examples
-	//Polynomial<default_container<int, Standard_Variables<>>> p;
-	//p=Polynomial<default_container<int, Standard_Variables<>>>(3);
+	////code examples
+	//OrderedPolynomial<int, StandardVariables<>> p;
 	//p.insert({0,1,4},7);
 	//p.insert({1,1,2},-8);
-	//std::cout << p << "\n";
-	//std::cout << (p+(p^2))<< "\n";
+	//std::cout << p << "\n"<< (p+(p^2))<< "\n";
 
-	//Symmetric_Basis_Default<int> SB(2);
-	//Polynomial<default_container<int, Standard_Variables<>>> poly(2);
-	//poly.insert({1,2},2);
-	//poly.insert({2,1},2);
-	//Polynomial<default_container<int, Elementary_Symmetric_Variables<>>>  new_poly= SB(poly);
-	//Polynomial<default_container<int, Standard_Variables<>>>  new_new_poly= SB(new_poly);
-	//std::cout << poly << "\n";
-	//std::cout<< new_poly << "\n";
-	//std::cout << new_new_poly << "\n";
+	//OrderedPolynomial<double, ElementarySymmetricVariables<>> q({ 2,3 }, -1.5);
+	//std::cout << q << "\n";
 
-	//Half_Idempotent_Basis_Default<int> HB(2);
-	//Polynomial<default_container<int, Half_Idempotent_Variables<>>> poly2(4);
-	//poly2.insert({ 1,0,1,0 }, 2);
-	//poly2.insert({ 0,1,0,1 }, 2);
-	//auto new_poly2= HB(poly2);
-	//auto new_new_poly2= HB(new_poly2);
-	//std::cout << poly2 << "\n";
-	//std::cout << new_poly2 << "\n";
-	//std::cout << new_new_poly2 << "\n";
+	//SymmetricBasis<OrderedPolynomial<double, StandardVariables<>>, OrderedPolynomial<double, ElementarySymmetricVariables<>>> SB(2);
+	//OrderedPolynomial<double, StandardVariables<>> q_in_x_var=SB(q);
+	//std::cout << q_in_x_var << "\n";
+	//
+	//OrderedPolynomial<double, ElementarySymmetricVariables<>> q_in_e_var=SB(q_in_x_var);
+	//std::cout << q_in_e_var << "\n";
 
-	//print_half_idempotent_relations<>(3,1,1);
-	//write_pontryagin_C2_in_terms_of_Chern_classes(5);
+	//UnorderedPolynomial<int, HalfIdempotentVariables<>> poly;
+	//poly.insert({ 1,0,1,0 }, 2);
+	//poly.insert({ 0,1,0,1 }, 2);
+	//TwistedChernBasis<UnorderedPolynomial<int, HalfIdempotentVariables<>>, UnorderedPolynomial<int, TwistedChernVariables<>>> TCB(2);
+	//std::cout << TCB(poly);
+
+	//std::cout << TCB(TCB(poly));
+
+	//print_half_idempotent_relations<UnorderedPolynomial<int, HalfIdempotentVariables<>>, UnorderedPolynomial<int, TwistedChernVariables<>>>(3,1,1);
+	//write_pontryagin_C2_in_terms_of_Chern_classes < UnorderedPolynomial<int, HalfIdempotentVariables<>>, UnorderedPolynomial<int, TwistedChernVariables<>>>(5);
 	return 0;
 }
