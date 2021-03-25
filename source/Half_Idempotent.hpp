@@ -1,11 +1,12 @@
 #pragma once
 #include "Symmetric_Basis.hpp"
+#include <sstream>
 
 /////////////////////////////////////////////////////////////////////////
 ///	@file
 ///	@brief 		Contains the methods and classes for symmetric polynomials with half idempotent variables
 ///	@details	The goal is to solve the following problem:
-///				If \f[R=\mathbb Z[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)\f]
+///				If \f[R=\mathbf Z[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)\f]
 ///				produce minimal algebra generators for the fixed points of \f$R\f$
 ///				under the \f$\Sigma_n\f$ action (permuting the \f$x_i,y_i\f$ separately),
 /// 			give an algorithm for writing a fixed point in terms of the generators
@@ -24,7 +25,7 @@ namespace symmp
 	struct ArrayVectorWrapper;
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	///	@brief			The variables \f$x_1,...,x_n,y_1,...,y_n\f$ where \f$y_i^2=y_i\f$ and \f$|x_i|=1\f$, \f$|y_i|=0\f$
+	///	@brief			Variables \f$x_1,...,x_n,y_1,...,y_n\f$ with \f$y_i^2=y_i\f$ and \f$|x_i|=1\f$, \f$|y_i|=0\f$
 	///	@details		Monomial \f$x_1^{a_1}\cdots x_n^{a_n}y_1^{a_{n+1}}\cdots y_n^{a_{2n}}\f$ is stored as vector/array \f$[a_1,...,a_{2n}]\f$
 	///	@tparam T 		The (integral) value type of the exponent vector.
 	///	@tparam _deg	The (integral) value type used in the degree function.
@@ -37,18 +38,18 @@ namespace symmp
 
 		/// @brief		Multiplies monomials by adding their exponents
 		/// @param  b	Second exponent \f$[b_1,...,b_{2n}]\f$
-		/// @return		\f$[a_1+b_1,...,a_n+b_n, \max(a_{n+1},b_{n+1}), ..., \max(a_{2n},b_{2n})]\f$ where *this=\f$[a_1,...,a_{2n}]\f$
+		/// @return		Exponent \f$[a_1+b_1,...,a_n+b_n, \max(a_{n+1},b_{n+1}), ..., \max(a_{2n},b_{2n})]\f$ where *this=\f$[a_1,...,a_{2n}]\f$
 		HalfIdempotentVariables operator+(const HalfIdempotentVariables &b) const;
 
 		///	@brief		Divides monomials by subtracting their exponents
 		///	@param	b	Second exponent \f$[b_1,...,b_{2n}]\f$. We must have \f$b_i\le a_i\f$ for every \f$i\f$.
-		///	@return		\f$[a_1-b_1,...,a_n-b_n, |a_{n+1}-b_{n+1}|, ..., |a_{2n}-b_{2n}|]\f$ where *this=\f$[a_1,...,a_{2n}]\f$
+		///	@return		Exponent \f$[a_1-b_1,...,a_n-b_n, |a_{n+1}-b_{n+1}|, ..., |a_{2n}-b_{2n}|]\f$ where *this=\f$[a_1,...,a_{2n}]\f$
 		HalfIdempotentVariables operator-(const HalfIdempotentVariables &b) const;
 
 		typedef _deg deg_t; ///<Degree typedef
 
 		///	@brief	Computes degree of monomial on on the \f$x_i,y_i\f$ with \f$|x_i|=1\f$ and \f$|y_i|=0\f$
-		///	@return	\f$\sum_{i=1}^na_i\f$ for monomial \f$x_1^{a_1}\cdots y_n^{a_{2n}}\f$ (*this=\f$[a_1,...,a_{2n}]\f$)
+		///	@return	Degree \f$\sum_{i=1}^na_i\f$ for monomial \f$x_1^{a_1}\cdots y_n^{a_{2n}}\f$ (*this=\f$[a_1,...,a_{2n}]\f$)
 		deg_t degree() const;
 
 		///	@brief			Returns the names of the variables \f$x_i,y_i\f$
@@ -76,7 +77,7 @@ namespace symmp
 		///	@brief		Multiplies monomials by adding their exponents.
 		///	@note		No relations are used as these wouldn't produce monomials
 		///	@param b	Second exponent \f$[b_{0,1},...,b_{n,0}]\f$
-		///	@return		\f$[a_{0,1}+b_{0,1},...,a_{n,0}+b_{n,0}]\f$ where *this=\f$[a_{0,1},...,a_{n,0}]\f$
+		///	@return		Exponent \f$[a_{0,1}+b_{0,1},...,a_{n,0}+b_{n,0}]\f$ where *this=\f$[a_{0,1},...,a_{n,0}]\f$
 		TwistedChernVariables operator+(const TwistedChernVariables &b) const;
 
 		/// @brief	Hashes monomial
@@ -92,7 +93,8 @@ namespace symmp
 	{
 	public:
 		///	@brief		Constructs the generators and the relation set given \f$n\f$ in \f$x_1,...,x_n,y_1,...,y_n\f$.
-		///	@param n	\f$n\f$ is half(!) the number of variables
+		///	@param n	Half(!) the number of variables
+		///	@attention	The parameter \c n is half(!) the number of variables (the \f$n\f$ in \f$BU(n)\f$)
 		TwistedChernBasis(int n);
 
 		///	@brief		Stores the relations \f$\gamma_{s,i}\gamma_{t,j}\f$ for \f$0<s<=t<=s+i\f$ and \f$i,j>0\f$
@@ -102,7 +104,7 @@ namespace symmp
 		///	@brief		Returns generator \f$\gamma_{s,j}\f$.
 		/// @param s	The index of \f$s\f$ of \f$\gamma_{s,j}\f$.
 		/// @param j	The index of \f$j\f$ of \f$\gamma_{s,j}\f$.
-		/// @return		\f$\gamma_{s,j}\f$ as Polynomial on the \f$x_i,y_i\f$ variables
+		/// @return		The polynomial \f$\gamma_{s,j}\f$ on the \f$x_i,y_i\f$ variables
 		const auto &generator(int s, int j) const;
 
 		///	@brief	Befriending parent for CRTP.
@@ -128,7 +130,7 @@ namespace symmp
 		void find_exponent_recursive(const xy_t &term, chern_t &exponent) const;
 	};
 
-	///	@brief					Prints all relations in the description of the fixed points of \f$R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)\f$ in terms of \f$\alpha_i, c_i, \gamma_{s,j}\f$ (printed as a_i,c_i,c_{s,j} in the console)
+	///	@brief					Prints all relations in the description of the fixed points of \f$R=\mathbf Z[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)\f$ in terms of \f$\alpha_i, c_i, \gamma_{s,j}\f$ (printed as ``` a_i, c_i, c_{s,j} ``` in the console)
 	///	@tparam xy_poly_t		The type of polynomial on the \f$x_i,y_i\f$ variables
 	///	@tparam chern_poly_t	The type of polynomial on the \f$\gamma_{s,j}\f$ variables
 	///	@param n				Half the number of variables (the \f$n\f$)

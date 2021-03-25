@@ -242,7 +242,7 @@ namespace symmp
 	void print_half_idempotent_relations(int n, bool print, bool verify, bool verify_verbose)
 	{
 		TwistedChernBasis<xy_poly_t,chern_poly_t> tcb(n);
-PARALLELIZE
+SYMMP_RUN_LOOP_IN_PARALLEL
 		for (int64_t i = 0; i < (int64_t)tcb.relations().size(); i++)
 		{ //i is signed as MSVC still does not support OMP3.0...
 			const auto &rel = tcb.relations()[i];

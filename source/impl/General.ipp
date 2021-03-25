@@ -7,7 +7,7 @@
 namespace symmp
 {
 
-	///Hashing algorithm using CRC32 (SSE4.1 and up)
+	///	@brief	Hashing algorithm using CRC32 (SSE4.1 and up)
 	struct crc
 	{
 		static size_t initialize() { return 0; }
@@ -18,11 +18,11 @@ namespace symmp
 		}
 	};
 
-	//Hashing algorithm imitating boost_combine (golden ratio based)
+	///	@brief	Hashing algorithm imitating boost_combine (golden ratio based)
 	struct boost_hash
 	{
 	public:
-		static constexpr uint64_t golden_ratio = 0x9e3779b97f4a7c15;
+		static constexpr size_t golden_ratio = 0x9e3779b97f4a7c15;
 		static size_t initialize() { return 0; }
 		template <typename T>
 		static void combine(size_t &hash, T value)

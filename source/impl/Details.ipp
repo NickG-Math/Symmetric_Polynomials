@@ -1,5 +1,25 @@
 #pragma once
 #include <type_traits>
+#include <utility>
+#if defined SYMMP_USE_OPEN_MP & defined _OPENMP
+#include "omp.h"
+///	@brief	Macro that parallelizes loop via openMP if SYMMP_USE_OPEN_MP is defined, and nothing otherwise
+#define SYMMP_RUN_LOOP_IN_PARALLEL _Pragma("omp parallel for num_threads(omp_get_max_threads()) schedule(dynamic)")
+#if defined _MSC_VER
+#pragma message("symmp: openMP enabled!")
+#else
+#pragma message "symmp: openMP enabled!"
+#endif
+#else
+///	@brief	Macro that parallelizes loop via openMP if SYMMP_USE_OPEN_MP is defined, and nothing otherwise
+#define SYMMP_RUN_LOOP_IN_PARALLEL
+#if defined _MSC_VER
+#pragma message("symmp: openMP not enabled! To enable please define SYMMP_USE_OPEN_MP before including any header of this library and use the relevant compiler option eg -fopenmp")
+#else
+#pragma message "symmp: openMP not enabled! To enable please define SYMMP_USE_OPEN_MP before including any header of this library and use the relevant compiler option eg -fopenmp"
+#endif
+#endif
+
 
 namespace symmp
 {
@@ -34,7 +54,6 @@ namespace symmp
 			using _container<pair_t<_exp>, _scl, hash_only_exponent<_exp>, _Args...>::_container;
 			friend class Polynomial;
 		};
-
 
 		template <typename T>
 		static constexpr std::false_type test_degree_existence(...);

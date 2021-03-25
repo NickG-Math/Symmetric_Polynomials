@@ -9,7 +9,7 @@ namespace symmp
 {
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	///	@brief			Prototype for coroutine-like iterators that generate elements such as interpolating vectors, permutations, combinations...
+	///	@brief			Prototype for coroutine-like iterators that generate elements such as combinations.
 	///	@details		Inherit from this class and define a method update() to get a const iterator. \n
 	///					You will also need begin() and end() methods constructing such iterators; end() should always be defined by calling the factory end().\n
 	///					Example implementations: \c CombinationGenerator and \c PermutationGenerator
@@ -45,7 +45,7 @@ namespace symmp
 
 	public:
 		/// @brief	Computes total number of permutations
-		/// @return \f$n!\f$ where \f$n\f$ is the number of letters
+		/// @return Factorial \f$n!\f$ where \f$n\f$ is the number of letters
 		size_t size() const;
 
 		///	@brief		Constructor sets up the generator
@@ -84,7 +84,7 @@ namespace symmp
 
 	public:
 		///	@brief	Computes total number of combinations
-		///	@return \f${n}\choose{k}\f$ where \f$n\f$=total and \f$k\f$=choices
+		///	@return Binomial \f${n}\choose{k}\f$ where \f$n\f$=total and \f$k\f$=choices
 		auto size() const;
 
 		///	@brief			Sets up the generator

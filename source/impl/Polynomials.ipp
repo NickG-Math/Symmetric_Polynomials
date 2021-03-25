@@ -72,12 +72,6 @@ namespace symmp
 	}
 
 	template <typename t1, typename t2, template<typename...> typename t3, bool t4, typename ... t5>
-	bool Polynomial<t1, t2, t3, t4, t5...>::constIterator::operator==(constIterator second) const
-	{
-		return (it == second.it);
-	}
-
-	template <typename t1, typename t2, template<typename...> typename t3, bool t4, typename ... t5>
 	bool Polynomial<t1, t2, t3, t4, t5...>::constIterator::operator!=(constIterator second) const
 	{
 		return (it != second.it);
@@ -176,7 +170,7 @@ namespace symmp
 	auto Polynomial<t1, t2, t3, t4, t5...>::operator*=(scl_t coeff) -> Polynomial&
 	{
 		if (coeff == 0)
-			*this=Polynomial(_dimensions,_variable_names);
+			*this = Polynomial(_dimensions, _variable_names);
 		else if (coeff != 1)
 		{
 			for (const auto& paira : data)
@@ -200,23 +194,6 @@ namespace symmp
 		for (T k = 1; k < p; k++)
 			prod *= *this;
 		return prod;
-	}
-
-	template <typename t1, typename t2, template<typename...> typename t3, bool t4, typename ... t5>
-	std::string Polynomial<t1, t2, t3, t4, t5...>::print() const
-	{
-		if constexpr (!implementation_details::has_name_function<exp_t>::value)
-		{
-			if (_variable_names == nullptr)
-			{
-				std::cerr << "If the exp_t class does not implement a degree() function then you must provide a valid pointer to the dimensions of the variables in the polynomial constructor";
-				abort();
-			}
-			else
-				return print([=](int i, int) { return _variable_names[i]; });
-		}
-		else
-			return print(exp_t::name);
 	}
 
 	template <typename t1, typename t2, template<typename...> typename t3, bool t4, typename ... t5>
@@ -266,12 +243,12 @@ namespace symmp
 
 	template <typename t1, typename t2, template<typename...> typename t3, bool t4, typename ... t5>
 	template <typename fun>
-	void Polynomial<t1, t2, t3, t4, t5...>::print(scl_t coeff, const exp_t& exponent, std::stringstream& ss, const fun& _variable_names) const
+	void Polynomial<t1, t2, t3, t4, t5...>::print(scl_t coeff, const exp_t& exponent, std::ostream& os, const fun& _variable_names) const
 	{
 		bool havestar = 0;
 		if (coeff != 1)
 		{
-			ss << coeff;
+			os << coeff;
 			havestar = 1;
 		}
 		bool completelyzero = 1;
@@ -281,38 +258,46 @@ namespace symmp
 			{
 				completelyzero = 0;
 				if (havestar)
-					ss << "*";
+					os << "*";
 				havestar = 1;
 				if (exponent[i] > 1)
-					ss << _variable_names(i, exponent.size()) << "^" << (int)exponent[i];
+					os << _variable_names(i, exponent.size()) << "^" << (int)exponent[i];
 				else if (exponent[i] == 1)
-					ss << _variable_names(i, exponent.size());
+					os << _variable_names(i, exponent.size());
 			}
 		}
 		if (completelyzero && coeff == 1)
-			ss << "1";
+			os << "1";
 	}
 
 	template <typename t1, typename t2, template<typename...> typename t3, bool t4, typename ... t5>
 	template <typename fun>
-	std::string Polynomial<t1, t2, t3, t4, t5...>::print(const fun& variable_name_fun) const
+	void Polynomial<t1, t2, t3, t4, t5...>::print(std::ostream& os, const fun& variable_name_fun) const
 	{
-		std::stringstream ss;
 		auto it = begin();
-		print(it.coeff(), it.exponent(), ss, variable_name_fun);
+		print(it.coeff(), it.exponent(), os, variable_name_fun);
 		for (++it; it != end(); ++it)
 		{
-			ss << " + ";
-			print(it.coeff(), it.exponent(), ss, variable_name_fun);
+			os << " + ";
+			print(it.coeff(), it.exponent(), os, variable_name_fun);
 		}
-		return ss.str();
 	}
 
 	template <typename t1, typename t2, template<typename...> typename t3, bool t4, typename ... t5>
 	std::ostream& operator<<(std::ostream& os, const Polynomial<t1, t2, t3, t4, t5...>& a)
 	{
-		os << a.print();
+		if constexpr (!implementation_details::has_name_function<t2>::value)
+		{
+			if (a._variable_names == nullptr)
+			{
+				std::cerr << "If the exp_t class does not implement a degree() function then you must provide a valid pointer to the dimensions of the variables in the polynomial constructor";
+				abort();
+			}
+			else
+				a.print(os, [=](int i, int) { return a._variable_names[i]; });
+		}
+		else
+			a.print(os, t2::name);
 		return os;
 	}
-
 }

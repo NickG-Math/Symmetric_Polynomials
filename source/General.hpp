@@ -1,10 +1,6 @@
 #pragma once
-#include <iostream>
-#include <vector>
-#include <array>
-#include <string>
-#include <sstream>
 #include <numeric>
+
 #if defined(__GNUC__)
 #include "x86intrin.h"
 #elif defined(_MSC_VER)
@@ -38,7 +34,7 @@ namespace symmp
 	///	@tparam R	The degree type (eg \c uint64_t)
 	///	@param exp	The monomial whose degree will be computed, provided via its exponent vector
 	///	@param dim	The dimensions of the variables in the monomial
-	///	@return		\f$\sum_{i=1}^na_id_i\f$ where exponent=\f$[a_1,...,a_n]\f$ and dimensions=\f$[d_1,...,d_n]\f$
+	///	@return		The degree \f$\sum_{i=1}^na_id_i\f$ where exponent=\f$[a_1,...,a_n]\f$ and dimensions=\f$[d_1,...,d_n]\f$
 	template <typename R, typename T, typename S>
 	R general_compute_degree(const T &exp, const S &dim);
 

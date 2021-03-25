@@ -25,7 +25,7 @@ namespace symmp
 		typedef _deg deg_t; ///<Degree typedef
 
 		///	@brief	Computes degree of monomial on standard variables \f$x_i\f$
-		///	@return \f$\sum_ia_i\f$ for monomial \f$x_1^{a_1}\cdots x_n^{a_n}\f$ (*this=\f$[a_1,...,a_n]\f$)
+		///	@return Degree \f$\sum_ia_i\f$ for monomial \f$x_1^{a_1}\cdots x_n^{a_n}\f$ (*this=\f$[a_1,...,a_n]\f$)
 		deg_t degree() const;
 
 		///	@brief		Returns the names of the standard variables \f$x_i\f$
@@ -35,7 +35,7 @@ namespace symmp
 		static std::string name(int i, int n);
 
 		///	@brief		Multiplies monomials by adding their exponents
-		///	@return 	\f$[a_1+b_1,...,a_n+b_n]\f$ where *this=\f$[a_1,...,a_n]\f$
+		///	@return 	Degree \f$[a_1+b_1,...,a_n+b_n]\f$ where *this=\f$[a_1,...,a_n]\f$
 		///	@param 	b 	Second exponent \f$[b_1,...,b_n]\f$
 		StandardVariables operator+(const StandardVariables &b) const;
 
@@ -44,7 +44,7 @@ namespace symmp
 	};
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	///	@brief				Variables \f$e_1,...,e_n\f$ denoting the elementary symmetric polynomials \f$e_i=\sigma_i\f$ of degrees \f$|e_i|=i\f$
+	///	@brief				Variables \f$e_1,...,e_n\f$ of degrees \f$|e_i|=i\f$
 	///	@details			A monomial \f$x_1^{a_1}\cdots x_n^{a_n}\f$ is stored as the vector \f$[a_1,...,a_n]\f$
 	///	@tparam 	T 		The (integral) value type of the exponent vector.
 	///	@tparam 	_deg 	The (integral) value type used in the degree function.
@@ -56,7 +56,7 @@ namespace symmp
 		typedef _deg deg_t; ///<Degree typedef
 
 		///	@brief	Computes degree of monomial on the \f$e_i\f$
-		///	@return \f$\sum_iia_i\f$ for monomial \f$e_1^{a_1}\cdots e_n^{a_n}\f$
+		///	@return Degree \f$\sum_iia_i\f$ for monomial \f$e_1^{a_1}\cdots e_n^{a_n}\f$
 		deg_t degree() const;
 
 		///	@brief		Returns the name of the variables \f$e_i\f$
