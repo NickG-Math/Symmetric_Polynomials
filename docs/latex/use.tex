@@ -8,14 +8,14 @@ Only the {\ttfamily -\/std=c++17} flag is required.\hypertarget{use_exa}{}\doxys
 Everything in this library is under the namespace \mbox{\hyperlink{namespacesymmp}{symmp}} (short for Symmetric Polynomials). To keep names short, the code examples will assume we are using this namespace. So start with\+: \begin{DoxyVerb}using symmp;
 \end{DoxyVerb}
 \hypertarget{use_mono}{}\doxysubsubsection{Polynomials}\label{use_mono}
-A polynomial $p$ in the graded ring $\mathbb Z[x_1,...,x_n]$, $|x_i|=1$, can be declared as\+: \begin{DoxyVerb}OrderedPolynomial<int, StandardVariables<>> p;
+A polynomial $p$ in the graded ring $\mathbf Z[x_1,...,x_n]$, $|x_i|=1$, can be declared as\+: \begin{DoxyVerb}OrderedPolynomial<int, StandardVariables<>> p;
 \end{DoxyVerb}
 
 
 Here\+:
 \begin{DoxyItemize}
 \item \mbox{\hyperlink{namespacesymmp_a2ab4ba4bf25e718d78428e1b04332a2a}{symmp\+::\+Ordered\+Polynomial}} means that the monomials of the polynomial are kept in increasing order. See below for alternatives.
-\item {\ttfamily int} is the type of the scalar coefficients (i.\+e. elements of the base ring; in our case $\mathbb Z$), so it can be replaced by {\ttfamily double} etc.
+\item {\ttfamily int} is the type of the scalar coefficients (i.\+e. elements of the base ring; in our case $\mathbf Z$), so it can be replaced by {\ttfamily double} etc.
 \item \mbox{\hyperlink{structsymmp_1_1StandardVariables}{symmp\+::\+Standard\+Variables}} specify we have variables of degree $1$, names $x_i$ and no relations. See the next few subsections for alternatives.
 \end{DoxyItemize}
 
@@ -44,62 +44,75 @@ Polynomials can be added, subtracted and multiplied by binary operators {\ttfami
 
 will print
 
-\$\$-\/8x\+\_\+1x\+\_\+2x\+\_\+3$^\wedge$2 + 7x\+\_\+2x\+\_\+3$^\wedge$4 + 64x\+\_\+1$^\wedge$2x\+\_\+2$^\wedge$2x\+\_\+3$^\wedge$4 + -\/112x\+\_\+1x\+\_\+2$^\wedge$2x\+\_\+3$^\wedge$6 + 49x\+\_\+2$^\wedge$2x\+\_\+3$^\wedge$8\$\$
+\$\$-\/8x\+\_\+1x\+\_\+2x\+\_\+3$^\wedge$2 + 7x\+\_\+2x\+\_\+3$^\wedge$4 + 64x\+\_\+1$^\wedge$2x\+\_\+2$^\wedge$2x\+\_\+3$^\wedge$4 -\/ 112x\+\_\+1x\+\_\+2$^\wedge$2x\+\_\+3$^\wedge$6 + 49x\+\_\+2$^\wedge$2x\+\_\+3$^\wedge$8\$\$
 
 which is exactly $p+p^2$.
 
 Instead of \mbox{\hyperlink{namespacesymmp_a2ab4ba4bf25e718d78428e1b04332a2a}{symmp\+::\+Ordered\+Polynomial}}, we can also use \mbox{\hyperlink{namespacesymmp_ad286838abde5fae48d25eda95a49dbed}{symmp\+::\+Unordered\+Polynomial}} which does not store the monomials in increasing order. This has performance benefits (internal data structure is {\ttfamily std\+::unordered\+\_\+map} as opposed to {\ttfamily std\+::map}). Ordered and unordered polynomials have the exact same A\+PI.\hypertarget{use_symbasis}{}\doxysubsubsection{Symmetric Basis}\label{use_symbasis}
 Apart from the \mbox{\hyperlink{structsymmp_1_1StandardVariables}{symmp\+::\+Standard\+Variables}}, we can also use the \mbox{\hyperlink{structsymmp_1_1ElementarySymmetricVariables}{symmp\+::\+Elementary\+Symmetric\+Variables}} which specify variables with names $e_i$, degrees $|e_i|=i$ and no relations.
 
-Example\+: An element $q$ of the ring $\mathbb R[e_1,...,e_n]$ can be defined as\+: \begin{DoxyVerb}OrderedPolynomial<double, ElementarySymmetricVariables<>> q({ 2,3 }, -1.5);
+Example\+: An element $q$ of the ring $\mathbf R[e_1,...,e_n]$ can be defined as\+: \begin{DoxyVerb}OrderedPolynomial<double, ElementarySymmetricVariables<>> q({ 2,3 }, -1.5);
 std::cout << q << "\n";
 \end{DoxyVerb}
 
 
 which will print $-1.5e_1e_2$. We used the constructor that takes a single monomial in the form of exponent+vector.
 
-We can view \[\mathbb R[e_1,...,e_n]=\mathbb R[x_1,...,x_n]^{\Sigma_n}\] with $e_i=\sigma_i$ being the elementary symmetric polynomials. To convert $q$ from $e_i$ variables to $x_i$ variables we use the class \mbox{\hyperlink{classsymmp_1_1SymmetricBasis}{symmp\+::\+Symmetric\+Basis}} \+: \begin{DoxyVerb}SymmetricBasis<OrderedPolynomial<double, StandardVariables<>>, OrderedPolynomial<double, ElementarySymmetricVariables<>>> SB(2);
+To keep names short let us use the following two typedefs\+: \begin{DoxyVerb}typedef OrderedPolynomial<double, StandardVariables<>> x_var_t;
+typedef OrderedPolynomial<double, ElementarySymmetricVariables<>> e_var_t;
 \end{DoxyVerb}
 
 
-The {\ttfamily 2} signifies that we are using two variables $x_1,x_2$. Then\+: \begin{DoxyVerb}auto q_in_x_var=SB(q);
-std::cout << q_in_x_var;
+We can view \[\mathbf R[e_1,...,e_n]=\mathbf R[x_1,...,x_n]^{\Sigma_n}\] with $e_i=\sigma_i$ being the elementary symmetric polynomials. To convert $q$ from $e_i$ variables to $x_i$ variables we use the class \mbox{\hyperlink{classsymmp_1_1SymmetricBasis}{symmp\+::\+Symmetric\+Basis}} \+: \begin{DoxyVerb}SymmetricBasis<x_var_t, e_var_t> SB(2);
 \end{DoxyVerb}
 
 
-will define a {\ttfamily Ordered\+Polynomial$<$double, Standard\+Variables$<$$>$$>$ q\+\_\+in\+\_\+x\+\_\+var} that is {\ttfamily q} transformed into the \mbox{\hyperlink{structsymmp_1_1StandardVariables}{symmp\+::\+Standard\+Variables}} and print \[-1.5x_1^3x_2^5 + -3x_1^4x_2^4 + -1.5x_1^5x_2^3\]
-
-We can perform the conversion the other way as well\+: given a polynomial in \mbox{\hyperlink{structsymmp_1_1StandardVariables}{symmp\+::\+Standard\+Variables}} such as {\ttfamily q\+\_\+in\+\_\+x\+\_\+var} we can use the {\ttfamily SB} from before to transform it into a polynomial on the \mbox{\hyperlink{structsymmp_1_1ElementarySymmetricVariables}{symmp\+::\+Elementary\+Symmetric\+Variables}} \+: \begin{DoxyVerb}auto q_in_e_var=SB(q_in_x_var);
-std::cout << q_in_e_var;
+The {\ttfamily 2} signifies that we are using two variables $x_1,x_2$. Then\+: \begin{DoxyVerb}auto qx=SB(q);
+std::cout << qx;
 \end{DoxyVerb}
 
 
-which will print $-1.5e_1e_2$. Observe that {\ttfamily q==q\+\_\+in\+\_\+e\+\_\+var};\hypertarget{use_halfidem}{}\doxysubsubsection{Twisted Chern Basis}\label{use_halfidem}
+will define an {\ttfamily x\+\_\+var\+\_\+t qx} that is {\ttfamily q} transformed into the \mbox{\hyperlink{structsymmp_1_1StandardVariables}{symmp\+::\+Standard\+Variables}} and print \[-1.5x_1^3x_2^5 + -3x_1^4x_2^4 + -1.5x_1^5x_2^3\]
+
+We can perform the conversion the other way as well\+: given a polynomial in \mbox{\hyperlink{structsymmp_1_1StandardVariables}{symmp\+::\+Standard\+Variables}} such as {\ttfamily qx} we can use the {\ttfamily SB} from before to transform it into a polynomial on the \mbox{\hyperlink{structsymmp_1_1ElementarySymmetricVariables}{symmp\+::\+Elementary\+Symmetric\+Variables}} \+: \begin{DoxyVerb}auto qe=SB(qx);
+std::cout << qe;
+\end{DoxyVerb}
+
+
+which will print $-1.5e_1e_2$. Observe that {\ttfamily q==qe};\hypertarget{use_halfidem}{}\doxysubsubsection{Twisted Chern Basis}\label{use_halfidem}
 We can generate \[(R[x_1,...,x_n,y_1,...,y_n]/y_i^2=y_i)^{\Sigma_n}\]
 
 by the $\alpha_i, c_i, \gamma_{s,t}$ (see \mbox{\hyperlink{math}{The Math}}).
 
 The class \mbox{\hyperlink{classsymmp_1_1TwistedChernBasis}{symmp\+::\+Twisted\+Chern\+Basis}} allows us to transform polynomials on $x_i,y_i$ variables (\mbox{\hyperlink{structsymmp_1_1HalfIdempotentVariables}{symmp\+::\+Half\+Idempotent\+Variables}}) into polynomials on the $\alpha_i,c_i,\gamma_{s,i}$ (\mbox{\hyperlink{structsymmp_1_1TwistedChernVariables}{symmp\+::\+Twisted\+Chern\+Variables}}).
 
-Example\+: \begin{DoxyVerb}UnorderedPolynomial<int, HalfIdempotentVariables<>> poly;
+Example\+: \begin{DoxyVerb}typedef UnorderedPolynomial<int, HalfIdempotentVariables<>> xy_var_t;
+typedef UnorderedPolynomial<int, TwistedChernVariables<>>> chern_var_t;
+xy_var_t poly;
 poly.insert({ 1,0,1,0 }, 2);
 poly.insert({ 0,1,0,1 }, 2);
-TwistedChernBasis<UnorderedPolynomial<int, HalfIdempotentVariables<>>, UnorderedPolynomial<int, TwistedChernVariables<>>> TCB(2);
+TwistedChernBasis<xy_var_t, chern_var_t> TCB(2);
 std::cout << TCB(poly);
 \end{DoxyVerb}
 
 
-sets {\ttfamily poly} to be $x_1y_1+x_2y_2$, transforms it into $\gamma_{s,j}$ variables and prints the result\+:
+sets {\ttfamily poly} to be $x_1y_1+x_2y_2$, transforms it into $\gamma_{s,j}$ variables and prints\+:
+
+\[-2\gamma_{1,1}+2\alpha_1 c_1\]
+
+And indeed\+:
 
 \[x_1y_1+x_2y_2=-2\gamma_{1,1}+2\alpha_1 c_1\]
 
-Note that \begin{DoxyVerb}std::cout << TCB(TCB(poly));
+If we perform the transformation again we get the original polynomial\+: \begin{DoxyVerb}std::cout << TCB(TCB(poly));
 \end{DoxyVerb}
 
 
-prints the original polynomial $x_1y_1+x_2y_2$. The argument {\ttfamily 2} in the construction of {\ttfamily T\+CB} is half the number of variables $x_1,x_2,y_1,y_2$.
+prints $x_1y_1+x_2y_2$.
 
-To print the relations amongst $\alpha_i,c_i,\gamma_{s,j}$ use\+: \begin{DoxyVerb}print_half_idempotent_relations<UnorderedPolynomial<int, HalfIdempotentVariables<>>, UnorderedPolynomial<int, TwistedChernVariables<>>>(3,1,1);
+We note that the argument {\ttfamily 2} in the constructor of {\ttfamily T\+CB} is half the number of variables $x_1,x_2,y_1,y_2$.
+
+To print the relations amongst $\alpha_i,c_i,\gamma_{s,j}$ use\+: \begin{DoxyVerb}print_half_idempotent_relations<xy_var_t, chern_var_t>(3,1,1);
 \end{DoxyVerb}
 
 
@@ -109,6 +122,6 @@ Finally, \mbox{\hyperlink{Demo_8cpp}{Demo.\+cpp}} contains another function, {\t
 
 \[\pi_{s,t}=\kappa_{s,t}=\sum_{1\le i_1< \cdots< i_s\le n\\ 1\le j_1< \cdots< j_t\le n\\ i_u\neq j_v}x^2_{i_1}....x^2_{i_s}y_{j_1}\cdots y_{j_t}\]
 
-in terms of the $\alpha_i,c_i,\gamma_{s,t}$. For example, try running \begin{DoxyVerb}write_pontryagin_C2_in_terms_of_Chern_classes < UnorderedPolynomial<int, HalfIdempotentVariables<>>, UnorderedPolynomial<int, TwistedChernVariables<>>>(5);
+in terms of the $\alpha_i,c_i,\gamma_{s,t}$. For example, try running \begin{DoxyVerb}write_pontryagin_C2_in_terms_of_Chern_classes < xy_var_t, chern_var_t>(5);
 \end{DoxyVerb}
  

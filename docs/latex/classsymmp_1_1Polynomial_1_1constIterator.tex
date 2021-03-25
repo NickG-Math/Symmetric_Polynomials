@@ -13,17 +13,15 @@ Constant iterator through the monomials of the polynomial.
 \begin{DoxyCompactItemize}
 \item 
 auto \mbox{\hyperlink{classsymmp_1_1Polynomial_1_1constIterator_aae63ec39b53317f98b57b1af2e2cb181}{coeff}} () const -\/$>$ \mbox{\hyperlink{classsymmp_1_1Polynomial_a8e22f5fc1b62271e6ef144911adecde8}{scl\+\_\+t}}
-\begin{DoxyCompactList}\small\item\em Returns the coefficient of the monomial. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Returns the scalar coefficient of the monomial the iterator points to. \end{DoxyCompactList}\item 
 auto \mbox{\hyperlink{classsymmp_1_1Polynomial_1_1constIterator_a142b56fc5b235a04598bed14e447a1b5}{exponent}} () const -\/$>$ const \mbox{\hyperlink{classsymmp_1_1Polynomial_adb6914c33db4513e34a8e2149b97d359}{exp\+\_\+t}} \&
-\begin{DoxyCompactList}\small\item\em Returns the exponent of the monomial. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Returns the exponent of the monomial the iterator points to. \end{DoxyCompactList}\item 
 auto \mbox{\hyperlink{classsymmp_1_1Polynomial_1_1constIterator_a21ada9520a02281cfdb4e0400912d66a}{degree}} () const -\/$>$ \mbox{\hyperlink{classsymmp_1_1Polynomial_a60553fbae1e4a58c189d046501f1ede8}{deg\+\_\+t}}
-\begin{DoxyCompactList}\small\item\em Returns the degree of the monomial. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Returns the degree of the monomial the iterator points to. \end{DoxyCompactList}\item 
 auto \mbox{\hyperlink{classsymmp_1_1Polynomial_1_1constIterator_a756ca6020886b8ec31cde0a808d7e865}{operator++}} () -\/$>$ \mbox{\hyperlink{classsymmp_1_1Polynomial_1_1constIterator}{const\+Iterator}} \&
-\begin{DoxyCompactList}\small\item\em Increments iterator. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classsymmp_1_1Polynomial_1_1constIterator_a07f5a0cf4bb43e77b650ec1ffd186ae5}{operator==}} (\mbox{\hyperlink{classsymmp_1_1Polynomial_1_1constIterator}{const\+Iterator}}) const
-\begin{DoxyCompactList}\small\item\em Equality of iterators. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classsymmp_1_1Polynomial_1_1constIterator_a3502c818a9e7121a08a3041e96f16a46}{operator!=}} (\mbox{\hyperlink{classsymmp_1_1Polynomial_1_1constIterator}{const\+Iterator}}) const
-\begin{DoxyCompactList}\small\item\em Inequality of iterators. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Increments iterator and points it to the next monomial. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsymmp_1_1Polynomial_1_1constIterator_a548d9dcaa17c2a25b38c6c6843e77a53}{operator!=}} (\mbox{\hyperlink{classsymmp_1_1Polynomial_1_1constIterator}{const\+Iterator}} other) const
+\begin{DoxyCompactList}\small\item\em Checks if two iterators are not equal (eg comparison to \mbox{\hyperlink{classsymmp_1_1Polynomial_ab65c1c78818d2edf0be9c5b736ab0272}{end()}}) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
@@ -37,9 +35,9 @@ class symmp\+::\+Polynomial$<$ \+\_\+scl, \+\_\+exp, \+\_\+container, container\
 
 Constant iterator through the monomials of the polynomial. 
 
-\begin{DoxyWarning}{Warning}
+\begin{DoxyNote}{Note}
 The monomials are traversed in increasing order only when {\ttfamily \+\_\+container} is ordered 
-\end{DoxyWarning}
+\end{DoxyNote}
 
 
 \doxysubsubsection{Member Function Documentation}
@@ -51,8 +49,11 @@ The monomials are traversed in increasing order only when {\ttfamily \+\_\+conta
 
 
 
-Returns the coefficient of the monomial. 
+Returns the scalar coefficient of the monomial the iterator points to. 
 
+\begin{DoxyReturn}{Returns}
+The coefficient of the monomial 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classsymmp_1_1Polynomial_1_1constIterator_a21ada9520a02281cfdb4e0400912d66a}\label{classsymmp_1_1Polynomial_1_1constIterator_a21ada9520a02281cfdb4e0400912d66a}} 
 \index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator}!degree@{degree}}
 \index{degree@{degree}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator}}
@@ -61,8 +62,11 @@ Returns the coefficient of the monomial.
 
 
 
-Returns the degree of the monomial. 
+Returns the degree of the monomial the iterator points to. 
 
+\begin{DoxyReturn}{Returns}
+The degree of the monomial 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classsymmp_1_1Polynomial_1_1constIterator_a142b56fc5b235a04598bed14e447a1b5}\label{classsymmp_1_1Polynomial_1_1constIterator_a142b56fc5b235a04598bed14e447a1b5}} 
 \index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator}!exponent@{exponent}}
 \index{exponent@{exponent}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator}}
@@ -71,18 +75,29 @@ Returns the degree of the monomial.
 
 
 
-Returns the exponent of the monomial. 
+Returns the exponent of the monomial the iterator points to. 
 
-\mbox{\Hypertarget{classsymmp_1_1Polynomial_1_1constIterator_a3502c818a9e7121a08a3041e96f16a46}\label{classsymmp_1_1Polynomial_1_1constIterator_a3502c818a9e7121a08a3041e96f16a46}} 
+\begin{DoxyReturn}{Returns}
+The exponent of the monomial 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsymmp_1_1Polynomial_1_1constIterator_a548d9dcaa17c2a25b38c6c6843e77a53}\label{classsymmp_1_1Polynomial_1_1constIterator_a548d9dcaa17c2a25b38c6c6843e77a53}} 
 \index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator}!operator"!=@{operator"!=}}
 \index{operator"!=@{operator"!=}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator}}
 \doxyparagraph{\texorpdfstring{operator"!=()}{operator!=()}}
-{\footnotesize\ttfamily bool operator!= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsymmp_1_1Polynomial_1_1constIterator}{const\+Iterator}}}]{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily bool operator!= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsymmp_1_1Polynomial_1_1constIterator}{const\+Iterator}}}]{other }\end{DoxyParamCaption}) const}
 
 
 
-Inequality of iterators. 
+Checks if two iterators are not equal (eg comparison to \mbox{\hyperlink{classsymmp_1_1Polynomial_ab65c1c78818d2edf0be9c5b736ab0272}{end()}}) 
 
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The iterator we compare {\ttfamily $\ast$this} to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if {\ttfamily $\ast$this!=other} 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classsymmp_1_1Polynomial_1_1constIterator_a756ca6020886b8ec31cde0a808d7e865}\label{classsymmp_1_1Polynomial_1_1constIterator_a756ca6020886b8ec31cde0a808d7e865}} 
 \index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator}!operator++@{operator++}}
 \index{operator++@{operator++}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator}}
@@ -91,18 +106,11 @@ Inequality of iterators.
 
 
 
-Increments iterator. 
+Increments iterator and points it to the next monomial. 
 
-\mbox{\Hypertarget{classsymmp_1_1Polynomial_1_1constIterator_a07f5a0cf4bb43e77b650ec1ffd186ae5}\label{classsymmp_1_1Polynomial_1_1constIterator_a07f5a0cf4bb43e77b650ec1ffd186ae5}} 
-\index{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator}!operator==@{operator==}}
-\index{operator==@{operator==}!Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator@{Polynomial$<$ \_scl, \_exp, \_container, container\_is\_ordered, \_Args $>$::constIterator}}
-\doxyparagraph{\texorpdfstring{operator==()}{operator==()}}
-{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsymmp_1_1Polynomial_1_1constIterator}{const\+Iterator}}}]{ }\end{DoxyParamCaption}) const}
-
-
-
-Equality of iterators. 
-
+\begin{DoxyReturn}{Returns}
+Reference to iterator pointing to the next monomial 
+\end{DoxyReturn}
 
 
 \doxysubsubsection{Friends And Related Function Documentation}

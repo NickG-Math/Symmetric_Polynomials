@@ -13,7 +13,7 @@ var classsymmp_1_1Polynomial =
     [ "insert", "classsymmp_1_1Polynomial.html#a3fdc0ef3971651e3b978d65e62ca1776", null ],
     [ "number_of_monomials", "classsymmp_1_1Polynomial.html#a5b2cb23f1a89d1c9cd17c9bbba894027", null ],
     [ "number_of_variables", "classsymmp_1_1Polynomial.html#a6ece838d12bfe695e2a59d94f8fc1856", null ],
-    [ "operator!=", "classsymmp_1_1Polynomial.html#a548205649375618bfd70ceabd8fba4a5", null ],
+    [ "operator!=", "classsymmp_1_1Polynomial.html#a0162924a2917049bc56912b6e02934ce", null ],
     [ "operator*", "classsymmp_1_1Polynomial.html#a6201cfc56b51a30ae1f01570c8e66841", null ],
     [ "operator*=", "classsymmp_1_1Polynomial.html#aa19a420790fbe79b9b73b503bf37bece", null ],
     [ "operator*=", "classsymmp_1_1Polynomial.html#a0fb0bb12bf91b49556b3f965d267b1cb", null ],
@@ -21,8 +21,8 @@ var classsymmp_1_1Polynomial =
     [ "operator+=", "classsymmp_1_1Polynomial.html#a331ffc367a7669767d0c203b3e68907f", null ],
     [ "operator-", "classsymmp_1_1Polynomial.html#a83304d45c36427da1b975ef442424e6c", null ],
     [ "operator-=", "classsymmp_1_1Polynomial.html#aa4630f9593ebc6310d1cc3320249b86c", null ],
-    [ "operator==", "classsymmp_1_1Polynomial.html#a96b711878928dbe44c00a41c8a792838", null ],
+    [ "operator==", "classsymmp_1_1Polynomial.html#aaebc4cbcf8fd3bf18645752aaf7ef737", null ],
     [ "operator^", "classsymmp_1_1Polynomial.html#a39143ef3ebb433a42659875d3b955daf", null ],
-    [ "print", "classsymmp_1_1Polynomial.html#acd848ed8bb05466e6d96bd387a8326c2", null ],
-    [ "reserve", "classsymmp_1_1Polynomial.html#af45d30f307f301b9d43fcdf52897bbce", null ]
+    [ "reserve", "classsymmp_1_1Polynomial.html#af45d30f307f301b9d43fcdf52897bbce", null ],
+    [ "operator<<", "classsymmp_1_1Polynomial.html#a3a38e2c8660ffefe33e0084429e654b4", null ]
 ];

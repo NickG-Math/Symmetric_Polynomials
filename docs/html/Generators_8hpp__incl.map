@@ -1,13 +1,8 @@
 <map id="Generators.hpp" name="Generators.hpp">
-<area shape="rect" id="node1" title="Contains classes for generating permutations, combinations and a factory for such classes." alt="" coords="245,5,368,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="147,80,232,107"/>
-<area shape="rect" id="node3" href="$General_8hpp.html" title="Contains general operations on vectors: hashing, computing degrees." alt="" coords="256,80,357,107"/>
-<area shape="rect" id="node11" title=" " alt="" coords="382,80,533,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,155,85,181"/>
-<area shape="rect" id="node5" title=" " alt="" coords="110,155,173,181"/>
-<area shape="rect" id="node6" title=" " alt="" coords="197,155,253,181"/>
-<area shape="rect" id="node7" title=" " alt="" coords="277,155,336,181"/>
-<area shape="rect" id="node8" title=" " alt="" coords="360,155,435,181"/>
-<area shape="rect" id="node9" title=" " alt="" coords="459,155,533,181"/>
-<area shape="rect" id="node10" title=" " alt="" coords="557,155,688,181"/>
+<area shape="rect" id="node1" title="Contains classes for generating permutations, combinations and a factory for such classes." alt="" coords="104,5,227,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,91,107"/>
+<area shape="rect" id="node3" href="$General_8hpp.html" title="Contains general operations on vectors: hashing, computing degrees." alt="" coords="115,80,216,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="241,80,391,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="64,155,139,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="163,155,293,181"/>
 </map>

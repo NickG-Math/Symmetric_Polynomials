@@ -13,11 +13,11 @@ struct \mbox{\hyperlink{structsymmp_1_1ArrayVectorWrapper}{Array\+Vector\+Wrappe
 class \mbox{\hyperlink{classsymmp_1_1CombinationGenerator}{Combination\+Generator}}
 \begin{DoxyCompactList}\small\item\em Generates all combinations on a number of letters making a number of choices. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structsymmp_1_1ElementarySymmetricVariables}{Elementary\+Symmetric\+Variables}}
-\begin{DoxyCompactList}\small\item\em Variables $e_1,...,e_n$ denoting the elementary symmetric polynomials $e_i=\sigma_i$ of degrees $|e_i|=i$. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Variables $e_1,...,e_n$ of degrees $|e_i|=i$. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classsymmp_1_1FactoryGenerator}{Factory\+Generator}}
-\begin{DoxyCompactList}\small\item\em Prototype for coroutine-\/like iterators that generate elements such as interpolating vectors, permutations, combinations... \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Prototype for coroutine-\/like iterators that generate elements such as combinations. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structsymmp_1_1HalfIdempotentVariables}{Half\+Idempotent\+Variables}}
-\begin{DoxyCompactList}\small\item\em The variables $x_1,...,x_n,y_1,...,y_n$ where $y_i^2=y_i$ and $|x_i|=1$, $|y_i|=0$. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Variables $x_1,...,x_n,y_1,...,y_n$ with $y_i^2=y_i$ and $|x_i|=1$, $|y_i|=0$. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classsymmp_1_1PermutationGenerator}{Permutation\+Generator}}
 \begin{DoxyCompactList}\small\item\em Generates all permutations on a number of letters. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial}}
@@ -51,7 +51,7 @@ struct \mbox{\hyperlink{structsymmp_1_1TwistedChernVariables}{Twisted\+Chern\+Va
 {\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{namespacesymmp_a17719500ed6cb508460abd6bcd8e1965}{all\+\_\+combinations}} (T n, T m)
 \begin{DoxyCompactList}\small\item\em Returns vector of all combinations on {\ttfamily n} letters choosing {\ttfamily m} many. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename xy\+\_\+poly\+\_\+t , typename chern\+\_\+poly\+\_\+t $>$ }\\void \mbox{\hyperlink{namespacesymmp_ad180d30365dcabd734acd1490037eab1}{print\+\_\+half\+\_\+idempotent\+\_\+relations}} (int n, bool print=0, bool verify=0, bool verify\+\_\+verbose=0)
-\begin{DoxyCompactList}\small\item\em Prints all relations in the description of the fixed points of $R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$ in terms of $\alpha_i, c_i, \gamma_{s,j}$ (printed as a\+\_\+i,c\+\_\+i,c\+\_\+\{s,j\} in the console) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Prints all relations in the description of the fixed points of $R=\mathbf Z[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$ in terms of $\alpha_i, c_i, \gamma_{s,j}$ (printed as {\ttfamily a\+\_\+i, c\+\_\+i, c\+\_\+\{s,j\}} in the console) \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename scl\+\_\+t , typename exp\+\_\+t , template$<$ typename... $>$ typename container\+\_\+t, bool container\+\_\+is\+\_\+ordered, typename ... Args$>$ }\\std\+::ostream \& \mbox{\hyperlink{namespacesymmp_a8e6a94a09932295f6d8c345a80998934}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial}}$<$ scl\+\_\+t, exp\+\_\+t, container\+\_\+t, container\+\_\+is\+\_\+ordered, Args... $>$ \&a)
 \begin{DoxyCompactList}\small\item\em Prints polynomial to output stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -172,7 +172,7 @@ Degree computation given exponent and dimensions (grading).
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-$\sum_{i=1}^na_id_i$ where exponent= $[a_1,...,a_n]$ and dimensions= $[d_1,...,d_n]$ 
+The degree $\sum_{i=1}^na_id_i$ where exponent= $[a_1,...,a_n]$ and dimensions= $[d_1,...,d_n]$ 
 \end{DoxyReturn}
 \mbox{\Hypertarget{namespacesymmp_ac26e0fc4b8ad188e9b24d49d806b1855}\label{namespacesymmp_ac26e0fc4b8ad188e9b24d49d806b1855}} 
 \index{symmp@{symmp}!generic\_hasher@{generic\_hasher}}
@@ -209,6 +209,29 @@ The hash of the element
 
 Prints polynomial to output stream. 
 
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em scl\+\_\+t} & The scalar/coefficient type of the polynomial \\
+\hline
+{\em exp\+\_\+t} & The variable/exponent type of the polynomial \\
+\hline
+{\em container\+\_\+t} & The data storage type of the polynomial. \\
+\hline
+{\em container\+\_\+is\+\_\+ordered} & Whether the container is ordered or not \\
+\hline
+{\em Args} & Any extra optional arguments to pass to {\ttfamily \+\_\+container} apart from key,value, comparator/hash \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream \\
+\hline
+{\em a} & The polynomial to be printed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The output stream where the polynomial has been printed 
+\end{DoxyReturn}
 \mbox{\Hypertarget{namespacesymmp_ad180d30365dcabd734acd1490037eab1}\label{namespacesymmp_ad180d30365dcabd734acd1490037eab1}} 
 \index{symmp@{symmp}!print\_half\_idempotent\_relations@{print\_half\_idempotent\_relations}}
 \index{print\_half\_idempotent\_relations@{print\_half\_idempotent\_relations}!symmp@{symmp}}
@@ -217,7 +240,7 @@ Prints polynomial to output stream.
 
 
 
-Prints all relations in the description of the fixed points of $R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$ in terms of $\alpha_i, c_i, \gamma_{s,j}$ (printed as a\+\_\+i,c\+\_\+i,c\+\_\+\{s,j\} in the console) 
+Prints all relations in the description of the fixed points of $R=\mathbf Z[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$ in terms of $\alpha_i, c_i, \gamma_{s,j}$ (printed as {\ttfamily a\+\_\+i, c\+\_\+i, c\+\_\+\{s,j\}} in the console) 
 
 
 \begin{DoxyTemplParams}{Template Parameters}

@@ -2,7 +2,7 @@
 \label{structsymmp_1_1HalfIdempotentVariables}\index{HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}}
 
 
-The variables $x_1,...,x_n,y_1,...,y_n$ where $y_i^2=y_i$ and $|x_i|=1$, $|y_i|=0$.  
+Variables $x_1,...,x_n,y_1,...,y_n$ with $y_i^2=y_i$ and $|x_i|=1$, $|y_i|=0$.  
 
 
 
@@ -54,7 +54,7 @@ static std\+::string \mbox{\hyperlink{structsymmp_1_1HalfIdempotentVariables_a28
 \subsubsection*{template$<$typename T = int64\+\_\+t, typename \+\_\+deg = int64\+\_\+t, size\+\_\+t N = 0$>$\newline
 struct symmp\+::\+Half\+Idempotent\+Variables$<$ T, \+\_\+deg, N $>$}
 
-The variables $x_1,...,x_n,y_1,...,y_n$ where $y_i^2=y_i$ and $|x_i|=1$, $|y_i|=0$. 
+Variables $x_1,...,x_n,y_1,...,y_n$ with $y_i^2=y_i$ and $|x_i|=1$, $|y_i|=0$. 
 
 Monomial $x_1^{a_1}\cdots x_n^{a_n}y_1^{a_{n+1}}\cdots y_n^{a_{2n}}$ is stored as vector/array $[a_1,...,a_{2n}]$ 
 \begin{DoxyTemplParams}{Template Parameters}
@@ -92,7 +92,7 @@ Degree typedef.
 Computes degree of monomial on on the $x_i,y_i$ with $|x_i|=1$ and $|y_i|=0$. 
 
 \begin{DoxyReturn}{Returns}
-$\sum_{i=1}^na_i$ for monomial $x_1^{a_1}\cdots y_n^{a_{2n}}$ ($\ast$this= $[a_1,...,a_{2n}]$) 
+Degree $\sum_{i=1}^na_i$ for monomial $x_1^{a_1}\cdots y_n^{a_{2n}}$ ($\ast$this= $[a_1,...,a_{2n}]$) 
 \end{DoxyReturn}
 \mbox{\Hypertarget{structsymmp_1_1HalfIdempotentVariables_a28177b5c072e6fb31978f51e4b1c83b2}\label{structsymmp_1_1HalfIdempotentVariables_a28177b5c072e6fb31978f51e4b1c83b2}} 
 \index{HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}!name@{name}}
@@ -143,7 +143,7 @@ Multiplies monomials by adding their exponents.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-$[a_1+b_1,...,a_n+b_n, \max(a_{n+1},b_{n+1}), ..., \max(a_{2n},b_{2n})]$ where $\ast$this= $[a_1,...,a_{2n}]$ 
+Exponent $[a_1+b_1,...,a_n+b_n, \max(a_{n+1},b_{n+1}), ..., \max(a_{2n},b_{2n})]$ where $\ast$this= $[a_1,...,a_{2n}]$ 
 \end{DoxyReturn}
 \mbox{\Hypertarget{structsymmp_1_1HalfIdempotentVariables_ab9a2a0144e6d1c2d740edc074f472222}\label{structsymmp_1_1HalfIdempotentVariables_ab9a2a0144e6d1c2d740edc074f472222}} 
 \index{HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}!operator-\/@{operator-\/}}
@@ -161,7 +161,7 @@ Divides monomials by subtracting their exponents.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-$[a_1-b_1,...,a_n-b_n, |a_{n+1}-b_{n+1}|, ..., |a_{2n}-b_{2n}|]$ where $\ast$this= $[a_1,...,a_{2n}]$ 
+Exponent $[a_1-b_1,...,a_n-b_n, |a_{n+1}-b_{n+1}|, ..., |a_{2n}-b_{2n}|]$ where $\ast$this= $[a_1,...,a_{2n}]$ 
 \end{DoxyReturn}
 
 

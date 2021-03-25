@@ -24,6 +24,7 @@
 </script>
 <script type="text/javascript" async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -102,42 +103,17 @@ $(document).ready(function(){initNavTree('Half__Idempotent_8hpp.html',''); initR
 <p>Contains the methods and classes for symmetric polynomials with half idempotent variables.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="Symmetric__Basis_8hpp_source.html">Symmetric_Basis.hpp</a>&quot;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
 <code>#include &quot;impl/Half_Idempotent.ipp&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Half_Idempotent.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="Half__Idempotent_8hpp__incl.png" border="0" usemap="#Half__Idempotent_8hpp" alt=""/></div>
-<map name="Half__Idempotent_8hpp" id="Half__Idempotent_8hpp">
-<area shape="rect" title="Contains the methods and classes for symmetric polynomials with half idempotent variables." alt="" coords="693,5,851,32"/>
-<area shape="rect" href="Symmetric__Basis_8hpp.html" title="Contains the methods and classes for generatic symmetric polynomials." alt="" coords="591,80,753,107"/>
-<area shape="rect" title=" " alt="" coords="778,80,966,107"/>
-<area shape="rect" href="Polynomials_8hpp.html" title="Contains the class of polynomials in multiple variables." alt="" coords="311,155,441,181"/>
-<area shape="rect" href="Generators_8hpp.html" title="Contains classes for generating permutations, combinations and a factory for such classes." alt="" coords="611,155,733,181"/>
-<area shape="rect" title=" " alt="" coords="757,155,949,181"/>
-<area shape="rect" title=" " alt="" coords="5,229,56,256"/>
-<area shape="rect" title=" " alt="" coords="81,229,205,256"/>
-<area shape="rect" href="General_8hpp.html" title="Contains general operations on vectors: hashing, computing degrees." alt="" coords="563,229,664,256"/>
-<area shape="rect" title=" " alt="" coords="229,229,355,256"/>
-<area shape="rect" title=" " alt="" coords="379,229,538,256"/>
-<area shape="rect" title=" " alt="" coords="312,304,392,331"/>
-<area shape="rect" title=" " alt="" coords="417,304,479,331"/>
-<area shape="rect" title=" " alt="" coords="504,304,560,331"/>
-<area shape="rect" title=" " alt="" coords="584,304,643,331"/>
-<area shape="rect" title=" " alt="" coords="667,304,741,331"/>
-<area shape="rect" title=" " alt="" coords="765,304,840,331"/>
-<area shape="rect" title=" " alt="" coords="864,304,995,331"/>
-<area shape="rect" title=" " alt="" coords="688,229,773,256"/>
-<area shape="rect" title=" " alt="" coords="798,229,949,256"/>
-</map>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="Half__Idempotent_8hpp__incl.svg" width="100%" height="552"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="Half__Idempotent_8hpp__dep__incl.png" border="0" usemap="#Half__Idempotent_8hppdep" alt=""/></div>
-<map name="Half__Idempotent_8hppdep" id="Half__Idempotent_8hppdep">
-<area shape="rect" title="Contains the methods and classes for symmetric polynomials with half idempotent variables." alt="" coords="5,5,164,32"/>
-<area shape="rect" href="Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="41,80,129,107"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="Half__Idempotent_8hpp__dep__incl.svg" width="170" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="Half__Idempotent_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -148,7 +124,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapping array and vector in the same interface.  <a href="structsymmp_1_1ArrayVectorWrapper.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsymmp_1_1HalfIdempotentVariables.html">HalfIdempotentVariables&lt; T, _deg, N &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The variables \(x_1,...,x_n,y_1,...,y_n\) where \(y_i^2=y_i\) and \(|x_i|=1\), \(|y_i|=0\).  <a href="structsymmp_1_1HalfIdempotentVariables.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variables \(x_1,...,x_n,y_1,...,y_n\) with \(y_i^2=y_i\) and \(|x_i|=1\), \(|y_i|=0\).  <a href="structsymmp_1_1HalfIdempotentVariables.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsymmp_1_1TwistedChernVariables.html">TwistedChernVariables&lt; T, _deg &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The twisted Chern generators as variables \(\gamma_{s,j}\).  <a href="structsymmp_1_1TwistedChernVariables.html#details">More...</a><br /></td></tr>
@@ -167,25 +143,20 @@ Namespaces</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:ad180d30365dcabd734acd1490037eab1"><td class="memTemplParams" colspan="2">template&lt;typename xy_poly_t , typename chern_poly_t &gt; </td></tr>
 <tr class="memitem:ad180d30365dcabd734acd1490037eab1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesymmp.html#ad180d30365dcabd734acd1490037eab1">print_half_idempotent_relations</a> (int n, bool print=0, bool verify=0, bool verify_verbose=0)</td></tr>
-<tr class="memdesc:ad180d30365dcabd734acd1490037eab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints all relations in the description of the fixed points of \(R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)\) in terms of \(\alpha_i, c_i, \gamma_{s,j}\) (printed as a_i,c_i,c_{s,j} in the console)  <a href="namespacesymmp.html#ad180d30365dcabd734acd1490037eab1">More...</a><br /></td></tr>
+<tr class="memdesc:ad180d30365dcabd734acd1490037eab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints all relations in the description of the fixed points of \(R=\mathbf Z[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)\) in terms of \(\alpha_i, c_i, \gamma_{s,j}\) (printed as <code>a_i, c_i, c_{s,j}</code> in the console)  <a href="namespacesymmp.html#ad180d30365dcabd734acd1490037eab1">More...</a><br /></td></tr>
 <tr class="separator:ad180d30365dcabd734acd1490037eab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains the methods and classes for symmetric polynomials with half idempotent variables. </p>
 <p>The goal is to solve the following problem: If </p><p class="formulaDsp">
-\[R=\mathbb Z[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)\]
+\[R=\mathbf Z[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)\]
 </p>
 <p> produce minimal algebra generators for the fixed points of \(R\) under the \(\Sigma_n\) action (permuting the \(x_i,y_i\) separately), give an algorithm for writing a fixed point in terms of the generators and an algorithm for producing the relations of those generators. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.18-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="Half__Idempotent_8hpp.html">Half_Idempotent.hpp</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
-  </ul>
 </div>
 </body>
 </html>

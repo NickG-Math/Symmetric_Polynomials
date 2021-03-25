@@ -34,16 +34,16 @@ This documentation is organized in pages as follows:
 \tableofcontents
 \section sym Symmetric polynomials
 
-Let \f$R=\mathbb Z[x_1,...,x_n]\f$; there is an obvious action on \f$R\f$ by the symmetric group \f$\Sigma_n\f$ and the fixed points \f$R^{\Sigma_n}\f$ i.e. the symmetric polynomials, form a polynomial algebra on the elementary symmetric polynomials: 
-\f[R^{\Sigma_n}=\mathbb Z[\sigma_1,...,\sigma_n]\f] where 
+Let \f$R=\mathbf Z[x_1,...,x_n]\f$; there is an obvious action on \f$R\f$ by the symmetric group \f$\Sigma_n\f$ and the fixed points \f$R^{\Sigma_n}\f$ i.e. the symmetric polynomials, form a polynomial algebra on the elementary symmetric polynomials: 
+\f[R^{\Sigma_n}=\mathbf Z[\sigma_1,...,\sigma_n]\f] where 
 \f[\sigma_k(x_1,...,x_n)=\sum_{1\le i_1< \cdots< i_k\le n}x_{i_1}....x_{i_k}\f]
 Furthermore, there is a simple algorithm for writing every symmetric polynomial on the \f$x_i\f$ as a polynomial on the \f$\sigma_i\f$. This library implements that algorithm.
 
 
 \section hir Symmetric polynomials with 'half idempotent' relations
 
-Let \f$R=\mathbb Z[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)\f$; there is an obvious action on \f$R\f$ by the symmetric group \f$\Sigma_n\f$ permuting the \f$x_i\f$ and \f$y_i\f$ variables separately. A minimal description of the \f$R^{\Sigma_n}\f$ is now more difficult:
-\f[R^{\Sigma_n}=\frac{\mathbb Z[\gamma_{s,i}]}{\gamma_{s,i}\gamma_{t,j}=r_{n,s,i,t,j}\gamma_{t,0}\gamma_{s,\min(i+j,n)}+\cdots}\f] where the "twisted Chern classes" are:
+Let \f$R=\mathbf Z[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)\f$; there is an obvious action on \f$R\f$ by the symmetric group \f$\Sigma_n\f$ permuting the \f$x_i\f$ and \f$y_i\f$ variables separately. A minimal description of the \f$R^{\Sigma_n}\f$ is now more difficult:
+\f[R^{\Sigma_n}=\frac{\mathbf Z[\gamma_{s,i}]}{\gamma_{s,i}\gamma_{t,j}=r_{n,s,i,t,j}\gamma_{t,0}\gamma_{s,\min(i+j,n)}+\cdots}\f] where the "twisted Chern classes" are:
 \f[\gamma_{s,i}=
 \sum_{1\le j_1< \cdots< j_s\le n, 1\le k_1< \cdots< k_i\le n\\ j_u\neq k_v}
 x_{j_1}....x_{j_s}y_{k_1}\cdots y_{k_i}\f]
@@ -54,9 +54,9 @@ Moreover, the relations require the indices \f$s,i,t,j\f$ to satisfy \f$s\le t\l
 For convenience we set:
 \f[\alpha_i=\gamma_{0,i}=\sigma_i(y_1,...,y_n)\f]
 \f[c_s=\gamma_{s,0}=\sigma_s(x_1,...,x_n)\f]
-Over \f$\mathbb Q\f$, the \f$\alpha_1^i\f$ can generate all \f$\alpha_i\f$ via:
+Over \f$\mathbf Q\f$, the \f$\alpha_1^i\f$ can generate all \f$\alpha_i\f$ via:
 \f[\alpha_i=\frac{\alpha(\alpha-1)\cdots(\alpha-i+1)}{i!}\f]
-however for speed+numerical stability we prefer to use all \f$\alpha_i\f$ and have \f$\mathbb Z\f$ coefficients in our relations.
+however for speed+numerical stability we prefer to use all \f$\alpha_i\f$ and have \f$\mathbf Z\f$ coefficients in our relations.
 
 This library implements an algorithm that can write every element in \f$R^{\Sigma_n}\f$ as a polynomial on the generators \f$\alpha_i,c_i,\gamma_{s,i}\f$ and further produce every relation explicitly. 
 
@@ -86,13 +86,13 @@ Everything in this library is under the namespace \ref symmp (short for Symmetri
 
 \subsection mono Polynomials
 
-A polynomial \f$p\f$ in the graded ring \f$\mathbb Z[x_1,...,x_n]\f$, \f$|x_i|=1\f$, can be declared as:
+A polynomial \f$p\f$ in the graded ring \f$\mathbf Z[x_1,...,x_n]\f$, \f$|x_i|=1\f$, can be declared as:
 	
 	OrderedPolynomial<int, StandardVariables<>> p;
 
 Here:
 - \ref symmp::OrderedPolynomial means that the monomials of the polynomial are kept in increasing order. See below for alternatives.
-- ```int``` is the type of the scalar coefficients (i.e. elements of the base ring; in our case \f$\mathbb Z\f$), so it can be replaced by ```double``` etc.
+- ```int``` is the type of the scalar coefficients (i.e. elements of the base ring; in our case \f$\mathbf Z\f$), so it can be replaced by ```double``` etc.
 - \ref symmp::StandardVariables specify we have variables of degree \f$1\f$, names \f$x_i\f$ and no relations. See the next few subsections for alternatives.
 
 To insert a monomial \f$cx_1^{a_1}\cdots x_n^{a_n}\f$ in \f$p\f$ we provide the exponent vector \f$[a_1,...,a_n]\f$ and the coefficient \f$c\f$. Eg:
@@ -118,7 +118,7 @@ Polynomials can be added, subtracted and multiplied by binary operators ```+,-,*
 
 will print 
 
-$$-8x_1x_2x_3^2 + 7x_2x_3^4 + 64x_1^2x_2^2x_3^4 + -112x_1x_2^2x_3^6 + 49x_2^2x_3^8$$
+$$-8x_1x_2x_3^2 + 7x_2x_3^4 + 64x_1^2x_2^2x_3^4 - 112x_1x_2^2x_3^6 + 49x_2^2x_3^8$$
 
 which is exactly \f$p+p^2\f$.
 
@@ -129,31 +129,36 @@ Instead of \ref symmp::OrderedPolynomial, we can also use \ref symmp::UnorderedP
 
 Apart from the  \ref symmp::StandardVariables, we can also use the 	\ref symmp::ElementarySymmetricVariables which specify variables with names \f$e_i\f$, degrees \f$|e_i|=i\f$ and no relations. 
 
-Example: An element \f$q\f$ of the ring \f$\mathbb R[e_1,...,e_n]\f$ can be defined as: 
+Example: An element \f$q\f$ of the ring \f$\mathbf R[e_1,...,e_n]\f$ can be defined as: 
 
 	OrderedPolynomial<double, ElementarySymmetricVariables<>> q({ 2,3 }, -1.5);
 	std::cout << q << "\n";
 
 which will print \f$-1.5e_1e_2\f$. We used the constructor that takes a single monomial in the form of exponent+vector.
 
-We can view \f[\mathbb R[e_1,...,e_n]=\mathbb R[x_1,...,x_n]^{\Sigma_n}\f] with \f$e_i=\sigma_i\f$ being the elementary symmetric polynomials. 
+To keep names short let us use the following two typedefs:
+
+	typedef OrderedPolynomial<double, StandardVariables<>> x_var_t;
+	typedef OrderedPolynomial<double, ElementarySymmetricVariables<>> e_var_t;
+
+We can view \f[\mathbf R[e_1,...,e_n]=\mathbf R[x_1,...,x_n]^{\Sigma_n}\f] with \f$e_i=\sigma_i\f$ being the elementary symmetric polynomials. 
 To convert \f$q\f$ from \f$e_i\f$ variables to \f$x_i\f$ variables we use the class  \ref symmp::SymmetricBasis :
 
-	SymmetricBasis<OrderedPolynomial<double, StandardVariables<>>, OrderedPolynomial<double, ElementarySymmetricVariables<>>> SB(2);
+	SymmetricBasis<x_var_t, e_var_t> SB(2);
 
 The ```2``` signifies that we are using two variables \f$x_1,x_2\f$. Then:
 
-	auto q_in_x_var=SB(q);
-	std::cout << q_in_x_var;
+	auto qx=SB(q);
+	std::cout << qx;
 
-will define a ```OrderedPolynomial<double, StandardVariables<>> q_in_x_var``` that is ```q``` transformed into the \ref symmp::StandardVariables and print \f[-1.5x_1^3x_2^5 + -3x_1^4x_2^4 + -1.5x_1^5x_2^3\f]
+will define an ```x_var_t qx``` that is ```q``` transformed into the \ref symmp::StandardVariables and print \f[-1.5x_1^3x_2^5 + -3x_1^4x_2^4 + -1.5x_1^5x_2^3\f]
 
-We can perform the conversion the other way as well: given a polynomial in \ref symmp::StandardVariables such as ```q_in_x_var``` we can use the ```SB``` from before to transform it into a polynomial on the 	\ref symmp::ElementarySymmetricVariables : 
+We can perform the conversion the other way as well: given a polynomial in \ref symmp::StandardVariables such as ```qx``` we can use the ```SB``` from before to transform it into a polynomial on the 	\ref symmp::ElementarySymmetricVariables : 
 
-	auto q_in_e_var=SB(q_in_x_var);
-	std::cout << q_in_e_var;
+	auto qe=SB(qx);
+	std::cout << qe;
 
-which will print \f$-1.5e_1e_2\f$. Observe that ```q==q_in_e_var```;
+which will print \f$-1.5e_1e_2\f$. Observe that ```q==qe```;
 
 \subsection halfidem Twisted Chern Basis
 
@@ -166,26 +171,34 @@ The class \ref symmp::TwistedChernBasis allows us to transform polynomials on \f
 
 Example:
 
-	UnorderedPolynomial<int, HalfIdempotentVariables<>> poly;
+	typedef UnorderedPolynomial<int, HalfIdempotentVariables<>> xy_var_t;
+	typedef UnorderedPolynomial<int, TwistedChernVariables<>>> chern_var_t;
+	xy_var_t poly;
 	poly.insert({ 1,0,1,0 }, 2);
 	poly.insert({ 0,1,0,1 }, 2);
-	TwistedChernBasis<UnorderedPolynomial<int, HalfIdempotentVariables<>>, UnorderedPolynomial<int, TwistedChernVariables<>>> TCB(2);
+	TwistedChernBasis<xy_var_t, chern_var_t> TCB(2);
 	std::cout << TCB(poly);
 
-sets ```poly``` to be \f$x_1y_1+x_2y_2\f$, transforms it into \f$\gamma_{s,j}\f$ variables and prints the result:
+sets ```poly``` to be \f$x_1y_1+x_2y_2\f$, transforms it into \f$\gamma_{s,j}\f$ variables and prints:
+
+\f[-2\gamma_{1,1}+2\alpha_1 c_1\f]
+
+And indeed:
 
 \f[x_1y_1+x_2y_2=-2\gamma_{1,1}+2\alpha_1 c_1\f]
 
-Note that 
+If we perform the transformation again we get the original polynomial: 
 
 	std::cout << TCB(TCB(poly));
 
-prints the original polynomial \f$x_1y_1+x_2y_2\f$. The argument ```2``` in the construction of ```TCB``` is half the number of variables \f$x_1,x_2,y_1,y_2\f$.
+prints \f$x_1y_1+x_2y_2\f$. 
+
+We note that the argument ```2``` in the constructor of ```TCB``` is half the number of variables \f$x_1,x_2,y_1,y_2\f$.
 
 
 To print the relations amongst \f$\alpha_i,c_i,\gamma_{s,j}\f$ use:
 
-	print_half_idempotent_relations<UnorderedPolynomial<int, HalfIdempotentVariables<>>, UnorderedPolynomial<int, TwistedChernVariables<>>>(3,1,1);
+	print_half_idempotent_relations<xy_var_t, chern_var_t>(3,1,1);
 	
 The \f$3\f$ here corresponds to the half the number of variables: \f$x_1,x_2,x_3,y_1,y_2,y_3\f$ and can be replaced by any positive integer.
 
@@ -198,4 +211,4 @@ i_u\neq j_v}x^2_{i_1}....x^2_{i_s}y_{j_1}\cdots y_{j_t}\f]
 in terms of the \f$\alpha_i,c_i,\gamma_{s,t}\f$. 
 For example, try running 
 
-	write_pontryagin_C2_in_terms_of_Chern_classes < UnorderedPolynomial<int, HalfIdempotentVariables<>>, UnorderedPolynomial<int, TwistedChernVariables<>>>(5);
+	write_pontryagin_C2_in_terms_of_Chern_classes < xy_var_t, chern_var_t>(5);

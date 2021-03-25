@@ -6,6 +6,7 @@ Contains the methods and classes for symmetric polynomials with half idempotent 
 
 
 {\ttfamily \#include \char`\"{}Symmetric\+\_\+\+Basis.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
 {\ttfamily \#include \char`\"{}impl/\+Half\+\_\+\+Idempotent.\+ipp\char`\"{}}\newline
 Include dependency graph for Half\+\_\+\+Idempotent.\+hpp\+:\nopagebreak
 \begin{figure}[H]
@@ -27,7 +28,7 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 struct \mbox{\hyperlink{structsymmp_1_1ArrayVectorWrapper}{Array\+Vector\+Wrapper$<$ T, N $>$}}
 \begin{DoxyCompactList}\small\item\em Wrapping array and vector in the same interface. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structsymmp_1_1HalfIdempotentVariables}{Half\+Idempotent\+Variables$<$ T, \+\_\+deg, N $>$}}
-\begin{DoxyCompactList}\small\item\em The variables $x_1,...,x_n,y_1,...,y_n$ where $y_i^2=y_i$ and $|x_i|=1$, $|y_i|=0$. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Variables $x_1,...,x_n,y_1,...,y_n$ with $y_i^2=y_i$ and $|x_i|=1$, $|y_i|=0$. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structsymmp_1_1TwistedChernVariables}{Twisted\+Chern\+Variables$<$ T, \+\_\+deg $>$}}
 \begin{DoxyCompactList}\small\item\em The twisted Chern generators as variables $\gamma_{s,j}$. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classsymmp_1_1TwistedChernBasis}{Twisted\+Chern\+Basis$<$ \+\_\+xy\+\_\+poly\+\_\+t, \+\_\+chern\+\_\+poly\+\_\+t $>$}}
@@ -41,10 +42,10 @@ class \mbox{\hyperlink{classsymmp_1_1TwistedChernBasis}{Twisted\+Chern\+Basis$<$
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$typename xy\+\_\+poly\+\_\+t , typename chern\+\_\+poly\+\_\+t $>$ }\\void \mbox{\hyperlink{namespacesymmp_ad180d30365dcabd734acd1490037eab1}{print\+\_\+half\+\_\+idempotent\+\_\+relations}} (int n, bool print=0, bool verify=0, bool verify\+\_\+verbose=0)
-\begin{DoxyCompactList}\small\item\em Prints all relations in the description of the fixed points of $R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$ in terms of $\alpha_i, c_i, \gamma_{s,j}$ (printed as a\+\_\+i,c\+\_\+i,c\+\_\+\{s,j\} in the console) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Prints all relations in the description of the fixed points of $R=\mathbf Z[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$ in terms of $\alpha_i, c_i, \gamma_{s,j}$ (printed as {\ttfamily a\+\_\+i, c\+\_\+i, c\+\_\+\{s,j\}} in the console) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsubsection{Detailed Description}
 Contains the methods and classes for symmetric polynomials with half idempotent variables. 
 
-The goal is to solve the following problem\+: If \[R=\mathbb Z[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)\] produce minimal algebra generators for the fixed points of $R$ under the $\Sigma_n$ action (permuting the $x_i,y_i$ separately), give an algorithm for writing a fixed point in terms of the generators and an algorithm for producing the relations of those generators. 
+The goal is to solve the following problem\+: If \[R=\mathbf Z[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)\] produce minimal algebra generators for the fixed points of $R$ under the $\Sigma_n$ action (permuting the $x_i,y_i$ separately), give an algorithm for writing a fixed point in terms of the generators and an algorithm for producing the relations of those generators. 

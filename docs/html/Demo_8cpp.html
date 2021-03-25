@@ -24,6 +24,7 @@
 </script>
 <script type="text/javascript" async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,53 +101,25 @@ $(document).ready(function(){initNavTree('Demo_8cpp.html',''); initResizable(); 
 
 <p>A demonstration file that can be compiled.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;chrono&gt;</code><br />
-<code>#include &quot;<a class="el" href="Half__Idempotent_8hpp_source.html">Half_Idempotent.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="Half__Idempotent_8hpp_source.html">Half_Idempotent.hpp</a>&quot;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Demo.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="Demo_8cpp__incl.png" border="0" usemap="#Demo_8cpp" alt=""/></div>
-<map name="Demo_8cpp" id="Demo_8cpp">
-<area shape="rect" title="A demonstration file that can be compiled." alt="" coords="463,5,551,32"/>
-<area shape="rect" title=" " alt="" coords="105,80,172,107"/>
-<area shape="rect" href="Half__Idempotent_8hpp.html" title="Contains the methods and classes for symmetric polynomials with half idempotent variables." alt="" coords="427,80,586,107"/>
-<area shape="rect" href="Symmetric__Basis_8hpp.html" title="Contains the methods and classes for generatic symmetric polynomials." alt="" coords="247,155,409,181"/>
-<area shape="rect" href="Polynomials_8hpp.html" title="Contains the class of polynomials in multiple variables." alt="" coords="199,229,329,256"/>
-<area shape="rect" href="General_8hpp.html" title="Contains general operations on vectors: hashing, computing degrees." alt="" coords="591,304,692,331"/>
-<area shape="rect" href="Generators_8hpp.html" title="Contains classes for generating permutations, combinations and a factory for such classes." alt="" coords="697,229,820,256"/>
-<area shape="rect" title=" " alt="" coords="749,80,841,107"/>
-<area shape="rect" title=" " alt="" coords="434,155,622,181"/>
-<area shape="rect" title=" " alt="" coords="353,229,545,256"/>
-<area shape="rect" title=" " alt="" coords="5,304,56,331"/>
-<area shape="rect" title=" " alt="" coords="81,304,205,331"/>
-<area shape="rect" title=" " alt="" coords="229,304,355,331"/>
-<area shape="rect" title=" " alt="" coords="379,304,538,331"/>
-<area shape="rect" title=" " alt="" coords="340,379,420,405"/>
-<area shape="rect" title=" " alt="" coords="445,379,507,405"/>
-<area shape="rect" title=" " alt="" coords="532,379,588,405"/>
-<area shape="rect" title=" " alt="" coords="612,379,671,405"/>
-<area shape="rect" title=" " alt="" coords="695,379,769,405"/>
-<area shape="rect" title=" " alt="" coords="793,379,868,405"/>
-<area shape="rect" title=" " alt="" coords="892,379,1023,405"/>
-<area shape="rect" title=" " alt="" coords="716,304,801,331"/>
-<area shape="rect" title=" " alt="" coords="826,304,977,331"/>
-</map>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="Demo_8cpp__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a0b73c133d7e0dcdd1ca51551579660c2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Demo_8cpp.html#a0b73c133d7e0dcdd1ca51551579660c2">SYMMETRIC_POLY_USE_OPEN_MP</a></td></tr>
-<tr class="memdesc:a0b73c133d7e0dcdd1ca51551579660c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define this macro to enable openMP in the library (you will also need to compile with -fopenmp).  <a href="Demo_8cpp.html#a0b73c133d7e0dcdd1ca51551579660c2">More...</a><br /></td></tr>
-<tr class="separator:a0b73c133d7e0dcdd1ca51551579660c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6e43e143ef4a0a5833853258c1170b2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Demo_8cpp.html#ab6e43e143ef4a0a5833853258c1170b2">PARALLELIZE</a></td></tr>
-<tr class="memdesc:ab6e43e143ef4a0a5833853258c1170b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro that does <code>openMP parallel for</code> if <code>SYMMETRIC_POLY_USE_OPEN_MP</code> is defined, and nothing otherwise.  <a href="Demo_8cpp.html#ab6e43e143ef4a0a5833853258c1170b2">More...</a><br /></td></tr>
-<tr class="separator:ab6e43e143ef4a0a5833853258c1170b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a327203f8354b38848f74970323af177e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Demo_8cpp.html#a327203f8354b38848f74970323af177e">SYMMP_USE_OPEN_MP</a></td></tr>
+<tr class="memdesc:a327203f8354b38848f74970323af177e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define this macro to enable openMP in the library (you will also need to enable openMP in your compiler).  <a href="Demo_8cpp.html#a327203f8354b38848f74970323af177e">More...</a><br /></td></tr>
+<tr class="separator:a327203f8354b38848f74970323af177e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a4035f75fec6b080c4047d6b04281910f"><td class="memTemplParams" colspan="2">template&lt;typename xy_poly_t , typename chern_poly_t &gt; </td></tr>
 <tr class="memitem:a4035f75fec6b080c4047d6b04281910f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="Demo_8cpp.html#a4035f75fec6b080c4047d6b04281910f">write_pontryagin_C2_in_terms_of_Chern_classes</a> (int n)</td></tr>
-<tr class="memdesc:a4035f75fec6b080c4047d6b04281910f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the twisted Pontryagin or symplectic classes \(\pi_{s,j}\) or \(\kappa_{s,j}\) in terms of the Chern classes under the forgetful map \(BU(n)\to BSO(n)\) or hermitianization \(BU(n)\to BSp(n)\).  <a href="Demo_8cpp.html#a4035f75fec6b080c4047d6b04281910f">More...</a><br /></td></tr>
+<tr class="memdesc:a4035f75fec6b080c4047d6b04281910f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the twisted Pontryagin (symplectic) classes \(\pi_{s,j}\) ( \(\kappa_{s,j}\)) in terms of the Chern classes under the forgetful \(BU(n)\to BSO(n)\) (hermitianization \(BU(n)\to BSp(n)\))  <a href="Demo_8cpp.html#a4035f75fec6b080c4047d6b04281910f">More...</a><br /></td></tr>
 <tr class="separator:a4035f75fec6b080c4047d6b04281910f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4379c1f8675ccb9d3360e1087853dae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Demo_8cpp.html#aa4379c1f8675ccb9d3360e1087853dae">show_and_tell</a> ()</td></tr>
 <tr class="memdesc:aa4379c1f8675ccb9d3360e1087853dae"><td class="mdescLeft">&#160;</td><td class="mdescRight">User facing interface for computing relations/writing Pontryagin/symplectic in terms of Chern.  <a href="Demo_8cpp.html#aa4379c1f8675ccb9d3360e1087853dae">More...</a><br /></td></tr>
@@ -162,35 +135,19 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A demonstration file that can be compiled. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="ab6e43e143ef4a0a5833853258c1170b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6e43e143ef4a0a5833853258c1170b2">&#9670;&nbsp;</a></span>PARALLELIZE</h2>
+<a id="a327203f8354b38848f74970323af177e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a327203f8354b38848f74970323af177e">&#9670;&nbsp;</a></span>SYMMP_USE_OPEN_MP</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define PARALLELIZE</td>
+          <td class="memname">#define SYMMP_USE_OPEN_MP</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Macro that does <code>openMP parallel for</code> if <code>SYMMETRIC_POLY_USE_OPEN_MP</code> is defined, and nothing otherwise. </p>
-
-</div>
-</div>
-<a id="a0b73c133d7e0dcdd1ca51551579660c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b73c133d7e0dcdd1ca51551579660c2">&#9670;&nbsp;</a></span>SYMMETRIC_POLY_USE_OPEN_MP</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SYMMETRIC_POLY_USE_OPEN_MP</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Define this macro to enable openMP in the library (you will also need to compile with -fopenmp). </p>
+<p>Define this macro to enable openMP in the library (you will also need to enable openMP in your compiler). </p>
 
 </div>
 </div>
@@ -214,11 +171,7 @@ Functions</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="Demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#Demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
-<map name="Demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="Demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
-<area shape="rect" title="Main." alt="" coords="5,5,60,32"/>
-<area shape="rect" href="Demo_8cpp.html#aa4379c1f8675ccb9d3360e1087853dae" title="User facing interface for computing relations/writing Pontryagin/symplectic in terms of Chern." alt="" coords="108,5,223,32"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="Demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.svg" width="228" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -242,11 +195,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="Demo_8cpp_aa4379c1f8675ccb9d3360e1087853dae_icgraph.png" border="0" usemap="#Demo_8cpp_aa4379c1f8675ccb9d3360e1087853dae_icgraph" alt=""/></div>
-<map name="Demo_8cpp_aa4379c1f8675ccb9d3360e1087853dae_icgraph" id="Demo_8cpp_aa4379c1f8675ccb9d3360e1087853dae_icgraph">
-<area shape="rect" title="User facing interface for computing relations/writing Pontryagin/symplectic in terms of Chern." alt="" coords="108,5,223,32"/>
-<area shape="rect" href="Demo_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Main." alt="" coords="5,5,60,32"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="Demo_8cpp_aa4379c1f8675ccb9d3360e1087853dae_icgraph.svg" width="228" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -294,7 +243,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Writes the twisted Pontryagin or symplectic classes \(\pi_{s,j}\) or \(\kappa_{s,j}\) in terms of the Chern classes under the forgetful map \(BU(n)\to BSO(n)\) or hermitianization \(BU(n)\to BSp(n)\). </p>
+<p>Writes the twisted Pontryagin (symplectic) classes \(\pi_{s,j}\) ( \(\kappa_{s,j}\)) in terms of the Chern classes under the forgetful \(BU(n)\to BSO(n)\) (hermitianization \(BU(n)\to BSp(n)\)) </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">xy_poly_t</td><td>The type of polynomial on the \(x_i,y_i\) variables </td></tr>
@@ -311,25 +260,16 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="Demo_8cpp_a4035f75fec6b080c4047d6b04281910f_cgraph.png" border="0" usemap="#Demo_8cpp_a4035f75fec6b080c4047d6b04281910f_cgraph" alt=""/></div>
-<map name="Demo_8cpp_a4035f75fec6b080c4047d6b04281910f_cgraph" id="Demo_8cpp_a4035f75fec6b080c4047d6b04281910f_cgraph">
-<area shape="rect" title="Writes the twisted Pontryagin or symplectic classes &#160;or &#160;in terms of the Chern classes under the forg..." alt="" coords="5,5,212,47"/>
-<area shape="rect" href="classsymmp_1_1TwistedChernBasis.html#ad05b1690e2698e5b50ead06cd6aadd0a" title="Returns generator ." alt="" coords="260,5,461,47"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="Demo_8cpp_a4035f75fec6b080c4047d6b04281910f_cgraph.svg" width="467" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.18-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="Demo_8cpp.html">Demo.cpp</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
-  </ul>
 </div>
 </body>
 </html>

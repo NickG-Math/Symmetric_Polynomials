@@ -1,4 +1,4 @@
 <map id="write_pontryagin_C2_in_terms_of_Chern_classes" name="write_pontryagin_C2_in_terms_of_Chern_classes">
-<area shape="rect" id="node1" title="Writes the twisted Pontryagin or symplectic classes &#160;or &#160;in terms of the Chern classes under the forg..." alt="" coords="5,5,212,47"/>
+<area shape="rect" id="node1" title="Writes the twisted Pontryagin (symplectic) classes &#160;( ) in terms of the Chern classes under the forge..." alt="" coords="5,5,212,47"/>
 <area shape="rect" id="node2" href="$classsymmp_1_1TwistedChernBasis.html#ad05b1690e2698e5b50ead06cd6aadd0a" title="Returns generator ." alt="" coords="260,5,461,47"/>
 </map>

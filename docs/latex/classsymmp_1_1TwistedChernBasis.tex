@@ -72,9 +72,12 @@ Constructs the generators and the relation set given $n$ in $x_1,...,x_n,y_1,...
 
 
 \begin{DoxyParams}{Parameters}
-{\em n} & $n$ is half(!) the number of variables \\
+{\em n} & Half(!) the number of variables \\
 \hline
 \end{DoxyParams}
+\begin{DoxyAttention}{Attention}
+The parameter {\ttfamily n} is half(!) the number of variables (the $n$ in $BU(n)$) 
+\end{DoxyAttention}
 
 
 \doxysubsubsection{Member Function Documentation}
@@ -96,7 +99,7 @@ Returns generator $\gamma_{s,j}$.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-$\gamma_{s,j}$ as \mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial}} on the $x_i,y_i$ variables 
+The polynomial $\gamma_{s,j}$ on the $x_i,y_i$ variables 
 \end{DoxyReturn}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]

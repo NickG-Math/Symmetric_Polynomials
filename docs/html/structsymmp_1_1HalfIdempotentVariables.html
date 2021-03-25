@@ -24,6 +24,7 @@
 </script>
 <script type="text/javascript" async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,29 +101,19 @@ $(document).ready(function(){initNavTree('structsymmp_1_1HalfIdempotentVariables
 </div><!--header-->
 <div class="contents">
 
-<p>The variables \(x_1,...,x_n,y_1,...,y_n\) where \(y_i^2=y_i\) and \(|x_i|=1\), \(|y_i|=0\).  
+<p>Variables \(x_1,...,x_n,y_1,...,y_n\) with \(y_i^2=y_i\) and \(|x_i|=1\), \(|y_i|=0\).  
  <a href="structsymmp_1_1HalfIdempotentVariables.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Half__Idempotent_8hpp_source.html">Half_Idempotent.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for HalfIdempotentVariables&lt; T, _deg, N &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="structsymmp_1_1HalfIdempotentVariables__inherit__graph.png" border="0" usemap="#HalfIdempotentVariables_3_01T_00_01__deg_00_01N_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="HalfIdempotentVariables_3_01T_00_01__deg_00_01N_01_4_inherit__map" id="HalfIdempotentVariables_3_01T_00_01__deg_00_01N_01_4_inherit__map">
-<area shape="rect" title="The variables &#160;where &#160;and , ." alt="" coords="5,200,189,241"/>
-<area shape="rect" href="structsymmp_1_1ArrayVectorWrapper.html" title=" " alt="" coords="21,109,174,151"/>
-<area shape="rect" href="structsymmp_1_1ArrayVectorWrapper.html" title="Wrapping array and vector in the same interface." alt="" coords="21,5,174,47"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="structsymmp_1_1HalfIdempotentVariables__inherit__graph.svg" width="199" height="247"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for HalfIdempotentVariables&lt; T, _deg, N &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="structsymmp_1_1HalfIdempotentVariables__coll__graph.png" border="0" usemap="#HalfIdempotentVariables_3_01T_00_01__deg_00_01N_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="HalfIdempotentVariables_3_01T_00_01__deg_00_01N_01_4_coll__map" id="HalfIdempotentVariables_3_01T_00_01__deg_00_01N_01_4_coll__map">
-<area shape="rect" title="The variables &#160;where &#160;and , ." alt="" coords="5,200,189,241"/>
-<area shape="rect" href="structsymmp_1_1ArrayVectorWrapper.html" title=" " alt="" coords="21,109,174,151"/>
-<area shape="rect" href="structsymmp_1_1ArrayVectorWrapper.html" title="Wrapping array and vector in the same interface." alt="" coords="21,5,174,47"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="structsymmp_1_1HalfIdempotentVariables__coll__graph.svg" width="199" height="247"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -156,7 +147,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="textblock"><h3>template&lt;typename T = int64_t, typename _deg = int64_t, size_t N = 0&gt;<br />
 struct symmp::HalfIdempotentVariables&lt; T, _deg, N &gt;</h3>
 
-<p>The variables \(x_1,...,x_n,y_1,...,y_n\) where \(y_i^2=y_i\) and \(|x_i|=1\), \(|y_i|=0\). </p>
+<p>Variables \(x_1,...,x_n,y_1,...,y_n\) with \(y_i^2=y_i\) and \(|x_i|=1\), \(|y_i|=0\). </p>
 <p>Monomial \(x_1^{a_1}\cdots x_n^{a_n}y_1^{a_{n+1}}\cdots y_n^{a_{2n}}\) is stored as vector/array \([a_1,...,a_{2n}]\) </p><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The (integral) value type of the exponent vector. </td></tr>
@@ -199,7 +190,7 @@ struct symmp::HalfIdempotentVariables&lt; T, _deg, N &gt;</h3>
 </div><div class="memdoc">
 
 <p>Computes degree of monomial on on the \(x_i,y_i\) with \(|x_i|=1\) and \(|y_i|=0\). </p>
-<dl class="section return"><dt>Returns</dt><dd>\(\sum_{i=1}^na_i\) for monomial \(x_1^{a_1}\cdots y_n^{a_{2n}}\) (*this= \([a_1,...,a_{2n}]\)) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Degree \(\sum_{i=1}^na_i\) for monomial \(x_1^{a_1}\cdots y_n^{a_{2n}}\) (*this= \([a_1,...,a_{2n}]\)) </dd></dl>
 
 </div>
 </div>
@@ -292,7 +283,7 @@ struct symmp::HalfIdempotentVariables&lt; T, _deg, N &gt;</h3>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>\([a_1+b_1,...,a_n+b_n, \max(a_{n+1},b_{n+1}), ..., \max(a_{2n},b_{2n})]\) where *this= \([a_1,...,a_{2n}]\) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Exponent \([a_1+b_1,...,a_n+b_n, \max(a_{n+1},b_{n+1}), ..., \max(a_{2n},b_{2n})]\) where *this= \([a_1,...,a_{2n}]\) </dd></dl>
 
 </div>
 </div>
@@ -319,7 +310,7 @@ struct symmp::HalfIdempotentVariables&lt; T, _deg, N &gt;</h3>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>\([a_1-b_1,...,a_n-b_n, |a_{n+1}-b_{n+1}|, ..., |a_{2n}-b_{2n}|]\) where *this= \([a_1,...,a_{2n}]\) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Exponent \([a_1-b_1,...,a_n-b_n, |a_{n+1}-b_{n+1}|, ..., |a_{2n}-b_{2n}|]\) where *this= \([a_1,...,a_{2n}]\) </dd></dl>
 
 </div>
 </div>
@@ -328,14 +319,9 @@ struct symmp::HalfIdempotentVariables&lt; T, _deg, N &gt;</h3>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.18-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="namespacesymmp.html">symmp</a></li><li class="navelem"><a class="el" href="structsymmp_1_1HalfIdempotentVariables.html">HalfIdempotentVariables</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
-  </ul>
 </div>
 </body>
 </html>

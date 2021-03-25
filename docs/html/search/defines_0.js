@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['parallelize_172',['PARALLELIZE',['../Demo_8cpp.html#ab6e43e143ef4a0a5833853258c1170b2',1,'Demo.cpp']]]
+  ['symmp_5fuse_5fopen_5fmp_170',['SYMMP_USE_OPEN_MP',['../Demo_8cpp.html#a327203f8354b38848f74970323af177e',1,'Demo.cpp']]]
 ];
