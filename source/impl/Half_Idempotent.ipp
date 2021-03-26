@@ -34,10 +34,8 @@ namespace symmp
 	HalfIdempotentVariables<T, _deg, N> HalfIdempotentVariables<T, _deg, N>::operator+(const HalfIdempotentVariables &other) const
 	{
 		HalfIdempotentVariables v(this->size());
-		#pragma omp simd
 		for (size_t i = 0; i < this->size(); i++)
 			v[i] = (*this)[i] + other[i];
-		#pragma omp simd
 		for (size_t i = this->size() / 2; i < this->size(); i++)
 			v[i] = (v[i] > 0);
 		return v;
