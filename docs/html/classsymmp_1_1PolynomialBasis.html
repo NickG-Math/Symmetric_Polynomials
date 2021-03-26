@@ -32,6 +32,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Symmetric Polynomials
    &#160;<span id="projectnumber">V3.1</span>
@@ -156,15 +157,15 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a4867a7fd4fad1c2ce7a65656ee5a0bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename spec_t, typename orig_poly_t, typename new_poly_t&gt;<br />
+<div class="textblock"><h3>template&lt;class spec_t, class orig_poly_t, class new_poly_t&gt;<br />
 class symmp::PolynomialBasis&lt; spec_t, orig_poly_t, new_poly_t &gt;</h3>
 
 <p>Factory class that provides the general interface of a generating basis for a subring of a polynomial ring. </p>
 <p>Inherit from this class and construct data member <a class="el" href="classsymmp_1_1PolynomialBasis.html#a82a0b79e96aec4dde7f31917dd46fc44">_generators</a> through the child class (and optionally <a class="el" href="classsymmp_1_1PolynomialBasis.html#a4867a7fd4fad1c2ce7a65656ee5a0bd7">generator_names</a> and <a class="el" href="classsymmp_1_1PolynomialBasis.html#afba7b5d8ad929bf149ad3fc0b35d06ec">generator_dimensions</a>). <br  />
  The child class must also have a method <code>find_exponent</code> with singature: </p><div class="fragment"><div class="line"><span class="keyword">typename</span> new_poly_t::exp_t find_exponent(<span class="keyword">const</span> <span class="keyword">typename</span> orig_poly_t::exp_t&amp;); </div>
-</div><!-- fragment --><p> Example implementations are <code><a class="el" href="classsymmp_1_1SymmetricBasis.html" title="Class for symmetric polynomials with no relations, allowing transformation from  variables to  variab...">SymmetricBasis</a></code> and <code><a class="el" href="classsymmp_1_1TwistedChernBasis.html" title="Class for half-idempotent symmetric polynomials, allowing transformation from  variables to  variable...">TwistedChernBasis</a></code>. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+</div><!-- fragment --><p> Example implementations are <code><a class="el" href="classsymmp_1_1SymmetricBasis.html" title="Class for symmetric polynomials with no relations, allowing transformation from  variables to  variab...">SymmetricBasis</a></code> and <code><a class="el" href="classsymmp_1_1TwistedChernBasis.html" title="Class for half-idempotent symmetric polynomials, facilitating transformation from  variables to  vari...">TwistedChernBasis</a></code>. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">spec_t</td><td>Used for compile-time polymorphism (CRTP): set it to be the child class. </td></tr>
+    <tr><td class="paramname">spec_t</td><td>Used for compile-time polymorphism (CRTP): must be the child class. </td></tr>
     <tr><td class="paramname">orig_poly_t</td><td>Type of polynomial on the original variables </td></tr>
     <tr><td class="paramname">new_poly_t</td><td>Type of polynomial on the new variables (the <a class="el" href="classsymmp_1_1PolynomialBasis.html#a82a0b79e96aec4dde7f31917dd46fc44">_generators</a>) </td></tr>
   </table>

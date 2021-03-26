@@ -29,16 +29,16 @@ struct \mbox{\hyperlink{structsymmp_1_1StandardVariables}{Standard\+Variables}}
 class \mbox{\hyperlink{classsymmp_1_1SymmetricBasis}{Symmetric\+Basis}}
 \begin{DoxyCompactList}\small\item\em Class for symmetric polynomials with no relations, allowing transformation from $x_i$ variables to $e_i$ variables and vice-\/versa. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classsymmp_1_1TwistedChernBasis}{Twisted\+Chern\+Basis}}
-\begin{DoxyCompactList}\small\item\em Class for half-\/idempotent symmetric polynomials, allowing transformation from $x_i,y_i$ variables to $\gamma_{s,i}$ variables and vice-\/versa. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Class for half-\/idempotent symmetric polynomials, facilitating transformation from $x_i,y_i$ variables to $\gamma_{s,i}$ variables and vice-\/versa. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structsymmp_1_1TwistedChernVariables}{Twisted\+Chern\+Variables}}
 \begin{DoxyCompactList}\small\item\em The twisted Chern generators as variables $\gamma_{s,j}$. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename \+\_\+scl , typename \+\_\+exp $>$ }\\using \mbox{\hyperlink{namespacesymmp_a2ab4ba4bf25e718d78428e1b04332a2a}{Ordered\+Polynomial}} = \mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial}}$<$ \+\_\+scl, \+\_\+exp, std\+::map, 1 $>$
+{\footnotesize template$<$class \+\_\+scl , class \+\_\+exp $>$ }\\using \mbox{\hyperlink{namespacesymmp_a2ab4ba4bf25e718d78428e1b04332a2a}{Ordered\+Polynomial}} = \mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial}}$<$ \+\_\+scl, \+\_\+exp, std\+::map, 1 $>$
 \begin{DoxyCompactList}\small\item\em A polynomial whose monomials are stored in increasing order. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename \+\_\+scl , typename \+\_\+exp $>$ }\\using \mbox{\hyperlink{namespacesymmp_ad286838abde5fae48d25eda95a49dbed}{Unordered\+Polynomial}} = \mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial}}$<$ \+\_\+scl, \+\_\+exp, std\+::unordered\+\_\+map, 0 $>$
-\begin{DoxyCompactList}\small\item\em A polynomial whose monomials are not stored in any particular order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+{\footnotesize template$<$class \+\_\+scl , class \+\_\+exp , bool ordered = 1$>$ }\\using \mbox{\hyperlink{namespacesymmp_a98be2a062a750720284f9cedf3193973}{Poly}} = std\+::conditional\+\_\+t$<$ ordered, \mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial}}$<$ \+\_\+scl, \+\_\+exp, std\+::map, 1 $>$, \mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial}}$<$ \+\_\+scl, \+\_\+exp, std\+::unordered\+\_\+map, 0 $>$ $>$
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial}} using the default containers {\ttfamily std\+::map} or {\ttfamily std\+::unordered\+\_\+map}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,13 +46,13 @@ struct \mbox{\hyperlink{structsymmp_1_1TwistedChernVariables}{Twisted\+Chern\+Va
 \begin{DoxyCompactList}\small\item\em A generic hashing function that calls other hashing functions. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename R , typename T , typename S $>$ }\\R \mbox{\hyperlink{namespacesymmp_a89e193c5649231a649e17cb90ebf6932}{general\+\_\+compute\+\_\+degree}} (const T \&exp, const S \&dim)
 \begin{DoxyCompactList}\small\item\em Degree computation given exponent and dimensions (grading). \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{namespacesymmp_a8cfd6b8437995490f6d6ad254c07f5a3}{all\+\_\+permutations}} (T n)
+{\footnotesize template$<$class T $>$ }\\std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{namespacesymmp_a8cfd6b8437995490f6d6ad254c07f5a3}{all\+\_\+permutations}} (T n)
 \begin{DoxyCompactList}\small\item\em Returns vector of all permutations on {\ttfamily n} letters. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{namespacesymmp_a17719500ed6cb508460abd6bcd8e1965}{all\+\_\+combinations}} (T n, T m)
+{\footnotesize template$<$class T $>$ }\\std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{namespacesymmp_a17719500ed6cb508460abd6bcd8e1965}{all\+\_\+combinations}} (T n, T m)
 \begin{DoxyCompactList}\small\item\em Returns vector of all combinations on {\ttfamily n} letters choosing {\ttfamily m} many. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename xy\+\_\+poly\+\_\+t , typename chern\+\_\+poly\+\_\+t $>$ }\\void \mbox{\hyperlink{namespacesymmp_ad180d30365dcabd734acd1490037eab1}{print\+\_\+half\+\_\+idempotent\+\_\+relations}} (int n, bool print=0, bool verify=0, bool verify\+\_\+verbose=0)
+{\footnotesize template$<$class xy\+\_\+poly\+\_\+t , class chern\+\_\+poly\+\_\+t $>$ }\\void \mbox{\hyperlink{namespacesymmp_aa479f22963630dec8f21e1420de70565}{print\+\_\+half\+\_\+idempotent\+\_\+relations}} (int n, bool print=1, bool verify=1, bool verify\+\_\+verbose=1)
 \begin{DoxyCompactList}\small\item\em Prints all relations in the description of the fixed points of $R=\mathbf Z[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$ in terms of $\alpha_i, c_i, \gamma_{s,j}$ (printed as {\ttfamily a\+\_\+i, c\+\_\+i, c\+\_\+\{s,j\}} in the console) \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename scl\+\_\+t , typename exp\+\_\+t , template$<$ typename... $>$ typename container\+\_\+t, bool container\+\_\+is\+\_\+ordered, typename ... Args$>$ }\\std\+::ostream \& \mbox{\hyperlink{namespacesymmp_a8e6a94a09932295f6d8c345a80998934}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial}}$<$ scl\+\_\+t, exp\+\_\+t, container\+\_\+t, container\+\_\+is\+\_\+ordered, Args... $>$ \&a)
+{\footnotesize template$<$class scl\+\_\+t , class exp\+\_\+t , template$<$ class... $>$ class container\+\_\+t, bool \+\_\+ordered, class ... Args$>$ }\\std\+::ostream \& \mbox{\hyperlink{namespacesymmp_a763c01e07891034c496e5221b8474988}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial}}$<$ scl\+\_\+t, exp\+\_\+t, container\+\_\+t, \+\_\+ordered, Args... $>$ \&a)
 \begin{DoxyCompactList}\small\item\em Prints polynomial to output stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -77,21 +77,23 @@ A polynomial whose monomials are stored in increasing order.
 {\em \+\_\+exp} & The variable/exponent type of the \mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial}} eg {\ttfamily \mbox{\hyperlink{structsymmp_1_1StandardVariables}{Standard\+Variables}}} or {\ttfamily \mbox{\hyperlink{structsymmp_1_1HalfIdempotentVariables}{Half\+Idempotent\+Variables}}} \\
 \hline
 \end{DoxyTemplParams}
-\mbox{\Hypertarget{namespacesymmp_ad286838abde5fae48d25eda95a49dbed}\label{namespacesymmp_ad286838abde5fae48d25eda95a49dbed}} 
-\index{symmp@{symmp}!UnorderedPolynomial@{UnorderedPolynomial}}
-\index{UnorderedPolynomial@{UnorderedPolynomial}!symmp@{symmp}}
-\doxyparagraph{\texorpdfstring{UnorderedPolynomial}{UnorderedPolynomial}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespacesymmp_ad286838abde5fae48d25eda95a49dbed}{Unordered\+Polynomial}} =  \mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial}}$<$\+\_\+scl, \+\_\+exp, std\+::unordered\+\_\+map, 0$>$}
+\mbox{\Hypertarget{namespacesymmp_a98be2a062a750720284f9cedf3193973}\label{namespacesymmp_a98be2a062a750720284f9cedf3193973}} 
+\index{symmp@{symmp}!Poly@{Poly}}
+\index{Poly@{Poly}!symmp@{symmp}}
+\doxyparagraph{\texorpdfstring{Poly}{Poly}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacesymmp_a98be2a062a750720284f9cedf3193973}{Poly}} =  std\+::conditional\+\_\+t$<$ordered, \mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial}}$<$\+\_\+scl, \+\_\+exp, std\+::map, 1$>$, \mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial}}$<$\+\_\+scl, \+\_\+exp, std\+::unordered\+\_\+map, 0$>$ $>$}
 
 
 
-A polynomial whose monomials are not stored in any particular order. 
+\mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial}} using the default containers {\ttfamily std\+::map} or {\ttfamily std\+::unordered\+\_\+map}. 
 
 
 \begin{DoxyTemplParams}{Template Parameters}
 {\em \+\_\+scl} & The scalar/coefficient type of the polynomial \\
 \hline
 {\em \+\_\+exp} & The variable/exponent type of the \mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial}} eg {\ttfamily \mbox{\hyperlink{structsymmp_1_1StandardVariables}{Standard\+Variables}}} or {\ttfamily \mbox{\hyperlink{structsymmp_1_1HalfIdempotentVariables}{Half\+Idempotent\+Variables}}} \\
+\hline
+{\em ordered} & If {\ttfamily ordered==1} then {\ttfamily std\+::map} is used as the container for the polynomial; otherwise {\ttfamily std\+::unordered\+\_\+map} is used \\
 \hline
 \end{DoxyTemplParams}
 
@@ -199,11 +201,11 @@ A generic hashing function that calls other hashing functions.
 \begin{DoxyReturn}{Returns}
 The hash of the element 
 \end{DoxyReturn}
-\mbox{\Hypertarget{namespacesymmp_a8e6a94a09932295f6d8c345a80998934}\label{namespacesymmp_a8e6a94a09932295f6d8c345a80998934}} 
+\mbox{\Hypertarget{namespacesymmp_a763c01e07891034c496e5221b8474988}\label{namespacesymmp_a763c01e07891034c496e5221b8474988}} 
 \index{symmp@{symmp}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!symmp@{symmp}}
 \doxyparagraph{\texorpdfstring{operator$<$$<$()}{operator<<()}}
-{\footnotesize\ttfamily std\+::ostream\& symmp\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial}}$<$ scl\+\_\+t, exp\+\_\+t, container\+\_\+t, container\+\_\+is\+\_\+ordered, Args... $>$ \&}]{a }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::ostream\& symmp\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial}}$<$ scl\+\_\+t, exp\+\_\+t, container\+\_\+t, \+\_\+ordered, Args... $>$ \&}]{a }\end{DoxyParamCaption})}
 
 
 
@@ -217,7 +219,7 @@ Prints polynomial to output stream.
 \hline
 {\em container\+\_\+t} & The data storage type of the polynomial. \\
 \hline
-{\em container\+\_\+is\+\_\+ordered} & Whether the container is ordered or not \\
+{\em \+\_\+ordered} & Whether the container is \+\_\+ordered or not \\
 \hline
 {\em Args} & Any extra optional arguments to pass to {\ttfamily \+\_\+container} apart from key,value, comparator/hash \\
 \hline
@@ -232,11 +234,11 @@ Prints polynomial to output stream.
 \begin{DoxyReturn}{Returns}
 The output stream where the polynomial has been printed 
 \end{DoxyReturn}
-\mbox{\Hypertarget{namespacesymmp_ad180d30365dcabd734acd1490037eab1}\label{namespacesymmp_ad180d30365dcabd734acd1490037eab1}} 
+\mbox{\Hypertarget{namespacesymmp_aa479f22963630dec8f21e1420de70565}\label{namespacesymmp_aa479f22963630dec8f21e1420de70565}} 
 \index{symmp@{symmp}!print\_half\_idempotent\_relations@{print\_half\_idempotent\_relations}}
 \index{print\_half\_idempotent\_relations@{print\_half\_idempotent\_relations}!symmp@{symmp}}
 \doxyparagraph{\texorpdfstring{print\_half\_idempotent\_relations()}{print\_half\_idempotent\_relations()}}
-{\footnotesize\ttfamily void symmp\+::print\+\_\+half\+\_\+idempotent\+\_\+relations (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{bool}]{print = {\ttfamily 0},  }\item[{bool}]{verify = {\ttfamily 0},  }\item[{bool}]{verify\+\_\+verbose = {\ttfamily 0} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void symmp\+::print\+\_\+half\+\_\+idempotent\+\_\+relations (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{bool}]{print = {\ttfamily 1},  }\item[{bool}]{verify = {\ttfamily 1},  }\item[{bool}]{verify\+\_\+verbose = {\ttfamily 1} }\end{DoxyParamCaption})}
 
 
 

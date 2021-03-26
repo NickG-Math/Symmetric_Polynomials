@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Symmetric Polynomials: Polynomial&lt; _scl, _exp, _container, container_is_ordered, _Args &gt;::constIterator Class Reference</title>
+<title>Symmetric Polynomials: Polynomial&lt; _scl, _exp, _container, _ordered, _Args &gt;::constIterator Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,6 +32,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Symmetric Polynomials
    &#160;<span id="projectnumber">V3.1</span>
@@ -96,7 +97,7 @@ $(document).ready(function(){initNavTree('classsymmp_1_1Polynomial_1_1constItera
 <a href="#friends">Friends</a> &#124;
 <a href="classsymmp_1_1Polynomial_1_1constIterator-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Polynomial&lt; _scl, _exp, _container, container_is_ordered, _Args &gt;::constIterator Class Reference</div>  </div>
+<div class="title">Polynomial&lt; _scl, _exp, _container, _ordered, _Args &gt;::constIterator Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -130,11 +131,11 @@ Friends</h2></td></tr>
 <tr class="separator:af3841474533d8bd1db7c131548d0bc27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename _scl, typename _exp, template&lt; typename... &gt; typename _container, bool container_is_ordered, typename ... _Args&gt;<br />
-class symmp::Polynomial&lt; _scl, _exp, _container, container_is_ordered, _Args &gt;::constIterator</h3>
+<div class="textblock"><h3>template&lt;class _scl, class _exp, template&lt; class... &gt; class _container, bool _ordered, class ... _Args&gt;<br />
+class symmp::Polynomial&lt; _scl, _exp, _container, _ordered, _Args &gt;::constIterator</h3>
 
 <p>Constant iterator through the monomials of the polynomial. </p>
-<dl class="section note"><dt>Note</dt><dd>The monomials are traversed in increasing order only when <code>_container</code> is ordered </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The monomials are traversed in increasing order only when <code>_container</code> is _ordered </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aae63ec39b53317f98b57b1af2e2cb181"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aae63ec39b53317f98b57b1af2e2cb181">&#9670;&nbsp;</a></span>coeff()</h2>

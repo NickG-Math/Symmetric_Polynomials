@@ -18,7 +18,7 @@ namespace symmp
 	///	@tparam		T 		The (integral) value type of the exponent vector.
 	///	@tparam		_deg	The (integral) value type used in the degree function.
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	template <typename T = int64_t, typename _deg = int64_t>
+	template <class T = int64_t, class _deg = int64_t>
 	struct StandardVariables : public std::vector<T>
 	{
 		using std::vector<T>::vector;
@@ -49,7 +49,7 @@ namespace symmp
 	///	@tparam 	T 		The (integral) value type of the exponent vector.
 	///	@tparam 	_deg 	The (integral) value type used in the degree function.
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	template <typename T = int64_t, typename _deg = int64_t>
+	template <class T = int64_t, class _deg = int64_t>
 	struct ElementarySymmetricVariables : public StandardVariables<T, _deg>
 	{
 		using StandardVariables<T, _deg>::StandardVariables;
@@ -72,11 +72,11 @@ namespace symmp
 	///							The child class must also have a method \c find_exponent with singature:
 	///							\code typename new_poly_t::exp_t find_exponent(const typename orig_poly_t::exp_t&); \endcode
 	///							Example implementations are \c SymmetricBasis and \c TwistedChernBasis.
-	///	@tparam spec_t  		Used for compile-time polymorphism (CRTP): set it to be the child class.
+	///	@tparam spec_t  		Used for compile-time polymorphism (CRTP): must be the child class.
 	///	@tparam orig_poly_t 	Type of polynomial on the original variables
 	///	@tparam new_poly_t	 	Type of polynomial on the new variables (the \ref _generators)
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	template <typename spec_t, typename orig_poly_t, typename new_poly_t>
+	template <class spec_t, class orig_poly_t, class new_poly_t>
 	class PolynomialBasis
 	{
 	public:
@@ -120,10 +120,12 @@ namespace symmp
 		orig_poly_t compute_product(const typename new_poly_t::exp_t &exponent) const;
 	};
 
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	///	@brief				Class for symmetric polynomials with no relations, allowing transformation from \f$x_i\f$ variables to \f$e_i\f$ variables and vice-versa.
 	///	@tparam x_poly_t 	Type of Polynomial on the Standard_Variables \f$x_i\f$
 	///	@tparam e_poly_t 	The of Polynomial on the ElementarySymmetricVariables \f$e_i\f$
-	template <typename x_poly_t, typename e_poly_t>
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	template <class x_poly_t, class e_poly_t>
 	class SymmetricBasis : public PolynomialBasis<SymmetricBasis<x_poly_t, e_poly_t>, x_poly_t, e_poly_t>
 	{
 	public:

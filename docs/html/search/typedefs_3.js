@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['scl_5ft_160',['scl_t',['../classsymmp_1_1Polynomial.html#a8e22f5fc1b62271e6ef144911adecde8',1,'symmp::Polynomial']]]
+  ['poly_160',['Poly',['../namespacesymmp.html#a98be2a062a750720284f9cedf3193973',1,'symmp']]]
 ];

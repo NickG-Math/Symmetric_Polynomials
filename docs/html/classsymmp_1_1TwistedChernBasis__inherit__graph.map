@@ -1,5 +1,5 @@
 <map id="TwistedChernBasis&lt; _xy_poly_t, _chern_poly_t &gt;" name="TwistedChernBasis&lt; _xy_poly_t, _chern_poly_t &gt;">
-<area shape="rect" id="node1" title="Class for half&#45;idempotent symmetric polynomials, allowing transformation from &#160;variables to &#160;variable..." alt="" coords="620,36,775,92"/>
+<area shape="rect" id="node1" title="Class for half&#45;idempotent symmetric polynomials, facilitating transformation from &#160;variables to &#160;vari..." alt="" coords="620,36,775,92"/>
 <area shape="rect" id="node2" href="$classsymmp_1_1PolynomialBasis.html" title=" " alt="" coords="373,29,571,99"/>
 <area shape="rect" id="node3" href="$classsymmp_1_1PolynomialBasis.html" title="Factory class that provides the general interface of a generating basis for a subring of a polynomial..." alt="" coords="5,36,180,92"/>
 </map>

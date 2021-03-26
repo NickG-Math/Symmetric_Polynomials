@@ -1,17 +1,22 @@
 #pragma once
 #include <type_traits>
 #include <utility>
+
+
 #if defined SYMMP_USE_OPEN_MP & defined _OPENMP
-#include "omp.h"
-///	@brief	Macro that parallelizes loop via openMP if SYMMP_USE_OPEN_MP is defined, and nothing otherwise
-#define SYMMP_RUN_LOOP_IN_PARALLEL _Pragma("omp parallel for num_threads(omp_get_max_threads()) schedule(dynamic)")
+///	@brief		Macro that parallelizes certain loops via openMP if SYMMP_USE_OPEN_MP is defined, and does nothing otherwise
+///	@details	Only used for the loops in \c print_half_idempotent_relations and \c pontryagin_via_chern \n
+///				To configure the number of threads please set the environment variable OMP_NUM_THREADS on the console before running any executable
+#define SYMMP_RUN_LOOP_IN_PARALLEL _Pragma("omp parallel for schedule(dynamic)")
 #if defined _MSC_VER
 #pragma message("symmp: openMP enabled!")
 #else
 #pragma message "symmp: openMP enabled!"
 #endif
 #else
-///	@brief	Macro that parallelizes loop via openMP if SYMMP_USE_OPEN_MP is defined, and nothing otherwise
+///	@brief		Macro that parallelizes certain loops via openMP if SYMMP_USE_OPEN_MP is defined, and does nothing otherwise
+///	@details	Only used for the loops in \c print_half_idempotent_relations and \c pontryagin_via_chern \n
+///				To configure the number of threads please set the environment variable OMP_NUM_THREADS on the console before running any executable
 #define SYMMP_RUN_LOOP_IN_PARALLEL
 #if defined _MSC_VER
 #pragma message("symmp: openMP not enabled! To enable please define SYMMP_USE_OPEN_MP before including any header of this library and use the relevant compiler option eg -fopenmp")
@@ -40,7 +45,7 @@ namespace symmp
 			}
 		};
 
-		template <typename _scl, typename _exp, template<typename...> typename _container, bool container_is_ordered, typename ... _Args>
+		template <typename _scl, typename _exp, template<typename...> typename _container, bool _ordered, typename ... _Args>
 		struct polynomial_data_type;
 
 		template <typename _scl, typename _exp, template<typename...> typename _container, typename ... _Args>

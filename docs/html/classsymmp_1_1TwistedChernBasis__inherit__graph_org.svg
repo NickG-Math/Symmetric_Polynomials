@@ -12,7 +12,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title="Class for half&#45;idempotent symmetric polynomials, allowing transformation from &#160;variables to &#160;variable...">
+<g id="a_node1"><a xlink:title="Class for half&#45;idempotent symmetric polynomials, facilitating transformation from &#160;variables to &#160;vari...">
 <polygon fill="#bfbfbf" stroke="black" points="461,-6 461,-47 577,-47 577,-6 461,-6"/>
 <text text-anchor="start" x="469" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">TwistedChernBasis&lt;</text>
 <text text-anchor="start" x="469" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00"> _xy_poly_t, _chern</text>

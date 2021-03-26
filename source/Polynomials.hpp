@@ -6,36 +6,37 @@
 #include <string>
 #include <iostream>
 
-///@file
-///@brief Contains the class of polynomials in multiple variables.
+///	@file
+///	@brief Contains the class of polynomials in multiple variables.
 
 namespace symmp
 {
 
-	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	/// @brief							Class for polynomials in multiple variables with relations
-	/// @tparam _scl					The scalar/coefficient type of the polynomial eg \c float or \c int64_t
-	/// @tparam _exp					The variable/exponent type of the polynomial eg \c StandardVariables or \c HalfIdempotentVariables
-	/// @tparam _container				The data storage type of the polynomial. 
-	///									This should be equivalent to \c std::map if \c container_is_ordered==1 and \c std::unordered_map otherwise
-	/// @tparam container_is_ordered	This should be 1 if \c _container is equivalent to \c std::map and 0 if it's equivalent to \c std::unordered_map
-	/// @tparam _Args					Any extra optional arguments to pass to \c _container apart from key,value, comparator/hash. Eg an allocator
-	/// @par							Requirements from \c exp_t:
-	///									The exponent must have functionality similar to \c StandardVariables or \c HalfIdempotentVariables
-	///									Specifically:
-	///	- 								It must have a typedef \c deg_t that represents the degree type (eg ``` int, uint64_t ```)
-	///	- 								It must have basic vector functionality (constructor that takes ```int n``` and produces exponent of 0's with that number of variables \c n, operator []...)
-	///	- 								It should have an operator + to be used in the product of monomials (if products need to be used)
-	///									and an operator - to be used in the division of monomials (if divisions need to be used).
-	///	- 								If \c container_is_ordered==1 it needs to have a ``` bool operator<()  const ```
-	///									and otherwise it needs to have a hash function ``` size_t operator()() const ```
-	///	- 								Optionally, it may have a ``` deg_t degree() const``` method that computes the degree of the monomial exponent
-	///	-								Optionally, it may a ```std::string static name(int,int)``` method that prints the names of the variables 
-	///									(first parameter is the index of the variable, second is the total number of variables).
-	///	- 								If \c exp_t does not have a \c degree method then the user needs to provide the dimensions of the variables through a \c deg_t* in the constructor
-	///	- 								If \c exp_t does not have a \c name method then the user needs to provide the names of the variables through a \c std::string* in the constructor
-	///	@todo							Use concepts (C++20) to express these requirements
-	template <typename _scl, typename _exp, template<typename...> typename _container, bool container_is_ordered, typename ... _Args>
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/// @brief				Class for polynomials in multiple variables with relations
+	/// @tparam _scl		The scalar/coefficient type of the polynomial eg \c float or \c int64_t
+	/// @tparam _exp		The variable/exponent type of the polynomial eg \c StandardVariables or \c HalfIdempotentVariables
+	/// @tparam _container	The data storage type of the polynomial. 
+	///						This should be equivalent to \c std::map if \c _ordered==1 and \c std::unordered_map otherwise
+	/// @tparam _ordered	This should be 1 if \c _container is equivalent to \c std::map and 0 if it's equivalent to \c std::unordered_map
+	/// @tparam _Args		Any extra optional arguments to pass to \c _container apart from key,value, comparator/hash. Eg an allocator
+	/// @par				Requirements from \c exp_t:
+	///						The exponent must have functionality similar to \c StandardVariables or \c HalfIdempotentVariables
+	///						Specifically:
+	///	- 					It must have a typedef \c deg_t that represents the degree type (eg ``` int, uint64_t ```)
+	///	- 					It must have basic vector functionality (constructor that takes ```int n``` and produces exponent of 0's with that number of variables \c n, operator []...)
+	///	- 					It should have an operator + to be used in the product of monomials (if products need to be used)
+	///						and an operator - to be used in the division of monomials (if divisions need to be used).
+	///	- 					If \c _ordered==1 it needs to have a ``` bool operator<()  const ```
+	///						and otherwise it needs to have a hash function ``` size_t operator()() const ```
+	///	- 					Optionally, it may have a ``` deg_t degree() const``` method that computes the degree of the monomial exponent
+	///	-					Optionally, it may a ```std::string static name(int,int)``` method that prints the names of the variables 
+	///						(first parameter is the index of the variable, second is the total number of variables).
+	///	- 					If \c exp_t does not have a \c degree method then the user needs to provide the dimensions of the variables through a \c deg_t* in the constructor
+	///	- 					If \c exp_t does not have a \c name method then the user needs to provide the names of the variables through a \c std::string* in the constructor
+	///	@todo				Use concepts (C++20) to express these requirements
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	template <class _scl, class _exp, template<class...> class _container, bool _ordered, class ... _Args>
 	class Polynomial
 	{
 	public:
@@ -89,7 +90,7 @@ namespace symmp
 		void insert(const exp_t& exponent, scl_t coeff);
 
 		///	@brief	Constant iterator through the monomials of the polynomial
-		///	@note	The monomials are traversed in increasing order only when \c _container is ordered
+		///	@note	The monomials are traversed in increasing order only when \c _container is _ordered
 		class constIterator
 		{
 		public:
@@ -114,7 +115,7 @@ namespace symmp
 			/// @return			1 if \c *this!=other
 			bool operator!=(constIterator other) const;
 		private:
-			typedef typename implementation_details::polynomial_data_type<_scl, _exp, _container, container_is_ordered, _Args...>::const_iterator it_t;
+			typedef typename implementation_details::polynomial_data_type<_scl, _exp, _container, _ordered, _Args...>::const_iterator it_t;
 			it_t it;
 			constIterator(it_t);
 			friend class Polynomial; ///<Befriend outer class
@@ -131,7 +132,7 @@ namespace symmp
 
 		/// @brief	\c constIterator to the highest term monomial
 		/// @return \c constIterator pointing to the highest term monomial
-		/// @note	If the container is ordered then this just returns the last term (\f$O(1)\f$). Otherwise it finds the highest degree by linear search through the entire polynomial (\f$O(n)\f$)
+		/// @note	If the container is _ordered then this just returns the last term (\f$O(1)\f$). Otherwise it finds the highest degree by linear search through the entire polynomial (\f$O(n)\f$)
 		auto highest_term() const->constIterator;
 
 		///	@brief 			Addition assignment
@@ -180,7 +181,7 @@ namespace symmp
 		/// @warning		Does nothing if \p p<0
 		///	@attention		Raises \c static_assert if \c T is not an integer type
 		///	@todo 			Improve implementation (current is multiplication p-many times; maybe square p/2 times instead?)
-		template <typename T = int>
+		template <class T = int>
 		auto operator^(T p) const->Polynomial;
 
 		/// @brief			Checks if two polynomials are equal
@@ -194,44 +195,46 @@ namespace symmp
 		bool operator!=(const Polynomial& other) const;
 
 	private:
-		typedef typename implementation_details::polynomial_data_type<_scl, _exp, _container, container_is_ordered, _Args...> data_t;
+		typedef typename implementation_details::polynomial_data_type<_scl, _exp, _container, _ordered, _Args...> data_t;
 		data_t data;
 		const deg_t* _dimensions;			//if exp_t does not have the appropriate method
 		const std::string* _variable_names; //if exp_t does not have the appropriate method
 		auto compute_degree(const exp_t&)->deg_t; //Finds degree of given exponent
-		template <typename key_t>
+		template <class key_t>
 		void insert_add_erase(const key_t&, scl_t);
-		template <typename fun>
+		template <class fun>
 		void print(scl_t, const exp_t&, std::ostream&, const fun&) const; //Print monomial using given variable names
-		template <typename fun>
+		template <class fun>
 		void print(std::ostream& os, const fun&) const; //Print polynomial using given variable names
 
-		template<typename t1, typename t2, template<typename...> typename t3, bool t4, typename ... t5>
-		friend std::ostream& operator<<(std::ostream& os, const Polynomial<t1,t2,t3,t4,t5...>& a); ///<Befriending the print to ostream function
+		template<class t1, class t2, template<class...> class t3, bool t4, class ... t5>
+		friend std::ostream& operator<< (std::ostream& os, const Polynomial<t1, t2, t3, t4, t5...>& a); ///<Befriending the print to ostream function
 	};
 
-	/// @brief							Prints polynomial to output stream
-	/// @tparam scl_t					The scalar/coefficient type of the polynomial
-	/// @tparam exp_t					The variable/exponent type of the polynomial
-	/// @tparam container_t				The data storage type of the polynomial. 
-	/// @tparam container_is_ordered	Whether the container is ordered or not
-	/// @tparam Args					Any extra optional arguments to pass to \c _container apart from key,value, comparator/hash
-	/// @param	os						The output stream
-	/// @param	a						The polynomial to be printed
-	/// @return							The output stream where the polynomial has been printed
-	template <typename scl_t, typename exp_t, template<typename...> typename container_t, bool container_is_ordered, typename ... Args>
-	std::ostream& operator<<(std::ostream& os, const Polynomial<scl_t, exp_t, container_t, container_is_ordered, Args...>& a);
+	/// @brief					Prints polynomial to output stream
+	/// @tparam scl_t			The scalar/coefficient type of the polynomial
+	/// @tparam exp_t			The variable/exponent type of the polynomial
+	/// @tparam container_t		The data storage type of the polynomial. 
+	/// @tparam _ordered		Whether the container is _ordered or not
+	/// @tparam Args			Any extra optional arguments to pass to \c _container apart from key,value, comparator/hash
+	/// @param	os				The output stream
+	/// @param	a				The polynomial to be printed
+	/// @return					The output stream where the polynomial has been printed
+	template <class scl_t, class exp_t, template<class...> class container_t, bool _ordered, class ... Args>
+	std::ostream& operator<<(std::ostream& os, const Polynomial<scl_t, exp_t, container_t, _ordered, Args...>& a);
 
 	/// @brief			A polynomial whose monomials are stored in increasing order
 	/// @tparam _scl	The scalar/coefficient type of the polynomial
 	/// @tparam _exp	The variable/exponent type of the Polynomial eg \c StandardVariables or \c HalfIdempotentVariables
-	template <typename _scl, typename _exp>
+	template <class _scl, class _exp>
 	using OrderedPolynomial = Polynomial<_scl, _exp, std::map, 1>;
 
-	/// @brief			A polynomial whose monomials are not stored in any particular order
+	/// @brief			Polynomial using the default containers \c std::map or \c std::unordered_map
 	/// @tparam _scl	The scalar/coefficient type of the polynomial
 	/// @tparam _exp	The variable/exponent type of the Polynomial eg \c StandardVariables or \c HalfIdempotentVariables
-	template <typename _scl, typename _exp>
-	using UnorderedPolynomial = Polynomial<_scl, _exp, std::unordered_map, 0>;
+	/// @tparam ordered	If ```ordered==1``` then \c std::map is used as the container for the polynomial; otherwise \c std::unordered_map is used
+	template <class _scl, class _exp, bool ordered=1>
+	using Poly = std::conditional_t<ordered, Polynomial<_scl, _exp, std::map, 1>, Polynomial<_scl, _exp, std::unordered_map, 0>>;
+
 }
 #include "impl/Polynomials.ipp"

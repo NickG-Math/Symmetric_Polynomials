@@ -1,8 +1,8 @@
 #pragma once
 #include "../Half_Idempotent.hpp"
 
-///@file
-///@brief Implementation of Half_Idempotent.hpp
+///	@file
+///	@brief Implementation of Half_Idempotent.hpp
 
 namespace symmp
 {
@@ -34,8 +34,10 @@ namespace symmp
 	HalfIdempotentVariables<T, _deg, N> HalfIdempotentVariables<T, _deg, N>::operator+(const HalfIdempotentVariables &other) const
 	{
 		HalfIdempotentVariables v(this->size());
+		#pragma omp simd
 		for (size_t i = 0; i < this->size(); i++)
 			v[i] = (*this)[i] + other[i];
+		#pragma omp simd
 		for (size_t i = this->size() / 2; i < this->size(); i++)
 			v[i] = (v[i] > 0);
 		return v;
@@ -263,10 +265,10 @@ SYMMP_RUN_LOOP_IN_PARALLEL
 				}
 				else
 				{
-					ss << "Verified!";
+					ss << "Relation verified! \n";
 					if (verify_verbose)
 						ss << "In x, y variables both LHS and RHS are : " << p;
-					ss << "\n";
+					ss << "\n\n";
 				}
 			}
 			std::cout << ss.str();

@@ -1,44 +1,46 @@
 \hypertarget{use_demo}{}\doxysubsection{Quick Demonstration}\label{use_demo}
-For a quick demonstration you may use the binaries found \href{https://github.com/NickG-Math/Symmetric_Polynomials/releases}{\texttt{ here}}. These are compiled from \mbox{\hyperlink{Demo_8cpp}{Demo.\+cpp}} using M\+S\+VC (Windows) and G\+CC (Linux). You can also compile these binaries yourself. For example, on Linux use\+: \begin{DoxyVerb}g++ source/Demo.cpp -std=c++17 -O3 -fopenmp -march=native -o Lin64.out  
+For a quick demonstration you may use the binaries found \href{https://github.com/NickG-Math/Symmetric_Polynomials/releases}{\texttt{ here}}. These are compiled from \mbox{\hyperlink{Demo_8cpp}{Demo.\+cpp}} using M\+S\+VC (Windows) and G\+CC (Linux). You can also compile these binaries yourself\+: For example, on Linux and from within the {\ttfamily source} folder use\+: \begin{DoxyVerb}g++ Demo.cpp -std=c++17 -O3 -fopenmp -march=native -o Lin64.out 
 \end{DoxyVerb}
 
 
-Only the {\ttfamily -\/std=c++17} flag is required.\hypertarget{use_exa}{}\doxysubsection{Code examples}\label{use_exa}
+Only the {\ttfamily -\/std=c++17} flag is required; the other flags are for optimization.\hypertarget{use_exa}{}\doxysubsection{Code examples}\label{use_exa}
 \hypertarget{use_namesp}{}\doxysubsubsection{Namespaces}\label{use_namesp}
-Everything in this library is under the namespace \mbox{\hyperlink{namespacesymmp}{symmp}} (short for Symmetric Polynomials). To keep names short, the code examples will assume we are using this namespace. So start with\+: \begin{DoxyVerb}using symmp;
+Everything in this library is under the namespace \mbox{\hyperlink{namespacesymmp}{symmp}} (short for Symmetric Polynomials). The code examples that follow will assume we are using this namespace.~\newline
+So start with\+: \begin{DoxyVerb}using symmp;
 \end{DoxyVerb}
 \hypertarget{use_mono}{}\doxysubsubsection{Polynomials}\label{use_mono}
-A polynomial $p$ in the graded ring $\mathbf Z[x_1,...,x_n]$, $|x_i|=1$, can be declared as\+: \begin{DoxyVerb}OrderedPolynomial<int, StandardVariables<>> p;
+A polynomial $p$ in the graded ring $\mathbf Z[x_1,...,x_n]$, $|x_i|=1$, can be declared as\+: \begin{DoxyVerb}Poly<int, StandardVariables<>> p;
 \end{DoxyVerb}
 
 
 Here\+:
 \begin{DoxyItemize}
-\item \mbox{\hyperlink{namespacesymmp_a2ab4ba4bf25e718d78428e1b04332a2a}{symmp\+::\+Ordered\+Polynomial}} means that the monomials of the polynomial are kept in increasing order. See below for alternatives.
-\item {\ttfamily int} is the type of the scalar coefficients (i.\+e. elements of the base ring; in our case $\mathbf Z$), so it can be replaced by {\ttfamily double} etc.
-\item \mbox{\hyperlink{structsymmp_1_1StandardVariables}{symmp\+::\+Standard\+Variables}} specify we have variables of degree $1$, names $x_i$ and no relations. See the next few subsections for alternatives.
+\item {\ttfamily int} is the type of the scalar coefficients (i.\+e. elements of the base ring which in this case is $\mathbf Z$), so it can be replaced by {\ttfamily double} and even user-\/defined scalar types.
+\item \mbox{\hyperlink{structsymmp_1_1StandardVariables}{symmp\+::\+Standard\+Variables}} specifies variables in degree $1$, with names $x_i$ and no relations. We shall explain alternative variable configurations in the next few subsections.
 \end{DoxyItemize}
 
-To insert a monomial $cx_1^{a_1}\cdots x_n^{a_n}$ in $p$ we provide the exponent vector $[a_1,...,a_n]$ and the coefficient $c$. Eg\+: \begin{DoxyVerb}p.insert({0,1,4},7);
+To insert a monomial $cx_1^{a_1}\cdots x_n^{a_n}$ in $p$ simply provide the exponent vector $[a_1,...,a_n]$ and the coefficient $c$. ~\newline
+For example, \begin{DoxyVerb}p.insert({0,1,4},7);
 \end{DoxyVerb}
 
 
-inserts the monomial $7x_2x_3^4$ in $p$. If we further do\+: \begin{DoxyVerb}p.insert({1,1,2},-8);
+inserts the monomial $7x_2x_3^4$ in $p$. ~\newline
+If we further write\+: \begin{DoxyVerb}p.insert({1,1,2},-8);
 \end{DoxyVerb}
 
 
-then $p$ becomes $-8x_1x_2x_3^2+7x_2x_3^4$. We can verify that by printing it to the console\+: \begin{DoxyVerb}std::cout << p << "\n";
+then $p$ becomes $-8x_1x_2x_3^2+7x_2x_3^4$.~\newline
+We can verify that by printing it to the console\+: \begin{DoxyVerb}std::cout << p << "\n";
 \end{DoxyVerb}
 
 
-When inserting keep in mind that\+:
+When inserting monomials in a polynomial, it is the user\textquotesingle{}s responsibility to ensure that\+:
 \begin{DoxyItemize}
-\item every exponent vector must have the same length (number of variables)
-\item the coefficients provided must never be $0$
-\item attempting to insert a monomial with an already existing exponent vector does nothing
+\item all exponent vectors have the same length (number of variables) and are distinct
+\item the scalar coefficients are never $0$
 \end{DoxyItemize}
 
-Polynomials can be added, subtracted and multiplied by binary operators {\ttfamily +,-\/,$\ast$} eg\+: \begin{DoxyVerb}std::cout << (p+(p^2))<< "\n";
+Polynomials of the same type and number of variables can be added, subtracted and multiplied via binary operators {\ttfamily +,-\/,$\ast$} and raised to a nonnegative integer power by {\ttfamily $^\wedge$} For example\+: \begin{DoxyVerb}std::cout << (p+(p^2))<< "\n";
 \end{DoxyVerb}
 
 
@@ -46,24 +48,21 @@ will print
 
 \$\$-\/8x\+\_\+1x\+\_\+2x\+\_\+3$^\wedge$2 + 7x\+\_\+2x\+\_\+3$^\wedge$4 + 64x\+\_\+1$^\wedge$2x\+\_\+2$^\wedge$2x\+\_\+3$^\wedge$4 -\/ 112x\+\_\+1x\+\_\+2$^\wedge$2x\+\_\+3$^\wedge$6 + 49x\+\_\+2$^\wedge$2x\+\_\+3$^\wedge$8\$\$
 
-which is exactly $p+p^2$.
+which is exactly $p+p^2$.\hypertarget{use_symbasis}{}\doxysubsubsection{Symmetric Basis}\label{use_symbasis}
+We can substitute \mbox{\hyperlink{structsymmp_1_1StandardVariables}{symmp\+::\+Standard\+Variables}} with \mbox{\hyperlink{structsymmp_1_1ElementarySymmetricVariables}{symmp\+::\+Elementary\+Symmetric\+Variables}} specifying variables with names $e_i$, degrees $|e_i|=i$ and no relations.
 
-Instead of \mbox{\hyperlink{namespacesymmp_a2ab4ba4bf25e718d78428e1b04332a2a}{symmp\+::\+Ordered\+Polynomial}}, we can also use \mbox{\hyperlink{namespacesymmp_ad286838abde5fae48d25eda95a49dbed}{symmp\+::\+Unordered\+Polynomial}} which does not store the monomials in increasing order. This has performance benefits (internal data structure is {\ttfamily std\+::unordered\+\_\+map} as opposed to {\ttfamily std\+::map}). Ordered and unordered polynomials have the exact same A\+PI.\hypertarget{use_symbasis}{}\doxysubsubsection{Symmetric Basis}\label{use_symbasis}
-Apart from the \mbox{\hyperlink{structsymmp_1_1StandardVariables}{symmp\+::\+Standard\+Variables}}, we can also use the \mbox{\hyperlink{structsymmp_1_1ElementarySymmetricVariables}{symmp\+::\+Elementary\+Symmetric\+Variables}} which specify variables with names $e_i$, degrees $|e_i|=i$ and no relations.
-
-Example\+: An element $q$ of the ring $\mathbf R[e_1,...,e_n]$ can be defined as\+: \begin{DoxyVerb}OrderedPolynomial<double, ElementarySymmetricVariables<>> q({ 2,3 }, -1.5);
-std::cout << q << "\n";
+Example\+: The element $q=-1.5e_1e_2$ of the graded ring $\mathbf R[e_1,...,e_n], |e_i|=i$, can be defined as\+: \begin{DoxyVerb}Poly<double, ElementarySymmetricVariables<>> q({ 2,3 }, -1.5);
 \end{DoxyVerb}
 
 
-which will print $-1.5e_1e_2$. We used the constructor that takes a single monomial in the form of exponent+vector.
+We used the constructor that takes a single monomial in the form of exponent+vector.
 
-To keep names short let us use the following two typedefs\+: \begin{DoxyVerb}typedef OrderedPolynomial<double, StandardVariables<>> x_var_t;
-typedef OrderedPolynomial<double, ElementarySymmetricVariables<>> e_var_t;
+For brevity let us use the following two typedefs\+: \begin{DoxyVerb}typedef Poly<double, StandardVariables<>> x_poly_t;
+typedef Poly<double, ElementarySymmetricVariables<>> e_poly_t;
 \end{DoxyVerb}
 
 
-We can view \[\mathbf R[e_1,...,e_n]=\mathbf R[x_1,...,x_n]^{\Sigma_n}\] with $e_i=\sigma_i$ being the elementary symmetric polynomials. To convert $q$ from $e_i$ variables to $x_i$ variables we use the class \mbox{\hyperlink{classsymmp_1_1SymmetricBasis}{symmp\+::\+Symmetric\+Basis}} \+: \begin{DoxyVerb}SymmetricBasis<x_var_t, e_var_t> SB(2);
+Now we view \[\mathbf R[e_1,...,e_n]=\mathbf R[x_1,...,x_n]^{\Sigma_n}\] with $e_i=\sigma_i$ being the elementary symmetric polynomials on the $x_i$. To convert $q$ from $e_i$ variables to $x_i$ variables we use the class \mbox{\hyperlink{classsymmp_1_1SymmetricBasis}{symmp\+::\+Symmetric\+Basis}} \+: \begin{DoxyVerb}SymmetricBasis<x_poly_t, e_poly_t> SB(2);
 \end{DoxyVerb}
 
 
@@ -72,31 +71,31 @@ std::cout << qx;
 \end{DoxyVerb}
 
 
-will define an {\ttfamily x\+\_\+var\+\_\+t qx} that is {\ttfamily q} transformed into the \mbox{\hyperlink{structsymmp_1_1StandardVariables}{symmp\+::\+Standard\+Variables}} and print \[-1.5x_1^3x_2^5 + -3x_1^4x_2^4 + -1.5x_1^5x_2^3\]
+will set the polynomial {\ttfamily x\+\_\+poly\+\_\+t qx} to be {\ttfamily q} transformed into the $x_i$ variables (\mbox{\hyperlink{structsymmp_1_1StandardVariables}{symmp\+::\+Standard\+Variables}}) and print \[-1.5x_1^3x_2^5 + -3x_1^4x_2^4 + -1.5x_1^5x_2^3\]
 
-We can perform the conversion the other way as well\+: given a polynomial in \mbox{\hyperlink{structsymmp_1_1StandardVariables}{symmp\+::\+Standard\+Variables}} such as {\ttfamily qx} we can use the {\ttfamily SB} from before to transform it into a polynomial on the \mbox{\hyperlink{structsymmp_1_1ElementarySymmetricVariables}{symmp\+::\+Elementary\+Symmetric\+Variables}} \+: \begin{DoxyVerb}auto qe=SB(qx);
+We can perform the conversion the other way as well\+: given a polynomial on the $x_i$ variables such as {\ttfamily qx} we can use the object same {\ttfamily SB} to transform {\ttfamily qx} into a polynomial on the $e_i$ variables \+: \begin{DoxyVerb}auto qe=SB(qx);
 std::cout << qe;
 \end{DoxyVerb}
 
 
-which will print $-1.5e_1e_2$. Observe that {\ttfamily q==qe};\hypertarget{use_halfidem}{}\doxysubsubsection{Twisted Chern Basis}\label{use_halfidem}
+which will print $-1.5e_1e_2$. Observe that {\ttfamily q==qe} i.\+e. the two conversion maps are inverses, as expected.\hypertarget{use_halfidem}{}\doxysubsubsection{Twisted Chern Basis}\label{use_halfidem}
 We can generate \[(R[x_1,...,x_n,y_1,...,y_n]/y_i^2=y_i)^{\Sigma_n}\]
 
 by the $\alpha_i, c_i, \gamma_{s,t}$ (see \mbox{\hyperlink{math}{The Math}}).
 
 The class \mbox{\hyperlink{classsymmp_1_1TwistedChernBasis}{symmp\+::\+Twisted\+Chern\+Basis}} allows us to transform polynomials on $x_i,y_i$ variables (\mbox{\hyperlink{structsymmp_1_1HalfIdempotentVariables}{symmp\+::\+Half\+Idempotent\+Variables}}) into polynomials on the $\alpha_i,c_i,\gamma_{s,i}$ (\mbox{\hyperlink{structsymmp_1_1TwistedChernVariables}{symmp\+::\+Twisted\+Chern\+Variables}}).
 
-Example\+: \begin{DoxyVerb}typedef UnorderedPolynomial<int, HalfIdempotentVariables<>> xy_var_t;
-typedef UnorderedPolynomial<int, TwistedChernVariables<>>> chern_var_t;
-xy_var_t poly;
-poly.insert({ 1,0,1,0 }, 2);
-poly.insert({ 0,1,0,1 }, 2);
-TwistedChernBasis<xy_var_t, chern_var_t> TCB(2);
-std::cout << TCB(poly);
+Example\+: \begin{DoxyVerb}typedef Poly<int, HalfIdempotentVariables<>> xy_poly_t;
+typedef Poly<int, TwistedChernVariables<>>> chern_poly_t;
+xy_poly_t r;
+r.insert({ 1,0,1,0 }, 2);
+r.insert({ 0,1,0,1 }, 2);
+TwistedChernBasis<xy_poly_t, chern_poly_t> TCB(2);
+std::cout << TCB(r);
 \end{DoxyVerb}
 
 
-sets {\ttfamily poly} to be $x_1y_1+x_2y_2$, transforms it into $\gamma_{s,j}$ variables and prints\+:
+This sets {\ttfamily r} to be $x_1y_1+x_2y_2$, transforms it into $\gamma_{s,j}$ variables and prints the result\+:
 
 \[-2\gamma_{1,1}+2\alpha_1 c_1\]
 
@@ -112,16 +111,16 @@ prints $x_1y_1+x_2y_2$.
 
 We note that the argument {\ttfamily 2} in the constructor of {\ttfamily T\+CB} is half the number of variables $x_1,x_2,y_1,y_2$.
 
-To print the relations amongst $\alpha_i,c_i,\gamma_{s,j}$ use\+: \begin{DoxyVerb}print_half_idempotent_relations<xy_var_t, chern_var_t>(3,1,1);
+To print the relations amongst $\alpha_i,c_i,\gamma_{s,j}$ use\+: \begin{DoxyVerb}print_half_idempotent_relations<xy_poly_t, chern_poly_t>(3);
 \end{DoxyVerb}
 
 
 The $3$ here corresponds to the half the number of variables\+: $x_1,x_2,x_3,y_1,y_2,y_3$ and can be replaced by any positive integer.
 
-Finally, \mbox{\hyperlink{Demo_8cpp}{Demo.\+cpp}} contains another function, {\ttfamily write\+\_\+pontryagin\+\_\+\+C2\+\_\+in\+\_\+terms\+\_\+of\+\_\+\+Chern\+\_\+classes}. This prints the expressions of the twisted Pontryagin/symplectic classes given by
+Finally, \mbox{\hyperlink{Demo_8cpp}{Demo.\+cpp}} contains another function, \mbox{\hyperlink{Demo_8cpp_a1384cc6cbf29bfb22536612c7e556cef}{pontryagin\+\_\+via\+\_\+chern}}. This prints the expressions of the twisted Pontryagin/symplectic classes\+:
 
 \[\pi_{s,t}=\kappa_{s,t}=\sum_{1\le i_1< \cdots< i_s\le n\\ 1\le j_1< \cdots< j_t\le n\\ i_u\neq j_v}x^2_{i_1}....x^2_{i_s}y_{j_1}\cdots y_{j_t}\]
 
-in terms of the $\alpha_i,c_i,\gamma_{s,t}$. For example, try running \begin{DoxyVerb}write_pontryagin_C2_in_terms_of_Chern_classes < xy_var_t, chern_var_t>(5);
+in terms of the $\alpha_i,c_i,\gamma_{s,t}$. For example, try running \begin{DoxyVerb}pontryagin_via_chern < xy_poly_t, chern_poly_t>(5);
 \end{DoxyVerb}
  

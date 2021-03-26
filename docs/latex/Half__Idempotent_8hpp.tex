@@ -32,7 +32,7 @@ struct \mbox{\hyperlink{structsymmp_1_1HalfIdempotentVariables}{Half\+Idempotent
 struct \mbox{\hyperlink{structsymmp_1_1TwistedChernVariables}{Twisted\+Chern\+Variables$<$ T, \+\_\+deg $>$}}
 \begin{DoxyCompactList}\small\item\em The twisted Chern generators as variables $\gamma_{s,j}$. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classsymmp_1_1TwistedChernBasis}{Twisted\+Chern\+Basis$<$ \+\_\+xy\+\_\+poly\+\_\+t, \+\_\+chern\+\_\+poly\+\_\+t $>$}}
-\begin{DoxyCompactList}\small\item\em Class for half-\/idempotent symmetric polynomials, allowing transformation from $x_i,y_i$ variables to $\gamma_{s,i}$ variables and vice-\/versa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Class for half-\/idempotent symmetric polynomials, facilitating transformation from $x_i,y_i$ variables to $\gamma_{s,i}$ variables and vice-\/versa. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -41,7 +41,7 @@ class \mbox{\hyperlink{classsymmp_1_1TwistedChernBasis}{Twisted\+Chern\+Basis$<$
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename xy\+\_\+poly\+\_\+t , typename chern\+\_\+poly\+\_\+t $>$ }\\void \mbox{\hyperlink{namespacesymmp_ad180d30365dcabd734acd1490037eab1}{print\+\_\+half\+\_\+idempotent\+\_\+relations}} (int n, bool print=0, bool verify=0, bool verify\+\_\+verbose=0)
+{\footnotesize template$<$class xy\+\_\+poly\+\_\+t , class chern\+\_\+poly\+\_\+t $>$ }\\void \mbox{\hyperlink{namespacesymmp_aa479f22963630dec8f21e1420de70565}{print\+\_\+half\+\_\+idempotent\+\_\+relations}} (int n, bool print=1, bool verify=1, bool verify\+\_\+verbose=1)
 \begin{DoxyCompactList}\small\item\em Prints all relations in the description of the fixed points of $R=\mathbf Z[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)$ in terms of $\alpha_i, c_i, \gamma_{s,j}$ (printed as {\ttfamily a\+\_\+i, c\+\_\+i, c\+\_\+\{s,j\}} in the console) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 

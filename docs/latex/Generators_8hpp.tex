@@ -6,6 +6,8 @@ Contains classes for generating permutations, combinations and a factory for suc
 
 
 {\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
 {\ttfamily \#include \char`\"{}General.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}impl/\+Generators.\+ipp\char`\"{}}\newline
 Include dependency graph for Generators.\+hpp\+:\nopagebreak
@@ -43,9 +45,9 @@ class \mbox{\hyperlink{classsymmp_1_1CombinationGenerator_1_1constIterator}{Comb
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{namespacesymmp_a8cfd6b8437995490f6d6ad254c07f5a3}{all\+\_\+permutations}} (T n)
+{\footnotesize template$<$class T $>$ }\\std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{namespacesymmp_a8cfd6b8437995490f6d6ad254c07f5a3}{all\+\_\+permutations}} (T n)
 \begin{DoxyCompactList}\small\item\em Returns vector of all permutations on {\ttfamily n} letters. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{namespacesymmp_a17719500ed6cb508460abd6bcd8e1965}{all\+\_\+combinations}} (T n, T m)
+{\footnotesize template$<$class T $>$ }\\std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{namespacesymmp_a17719500ed6cb508460abd6bcd8e1965}{all\+\_\+combinations}} (T n, T m)
 \begin{DoxyCompactList}\small\item\em Returns vector of all combinations on {\ttfamily n} letters choosing {\ttfamily m} many. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 

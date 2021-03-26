@@ -238,7 +238,7 @@ a, a.el:visited, a.el:hover, a.el:focus, a.el:active {
 }
 
 #projectlogo img {
-    max-height: calc(var(--title-font-size) * 2);
+    max-height: calc(var(--title-font-size) * 3);
     margin-right: var(--spacing-small);
 }
 

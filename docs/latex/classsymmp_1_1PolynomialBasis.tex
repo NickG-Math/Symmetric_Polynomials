@@ -59,7 +59,7 @@ std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classsymmp_1_1PolynomialBasi
 
 
 \doxysubsubsection{Detailed Description}
-\subsubsection*{template$<$typename spec\+\_\+t, typename orig\+\_\+poly\+\_\+t, typename new\+\_\+poly\+\_\+t$>$\newline
+\subsubsection*{template$<$class spec\+\_\+t, class orig\+\_\+poly\+\_\+t, class new\+\_\+poly\+\_\+t$>$\newline
 class symmp\+::\+Polynomial\+Basis$<$ spec\+\_\+t, orig\+\_\+poly\+\_\+t, new\+\_\+poly\+\_\+t $>$}
 
 Factory class that provides the general interface of a generating basis for a subring of a polynomial ring. 
@@ -71,7 +71,7 @@ Inherit from this class and construct data member \mbox{\hyperlink{classsymmp_1_
 \end{DoxyCode}
  Example implementations are {\ttfamily \mbox{\hyperlink{classsymmp_1_1SymmetricBasis}{Symmetric\+Basis}}} and {\ttfamily \mbox{\hyperlink{classsymmp_1_1TwistedChernBasis}{Twisted\+Chern\+Basis}}}. 
 \begin{DoxyTemplParams}{Template Parameters}
-{\em spec\+\_\+t} & Used for compile-\/time polymorphism (C\+R\+TP)\+: set it to be the child class. \\
+{\em spec\+\_\+t} & Used for compile-\/time polymorphism (C\+R\+TP)\+: must be the child class. \\
 \hline
 {\em orig\+\_\+poly\+\_\+t} & Type of polynomial on the original variables \\
 \hline

@@ -32,6 +32,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Symmetric Polynomials
    &#160;<span id="projectnumber">V3.1</span>
@@ -117,14 +118,14 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a4035f75fec6b080c4047d6b04281910f"><td class="memTemplParams" colspan="2">template&lt;typename xy_poly_t , typename chern_poly_t &gt; </td></tr>
-<tr class="memitem:a4035f75fec6b080c4047d6b04281910f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="Demo_8cpp.html#a4035f75fec6b080c4047d6b04281910f">write_pontryagin_C2_in_terms_of_Chern_classes</a> (int n)</td></tr>
-<tr class="memdesc:a4035f75fec6b080c4047d6b04281910f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the twisted Pontryagin (symplectic) classes \(\pi_{s,j}\) ( \(\kappa_{s,j}\)) in terms of the Chern classes under the forgetful \(BU(n)\to BSO(n)\) (hermitianization \(BU(n)\to BSp(n)\))  <a href="Demo_8cpp.html#a4035f75fec6b080c4047d6b04281910f">More...</a><br /></td></tr>
-<tr class="separator:a4035f75fec6b080c4047d6b04281910f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1384cc6cbf29bfb22536612c7e556cef"><td class="memTemplParams" colspan="2">template&lt;class xy_poly_t , class chern_poly_t &gt; </td></tr>
+<tr class="memitem:a1384cc6cbf29bfb22536612c7e556cef"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="Demo_8cpp.html#a1384cc6cbf29bfb22536612c7e556cef">pontryagin_via_chern</a> (int n)</td></tr>
+<tr class="memdesc:a1384cc6cbf29bfb22536612c7e556cef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the twisted Pontryagin (symplectic) classes \(\pi_{s,j}\) ( \(\kappa_{s,j}\)) in terms of the Chern classes under the forgetful \(BU(n)\to BSO(n)\) (hermitianization \(BU(n)\to BSp(n)\))  <a href="Demo_8cpp.html#a1384cc6cbf29bfb22536612c7e556cef">More...</a><br /></td></tr>
+<tr class="separator:a1384cc6cbf29bfb22536612c7e556cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4379c1f8675ccb9d3360e1087853dae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Demo_8cpp.html#aa4379c1f8675ccb9d3360e1087853dae">show_and_tell</a> ()</td></tr>
 <tr class="memdesc:aa4379c1f8675ccb9d3360e1087853dae"><td class="mdescLeft">&#160;</td><td class="mdescRight">User facing interface for computing relations/writing Pontryagin/symplectic in terms of Chern.  <a href="Demo_8cpp.html#aa4379c1f8675ccb9d3360e1087853dae">More...</a><br /></td></tr>
 <tr class="separator:aa4379c1f8675ccb9d3360e1087853dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a635f37a2d635613a0e38558fb33d269a"><td class="memTemplParams" colspan="2">template&lt;typename scl_t , typename exp_val_t , typename deg_t &gt; </td></tr>
+<tr class="memitem:a635f37a2d635613a0e38558fb33d269a"><td class="memTemplParams" colspan="2">template&lt;class scl_t , class exp_val_t , class deg_t &gt; </td></tr>
 <tr class="memitem:a635f37a2d635613a0e38558fb33d269a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="Demo_8cpp.html#a635f37a2d635613a0e38558fb33d269a">speed_test</a> ()</td></tr>
 <tr class="memdesc:a635f37a2d635613a0e38558fb33d269a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optimized speedtest (no console output). For benchmarking and regression testing.  <a href="Demo_8cpp.html#a635f37a2d635613a0e38558fb33d269a">More...</a><br /></td></tr>
 <tr class="separator:a635f37a2d635613a0e38558fb33d269a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -168,10 +169,43 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Main. </p>
+
+</div>
+</div>
+<a id="a1384cc6cbf29bfb22536612c7e556cef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1384cc6cbf29bfb22536612c7e556cef">&#9670;&nbsp;</a></span>pontryagin_via_chern()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pontryagin_via_chern </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Writes the twisted Pontryagin (symplectic) classes \(\pi_{s,j}\) ( \(\kappa_{s,j}\)) in terms of the Chern classes under the forgetful \(BU(n)\to BSO(n)\) (hermitianization \(BU(n)\to BSp(n)\)) </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">xy_poly_t</td><td>The type of polynomial on the \(x_i,y_i\) variables </td></tr>
+    <tr><td class="paramname">chern_poly_t</td><td>The type of polynomial on the \(\gamma_{s,j}\) variables </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>The \(n\) in \(BU(n), BSO(n), BSp(n)\) </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="Demo_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.svg" width="228" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="Demo_8cpp_a1384cc6cbf29bfb22536612c7e556cef_cgraph.svg" width="423" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -192,11 +226,6 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>User facing interface for computing relations/writing Pontryagin/symplectic in terms of Chern. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="Demo_8cpp_aa4379c1f8675ccb9d3360e1087853dae_icgraph.svg" width="228" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
 
 </div>
 </div>
@@ -224,44 +253,6 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a4035f75fec6b080c4047d6b04281910f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4035f75fec6b080c4047d6b04281910f">&#9670;&nbsp;</a></span>write_pontryagin_C2_in_terms_of_Chern_classes()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void write_pontryagin_C2_in_terms_of_Chern_classes </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Writes the twisted Pontryagin (symplectic) classes \(\pi_{s,j}\) ( \(\kappa_{s,j}\)) in terms of the Chern classes under the forgetful \(BU(n)\to BSO(n)\) (hermitianization \(BU(n)\to BSp(n)\)) </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">xy_poly_t</td><td>The type of polynomial on the \(x_i,y_i\) variables </td></tr>
-    <tr><td class="paramname">chern_poly_t</td><td>The type of polynomial on the \(\gamma_{s,j}\) variables </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">n</td><td>The \(n\) in \(BU(n), BSO(n), BSp(n)\) </td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="Demo_8cpp_a4035f75fec6b080c4047d6b04281910f_cgraph.svg" width="467" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
 
 </div>
 </div>

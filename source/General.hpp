@@ -14,10 +14,10 @@
 namespace symmp
 {
 
-	///Hash algorithm CRC32. SSE4.1 and up
+	///	@brief	Hash algorithm CRC32. SSE4.1 and up
 	struct crc;
 
-	///Hash algorithm using golden ratio (idea from boost)
+	///	@brief	Hash algorithm using golden ratio (idea from boost)
 	struct boost_hash;
 
 	///	@brief			A generic hashing function that calls other hashing functions.

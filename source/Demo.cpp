@@ -12,8 +12,8 @@ using namespace symmp;
 ///	@tparam xy_poly_t		The type of polynomial on the \f$x_i,y_i\f$ variables
 ///	@tparam chern_poly_t	The type of polynomial on the \f$\gamma_{s,j}\f$ variables
 /// @param	n				The \f$n\f$ in \f$BU(n), BSO(n), BSp(n)\f$
-template <typename xy_poly_t, typename chern_poly_t>
-void write_pontryagin_C2_in_terms_of_Chern_classes(int n)
+template <class xy_poly_t, class chern_poly_t>
+void pontryagin_via_chern(int n)
 {
 	TwistedChernBasis<xy_poly_t, chern_poly_t> hib(n);
 	SYMMP_RUN_LOOP_IN_PARALLEL
@@ -33,8 +33,8 @@ void write_pontryagin_C2_in_terms_of_Chern_classes(int n)
 /// @brief User facing interface for computing relations/writing Pontryagin/symplectic in terms of Chern.
 void show_and_tell()
 {
-	typedef UnorderedPolynomial<int64_t, HalfIdempotentVariables<uint64_t, uint64_t>> xy_poly_t;
-	typedef UnorderedPolynomial<int64_t, TwistedChernVariables<uint64_t, uint64_t>> chern_poly_t;
+	typedef Poly<int64_t, HalfIdempotentVariables<uint64_t, uint64_t>, 0> xy_poly_t;
+	typedef Poly<int64_t, TwistedChernVariables<uint64_t, uint64_t>, 0> chern_poly_t;
 
 	std::cout << "Consider the polynomial ring (over Z) with variables x_1,...,x_n,y_1,...,y_n and relations y_i^2=y_i \n";
 	std::cout << "The symmetric group Sigma_n acts on this ring by separately permuting the x_i,y_i separately\n";
@@ -69,7 +69,7 @@ void show_and_tell()
 			else
 			{
 				std::cout << "The relations for n= " << n << " follow: \n";
-				print_half_idempotent_relations<xy_poly_t, chern_poly_t>(n, 1);
+				print_half_idempotent_relations<xy_poly_t, chern_poly_t>(n, 1, 0, 0);
 				std::cout << "\n\n";
 			}
 		}
@@ -91,7 +91,7 @@ void show_and_tell()
 			else
 			{
 				std::cout << "The twisted Pontryagin/symplectic classes k_{s,j} in terms of the twisted Chern classes c_{s,j} for s+j<=" << n << " follow:\n";
-				write_pontryagin_C2_in_terms_of_Chern_classes<xy_poly_t, chern_poly_t>(n);
+				pontryagin_via_chern<xy_poly_t, chern_poly_t>(n);
 				std::cout << "\n\n";
 			}
 		}
@@ -107,57 +107,57 @@ void show_and_tell()
 ///	@tparam scl_t		The type of scalars eg int
 ///	@tparam exp_val_t	The value type of the exponent vectors
 ///	@tparam deg_t		The type of the degree of the monomials
-template <typename scl_t, typename exp_val_t, typename deg_t>
+template <class scl_t, class exp_val_t, class deg_t>
 void speed_test()
 {
 	constexpr int varcount = 9;
-	typedef UnorderedPolynomial<int64_t, HalfIdempotentVariables<uint64_t, uint64_t>> xy_poly_t;
-	typedef UnorderedPolynomial<int64_t, TwistedChernVariables<uint64_t, uint64_t>> chern_poly_t;
+	typedef Poly<int64_t, HalfIdempotentVariables<uint64_t, uint64_t>, 0> xy_poly_t;
+	typedef Poly<int64_t, TwistedChernVariables<uint64_t, uint64_t>, 0> chern_poly_t;
 	auto start = std::chrono::high_resolution_clock::now();
-	print_half_idempotent_relations<xy_poly_t, chern_poly_t>(varcount);
+	print_half_idempotent_relations<xy_poly_t, chern_poly_t>(varcount, 0, 0, 0);
 	auto end = std::chrono::high_resolution_clock::now();
 	std::cout << varcount << " many variables took: " << std::chrono::duration_cast<std::chrono::seconds>(end - start).count() << "seconds\n";
 }
 
-///@brief	Main
+///	@brief	Main
 int main()
 {
 	using namespace symmp;
 
-	show_and_tell();
-	//speed_test<int64_t,uint8_t,uint16_t>();
+	//show_and_tell();
+	speed_test<int64_t,uint8_t,uint16_t>();
 
-	////code examples follow
-	// 
-	// OrderedPolynomial<int, StandardVariables<>> p;
-	// p.insert({0,1,4},7);
-	// p.insert({1,1,2},-8);
-	// std::cout << p << "\n"<< (p+(p^2))<< "\n";
+	//code examples follow
 
-	// OrderedPolynomial<double, ElementarySymmetricVariables<>> q({ 2,3 }, -1.5);
-	// std::cout << q << "\n";
+	//Poly<int, StandardVariables<>> p;
+	//p.insert({ 0,1,4 }, 7);
+	//p.insert({ 1,1,2 }, -8);
+	//std::cout << p << "\n" << (p + (p ^ 2)) << "\n";
 
-	// typedef OrderedPolynomial<double, StandardVariables<>> x_var_t;
-	// typedef OrderedPolynomial<double, ElementarySymmetricVariables<>> e_var_t;
+	//Poly<double, ElementarySymmetricVariables<>> q({ 2,3 }, -1.5);
+	//std::cout << q << "\n";
 
-	// SymmetricBasis<x_var_t, e_var_t> SB(2);
-	// OrderedPolynomial<double, StandardVariables<>> qx=SB(q);
-	// std::cout << qx << "\n";
-	
-	// auto qe=SB(qx);
-	// std::cout << qe << "\n";
+	//typedef Poly<double, StandardVariables<>> x_poly_t;
+	//typedef Poly<double, ElementarySymmetricVariables<>> e_poly_t;
 
-	// typedef UnorderedPolynomial<int, HalfIdempotentVariables<>> xy_var_t;
-	// typedef UnorderedPolynomial<int, TwistedChernVariables<>> chern_var_t;
-	// xy_var_t poly;
-	// poly.insert({ 1,0,1,0 }, 2);
-	// poly.insert({ 0,1,0,1 }, 2);
-	// TwistedChernBasis<xy_var_t, chern_var_t> TCB(2);
-	// std::cout << TCB(poly);
+	//SymmetricBasis<x_poly_t, e_poly_t> SB(2);
+	//Poly<double, StandardVariables<>> qx = SB(q);
+	//std::cout << qx << "\n";
 
-	// std::cout << TCB(TCB(poly));
+	//auto qe = SB(qx);
+	//std::cout << qe << "\n";
 
-	// print_half_idempotent_relations<xy_var_t, chern_var_t>(3,1,1);
-	// write_pontryagin_C2_in_terms_of_Chern_classes < xy_var_t, chern_var_t>(5);
+	//typedef Poly<int, HalfIdempotentVariables<>> xy_poly_t;
+	//typedef Poly<int, TwistedChernVariables<>> chern_poly_t;
+	//xy_poly_t r;
+	//r.insert({ 1,0,1,0 }, 2);
+	//r.insert({ 0,1,0,1 }, 2);
+	//TwistedChernBasis<xy_poly_t, chern_poly_t> TCB(2);
+	//std::cout << TCB(r);
+
+	//std::cout << TCB(TCB(r));
+
+	//print_half_idempotent_relations<xy_poly_t, chern_poly_t>(3);
+	//pontryagin_via_chern < xy_poly_t, chern_poly_t>(5);
 	return 0;
 }

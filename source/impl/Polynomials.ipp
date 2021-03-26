@@ -95,7 +95,7 @@ namespace symmp
 	template <typename t1, typename t2, template<typename...> typename t3, bool t4, typename ... t5>
 	auto Polynomial<t1, t2, t3, t4, t5...>::highest_term() const ->constIterator
 	{
-		if constexpr (t4) //if container is ordered
+		if constexpr (t4) //if container is _ordered
 			return std::prev(data.end());
 		else
 		{

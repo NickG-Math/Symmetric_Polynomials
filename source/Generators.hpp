@@ -1,9 +1,11 @@
 #pragma once
 #include <algorithm>
+#include <vector>
+#include <array>
 #include "General.hpp"
 
-///@file
-///@brief Contains classes for generating permutations, combinations and a factory for such classes
+///	@file
+///	@brief Contains classes for generating permutations, combinations and a factory for such classes
 
 namespace symmp
 {
@@ -13,18 +15,18 @@ namespace symmp
 	///	@details		Inherit from this class and define a method update() to get a const iterator. \n
 	///					You will also need begin() and end() methods constructing such iterators; end() should always be defined by calling the factory end().\n
 	///					Example implementations: \c CombinationGenerator and \c PermutationGenerator
-	///	@attention		Probably not thread-safe (depends on child's update() method).
+	///	@attention		Probably not thread-safe (depends on specialization's \c update() method).
 	///	@todo			Implement as coroutine (C++20)
 	///	@tparam	spec_t	Used for compile-time polymorphism (CRTP): set it to be the child class.
 	///	@tparam	gen_t	The type of the generated element.
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	template <typename spec_t, typename gen_t>
+	template <class spec_t, class gen_t>
 	class FactoryGenerator
 	{
 	public:
-		const gen_t &operator*() const;						   ///<Returns the generated element
-		bool operator!=(const FactoryGenerator &other) const; ///<Inequality of iterators (used to detect if generation has been completed)
-		spec_t &operator++();								   ///<Generates next element
+		const gen_t& operator*() const;						   ///<Returns the generated element
+		bool operator!=(const FactoryGenerator& other) const; ///<Inequality of iterators (used to detect if generation has been completed)
+		spec_t& operator++();								   ///<Generates next element
 		static spec_t end();								   ///<Terminal iterator
 	protected:
 		bool completed;	 ///<1 if the iterator is end() i.e. if all elements have been generated
@@ -38,7 +40,7 @@ namespace symmp
 	///	@todo		Implement via coroutine (C++20)
 	///	@tparam T	The data type of our permutations eg \c std::vector<int>
 	//////////////////////////////////////////////////////////////////////////////////
-	template <typename T>
+	template <class T>
 	class PermutationGenerator
 	{
 		const T n;
@@ -77,7 +79,7 @@ namespace symmp
 	///	@todo		Implement via coroutine (C++20)
 	///	@tparam  T	The data type of our combinations eg \c std::vector<int>
 	//////////////////////////////////////////////////////////////////////////////////
-	template <typename T>
+	template <class T>
 	class CombinationGenerator
 	{
 		const T total, choices;
@@ -115,7 +117,7 @@ namespace symmp
 	///@tparam	T	The value type of the permutations
 	///@param	n	The number of letters
 	///@return		Vector of vectors each of which is \f$[a_1,...,a_n]\f$ with \f$0\le a_i\le n\f$ all distinct
-	template <typename T>
+	template <class T>
 	std::vector<std::vector<T>> all_permutations(T n);
 
 	///@brief		Returns vector of all combinations on \p n letters choosing \p m many
@@ -123,7 +125,7 @@ namespace symmp
 	///@param	n	The number of letters
 	///@param	m	The number of choices
 	///@return		Vector of vectors each of which is \f$[a_1,...,a_n]\f$ with \f$0\le a_i\le n\f$ all distinct
-	template <typename T>
+	template <class T>
 	std::vector<std::vector<T>> all_combinations(T n, T m);
 }
 #include "impl/Generators.ipp"

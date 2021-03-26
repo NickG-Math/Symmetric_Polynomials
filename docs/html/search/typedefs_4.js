@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['unorderedpolynomial_161',['UnorderedPolynomial',['../namespacesymmp.html#ad286838abde5fae48d25eda95a49dbed',1,'symmp']]]
+  ['scl_5ft_161',['scl_t',['../classsymmp_1_1Polynomial.html#a8e22f5fc1b62271e6ef144911adecde8',1,'symmp::Polynomial']]]
 ];

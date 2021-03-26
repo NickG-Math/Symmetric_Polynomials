@@ -2,7 +2,7 @@
 #include "Symmetric_Basis.hpp"
 #include <sstream>
 
-/////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///	@file
 ///	@brief 		Contains the methods and classes for symmetric polynomials with half idempotent variables
 ///	@details	The goal is to solve the following problem:
@@ -11,7 +11,7 @@
 ///				under the \f$\Sigma_n\f$ action (permuting the \f$x_i,y_i\f$ separately),
 /// 			give an algorithm for writing a fixed point in terms of the generators
 ///				and an algorithm for producing the relations of those generators.
-/////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 namespace symmp
 {
@@ -21,7 +21,7 @@ namespace symmp
 	///	@tparam T	The value type of the array/vector
 	///	@tparam N	The size if it's an array or 0 if it's a vector
 	/////////////////////////////////////////////////////////////////////////
-	template <typename T, size_t N = 0>
+	template <class T, size_t N = 0>
 	struct ArrayVectorWrapper;
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -31,7 +31,7 @@ namespace symmp
 	///	@tparam _deg	The (integral) value type used in the degree function.
 	///	@tparam N 		The number of variables in compile-time; set to 0 if unknown (default). Otherwise N=\f$2n\f$.
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	template <typename T = int64_t, typename _deg = int64_t, size_t N = 0>
+	template <class T = int64_t, class _deg = int64_t, size_t N = 0>
 	struct HalfIdempotentVariables : public ArrayVectorWrapper<T, N>
 	{
 		using ArrayVectorWrapper<T, N>::ArrayVectorWrapper;
@@ -63,12 +63,14 @@ namespace symmp
 		size_t operator()() const;
 	};
 
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	///	@brief			The twisted Chern generators as variables \f$\gamma_{s,j}\f$
 	///	@details		Monomial \f$\prod_{s,j}\gamma_{s,j}^{a_{s_j}}\f$ is stored as vector \f$[a_{0,1},...,a_{0,n},a_{1,0},a_{1,1},...,a_{n-1,1},a_{n,0}]\f$
 	///	@note			This class does NOT provide functions for degrees or variable names: these are provided as pointers directly in TwistedChernBasis
 	///	@tparam T 		The (integral) value type of the exponent vector.
 	///	@tparam _deg	The (integral) value type used in the degree function.
-	template <typename T = int64_t, typename _deg = int64_t>
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	template <class T = int64_t, class _deg = int64_t>
 	struct TwistedChernVariables : public std::vector<T>
 	{
 		using std::vector<T>::vector;
@@ -85,10 +87,12 @@ namespace symmp
 		size_t operator()() const;
 	};
 
-	///	@brief						Class for half-idempotent symmetric polynomials, allowing transformation from \f$x_i,y_i\f$ variables to \f$\gamma_{s,i}\f$ variables and vice-versa.
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	///	@brief						Class for half-idempotent symmetric polynomials, facilitating transformation from \f$x_i,y_i\f$ variables to \f$\gamma_{s,i}\f$ variables and vice-versa.
 	///	@tparam _xy_poly_t			The container type on the HalfIdempotentVariables \f$x_i,y_i\f$
 	///	@tparam _chern_poly_t		The container type on the TwistedChernVariables \f$\gamma_{s,j}\f$
-	template <typename _xy_poly_t, typename _chern_poly_t>
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	template <class _xy_poly_t, class _chern_poly_t>
 	class TwistedChernBasis : public PolynomialBasis<TwistedChernBasis<_xy_poly_t, _chern_poly_t>, _xy_poly_t, _chern_poly_t>
 	{
 	public:
@@ -137,8 +141,8 @@ namespace symmp
 	///	@param print			Whether we want to print the relations to the console
 	///	@param verify			Whether to verify the relations
 	///	@param verify_verbose	Whether to verify and print the verification to the console
-	template <typename xy_poly_t, typename chern_poly_t>
-	void print_half_idempotent_relations(int n, bool print = 0, bool verify = 0, bool verify_verbose = 0);
+	template <class xy_poly_t, class chern_poly_t>
+	void print_half_idempotent_relations(int n, bool print = 1, bool verify = 1, bool verify_verbose = 1);
 
 }
 #include "impl/Half_Idempotent.ipp"
