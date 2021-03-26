@@ -124,8 +124,8 @@ int main()
 {
 	using namespace symmp;
 
-	//show_and_tell();
-	speed_test<int64_t,uint8_t,uint16_t>();
+	show_and_tell();
+	//speed_test<int64_t,uint8_t,uint16_t>();
 
 	//code examples follow
 
