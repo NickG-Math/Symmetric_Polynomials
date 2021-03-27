@@ -29,8 +29,7 @@ var NAVTREE =
       [ "Introduction", "index.html#intro", null ],
       [ "Requirements", "index.html#req", null ],
       [ "Installation", "index.html#install", null ],
-      [ "Documentation", "index.html#doc", null ],
-      [ "Future Update Plans", "index.html#fut", null ]
+      [ "Documentation", "index.html#doc", null ]
     ] ],
     [ "The Math", "math.html", [
       [ "Symmetric polynomials", "math.html#sym", null ],
