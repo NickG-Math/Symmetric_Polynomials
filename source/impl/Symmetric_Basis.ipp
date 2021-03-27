@@ -2,7 +2,7 @@
 #include "../Symmetric_Basis.hpp"
 
 ///@file
-///@brief Implementation of SymmetricBasis.hpp
+///@brief Implementation of Symmetric_Basis.hpp
 
 namespace symmp
 {

@@ -1,0 +1,7 @@
+<map id="Symmetric_Basis.ipp" name="Symmetric_Basis.ipp">
+<area shape="rect" id="node1" title="Implementation of Symmetric_Basis.hpp." alt="" coords="115,5,274,32"/>
+<area shape="rect" id="node2" href="$Symmetric__Basis_8hpp.html" title="Contains the methods and classes for generatic symmetric polynomials." alt="" coords="113,80,276,107"/>
+<area shape="rect" id="node3" href="$Half__Idempotent_8hpp.html" title="Contains the methods and classes for symmetric polynomials with half idempotent variables." alt="" coords="115,155,274,181"/>
+<area shape="rect" id="node4" href="$Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="5,229,93,256"/>
+<area shape="rect" id="node5" href="$Half__Idempotent_8ipp.html" title="Implementation of Half_Idempotent.hpp." alt="" coords="117,229,272,256"/>
+</map>

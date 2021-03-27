@@ -1,4 +1,4 @@
 var namespaces_dup =
 [
-    [ "symmp", "namespacesymmp.html", null ]
+    [ "symmp", "namespacesymmp.html", "namespacesymmp" ]
 ];

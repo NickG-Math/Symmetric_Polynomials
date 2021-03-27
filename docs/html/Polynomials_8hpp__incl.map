@@ -1,12 +1,12 @@
 <map id="Polynomials.hpp" name="Polynomials.hpp">
-<area shape="rect" id="node1" title="Contains the class of polynomials in multiple variables." alt="" coords="401,5,532,32"/>
-<area shape="rect" id="node2" href="$General_8hpp.html" title="Contains general operations on vectors: hashing, computing degrees." alt="" coords="55,80,156,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="180,80,305,107"/>
-<area shape="rect" id="node6" title=" " alt="" coords="329,80,380,107"/>
-<area shape="rect" id="node7" title=" " alt="" coords="405,80,529,107"/>
-<area shape="rect" id="node8" title=" " alt="" coords="553,80,612,107"/>
-<area shape="rect" id="node9" title=" " alt="" coords="636,80,716,107"/>
-<area shape="rect" id="node10" title=" " alt="" coords="741,80,899,107"/>
+<area shape="rect" id="node1" title="Contains the class of polynomials in multiple variables." alt="" coords="435,5,565,32"/>
+<area shape="rect" id="node2" href="$General_8hpp.html" title="Contains general operations on vectors: hashing, computing degrees." alt="" coords="139,80,240,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="259,155,339,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="325,80,451,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="475,80,525,107"/>
+<area shape="rect" id="node8" title=" " alt="" coords="550,80,674,107"/>
+<area shape="rect" id="node9" title=" " alt="" coords="699,80,757,107"/>
+<area shape="rect" id="node10" title=" " alt="" coords="782,80,941,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,155,80,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="104,155,235,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="104,155,235,181"/>
 </map>

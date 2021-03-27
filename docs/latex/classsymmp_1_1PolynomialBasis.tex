@@ -68,10 +68,11 @@ Inherit from this class and construct data member \mbox{\hyperlink{classsymmp_1_
  The child class must also have a method {\ttfamily find\+\_\+exponent} with signature\+: 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keyword}{typename} new\_poly\_t::exp\_t find\_exponent(\textcolor{keyword}{const} \textcolor{keyword}{typename} orig\_poly\_t::exp\_t\&); }
+
 \end{DoxyCode}
  Example implementations are {\ttfamily \mbox{\hyperlink{classsymmp_1_1SymmetricBasis}{Symmetric\+Basis}}} and {\ttfamily \mbox{\hyperlink{classsymmp_1_1TwistedChernBasis}{Twisted\+Chern\+Basis}}}. 
 \begin{DoxyTemplParams}{Template Parameters}
-{\em spec\+\_\+t} & Used for compile-\/time polymorphism (C\+R\+TP)\+: must be the child class. \\
+{\em spec\+\_\+t} & Used for compile-\/time polymorphism (CRTP)\+: must be the child class. \\
 \hline
 {\em orig\+\_\+poly\+\_\+t} & Type of polynomial on the original variables \\
 \hline

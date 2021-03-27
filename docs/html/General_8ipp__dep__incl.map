@@ -1,0 +1,13 @@
+<map id="General.ipp" name="General.ipp">
+<area shape="rect" id="node1" title="Implementation of General.hpp." alt="" coords="325,5,422,32"/>
+<area shape="rect" id="node2" href="$General_8hpp.html" title="Contains general operations on vectors: hashing, computing degrees." alt="" coords="323,80,424,107"/>
+<area shape="rect" id="node3" href="$Generators_8hpp.html" title="Contains classes for generating permutations, combinations and a factory for such classes." alt="" coords="237,155,360,181"/>
+<area shape="rect" id="node10" href="$Polynomials_8hpp.html" title="Contains the class of polynomials in multiple variables." alt="" coords="391,155,521,181"/>
+<area shape="rect" id="node4" href="$Generators_8ipp.html" title="Implementation of Generators.hpp." alt="" coords="153,229,271,256"/>
+<area shape="rect" id="node5" href="$Symmetric__Basis_8hpp.html" title="Contains the methods and classes for generatic symmetric polynomials." alt="" coords="296,229,459,256"/>
+<area shape="rect" id="node6" href="$Half__Idempotent_8hpp.html" title="Contains the methods and classes for symmetric polynomials with half idempotent variables." alt="" coords="115,304,274,331"/>
+<area shape="rect" id="node9" href="$Symmetric__Basis_8ipp.html" title="Implementation of Symmetric_Basis.hpp." alt="" coords="298,304,457,331"/>
+<area shape="rect" id="node7" href="$Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="5,379,93,405"/>
+<area shape="rect" id="node8" href="$Half__Idempotent_8ipp.html" title="Implementation of Half_Idempotent.hpp." alt="" coords="117,379,272,405"/>
+<area shape="rect" id="node11" href="$Polynomials_8ipp.html" title="Implementation of Polynomials.hpp." alt="" coords="483,229,610,256"/>
+</map>

@@ -1,0 +1,4 @@
+var structsymmp_1_1implementation__details_1_1polynomial__data__type_3_01__scl_00_01__exp_00_01__con527a863ceceac3c590fbad27d31e5103 =
+[
+    [ "Polynomial", "structsymmp_1_1implementation__details_1_1polynomial__data__type_3_01__scl_00_01__exp_00_01__con527a863ceceac3c590fbad27d31e5103.html#af3841474533d8bd1db7c131548d0bc27", null ]
+];

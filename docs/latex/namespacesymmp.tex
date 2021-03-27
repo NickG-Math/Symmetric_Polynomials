@@ -10,28 +10,28 @@ The namespace which contains every method and class in the library.
 \item 
 struct \mbox{\hyperlink{structsymmp_1_1ArrayVectorWrapper}{Array\+Vector\+Wrapper}}
 \begin{DoxyCompactList}\small\item\em Wrapping array and vector in the same interface. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{classsymmp_1_1CombinationGenerator}{Combination\+Generator}}
-\begin{DoxyCompactList}\small\item\em Generates all combinations on a number of letters making a number of choices. \end{DoxyCompactList}\item 
-struct \mbox{\hyperlink{structsymmp_1_1ElementarySymmetricVariables}{Elementary\+Symmetric\+Variables}}
-\begin{DoxyCompactList}\small\item\em Variables $e_1,...,e_n$ of degrees $|e_i|=i$. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{classsymmp_1_1FactoryGenerator}{Factory\+Generator}}
-\begin{DoxyCompactList}\small\item\em Prototype for coroutine-\/like iterators that generate elements such as combinations. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structsymmp_1_1HalfIdempotentVariables}{Half\+Idempotent\+Variables}}
 \begin{DoxyCompactList}\small\item\em Variables $x_1,...,x_n,y_1,...,y_n$ with $y_i^2=y_i$ and $|x_i|=1$, $|y_i|=0$. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{classsymmp_1_1PermutationGenerator}{Permutation\+Generator}}
-\begin{DoxyCompactList}\small\item\em Generates all permutations on a number of letters. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial}}
-\begin{DoxyCompactList}\small\item\em Class for polynomials in multiple variables with relations. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{classsymmp_1_1PolynomialBasis}{Polynomial\+Basis}}
-\begin{DoxyCompactList}\small\item\em Factory class that provides the general interface of a generating basis for a subring of a polynomial ring. \end{DoxyCompactList}\item 
-struct \mbox{\hyperlink{structsymmp_1_1StandardVariables}{Standard\+Variables}}
-\begin{DoxyCompactList}\small\item\em The standard variables $x_i$ in a polynomial, with $|x_i|=1$ and no relations. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{classsymmp_1_1SymmetricBasis}{Symmetric\+Basis}}
-\begin{DoxyCompactList}\small\item\em Class for symmetric polynomials with no relations, allowing transformation from $x_i$ variables to $e_i$ variables and vice-\/versa. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsymmp_1_1TwistedChernVariables}{Twisted\+Chern\+Variables}}
+\begin{DoxyCompactList}\small\item\em The twisted Chern generators as variables $\gamma_{s,j}$. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classsymmp_1_1TwistedChernBasis}{Twisted\+Chern\+Basis}}
 \begin{DoxyCompactList}\small\item\em Class for half-\/idempotent symmetric polynomials. \end{DoxyCompactList}\item 
-struct \mbox{\hyperlink{structsymmp_1_1TwistedChernVariables}{Twisted\+Chern\+Variables}}
-\begin{DoxyCompactList}\small\item\em The twisted Chern generators as variables $\gamma_{s,j}$. \end{DoxyCompactList}\end{DoxyCompactItemize}
+class \mbox{\hyperlink{classsymmp_1_1FactoryGenerator}{Factory\+Generator}}
+\begin{DoxyCompactList}\small\item\em Prototype for coroutine-\/like iterators that generate elements such as combinations. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsymmp_1_1PermutationGenerator}{Permutation\+Generator}}
+\begin{DoxyCompactList}\small\item\em Generates all permutations on a number of letters. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsymmp_1_1CombinationGenerator}{Combination\+Generator}}
+\begin{DoxyCompactList}\small\item\em Generates all combinations on a number of letters making a number of choices. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial}}
+\begin{DoxyCompactList}\small\item\em Class for polynomials in multiple variables with relations. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsymmp_1_1StandardVariables}{Standard\+Variables}}
+\begin{DoxyCompactList}\small\item\em The standard variables $x_i$ in a polynomial, with $|x_i|=1$ and no relations. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsymmp_1_1ElementarySymmetricVariables}{Elementary\+Symmetric\+Variables}}
+\begin{DoxyCompactList}\small\item\em Variables $e_1,...,e_n$ of degrees $|e_i|=i$. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsymmp_1_1PolynomialBasis}{Polynomial\+Basis}}
+\begin{DoxyCompactList}\small\item\em Factory class that provides the general interface of a generating basis for a subring of a polynomial ring. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsymmp_1_1SymmetricBasis}{Symmetric\+Basis}}
+\begin{DoxyCompactList}\small\item\em Class for symmetric polynomials with no relations, allowing transformation from $x_i$ variables to $e_i$ variables and vice-\/versa. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
@@ -40,6 +40,8 @@ struct \mbox{\hyperlink{structsymmp_1_1TwistedChernVariables}{Twisted\+Chern\+Va
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+{\footnotesize template$<$class xy\+\_\+poly\+\_\+t , class chern\+\_\+poly\+\_\+t $>$ }\\void \mbox{\hyperlink{namespacesymmp_aa479f22963630dec8f21e1420de70565}{print\+\_\+half\+\_\+idempotent\+\_\+relations}} (int n, bool print=1, bool verify=1, bool verify\+\_\+verbose=1)
+\begin{DoxyCompactList}\small\item\em Prints the relations of $\Big(\mathbf Z[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)\Big)^{\Sigma_n}$. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T , typename hasher  = boost\+\_\+hash$>$ }\\size\+\_\+t \mbox{\hyperlink{namespacesymmp_ac26e0fc4b8ad188e9b24d49d806b1855}{generic\+\_\+hasher}} (const T \&v)
 \begin{DoxyCompactList}\small\item\em A generic hashing function that calls other hashing functions. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename R , typename T , typename S $>$ }\\R \mbox{\hyperlink{namespacesymmp_a89e193c5649231a649e17cb90ebf6932}{general\+\_\+compute\+\_\+degree}} (const T \&exp, const S \&dim)
@@ -48,8 +50,6 @@ struct \mbox{\hyperlink{structsymmp_1_1TwistedChernVariables}{Twisted\+Chern\+Va
 \begin{DoxyCompactList}\small\item\em Returns vector of all permutations on {\ttfamily n} letters. \end{DoxyCompactList}\item 
 {\footnotesize template$<$class T $>$ }\\std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{namespacesymmp_a17719500ed6cb508460abd6bcd8e1965}{all\+\_\+combinations}} (T n, T m)
 \begin{DoxyCompactList}\small\item\em Returns vector of all combinations on {\ttfamily n} letters choosing {\ttfamily m} many. \end{DoxyCompactList}\item 
-{\footnotesize template$<$class xy\+\_\+poly\+\_\+t , class chern\+\_\+poly\+\_\+t $>$ }\\void \mbox{\hyperlink{namespacesymmp_aa479f22963630dec8f21e1420de70565}{print\+\_\+half\+\_\+idempotent\+\_\+relations}} (int n, bool print=1, bool verify=1, bool verify\+\_\+verbose=1)
-\begin{DoxyCompactList}\small\item\em Prints the relations of $\Big(\mathbf Z[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)\Big)^{\Sigma_n}$. \end{DoxyCompactList}\item 
 {\footnotesize template$<$class \+\_\+scl , class \+\_\+exp , template$<$ class... $>$ class \+\_\+cnt, bool \+\_\+ord, class ... \+\_\+arg$>$ }\\std\+::ostream \& \mbox{\hyperlink{namespacesymmp_a73f033c5be58c4b145303b459b7ac29c}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial}}$<$ \+\_\+scl, \+\_\+exp, \+\_\+cnt, \+\_\+ord, \+\_\+arg... $>$ \&a)
 \begin{DoxyCompactList}\small\item\em Prints polynomial to output stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -171,7 +171,7 @@ A generic hashing function that calls other hashing functions.
 \begin{DoxyTemplParams}{Template Parameters}
 {\em T} & The type of element to be hashed (must have a for range loop) \\
 \hline
-{\em hasher} & The hashing algorithm. {\ttfamily boost\+\_\+hash} by default. If S\+S\+E4.\+1 is supported you can also use {\ttfamily crc} \\
+{\em hasher} & The hashing algorithm. {\ttfamily boost\+\_\+hash} by default. If SSE4.\+1 is supported you can also use {\ttfamily crc} \\
 \hline
 \end{DoxyTemplParams}
 
@@ -243,3 +243,10 @@ The generators $\alpha_i, c_i, \gamma_{s,j}$ are printed as {\ttfamily a\+\_\+i,
 {\em verify\+\_\+verbose} & Whether to verify and print the verification to the console \\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacesymmp_aa479f22963630dec8f21e1420de70565_icgraph}
+\end{center}
+\end{figure}

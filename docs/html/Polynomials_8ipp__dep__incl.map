@@ -1,0 +1,9 @@
+<map id="Polynomials.ipp" name="Polynomials.ipp">
+<area shape="rect" id="node1" title="Implementation of Polynomials.hpp." alt="" coords="314,5,441,32"/>
+<area shape="rect" id="node2" href="$Polynomials_8hpp.html" title="Contains the class of polynomials in multiple variables." alt="" coords="312,80,443,107"/>
+<area shape="rect" id="node3" href="$Symmetric__Basis_8hpp.html" title="Contains the methods and classes for generatic symmetric polynomials." alt="" coords="296,155,459,181"/>
+<area shape="rect" id="node4" href="$Half__Idempotent_8hpp.html" title="Contains the methods and classes for symmetric polynomials with half idempotent variables." alt="" coords="115,229,274,256"/>
+<area shape="rect" id="node7" href="$Symmetric__Basis_8ipp.html" title="Implementation of Symmetric_Basis.hpp." alt="" coords="298,229,457,256"/>
+<area shape="rect" id="node5" href="$Demo_8cpp.html" title="A demonstration file that can be compiled." alt="" coords="5,304,93,331"/>
+<area shape="rect" id="node6" href="$Half__Idempotent_8ipp.html" title="Implementation of Half_Idempotent.hpp." alt="" coords="117,304,272,331"/>
+</map>

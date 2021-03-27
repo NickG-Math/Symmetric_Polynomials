@@ -1,0 +1,5 @@
+<map id="operator+=" name="operator+=">
+<area shape="rect" id="node1" title="Addition assignment." alt="" coords="5,31,104,57"/>
+<area shape="rect" id="node2" href="$classsymmp_1_1Polynomial.html#a5b2cb23f1a89d1c9cd17c9bbba894027" title="Returns the number of monomials of the polynomial." alt="" coords="152,5,324,32"/>
+<area shape="rect" id="node3" href="$classsymmp_1_1Polynomial.html#af45d30f307f301b9d43fcdf52897bbce" title="Reserves number of monomials." alt="" coords="203,56,273,83"/>
+</map>

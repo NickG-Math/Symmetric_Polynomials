@@ -1,7 +1,10 @@
 #pragma once
 #include <type_traits>
 #include <utility>
+#include "stddef.h"
 
+///	@file
+///	@brief Contains various implementation details
 
 #if defined SYMMP_USE_OPEN_MP & defined _OPENMP
 ///	@brief		Macro that parallelizes certain loops via openMP if SYMMP_USE_OPEN_MP is defined, and does nothing otherwise
@@ -29,6 +32,7 @@
 namespace symmp
 {
 
+	///Contains various implementation details such as SFINAE
 	namespace implementation_details {
 
 		template <typename _exp>

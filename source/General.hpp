@@ -1,5 +1,6 @@
 #pragma once
 #include <numeric>
+#include <iostream>
 
 #if defined(__GNUC__)
 #include "x86intrin.h"

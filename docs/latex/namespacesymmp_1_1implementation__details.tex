@@ -1,0 +1,121 @@
+\hypertarget{namespacesymmp_1_1implementation__details}{}\doxysubsection{symmp\+::implementation\+\_\+details Namespace Reference}
+\label{namespacesymmp_1_1implementation__details}\index{symmp::implementation\_details@{symmp::implementation\_details}}
+
+
+Contains various implementation details such as SFINAE.  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsymmp_1_1implementation__details_1_1hash__only__exponent}{hash\+\_\+only\+\_\+exponent}}
+\begin{DoxyCompactList}\small\item\em Given a pair, hash only the second parameter. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsymmp_1_1implementation__details_1_1polynomial__data__type}{polynomial\+\_\+data\+\_\+type}}
+\item 
+struct \mbox{\hyperlink{structsymmp_1_1implementation__details_1_1polynomial__data__type_3_01__scl_00_01__exp_00_01__con527a863ceceac3c590fbad27d31e5103}{polynomial\+\_\+data\+\_\+type$<$ \+\_\+scl, \+\_\+exp, \+\_\+container, 1, \+\_\+\+Args... $>$}}
+\item 
+struct \mbox{\hyperlink{structsymmp_1_1implementation__details_1_1polynomial__data__type_3_01__scl_00_01__exp_00_01__con45d4d6aa8bde70416d994139acb405f5}{polynomial\+\_\+data\+\_\+type$<$ \+\_\+scl, \+\_\+exp, \+\_\+container, 0, \+\_\+\+Args... $>$}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename \+\_\+exp $>$ }\\using \mbox{\hyperlink{namespacesymmp_1_1implementation__details_a5602e8c47c4da925281e3b202b6d29e0}{pair\+\_\+t}} = std\+::pair$<$ typename \+\_\+exp\+::deg\+\_\+t, \+\_\+exp $>$
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{namespacesymmp_1_1implementation__details_aefb818e9ad53ff1ded5d5ee51e2ea899}{has\+\_\+degree\+\_\+function}} = decltype(\mbox{\hyperlink{namespacesymmp_1_1implementation__details_a687828fe97714f636592781abb5a08fa}{test\+\_\+degree\+\_\+existence}}$<$ T $>$(0))
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{namespacesymmp_1_1implementation__details_a23d86a7934e6d6fbbf8ff73a77ab3df8}{has\+\_\+name\+\_\+function}} = decltype(\mbox{\hyperlink{namespacesymmp_1_1implementation__details_acc0549108f79ee420d1a96ffa1261b52}{test\+\_\+name\+\_\+existence}}$<$ T $>$(0))
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{namespacesymmp_1_1implementation__details_ab7876eb1557b5f91c22120e880d1b773}{has\+\_\+reserve\+\_\+function}} = decltype(\mbox{\hyperlink{namespacesymmp_1_1implementation__details_a098da2f84b058612ec73d67b6e88105a}{test\+\_\+reserve\+\_\+existence}}$<$ T $>$(0))
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\static constexpr std\+::false\+\_\+type \mbox{\hyperlink{namespacesymmp_1_1implementation__details_a687828fe97714f636592781abb5a08fa}{test\+\_\+degree\+\_\+existence}} (...)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static constexpr decltype(std\+::declval$<$ T $>$().degree(), std\+::true\+\_\+type()) \mbox{\hyperlink{namespacesymmp_1_1implementation__details_aebde95d4b5a16d2ea16716d7d69af9d4}{test\+\_\+degree\+\_\+existence}} (int)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static constexpr std\+::false\+\_\+type \mbox{\hyperlink{namespacesymmp_1_1implementation__details_acc0549108f79ee420d1a96ffa1261b52}{test\+\_\+name\+\_\+existence}} (...)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static constexpr decltype(std\+::declval$<$ T $>$().name(std\+::declval$<$ int $>$(), std\+::declval$<$ int $>$()), std\+::true\+\_\+type()) \mbox{\hyperlink{namespacesymmp_1_1implementation__details_afb7b2dd9f2dc87125a63d582267f8798}{test\+\_\+name\+\_\+existence}} (int)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static constexpr std\+::false\+\_\+type \mbox{\hyperlink{namespacesymmp_1_1implementation__details_a098da2f84b058612ec73d67b6e88105a}{test\+\_\+reserve\+\_\+existence}} (...)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static constexpr decltype(std\+::declval$<$ T $>$().reserve(std\+::declval$<$ size\+\_\+t $>$()), std\+::true\+\_\+type()) \mbox{\hyperlink{namespacesymmp_1_1implementation__details_a3a0572c7385bbd392b397c3b5ac8c2cb}{test\+\_\+reserve\+\_\+existence}} (int)
+\item 
+{\footnotesize template$<$typename T , typename S $>$ }\\std\+::pair$<$ T, S $>$ \mbox{\hyperlink{namespacesymmp_1_1implementation__details_a829a49b73f84c6dbffd473f1bff0c2ab}{operator+}} (const std\+::pair$<$ T, S $>$ \&a, const std\+::pair$<$ T, S $>$ b)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Contains various implementation details such as SFINAE. 
+
+\doxysubsubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacesymmp_1_1implementation__details_aefb818e9ad53ff1ded5d5ee51e2ea899}\label{namespacesymmp_1_1implementation__details_aefb818e9ad53ff1ded5d5ee51e2ea899}} 
+\index{symmp::implementation\_details@{symmp::implementation\_details}!has\_degree\_function@{has\_degree\_function}}
+\index{has\_degree\_function@{has\_degree\_function}!symmp::implementation\_details@{symmp::implementation\_details}}
+\doxyparagraph{\texorpdfstring{has\_degree\_function}{has\_degree\_function}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacesymmp_1_1implementation__details_aefb818e9ad53ff1ded5d5ee51e2ea899}{has\+\_\+degree\+\_\+function}} =  decltype(\mbox{\hyperlink{namespacesymmp_1_1implementation__details_a687828fe97714f636592781abb5a08fa}{test\+\_\+degree\+\_\+existence}}$<$T$>$(0))}
+
+\mbox{\Hypertarget{namespacesymmp_1_1implementation__details_a23d86a7934e6d6fbbf8ff73a77ab3df8}\label{namespacesymmp_1_1implementation__details_a23d86a7934e6d6fbbf8ff73a77ab3df8}} 
+\index{symmp::implementation\_details@{symmp::implementation\_details}!has\_name\_function@{has\_name\_function}}
+\index{has\_name\_function@{has\_name\_function}!symmp::implementation\_details@{symmp::implementation\_details}}
+\doxyparagraph{\texorpdfstring{has\_name\_function}{has\_name\_function}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacesymmp_1_1implementation__details_a23d86a7934e6d6fbbf8ff73a77ab3df8}{has\+\_\+name\+\_\+function}} =  decltype(\mbox{\hyperlink{namespacesymmp_1_1implementation__details_acc0549108f79ee420d1a96ffa1261b52}{test\+\_\+name\+\_\+existence}}$<$T$>$(0))}
+
+\mbox{\Hypertarget{namespacesymmp_1_1implementation__details_ab7876eb1557b5f91c22120e880d1b773}\label{namespacesymmp_1_1implementation__details_ab7876eb1557b5f91c22120e880d1b773}} 
+\index{symmp::implementation\_details@{symmp::implementation\_details}!has\_reserve\_function@{has\_reserve\_function}}
+\index{has\_reserve\_function@{has\_reserve\_function}!symmp::implementation\_details@{symmp::implementation\_details}}
+\doxyparagraph{\texorpdfstring{has\_reserve\_function}{has\_reserve\_function}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacesymmp_1_1implementation__details_ab7876eb1557b5f91c22120e880d1b773}{has\+\_\+reserve\+\_\+function}} =  decltype(\mbox{\hyperlink{namespacesymmp_1_1implementation__details_a098da2f84b058612ec73d67b6e88105a}{test\+\_\+reserve\+\_\+existence}}$<$T$>$(0))}
+
+\mbox{\Hypertarget{namespacesymmp_1_1implementation__details_a5602e8c47c4da925281e3b202b6d29e0}\label{namespacesymmp_1_1implementation__details_a5602e8c47c4da925281e3b202b6d29e0}} 
+\index{symmp::implementation\_details@{symmp::implementation\_details}!pair\_t@{pair\_t}}
+\index{pair\_t@{pair\_t}!symmp::implementation\_details@{symmp::implementation\_details}}
+\doxyparagraph{\texorpdfstring{pair\_t}{pair\_t}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacesymmp_1_1implementation__details_a5602e8c47c4da925281e3b202b6d29e0}{pair\+\_\+t}} =  std\+::pair$<$typename \+\_\+exp\+::deg\+\_\+t, \+\_\+exp$>$}
+
+
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{namespacesymmp_1_1implementation__details_a829a49b73f84c6dbffd473f1bff0c2ab}\label{namespacesymmp_1_1implementation__details_a829a49b73f84c6dbffd473f1bff0c2ab}} 
+\index{symmp::implementation\_details@{symmp::implementation\_details}!operator+@{operator+}}
+\index{operator+@{operator+}!symmp::implementation\_details@{symmp::implementation\_details}}
+\doxyparagraph{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily std\+::pair$<$T, S$>$ symmp\+::implementation\+\_\+details\+::operator+ (\begin{DoxyParamCaption}\item[{const std\+::pair$<$ T, S $>$ \&}]{a,  }\item[{const std\+::pair$<$ T, S $>$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacesymmp_1_1implementation__details_a687828fe97714f636592781abb5a08fa}\label{namespacesymmp_1_1implementation__details_a687828fe97714f636592781abb5a08fa}} 
+\index{symmp::implementation\_details@{symmp::implementation\_details}!test\_degree\_existence@{test\_degree\_existence}}
+\index{test\_degree\_existence@{test\_degree\_existence}!symmp::implementation\_details@{symmp::implementation\_details}}
+\doxyparagraph{\texorpdfstring{test\_degree\_existence()}{test\_degree\_existence()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static constexpr std\+::false\+\_\+type symmp\+::implementation\+\_\+details\+::test\+\_\+degree\+\_\+existence (\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacesymmp_1_1implementation__details_aebde95d4b5a16d2ea16716d7d69af9d4}\label{namespacesymmp_1_1implementation__details_aebde95d4b5a16d2ea16716d7d69af9d4}} 
+\index{symmp::implementation\_details@{symmp::implementation\_details}!test\_degree\_existence@{test\_degree\_existence}}
+\index{test\_degree\_existence@{test\_degree\_existence}!symmp::implementation\_details@{symmp::implementation\_details}}
+\doxyparagraph{\texorpdfstring{test\_degree\_existence()}{test\_degree\_existence()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static constexpr decltype(std\+::declval$<$T$>$().degree(), std\+::true\+\_\+type()) symmp\+::implementation\+\_\+details\+::test\+\_\+degree\+\_\+existence (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacesymmp_1_1implementation__details_acc0549108f79ee420d1a96ffa1261b52}\label{namespacesymmp_1_1implementation__details_acc0549108f79ee420d1a96ffa1261b52}} 
+\index{symmp::implementation\_details@{symmp::implementation\_details}!test\_name\_existence@{test\_name\_existence}}
+\index{test\_name\_existence@{test\_name\_existence}!symmp::implementation\_details@{symmp::implementation\_details}}
+\doxyparagraph{\texorpdfstring{test\_name\_existence()}{test\_name\_existence()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static constexpr std\+::false\+\_\+type symmp\+::implementation\+\_\+details\+::test\+\_\+name\+\_\+existence (\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacesymmp_1_1implementation__details_afb7b2dd9f2dc87125a63d582267f8798}\label{namespacesymmp_1_1implementation__details_afb7b2dd9f2dc87125a63d582267f8798}} 
+\index{symmp::implementation\_details@{symmp::implementation\_details}!test\_name\_existence@{test\_name\_existence}}
+\index{test\_name\_existence@{test\_name\_existence}!symmp::implementation\_details@{symmp::implementation\_details}}
+\doxyparagraph{\texorpdfstring{test\_name\_existence()}{test\_name\_existence()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static constexpr decltype(std\+::declval$<$T$>$().name(std\+::declval$<$int$>$(), std\+::declval$<$int$>$()), std\+::true\+\_\+type()) symmp\+::implementation\+\_\+details\+::test\+\_\+name\+\_\+existence (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacesymmp_1_1implementation__details_a098da2f84b058612ec73d67b6e88105a}\label{namespacesymmp_1_1implementation__details_a098da2f84b058612ec73d67b6e88105a}} 
+\index{symmp::implementation\_details@{symmp::implementation\_details}!test\_reserve\_existence@{test\_reserve\_existence}}
+\index{test\_reserve\_existence@{test\_reserve\_existence}!symmp::implementation\_details@{symmp::implementation\_details}}
+\doxyparagraph{\texorpdfstring{test\_reserve\_existence()}{test\_reserve\_existence()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static constexpr std\+::false\+\_\+type symmp\+::implementation\+\_\+details\+::test\+\_\+reserve\+\_\+existence (\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacesymmp_1_1implementation__details_a3a0572c7385bbd392b397c3b5ac8c2cb}\label{namespacesymmp_1_1implementation__details_a3a0572c7385bbd392b397c3b5ac8c2cb}} 
+\index{symmp::implementation\_details@{symmp::implementation\_details}!test\_reserve\_existence@{test\_reserve\_existence}}
+\index{test\_reserve\_existence@{test\_reserve\_existence}!symmp::implementation\_details@{symmp::implementation\_details}}
+\doxyparagraph{\texorpdfstring{test\_reserve\_existence()}{test\_reserve\_existence()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static constexpr decltype(std\+::declval$<$T$>$().reserve(std\+::declval$<$size\+\_\+t$>$()), std\+::true\+\_\+type()) symmp\+::implementation\+\_\+details\+::test\+\_\+reserve\+\_\+existence (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+

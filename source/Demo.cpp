@@ -8,7 +8,7 @@
 
 using namespace symmp;
 
-/// @brief					Writes the twisted Pontryagin (symplectic) classes \f$\pi_{s,j}\f$ (\f$\kappa_{s,j}\f$) in terms of the Chern classes under the forgetful \f$BU(n)\to BSO(n)\f$ (hermitianization \f$BU(n)\to BSp(n)\f$)
+/// @brief					Writes the twisted Pontryagin (symplectic) classes \f$\pi_{s,j}\f$ (\f$\kappa_{s,j}\f$) in terms of the Chern classes under the forgetful \f$BU(n)\to BSO(n)\f$ (quaternionization \f$BU(n)\to BSp(n)\f$)
 ///	@tparam xy_poly_t		The type of polynomial on the \f$x_i,y_i\f$ variables
 ///	@tparam chern_poly_t	The type of polynomial on the \f$\gamma_{s,j}\f$ variables
 /// @param	n				The \f$n\f$ in \f$BU(n), BSO(n), BSp(n)\f$
@@ -110,9 +110,10 @@ void show_and_tell()
 template <class scl_t, class exp_val_t, class deg_t>
 void speed_test()
 {
+	//can you get less than 24 seconds?
 	constexpr int varcount = 9;
-	typedef Poly<int64_t, HalfIdempotentVariables<uint64_t, uint64_t>, 0> xy_poly_t;
-	typedef Poly<int64_t, TwistedChernVariables<uint64_t, uint64_t>, 0> chern_poly_t;
+	typedef Poly<int64_t, HalfIdempotentVariables<uint8_t, uint16_t, 2*varcount>, 0> xy_poly_t;
+	typedef Poly<int64_t, TwistedChernVariables<uint8_t, uint16_t>, 0> chern_poly_t;
 	auto start = std::chrono::high_resolution_clock::now();
 	print_half_idempotent_relations<xy_poly_t, chern_poly_t>(varcount, 0, 0, 0);
 	auto end = std::chrono::high_resolution_clock::now();
@@ -124,8 +125,8 @@ int main()
 {
 	using namespace symmp;
 
-	show_and_tell();
-	//speed_test<int64_t,uint8_t,uint16_t>();
+	//show_and_tell();
+	speed_test<int64_t,uint8_t,uint16_t>();
 
 	//code examples follow
 

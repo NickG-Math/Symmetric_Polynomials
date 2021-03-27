@@ -7,7 +7,7 @@ var searchData=
   ['standardvariables_69',['StandardVariables',['../structsymmp_1_1StandardVariables.html',1,'symmp']]],
   ['standardvariables_3c_20int64_5ft_2c_20int64_5ft_20_3e_70',['StandardVariables&lt; int64_t, int64_t &gt;',['../structsymmp_1_1StandardVariables.html',1,'symmp']]],
   ['symmetric_5fbasis_2ehpp_71',['Symmetric_Basis.hpp',['../Symmetric__Basis_8hpp.html',1,'']]],
-  ['symmetricbasis_72',['SymmetricBasis',['../classsymmp_1_1SymmetricBasis.html',1,'SymmetricBasis&lt; x_poly_t, e_poly_t &gt;'],['../classsymmp_1_1SymmetricBasis.html#a789c16d534a7a670d86f3edfabc94ea9',1,'symmp::SymmetricBasis::SymmetricBasis()']]],
+  ['symmetricbasis_72',['SymmetricBasis',['../classsymmp_1_1SymmetricBasis.html#a789c16d534a7a670d86f3edfabc94ea9',1,'symmp::SymmetricBasis::SymmetricBasis()'],['../classsymmp_1_1SymmetricBasis.html',1,'SymmetricBasis&lt; x_poly_t, e_poly_t &gt;']]],
   ['symmp_73',['symmp',['../namespacesymmp.html',1,'']]],
   ['symmp_5fuse_5fopen_5fmp_74',['SYMMP_USE_OPEN_MP',['../Demo_8cpp.html#a327203f8354b38848f74970323af177e',1,'Demo.cpp']]]
 ];

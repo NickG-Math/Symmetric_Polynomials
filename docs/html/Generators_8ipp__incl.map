@@ -1,0 +1,11 @@
+<map id="Generators.ipp" name="Generators.ipp">
+<area shape="rect" id="node1" title="Implementation of Generators.hpp." alt="" coords="129,5,247,32"/>
+<area shape="rect" id="node2" href="$Generators_8hpp.html" title="Contains classes for generating permutations, combinations and a factory for such classes." alt="" coords="121,80,255,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,155,91,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="115,155,178,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="203,155,259,181"/>
+<area shape="rect" id="node6" href="$General_8hpp.html" title="Contains general operations on vectors: hashing, computing degrees." alt="" coords="283,155,384,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="129,229,204,256"/>
+<area shape="rect" id="node8" title=" " alt="" coords="228,229,308,256"/>
+<area shape="rect" id="node9" href="$General_8ipp.html" title="Implementation of General.hpp." alt="" coords="332,229,463,256"/>
+</map>
