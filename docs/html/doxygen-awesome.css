@@ -1,12 +1,12 @@
 :root {
     /* primary theme color. This will affect the entire websites color scheme: links, arrows, labels, ... */
     --primary-color: #1982d2;
-    --primary-dark-color: #1982d2;
+    --primary-dark-color: #00559f;
     --primary-light-color: #7aabd6;
+    --primary-lighter-color: #cae1f1;
     --primary-lightest-color: #e9f1f8;
-
     /* page base colors */
-    --page-background-color: white;
+    --page-background-color: rgb(255, 255, 255);
     --page-foreground-color: #2c3e50;
     --page-secondary-foreground-color: #67727e;
 
@@ -45,18 +45,15 @@
     --content-maxwidth: 900px;
 
     /* colors for various content boxes: @warning, @note, @deprecated @bug */
-    --warning-color: #fca49b;
-    --warning-color-dark: #b61825;
-    --warning-color-darker: #75070f;
-    --note-color: rgb(226, 162, 0);
-    --note-color-dark: #9f7300;
-    --note-color-darker: #fff6df;
-    --deprecated-color: rgb(214, 216, 224);
-    --deprecated-color-dark: #5b6269;
-    --deprecated-color-darker: #43454a;
-    --bug-color: rgb(246, 208, 178);
-    --bug-color-dark: #a53a00;
-    --bug-color-darker: #5b1d00;
+    --warning-color: rgb(255, 255, 255);
+    --warning-color-dark: hsl(0, 77%, 40%);
+    --warning-color-darker: hsl(0, 89%, 24%);
+    --attention-color: rgb(255, 255, 255);
+    --attention-color-dark: hsl(300, 77%, 40%);
+    --attention-color-darker: hsl(300, 89%, 24%);
+    --note-color: rgb(255, 255, 255);
+    --note-color-dark: hsl(120, 77%, 40%);
+    --note-color-darker: hsl(120, 89%, 24%);
 
     /* blockquote colors */
     --blockquote-background: #f5f5f5;
@@ -70,7 +67,7 @@
      * Visibility of the top navigation on screens >= 768px. On smaller screen the menu is always visible.
      * `GENERATE_TREEVIEW` MUST be enabled!
      */
-    --menu-display: none;
+    --menu-display: block;
 
     --menu-focus-foreground: var(--page-background-color);
     --menu-focus-background: var(--primary-color);
@@ -114,45 +111,6 @@
     --tree-item-height: 30px;
 
 }
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --primary-color: #1982d2;
-        --primary-dark-color: #1982d2;
-        --primary-light-color: #4779ac;
-        --primary-lighter-color: #191e21;
-        --primary-lightest-color: #191a1c;
-
-        --box-shadow: 0 2px 10px 0 rgba(0,0,0,.35);
-
-        --page-background-color: #1C1D1F;
-        --page-foreground-color: #d2dbde;
-        --page-secondary-foreground-color: #859399;
-        --separator-color: #000000;
-        --side-nav-background: #252628;
-
-        --code-background: #2a2c2f;
-
-        --tablehead-background: #2a2c2f;
-
-        --blockquote-background: #1f2022;
-        --blockquote-foreground: #77848a;
-
-        --warning-color: #b61825;
-        --warning-color-dark: #510a02;
-        --warning-color-darker: #f5b1aa;
-        --note-color: rgb(226, 162, 0);
-        --note-color-dark: #9f7300;
-        --note-color-darker: #fff6df;
-        --deprecated-color: rgb(88, 90, 96);
-        --deprecated-color-dark: #262e37;
-        --deprecated-color-darker: #a0a5b0;
-        --bug-color: rgb(248, 113, 0);
-        --bug-color-dark: #812a00;
-        --bug-color-darker: #ffd3be;
-    }
-}
-
 body {
     color: var(--page-foreground-color);
     background-color: var(--page-background-color);
@@ -232,6 +190,7 @@ a, a.el:visited, a.el:hover, a.el:focus, a.el:active {
     font-family: inherit;
     font-size: 80%;
 }
+
 
 #projectlogo {
     vertical-align: middle;
@@ -630,12 +589,6 @@ div.contents div.dyncontent {
     margin: var(--spacing-medium) 0;
 }
 
-@media (prefers-color-scheme: dark) {
-    div.contents div.dyncontent img {
-        filter: hue-rotate(180deg) invert();
-    }
-}
-
 h2.groupheader {
     border-bottom: 1px solid var(--separator-color);
     color: var(--page-foreground-color);
@@ -788,10 +741,6 @@ div.fragment .line:first-child .lineno {
     box-shadow: -9999px 0px 0 9999px var(--fragment-linenumber-background), -9998px 0px 0 9999px rgba(0,0,0,.3);
 }
 
-/*
-dl warning, attention, note, deprecated, bug, ...
- */
-
 dl.warning, dl.attention, dl.note, dl.deprecated, dl.bug {
     padding: 12px;
     margin: var(--spacing-medium) 0;
@@ -801,14 +750,24 @@ dl.warning, dl.attention, dl.note, dl.deprecated, dl.bug {
     border-radius: var(--border-radius-small);
 }
 
-dl.warning, dl.attention {
+dl.warning {
     background: var(--warning-color);
     border-left: 8px solid var(--warning-color-dark);
     color: var(--warning-color-darker);
 }
 
-dl.warning dt, dl.attention dt {
+dl.warning dt {
     color: var(--warning-color-dark);
+}
+
+dl.attention {
+    background: var(--attention-color);
+    border-left: 8px solid var(--attention-color-dark);
+    color: var(--attention-color-darker);
+}
+
+dl.attention dt {
+    color: var(--attention-color-dark);
 }
 
 dl.note {
@@ -1072,13 +1031,6 @@ table.directory {
     filter: saturate(0.2);
 }
 
-@media (prefers-color-scheme: dark) {
-    .iconfopen, .iconfclosed {
-        filter: hue-rotate(180deg) invert();
-    }
-}
-
-
 /*
   footer / nav-path
  */
@@ -1154,18 +1106,65 @@ li.navelem:first-child:before {
     margin-right: var(--spacing-small);
 }
 
-@media (prefers-color-scheme: dark) {
-    #nav-path li.navelem:after {
-        text-shadow: 3px 0 0 var(--separator-color), 8px 0 6px rgba(0,0,0,0.4);
-    }
-}
-
 .navpath li.navelem a:hover {
     color: var(--primary-color);
 }
 
+
+
+
+
+@media (prefers-color-scheme: dark) {
+    #projectlogo img {
+       filter: invert(92%) sepia(13%) saturate(187%) hue-rotate(181deg) brightness(98%) contrast(92%);
+    }
+    #nav-path li.navelem:after {
+        text-shadow: 3px 0 0 var(--separator-color), 8px 0 6px rgba(0,0,0,0.4);
+    }
+    .icondoc, .iconfopen, .iconfclosed {
+        filter: hue-rotate(180deg) invert();
+    }
+    /*
+    #nav-sync img {
+        filter:  sepia(13%) saturate(187%) hue-rotate(181deg) brightness(98%) contrast(92%);
+    }
+    */
+    div.contents div.dyncontent img {
+        filter: hue-rotate(180deg) invert();
+    }
+    :root {
+        --primary-color: #1982d2;
+        --primary-dark-color: #1982d2;
+        --primary-light-color: #4779ac;
+        --primary-lighter-color: #191e21;
+        --primary-lightest-color: #191a1c;
+
+        --box-shadow: 0 2px 10px 0 rgba(0,0,0,.35);
+
+        --page-background-color: #1C1D1F;
+        --page-foreground-color: #d2dbde;
+        --page-secondary-foreground-color: #859399;
+        --separator-color: #000000;
+        --side-nav-background: #252628;
+
+        --warning-color-darker: rgb(255, 255, 255);
+        --attention-color-darker: rgb(255, 255, 255);
+        --note-color-darker: rgb(255, 255, 255);
+        --warning-color: #1C1D1F;
+        --attention-color: #1C1D1F;
+        --note-color: #1C1D1F;
+    
+        --code-background: #2a2c2f;
+
+        --tablehead-background: #2a2c2f;
+
+        --blockquote-background: #1f2022;
+        --blockquote-foreground: #77848a;
+    }
+}
+
 .icondoc {
-	background-image: url('folder.png');
+	background-image: url('code.png');
 	background-size: contain;
 	background-position: center;
 }

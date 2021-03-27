@@ -25,7 +25,7 @@ namespace symmp
 		typedef _deg deg_t; ///<Degree typedef
 
 		///	@brief	Computes degree of monomial on standard variables \f$x_i\f$
-		///	@return Degree \f$\sum_ia_i\f$ for monomial \f$x_1^{a_1}\cdots x_n^{a_n}\f$ (*this=\f$[a_1,...,a_n]\f$)
+		///	@return Degree \f$\sum_ia_i\f$ for monomial \f$x_1^{a_1}\cdots x_n^{a_n}\f$ (```*this```=\f$[a_1,...,a_n]\f$)
 		deg_t degree() const;
 
 		///	@brief		Returns the names of the standard variables \f$x_i\f$
@@ -35,11 +35,12 @@ namespace symmp
 		static std::string name(int i, int n);
 
 		///	@brief		Multiplies monomials by adding their exponents
-		///	@return 	Degree \f$[a_1+b_1,...,a_n+b_n]\f$ where *this=\f$[a_1,...,a_n]\f$
-		///	@param 	b 	Second exponent \f$[b_1,...,b_n]\f$
+		///	@param 	b 	The exponent \f$[b_1,...,b_n]\f$ we add to ```*this```=\f$[a_1,...,a_n]\f$
+		///	@return 	Degree \f$[a_1+b_1,...,a_n+b_n]\f$
 		StandardVariables operator+(const StandardVariables &b) const;
 
-		///Returns hash of monomial
+		/// @brief	Hashes monomial
+		/// @return Hash of exponent vector (calls \ref generic_hasher)
 		size_t operator()() const;
 	};
 
@@ -56,7 +57,7 @@ namespace symmp
 		typedef _deg deg_t; ///<Degree typedef
 
 		///	@brief	Computes degree of monomial on the \f$e_i\f$
-		///	@return Degree \f$\sum_iia_i\f$ for monomial \f$e_1^{a_1}\cdots e_n^{a_n}\f$
+		///	@return Degree \f$\sum_iia_i\f$ when ```*this```=\f$e_1^{a_1}\cdots e_n^{a_n}\f$
 		deg_t degree() const;
 
 		///	@brief		Returns the name of the variables \f$e_i\f$
@@ -69,7 +70,7 @@ namespace symmp
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	///	@brief					Factory class that provides the general interface of a generating basis for a subring of a polynomial ring.
 	///	@details				Inherit from this class and construct data member \ref _generators through the child class (and optionally \ref generator_names and \ref generator_dimensions). \n
-	///							The child class must also have a method \c find_exponent with singature:
+	///							The child class must also have a method \c find_exponent with signature:
 	///							\code typename new_poly_t::exp_t find_exponent(const typename orig_poly_t::exp_t&); \endcode
 	///							Example implementations are \c SymmetricBasis and \c TwistedChernBasis.
 	///	@tparam spec_t  		Used for compile-time polymorphism (CRTP): must be the child class.
@@ -95,13 +96,13 @@ namespace symmp
 		PolynomialBasis(int num);
 
 		///	@brief	Returns vector containing the generating basis
-		const std::vector<orig_poly_t> & generators() const;
+		const std::vector<orig_poly_t> &generators() const;
 
 		///	@brief	Returns vector containing the dimensions of the generating basis (can be empty!)
-		const std::vector<typename new_poly_t::deg_t> & dimensions() const;
+		const std::vector<typename new_poly_t::deg_t> &dimensions() const;
 
 		///	@brief	Returns vector containing the names of the generating basis (can be empty!)
-		const std::vector<std::string>& names() const ;
+		const std::vector<std::string> &names() const;
 
 		///	@brief	The number of (the original) variables of the polynomial ring
 		const int number_of_variables;
@@ -141,7 +142,7 @@ namespace symmp
 		x_poly_t get_elementary_symmetric(int i) const;
 		auto find_exponent(const x_t &term) const -> e_t;
 
-		///Befriending parent for CRTP.
+		///	@brief	Befriending parent for CRTP.
 		friend class PolynomialBasis<SymmetricBasis<x_poly_t, e_poly_t>, x_poly_t, e_poly_t>;
 	};
 }

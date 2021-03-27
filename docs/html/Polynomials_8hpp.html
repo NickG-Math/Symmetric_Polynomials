@@ -126,10 +126,10 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsymmp_1_1Polynomial.html">Polynomial&lt; _scl, _exp, _container, _ordered, _Args &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsymmp_1_1Polynomial.html">Polynomial&lt; _scl, _exp, _cnt, _ord, _arg &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for polynomials in multiple variables with relations.  <a href="classsymmp_1_1Polynomial.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsymmp_1_1Polynomial_1_1constIterator.html">Polynomial&lt; _scl, _exp, _container, _ordered, _Args &gt;::constIterator</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsymmp_1_1Polynomial_1_1constIterator.html">Polynomial&lt; _scl, _exp, _cnt, _ord, _arg &gt;::constIterator</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant iterator through the monomials of the polynomial.  <a href="classsymmp_1_1Polynomial_1_1constIterator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -141,21 +141,17 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a2ab4ba4bf25e718d78428e1b04332a2a"><td class="memTemplParams" colspan="2">template&lt;class _scl , class _exp &gt; </td></tr>
-<tr class="memitem:a2ab4ba4bf25e718d78428e1b04332a2a"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesymmp.html#a2ab4ba4bf25e718d78428e1b04332a2a">OrderedPolynomial</a> = Polynomial&lt; _scl, _exp, std::map, 1 &gt;</td></tr>
-<tr class="memdesc:a2ab4ba4bf25e718d78428e1b04332a2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A polynomial whose monomials are stored in increasing order.  <a href="namespacesymmp.html#a2ab4ba4bf25e718d78428e1b04332a2a">More...</a><br /></td></tr>
-<tr class="separator:a2ab4ba4bf25e718d78428e1b04332a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98be2a062a750720284f9cedf3193973"><td class="memTemplParams" colspan="2">template&lt;class _scl , class _exp , bool ordered = 1&gt; </td></tr>
-<tr class="memitem:a98be2a062a750720284f9cedf3193973"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesymmp.html#a98be2a062a750720284f9cedf3193973">Poly</a> = std::conditional_t&lt; ordered, Polynomial&lt; _scl, _exp, std::map, 1 &gt;, Polynomial&lt; _scl, _exp, std::unordered_map, 0 &gt; &gt;</td></tr>
-<tr class="memdesc:a98be2a062a750720284f9cedf3193973"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classsymmp_1_1Polynomial.html" title="Class for polynomials in multiple variables with relations.">Polynomial</a> using the default containers <code>std::map</code> or <code>std::unordered_map</code>.  <a href="namespacesymmp.html#a98be2a062a750720284f9cedf3193973">More...</a><br /></td></tr>
-<tr class="separator:a98be2a062a750720284f9cedf3193973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d8731bb8f8a2bcae57cac18301374bc"><td class="memTemplParams" colspan="2">template&lt;class _scl , class _exp , bool _ord = 1&gt; </td></tr>
+<tr class="memitem:a1d8731bb8f8a2bcae57cac18301374bc"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesymmp.html#a1d8731bb8f8a2bcae57cac18301374bc">Poly</a> = std::conditional_t&lt; _ord, Polynomial&lt; _scl, _exp, std::map, 1 &gt;, Polynomial&lt; _scl, _exp, std::unordered_map, 0 &gt; &gt;</td></tr>
+<tr class="memdesc:a1d8731bb8f8a2bcae57cac18301374bc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classsymmp_1_1Polynomial.html" title="Class for polynomials in multiple variables with relations.">Polynomial</a> using the default containers <code>std::map</code> or <code>std::unordered_map</code>.  <a href="namespacesymmp.html#a1d8731bb8f8a2bcae57cac18301374bc">More...</a><br /></td></tr>
+<tr class="separator:a1d8731bb8f8a2bcae57cac18301374bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a763c01e07891034c496e5221b8474988"><td class="memTemplParams" colspan="2">template&lt;class scl_t , class exp_t , template&lt; class... &gt; class container_t, bool _ordered, class ... Args&gt; </td></tr>
-<tr class="memitem:a763c01e07891034c496e5221b8474988"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesymmp.html#a763c01e07891034c496e5221b8474988">operator&lt;&lt;</a> (std::ostream &amp;os, const Polynomial&lt; scl_t, exp_t, container_t, _ordered, Args... &gt; &amp;a)</td></tr>
-<tr class="memdesc:a763c01e07891034c496e5221b8474988"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints polynomial to output stream.  <a href="namespacesymmp.html#a763c01e07891034c496e5221b8474988">More...</a><br /></td></tr>
-<tr class="separator:a763c01e07891034c496e5221b8474988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73f033c5be58c4b145303b459b7ac29c"><td class="memTemplParams" colspan="2">template&lt;class _scl , class _exp , template&lt; class... &gt; class _cnt, bool _ord, class ... _arg&gt; </td></tr>
+<tr class="memitem:a73f033c5be58c4b145303b459b7ac29c"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesymmp.html#a73f033c5be58c4b145303b459b7ac29c">operator&lt;&lt;</a> (std::ostream &amp;os, const Polynomial&lt; _scl, _exp, _cnt, _ord, _arg... &gt; &amp;a)</td></tr>
+<tr class="memdesc:a73f033c5be58c4b145303b459b7ac29c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints polynomial to output stream.  <a href="namespacesymmp.html#a73f033c5be58c4b145303b459b7ac29c">More...</a><br /></td></tr>
+<tr class="separator:a73f033c5be58c4b145303b459b7ac29c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains the class of polynomials in multiple variables. </p>

@@ -6,7 +6,7 @@ var indexSectionsWithContent =
   3: "dghps",
   4: "abcdeghimnoprst",
   5: "_cgn",
-  6: "deops",
+  6: "deps",
   7: "cfop",
   8: "s",
   9: "ght"

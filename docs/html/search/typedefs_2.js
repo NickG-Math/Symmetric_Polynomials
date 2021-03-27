@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['orderedpolynomial_159',['OrderedPolynomial',['../namespacesymmp.html#a2ab4ba4bf25e718d78428e1b04332a2a',1,'symmp']]]
+  ['poly_158',['Poly',['../namespacesymmp.html#a1d8731bb8f8a2bcae57cac18301374bc',1,'symmp']]]
 ];

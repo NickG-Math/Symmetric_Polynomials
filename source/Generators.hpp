@@ -10,24 +10,25 @@
 namespace symmp
 {
 
-	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////
 	///	@brief			Prototype for coroutine-like iterators that generate elements such as combinations.
 	///	@details		Inherit from this class and define a method update() to get a const iterator. \n
-	///					You will also need begin() and end() methods constructing such iterators; end() should always be defined by calling the factory end().\n
+	///					You will also need \c begin() and \c end() methods returning such iterators;
+	///					\c end() should always be defined by calling the factory \c end() .\n
 	///					Example implementations: \c CombinationGenerator and \c PermutationGenerator
 	///	@attention		Probably not thread-safe (depends on specialization's \c update() method).
 	///	@todo			Implement as coroutine (C++20)
 	///	@tparam	spec_t	Used for compile-time polymorphism (CRTP): set it to be the child class.
 	///	@tparam	gen_t	The type of the generated element.
-	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////
 	template <class spec_t, class gen_t>
 	class FactoryGenerator
 	{
 	public:
-		const gen_t& operator*() const;						   ///<Returns the generated element
-		bool operator!=(const FactoryGenerator& other) const; ///<Inequality of iterators (used to detect if generation has been completed)
-		spec_t& operator++();								   ///<Generates next element
-		static spec_t end();								   ///<Terminal iterator
+		const gen_t &operator*() const;						  ///<Returns the generated element
+		bool operator!=(const FactoryGenerator &other) const; ///<Inequality of iterators (used to detect if generation has been completed)
+		spec_t &operator++();								  ///<Generates next element
+		static spec_t end();								  ///<Terminal iterator
 	protected:
 		bool completed;	 ///<1 if the iterator is end() i.e. if all elements have been generated
 		gen_t generated; ///<The currently generated element
@@ -35,7 +36,8 @@ namespace symmp
 
 	////////////////////////////////////////////////////////////////////////////////////////
 	///	@brief		Generates all permutations on a number of letters
-	///	@details	Use with a ranged for loop: \code for (const auto& i:v) {...} \endcode where \c v is a \c PermutationGenerator object. Then \c i will be a permutation
+	///	@details	Use with a ranged for loop: If \c v is a \c PermutationGenerator object then in
+	///				\code for (const auto& i:v) {...} \endcode the variable \c i will range over all permutations.
 	///	@warning	Not thread safe!
 	///	@todo		Implement via coroutine (C++20)
 	///	@tparam T	The data type of our permutations eg \c std::vector<int>
@@ -59,7 +61,7 @@ namespace symmp
 		class constIterator : public FactoryGenerator<PermutationGenerator::constIterator, std::vector<T>>
 		{
 			void update();
-			friend class PermutationGenerator;													   ///<Befriending outer class
+			friend class PermutationGenerator;													///<Befriending outer class
 			friend class FactoryGenerator<PermutationGenerator::constIterator, std::vector<T>>; ///<Befriending parent
 		};
 
@@ -72,13 +74,14 @@ namespace symmp
 		constIterator end() const;
 	};
 
-	////////////////////////////////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	///	@brief		Generates all combinations on a number of letters making a number of choices
-	///	@details	Use with a ranged for loop: \code for (const auto& i:v) {...} \endcode where \c v is a \c CombinationGenerator object. Then \c i will be a combination
+	///	@details	Use with a ranged for loop: If \c v is a \c CombinationGenerator object then in
+	///				\code for (const auto& i:v) {...} \endcode the variable \c i will range over all combinations.
 	///	@warning	Not thread safe!
 	///	@todo		Implement via coroutine (C++20)
 	///	@tparam  T	The data type of our combinations eg \c std::vector<int>
-	//////////////////////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	template <class T>
 	class CombinationGenerator
 	{
@@ -99,8 +102,8 @@ namespace symmp
 		class constIterator : public FactoryGenerator<CombinationGenerator::constIterator, std::vector<T>>
 		{
 			void update();
-			friend class CombinationGenerator;													   	///<Befriending outer class
-			friend class FactoryGenerator<CombinationGenerator::constIterator, std::vector<T>>; 	///<Befriending parent
+			friend class CombinationGenerator;													///<Befriending outer class
+			friend class FactoryGenerator<CombinationGenerator::constIterator, std::vector<T>>; ///<Befriending parent
 			T total, choices;
 		};
 
@@ -113,18 +116,18 @@ namespace symmp
 		constIterator end() const;
 	};
 
-	///@brief		Returns vector of all permutations on \p n letters
-	///@tparam	T	The value type of the permutations
-	///@param	n	The number of letters
-	///@return		Vector of vectors each of which is \f$[a_1,...,a_n]\f$ with \f$0\le a_i\le n\f$ all distinct
+	///	@brief		Returns vector of all permutations on \p n letters
+	///	@tparam	T	The value type of the permutations
+	///	@param	n	The number of letters
+	///	@return		Vector of vectors each of which is \f$[a_0,...,a_{n-1}]\f$ with \f$0\le a_i\le n-1\f$ all distinct
 	template <class T>
 	std::vector<std::vector<T>> all_permutations(T n);
 
-	///@brief		Returns vector of all combinations on \p n letters choosing \p m many
-	///@tparam	T	The value type of the combinations
-	///@param	n	The number of letters
-	///@param	m	The number of choices
-	///@return		Vector of vectors each of which is \f$[a_1,...,a_n]\f$ with \f$0\le a_i\le n\f$ all distinct
+	///	@brief		Returns vector of all combinations on \p n letters choosing \p m many
+	///	@tparam	T	The value type of the combinations
+	///	@param	n	The number of letters
+	///	@param	m	The number of choices
+	///	@return		Vector of vectors each of which is \f$[a_0,...,a_{n-1}]\f$ with \f$0\le a_i\le n-1\f$ all distinct
 	template <class T>
 	std::vector<std::vector<T>> all_combinations(T n, T m);
 }

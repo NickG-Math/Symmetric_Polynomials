@@ -1,5 +1,0 @@
-<map id="PermutationGenerator&lt; T &gt;::constIterator" name="PermutationGenerator&lt; T &gt;::constIterator">
-<area shape="rect" id="node1" title="Constant iterator that is used in a ranged for loop to generate the permutations." alt="" coords="37,244,203,285"/>
-<area shape="rect" id="node2" href="$classSymmetric__Polynomials_1_1FactoryGenerator.html" title=" " alt="" coords="5,139,235,195"/>
-<area shape="rect" id="node3" href="$classSymmetric__Polynomials_1_1FactoryGenerator.html" title="Prototype for coroutine&#45;like iterators that generate elements such as interpolating vectors,..." alt="" coords="31,5,209,47"/>
-</map>

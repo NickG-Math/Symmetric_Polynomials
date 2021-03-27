@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Symmetric Polynomials: TwistedChernBasis&lt; _xy_poly_t, _chern_poly_t &gt; Class Template Reference</title>
+<title>Symmetric Polynomials: TwistedChernBasis&lt; xy_poly_t, chern_poly_t &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -97,21 +97,21 @@ $(document).ready(function(){initNavTree('classsymmp_1_1TwistedChernBasis.html',
 <a href="#friends">Friends</a> &#124;
 <a href="classsymmp_1_1TwistedChernBasis-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">TwistedChernBasis&lt; _xy_poly_t, _chern_poly_t &gt; Class Template Reference</div>  </div>
+<div class="title">TwistedChernBasis&lt; xy_poly_t, chern_poly_t &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Class for half-idempotent symmetric polynomials, facilitating transformation from \(x_i,y_i\) variables to \(\gamma_{s,i}\) variables and vice-versa.  
+<p>Class for half-idempotent symmetric polynomials.  
  <a href="classsymmp_1_1TwistedChernBasis.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Half__Idempotent_8hpp_source.html">Half_Idempotent.hpp</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for TwistedChernBasis&lt; _xy_poly_t, _chern_poly_t &gt;:</div>
+Inheritance diagram for TwistedChernBasis&lt; xy_poly_t, chern_poly_t &gt;:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classsymmp_1_1TwistedChernBasis__inherit__graph.svg" width="100%" height="379"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
-Collaboration diagram for TwistedChernBasis&lt; _xy_poly_t, _chern_poly_t &gt;:</div>
+Collaboration diagram for TwistedChernBasis&lt; xy_poly_t, chern_poly_t &gt;:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classsymmp_1_1TwistedChernBasis__coll__graph.svg" width="100%" height="488"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
@@ -121,23 +121,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac7575ec94e4f485235a1ddff85f6446a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsymmp_1_1TwistedChernBasis.html#ac7575ec94e4f485235a1ddff85f6446a">TwistedChernBasis</a> (int n)</td></tr>
 <tr class="memdesc:ac7575ec94e4f485235a1ddff85f6446a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the generators and the relation set given \(n\) in \(x_1,...,x_n,y_1,...,y_n\).  <a href="classsymmp_1_1TwistedChernBasis.html#ac7575ec94e4f485235a1ddff85f6446a">More...</a><br /></td></tr>
 <tr class="separator:ac7575ec94e4f485235a1ddff85f6446a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af336c73e3990b2a95c27ca79376edb3c"><td class="memItemLeft" align="right" valign="top">const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsymmp_1_1TwistedChernBasis.html#af336c73e3990b2a95c27ca79376edb3c">relations</a> () const</td></tr>
-<tr class="memdesc:af336c73e3990b2a95c27ca79376edb3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the relations \(\gamma_{s,i}\gamma_{t,j}\) for \(0&lt;s&lt;=t&lt;=s+i\) and \(i,j&gt;0\).  <a href="classsymmp_1_1TwistedChernBasis.html#af336c73e3990b2a95c27ca79376edb3c">More...</a><br /></td></tr>
-<tr class="separator:af336c73e3990b2a95c27ca79376edb3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad05b1690e2698e5b50ead06cd6aadd0a"><td class="memItemLeft" align="right" valign="top">const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsymmp_1_1TwistedChernBasis.html#ad05b1690e2698e5b50ead06cd6aadd0a">generator</a> (int s, int j) const</td></tr>
-<tr class="memdesc:ad05b1690e2698e5b50ead06cd6aadd0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns generator \(\gamma_{s,j}\).  <a href="classsymmp_1_1TwistedChernBasis.html#ad05b1690e2698e5b50ead06cd6aadd0a">More...</a><br /></td></tr>
-<tr class="separator:ad05b1690e2698e5b50ead06cd6aadd0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classsymmp_1_1PolynomialBasis"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classsymmp_1_1PolynomialBasis')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classsymmp_1_1PolynomialBasis.html">PolynomialBasis&lt; TwistedChernBasis&lt; _xy_poly_t, _chern_poly_t &gt;, _xy_poly_t, _chern_poly_t &gt;</a></td></tr>
-<tr class="memitem:a307c7fbab53286641f9b551f6837e527 inherit pub_methods_classsymmp_1_1PolynomialBasis"><td class="memItemLeft" align="right" valign="top">_chern_poly_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsymmp_1_1PolynomialBasis.html#a307c7fbab53286641f9b551f6837e527">operator()</a> (_xy_poly_t a) const</td></tr>
+<tr class="memitem:a5b6a7b873d0f28f014ba1d4454fd0b1b"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; chern_poly_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsymmp_1_1TwistedChernBasis.html#a5b6a7b873d0f28f014ba1d4454fd0b1b">relations</a> () const</td></tr>
+<tr class="memdesc:a5b6a7b873d0f28f014ba1d4454fd0b1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The relations are \(\gamma_{s,i}\gamma_{t,j}\) for \(0&lt;s&lt;=t&lt;=s+i\) and \(i,j&gt;0\).  <a href="classsymmp_1_1TwistedChernBasis.html#a5b6a7b873d0f28f014ba1d4454fd0b1b">More...</a><br /></td></tr>
+<tr class="separator:a5b6a7b873d0f28f014ba1d4454fd0b1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abff1278d9e7f0d1005cd840c468806e0"><td class="memItemLeft" align="right" valign="top">const xy_poly_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsymmp_1_1TwistedChernBasis.html#abff1278d9e7f0d1005cd840c468806e0">generator</a> (int s, int j) const</td></tr>
+<tr class="memdesc:abff1278d9e7f0d1005cd840c468806e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The generator \(\gamma_{s,j}\).  <a href="classsymmp_1_1TwistedChernBasis.html#abff1278d9e7f0d1005cd840c468806e0">More...</a><br /></td></tr>
+<tr class="separator:abff1278d9e7f0d1005cd840c468806e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classsymmp_1_1PolynomialBasis"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classsymmp_1_1PolynomialBasis')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classsymmp_1_1PolynomialBasis.html">PolynomialBasis&lt; TwistedChernBasis&lt; xy_poly_t, chern_poly_t &gt;, xy_poly_t, chern_poly_t &gt;</a></td></tr>
+<tr class="memitem:a307c7fbab53286641f9b551f6837e527 inherit pub_methods_classsymmp_1_1PolynomialBasis"><td class="memItemLeft" align="right" valign="top">chern_poly_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsymmp_1_1PolynomialBasis.html#a307c7fbab53286641f9b551f6837e527">operator()</a> (xy_poly_t a) const</td></tr>
 <tr class="memdesc:a307c7fbab53286641f9b551f6837e527 inherit pub_methods_classsymmp_1_1PolynomialBasis"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform a polynomial on the original variables to one on the generating basis.  <a href="classsymmp_1_1PolynomialBasis.html#a307c7fbab53286641f9b551f6837e527">More...</a><br /></td></tr>
 <tr class="separator:a307c7fbab53286641f9b551f6837e527 inherit pub_methods_classsymmp_1_1PolynomialBasis"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c37a37c306f85607e797b0556f0841b inherit pub_methods_classsymmp_1_1PolynomialBasis"><td class="memItemLeft" align="right" valign="top">_xy_poly_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsymmp_1_1PolynomialBasis.html#a5c37a37c306f85607e797b0556f0841b">operator()</a> (const _chern_poly_t &amp;a) const</td></tr>
+<tr class="memitem:a5c37a37c306f85607e797b0556f0841b inherit pub_methods_classsymmp_1_1PolynomialBasis"><td class="memItemLeft" align="right" valign="top">xy_poly_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsymmp_1_1PolynomialBasis.html#a5c37a37c306f85607e797b0556f0841b">operator()</a> (const chern_poly_t &amp;a) const</td></tr>
 <tr class="memdesc:a5c37a37c306f85607e797b0556f0841b inherit pub_methods_classsymmp_1_1PolynomialBasis"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform a polynomial on the generating basis into a polynomial on the original variables.  <a href="classsymmp_1_1PolynomialBasis.html#a5c37a37c306f85607e797b0556f0841b">More...</a><br /></td></tr>
 <tr class="separator:a5c37a37c306f85607e797b0556f0841b inherit pub_methods_classsymmp_1_1PolynomialBasis"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af827502e99a9af3098fc4b71d758305d inherit pub_methods_classsymmp_1_1PolynomialBasis"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsymmp_1_1PolynomialBasis.html#af827502e99a9af3098fc4b71d758305d">PolynomialBasis</a> (int num)</td></tr>
 <tr class="memdesc:af827502e99a9af3098fc4b71d758305d inherit pub_methods_classsymmp_1_1PolynomialBasis"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor given number of variables.  <a href="classsymmp_1_1PolynomialBasis.html#af827502e99a9af3098fc4b71d758305d">More...</a><br /></td></tr>
 <tr class="separator:af827502e99a9af3098fc4b71d758305d inherit pub_methods_classsymmp_1_1PolynomialBasis"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ff5995862b2fe5ff087ad965ace9ce0 inherit pub_methods_classsymmp_1_1PolynomialBasis"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; _xy_poly_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsymmp_1_1PolynomialBasis.html#a9ff5995862b2fe5ff087ad965ace9ce0">generators</a> () const</td></tr>
+<tr class="memitem:a9ff5995862b2fe5ff087ad965ace9ce0 inherit pub_methods_classsymmp_1_1PolynomialBasis"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; xy_poly_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsymmp_1_1PolynomialBasis.html#a9ff5995862b2fe5ff087ad965ace9ce0">generators</a> () const</td></tr>
 <tr class="memdesc:a9ff5995862b2fe5ff087ad965ace9ce0 inherit pub_methods_classsymmp_1_1PolynomialBasis"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns vector containing the generating basis.  <a href="classsymmp_1_1PolynomialBasis.html#a9ff5995862b2fe5ff087ad965ace9ce0">More...</a><br /></td></tr>
 <tr class="separator:a9ff5995862b2fe5ff087ad965ace9ce0 inherit pub_methods_classsymmp_1_1PolynomialBasis"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d67ff6506038615b9d969fb074f1187 inherit pub_methods_classsymmp_1_1PolynomialBasis"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; typename new_poly_t::deg_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsymmp_1_1PolynomialBasis.html#a8d67ff6506038615b9d969fb074f1187">dimensions</a> () const</td></tr>
@@ -149,18 +149,18 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:af1bc455e9f6455ac3496b871f2e06938"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsymmp_1_1TwistedChernBasis.html#af1bc455e9f6455ac3496b871f2e06938">PolynomialBasis&lt; TwistedChernBasis&lt; _xy_poly_t, _chern_poly_t &gt;, _xy_poly_t, _chern_poly_t &gt;</a></td></tr>
-<tr class="memdesc:af1bc455e9f6455ac3496b871f2e06938"><td class="mdescLeft">&#160;</td><td class="mdescRight">Befriending parent for CRTP.  <a href="classsymmp_1_1TwistedChernBasis.html#af1bc455e9f6455ac3496b871f2e06938">More...</a><br /></td></tr>
-<tr class="separator:af1bc455e9f6455ac3496b871f2e06938"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26ee995db1b6082d5524ec91614d8439"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsymmp_1_1TwistedChernBasis.html#a26ee995db1b6082d5524ec91614d8439">PolynomialBasis&lt; TwistedChernBasis&lt; xy_poly_t, chern_poly_t &gt;, xy_poly_t, chern_poly_t &gt;</a></td></tr>
+<tr class="memdesc:a26ee995db1b6082d5524ec91614d8439"><td class="mdescLeft">&#160;</td><td class="mdescRight">Befriending parent for CRTP.  <a href="classsymmp_1_1TwistedChernBasis.html#a26ee995db1b6082d5524ec91614d8439">More...</a><br /></td></tr>
+<tr class="separator:a26ee995db1b6082d5524ec91614d8439"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_attribs_classsymmp_1_1PolynomialBasis"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classsymmp_1_1PolynomialBasis')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classsymmp_1_1PolynomialBasis.html">PolynomialBasis&lt; TwistedChernBasis&lt; _xy_poly_t, _chern_poly_t &gt;, _xy_poly_t, _chern_poly_t &gt;</a></td></tr>
+<tr class="inherit_header pub_attribs_classsymmp_1_1PolynomialBasis"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classsymmp_1_1PolynomialBasis')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classsymmp_1_1PolynomialBasis.html">PolynomialBasis&lt; TwistedChernBasis&lt; xy_poly_t, chern_poly_t &gt;, xy_poly_t, chern_poly_t &gt;</a></td></tr>
 <tr class="memitem:a53478d561136aaf2d8dc3ffddb8696ea inherit pub_attribs_classsymmp_1_1PolynomialBasis"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsymmp_1_1PolynomialBasis.html#a53478d561136aaf2d8dc3ffddb8696ea">number_of_variables</a></td></tr>
 <tr class="memdesc:a53478d561136aaf2d8dc3ffddb8696ea inherit pub_attribs_classsymmp_1_1PolynomialBasis"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of (the original) variables of the polynomial ring.  <a href="classsymmp_1_1PolynomialBasis.html#a53478d561136aaf2d8dc3ffddb8696ea">More...</a><br /></td></tr>
 <tr class="separator:a53478d561136aaf2d8dc3ffddb8696ea inherit pub_attribs_classsymmp_1_1PolynomialBasis"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_classsymmp_1_1PolynomialBasis"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classsymmp_1_1PolynomialBasis')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classsymmp_1_1PolynomialBasis.html">PolynomialBasis&lt; TwistedChernBasis&lt; _xy_poly_t, _chern_poly_t &gt;, _xy_poly_t, _chern_poly_t &gt;</a></td></tr>
-<tr class="memitem:a82a0b79e96aec4dde7f31917dd46fc44 inherit pro_attribs_classsymmp_1_1PolynomialBasis"><td class="memItemLeft" align="right" valign="top">std::vector&lt; _xy_poly_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsymmp_1_1PolynomialBasis.html#a82a0b79e96aec4dde7f31917dd46fc44">_generators</a></td></tr>
+<tr class="inherit_header pro_attribs_classsymmp_1_1PolynomialBasis"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classsymmp_1_1PolynomialBasis')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classsymmp_1_1PolynomialBasis.html">PolynomialBasis&lt; TwistedChernBasis&lt; xy_poly_t, chern_poly_t &gt;, xy_poly_t, chern_poly_t &gt;</a></td></tr>
+<tr class="memitem:a82a0b79e96aec4dde7f31917dd46fc44 inherit pro_attribs_classsymmp_1_1PolynomialBasis"><td class="memItemLeft" align="right" valign="top">std::vector&lt; xy_poly_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsymmp_1_1PolynomialBasis.html#a82a0b79e96aec4dde7f31917dd46fc44">_generators</a></td></tr>
 <tr class="memdesc:a82a0b79e96aec4dde7f31917dd46fc44 inherit pro_attribs_classsymmp_1_1PolynomialBasis"><td class="mdescLeft">&#160;</td><td class="mdescRight">The generators of the polynomial basis, constructed in the inheriting class.  <a href="classsymmp_1_1PolynomialBasis.html#a82a0b79e96aec4dde7f31917dd46fc44">More...</a><br /></td></tr>
 <tr class="separator:a82a0b79e96aec4dde7f31917dd46fc44 inherit pro_attribs_classsymmp_1_1PolynomialBasis"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afba7b5d8ad929bf149ad3fc0b35d06ec inherit pro_attribs_classsymmp_1_1PolynomialBasis"><td class="memItemLeft" align="right" valign="top">std::vector&lt; typename new_poly_t::deg_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsymmp_1_1PolynomialBasis.html#afba7b5d8ad929bf149ad3fc0b35d06ec">generator_dimensions</a></td></tr>
@@ -171,14 +171,14 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a4867a7fd4fad1c2ce7a65656ee5a0bd7 inherit pro_attribs_classsymmp_1_1PolynomialBasis"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;class _xy_poly_t, class _chern_poly_t&gt;<br />
-class symmp::TwistedChernBasis&lt; _xy_poly_t, _chern_poly_t &gt;</h3>
+<div class="textblock"><h3>template&lt;class xy_poly_t, class chern_poly_t&gt;<br />
+class symmp::TwistedChernBasis&lt; xy_poly_t, chern_poly_t &gt;</h3>
 
-<p>Class for half-idempotent symmetric polynomials, facilitating transformation from \(x_i,y_i\) variables to \(\gamma_{s,i}\) variables and vice-versa. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
+<p>Class for half-idempotent symmetric polynomials. </p>
+<p>Facilitates transformation from \(x_i,y_i\) variables to \(\gamma_{s,i}\) variables and vice-versa. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">_xy_poly_t</td><td>The container type on the <a class="el" href="structsymmp_1_1HalfIdempotentVariables.html" title="Variables  with  and , .">HalfIdempotentVariables</a> \(x_i,y_i\) </td></tr>
-    <tr><td class="paramname">_chern_poly_t</td><td>The container type on the <a class="el" href="structsymmp_1_1TwistedChernVariables.html" title="The twisted Chern generators as variables .">TwistedChernVariables</a> \(\gamma_{s,j}\) </td></tr>
+    <tr><td class="paramname">xy_poly_t</td><td>The container type on the <a class="el" href="structsymmp_1_1HalfIdempotentVariables.html" title="Variables  with  and , .">HalfIdempotentVariables</a> \(x_i,y_i\) </td></tr>
+    <tr><td class="paramname">chern_poly_t</td><td>The container type on the <a class="el" href="structsymmp_1_1TwistedChernVariables.html" title="The twisted Chern generators as variables .">TwistedChernVariables</a> \(\gamma_{s,j}\) </td></tr>
   </table>
   </dd>
 </dl>
@@ -211,14 +211,14 @@ class symmp::TwistedChernBasis&lt; _xy_poly_t, _chern_poly_t &gt;</h3>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad05b1690e2698e5b50ead06cd6aadd0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad05b1690e2698e5b50ead06cd6aadd0a">&#9670;&nbsp;</a></span>generator()</h2>
+<a id="abff1278d9e7f0d1005cd840c468806e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abff1278d9e7f0d1005cd840c468806e0">&#9670;&nbsp;</a></span>generator()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const auto&amp; generator </td>
+          <td class="memname">const xy_poly_t&amp; generator </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>s</em>, </td>
@@ -237,7 +237,7 @@ class symmp::TwistedChernBasis&lt; _xy_poly_t, _chern_poly_t &gt;</h3>
       </table>
 </div><div class="memdoc">
 
-<p>Returns generator \(\gamma_{s,j}\). </p>
+<p>The generator \(\gamma_{s,j}\). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">s</td><td>The index of \(s\) of \(\gamma_{s,j}\). </td></tr>
@@ -245,23 +245,23 @@ class symmp::TwistedChernBasis&lt; _xy_poly_t, _chern_poly_t &gt;</h3>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The polynomial \(\gamma_{s,j}\) on the \(x_i,y_i\) variables </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>const&amp; to the polynomial \(\gamma_{s,j}\) on the \(x_i,y_i\) variables </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classsymmp_1_1TwistedChernBasis_ad05b1690e2698e5b50ead06cd6aadd0a_icgraph.svg" width="307" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classsymmp_1_1TwistedChernBasis_abff1278d9e7f0d1005cd840c468806e0_icgraph.svg" width="307" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<a id="af336c73e3990b2a95c27ca79376edb3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af336c73e3990b2a95c27ca79376edb3c">&#9670;&nbsp;</a></span>relations()</h2>
+<a id="a5b6a7b873d0f28f014ba1d4454fd0b1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b6a7b873d0f28f014ba1d4454fd0b1b">&#9670;&nbsp;</a></span>relations()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const auto&amp; relations </td>
+          <td class="memname">const std::vector&lt;chern_poly_t&gt;&amp; relations </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -269,14 +269,14 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Stores the relations \(\gamma_{s,i}\gamma_{t,j}\) for \(0&lt;s&lt;=t&lt;=s+i\) and \(i,j&gt;0\). </p>
-<dl class="section return"><dt>Returns</dt><dd>const&amp; of vector containing the relation Polynomials \(\gamma_{s,i}\gamma_{t,j}\) </dd></dl>
+<p>The relations are \(\gamma_{s,i}\gamma_{t,j}\) for \(0&lt;s&lt;=t&lt;=s+i\) and \(i,j&gt;0\). </p>
+<dl class="section return"><dt>Returns</dt><dd>const&amp; to vector containing the relation Polynomials \(\gamma_{s,i}\gamma_{t,j}\) </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a id="af1bc455e9f6455ac3496b871f2e06938"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1bc455e9f6455ac3496b871f2e06938">&#9670;&nbsp;</a></span>PolynomialBasis&lt; TwistedChernBasis&lt; _xy_poly_t, _chern_poly_t &gt;, _xy_poly_t, _chern_poly_t &gt;</h2>
+<a id="a26ee995db1b6082d5524ec91614d8439"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26ee995db1b6082d5524ec91614d8439">&#9670;&nbsp;</a></span>PolynomialBasis&lt; TwistedChernBasis&lt; xy_poly_t, chern_poly_t &gt;, xy_poly_t, chern_poly_t &gt;</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -285,7 +285,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">friend class <a class="el" href="classsymmp_1_1PolynomialBasis.html">PolynomialBasis</a>&lt; <a class="el" href="classsymmp_1_1TwistedChernBasis.html">TwistedChernBasis</a>&lt; _xy_poly_t, _chern_poly_t &gt;, _xy_poly_t, _chern_poly_t &gt;</td>
+          <td class="memname">friend class <a class="el" href="classsymmp_1_1PolynomialBasis.html">PolynomialBasis</a>&lt; <a class="el" href="classsymmp_1_1TwistedChernBasis.html">TwistedChernBasis</a>&lt; xy_poly_t, chern_poly_t &gt;, xy_poly_t, chern_poly_t &gt;</td>
         </tr>
       </table>
   </td>

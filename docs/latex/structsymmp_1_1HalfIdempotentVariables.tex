@@ -40,7 +40,7 @@ typedef \+\_\+deg \mbox{\hyperlink{structsymmp_1_1HalfIdempotentVariables_a16faf
 \mbox{\hyperlink{structsymmp_1_1HalfIdempotentVariables}{Half\+Idempotent\+Variables}} \mbox{\hyperlink{structsymmp_1_1HalfIdempotentVariables_ab9a2a0144e6d1c2d740edc074f472222}{operator-\/}} (const \mbox{\hyperlink{structsymmp_1_1HalfIdempotentVariables}{Half\+Idempotent\+Variables}} \&b) const
 \begin{DoxyCompactList}\small\item\em Divides monomials by subtracting their exponents. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structsymmp_1_1HalfIdempotentVariables_a16faf7029e0f0f9797bf86eaa320b969}{deg\+\_\+t}} \mbox{\hyperlink{structsymmp_1_1HalfIdempotentVariables_afe791cbc1096c732f25302ae29a11cf7}{degree}} () const
-\begin{DoxyCompactList}\small\item\em Computes degree of monomial on on the $x_i,y_i$ with $|x_i|=1$ and $|y_i|=0$. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Computes degree of the monomial on the $x_i,y_i$ with $|x_i|=1$ and $|y_i|=0$. \end{DoxyCompactList}\item 
 size\+\_\+t \mbox{\hyperlink{structsymmp_1_1HalfIdempotentVariables_a579a2be3c890628518279012ce881f23}{operator()}} () const
 \begin{DoxyCompactList}\small\item\em Hashes monomial. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
@@ -89,10 +89,10 @@ Degree typedef.
 
 
 
-Computes degree of monomial on on the $x_i,y_i$ with $|x_i|=1$ and $|y_i|=0$. 
+Computes degree of the monomial on the $x_i,y_i$ with $|x_i|=1$ and $|y_i|=0$. 
 
 \begin{DoxyReturn}{Returns}
-Degree $\sum_{i=1}^na_i$ for monomial $x_1^{a_1}\cdots y_n^{a_{2n}}$ ($\ast$this= $[a_1,...,a_{2n}]$) 
+Degree $\sum_{i=1}^na_i$ for monomial $x_1^{a_1}\cdots y_n^{a_{2n}}$ ({\ttfamily $\ast$this}= $[a_1,...,a_{2n}]$) 
 \end{DoxyReturn}
 \mbox{\Hypertarget{structsymmp_1_1HalfIdempotentVariables_a28177b5c072e6fb31978f51e4b1c83b2}\label{structsymmp_1_1HalfIdempotentVariables_a28177b5c072e6fb31978f51e4b1c83b2}} 
 \index{HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}!name@{name}}
@@ -125,7 +125,7 @@ Returns the names of the variables $x_i,y_i$.
 Hashes monomial. 
 
 \begin{DoxyReturn}{Returns}
-Hash of exponent vector (calls generic\+\_\+hasher) 
+Hash of exponent vector (calls \mbox{\hyperlink{namespacesymmp_ac26e0fc4b8ad188e9b24d49d806b1855}{generic\+\_\+hasher}}) 
 \end{DoxyReturn}
 \mbox{\Hypertarget{structsymmp_1_1HalfIdempotentVariables_a74b8b27c3e6c4feb438e5ea4e98d5aa3}\label{structsymmp_1_1HalfIdempotentVariables_a74b8b27c3e6c4feb438e5ea4e98d5aa3}} 
 \index{HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}!operator+@{operator+}}
@@ -139,11 +139,11 @@ Multiplies monomials by adding their exponents.
 
 
 \begin{DoxyParams}{Parameters}
-{\em b} & Second exponent $[b_1,...,b_{2n}]$ \\
+{\em b} & The exponent $[b_1,...,b_{2n}]$ we add to {\ttfamily $\ast$this} = $[a_1,...,a_{2n}]$ \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Exponent $[a_1+b_1,...,a_n+b_n, \max(a_{n+1},b_{n+1}), ..., \max(a_{2n},b_{2n})]$ where $\ast$this= $[a_1,...,a_{2n}]$ 
+Exponent $[a_1+b_1,...,a_n+b_n, \max(a_{n+1},b_{n+1}), ..., \max(a_{2n},b_{2n})]$ 
 \end{DoxyReturn}
 \mbox{\Hypertarget{structsymmp_1_1HalfIdempotentVariables_ab9a2a0144e6d1c2d740edc074f472222}\label{structsymmp_1_1HalfIdempotentVariables_ab9a2a0144e6d1c2d740edc074f472222}} 
 \index{HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}!operator-\/@{operator-\/}}
@@ -157,11 +157,14 @@ Divides monomials by subtracting their exponents.
 
 
 \begin{DoxyParams}{Parameters}
-{\em b} & Second exponent $[b_1,...,b_{2n}]$. We must have $b_i\le a_i$ for every $i$. \\
+{\em b} & The exponent $[b_1,...,b_{2n}]$ we subtract from {\ttfamily $\ast$this} = $[a_1,...,a_{2n}]$. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+We must have $b_i\le a_i$ for every $i$. 
+\end{DoxyWarning}
 \begin{DoxyReturn}{Returns}
-Exponent $[a_1-b_1,...,a_n-b_n, |a_{n+1}-b_{n+1}|, ..., |a_{2n}-b_{2n}|]$ where $\ast$this= $[a_1,...,a_{2n}]$ 
+Exponent $[a_1-b_1,...,a_n-b_n, |a_{n+1}-b_{n+1}|, ..., |a_{2n}-b_{2n}|]$ 
 \end{DoxyReturn}
 
 

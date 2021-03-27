@@ -90,13 +90,13 @@ namespace symmp
 	}
 
 	template <typename xy, typename ch>
-	const auto &TwistedChernBasis<xy, ch>::relations() const
+	const std::vector<ch> &TwistedChernBasis<xy, ch>::relations() const
 	{
 		return _relations;
 	}
 
 	template <typename xy, typename ch>
-	const auto &TwistedChernBasis<xy, ch>::generator(int s, int j) const
+	const xy &TwistedChernBasis<xy, ch>::generator(int s, int j) const
 	{
 		return _generators[index(s, j)];
 	}
@@ -237,7 +237,6 @@ namespace symmp
 		}
 	}
 
-	///Prints all relations in the description of the fixed points of \f$R=\mathbb Q[x_1,...,x_n,y_1,...,y_n]/(y_i^2=y_i)\f$ in terms of \f$\alpha_i, c_i, \gamma_{s,j}\f$ (printed as a_i,c_i,c_{s,j} in the console)
 	template <typename xy_poly_t, typename chern_poly_t>
 	void print_half_idempotent_relations(int n, bool print, bool verify, bool verify_verbose)
 	{

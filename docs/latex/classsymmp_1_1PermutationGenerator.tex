@@ -33,11 +33,11 @@ class symmp\+::\+Permutation\+Generator$<$ T $>$}
 
 Generates all permutations on a number of letters. 
 
-Use with a ranged for loop\+:
+Use with a ranged for loop\+: If {\ttfamily v} is a {\ttfamily \mbox{\hyperlink{classsymmp_1_1PermutationGenerator}{Permutation\+Generator}}} object then in 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto}\& i:v) \{...\} }
 \end{DoxyCode}
- where {\ttfamily v} is a {\ttfamily \mbox{\hyperlink{classsymmp_1_1PermutationGenerator}{Permutation\+Generator}}} object. Then {\ttfamily i} will be a permutation \begin{DoxyWarning}{Warning}
+ the variable {\ttfamily i} will range over all permutations. \begin{DoxyWarning}{Warning}
 Not thread safe! 
 \end{DoxyWarning}
 \begin{DoxyRefDesc}{Todo}

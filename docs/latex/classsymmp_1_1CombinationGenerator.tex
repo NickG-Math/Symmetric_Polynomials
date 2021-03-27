@@ -33,11 +33,11 @@ class symmp\+::\+Combination\+Generator$<$ T $>$}
 
 Generates all combinations on a number of letters making a number of choices. 
 
-Use with a ranged for loop\+:
+Use with a ranged for loop\+: If {\ttfamily v} is a {\ttfamily \mbox{\hyperlink{classsymmp_1_1CombinationGenerator}{Combination\+Generator}}} object then in 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto}\& i:v) \{...\} }
 \end{DoxyCode}
- where {\ttfamily v} is a {\ttfamily \mbox{\hyperlink{classsymmp_1_1CombinationGenerator}{Combination\+Generator}}} object. Then {\ttfamily i} will be a combination \begin{DoxyWarning}{Warning}
+ the variable {\ttfamily i} will range over all combinations. \begin{DoxyWarning}{Warning}
 Not thread safe! 
 \end{DoxyWarning}
 \begin{DoxyRefDesc}{Todo}

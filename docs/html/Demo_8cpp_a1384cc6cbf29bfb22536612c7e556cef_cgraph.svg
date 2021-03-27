@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classsymmp_1_1TwistedChernBasis.html#ad05b1690e2698e5b50ead06cd6aadd0a" target="_top" xlink:title="Returns generator .">
+<g id="a_node2"><a xlink:href="classsymmp_1_1TwistedChernBasis.html#abff1278d9e7f0d1005cd840c468806e0" target="_top" xlink:title="The generator .">
 <polygon fill="white" stroke="black" points="158,-0.5 158,-30.5 309,-30.5 309,-0.5 158,-0.5"/>
 <text text-anchor="start" x="166" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">symmp::TwistedChernBasis</text>
 <text text-anchor="middle" x="233.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">::generator</text>

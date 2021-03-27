@@ -26,10 +26,6 @@ This documentation is organized in pages as follows:
 
 * I recommend starting with \ref math and then testing the code examples in \ref use, before moving to the rest of the pages.
 
-\section fut Future Update Plans
-
-* Use C++20 features: Concepts, Coroutines and Modules
-
 \page math The Math
 \tableofcontents
 \section sym Symmetric polynomials

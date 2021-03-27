@@ -132,8 +132,8 @@ Public Member Functions</h2></td></tr>
 class symmp::PermutationGenerator&lt; T &gt;</h3>
 
 <p>Generates all permutations on a number of letters. </p>
-<p>Use with a ranged for loop:</p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; i:v) {...} </div>
-</div><!-- fragment --><p> where <code>v</code> is a <code><a class="el" href="classsymmp_1_1PermutationGenerator.html" title="Generates all permutations on a number of letters.">PermutationGenerator</a></code> object. Then <code>i</code> will be a permutation </p><dl class="section warning"><dt>Warning</dt><dd>Not thread safe! </dd></dl>
+<p>Use with a ranged for loop: If <code>v</code> is a <code><a class="el" href="classsymmp_1_1PermutationGenerator.html" title="Generates all permutations on a number of letters.">PermutationGenerator</a></code> object then in </p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; i:v) {...} </div>
+</div><!-- fragment --><p> the variable <code>i</code> will range over all permutations. </p><dl class="section warning"><dt>Warning</dt><dd>Not thread safe! </dd></dl>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Implement via coroutine (C++20) </dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">

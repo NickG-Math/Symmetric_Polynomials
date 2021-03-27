@@ -48,7 +48,7 @@ class symmp\+::\+Factory\+Generator$<$ spec\+\_\+t, gen\+\_\+t $>$}
 Prototype for coroutine-\/like iterators that generate elements such as combinations. 
 
 Inherit from this class and define a method update() to get a const iterator. ~\newline
- You will also need begin() and \mbox{\hyperlink{classsymmp_1_1FactoryGenerator_a7632d62f41f7e3c7e85d9c67cb926415}{end()}} methods constructing such iterators; \mbox{\hyperlink{classsymmp_1_1FactoryGenerator_a7632d62f41f7e3c7e85d9c67cb926415}{end()}} should always be defined by calling the factory \mbox{\hyperlink{classsymmp_1_1FactoryGenerator_a7632d62f41f7e3c7e85d9c67cb926415}{end()}}.~\newline
+ You will also need {\ttfamily begin()} and {\ttfamily \mbox{\hyperlink{classsymmp_1_1FactoryGenerator_a7632d62f41f7e3c7e85d9c67cb926415}{end()}}} methods returning such iterators; {\ttfamily \mbox{\hyperlink{classsymmp_1_1FactoryGenerator_a7632d62f41f7e3c7e85d9c67cb926415}{end()}}} should always be defined by calling the factory {\ttfamily \mbox{\hyperlink{classsymmp_1_1FactoryGenerator_a7632d62f41f7e3c7e85d9c67cb926415}{end()}}} .~\newline
  Example implementations\+: {\ttfamily \mbox{\hyperlink{classsymmp_1_1CombinationGenerator}{Combination\+Generator}}} and {\ttfamily \mbox{\hyperlink{classsymmp_1_1PermutationGenerator}{Permutation\+Generator}}} \begin{DoxyAttention}{Attention}
 Probably not thread-\/safe (depends on specialization\textquotesingle{}s {\ttfamily update()} method). 
 \end{DoxyAttention}

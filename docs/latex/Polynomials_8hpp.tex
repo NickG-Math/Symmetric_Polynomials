@@ -29,9 +29,9 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial$<$ \+\_\+scl, \+\_\+exp, \+\_\+container, \+\_\+ordered, \+\_\+\+Args $>$}}
+class \mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial$<$ \+\_\+scl, \+\_\+exp, \+\_\+cnt, \+\_\+ord, \+\_\+arg $>$}}
 \begin{DoxyCompactList}\small\item\em Class for polynomials in multiple variables with relations. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{classsymmp_1_1Polynomial_1_1constIterator}{Polynomial$<$ \+\_\+scl, \+\_\+exp, \+\_\+container, \+\_\+ordered, \+\_\+\+Args $>$\+::const\+Iterator}}
+class \mbox{\hyperlink{classsymmp_1_1Polynomial_1_1constIterator}{Polynomial$<$ \+\_\+scl, \+\_\+exp, \+\_\+cnt, \+\_\+ord, \+\_\+arg $>$\+::const\+Iterator}}
 \begin{DoxyCompactList}\small\item\em Constant iterator through the monomials of the polynomial. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Namespaces}
 \begin{DoxyCompactItemize}
@@ -41,14 +41,12 @@ class \mbox{\hyperlink{classsymmp_1_1Polynomial_1_1constIterator}{Polynomial$<$ 
 \doxysubsubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$class \+\_\+scl , class \+\_\+exp $>$ }\\using \mbox{\hyperlink{namespacesymmp_a2ab4ba4bf25e718d78428e1b04332a2a}{Ordered\+Polynomial}} = Polynomial$<$ \+\_\+scl, \+\_\+exp, std\+::map, 1 $>$
-\begin{DoxyCompactList}\small\item\em A polynomial whose monomials are stored in increasing order. \end{DoxyCompactList}\item 
-{\footnotesize template$<$class \+\_\+scl , class \+\_\+exp , bool ordered = 1$>$ }\\using \mbox{\hyperlink{namespacesymmp_a98be2a062a750720284f9cedf3193973}{Poly}} = std\+::conditional\+\_\+t$<$ ordered, Polynomial$<$ \+\_\+scl, \+\_\+exp, std\+::map, 1 $>$, Polynomial$<$ \+\_\+scl, \+\_\+exp, std\+::unordered\+\_\+map, 0 $>$ $>$
+{\footnotesize template$<$class \+\_\+scl , class \+\_\+exp , bool \+\_\+ord = 1$>$ }\\using \mbox{\hyperlink{namespacesymmp_a1d8731bb8f8a2bcae57cac18301374bc}{Poly}} = std\+::conditional\+\_\+t$<$ \+\_\+ord, Polynomial$<$ \+\_\+scl, \+\_\+exp, std\+::map, 1 $>$, Polynomial$<$ \+\_\+scl, \+\_\+exp, std\+::unordered\+\_\+map, 0 $>$ $>$
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial}} using the default containers {\ttfamily std\+::map} or {\ttfamily std\+::unordered\+\_\+map}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$class scl\+\_\+t , class exp\+\_\+t , template$<$ class... $>$ class container\+\_\+t, bool \+\_\+ordered, class ... Args$>$ }\\std\+::ostream \& \mbox{\hyperlink{namespacesymmp_a763c01e07891034c496e5221b8474988}{operator$<$$<$}} (std\+::ostream \&os, const Polynomial$<$ scl\+\_\+t, exp\+\_\+t, container\+\_\+t, \+\_\+ordered, Args... $>$ \&a)
+{\footnotesize template$<$class \+\_\+scl , class \+\_\+exp , template$<$ class... $>$ class \+\_\+cnt, bool \+\_\+ord, class ... \+\_\+arg$>$ }\\std\+::ostream \& \mbox{\hyperlink{namespacesymmp_a73f033c5be58c4b145303b459b7ac29c}{operator$<$$<$}} (std\+::ostream \&os, const Polynomial$<$ \+\_\+scl, \+\_\+exp, \+\_\+cnt, \+\_\+ord, \+\_\+arg... $>$ \&a)
 \begin{DoxyCompactList}\small\item\em Prints polynomial to output stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 

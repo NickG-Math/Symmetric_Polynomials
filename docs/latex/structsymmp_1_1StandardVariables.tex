@@ -40,7 +40,7 @@ typedef \+\_\+deg \mbox{\hyperlink{structsymmp_1_1StandardVariables_a16faf7029e0
 \mbox{\hyperlink{structsymmp_1_1StandardVariables}{Standard\+Variables}} \mbox{\hyperlink{structsymmp_1_1StandardVariables_a7b460f7661dcf67626a4fe47368a482d}{operator+}} (const \mbox{\hyperlink{structsymmp_1_1StandardVariables}{Standard\+Variables}} \&b) const
 \begin{DoxyCompactList}\small\item\em Multiplies monomials by adding their exponents. \end{DoxyCompactList}\item 
 size\+\_\+t \mbox{\hyperlink{structsymmp_1_1StandardVariables_a579a2be3c890628518279012ce881f23}{operator()}} () const
-\begin{DoxyCompactList}\small\item\em Returns hash of monomial. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Hashes monomial. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -88,7 +88,7 @@ Degree typedef.
 Computes degree of monomial on standard variables $x_i$. 
 
 \begin{DoxyReturn}{Returns}
-Degree $\sum_ia_i$ for monomial $x_1^{a_1}\cdots x_n^{a_n}$ ($\ast$this= $[a_1,...,a_n]$) 
+Degree $\sum_ia_i$ for monomial $x_1^{a_1}\cdots x_n^{a_n}$ ({\ttfamily $\ast$this}= $[a_1,...,a_n]$) 
 \end{DoxyReturn}
 \mbox{\Hypertarget{structsymmp_1_1StandardVariables_a1fa69ea28cdd412833dd095957864c67}\label{structsymmp_1_1StandardVariables_a1fa69ea28cdd412833dd095957864c67}} 
 \index{StandardVariables$<$ T, \_deg $>$@{StandardVariables$<$ T, \_deg $>$}!name@{name}}
@@ -118,8 +118,11 @@ Returns the names of the standard variables $x_i$.
 
 
 
-Returns hash of monomial. 
+Hashes monomial. 
 
+\begin{DoxyReturn}{Returns}
+Hash of exponent vector (calls \mbox{\hyperlink{namespacesymmp_ac26e0fc4b8ad188e9b24d49d806b1855}{generic\+\_\+hasher}}) 
+\end{DoxyReturn}
 \mbox{\Hypertarget{structsymmp_1_1StandardVariables_a7b460f7661dcf67626a4fe47368a482d}\label{structsymmp_1_1StandardVariables_a7b460f7661dcf67626a4fe47368a482d}} 
 \index{StandardVariables$<$ T, \_deg $>$@{StandardVariables$<$ T, \_deg $>$}!operator+@{operator+}}
 \index{operator+@{operator+}!StandardVariables$<$ T, \_deg $>$@{StandardVariables$<$ T, \_deg $>$}}
@@ -130,14 +133,14 @@ Returns hash of monomial.
 
 Multiplies monomials by adding their exponents. 
 
-\begin{DoxyReturn}{Returns}
-Degree $[a_1+b_1,...,a_n+b_n]$ where $\ast$this= $[a_1,...,a_n]$ 
-\end{DoxyReturn}
 
 \begin{DoxyParams}{Parameters}
-{\em b} & Second exponent $[b_1,...,b_n]$ \\
+{\em b} & The exponent $[b_1,...,b_n]$ we add to {\ttfamily $\ast$this}= $[a_1,...,a_n]$ \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Degree $[a_1+b_1,...,a_n+b_n]$ 
+\end{DoxyReturn}
 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
