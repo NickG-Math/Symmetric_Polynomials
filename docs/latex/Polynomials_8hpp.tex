@@ -29,10 +29,16 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial$<$ \+\_\+scl, \+\_\+exp, \+\_\+cnt, \+\_\+ord, \+\_\+arg $>$}}
-\begin{DoxyCompactList}\small\item\em Class for polynomials in multiple variables with relations. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{classsymmp_1_1Polynomial_1_1constIterator}{Polynomial$<$ \+\_\+scl, \+\_\+exp, \+\_\+cnt, \+\_\+ord, \+\_\+arg $>$\+::const\+Iterator}}
-\begin{DoxyCompactList}\small\item\em Constant iterator through the monomials of the polynomial. \end{DoxyCompactList}\end{DoxyCompactItemize}
+class \mbox{\hyperlink{classsymmp_1_1BaseContainer}{Base\+Container$<$ exp\+\_\+t $>$}}
+\begin{DoxyCompactList}\small\item\em The base of all monomial containers. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsymmp_1_1DefaultContainer}{Default\+Container$<$ \+\_\+scl, \+\_\+exp, \+\_\+cnt, \+\_\+ord, \+\_\+arg $>$}}
+\begin{DoxyCompactList}\small\item\em The default ordered/unordered monomial container. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsymmp_1_1DefaultContainer_1_1ConstIterator}{Default\+Container$<$ \+\_\+scl, \+\_\+exp, \+\_\+cnt, \+\_\+ord, \+\_\+arg $>$\+::\+Const\+Iterator}}
+\begin{DoxyCompactList}\small\item\em Constant iterator traversing the monomials of a polynomial. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsymmp_1_1DefaultContainer_1_1Iterator}{Default\+Container$<$ \+\_\+scl, \+\_\+exp, \+\_\+cnt, \+\_\+ord, \+\_\+arg $>$\+::\+Iterator}}
+\begin{DoxyCompactList}\small\item\em Non const iterator traversing the monomials of a polynomial. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial$<$ container\+\_\+t $>$}}
+\begin{DoxyCompactList}\small\item\em Class for polynomials in multiple variables with relations. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -41,12 +47,12 @@ class \mbox{\hyperlink{classsymmp_1_1Polynomial_1_1constIterator}{Polynomial$<$ 
 \doxysubsubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$class \+\_\+scl , class \+\_\+exp , bool \+\_\+ord = 1$>$ }\\using \mbox{\hyperlink{namespacesymmp_a1d8731bb8f8a2bcae57cac18301374bc}{Poly}} = std\+::conditional\+\_\+t$<$ \+\_\+ord, Polynomial$<$ \+\_\+scl, \+\_\+exp, std\+::map, 1 $>$, Polynomial$<$ \+\_\+scl, \+\_\+exp, std\+::unordered\+\_\+map, 0 $>$ $>$
+{\footnotesize template$<$class \+\_\+scl , class \+\_\+exp , bool \+\_\+ord = 1$>$ }\\using \mbox{\hyperlink{namespacesymmp_afba49d556ec1f5373bd6df0e937a0c20}{Poly}} = Polynomial$<$ std\+::conditional\+\_\+t$<$ \+\_\+ord, Default\+Container$<$ \+\_\+scl, \+\_\+exp, std\+::map, 1 $>$, Default\+Container$<$ \+\_\+scl, \+\_\+exp, std\+::unordered\+\_\+map, 0 $>$ $>$$>$
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classsymmp_1_1Polynomial}{Polynomial}} using the default containers {\ttfamily std\+::map} or {\ttfamily std\+::unordered\+\_\+map}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$class \+\_\+scl , class \+\_\+exp , template$<$ class... $>$ class \+\_\+cnt, bool \+\_\+ord, class ... \+\_\+arg$>$ }\\std\+::ostream \& \mbox{\hyperlink{namespacesymmp_a73f033c5be58c4b145303b459b7ac29c}{operator$<$$<$}} (std\+::ostream \&os, const Polynomial$<$ \+\_\+scl, \+\_\+exp, \+\_\+cnt, \+\_\+ord, \+\_\+arg... $>$ \&a)
+{\footnotesize template$<$class container\+\_\+t $>$ }\\std\+::ostream \& \mbox{\hyperlink{namespacesymmp_a156c1af29f1ce12f55462f5b57ab5ee1}{operator$<$$<$}} (std\+::ostream \&os, const Polynomial$<$ container\+\_\+t $>$ \&a)
 \begin{DoxyCompactList}\small\item\em Prints polynomial to output stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 

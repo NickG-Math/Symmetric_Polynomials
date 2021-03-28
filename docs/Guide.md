@@ -147,7 +147,7 @@ The ```2``` signifies that we are using two variables \f$x_1,x_2\f$. Then:
 	auto qx=SB(q);
 	std::cout << qx;
 
-will set the polynomial ```x_poly_t qx``` to be ```q``` transformed into the \f$x_i\f$ variables (\ref symmp::StandardVariables) and print \f[-1.5x_1^3x_2^5 + -3x_1^4x_2^4 + -1.5x_1^5x_2^3\f]
+will set the polynomial ```x_poly_t qx``` to be ```q``` transformed into the \f$x_i\f$ variables (\ref symmp::StandardVariables) and print \f[-1.5x_1^3x_2^5 -3x_1^4x_2^4 -1.5x_1^5x_2^3\f]
 
 We can perform the conversion the other way as well: given a polynomial on the \f$x_i\f$ variables such as ```qx``` we can use the object same ```SB``` to transform ``qx`` into a polynomial on the \f$e_i\f$ variables : 
 
@@ -173,21 +173,21 @@ Example:
 	r.insert({ 1,0,1,0 }, 2);
 	r.insert({ 0,1,0,1 }, 2);
 	TwistedChernBasis<xy_poly_t, chern_poly_t> TCB(2);
-	std::cout << TCB(r);
+	std::cout << TCB(r) << "\n";
 
-This sets ```r``` to be \f$x_1y_1+x_2y_2\f$, transforms it into \f$\gamma_{s,j}\f$ variables and prints the result:
+This sets ```r``` to be \f$2x_1y_1+2x_2y_2\f$, transforms it into \f$\gamma_{s,j}\f$ variables and prints the result:
 
 \f[-2\gamma_{1,1}+2\alpha_1 c_1\f]
 
 And indeed:
 
-\f[x_1y_1+x_2y_2=-2\gamma_{1,1}+2\alpha_1 c_1\f]
+\f[2x_1y_1+2x_2y_2=-2\gamma_{1,1}+2\alpha_1 c_1\f]
 
 If we perform the transformation again we get the original polynomial: 
 
-	std::cout << TCB(TCB(poly));
+	std::cout << TCB(TCB(r)) << "\n";
 
-prints \f$x_1y_1+x_2y_2\f$. 
+prints \f$2x_1y_1+2x_2y_2\f$. 
 
 We note that the argument ```2``` in the constructor of ```TCB``` is half the number of variables \f$x_1,x_2,y_1,y_2\f$.
 

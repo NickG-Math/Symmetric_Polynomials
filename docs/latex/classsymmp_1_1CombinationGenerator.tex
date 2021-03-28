@@ -12,7 +12,7 @@ Generates all combinations on a number of letters making a number of choices.
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \mbox{\hyperlink{classsymmp_1_1CombinationGenerator_1_1constIterator}{const\+Iterator}}
+class \mbox{\hyperlink{classsymmp_1_1CombinationGenerator_1_1ConstIterator}{Const\+Iterator}}
 \begin{DoxyCompactList}\small\item\em Constant iterator that is used in a ranged for loop to generate the combinations. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -21,9 +21,9 @@ auto \mbox{\hyperlink{classsymmp_1_1CombinationGenerator_a10efdf47ffedbdc720f71c
 \begin{DoxyCompactList}\small\item\em Computes total number of combinations. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classsymmp_1_1CombinationGenerator_a02a72795e93e67bb84e39f7e7daed955}{Combination\+Generator}} (T total, T choices)
 \begin{DoxyCompactList}\small\item\em Sets up the generator. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classsymmp_1_1CombinationGenerator_1_1constIterator}{const\+Iterator}} \mbox{\hyperlink{classsymmp_1_1CombinationGenerator_a63e0362932db2a086fab55a5cb0de69a}{begin}} () const
+\mbox{\hyperlink{classsymmp_1_1CombinationGenerator_1_1ConstIterator}{Const\+Iterator}} \mbox{\hyperlink{classsymmp_1_1CombinationGenerator_ad5fee900c7aee90671038c79225bf8ec}{begin}} () const
 \begin{DoxyCompactList}\small\item\em Begin iterator. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classsymmp_1_1CombinationGenerator_1_1constIterator}{const\+Iterator}} \mbox{\hyperlink{classsymmp_1_1CombinationGenerator_a26d56d3ef5b2d357e84d37a1f31419a9}{end}} () const
+\mbox{\hyperlink{classsymmp_1_1CombinationGenerator_1_1ConstIterator}{Const\+Iterator}} \mbox{\hyperlink{classsymmp_1_1CombinationGenerator_a69b6e2a03c835ca5d658a1f16acbaa9c}{end}} () const
 \begin{DoxyCompactList}\small\item\em End iterator. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -71,32 +71,6 @@ Sets up the generator.
 
 
 \doxysubsubsection{Member Function Documentation}
-\mbox{\Hypertarget{classsymmp_1_1CombinationGenerator_a63e0362932db2a086fab55a5cb0de69a}\label{classsymmp_1_1CombinationGenerator_a63e0362932db2a086fab55a5cb0de69a}} 
-\index{CombinationGenerator$<$ T $>$@{CombinationGenerator$<$ T $>$}!begin@{begin}}
-\index{begin@{begin}!CombinationGenerator$<$ T $>$@{CombinationGenerator$<$ T $>$}}
-\doxyparagraph{\texorpdfstring{begin()}{begin()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classsymmp_1_1CombinationGenerator_1_1constIterator}{const\+Iterator}} begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-
-
-Begin iterator. 
-
-\begin{DoxyReturn}{Returns}
-An iterator to the first generated element 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classsymmp_1_1CombinationGenerator_a26d56d3ef5b2d357e84d37a1f31419a9}\label{classsymmp_1_1CombinationGenerator_a26d56d3ef5b2d357e84d37a1f31419a9}} 
-\index{CombinationGenerator$<$ T $>$@{CombinationGenerator$<$ T $>$}!end@{end}}
-\index{end@{end}!CombinationGenerator$<$ T $>$@{CombinationGenerator$<$ T $>$}}
-\doxyparagraph{\texorpdfstring{end()}{end()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classsymmp_1_1CombinationGenerator_1_1constIterator}{const\+Iterator}} end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-
-
-End iterator. 
-
-\begin{DoxyReturn}{Returns}
-An iterator to the end of the generator (equality with this indicates that the generator has completed) 
-\end{DoxyReturn}
 \mbox{\Hypertarget{classsymmp_1_1CombinationGenerator_a10efdf47ffedbdc720f71c2f72b98d98}\label{classsymmp_1_1CombinationGenerator_a10efdf47ffedbdc720f71c2f72b98d98}} 
 \index{CombinationGenerator$<$ T $>$@{CombinationGenerator$<$ T $>$}!size@{size}}
 \index{size@{size}!CombinationGenerator$<$ T $>$@{CombinationGenerator$<$ T $>$}}
@@ -109,6 +83,32 @@ Computes total number of combinations.
 
 \begin{DoxyReturn}{Returns}
 Binomial ${n}\choose{k}$ where $n$=total and $k$=choices 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsymmp_1_1CombinationGenerator_ad5fee900c7aee90671038c79225bf8ec}\label{classsymmp_1_1CombinationGenerator_ad5fee900c7aee90671038c79225bf8ec}} 
+\index{CombinationGenerator$<$ T $>$@{CombinationGenerator$<$ T $>$}!begin@{begin}}
+\index{begin@{begin}!CombinationGenerator$<$ T $>$@{CombinationGenerator$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsymmp_1_1CombinationGenerator_1_1ConstIterator}{Const\+Iterator}} begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Begin iterator. 
+
+\begin{DoxyReturn}{Returns}
+An iterator to the first generated element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsymmp_1_1CombinationGenerator_a69b6e2a03c835ca5d658a1f16acbaa9c}\label{classsymmp_1_1CombinationGenerator_a69b6e2a03c835ca5d658a1f16acbaa9c}} 
+\index{CombinationGenerator$<$ T $>$@{CombinationGenerator$<$ T $>$}!end@{end}}
+\index{end@{end}!CombinationGenerator$<$ T $>$@{CombinationGenerator$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsymmp_1_1CombinationGenerator_1_1ConstIterator}{Const\+Iterator}} end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+End iterator. 
+
+\begin{DoxyReturn}{Returns}
+An iterator to the end of the generator (equality with this indicates that the generator has completed) 
 \end{DoxyReturn}
 
 

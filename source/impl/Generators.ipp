@@ -52,16 +52,16 @@ namespace symmp
 	}
 
 	template <typename T>
-	void PermutationGenerator<T>::constIterator::update()
+	void PermutationGenerator<T>::ConstIterator::update()
 	{
 		if (!std::next_permutation(this->generated.begin(), this->generated.end()))
 			this->completed = 1;
 	}
 
 	template <typename T>
-	typename PermutationGenerator<T>::constIterator PermutationGenerator<T>::begin() const
+	typename PermutationGenerator<T>::ConstIterator PermutationGenerator<T>::begin() const
 	{
-		constIterator it;
+		ConstIterator it;
 		it.generated.resize(n);
 		std::iota(it.generated.begin(), it.generated.end(), 0);
 		it.completed = 0;
@@ -69,9 +69,9 @@ namespace symmp
 	}
 
 	template <typename T>
-	typename PermutationGenerator<T>::constIterator PermutationGenerator<T>::end() const
+	typename PermutationGenerator<T>::ConstIterator PermutationGenerator<T>::end() const
 	{
-		return FactoryGenerator<PermutationGenerator::constIterator, std::vector<T>>::end();
+		return FactoryGenerator<PermutationGenerator::ConstIterator, std::vector<T>>::end();
 	}
 
 	template <typename T>
@@ -99,7 +99,7 @@ namespace symmp
 	}
 
 	template <typename T>
-	void CombinationGenerator<T>::constIterator::update()
+	void CombinationGenerator<T>::ConstIterator::update()
 	{
 		for (int64_t i = (int64_t)choices - 1; i >= 0; i--)
 		{ //must be signed!
@@ -116,9 +116,9 @@ namespace symmp
 	}
 
 	template <typename T>
-	typename CombinationGenerator<T>::constIterator CombinationGenerator<T>::begin() const
+	typename CombinationGenerator<T>::ConstIterator CombinationGenerator<T>::begin() const
 	{
-		constIterator it;
+		ConstIterator it;
 		it.generated.resize(choices);
 		std::iota(it.generated.begin(), it.generated.end(), 0);
 		it.total = total;
@@ -128,9 +128,9 @@ namespace symmp
 	}
 
 	template <typename T>
-	typename CombinationGenerator<T>::constIterator CombinationGenerator<T>::end() const
+	typename CombinationGenerator<T>::ConstIterator CombinationGenerator<T>::end() const
 	{
-		return FactoryGenerator<CombinationGenerator::constIterator, std::vector<T>>::end();
+		return FactoryGenerator<CombinationGenerator::ConstIterator, std::vector<T>>::end();
 	}
 
 	template <typename T>

@@ -1,0 +1,114 @@
+\hypertarget{classsymmp_1_1BaseContainer}{}\doxysubsection{Base\+Container$<$ exp\+\_\+t $>$ Class Template Reference}
+\label{classsymmp_1_1BaseContainer}\index{BaseContainer$<$ exp\_t $>$@{BaseContainer$<$ exp\_t $>$}}
+
+
+The base of all monomial containers.  
+
+
+
+
+{\ttfamily \#include $<$Polynomials.\+hpp$>$}
+
+
+
+Inheritance diagram for Base\+Container$<$ exp\+\_\+t $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classsymmp_1_1BaseContainer__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsymmp_1_1BaseContainer_a0824648f9b588d7105a038fb619b63b8}{Base\+Container}} (const deg\+\_\+t $\ast$\mbox{\hyperlink{classsymmp_1_1BaseContainer_aa7e60bb77fe1a6b8e7cc0b1e76ab1770}{dimensions}}=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructor given pointer to dimensions of the variables. \end{DoxyCompactList}\item 
+deg\+\_\+t \mbox{\hyperlink{classsymmp_1_1BaseContainer_ada0893dda0d24ceefe276dfba294cb12}{compute\+\_\+degree}} (const exp\+\_\+t \&exponent) const
+\begin{DoxyCompactList}\small\item\em Computes degree of given exponent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const deg\+\_\+t $\ast$ \mbox{\hyperlink{classsymmp_1_1BaseContainer_aa7e60bb77fe1a6b8e7cc0b1e76ab1770}{dimensions}}
+\begin{DoxyCompactList}\small\item\em The pointer to the dimensions of the variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+\subsubsection*{template$<$class exp\+\_\+t$>$\newline
+class symmp\+::\+Base\+Container$<$ exp\+\_\+t $>$}
+
+The base of all monomial containers. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em exp\+\_\+t} & The variable/exponent type of the monomials \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyAttention}{Attention}
+{\ttfamily exp\+\_\+t} must have functionality similar to {\ttfamily \mbox{\hyperlink{structsymmp_1_1StandardVariables}{Standard\+Variables}}}, {\ttfamily \mbox{\hyperlink{structsymmp_1_1ElementarySymmetricVariables}{Elementary\+Symmetric\+Variables}}}, {\ttfamily \mbox{\hyperlink{structsymmp_1_1HalfIdempotentVariables}{Half\+Idempotent\+Variables}}} or {\ttfamily \mbox{\hyperlink{structsymmp_1_1TwistedChernVariables}{Twisted\+Chern\+Variables}}}. Specifically\+:
+\begin{DoxyItemize}
+\item It must have a typedef {\ttfamily deg\+\_\+t} that represents the degree type (eg {\ttfamily int, size\+\_\+t})
+\item It must have basic vector functionality (easiest way is to inherit from {\ttfamily std\+::vector$<$size\+\_\+t$>$})
+\item It should have operators + and -\/ to be used in the product/division of monomials
+\item Optionally, it may have a {\ttfamily deg\+\_\+t degree() const} method that computes the degree of the monomial exponent 
+\end{DoxyItemize}
+\end{DoxyAttention}
+\begin{DoxyWarning}{Warning}
+If {\ttfamily exp\+\_\+t} does not have a {\ttfamily degree} method then the dimensions of the variables must be provided through a valid {\ttfamily deg\+\_\+t$\ast$ dimensions} in the constructor 
+\end{DoxyWarning}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000004}{Todo}}]Use concepts (C++20) to express these requirements\end{DoxyRefDesc}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsymmp_1_1BaseContainer_a0824648f9b588d7105a038fb619b63b8}\label{classsymmp_1_1BaseContainer_a0824648f9b588d7105a038fb619b63b8}} 
+\index{BaseContainer$<$ exp\_t $>$@{BaseContainer$<$ exp\_t $>$}!BaseContainer@{BaseContainer}}
+\index{BaseContainer@{BaseContainer}!BaseContainer$<$ exp\_t $>$@{BaseContainer$<$ exp\_t $>$}}
+\doxyparagraph{\texorpdfstring{BaseContainer()}{BaseContainer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsymmp_1_1BaseContainer}{Base\+Container}} (\begin{DoxyParamCaption}\item[{const deg\+\_\+t $\ast$}]{dimensions = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Constructor given pointer to dimensions of the variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dimensions} & Used only when {\ttfamily exp\+\_\+t} does not implement method {\ttfamily deg\+\_\+t degree() const} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsymmp_1_1BaseContainer_ada0893dda0d24ceefe276dfba294cb12}\label{classsymmp_1_1BaseContainer_ada0893dda0d24ceefe276dfba294cb12}} 
+\index{BaseContainer$<$ exp\_t $>$@{BaseContainer$<$ exp\_t $>$}!compute\_degree@{compute\_degree}}
+\index{compute\_degree@{compute\_degree}!BaseContainer$<$ exp\_t $>$@{BaseContainer$<$ exp\_t $>$}}
+\doxyparagraph{\texorpdfstring{compute\_degree()}{compute\_degree()}}
+{\footnotesize\ttfamily deg\+\_\+t compute\+\_\+degree (\begin{DoxyParamCaption}\item[{const exp\+\_\+t \&}]{exponent }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Computes degree of given exponent. 
+
+\begin{DoxyNote}{Note}
+Calls {\ttfamily typename exp\+\_\+t\+::degree()} if that method exists, otherwise uses \mbox{\hyperlink{classsymmp_1_1BaseContainer_aa7e60bb77fe1a6b8e7cc0b1e76ab1770}{dimensions}} 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+If neither \mbox{\hyperlink{classsymmp_1_1BaseContainer_aa7e60bb77fe1a6b8e7cc0b1e76ab1770}{dimensions}} is set nor {\ttfamily typename exp\+\_\+t\+::degree()} exists then this function calls {\ttfamily abort()} 
+\end{DoxyWarning}
+
+
+\doxysubsubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsymmp_1_1BaseContainer_aa7e60bb77fe1a6b8e7cc0b1e76ab1770}\label{classsymmp_1_1BaseContainer_aa7e60bb77fe1a6b8e7cc0b1e76ab1770}} 
+\index{BaseContainer$<$ exp\_t $>$@{BaseContainer$<$ exp\_t $>$}!dimensions@{dimensions}}
+\index{dimensions@{dimensions}!BaseContainer$<$ exp\_t $>$@{BaseContainer$<$ exp\_t $>$}}
+\doxyparagraph{\texorpdfstring{dimensions}{dimensions}}
+{\footnotesize\ttfamily const deg\+\_\+t$\ast$ dimensions\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The pointer to the dimensions of the variables. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Polynomials_8hpp}{Polynomials.\+hpp}}\end{DoxyCompactItemize}

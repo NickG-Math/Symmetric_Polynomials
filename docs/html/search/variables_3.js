@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['number_5fof_5fvariables_155',['number_of_variables',['../classsymmp_1_1PolynomialBasis.html#a53478d561136aaf2d8dc3ffddb8696ea',1,'symmp::PolynomialBasis']]]
+  ['generated_170',['generated',['../classsymmp_1_1FactoryGenerator.html#acfa9d7bdc6f6edb5aa8b1d570ec3b15a',1,'symmp::FactoryGenerator']]],
+  ['generator_5fdimensions_171',['generator_dimensions',['../classsymmp_1_1PolynomialBasis.html#afba7b5d8ad929bf149ad3fc0b35d06ec',1,'symmp::PolynomialBasis']]],
+  ['generator_5fnames_172',['generator_names',['../classsymmp_1_1PolynomialBasis.html#a4867a7fd4fad1c2ce7a65656ee5a0bd7',1,'symmp::PolynomialBasis']]]
 ];

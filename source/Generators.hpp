@@ -58,20 +58,20 @@ namespace symmp
 
 		///	@brief		Constant iterator that is used in a ranged for loop to generate the permutations.
 		///	@warning	Non constant version is illegal
-		class constIterator : public FactoryGenerator<PermutationGenerator::constIterator, std::vector<T>>
+		class ConstIterator : public FactoryGenerator<PermutationGenerator::ConstIterator, std::vector<T>>
 		{
 			void update();
 			friend class PermutationGenerator;													///<Befriending outer class
-			friend class FactoryGenerator<PermutationGenerator::constIterator, std::vector<T>>; ///<Befriending parent
+			friend class FactoryGenerator<PermutationGenerator::ConstIterator, std::vector<T>>; ///<Befriending parent
 		};
 
 		/// @brief	Begin iterator
 		/// @return An iterator to the first generated element
-		constIterator begin() const;
+		ConstIterator begin() const;
 
 		/// @brief	End iterator
 		/// @return An iterator to the end of the generator (equality with this indicates that the generator has completed)
-		constIterator end() const;
+		ConstIterator end() const;
 	};
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -99,21 +99,21 @@ namespace symmp
 
 		///	@brief		Constant iterator that is used in a ranged for loop to generate the combinations.
 		///	@warning	Non \c const version is illegal
-		class constIterator : public FactoryGenerator<CombinationGenerator::constIterator, std::vector<T>>
+		class ConstIterator : public FactoryGenerator<CombinationGenerator::ConstIterator, std::vector<T>>
 		{
 			void update();
 			friend class CombinationGenerator;													///<Befriending outer class
-			friend class FactoryGenerator<CombinationGenerator::constIterator, std::vector<T>>; ///<Befriending parent
+			friend class FactoryGenerator<CombinationGenerator::ConstIterator, std::vector<T>>; ///<Befriending parent
 			T total, choices;
 		};
 
 		/// @brief	Begin iterator
 		/// @return An iterator to the first generated element
-		constIterator begin() const;
+		ConstIterator begin() const;
 
 		/// @brief	End iterator
 		/// @return An iterator to the end of the generator (equality with this indicates that the generator has completed)
-		constIterator end() const;
+		ConstIterator end() const;
 	};
 
 	///	@brief		Returns vector of all permutations on \p n letters

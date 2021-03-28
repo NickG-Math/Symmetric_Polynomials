@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['halfidempotentvariables_87',['HalfIdempotentVariables',['../structsymmp_1_1HalfIdempotentVariables.html',1,'symmp']]]
+  ['elementarysymmetricvariables_94',['ElementarySymmetricVariables',['../structsymmp_1_1ElementarySymmetricVariables.html',1,'symmp']]]
 ];

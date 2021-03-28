@@ -12,7 +12,7 @@ Generates all permutations on a number of letters.
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \mbox{\hyperlink{classsymmp_1_1PermutationGenerator_1_1constIterator}{const\+Iterator}}
+class \mbox{\hyperlink{classsymmp_1_1PermutationGenerator_1_1ConstIterator}{Const\+Iterator}}
 \begin{DoxyCompactList}\small\item\em Constant iterator that is used in a ranged for loop to generate the permutations. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -21,9 +21,9 @@ size\+\_\+t \mbox{\hyperlink{classsymmp_1_1PermutationGenerator_a259cb5a711406a8
 \begin{DoxyCompactList}\small\item\em Computes total number of permutations. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classsymmp_1_1PermutationGenerator_ad15f431546cbbb5b551a0864d79309b5}{Permutation\+Generator}} (T n)
 \begin{DoxyCompactList}\small\item\em Constructor sets up the generator. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classsymmp_1_1PermutationGenerator_1_1constIterator}{const\+Iterator}} \mbox{\hyperlink{classsymmp_1_1PermutationGenerator_a63e0362932db2a086fab55a5cb0de69a}{begin}} () const
+\mbox{\hyperlink{classsymmp_1_1PermutationGenerator_1_1ConstIterator}{Const\+Iterator}} \mbox{\hyperlink{classsymmp_1_1PermutationGenerator_ad5fee900c7aee90671038c79225bf8ec}{begin}} () const
 \begin{DoxyCompactList}\small\item\em Begin iterator. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classsymmp_1_1PermutationGenerator_1_1constIterator}{const\+Iterator}} \mbox{\hyperlink{classsymmp_1_1PermutationGenerator_a26d56d3ef5b2d357e84d37a1f31419a9}{end}} () const
+\mbox{\hyperlink{classsymmp_1_1PermutationGenerator_1_1ConstIterator}{Const\+Iterator}} \mbox{\hyperlink{classsymmp_1_1PermutationGenerator_a69b6e2a03c835ca5d658a1f16acbaa9c}{end}} () const
 \begin{DoxyCompactList}\small\item\em End iterator. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -69,32 +69,6 @@ Constructor sets up the generator.
 
 
 \doxysubsubsection{Member Function Documentation}
-\mbox{\Hypertarget{classsymmp_1_1PermutationGenerator_a63e0362932db2a086fab55a5cb0de69a}\label{classsymmp_1_1PermutationGenerator_a63e0362932db2a086fab55a5cb0de69a}} 
-\index{PermutationGenerator$<$ T $>$@{PermutationGenerator$<$ T $>$}!begin@{begin}}
-\index{begin@{begin}!PermutationGenerator$<$ T $>$@{PermutationGenerator$<$ T $>$}}
-\doxyparagraph{\texorpdfstring{begin()}{begin()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classsymmp_1_1PermutationGenerator_1_1constIterator}{const\+Iterator}} begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-
-
-Begin iterator. 
-
-\begin{DoxyReturn}{Returns}
-An iterator to the first generated element 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classsymmp_1_1PermutationGenerator_a26d56d3ef5b2d357e84d37a1f31419a9}\label{classsymmp_1_1PermutationGenerator_a26d56d3ef5b2d357e84d37a1f31419a9}} 
-\index{PermutationGenerator$<$ T $>$@{PermutationGenerator$<$ T $>$}!end@{end}}
-\index{end@{end}!PermutationGenerator$<$ T $>$@{PermutationGenerator$<$ T $>$}}
-\doxyparagraph{\texorpdfstring{end()}{end()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classsymmp_1_1PermutationGenerator_1_1constIterator}{const\+Iterator}} end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-
-
-End iterator. 
-
-\begin{DoxyReturn}{Returns}
-An iterator to the end of the generator (equality with this indicates that the generator has completed) 
-\end{DoxyReturn}
 \mbox{\Hypertarget{classsymmp_1_1PermutationGenerator_a259cb5a711406a8c3e5d937eb9350cca}\label{classsymmp_1_1PermutationGenerator_a259cb5a711406a8c3e5d937eb9350cca}} 
 \index{PermutationGenerator$<$ T $>$@{PermutationGenerator$<$ T $>$}!size@{size}}
 \index{size@{size}!PermutationGenerator$<$ T $>$@{PermutationGenerator$<$ T $>$}}
@@ -107,6 +81,32 @@ Computes total number of permutations.
 
 \begin{DoxyReturn}{Returns}
 Factorial $n!$ where $n$ is the number of letters 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsymmp_1_1PermutationGenerator_ad5fee900c7aee90671038c79225bf8ec}\label{classsymmp_1_1PermutationGenerator_ad5fee900c7aee90671038c79225bf8ec}} 
+\index{PermutationGenerator$<$ T $>$@{PermutationGenerator$<$ T $>$}!begin@{begin}}
+\index{begin@{begin}!PermutationGenerator$<$ T $>$@{PermutationGenerator$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsymmp_1_1PermutationGenerator_1_1ConstIterator}{Const\+Iterator}} begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Begin iterator. 
+
+\begin{DoxyReturn}{Returns}
+An iterator to the first generated element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsymmp_1_1PermutationGenerator_a69b6e2a03c835ca5d658a1f16acbaa9c}\label{classsymmp_1_1PermutationGenerator_a69b6e2a03c835ca5d658a1f16acbaa9c}} 
+\index{PermutationGenerator$<$ T $>$@{PermutationGenerator$<$ T $>$}!end@{end}}
+\index{end@{end}!PermutationGenerator$<$ T $>$@{PermutationGenerator$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsymmp_1_1PermutationGenerator_1_1ConstIterator}{Const\+Iterator}} end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+End iterator. 
+
+\begin{DoxyReturn}{Returns}
+An iterator to the end of the generator (equality with this indicates that the generator has completed) 
 \end{DoxyReturn}
 
 

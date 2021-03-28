@@ -51,7 +51,7 @@ typedef Poly<double, ElementarySymmetricVariables<>> e_poly_t;
  The {\ttfamily 2} signifies that we are using two variables $x_1,x_2$. Then\+: \begin{DoxyVerb}auto qx=SB(q);
 std::cout << qx;
 \end{DoxyVerb}
- will set the polynomial {\ttfamily x\+\_\+poly\+\_\+t qx} to be {\ttfamily q} transformed into the $x_i$ variables (\mbox{\hyperlink{structsymmp_1_1StandardVariables}{symmp\+::\+Standard\+Variables}}) and print \[-1.5x_1^3x_2^5 + -3x_1^4x_2^4 + -1.5x_1^5x_2^3\]
+ will set the polynomial {\ttfamily x\+\_\+poly\+\_\+t qx} to be {\ttfamily q} transformed into the $x_i$ variables (\mbox{\hyperlink{structsymmp_1_1StandardVariables}{symmp\+::\+Standard\+Variables}}) and print \[-1.5x_1^3x_2^5 -3x_1^4x_2^4 -1.5x_1^5x_2^3\]
 
 We can perform the conversion the other way as well\+: given a polynomial on the $x_i$ variables such as {\ttfamily qx} we can use the object same {\ttfamily SB} to transform {\ttfamily qx} into a polynomial on the $e_i$ variables \+: \begin{DoxyVerb}auto qe=SB(qx);
 std::cout << qe;
@@ -69,19 +69,19 @@ xy_poly_t r;
 r.insert({ 1,0,1,0 }, 2);
 r.insert({ 0,1,0,1 }, 2);
 TwistedChernBasis<xy_poly_t, chern_poly_t> TCB(2);
-std::cout << TCB(r);
+std::cout << TCB(r) << "\n";
 \end{DoxyVerb}
- This sets {\ttfamily r} to be $x_1y_1+x_2y_2$, transforms it into $\gamma_{s,j}$ variables and prints the result\+:
+ This sets {\ttfamily r} to be $2x_1y_1+2x_2y_2$, transforms it into $\gamma_{s,j}$ variables and prints the result\+:
 
 \[-2\gamma_{1,1}+2\alpha_1 c_1\]
 
 And indeed\+:
 
-\[x_1y_1+x_2y_2=-2\gamma_{1,1}+2\alpha_1 c_1\]
+\[2x_1y_1+2x_2y_2=-2\gamma_{1,1}+2\alpha_1 c_1\]
 
-If we perform the transformation again we get the original polynomial\+: \begin{DoxyVerb}std::cout << TCB(TCB(poly));
+If we perform the transformation again we get the original polynomial\+: \begin{DoxyVerb}std::cout << TCB(TCB(r)) << "\n";
 \end{DoxyVerb}
- prints $x_1y_1+x_2y_2$.
+ prints $2x_1y_1+2x_2y_2$.
 
 We note that the argument {\ttfamily 2} in the constructor of {\ttfamily TCB} is half the number of variables $x_1,x_2,y_1,y_2$.
 
@@ -95,4 +95,4 @@ Finally, \mbox{\hyperlink{Demo_8cpp}{Demo.\+cpp}} contains another function, \mb
 
 in terms of the $\alpha_i,c_i,\gamma_{s,t}$. For example, try running \begin{DoxyVerb}pontryagin_via_chern < xy_poly_t, chern_poly_t>(5);
 \end{DoxyVerb}
- $\ast$/ 
+ 

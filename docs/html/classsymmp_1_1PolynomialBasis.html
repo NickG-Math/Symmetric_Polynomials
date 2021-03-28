@@ -199,92 +199,8 @@ class symmp::PolynomialBasis&lt; spec_t, orig_poly_t, new_poly_t &gt;</h3>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a8d67ff6506038615b9d969fb074f1187"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d67ff6506038615b9d969fb074f1187">&#9670;&nbsp;</a></span>dimensions()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::vector&lt;typename new_poly_t::deg_t&gt;&amp; dimensions </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns vector containing the dimensions of the generating basis (can be empty!) </p>
-
-</div>
-</div>
-<a id="a9ff5995862b2fe5ff087ad965ace9ce0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ff5995862b2fe5ff087ad965ace9ce0">&#9670;&nbsp;</a></span>generators()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::vector&lt;orig_poly_t&gt;&amp; generators </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns vector containing the generating basis. </p>
-
-</div>
-</div>
-<a id="ae8b0a728df452a235be3725e5b9fc56b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8b0a728df452a235be3725e5b9fc56b">&#9670;&nbsp;</a></span>names()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::vector&lt;std::string&gt;&amp; names </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns vector containing the names of the generating basis (can be empty!) </p>
-
-</div>
-</div>
-<a id="a5c37a37c306f85607e797b0556f0841b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c37a37c306f85607e797b0556f0841b">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">orig_poly_t operator() </td>
-          <td>(</td>
-          <td class="paramtype">const new_poly_t &amp;&#160;</td>
-          <td class="paramname"><em>a</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Transform a polynomial on the generating basis into a polynomial on the original variables. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">a</td><td><a class="el" href="classsymmp_1_1Polynomial.html" title="Class for polynomials in multiple variables with relations.">Polynomial</a> on the new variables </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classsymmp_1_1Polynomial.html" title="Class for polynomials in multiple variables with relations.">Polynomial</a> on the original variables </dd></dl>
-
-</div>
-</div>
 <a id="a307c7fbab53286641f9b551f6837e527"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a307c7fbab53286641f9b551f6837e527">&#9670;&nbsp;</a></span>operator()() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a307c7fbab53286641f9b551f6837e527">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -310,7 +226,107 @@ class symmp::PolynomialBasis&lt; spec_t, orig_poly_t, new_poly_t &gt;</h3>
 
 </div>
 </div>
+<a id="a5c37a37c306f85607e797b0556f0841b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c37a37c306f85607e797b0556f0841b">&#9670;&nbsp;</a></span>operator()() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">orig_poly_t operator() </td>
+          <td>(</td>
+          <td class="paramtype">const new_poly_t &amp;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Transform a polynomial on the generating basis into a polynomial on the original variables. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td><a class="el" href="classsymmp_1_1Polynomial.html" title="Class for polynomials in multiple variables with relations.">Polynomial</a> on the new variables </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classsymmp_1_1Polynomial.html" title="Class for polynomials in multiple variables with relations.">Polynomial</a> on the original variables </dd></dl>
+
+</div>
+</div>
+<a id="a9ff5995862b2fe5ff087ad965ace9ce0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ff5995862b2fe5ff087ad965ace9ce0">&#9670;&nbsp;</a></span>generators()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;orig_poly_t&gt;&amp; generators </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns vector containing the generating basis. </p>
+
+</div>
+</div>
+<a id="a8d67ff6506038615b9d969fb074f1187"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d67ff6506038615b9d969fb074f1187">&#9670;&nbsp;</a></span>dimensions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;typename new_poly_t::deg_t&gt;&amp; dimensions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns vector containing the dimensions of the generating basis (can be empty!) </p>
+
+</div>
+</div>
+<a id="ae8b0a728df452a235be3725e5b9fc56b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8b0a728df452a235be3725e5b9fc56b">&#9670;&nbsp;</a></span>names()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;std::string&gt;&amp; names </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns vector containing the names of the generating basis (can be empty!) </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a53478d561136aaf2d8dc3ffddb8696ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53478d561136aaf2d8dc3ffddb8696ea">&#9670;&nbsp;</a></span>number_of_variables</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int number_of_variables</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The number of (the original) variables of the polynomial ring. </p>
+
+</div>
+</div>
 <a id="a82a0b79e96aec4dde7f31917dd46fc44"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a82a0b79e96aec4dde7f31917dd46fc44">&#9670;&nbsp;</a></span>_generators</h2>
 
@@ -380,22 +396,6 @@ class symmp::PolynomialBasis&lt; spec_t, orig_poly_t, new_poly_t &gt;</h3>
 </div><div class="memdoc">
 
 <p>The names of the generators, optionally constructed in the inheriting class. </p>
-
-</div>
-</div>
-<a id="a53478d561136aaf2d8dc3ffddb8696ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53478d561136aaf2d8dc3ffddb8696ea">&#9670;&nbsp;</a></span>number_of_variables</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int number_of_variables</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The number of (the original) variables of the polynomial ring. </p>
 
 </div>
 </div>

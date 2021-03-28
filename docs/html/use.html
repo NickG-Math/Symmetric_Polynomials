@@ -151,7 +151,7 @@ typedef Poly&lt;double, ElementarySymmetricVariables&lt;&gt;&gt; e_poly_t;
 </pre><p> The <code>2</code> signifies that we are using two variables \(x_1,x_2\). Then: </p><pre class="fragment">auto qx=SB(q);
 std::cout &lt;&lt; qx;
 </pre><p> will set the polynomial <code>x_poly_t qx</code> to be <code>q</code> transformed into the \(x_i\) variables (<a class="el" href="structsymmp_1_1StandardVariables.html">symmp::StandardVariables</a>) and print </p><p class="formulaDsp">
-\[-1.5x_1^3x_2^5 + -3x_1^4x_2^4 + -1.5x_1^5x_2^3\]
+\[-1.5x_1^3x_2^5 -3x_1^4x_2^4 -1.5x_1^5x_2^3\]
 </p>
 <p>We can perform the conversion the other way as well: given a polynomial on the \(x_i\) variables such as <code>qx</code> we can use the object same <code>SB</code> to transform <code>qx</code> into a polynomial on the \(e_i\) variables : </p><pre class="fragment">auto qe=SB(qx);
 std::cout &lt;&lt; qe;
@@ -169,17 +169,17 @@ xy_poly_t r;
 r.insert({ 1,0,1,0 }, 2);
 r.insert({ 0,1,0,1 }, 2);
 TwistedChernBasis&lt;xy_poly_t, chern_poly_t&gt; TCB(2);
-std::cout &lt;&lt; TCB(r);
-</pre><p> This sets <code>r</code> to be \(x_1y_1+x_2y_2\), transforms it into \(\gamma_{s,j}\) variables and prints the result:</p>
+std::cout &lt;&lt; TCB(r) &lt;&lt; "\n";
+</pre><p> This sets <code>r</code> to be \(2x_1y_1+2x_2y_2\), transforms it into \(\gamma_{s,j}\) variables and prints the result:</p>
 <p class="formulaDsp">
 \[-2\gamma_{1,1}+2\alpha_1 c_1\]
 </p>
 <p>And indeed:</p>
 <p class="formulaDsp">
-\[x_1y_1+x_2y_2=-2\gamma_{1,1}+2\alpha_1 c_1\]
+\[2x_1y_1+2x_2y_2=-2\gamma_{1,1}+2\alpha_1 c_1\]
 </p>
-<p>If we perform the transformation again we get the original polynomial: </p><pre class="fragment">std::cout &lt;&lt; TCB(TCB(poly));
-</pre><p> prints \(x_1y_1+x_2y_2\).</p>
+<p>If we perform the transformation again we get the original polynomial: </p><pre class="fragment">std::cout &lt;&lt; TCB(TCB(r)) &lt;&lt; "\n";
+</pre><p> prints \(2x_1y_1+2x_2y_2\).</p>
 <p>We note that the argument <code>2</code> in the constructor of <code>TCB</code> is half the number of variables \(x_1,x_2,y_1,y_2\).</p>
 <p>To print the relations amongst \(\alpha_i,c_i,\gamma_{s,j}\) use: </p><pre class="fragment">print_half_idempotent_relations&lt;xy_poly_t, chern_poly_t&gt;(3);
 </pre><p> The \(3\) here corresponds to the half the number of variables: \(x_1,x_2,x_3,y_1,y_2,y_3\) and can be replaced by any positive integer.</p>
@@ -188,8 +188,7 @@ std::cout &lt;&lt; TCB(r);
 \[\pi_{s,t}=\kappa_{s,t}=\sum_{1\le i_1&lt; \cdots&lt; i_s\le n\\ 1\le j_1&lt; \cdots&lt; j_t\le n\\ i_u\neq j_v}x^2_{i_1}....x^2_{i_s}y_{j_1}\cdots y_{j_t}\]
 </p>
 <p>in terms of the \(\alpha_i,c_i,\gamma_{s,t}\). For example, try running </p><pre class="fragment">pontryagin_via_chern &lt; xy_poly_t, chern_poly_t&gt;(5);
-</pre><p> */ </p>
-</div></div><!-- contents -->
+</pre> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.18-->

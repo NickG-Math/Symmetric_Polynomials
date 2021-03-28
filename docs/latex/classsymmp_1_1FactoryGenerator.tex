@@ -64,15 +64,15 @@ Probably not thread-\/safe (depends on specialization\textquotesingle{}s {\ttfam
 
 
 \doxysubsubsection{Member Function Documentation}
-\mbox{\Hypertarget{classsymmp_1_1FactoryGenerator_a7632d62f41f7e3c7e85d9c67cb926415}\label{classsymmp_1_1FactoryGenerator_a7632d62f41f7e3c7e85d9c67cb926415}} 
-\index{FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}!end@{end}}
-\index{end@{end}!FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}}
-\doxyparagraph{\texorpdfstring{end()}{end()}}
-{\footnotesize\ttfamily static spec\+\_\+t end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\mbox{\Hypertarget{classsymmp_1_1FactoryGenerator_a9ca57d053c95efe01bf9d5997558aafd}\label{classsymmp_1_1FactoryGenerator_a9ca57d053c95efe01bf9d5997558aafd}} 
+\index{FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}}
+\doxyparagraph{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily const gen\+\_\+t\& operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
-Terminal iterator. 
+Returns the generated element. 
 
 \mbox{\Hypertarget{classsymmp_1_1FactoryGenerator_a054334765bb29ffd6d6b87451bbd9279}\label{classsymmp_1_1FactoryGenerator_a054334765bb29ffd6d6b87451bbd9279}} 
 \index{FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}!operator"!=@{operator"!=}}
@@ -84,16 +84,6 @@ Terminal iterator.
 
 Inequality of iterators (used to detect if generation has been completed) 
 
-\mbox{\Hypertarget{classsymmp_1_1FactoryGenerator_a9ca57d053c95efe01bf9d5997558aafd}\label{classsymmp_1_1FactoryGenerator_a9ca57d053c95efe01bf9d5997558aafd}} 
-\index{FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}!operator$\ast$@{operator$\ast$}}
-\index{operator$\ast$@{operator$\ast$}!FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}}
-\doxyparagraph{\texorpdfstring{operator$\ast$()}{operator*()}}
-{\footnotesize\ttfamily const gen\+\_\+t\& operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-
-
-Returns the generated element. 
-
 \mbox{\Hypertarget{classsymmp_1_1FactoryGenerator_a3a2c5520b2bfff5c55b75e179d1306ef}\label{classsymmp_1_1FactoryGenerator_a3a2c5520b2bfff5c55b75e179d1306ef}} 
 \index{FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}!operator++@{operator++}}
 \index{operator++@{operator++}!FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}}
@@ -103,6 +93,16 @@ Returns the generated element.
 
 
 Generates next element. 
+
+\mbox{\Hypertarget{classsymmp_1_1FactoryGenerator_a7632d62f41f7e3c7e85d9c67cb926415}\label{classsymmp_1_1FactoryGenerator_a7632d62f41f7e3c7e85d9c67cb926415}} 
+\index{FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}!end@{end}}
+\index{end@{end}!FactoryGenerator$<$ spec\_t, gen\_t $>$@{FactoryGenerator$<$ spec\_t, gen\_t $>$}}
+\doxyparagraph{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily static spec\+\_\+t end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Terminal iterator. 
 
 
 

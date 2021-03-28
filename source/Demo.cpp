@@ -125,15 +125,17 @@ int main()
 {
 	using namespace symmp;
 
-	//show_and_tell();
-	speed_test<int64_t,uint8_t,uint16_t>();
+
+	show_and_tell();
+	//speed_test<int64_t,uint8_t,uint16_t>();
 
 	//code examples follow
 
 	//Poly<int, StandardVariables<>> p;
 	//p.insert({ 0,1,4 }, 7);
 	//p.insert({ 1,1,2 }, -8);
-	//std::cout << p << "\n" << (p + (p ^ 2)) << "\n";
+	//std::cout << p << "\n";
+	//std::cout << (p + (p ^ 2)) << "\n";
 
 	//Poly<double, ElementarySymmetricVariables<>> q({ 2,3 }, -1.5);
 	//std::cout << q << "\n";
@@ -154,9 +156,9 @@ int main()
 	//r.insert({ 1,0,1,0 }, 2);
 	//r.insert({ 0,1,0,1 }, 2);
 	//TwistedChernBasis<xy_poly_t, chern_poly_t> TCB(2);
-	//std::cout << TCB(r);
+	//std::cout << TCB(r) << "\n";
 
-	//std::cout << TCB(TCB(r));
+	//std::cout << TCB(TCB(r)) << "\n\n\n";
 
 	//print_half_idempotent_relations<xy_poly_t, chern_poly_t>(3);
 	//pontryagin_via_chern < xy_poly_t, chern_poly_t>(5);

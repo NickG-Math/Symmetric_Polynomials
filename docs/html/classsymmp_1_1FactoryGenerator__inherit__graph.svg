@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 594;
+var viewWidth = 595;
 var viewHeight = 111;
 var sectionId = 'dynsection-0';
 </script>
@@ -54,7 +54,7 @@ var sectionId = 'dynsection-0';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>FactoryGenerator&lt; spec_t, gen_t &gt;</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-107 590,-107 590,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-107 591,-107 591,4 -4,4"/>
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
@@ -71,7 +71,7 @@ var sectionId = 'dynsection-0';
 <g id="a_node2"><a xlink:href="classsymmp_1_1FactoryGenerator.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="297,-60.5 297,-101.5 469,-101.5 469,-60.5 297,-60.5"/>
 <text text-anchor="start" x="305" y="-89.5" font-family="Helvetica,sans-Serif" font-size="10.00">FactoryGenerator&lt; Permutation</text>
-<text text-anchor="start" x="305" y="-78.5" font-family="Helvetica,sans-Serif" font-size="10.00">Generator::constIterator,</text>
+<text text-anchor="start" x="305" y="-78.5" font-family="Helvetica,sans-Serif" font-size="10.00">Generator::ConstIterator,</text>
 <text text-anchor="middle" x="383" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00"> std::vector&lt; T &gt; &gt;</text>
 </a>
 </g>
@@ -82,7 +82,7 @@ var sectionId = 'dynsection-0';
 <path fill="none" stroke="orange" stroke-dasharray="5,2" d="M144.43,-58.3C190.48,-62.7 249.21,-68.31 296.76,-72.86"/>
 <polygon fill="orange" stroke="orange" points="144.5,-54.79 134.21,-57.33 143.83,-61.76 144.5,-54.79"/>
 <text text-anchor="start" x="153" y="-95" font-family="Helvetica,sans-Serif" font-size="10.00"> &lt; PermutationGenerator</text>
-<text text-anchor="start" x="153" y="-84" font-family="Helvetica,sans-Serif" font-size="10.00">::constIterator, std::</text>
+<text text-anchor="start" x="153" y="-84" font-family="Helvetica,sans-Serif" font-size="10.00">::ConstIterator, std::</text>
 <text text-anchor="middle" x="215" y="-73" font-family="Helvetica,sans-Serif" font-size="10.00">vector&lt; T &gt; &gt;</text>
 </g>
 <!-- Node4 -->
@@ -91,7 +91,7 @@ var sectionId = 'dynsection-0';
 <g id="a_node4"><a xlink:href="classsymmp_1_1FactoryGenerator.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="296,-0.5 296,-41.5 470,-41.5 470,-0.5 296,-0.5"/>
 <text text-anchor="start" x="304" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">FactoryGenerator&lt; Combination</text>
-<text text-anchor="start" x="304" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">Generator::constIterator,</text>
+<text text-anchor="start" x="304" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">Generator::ConstIterator,</text>
 <text text-anchor="middle" x="383" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00"> std::vector&lt; T &gt; &gt;</text>
 </a>
 </g>
@@ -102,38 +102,38 @@ var sectionId = 'dynsection-0';
 <path fill="none" stroke="orange" stroke-dasharray="5,2" d="M112.97,-32.44C125.4,-28.15 139.04,-24.2 152,-22 199.14,-13.99 252.51,-13.25 295.96,-14.74"/>
 <polygon fill="orange" stroke="orange" points="111.51,-29.25 103.29,-35.93 113.89,-35.83 111.51,-29.25"/>
 <text text-anchor="start" x="152" y="-47" font-family="Helvetica,sans-Serif" font-size="10.00"> &lt; CombinationGenerator</text>
-<text text-anchor="start" x="152" y="-36" font-family="Helvetica,sans-Serif" font-size="10.00">::constIterator, std::</text>
+<text text-anchor="start" x="152" y="-36" font-family="Helvetica,sans-Serif" font-size="10.00">::ConstIterator, std::</text>
 <text text-anchor="middle" x="215" y="-25" font-family="Helvetica,sans-Serif" font-size="10.00">vector&lt; T &gt; &gt;</text>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="classsymmp_1_1PermutationGenerator_1_1constIterator.html" target="_top" xlink:title="Constant iterator that is used in a ranged for loop to generate the permutations.">
-<polygon fill="white" stroke="black" points="507,-71.5 507,-90.5 586,-90.5 586,-71.5 507,-71.5"/>
-<text text-anchor="middle" x="546.5" y="-78.5" font-family="Helvetica,sans-Serif" font-size="10.00">constIterator</text>
+<g id="a_node3"><a xlink:href="classsymmp_1_1PermutationGenerator_1_1ConstIterator.html" target="_top" xlink:title="Constant iterator that is used in a ranged for loop to generate the permutations.">
+<polygon fill="white" stroke="black" points="507,-71.5 507,-90.5 587,-90.5 587,-71.5 507,-71.5"/>
+<text text-anchor="middle" x="547" y="-78.5" font-family="Helvetica,sans-Serif" font-size="10.00">ConstIterator</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node3 -->
 <g id="edge2" class="edge">
 <title>Node2&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M479.18,-81C488.86,-81 498.26,-81 506.79,-81"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="479.01,-77.5 469.01,-81 479.01,-84.5 479.01,-77.5"/>
+<path fill="none" stroke="midnightblue" d="M479.36,-81C488.96,-81 498.29,-81 506.77,-81"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="479.27,-77.5 469.27,-81 479.27,-84.5 479.27,-77.5"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="classsymmp_1_1CombinationGenerator_1_1constIterator.html" target="_top" xlink:title="Constant iterator that is used in a ranged for loop to generate the combinations.">
-<polygon fill="white" stroke="black" points="507,-11.5 507,-30.5 586,-30.5 586,-11.5 507,-11.5"/>
-<text text-anchor="middle" x="546.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">constIterator</text>
+<g id="a_node5"><a xlink:href="classsymmp_1_1CombinationGenerator_1_1ConstIterator.html" target="_top" xlink:title="Constant iterator that is used in a ranged for loop to generate the combinations.">
+<polygon fill="white" stroke="black" points="507,-11.5 507,-30.5 587,-30.5 587,-11.5 507,-11.5"/>
+<text text-anchor="middle" x="547" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">ConstIterator</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node5 -->
 <g id="edge4" class="edge">
 <title>Node4&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M480.52,-21C489.74,-21 498.68,-21 506.82,-21"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="480.42,-17.5 470.42,-21 480.42,-24.5 480.42,-17.5"/>
+<path fill="none" stroke="midnightblue" d="M480.39,-21C489.69,-21 498.71,-21 506.93,-21"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="480.22,-17.5 470.22,-21 480.22,-24.5 480.22,-17.5"/>
 </g>
 </g>
 </svg>

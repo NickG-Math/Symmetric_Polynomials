@@ -81,6 +81,45 @@ Degree typedef.
 
 
 \doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{structsymmp_1_1HalfIdempotentVariables_a74b8b27c3e6c4feb438e5ea4e98d5aa3}\label{structsymmp_1_1HalfIdempotentVariables_a74b8b27c3e6c4feb438e5ea4e98d5aa3}} 
+\index{HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}}
+\doxyparagraph{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsymmp_1_1HalfIdempotentVariables}{Half\+Idempotent\+Variables}} operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsymmp_1_1HalfIdempotentVariables}{Half\+Idempotent\+Variables}}$<$ T, \+\_\+deg, N $>$ \&}]{b }\end{DoxyParamCaption}) const}
+
+
+
+Multiplies monomials by adding their exponents. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & The exponent $[b_1,...,b_{2n}]$ we add to {\ttfamily $\ast$this} = $[a_1,...,a_{2n}]$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Exponent $[a_1+b_1,...,a_n+b_n, \max(a_{n+1},b_{n+1}), ..., \max(a_{2n},b_{2n})]$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structsymmp_1_1HalfIdempotentVariables_ab9a2a0144e6d1c2d740edc074f472222}\label{structsymmp_1_1HalfIdempotentVariables_ab9a2a0144e6d1c2d740edc074f472222}} 
+\index{HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}}
+\doxyparagraph{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsymmp_1_1HalfIdempotentVariables}{Half\+Idempotent\+Variables}} operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsymmp_1_1HalfIdempotentVariables}{Half\+Idempotent\+Variables}}$<$ T, \+\_\+deg, N $>$ \&}]{b }\end{DoxyParamCaption}) const}
+
+
+
+Divides monomials by subtracting their exponents. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & The exponent $[b_1,...,b_{2n}]$ we subtract from {\ttfamily $\ast$this} = $[a_1,...,a_{2n}]$. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+We must have $b_i\le a_i$ for every $i$. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+Exponent $[a_1-b_1,...,a_n-b_n, |a_{n+1}-b_{n+1}|, ..., |a_{2n}-b_{2n}|]$ 
+\end{DoxyReturn}
 \mbox{\Hypertarget{structsymmp_1_1HalfIdempotentVariables_afe791cbc1096c732f25302ae29a11cf7}\label{structsymmp_1_1HalfIdempotentVariables_afe791cbc1096c732f25302ae29a11cf7}} 
 \index{HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}!degree@{degree}}
 \index{degree@{degree}!HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}}
@@ -126,45 +165,6 @@ Hashes monomial.
 
 \begin{DoxyReturn}{Returns}
 Hash of exponent vector (calls \mbox{\hyperlink{namespacesymmp_ac26e0fc4b8ad188e9b24d49d806b1855}{generic\+\_\+hasher}}) 
-\end{DoxyReturn}
-\mbox{\Hypertarget{structsymmp_1_1HalfIdempotentVariables_a74b8b27c3e6c4feb438e5ea4e98d5aa3}\label{structsymmp_1_1HalfIdempotentVariables_a74b8b27c3e6c4feb438e5ea4e98d5aa3}} 
-\index{HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}!operator+@{operator+}}
-\index{operator+@{operator+}!HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}}
-\doxyparagraph{\texorpdfstring{operator+()}{operator+()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structsymmp_1_1HalfIdempotentVariables}{Half\+Idempotent\+Variables}} operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsymmp_1_1HalfIdempotentVariables}{Half\+Idempotent\+Variables}}$<$ T, \+\_\+deg, N $>$ \&}]{b }\end{DoxyParamCaption}) const}
-
-
-
-Multiplies monomials by adding their exponents. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em b} & The exponent $[b_1,...,b_{2n}]$ we add to {\ttfamily $\ast$this} = $[a_1,...,a_{2n}]$ \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Exponent $[a_1+b_1,...,a_n+b_n, \max(a_{n+1},b_{n+1}), ..., \max(a_{2n},b_{2n})]$ 
-\end{DoxyReturn}
-\mbox{\Hypertarget{structsymmp_1_1HalfIdempotentVariables_ab9a2a0144e6d1c2d740edc074f472222}\label{structsymmp_1_1HalfIdempotentVariables_ab9a2a0144e6d1c2d740edc074f472222}} 
-\index{HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}!operator-\/@{operator-\/}}
-\index{operator-\/@{operator-\/}!HalfIdempotentVariables$<$ T, \_deg, N $>$@{HalfIdempotentVariables$<$ T, \_deg, N $>$}}
-\doxyparagraph{\texorpdfstring{operator-\/()}{operator-()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structsymmp_1_1HalfIdempotentVariables}{Half\+Idempotent\+Variables}} operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsymmp_1_1HalfIdempotentVariables}{Half\+Idempotent\+Variables}}$<$ T, \+\_\+deg, N $>$ \&}]{b }\end{DoxyParamCaption}) const}
-
-
-
-Divides monomials by subtracting their exponents. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em b} & The exponent $[b_1,...,b_{2n}]$ we subtract from {\ttfamily $\ast$this} = $[a_1,...,a_{2n}]$. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyWarning}{Warning}
-We must have $b_i\le a_i$ for every $i$. 
-\end{DoxyWarning}
-\begin{DoxyReturn}{Returns}
-Exponent $[a_1-b_1,...,a_n-b_n, |a_{n+1}-b_{n+1}|, ..., |a_{2n}-b_{2n}|]$ 
 \end{DoxyReturn}
 
 

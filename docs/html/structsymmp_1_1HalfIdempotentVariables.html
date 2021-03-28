@@ -175,6 +175,61 @@ struct symmp::HalfIdempotentVariables&lt; T, _deg, N &gt;</h3>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a74b8b27c3e6c4feb438e5ea4e98d5aa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74b8b27c3e6c4feb438e5ea4e98d5aa3">&#9670;&nbsp;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structsymmp_1_1HalfIdempotentVariables.html">HalfIdempotentVariables</a> operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structsymmp_1_1HalfIdempotentVariables.html">HalfIdempotentVariables</a>&lt; T, _deg, N &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Multiplies monomials by adding their exponents. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">b</td><td>The exponent \([b_1,...,b_{2n}]\) we add to <code>*this</code> = \([a_1,...,a_{2n}]\) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Exponent \([a_1+b_1,...,a_n+b_n, \max(a_{n+1},b_{n+1}), ..., \max(a_{2n},b_{2n})]\) </dd></dl>
+
+</div>
+</div>
+<a id="ab9a2a0144e6d1c2d740edc074f472222"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9a2a0144e6d1c2d740edc074f472222">&#9670;&nbsp;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structsymmp_1_1HalfIdempotentVariables.html">HalfIdempotentVariables</a> operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structsymmp_1_1HalfIdempotentVariables.html">HalfIdempotentVariables</a>&lt; T, _deg, N &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Divides monomials by subtracting their exponents. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">b</td><td>The exponent \([b_1,...,b_{2n}]\) we subtract from <code>*this</code> = \([a_1,...,a_{2n}]\). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>We must have \(b_i\le a_i\) for every \(i\). </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Exponent \([a_1-b_1,...,a_n-b_n, |a_{n+1}-b_{n+1}|, ..., |a_{2n}-b_{2n}|]\) </dd></dl>
+
+</div>
+</div>
 <a id="afe791cbc1096c732f25302ae29a11cf7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afe791cbc1096c732f25302ae29a11cf7">&#9670;&nbsp;</a></span>degree()</h2>
 
@@ -258,61 +313,6 @@ struct symmp::HalfIdempotentVariables&lt; T, _deg, N &gt;</h3>
 
 <p>Hashes monomial. </p>
 <dl class="section return"><dt>Returns</dt><dd>Hash of exponent vector (calls <a class="el" href="namespacesymmp.html#ac26e0fc4b8ad188e9b24d49d806b1855">generic_hasher</a>) </dd></dl>
-
-</div>
-</div>
-<a id="a74b8b27c3e6c4feb438e5ea4e98d5aa3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74b8b27c3e6c4feb438e5ea4e98d5aa3">&#9670;&nbsp;</a></span>operator+()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structsymmp_1_1HalfIdempotentVariables.html">HalfIdempotentVariables</a> operator+ </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structsymmp_1_1HalfIdempotentVariables.html">HalfIdempotentVariables</a>&lt; T, _deg, N &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Multiplies monomials by adding their exponents. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">b</td><td>The exponent \([b_1,...,b_{2n}]\) we add to <code>*this</code> = \([a_1,...,a_{2n}]\) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Exponent \([a_1+b_1,...,a_n+b_n, \max(a_{n+1},b_{n+1}), ..., \max(a_{2n},b_{2n})]\) </dd></dl>
-
-</div>
-</div>
-<a id="ab9a2a0144e6d1c2d740edc074f472222"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9a2a0144e6d1c2d740edc074f472222">&#9670;&nbsp;</a></span>operator-()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structsymmp_1_1HalfIdempotentVariables.html">HalfIdempotentVariables</a> operator- </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structsymmp_1_1HalfIdempotentVariables.html">HalfIdempotentVariables</a>&lt; T, _deg, N &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Divides monomials by subtracting their exponents. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">b</td><td>The exponent \([b_1,...,b_{2n}]\) we subtract from <code>*this</code> = \([a_1,...,a_{2n}]\). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section warning"><dt>Warning</dt><dd>We must have \(b_i\le a_i\) for every \(i\). </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Exponent \([a_1-b_1,...,a_n-b_n, |a_{n+1}-b_{n+1}|, ..., |a_{2n}-b_{2n}|]\) </dd></dl>
 
 </div>
 </div>

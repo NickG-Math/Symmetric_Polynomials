@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['insert_36',['insert',['../classsymmp_1_1Polynomial.html#a3fdc0ef3971651e3b978d65e62ca1776',1,'symmp::Polynomial']]]
+  ['insert_41',['insert',['../classsymmp_1_1DefaultContainer.html#a2354e2c86d417d61f379038b2e84d08a',1,'symmp::DefaultContainer']]],
+  ['iterator_42',['Iterator',['../classsymmp_1_1DefaultContainer_1_1Iterator.html',1,'symmp::DefaultContainer']]]
 ];
