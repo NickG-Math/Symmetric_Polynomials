@@ -44,7 +44,7 @@ namespace symmp
 
 	template <class _scl, class _exp, template<class...> class _cnt, bool _ord, class ... _arg>
 	void DefaultContainer<_scl, _exp, _cnt, _ord, _arg...>::reserve(size_t n) {
-		if (_ord)
+		if constexpr (_ord)
 			data_t::reserve(n);
 	}
 
@@ -88,10 +88,8 @@ namespace symmp
 			auto it = begin();
 			auto maxit = it;
 			for (++it; it != end(); ++it)
-			{
 				if (maxit.degree() < it.degree() || (maxit.degree() == it.degree() && maxit.exponent() < it.exponent()))
 					maxit = it;
-			}
 			return maxit;
 		}
 	}
