@@ -118,51 +118,54 @@ Namespaces</h2>
 So start with: </p><pre class="fragment">using symmp;
 </pre> <h2><a class="anchor" id="mono"></a>
 Polynomials</h2>
-<p>A polynomial \(p\) in the graded ring \(\mathbf Z[x_1,...,x_n]\), \(|x_i|=1\), can be declared as: </p><pre class="fragment">Poly&lt;int, StandardVariables&lt;&gt;&gt; p;
-</pre><p> Here:</p><ul>
-<li><code>int</code> is the type of the scalar coefficients (i.e. elements of the base ring which in this case is \(\mathbf Z\)), so it can be replaced by <code>double</code> and even user-defined scalar types.</li>
-<li><a class="el" href="structsymmp_1_1StandardVariables.html">symmp::StandardVariables</a> specifies variables in degree \(1\), with names \(x_i\) and no relations. We shall explain alternative variable configurations in the next few subsections.</li>
+<p>To specify a polynomial ring such as \(\mathbf Z[x_1,...,x_n]\), \(|x_i|=1\), we use two template parameters:</p>
+<ul>
+<li>The scalar type corresponding to the base ring. In our example, \(\mathbf Z\) can be represented by <code>int64_t</code>.</li>
+<li>The "type of variables" used. In our example, we use <a class="el" href="structsymmp_1_1StandardVariables.html">StandardVariables</a> which specify variables in degree \(1\), with names <code>x_i</code> (when printed to an output stream) and no relations. We shall explain alternatives in the next few subsections.</li>
 </ul>
-<p>To insert a monomial \(cx_1^{a_1}\cdots x_n^{a_n}\) in \(p\) simply provide the exponent vector \([a_1,...,a_n]\) and the coefficient \(c\). <br  />
-For example, </p><pre class="fragment">p.insert({0,1,4},7);
-</pre><p> inserts the monomial \(7x_2x_3^4\) in \(p\). <br  />
-If we further write: </p><pre class="fragment">p.insert({1,1,2},-8);
-</pre><p> then \(p\) becomes \(-8x_1x_2x_3^2+7x_2x_3^4\).<br  />
-We can verify that by printing it to the console: </p><pre class="fragment">std::cout &lt;&lt; p &lt;&lt; "\n";
-</pre><p> When inserting monomials in a polynomial, it is the user's responsibility to ensure that:</p><ul>
-<li>all exponent vectors have the same length (number of variables) and are distinct</li>
-<li>the scalar coefficients are never \(0\)</li>
-</ul>
-<p>Polynomials of the same type and number of variables can be added, subtracted and multiplied via binary operators <code>+,-,*</code> and raised to a nonnegative integer power by <code>^</code> For example: </p><pre class="fragment">std::cout &lt;&lt; (p+(p^2))&lt;&lt; "\n";
+<p>The zero element of \(\mathbf Z[x_1,...,x_n]\) can then be constructed by: </p><pre class="fragment">Poly&lt;int, StandardVariables&lt;&gt;&gt; p;
+</pre><p> A nonzero monomial \(cx_1^{a_1}\cdots x_n^{a_n}\) is constructed by providing the exponent vector \([a_1,...,a_n]\) and the coefficient \(c\neq 0\). <br  />
+For example, </p><pre class="fragment">p=Poly&lt;int, StandardVariables&lt;&gt;&gt;({0,1,4},7);
+</pre><p> sets \(p=7x_2x_3^4\). Similarly, </p><pre class="fragment">auto t=Poly&lt;int, StandardVariables&lt;&gt;&gt;({1,1,2},-8);
+</pre><p> sets \(t=-8x_1x_2x_3^2\).</p>
+<p>Polynomials can be combined via the usual operators <code>+,-,*</code>; they can be raised to a nonnegative integer powers by <code>^</code>.<br  />
+For example: </p><pre class="fragment">p+=t;
+</pre><p> sets \(p=-8x_1x_2x_3^2+7x_2x_3^4\) which can be verified by printing \(p\) to the console: </p><pre class="fragment">std::cout &lt;&lt; p &lt;&lt; "\n";
+</pre><p> After that: </p><pre class="fragment">std::cout &lt;&lt; (p+(p^2))&lt;&lt; "\n";
 </pre><p> will print</p>
 <p>$$-8x_1x_2x_3^2 + 7x_2x_3^4 + 64x_1^2x_2^2x_3^4 - 112x_1x_2^2x_3^6 + 49x_2^2x_3^8$$</p>
 <p>which is exactly \(p+p^2\).</p>
+<dl class="section attention"><dt>Attention</dt><dd>It is the user's responsibility to ensure that:<ul>
+<li>the polynomials being combined have the same number of variables.</li>
+<li>the polynomial constructor is never used with \(0\) scalar coefficient (the \(0\) monomial is stored as the empty polynomial)</li>
+</ul>
+</dd></dl>
 <h2><a class="anchor" id="symbasis"></a>
 Symmetric Basis</h2>
-<p>We can substitute <a class="el" href="structsymmp_1_1StandardVariables.html">symmp::StandardVariables</a> with <a class="el" href="structsymmp_1_1ElementarySymmetricVariables.html">symmp::ElementarySymmetricVariables</a> specifying variables with names \(e_i\), degrees \(|e_i|=i\) and no relations.</p>
+<p>We can substitute <a class="el" href="structsymmp_1_1StandardVariables.html">StandardVariables</a> with <a class="el" href="structsymmp_1_1ElementarySymmetricVariables.html">ElementarySymmetricVariables</a> which specify variables with names <code>e_i</code>, degrees \(|e_i|=i\) and no relations.</p>
 <p>Example: The element \(q=-1.5e_1e_2\) of the graded ring \(\mathbf R[e_1,...,e_n], |e_i|=i\), can be defined as: </p><pre class="fragment">Poly&lt;double, ElementarySymmetricVariables&lt;&gt;&gt; q({ 2,3 }, -1.5);
-</pre><p> We used the constructor that takes a single monomial in the form of exponent+vector.</p>
-<p>For brevity let us use the following two typedefs: </p><pre class="fragment">typedef Poly&lt;double, StandardVariables&lt;&gt;&gt; x_poly_t;
+</pre><p> For brevity let us use the following two typedefs: </p><pre class="fragment">typedef Poly&lt;double, StandardVariables&lt;&gt;&gt; x_poly_t;
 typedef Poly&lt;double, ElementarySymmetricVariables&lt;&gt;&gt; e_poly_t;
 </pre><p> Now we view </p><p class="formulaDsp">
 \[\mathbf R[e_1,...,e_n]=\mathbf R[x_1,...,x_n]^{\Sigma_n}\]
 </p>
-<p> with \(e_i=\sigma_i\) being the elementary symmetric polynomials on the \(x_i\). To convert \(q\) from \(e_i\) variables to \(x_i\) variables we use the class <a class="el" href="classsymmp_1_1SymmetricBasis.html">symmp::SymmetricBasis</a> : </p><pre class="fragment">SymmetricBasis&lt;x_poly_t, e_poly_t&gt; SB(2);
+<p> with \(e_i=\sigma_i\) being the elementary symmetric polynomials on the \(x_i\). To convert \(q\) from \(e_i\) variables to \(x_i\) variables we use the class <a class="el" href="classsymmp_1_1SymmetricBasis.html">SymmetricBasis</a> : </p><pre class="fragment">SymmetricBasis&lt;x_poly_t, e_poly_t&gt; SB(2);
 </pre><p> The <code>2</code> signifies that we are using two variables \(x_1,x_2\). Then: </p><pre class="fragment">auto qx=SB(q);
 std::cout &lt;&lt; qx;
-</pre><p> will set the polynomial <code>x_poly_t qx</code> to be <code>q</code> transformed into the \(x_i\) variables (<a class="el" href="structsymmp_1_1StandardVariables.html">symmp::StandardVariables</a>) and print </p><p class="formulaDsp">
+</pre><p> will set the polynomial <code>x_poly_t qx</code> to be <code>q</code> transformed into the \(x_i\) variables (<a class="el" href="structsymmp_1_1StandardVariables.html">StandardVariables</a>) and print </p><p class="formulaDsp">
 \[-1.5x_1^3x_2^5 -3x_1^4x_2^4 -1.5x_1^5x_2^3\]
 </p>
 <p>We can perform the conversion the other way as well: given a polynomial on the \(x_i\) variables such as <code>qx</code> we can use the object same <code>SB</code> to transform <code>qx</code> into a polynomial on the \(e_i\) variables : </p><pre class="fragment">auto qe=SB(qx);
 std::cout &lt;&lt; qe;
-</pre><p> which will print \(-1.5e_1e_2\). Observe that <code>q==qe</code> i.e. the two conversion maps are inverses, as expected.</p>
+</pre><p> which will print \(-1.5e_1e_2\).</p>
+<dl class="section note"><dt>Note</dt><dd>The two conversion maps are inverses i.e. <code>q==qe</code> evaluates to <code>1</code>.</dd></dl>
 <h2><a class="anchor" id="halfidem"></a>
 Twisted Chern Basis</h2>
 <p>We can generate </p><p class="formulaDsp">
-\[(R[x_1,...,x_n,y_1,...,y_n]/y_i^2=y_i)^{\Sigma_n}\]
+\[(\mathbf Z[x_1,...,x_n,y_1,...,y_n]/y_i^2=y_i)^{\Sigma_n}\]
 </p>
 <p>by the \(\alpha_i, c_i, \gamma_{s,t}\) (see <a class="el" href="math.html">The Math</a>).</p>
-<p>The class <a class="el" href="classsymmp_1_1TwistedChernBasis.html">symmp::TwistedChernBasis</a> allows us to transform polynomials on \(x_i,y_i\) variables (<a class="el" href="structsymmp_1_1HalfIdempotentVariables.html">symmp::HalfIdempotentVariables</a>) into polynomials on the \(\alpha_i,c_i,\gamma_{s,i}\) (<a class="el" href="structsymmp_1_1TwistedChernVariables.html">symmp::TwistedChernVariables</a>).</p>
+<p>The class <a class="el" href="classsymmp_1_1TwistedChernBasis.html">TwistedChernBasis</a> allows us to transform polynomials on \(x_i,y_i\) variables (<a class="el" href="structsymmp_1_1HalfIdempotentVariables.html">HalfIdempotentVariables</a>) into polynomials on the \(\alpha_i,c_i,\gamma_{s,i}\) (<a class="el" href="structsymmp_1_1TwistedChernVariables.html">TwistedChernVariables</a>).</p>
 <p>Example: </p><pre class="fragment">typedef Poly&lt;int, HalfIdempotentVariables&lt;&gt;&gt; xy_poly_t;
 typedef Poly&lt;int, TwistedChernVariables&lt;&gt;&gt;&gt; chern_poly_t;
 xy_poly_t r;
@@ -180,7 +183,7 @@ std::cout &lt;&lt; TCB(r) &lt;&lt; "\n";
 </p>
 <p>If we perform the transformation again we get the original polynomial: </p><pre class="fragment">std::cout &lt;&lt; TCB(TCB(r)) &lt;&lt; "\n";
 </pre><p> prints \(2x_1y_1+2x_2y_2\).</p>
-<p>We note that the argument <code>2</code> in the constructor of <code>TCB</code> is half the number of variables \(x_1,x_2,y_1,y_2\).</p>
+<dl class="section attention"><dt>Attention</dt><dd>The argument <code>2</code> in the constructor of <code>TCB</code> is <em>half</em> the number of variables \(x_1,x_2,y_1,y_2\).</dd></dl>
 <p>To print the relations amongst \(\alpha_i,c_i,\gamma_{s,j}\) use: </p><pre class="fragment">print_half_idempotent_relations&lt;xy_poly_t, chern_poly_t&gt;(3);
 </pre><p> The \(3\) here corresponds to the half the number of variables: \(x_1,x_2,x_3,y_1,y_2,y_3\) and can be replaced by any positive integer.</p>
 <p>Finally, <a class="el" href="Demo_8cpp.html" title="A demonstration file that can be compiled.">Demo.cpp</a> contains another function, <a class="el" href="Demo_8cpp.html#a1384cc6cbf29bfb22536612c7e556cef">pontryagin_via_chern</a>. This prints the expressions of the twisted Pontryagin/symplectic classes:</p>

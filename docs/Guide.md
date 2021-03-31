@@ -14,7 +14,9 @@ This is a C++ header only library devoted to computations of symmetric polynomia
 
 * See the page \ref use for a tutorial on using the library. For a brief explanation on the math behind it, see \ref math.
 
-* The latest version of the code is always tested with the latest stable versions of Clang, GCC (Linux) and MSVC (Windows). Remember to use the option ```-std=c++17```. 
+* The latest version of the code is always tested with the latest stable versions of Clang, GCC (Linux) and MSVC (Windows). 
+
+* You'll need to enable C++17 support in your compiler. For Clang and GCC this is done by the option ```-std=c++17```. 
 
 \section doc Documentation
 
@@ -83,36 +85,36 @@ So start with:
 
 \subsection mono Polynomials
 
-A polynomial \f$p\f$ in the graded ring \f$\mathbf Z[x_1,...,x_n]\f$, \f$|x_i|=1\f$, can be declared as:
+To specify a polynomial ring such as \f$\mathbf Z[x_1,...,x_n]\f$, \f$|x_i|=1\f$, we use two template parameters:
 	
+- The scalar type corresponding to the base ring. In our example, \f$\mathbf Z\f$ can be represented by ```int64_t```.
+- The "type of variables" used. In our example, we use \ref symmp::StandardVariables "StandardVariables" which specify variables in degree \f$1\f$, with names ```x_i``` (when printed to an output stream) and no relations. We shall explain alternatives in the next few subsections.
+
+The zero element of  \f$\mathbf Z[x_1,...,x_n]\f$ can then be constructed by:
+
 	Poly<int, StandardVariables<>> p;
 
-Here:
-- ```int``` is the type of the scalar coefficients (i.e. elements of the base ring which in this case is \f$\mathbf Z\f$), so it can be replaced by ```double``` and even 
-user-defined scalar types.
-- \ref symmp::StandardVariables specifies variables in degree \f$1\f$, with names \f$x_i\f$ and no relations. We shall explain alternative variable configurations in the next few subsections.
-
-To insert a monomial \f$cx_1^{a_1}\cdots x_n^{a_n}\f$ in \f$p\f$ simply provide the exponent vector \f$[a_1,...,a_n]\f$ and the coefficient \f$c\f$. \n
+A nonzero monomial \f$cx_1^{a_1}\cdots x_n^{a_n}\f$ is constructed by providing the exponent vector \f$[a_1,...,a_n]\f$ and the coefficient \f$c\neq 0\f$. \n
 For example,
 
-	p.insert({0,1,4},7);
+	p=Poly<int, StandardVariables<>>({0,1,4},7);
 
-inserts the monomial \f$7x_2x_3^4\f$ in \f$p\f$. \n
-If we further write:
+sets \f$p=7x_2x_3^4\f$. Similarly,
 
-	p.insert({1,1,2},-8);
+	auto t=Poly<int, StandardVariables<>>({1,1,2},-8);
 
-then \f$p\f$ becomes \f$-8x_1x_2x_3^2+7x_2x_3^4\f$.\n
-We can verify that by printing it to the console:
+sets \f$t=-8x_1x_2x_3^2\f$.
+
+Polynomials can be combined via the usual operators ```+,-,*```; they can be raised to a nonnegative integer powers by ```^```.\n
+For example:
+
+	p+=t;
+
+sets \f$p=-8x_1x_2x_3^2+7x_2x_3^4\f$ which can be verified by printing \f$p\f$ to the console:
 
 	std::cout << p << "\n";
 
-When inserting monomials in a polynomial, it is the user's responsibility to ensure that:
-- all exponent vectors have the same length (number of variables) and are distinct
-- the scalar coefficients are never \f$0\f$
-
-Polynomials of the same type and number of variables can be added, subtracted and multiplied via binary operators ```+,-,*``` and raised to a nonnegative integer power by ```^```
-For example:
+After that:
 
 	std::cout << (p+(p^2))<< "\n";
 
@@ -122,23 +124,25 @@ $$-8x_1x_2x_3^2 + 7x_2x_3^4 + 64x_1^2x_2^2x_3^4 - 112x_1x_2^2x_3^6 + 49x_2^2x_3^
 
 which is exactly \f$p+p^2\f$.
 
+@attention	It is the user's responsibility to ensure that:
+- the polynomials being combined have the same number of variables.
+- the polynomial constructor is never used with \f$0\f$ scalar coefficient (the \f$0\f$ monomial is stored as the empty polynomial)
+
 \subsection symbasis Symmetric Basis
 
-We can substitute \ref symmp::StandardVariables with \ref symmp::ElementarySymmetricVariables specifying variables with names \f$e_i\f$, degrees \f$|e_i|=i\f$ and no relations. 
+We can substitute \ref symmp::StandardVariables "StandardVariables" with \ref symmp::ElementarySymmetricVariables "ElementarySymmetricVariables" which specify variables with names ```e_i```, degrees \f$|e_i|=i\f$ and no relations. 
 
 Example: The element \f$q=-1.5e_1e_2\f$ of the graded ring \f$\mathbf R[e_1,...,e_n], |e_i|=i\f$, can be defined as: 
 
 	Poly<double, ElementarySymmetricVariables<>> q({ 2,3 }, -1.5);
 	
-We used the constructor that takes a single monomial in the form of exponent+vector.
-
 For brevity let us use the following two typedefs:
 
 	typedef Poly<double, StandardVariables<>> x_poly_t;
 	typedef Poly<double, ElementarySymmetricVariables<>> e_poly_t;
 
 Now we view \f[\mathbf R[e_1,...,e_n]=\mathbf R[x_1,...,x_n]^{\Sigma_n}\f] with \f$e_i=\sigma_i\f$ being the elementary symmetric polynomials on the \f$x_i\f$. 
-To convert \f$q\f$ from \f$e_i\f$ variables to \f$x_i\f$ variables we use the class  \ref symmp::SymmetricBasis :
+To convert \f$q\f$ from \f$e_i\f$ variables to \f$x_i\f$ variables we use the class  \ref symmp::SymmetricBasis "SymmetricBasis" :
 
 	SymmetricBasis<x_poly_t, e_poly_t> SB(2);
 
@@ -147,23 +151,25 @@ The ```2``` signifies that we are using two variables \f$x_1,x_2\f$. Then:
 	auto qx=SB(q);
 	std::cout << qx;
 
-will set the polynomial ```x_poly_t qx``` to be ```q``` transformed into the \f$x_i\f$ variables (\ref symmp::StandardVariables) and print \f[-1.5x_1^3x_2^5 -3x_1^4x_2^4 -1.5x_1^5x_2^3\f]
+will set the polynomial ```x_poly_t qx``` to be ```q``` transformed into the \f$x_i\f$ variables (\ref symmp::StandardVariables "StandardVariables") and print \f[-1.5x_1^3x_2^5 -3x_1^4x_2^4 -1.5x_1^5x_2^3\f]
 
 We can perform the conversion the other way as well: given a polynomial on the \f$x_i\f$ variables such as ```qx``` we can use the object same ```SB``` to transform ``qx`` into a polynomial on the \f$e_i\f$ variables : 
 
 	auto qe=SB(qx);
 	std::cout << qe;
 
-which will print \f$-1.5e_1e_2\f$. Observe that ```q==qe``` i.e. the two conversion maps are inverses, as expected.
+which will print \f$-1.5e_1e_2\f$. 
+
+@note The two conversion maps are inverses i.e. ```q==qe``` evaluates to \c 1.
 
 \subsection halfidem Twisted Chern Basis
 
 We can generate
-\f[(R[x_1,...,x_n,y_1,...,y_n]/y_i^2=y_i)^{\Sigma_n}\f]
+\f[(\mathbf Z[x_1,...,x_n,y_1,...,y_n]/y_i^2=y_i)^{\Sigma_n}\f]
 
 by the \f$\alpha_i, c_i, \gamma_{s,t}\f$ (see \ref math).
 
-The class \ref symmp::TwistedChernBasis allows us to transform polynomials on \f$x_i,y_i\f$ variables (\ref symmp::HalfIdempotentVariables) into polynomials on the \f$\alpha_i,c_i,\gamma_{s,i}\f$ (\ref symmp::TwistedChernVariables).
+The class \ref symmp::TwistedChernBasis "TwistedChernBasis" allows us to transform polynomials on \f$x_i,y_i\f$ variables (\ref symmp::HalfIdempotentVariables "HalfIdempotentVariables") into polynomials on the \f$\alpha_i,c_i,\gamma_{s,i}\f$ (\ref symmp::TwistedChernVariables "TwistedChernVariables").
 
 Example:
 
@@ -189,8 +195,7 @@ If we perform the transformation again we get the original polynomial:
 
 prints \f$2x_1y_1+2x_2y_2\f$. 
 
-We note that the argument ```2``` in the constructor of ```TCB``` is half the number of variables \f$x_1,x_2,y_1,y_2\f$.
-
+@attention The argument ```2``` in the constructor of ```TCB``` is \em half the number of variables \f$x_1,x_2,y_1,y_2\f$.
 
 To print the relations amongst \f$\alpha_i,c_i,\gamma_{s,j}\f$ use:
 

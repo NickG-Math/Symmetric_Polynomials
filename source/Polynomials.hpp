@@ -22,7 +22,7 @@ namespace symmp
 	/// -				Optionally, it may have a ``` deg_t degree() const``` method that computes the degree of the monomial exponent
 	///	@warning		If \c exp_t does not have a \c degree method then the dimensions of the variables must be provided through 
 	///					a valid ``` deg_t* dimensions``` in the constructor
-	///	@todo			Use concepts (C++20) to express these requirements
+	///	@todo			Use concepts (C++20) to express the requirements from \c exp_t
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	template <class exp_t>
 	class BaseContainer {
@@ -55,7 +55,7 @@ namespace symmp
 	///	@attention			In addition to the requirements from BaseContainer, 
 	///						if \c _ord==1 then \c exp_t needs to have a comparator ``` bool operator<(const _exp&)  const ```
 	///						and otherwise \c exp_t needs to have a hash function ``` size_t operator()() const ```
-	///	@todo				Use concepts (C++20) to express these requirements
+	///	@todo				Use concepts (C++20) to express the requirements from \c exp_t
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	template <class _scl, class _exp, template<class...> class _cnt, bool _ord, class ... _arg>
 	class DefaultContainer : public BaseContainer<_exp>, implementation_details::container_wrapper<_scl, _exp, _cnt, _ord, _arg...> {
